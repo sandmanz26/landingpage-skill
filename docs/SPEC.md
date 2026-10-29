@@ -34,6 +34,7 @@ Skill menentukan mode di langkah pertama dari kata-kata permintaan dan isi proye
 | **Restyle** | "perbaiki tampilan", layout dipertahankan | Token dan komponen diperbarui, struktur tetap |
 | **Redesign** | "rombak", "desain ulang" | Struktur baru; konten, stack, dan perilaku tetap |
 | **Section** | Satu section atau komponen | Section yang menyatu dengan desain di sekitarnya |
+| **Site** | Lebih dari satu halaman, atau alur bertahap (onboarding, checkout) | Sistem bersama dulu (token, nav, footer, komponen), lalu halaman per halaman; lihat §13 |
 
 Bendera tambahan: **app screen** (dashboard, admin, settings) memakai aturan layar kerja, bukan aturan halaman marketing. **Autopilot** melewati gerbang manusia dan mencatat setiap pilihan beserta alasannya, untuk lingkungan tanpa interaksi.
 
@@ -47,6 +48,7 @@ Contoh permintaan: *"Buatkan halaman untuk Senyum Dental, klinik gigi di Bandung
 | 1. Brief | Mengekstrak fakta dari permintaan dan file proyek. Maksimal 5 pertanyaan, hanya untuk yang menghalangi pekerjaan | **Brief card** ≤ 10 baris: produk, audiens, satu aksi utama, aset yang benar-benar ada, yang harus dihindari | **Gerbang 1**: konfirmasi atau koreksi |
 | 2. Subjek dan argumen | Inventaris 8–12 hal yang hanya dimiliki klien ini. Halaman ditulis sebagai klaim dan bukti per section; section tanpa klaim dihapus | Ringkasan argumen dan urutan section | — |
 | 3. Arah | Script `find_refs` mengambil 12 kandidat dari perpustakaan tim, menyaring keragaman, lalu skill menyusun 3 arah. Setiap arah berisi tabel keputusan, 3 thumbnail referensi beserta perannya, kalimat ide, dan hasil competitor test | **3 kartu arah** yang benar-benar berbeda | **Gerbang 2**: pilih satu, atau campur ("tipe dari A, warna dari B") |
+| 3b. Kerangka | Kerangka abu-abu (wireframe) arah terpilih dirender di 1440 dan 390px: komposisi tiap section, ritme padat/lapang, komposisi mobile tersendiri, uji isi ekstrem (nama panjang, 3 vs 7 item, tanpa gambar) | Screenshot kerangka | Ikut Gerbang 2, atau disetujui diam-diam di gaya gerbang cepat |
 | 4. Spec | Token sebagai CSS variables, rencana section, tabel peran referensi, dan kalimat ide disimpan ke `.design/spec.md` | Spec satu halaman | Opsional |
 | 5. Copy | Seluruh copy ditulis sebelum markup, dengan konten nyata dari brief. Konten contoh ditandai untuk diganti | — | — |
 | 6. Build | Token → hero → section → gambar. Hero dibuat **3 varian**, dinilai subagent kritikus secara blind, lalu yang terbaik dilanjutkan. Section diadaptasi dari perpustakaan section kode | — | — |
@@ -117,7 +119,8 @@ Perpustakaan referensi penuh disimpan di luar skill; skill hanya membawa index d
 
 ## 9. Ukuran keberhasilan
 
-- **Create:** menang ≥ 60% dalam voting blind berpasangan oleh minimal 3 desainer, pada minimal 12 brief, melawan taste-skill v2 dan tanpa skill.
+- **Create:** menang ≥ 65% dalam voting blind berpasangan oleh minimal 3 desainer, pada 20 brief (60 suara per perbandingan), melawan taste-skill v2 dan tanpa skill. Dengan 60 suara, 65% berarti p ≈ 0,014; target 60% (p ≈ 0,08) belum bisa dibedakan dari kebetulan. 5 dari 20 brief disimpan sebagai **hold-out** yang tidak pernah dipakai saat merevisi skill, supaya skill tidak hanya pandai di soal latihan.
+- **Kritikus:** pilihan subagent kritikus cocok dengan pilihan mayoritas desainer pada ≥ 70% pasangan. Di bawah itu, rubrik kritikus direvisi sebelum dipakai untuk memilih varian.
 - **Perbaikan:** ≥ 80% usulan perbaikan diterima desainer; nol regresi fungsional.
 - **Keragaman:** hasil dari brief berbeda tidak saling mirip (diukur dengan kemiripan visual).
 - **Copyright:** tidak ada hasil yang melewati ambang kemiripan dengan referensi mana pun.
@@ -139,3 +142,121 @@ Setiap versi baru dilanjutkan hanya bila lolos uji terhadap versi sebelumnya.
 - Subagent kritikus butuh lingkungan yang mendukung subagent (Claude Code). Di lingkungan lain, kritik dilakukan di langkah terpisah yang hanya memuat screenshot; lebih lemah, tetapi tetap lebih baik daripada menilai dari kode.
 - Inspector butuh Node dan Chromium. Tanpa itu, gate otomatis tidak berjalan dan laporan wajib menyebutnya.
 - Gerbang manusia menambah 2–3 menit per proyek. Mode autopilot tersedia, dengan kualitas yang diharapkan lebih rendah.
+
+## 12. State proyek dan "turn back"
+
+Semua keputusan disimpan di folder `.design/` proyek, bukan hanya di percakapan, karena percakapan bisa panjang, dipotong, atau dimulai ulang.
+
+```
+.design/
+├── brief.md            brief card yang disetujui
+├── argument.md         inventaris subjek + klaim per section
+├── directions/         ketiga arah disimpan, termasuk yang tidak dipilih (A.md, B.md, C.md)
+├── spec.md             spec aktif, dengan nomor versi
+├── decisions.log       satu baris per keputusan: waktu, langkah, keputusan, alasan, siapa
+└── snapshots/          screenshot setiap versi yang pernah diserahkan
+```
+
+**Peta ketergantungan.** Setiap langkah bergantung pada langkah sebelumnya:
+
+brief → argumen → arah → kerangka → token → copy → section → gambar → motion
+
+**Protokol turn back.** Ketika pemakai berubah pikiran ("balik ke arah B", "ternyata audiensnya anak muda"):
+
+1. Skill mengidentifikasi keputusan mana yang berubah dan mencatatnya di `decisions.log`.
+2. Hanya langkah **setelah** keputusan itu yang dibatalkan; yang sebelumnya tetap.
+3. Skill menyebut dampaknya dalam satu baris sebelum mengerjakan: "Ganti ke arah B: token, kerangka, dan 4 section dibuat ulang; brief, argumen, dan copy tetap."
+4. Arah lama tidak dihapus. Pemakai bisa kembali lagi tanpa kehilangan pekerjaan.
+5. Perubahan kecil (satu warna, satu ukuran) tidak memicu protokol ini; cukup ubah token dan catat.
+
+Dilarang menambal hasil lama dengan keputusan baru di atasnya. Itu yang menghasilkan desain campur aduk.
+
+## 13. Alur kompleks: banyak halaman dan alur bertahap
+
+**Mode Site:**
+
+1. **Sitemap + peran tiap halaman**, termasuk alur (misalnya landing → pricing → daftar → onboarding).
+2. **Sistem bersama dulu:** token, navigasi, footer, komponen dasar, dan satu halaman acuan. Gerbang arah dilakukan sekali untuk seluruh situs.
+3. **Halaman per halaman**, masing-masing dengan argumennya sendiri, tapi hanya memakai sistem bersama.
+4. **Cek konsistensi lintas halaman:** token yang sama, komponen yang sama, tidak ada nilai di luar sistem.
+5. **Spec logika** untuk bagian yang punya perilaku: state, edge case, dan acceptance test dengan jawaban yang diharapkan (format dari panduan tim).
+
+Untuk proyek besar, setiap halaman dikerjakan di sesi atau subagent terpisah yang memuat `.design/` saja, supaya context tidak menumpuk.
+
+## 14. Pemakai dengan berbagai gaya
+
+### Gaya gerbang
+
+| Gaya | Cocok untuk | Bentuk gerbang |
+| --- | --- | --- |
+| **Guided** (bawaan) | Desainer yang ingin terlibat | 3 kartu arah, pilih atau campur |
+| **Quick** | Pemakai yang tidak suka memilih | Satu rekomendasi + alasan satu kalimat + "lanjut?". Dua alternatif hanya ditampilkan bila diminta |
+| **Autopilot** | Tanpa interaksi | Tidak ada gerbang; setiap pilihan dan alasannya dicatat di laporan |
+
+Bila pemakai menjawab "terserah" atau memilih rekomendasi tiga kali berturut-turut, skill menawarkan pindah ke gaya Quick dan mencatat preferensinya di profil pemakai. Rekomendasi selalu ditandai sebagai rekomendasi, dan opsi lain tetap berbeda nyata, bukan tiga variasi yang hampir sama.
+
+### Selera yang sulit diucapkan atau saling bertentangan
+
+- **Kalibrasi dengan perbandingan.** Orang lebih mudah memilih daripada menjelaskan. Skill menampilkan 4–6 pasang thumbnail kecil yang berbeda di satu sumbu ("lebih ke kiri atau kanan?"). Jawabannya menempatkan brand di skala positioning tanpa pemakai harus menulis kata sifat.
+- **Brief terbalik.** "Sebutkan 1–3 situs yang Anda tidak suka, dan kenapa." Larangan konkret lebih mudah didapat daripada keinginan.
+- **Tabel ketegangan.** Bila keinginan bertentangan ("premium tapi ramah"), skill menuliskan di mana masing-masing berlaku: "premium di tipografi dan ruang, ramah di copy dan foto". Pemakai mengoreksi tabelnya, bukan desainnya.
+
+### Feedback yang kabur setelah build
+
+"Kurang wow" atau "kurang pas" tidak ditebak. Skill:
+
+1. Menulis 2–3 hipotesis penyebab ("fokus hero lemah", "kontras ukuran kurang", "foto terlalu generik").
+2. Membuat varian kecil **hanya untuk area itu** (crop hero A/B/C), bukan merombak seluruh halaman.
+3. Pemakai memilih; pilihannya menjadi aturan di spec.
+
+### Selera tim vs selera pribadi
+
+Lapisan selera: `team/taste.md` (bersama) → `designers/<nama>.md` (pribadi, opsional). Bila bertentangan, berlaku urutan prioritas di §15. Setiap aturan selera mencatat asalnya (proyek, tanggal, siapa) dan ditinjau ulang setelah 3 bulan, supaya aturan usang tidak berlaku diam-diam.
+
+## 15. Urutan prioritas aturan
+
+Bila dua aturan bertentangan, yang lebih atas menang:
+
+1. Aturan objektif: aksesibilitas, kontras, tidak ada overflow, fungsi tetap berjalan
+2. Hak cipta dan aturan referensi
+3. Brand profile klien
+4. Brief proyek ini dan keputusan di `decisions.log`
+5. Selera pribadi desainer
+6. Selera tim
+7. Bawaan skill
+
+Konflik yang diselesaikan dengan aturan ini disebut di laporan.
+
+## 16. Struktur layout
+
+Kerangka (langkah 3b) memastikan struktur sebelum gaya:
+
+- **Satu grid, margin luar sama di kiri dan kanan,** asimetri hanya di dalam grid.
+- **Section bertetangga tidak memakai komposisi yang sama;** satu kata per section (split, daftar, full-bleed, statement…) tidak boleh berulang berturut-turut.
+- **Ritme:** jarak antar-section jelas lebih besar dari jarak di dalam section; minimal satu section padat dan satu lapang.
+- **Mobile adalah komposisi sendiri,** bukan desktop yang diperas: urutan, crop, dan baris headline direncanakan.
+- **Uji isi ekstrem** sebelum gaya: nama atau judul panjang, jumlah item berbeda, gambar hilang, teks Bahasa Indonesia yang biasanya lebih panjang dari versi Inggris.
+
+## 17. Simulasi internal (walkthrough di atas kertas)
+
+Setiap skenario dijalankan sebagai walkthrough terhadap rancangan v0 (§1–§11) dan rancangan setelah perbaikan (§12–§16). Ini penilaian rancangan, bukan hasil menjalankan model; angka sebenarnya datang dari uji di §9.
+
+| # | Skenario | v0 | Setelah perbaikan | Penanganan |
+| --- | --- | --- | --- | --- |
+| 1 | Brief lengkap, desainer aktif | Tertangani | Tertangani | Alur Create |
+| 2 | Brief satu kalimat, tanpa aset | Sebagian | Tertangani | Brief card + konten contoh berlabel + strategi gambar |
+| 3 | Pemakai tidak suka memilih | Gagal: gerbang jadi beban | Tertangani | Gaya Quick + rekomendasi + belajar preferensi |
+| 4 | Balik ke arah B setelah build | Gagal: hasil ditambal | Tertangani | `.design/` + peta ketergantungan + protokol turn back |
+| 5 | Audiens berubah di tengah jalan | Gagal | Tertangani | Pembatalan dari langkah brief, copy dan arah dibuat ulang |
+| 6 | "Premium tapi ramah, seperti A tapi jangan terlalu…" | Sebagian | Tertangani | Kalibrasi perbandingan + tabel ketegangan |
+| 7 | "Kurang wow" | Gagal: ditebak | Tertangani | Hipotesis + varian kecil per area |
+| 8 | Situs 5 halaman + alur daftar | Gagal: hanya satu halaman | Tertangani | Mode Site + sistem bersama + spec logika |
+| 9 | Brand guideline ketat | Sebagian | Tertangani | Brand profile + urutan prioritas |
+| 10 | Perbaiki dashboard Tailwind + shadcn | Tertangani | Tertangani | Mode perbaikan, lapisan token, bendera app screen |
+| 11 | Dua desainer, selera berbeda | Gagal | Sebagian | Lapisan selera; konflik antarpribadi tetap butuh keputusan tim |
+| 12 | Sesi panjang, spec mulai dilupakan | Sebagian | Tertangani | `.design/` dibaca ulang sebelum tiap section; sesi baru cukup memuat folder itu |
+| 13 | Kritikus menyukai gaya yang tidak disukai tim | Gagal: tidak terdeteksi | Tertangani | Kalibrasi kritikus vs voting desainer (≥ 70%) + contoh approved/rejected sebagai jangkar |
+| 14 | Lingkungan tanpa Chromium atau subagent | Sebagian | Sebagian | Degradasi terdokumentasi; kualitas memang turun |
+| 15 | Perpustakaan 1000 referensi belum siap | Gagal: arah tidak punya sumber | Tertangani | v0.1 memakai pustaka arah awal (taste-skill, MIT, dengan atribusi) + referensi tim yang sudah ada |
+
+Ringkasan: v0 menangani 2 dari 15 skenario sepenuhnya, 5 sebagian, 8 gagal. Setelah perbaikan: 13 tertangani, 2 sebagian. Dua yang tersisa memang di luar kendali skill: perbedaan selera antarmanusia, dan lingkungan tanpa alat.
