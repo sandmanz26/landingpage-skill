@@ -260,3 +260,90 @@ Setiap skenario dijalankan sebagai walkthrough terhadap rancangan v0 (§1–§11
 | 15 | Perpustakaan 1000 referensi belum siap | Gagal: arah tidak punya sumber | Tertangani | v0.1 memakai pustaka arah awal (taste-skill, MIT, dengan atribusi) + referensi tim yang sudah ada |
 
 Ringkasan: v0 menangani 2 dari 15 skenario sepenuhnya, 5 sebagian, 8 gagal. Setelah perbaikan: 13 tertangani, 2 sebagian. Dua yang tersisa memang di luar kendali skill: perbedaan selera antarmanusia, dan lingkungan tanpa alat.
+
+## 18. Motion sebagai bagian dari UX
+
+Motion dirancang di spec (langkah 4), bukan ditambahkan di akhir. Tidak ada kuota jumlah elemen bergerak; setiap gerakan harus punya fungsi.
+
+| Fungsi | Contoh | Aturan |
+| --- | --- | --- |
+| Feedback | Hover, tekan, fokus, loading tombol | Wajib di semua kontrol, 120–200ms |
+| Orientasi | Pindah halaman, buka panel, ganti tab | Menunjukkan dari mana ke mana |
+| Kontinuitas | Thumbnail membesar menjadi hero halaman detail | Elemen yang sama tetap dikenali saat berpindah |
+| Bercerita | Scroll yang mengungkap urutan proses | Maksimal 1–2 per halaman, diturunkan dari ide halaman |
+| Suasana | Video loop, drift pelan pada foto | Satu, tidak mengganggu bacaan |
+
+**Motion spec** berisi token (durasi cepat/sedang/lambat, easing, jarak gerak, stagger), koreografi per section, transisi halaman, dan satu signature move.
+
+**Pilihan implementasi**, dari yang paling ringan: CSS → View Transitions API (transisi halaman; browser tanpa dukungan otomatis tanpa transisi) → GSAP + ScrollTrigger atau Motion (koreografi kompleks) → Lenis (smooth scroll, hanya bila arahnya membutuhkan).
+
+**Gate motion:**
+
+- Hanya `transform` dan `opacity` yang dianimasikan; tidak ada layout shift; frame yang terlambat diukur.
+- `prefers-reduced-motion`: semua konten tetap ada, hanya gerakannya hilang.
+- Konten terbaca tanpa JavaScript; tidak ada loading gate yang menahan konten.
+- Strip frame saat load, scroll, dan transisi dinilai kritikus.
+
+**Katalog motion.** Animasi dari referensi dicatat sebagai resep dalam kata dan angka kita sendiri: pemicu, properti, durasi, easing, stagger, fungsi UX. Kode situs sumber tidak disalin.
+
+**Capture motion (pipeline):** browser headless membuka situs, lalu merekam:
+
+1. Strip frame 10–30 per detik pada momen penting: 4,5 detik pertama, setiap langkah scroll dengan input mouse sungguhan, hover, dan transisi halaman.
+2. Data animasi: `document.getAnimations()`, CSS transition dan keyframes yang dimuat, timeline GSAP dan ScrollTrigger bila terekspos, deteksi Lenis, Barba/Swup, View Transitions, WebGL.
+3. Kualitas: frame terlambat, layout shift, waktu sampai konten terbaca.
+
+Model video (misalnya Gemini) boleh dipakai sebagai langkah opsional untuk deskripsi kasar video panjang. Data angka tetap diambil dari kode, karena sampling 1 frame per detik melewatkan animasi di bawah satu detik.
+
+## 19. Pemakaian lokal
+
+- **Kebutuhan:** Node 22+, Chrome/Chromium, dan Playwright untuk script pipeline. Tanpa itu, skill berjalan dalam mode terbatas dan laporan menyebutnya.
+- **Pemasangan:** `.claude/skills/design-director/` di proyek (berlaku untuk proyek itu) atau `~/.claude/skills/` (berlaku untuk semua proyek pemakai). Untuk tim, dibagikan sebagai plugin.
+- **Perpustakaan referensi** berada di luar skill, ditunjuk lewat variabel `DESIGN_LIBRARY_PATH`. Skill tetap berjalan tanpa perpustakaan, memakai pustaka arah bawaan.
+- **Keamanan capture:** situs pihak ketiga dibuka di profil browser kosong tanpa login dan tanpa kredensial; file hasil unduhan disimpan di folder terpisah dan diperlakukan sebagai data, bukan kode.
+
+## 20. Roast putaran kedua: celah tambahan dan perbaikannya
+
+| Celah | Risiko | Perbaikan |
+| --- | --- | --- |
+| Langkah panjang ditulis sebagai prosa | Model melewati langkah, terutama di sesi panjang | **Gate dijaga script:** `.design/progress.md` mencatat status tiap langkah; script build menolak jalan bila spec belum ada atau belum disetujui; script report menolak bila inspeksi terakhir lebih tua dari perubahan terakhir |
+| Skill tidak terpicu, atau terpicu di tugas non-desain | Skill tidak dipakai, atau mengganggu tugas lain | Deskripsi skill diuji dengan 20 prompt "harus terpicu" dan 20 "tidak boleh terpicu" |
+| Semua tugas memakai proses penuh | Tugas kecil jadi lambat dan mahal | **Tingkat usaha:** cepat (section, tanpa best-of-3, satu gerbang), standar (halaman), menyeluruh (situs atau pitch, best-of-3 di semua section kunci) |
+| Gambar tidak ada | Halaman terasa kosong, atau memakai foto stok | **Urutan sumber gambar:** milik klien → generator gambar bila tersedia → arsip terbuka berlisensi (script dari taste-skill, MIT) → digambar dalam kode → tipografi saja. Foto pengganti selalu dicantumkan di laporan |
+| Copy Bahasa Indonesia | Terjemahan kaku, "Anda/kamu" tidak konsisten, teks lebih panjang merusak layout | Aturan copy Indonesia: pilihan sapaan per brand, hindari terjemahan harfiah, uji panjang teks di kerangka |
+| Stack berbeda-beda | Hasil hanya cocok untuk HTML statis | Token dipetakan ke tujuan: CSS variables, tema Tailwind (v3 dan v4), atau tema library komponen |
+| Hasil tidak bisa diulang | Sulit membandingkan versi skill | Seed pembagian arah dicatat; versi skill dan prompt kritikus dicatat di setiap laporan |
+| Tidak ada jejak kualitas dari waktu ke waktu | Tidak tahu skill membaik atau memburuk | Setiap run menulis satu baris ke `evals/runs.jsonl`: mode, FAIL, skor kritikus, keputusan gerbang, feedback |
+
+## 21. Struktur file (diperbarui)
+
+```
+skill/design-director/
+├── SKILL.md
+├── modes/            create.md, improve.md, site.md, section.md, app-screen.md
+├── rules/            objective.md, defaults.md, copyright.md, copy-id.md, precedence.md
+├── motion/           functions.md, tokens.md, recipes.json
+├── rubric/           critic.md, critic-calibration.md
+├── team/             taste.md, approved/, rejected/   (diisi tim)
+├── designers/        <nama>.md                         (opsional)
+├── brands/           <klien>.md
+├── library/          index.json, thumbs/, directions-seed.json
+├── sections/         kode per peran
+├── scripts/          find_refs, draw, inspect, lint, similarity, tokens_audit,
+│                     motion_audit, progress, assets
+└── evals/            briefs/, holdout/, runs.jsonl, trigger-tests.json
+
+pipeline/             capture (layout + motion), dedupe, palette, slice, tag
+```
+
+## 22. Ringkasan alur akhir mode Create
+
+1. Muat inti + selera tim + brand → 2. Brief card (gerbang 1) → 3. Inventaris subjek + argumen → 4. Tiga arah dari referensi (gerbang 2, gaya Guided/Quick/Autopilot) → 5. Kerangka abu-abu + uji isi ekstrem → 6. Spec: token, section, peran referensi, motion spec → 7. Copy → 8. Build (hero best-of-3 pada usaha standar ke atas) → 9. Gate otomatis: layout, aksesibilitas, motion, kemiripan → 10. Kritikus terkalibrasi, maksimal 3 putaran → 11. Paket hasil (gerbang 3) → 12. Belajar: usulan perubahan selera tim.
+
+## 23. Yang belum bisa dipastikan sebelum diuji
+
+- Apakah gerbang arah benar-benar lebih disukai desainer daripada arah yang dipilih AI.
+- Apakah best-of-3 hero sepadan dengan waktunya.
+- Apakah kritikus bisa mencapai kecocokan ≥ 70% dengan desainer.
+- Apakah perpustakaan 1000 referensi menambah kemenangan di atas proses yang kuat.
+
+Masing-masing diuji di versi yang memperkenalkannya (§10), dan dibuang bila tidak menang.
