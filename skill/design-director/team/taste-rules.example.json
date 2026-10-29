@@ -1,0 +1,8 @@
+{
+  "_comment": "Copy to taste-rules.json to change how strictly inspect.mjs treats the AI defaults for this team: fail | warn | info | off. Brand-level overrides go in the project's .design/rules.json.",
+  "purple-gradient": "fail",
+  "centred-hero-two-ctas": "fail",
+  "icon-card-row": "fail",
+  "gradient": "warn",
+  "glass": "warn"
+}

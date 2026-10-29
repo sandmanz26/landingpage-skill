@@ -1,0 +1,13 @@
+{
+  "_comment": "Severity of style checks in inspect.mjs: fail | warn | info | off. Team overrides go in team/taste-rules.json, brand overrides in the project's .design/rules.json. Objective checks (contrast, overflow, fonts, tap targets, hidden content) are always on.",
+  "purple-gradient": "warn",
+  "gradient": "info",
+  "glass": "info",
+  "system-font-only": "warn",
+  "too-many-font-sizes": "warn",
+  "too-many-colours": "warn",
+  "shadow-on-everything": "warn",
+  "icon-card-row": "warn",
+  "centred-hero-two-ctas": "warn",
+  "emoji": "warn"
+}

@@ -1,0 +1,7 @@
+{
+  "_comment": "Copy to lint-words.json to add the team's own banned phrases or code patterns. An entry with the same pattern as the built-in list replaces it; severity off removes it.",
+  "copy": [
+    { "pattern": "\\bkami hadir untuk anda\\b", "severity": "warn", "why": "Team cliché" }
+  ],
+  "code": []
+}

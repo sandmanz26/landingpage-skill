@@ -1,0 +1,73 @@
+#!/usr/bin/env node
+// Checks that the scripts work on this machine: run `npm test` in the skill folder.
+// Uses the fixtures in evals/fixtures and a temporary folder; changes nothing else.
+import { spawnSync } from 'node:child_process';
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const here = path.dirname(fileURLToPath(import.meta.url));
+const skill = path.resolve(here, '..');
+const fixtures = path.join(skill, 'evals/fixtures');
+const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'design-director-'));
+let failed = 0;
+
+const run = (script, args, cwd = tmp) => spawnSync(process.execPath, [path.join(here, script), ...args], { cwd, encoding: 'utf8' });
+const check = (name, ok, detail = '') => {
+  console.log(`${ok ? 'pass' : 'FAIL'}  ${name}${ok ? '' : `\n      ${detail}`}`);
+  if (!ok) failed++;
+};
+
+// lint
+{
+  const r = run('lint.mjs', [path.join(fixtures, 'slop.html')]);
+  check('lint fails on placeholder text', r.status === 1 && /Lorem ipsum/i.test(r.stdout), r.stdout + r.stderr);
+  check('lint flags stock copy', /supercharge/i.test(r.stdout) && /seamless/i.test(r.stdout), r.stdout);
+  const c = run('lint.mjs', [path.join(fixtures, 'clean.html')]);
+  check('lint passes the clean page', c.status === 0, c.stdout + c.stderr);
+}
+
+// inspect
+{
+  const out = path.join(tmp, 'slop');
+  const r = run('inspect.mjs', [path.join(fixtures, 'slop.html'), '--out', out, '--quiet']);
+  const report = fs.existsSync(path.join(out, 'report.json')) ? JSON.parse(fs.readFileSync(path.join(out, 'report.json'), 'utf8')) : null;
+  check('inspect runs and writes a report', !!report, r.stderr);
+  if (report) {
+    const rules = new Set(report.findings.map((f) => f.rule));
+    for (const rule of ['overflow', 'font-not-loaded', 'contrast', 'hidden-content', 'reduced-motion', 'img-alt', 'purple-gradient', 'icon-card-row', 'centred-hero-two-ctas'])
+      check(`inspect detects ${rule}`, rules.has(rule), [...rules].join(', '));
+    check('inspect exits 1 when something fails', r.status === 1);
+    check('inspect saves screenshots', fs.readdirSync(out).some((f) => f.endsWith('.png')));
+  }
+  const c = run('inspect.mjs', [path.join(fixtures, 'clean.html'), '--out', path.join(tmp, 'clean'), '--quiet']);
+  check('inspect passes the clean page', c.status === 0, c.stdout + c.stderr);
+}
+
+// progress
+{
+  const p = (...a) => run('progress.mjs', a);
+  p('init', '--mode', 'create');
+  check('progress refuses a step out of order', p('done', 'argument').status === 1);
+  check('progress refuses a gate without approval', p('done', 'brief').status === 1);
+  check('progress refuses self-approval outside autopilot', p('approve', 'brief', '--by', 'claude').status === 1);
+  fs.writeFileSync(path.join(tmp, '.design/brief.md'), '# brief');
+  p('approve', 'brief', '--note', 'ok');
+  check('progress accepts an approved, evidenced step', p('done', 'brief').status === 0);
+  const back = p('back', 'brief', '--reason', 'audience changed');
+  check('progress turns back and reopens later steps', back.status === 0 && /Reopened: brief/.test(back.stdout), back.stdout + back.stderr);
+  check('progress logs decisions', fs.readFileSync(path.join(tmp, '.design/decisions.log'), 'utf8').includes('back brief'));
+}
+
+// draw
+{
+  const a = run('draw.mjs', ['--sector', 'health', '--seed', '7']);
+  const b = run('draw.mjs', ['--sector', 'health', '--seed', '7']);
+  check('draw deals three directions', a.status === 0 && (a.stdout.match(/^[ABC]\. /gm) || []).length === 3, a.stdout + a.stderr);
+  check('draw is reproducible from its seed', a.stdout === b.stdout);
+}
+
+fs.rmSync(tmp, { recursive: true, force: true });
+console.log(failed ? `\n${failed} check(s) failed.` : '\nAll checks passed.');
+process.exit(failed ? 1 : 0);

@@ -1,0 +1,31 @@
+{
+  "_comment": "Patterns lint.mjs looks for in source. Each entry: pattern (case-insensitive regex), severity (fail | warn), why. Teams add their own in team/lint-words.json; entries with the same pattern replace these.",
+  "copy": [
+    { "pattern": "\\bunlock(s|ing)?\\b", "severity": "warn", "why": "Stock marketing verb; say what actually happens" },
+    { "pattern": "\\bsupercharg(e|es|ed|ing)\\b", "severity": "warn", "why": "Stock marketing verb" },
+    { "pattern": "\\bseamless(ly)?\\b", "severity": "warn", "why": "Empty claim; describe the step that got easier" },
+    { "pattern": "\\brevolutioni[sz](e|es|ed|ing)\\b", "severity": "warn", "why": "Empty claim" },
+    { "pattern": "\\ball-in-one\\b", "severity": "warn", "why": "Category cliché" },
+    { "pattern": "\\bnext-level\\b", "severity": "warn", "why": "Empty claim" },
+    { "pattern": "\\bgame[- ]chang(er|ing)\\b", "severity": "warn", "why": "Empty claim" },
+    { "pattern": "\\bcutting-edge\\b", "severity": "warn", "why": "Empty claim" },
+    { "pattern": "\\belevate (your|the)\\b", "severity": "warn", "why": "Stock marketing phrase" },
+    { "pattern": "\\bempower(s|ing)? (you|your|teams?)\\b", "severity": "warn", "why": "Stock marketing phrase" },
+    { "pattern": "\\bleverag(e|es|ing) the power\\b", "severity": "warn", "why": "Stock marketing phrase" },
+    { "pattern": "\\bsolusi (terbaik|terlengkap|terpercaya)\\b", "severity": "warn", "why": "Klaim kosong; sebut buktinya" },
+    { "pattern": "\\b(nomor|no\\.?) ?1 di indonesia\\b", "severity": "warn", "why": "Klaim yang harus dibuktikan" },
+    { "pattern": "\\brevolusioner\\b", "severity": "warn", "why": "Klaim kosong" },
+    { "pattern": "\\btingkatkan (bisnis|produktivitas) anda ke level berikutnya\\b", "severity": "warn", "why": "Terjemahan klise" },
+    { "pattern": "\\bkualitas terbaik dengan harga terjangkau\\b", "severity": "warn", "why": "Klise kategori" },
+    { "pattern": "lorem ipsum", "severity": "fail", "why": "Placeholder text" },
+    { "pattern": "\\b(\\d+)k\\+ (users|customers|teams|pengguna|pelanggan)\\b", "severity": "warn", "why": "Statistic must be real; confirm the source or remove it" },
+    { "pattern": "\\b99\\.9+% (uptime|satisfaction|kepuasan)\\b", "severity": "warn", "why": "Statistic must be real; confirm the source or remove it" }
+  ],
+  "code": [
+    { "pattern": "\\b(from|via|to)-(purple|violet|indigo)-\\d{2,3}\\b", "severity": "warn", "why": "Default purple/indigo gradient" },
+    { "pattern": "bg-gradient-to-|bg-linear-to-", "severity": "warn", "why": "Gradient background: is it a decision or a default?" },
+    { "pattern": "backdrop-blur", "severity": "warn", "why": "Glass panel: a common generated default" },
+    { "pattern": "via\\.placeholder\\.com|placehold\\.co|picsum\\.photos|source\\.unsplash\\.com", "severity": "fail", "why": "Placeholder image service" },
+    { "pattern": "font-family:\\s*['\"]?inter['\"]?\\s*,", "severity": "warn", "why": "Inter as the main face: the most common default" }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "design-director-skill",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Scripts for the design-director skill: progress gates, direction dealing, real-browser inspection and lint.",
+  "engines": { "node": ">=18" },
+  "optionalDependencies": { "playwright": "^1.48.0" },
+  "scripts": {
+    "test": "node scripts/selftest.mjs"
+  }
+}

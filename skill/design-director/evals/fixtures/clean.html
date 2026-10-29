@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clean fixture</title>
+<style>
+  :root { --ground: #f2efe8; --ink: #1d1b18; --accent: #0f5c4d; --space: 8px; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--ground); color: var(--ink); font: 18px/1.55 Georgia, "Times New Roman", serif; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  header { display: flex; justify-content: space-between; align-items: center; padding: 24px 0; }
+  header a { color: var(--ink); text-decoration: none; padding: 12px 0; display: inline-block; }
+  h1 { font-size: clamp(40px, 7vw, 96px); line-height: 1; letter-spacing: -0.02em; margin: 96px 0 32px; max-width: 12ch; }
+  .lead { max-width: 36ch; font-size: 20px; margin: 0 0 32px; }
+  .cta { display: inline-block; background: var(--accent); color: #fff; padding: 16px 24px; text-decoration: none; }
+  section { padding: 160px 0; }
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  .split p { margin: 0 0 16px; max-width: 60ch; }
+  ol { margin: 0; padding-left: 24px; }
+  li { margin-bottom: 16px; }
+  footer { padding: 64px 0; border-top: 1px solid #1d1b1833; }
+  @media (max-width: 700px) { .split { grid-template-columns: 1fr; } section { padding: 96px 0; } }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header><strong>Senyum Dental</strong><nav><a href="#jadwal">Jadwal</a></nav></header>
+    <h1>Periksa gigi 30 menit, tanpa antre</h1>
+    <p class="lead">Klinik gigi di Jalan Riau 12, Bandung. Buka Senin sampai Sabtu, 09.00–20.00.</p>
+    <a class="cta" href="https://wa.me/6281234567890">Pesan lewat WhatsApp</a>
+  </div>
+  <section id="jadwal">
+    <div class="wrap split">
+      <h2>Cara berkunjung</h2>
+      <ol>
+        <li>Pilih jam lewat WhatsApp; kami balas dalam 10 menit pada jam buka.</li>
+        <li>Datang lima menit sebelum jadwal. Ruang tunggu hanya untuk satu pasien.</li>
+        <li>Pemeriksaan dan pembersihan selesai dalam 30 menit, dengan rincian biaya di awal.</li>
+      </ol>
+    </div>
+  </section>
+  <footer><div class="wrap"><p>Senyum Dental · Jl. Riau 12, Bandung · +62 812-3456-7890</p></div></footer>
+</body>
+</html>
