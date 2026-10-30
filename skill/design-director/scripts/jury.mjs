@@ -49,13 +49,20 @@ if (cmd === 'score') {
   });
   const weighted = rows.filter((r) => WEIGHTS[r.criterion]);
   const total = weighted.reduce((s, r) => s + r.final * WEIGHTS[r.criterion], 0) / (weighted.reduce((s, r) => s + WEIGHTS[r.criterion], 0) || 1);
-  summary = { cmd, jurors: jurors.length, ai: ai.length, humans: humans.length, humanWeight: humans.length ? hw : 0, rows, weighted: r1(total), vetoes };
+  // A human may give one overall score instead of per-criterion scores; blend it with the
+  // weighted score of everything else and flag a large gap.
+  const humanOverall = mean(humans.filter((j) => typeof j.overall === 'number').map((j) => j.overall));
+  const final = r1(blend(total, humanOverall));
+  const gap = humanOverall === null ? null : r1(Math.abs(humanOverall - total));
+  summary = { cmd, jurors: jurors.length, ai: ai.length, humans: humans.length, humanWeight: humans.length ? hw : 0, rows, weighted: r1(total), humanOverall: r1(humanOverall), final, gap, vetoes };
   if (!args.json) {
     console.log(`${jurors.length} jurors (${ai.length} AI, ${humans.length} human)${humans.length ? `, human weight ${hw}` : ', AI only: no human votes yet'}\n`);
     console.log('criterion        AI    human  final  spread');
     for (const r of rows)
       console.log(`${r.criterion.padEnd(16)} ${String(r.ai ?? '-').padEnd(5)} ${String(r.human ?? '-').padEnd(6)} ${String(r.final).padEnd(6)} ${r.spread}${r.flag ? '  ← jurors disagree, read both sides' : ''}`);
     console.log(`\nWeighted score: ${summary.weighted}`);
+    if (humanOverall !== null)
+      console.log(`Human overall: ${summary.humanOverall} → final ${final}${gap >= 2 ? `  ← AI and humans are ${gap} apart: find out why before trusting either` : ''}`);
   }
 } else {
   // Borda count: in a ranking of n, first place gets n-1 points, last gets 0.

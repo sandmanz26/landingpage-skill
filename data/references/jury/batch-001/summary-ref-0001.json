@@ -1,9 +1,9 @@
 {
   "cmd": "score",
-  "jurors": 5,
+  "jurors": 6,
   "ai": 5,
-  "humans": 0,
-  "humanWeight": 0,
+  "humans": 1,
+  "humanWeight": 0.5,
   "rows": [
     {
       "criterion": "clarity",
@@ -55,6 +55,9 @@
     }
   ],
   "weighted": 5.7,
+  "humanOverall": 8,
+  "final": 6.8,
+  "gap": 2.3,
   "vetoes": [
     "motion-accessibility: Hero copy white on sand #edbf7a = 1.70:1 at 30px and a page that renders 0 characters without JS: do not copy the colour-on-colour text or the JS-only rendering."
   ]

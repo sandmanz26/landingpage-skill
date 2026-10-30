@@ -71,6 +71,23 @@ const check = (name, ok, detail = '') => {
   check('progress logs decisions', fs.readFileSync(path.join(tmp, '.design/decisions.log'), 'utf8').includes('back brief'));
 }
 
+// jury
+{
+  const dir = path.join(tmp, 'jury');
+  fs.mkdirSync(dir);
+  fs.writeFileSync(path.join(dir, 'ad.json'), JSON.stringify({ juror: 'art-director', kind: 'ai', scores: { clarity: 8, craft: 6 }, ranking: ['A', 'B'] }));
+  fs.writeFileSync(path.join(dir, 'eng.json'), JSON.stringify({ juror: 'engineer', kind: 'ai', scores: { craft: 2 }, veto: 'contrast 2.1:1', ranking: ['B', 'A'] }));
+  fs.writeFileSync(path.join(dir, 'rina.json'), JSON.stringify({ juror: 'Rina', kind: 'human', scores: { clarity: 6 }, overall: 9, ranking: ['B', 'A'] }));
+  const sc = run('jury.mjs', ['score', dir, '--json']);
+  const s = JSON.parse(sc.stdout);
+  check('jury blends AI and human scores', s.rows.find((r) => r.criterion === 'clarity').final === 7, sc.stdout);
+  check('jury flags disagreement', s.rows.find((r) => r.criterion === 'craft').flag === true);
+  check('jury keeps vetoes', s.vetoes.length === 1);
+  check('jury blends a human overall score', s.humanOverall === 9 && s.final !== null);
+  const rk = JSON.parse(run('jury.mjs', ['rank', dir, '--json']).stdout);
+  check('jury ranks with human votes', rk.winner === 'B' && rk.humanTop === 'B');
+}
+
 // draw
 {
   const a = run('draw.mjs', ['--sector', 'health', '--seed', '7']);

@@ -1,0 +1,14 @@
+{
+  "juror": "owner",
+  "kind": "human",
+  "date": "2026-10-30",
+  "refs": {
+    "ref-0004": { "overall": 9 },
+    "ref-0005": { "overall": 9 },
+    "ref-0006": { "overall": 8 }
+  },
+  "notes_verbatim": {
+    "maxima (ref-0004, ref-0005)": "saya merasa permainan warnanya, kemudian dtambah dengan permainan tipografi yang bagus,kemudian permainan grafis dia membuat grafis yang sesuai dengan goalnya tanpa harus mengunakan 3d vector modern. permainan scrolling nya juga bagus bagaimana cara dia memanfaatkan object lain untuk memberikan kesan modern.",
+    "future (ref-0006)": "saya cukup suka dengan permainan foto mereka, kemudian bermain dengan prototipe membuat user bisa fokus, selain itu permainan card gambar dengan beberapa icon icon.permainan animasi di setiap section juga sangat bagus."
+  }
+}

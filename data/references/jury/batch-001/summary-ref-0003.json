@@ -1,9 +1,9 @@
 {
   "cmd": "score",
-  "jurors": 5,
+  "jurors": 6,
   "ai": 5,
-  "humans": 0,
-  "humanWeight": 0,
+  "humans": 1,
+  "humanWeight": 0.5,
   "rows": [
     {
       "criterion": "clarity",
@@ -55,6 +55,9 @@
     }
   ],
   "weighted": 6.6,
+  "humanOverall": 8,
+  "final": 7.3,
+  "gap": 1.4,
   "vetoes": [
     "motion-accessibility: Large scroll-linked rotations (to 50deg/250px), infinite rotating waves and unpausable marquees with zero prefers-reduced-motion handling, plus a 3.60:1 primary CTA: do not copy without a reduce fallback and a darker CTA orange."
   ]

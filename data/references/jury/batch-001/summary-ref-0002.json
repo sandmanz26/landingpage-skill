@@ -1,9 +1,9 @@
 {
   "cmd": "score",
-  "jurors": 5,
+  "jurors": 6,
   "ai": 5,
-  "humans": 0,
-  "humanWeight": 0,
+  "humans": 1,
+  "humanWeight": 0.5,
   "rows": [
     {
       "criterion": "clarity",
@@ -55,6 +55,9 @@
     }
   ],
   "weighted": 6.6,
+  "humanOverall": 8,
+  "final": 7.3,
+  "gap": 1.5,
   "vetoes": [
     "motion-accessibility: Readable copy set at 2-8px and grey text down to 2.26:1: the 'neat micro-type' look must not be copied as-is."
   ]

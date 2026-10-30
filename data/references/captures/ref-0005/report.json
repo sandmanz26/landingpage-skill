@@ -1,0 +1,793 @@
+{
+  "target": "https://maximatherapy.com/programs/3-to-18",
+  "time": "2026-10-30T16:37:49.733Z",
+  "rules": {
+    "purple-gradient": "warn",
+    "gradient": "info",
+    "glass": "info",
+    "system-font-only": "warn",
+    "too-many-font-sizes": "warn",
+    "too-many-colours": "warn",
+    "shadow-on-everything": "warn",
+    "icon-card-row": "warn",
+    "centred-hero-two-ctas": "warn",
+    "emoji": "warn"
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "pageHeight": 11104,
+      "findings": [
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "9 text colour pairs below WCAG AA",
+          "sample": [
+            "#ffffff on #ffffff = 1.00:1 (needs 4.5) <span> \"Donate\"",
+            "#ffffff on #fd4401 = 3.50:1 (needs 4.5) <p> \"Helping kids help themselves through the developme\"",
+            "#fdcb40 on #00b351 = 1.82:1 (needs 3) <h4> \"Adaptive Skills Training\"",
+            "#ffffff on #00b351 = 2.78:1 (needs 4.5) <p> \"Adaptive Skills Training focuses on building the e\"",
+            "#00b351 on #ffffff = 2.78:1 (needs 3) <h4> \"Positive Behavioral Intervention & Support\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "headline-lines",
+          "message": "h3 runs to 4 lines",
+          "sample": [
+            "<h3> \"We believe independence grows when children are su\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "headline-lines",
+          "message": "h1 runs to 5 lines",
+          "sample": [
+            "<h1> \"The Learning Years Shape Us\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "headline-lines",
+          "message": "h2 runs to 5 lines",
+          "sample": [
+            "<h2> \"We understand this can be a big step, but we made \""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "too-many-colours",
+          "message": "10 distinct chromatic colours",
+          "sample": [
+            "#fd4401",
+            "#2668fd",
+            "#00b351",
+            "#fff2b7",
+            "#a7eb98",
+            "#fdcb40",
+            "#f3efe0",
+            "#f780d4"
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "hidden-content",
+          "message": "6 text elements were never visible during a full scroll (a reveal that never fires?)",
+          "sample": [
+            "Start With a Referral",
+            "Have your Regional Center Service Coordinator refer your chi",
+            "Create a Customized Plan",
+            "We collaborate with families and the IPP team to design a pl",
+            "Learn and Grow Together"
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "ABC Diatype Rounded Plus",
+            "share": 87
+          },
+          {
+            "family": "Robuck Rounded",
+            "share": 13
+          },
+          {
+            "family": "ABC Diatype Rounded",
+            "share": 0
+          }
+        ],
+        "fontSizes": [
+          575,
+          214,
+          62,
+          33,
+          24,
+          19,
+          15,
+          14
+        ],
+        "textColours": [
+          "#fd4401",
+          "#ffffff",
+          "#000000",
+          "#fff2b7",
+          "#fdcb40",
+          "#00b351",
+          "#2668fd",
+          "#f5cbff"
+        ],
+        "backgroundColours": [
+          "#ffffff",
+          "#2668fd",
+          "#00b351",
+          "#fd4401",
+          "#a7eb98",
+          "#f3efe0",
+          "#f780d4",
+          "#ffcccd"
+        ],
+        "chromaticColours": 10,
+        "spacing": {
+          "distinct": 21,
+          "offScale": 18,
+          "values": [
+            4,
+            6.5,
+            7.5,
+            13.5,
+            19,
+            24.5,
+            26.5,
+            28.5,
+            30,
+            38,
+            42.5,
+            47.5,
+            57,
+            76,
+            77,
+            119,
+            125,
+            195,
+            212.5,
+            445.5,
+            900
+          ]
+        },
+        "radii": [
+          "33.3333px",
+          "4.7619px",
+          "47.619px",
+          "50%",
+          "23.8095px",
+          "9.5238px"
+        ],
+        "shadows": 0,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 5,
+        "animatedElements": 12,
+        "cls": 0
+      },
+      "screenshots": [
+        "data/references/captures/ref-0005/desktop-fold.png",
+        "data/references/captures/ref-0005/desktop-page-01.png",
+        "data/references/captures/ref-0005/desktop-page-02.png",
+        "data/references/captures/ref-0005/desktop-page-03.png",
+        "data/references/captures/ref-0005/desktop-page-04.png",
+        "data/references/captures/ref-0005/desktop-page-05.png",
+        "data/references/captures/ref-0005/desktop-page-06.png",
+        "data/references/captures/ref-0005/desktop-page-07.png",
+        "data/references/captures/ref-0005/desktop-page-08.png",
+        "data/references/captures/ref-0005/desktop-page-09.png",
+        "data/references/captures/ref-0005/desktop-page-10.png",
+        "data/references/captures/ref-0005/desktop-page-11.png",
+        "data/references/captures/ref-0005/desktop-page-12.png",
+        "data/references/captures/ref-0005/desktop-page-13.png"
+      ]
+    },
+    "tablet": {
+      "width": 768,
+      "pageHeight": 14875,
+      "findings": [
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "8 text colour pairs below WCAG AA",
+          "sample": [
+            "#ffffff on #ffffff = 1.00:1 (needs 3) <span> \"Donate\"",
+            "#fdcb40 on #00b351 = 1.82:1 (needs 3) <h4> \"Adaptive Skills Training\"",
+            "#ffffff on #00b351 = 2.78:1 (needs 3) <p> \"Adaptive Skills Training focuses on building the e\"",
+            "#00b351 on #ffffff = 2.78:1 (needs 3) <h4> \"Positive Behavioral Intervention & Support\"",
+            "#00b351 on #a7eb98 = 1.98:1 (needs 3) <div> \"We\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "headline-lines",
+          "message": "h3 runs to 7 lines",
+          "sample": [
+            "<h3> \"We believe independence grows when children are su\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "headline-lines",
+          "message": "h1 runs to 5 lines",
+          "sample": [
+            "<h1> \"The Learning Years Shape Us\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "headline-lines",
+          "message": "h2 runs to 4 lines",
+          "sample": [
+            "<h2> \"We understand this can be a big step, but we made \""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "too-many-colours",
+          "message": "10 distinct chromatic colours",
+          "sample": [
+            "#fd4401",
+            "#00b351",
+            "#fff2b7",
+            "#a7eb98",
+            "#fdcb40",
+            "#2668fd",
+            "#f3efe0",
+            "#f780d4"
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "hidden-content",
+          "message": "1 text elements were never visible during a full scroll (a reveal that never fires?)",
+          "sample": [
+            "Create a Customized Plan"
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "screenshots-capped",
+          "message": "Page is 14875px tall; only the first 14 screens were captured"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "ABC Diatype Rounded Plus",
+            "share": 88
+          },
+          {
+            "family": "Robuck Rounded",
+            "share": 12
+          },
+          {
+            "family": "ABC Diatype Rounded",
+            "share": 0
+          }
+        ],
+        "fontSizes": [
+          307,
+          174,
+          92,
+          82,
+          51,
+          43,
+          35,
+          29
+        ],
+        "textColours": [
+          "#fd4401",
+          "#000000",
+          "#ffffff",
+          "#fff2b7",
+          "#fdcb40",
+          "#00b351",
+          "#2668fd",
+          "#f5cbff"
+        ],
+        "backgroundColours": [
+          "#ffffff",
+          "#00b351",
+          "#fd4401",
+          "#a7eb98",
+          "#2668fd",
+          "#f3efe0",
+          "#f780d4",
+          "#ffcccd"
+        ],
+        "chromaticColours": 10,
+        "spacing": {
+          "distinct": 28,
+          "offScale": 23,
+          "values": [
+            9,
+            14.5,
+            16.5,
+            20,
+            33,
+            41,
+            46,
+            49,
+            51,
+            52.5,
+            61.5,
+            65.5,
+            67.5,
+            82,
+            85,
+            90,
+            102.5,
+            123,
+            131,
+            153.5,
+            164,
+            166,
+            168,
+            252,
+            268.5,
+            567.5,
+            958.5,
+            1024
+          ]
+        },
+        "radii": [
+          "71.6801px",
+          "102.4px",
+          "50%",
+          "51.2px",
+          "10.24px",
+          "20.48px"
+        ],
+        "shadows": 0,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 2,
+        "animatedElements": 13,
+        "cls": 0.001
+      },
+      "screenshots": [
+        "data/references/captures/ref-0005/tablet-fold.png",
+        "data/references/captures/ref-0005/tablet-page-01.png",
+        "data/references/captures/ref-0005/tablet-page-02.png",
+        "data/references/captures/ref-0005/tablet-page-03.png",
+        "data/references/captures/ref-0005/tablet-page-04.png",
+        "data/references/captures/ref-0005/tablet-page-05.png",
+        "data/references/captures/ref-0005/tablet-page-06.png",
+        "data/references/captures/ref-0005/tablet-page-07.png",
+        "data/references/captures/ref-0005/tablet-page-08.png",
+        "data/references/captures/ref-0005/tablet-page-09.png",
+        "data/references/captures/ref-0005/tablet-page-10.png",
+        "data/references/captures/ref-0005/tablet-page-11.png",
+        "data/references/captures/ref-0005/tablet-page-12.png",
+        "data/references/captures/ref-0005/tablet-page-13.png",
+        "data/references/captures/ref-0005/tablet-page-14.png"
+      ]
+    },
+    "mobile": {
+      "width": 390,
+      "pageHeight": 9236,
+      "findings": [
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "9 text colour pairs below WCAG AA",
+          "sample": [
+            "#ffffff on #ffffff = 1.00:1 (needs 4.5) <span> \"Donate\"",
+            "#ffffff on #fd4401 = 3.50:1 (needs 4.5) <p> \"Helping kids help themselves through the developme\"",
+            "#fdcb40 on #00b351 = 1.82:1 (needs 3) <h4> \"Adaptive Skills Training\"",
+            "#ffffff on #00b351 = 2.78:1 (needs 4.5) <p> \"Adaptive Skills Training focuses on building the e\"",
+            "#00b351 on #ffffff = 2.78:1 (needs 3) <h4> \"Positive Behavioral Intervention & Support\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "headline-lines",
+          "message": "h3 runs to 7 lines",
+          "sample": [
+            "<h3> \"We believe independence grows when children are su\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "headline-lines",
+          "message": "h1 runs to 5 lines",
+          "sample": [
+            "<h1> \"The Learning Years Shape Us\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tap-target",
+          "message": "20 controls smaller than 24x24px on a phone",
+          "sample": [
+            "18x72 <a> \"Our Story\"",
+            "18x34 <a> \"FAQ\"",
+            "18x62 <a> \"Contact\"",
+            "18x59 <a> \"Careers\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "text-at-edge",
+          "message": "14 text elements within 12px of the screen edge",
+          "sample": [
+            "<span> \"Early Intervention\"",
+            "<span> \"Adaptive Skills Training\"",
+            "<span> \"Workforce Development\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "too-many-colours",
+          "message": "10 distinct chromatic colours",
+          "sample": [
+            "#fd4401",
+            "#00b351",
+            "#fff2b7",
+            "#a7eb98",
+            "#fdcb40",
+            "#2668fd",
+            "#f3efe0",
+            "#f780d4"
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "hidden-content",
+          "message": "4 text elements were never visible during a full scroll (a reveal that never fires?)",
+          "sample": [
+            "Start With a Referral",
+            "Have your Regional Center Service Coordinator refer your chi",
+            "Learn and Grow Together",
+            "Services take place where your child lives, learns, and play"
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "ABC Diatype Rounded Plus",
+            "share": 88
+          },
+          {
+            "family": "Robuck Rounded",
+            "share": 12
+          },
+          {
+            "family": "ABC Diatype Rounded",
+            "share": 0
+          }
+        ],
+        "fontSizes": [
+          156,
+          88,
+          47,
+          42,
+          26,
+          22,
+          18,
+          15
+        ],
+        "textColours": [
+          "#fd4401",
+          "#000000",
+          "#ffffff",
+          "#fff2b7",
+          "#fdcb40",
+          "#00b351",
+          "#2668fd",
+          "#f5cbff"
+        ],
+        "backgroundColours": [
+          "#ffffff",
+          "#00b351",
+          "#fd4401",
+          "#a7eb98",
+          "#2668fd",
+          "#f3efe0",
+          "#f780d4",
+          "#ffcccd"
+        ],
+        "chromaticColours": 10,
+        "spacing": {
+          "distinct": 28,
+          "offScale": 22,
+          "values": [
+            4.5,
+            7.5,
+            8.5,
+            10,
+            16.5,
+            21,
+            23.5,
+            25,
+            26,
+            26.5,
+            31,
+            33.5,
+            34.5,
+            41.5,
+            43.5,
+            46,
+            52,
+            62.5,
+            66.5,
+            78,
+            83,
+            84,
+            85.5,
+            128,
+            136,
+            288,
+            486.5,
+            844
+          ]
+        },
+        "radii": [
+          "36.4px",
+          "52px",
+          "50%",
+          "26px",
+          "5.2px",
+          "10.4px"
+        ],
+        "shadows": 0,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 2,
+        "animatedElements": 12,
+        "cls": 0
+      },
+      "screenshots": [
+        "data/references/captures/ref-0005/mobile-fold.png",
+        "data/references/captures/ref-0005/mobile-page-01.png",
+        "data/references/captures/ref-0005/mobile-page-02.png",
+        "data/references/captures/ref-0005/mobile-page-03.png",
+        "data/references/captures/ref-0005/mobile-page-04.png",
+        "data/references/captures/ref-0005/mobile-page-05.png",
+        "data/references/captures/ref-0005/mobile-page-06.png",
+        "data/references/captures/ref-0005/mobile-page-07.png",
+        "data/references/captures/ref-0005/mobile-page-08.png",
+        "data/references/captures/ref-0005/mobile-page-09.png",
+        "data/references/captures/ref-0005/mobile-page-10.png",
+        "data/references/captures/ref-0005/mobile-page-11.png"
+      ]
+    }
+  },
+  "checks": {
+    "reducedMotion": {
+      "findings": [
+        {
+          "severity": "FAIL",
+          "rule": "reduced-motion",
+          "message": "6 text elements stay hidden when the visitor asks for reduced motion",
+          "sample": [
+            "Start With a Referral",
+            "Have your Regional Center Service Coordinator refer your chi",
+            "Create a Customized Plan",
+            "We collaborate with families and the IPP team to design a pl",
+            "Learn and Grow Together"
+          ]
+        }
+      ],
+      "screenshot": "data/references/captures/ref-0005/reduced-motion-fold.png"
+    },
+    "noJavaScript": {
+      "findings": [],
+      "withJs": 2232,
+      "withoutJs": 2097
+    }
+  },
+  "summary": {
+    "fail": 8,
+    "warn": 7
+  },
+  "url": "https://maximatherapy.com/programs/3-to-18",
+  "findings": [
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "9 text colour pairs below WCAG AA",
+      "sample": [
+        "#ffffff on #ffffff = 1.00:1 (needs 4.5) <span> \"Donate\"",
+        "#ffffff on #fd4401 = 3.50:1 (needs 4.5) <p> \"Helping kids help themselves through the developme\"",
+        "#fdcb40 on #00b351 = 1.82:1 (needs 3) <h4> \"Adaptive Skills Training\"",
+        "#ffffff on #00b351 = 2.78:1 (needs 4.5) <p> \"Adaptive Skills Training focuses on building the e\"",
+        "#00b351 on #ffffff = 2.78:1 (needs 3) <h4> \"Positive Behavioral Intervention & Support\""
+      ],
+      "where": [
+        "desktop",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "headline-lines",
+      "message": "h1 runs to 5 lines",
+      "sample": [
+        "<h1> \"The Learning Years Shape Us\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "hidden-content",
+      "message": "6 text elements were never visible during a full scroll (a reveal that never fires?)",
+      "sample": [
+        "Start With a Referral",
+        "Have your Regional Center Service Coordinator refer your chi",
+        "Create a Customized Plan",
+        "We collaborate with families and the IPP team to design a pl",
+        "Learn and Grow Together"
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "8 text colour pairs below WCAG AA",
+      "sample": [
+        "#ffffff on #ffffff = 1.00:1 (needs 3) <span> \"Donate\"",
+        "#fdcb40 on #00b351 = 1.82:1 (needs 3) <h4> \"Adaptive Skills Training\"",
+        "#ffffff on #00b351 = 2.78:1 (needs 3) <p> \"Adaptive Skills Training focuses on building the e\"",
+        "#00b351 on #ffffff = 2.78:1 (needs 3) <h4> \"Positive Behavioral Intervention & Support\"",
+        "#00b351 on #a7eb98 = 1.98:1 (needs 3) <div> \"We\""
+      ],
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "hidden-content",
+      "message": "1 text elements were never visible during a full scroll (a reveal that never fires?)",
+      "sample": [
+        "Create a Customized Plan"
+      ],
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tap-target",
+      "message": "20 controls smaller than 24x24px on a phone",
+      "sample": [
+        "18x72 <a> \"Our Story\"",
+        "18x34 <a> \"FAQ\"",
+        "18x62 <a> \"Contact\"",
+        "18x59 <a> \"Careers\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "hidden-content",
+      "message": "4 text elements were never visible during a full scroll (a reveal that never fires?)",
+      "sample": [
+        "Start With a Referral",
+        "Have your Regional Center Service Coordinator refer your chi",
+        "Learn and Grow Together",
+        "Services take place where your child lives, learns, and play"
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "reduced-motion",
+      "message": "6 text elements stay hidden when the visitor asks for reduced motion",
+      "sample": [
+        "Start With a Referral",
+        "Have your Regional Center Service Coordinator refer your chi",
+        "Create a Customized Plan",
+        "We collaborate with families and the IPP team to design a pl",
+        "Learn and Grow Together"
+      ],
+      "where": [
+        "reducedMotion"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "headline-lines",
+      "message": "h3 runs to 4 lines",
+      "sample": [
+        "<h3> \"We believe independence grows when children are su\""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "headline-lines",
+      "message": "h2 runs to 5 lines",
+      "sample": [
+        "<h2> \"We understand this can be a big step, but we made \""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "too-many-colours",
+      "message": "10 distinct chromatic colours",
+      "sample": [
+        "#fd4401",
+        "#2668fd",
+        "#00b351",
+        "#fff2b7",
+        "#a7eb98",
+        "#fdcb40",
+        "#f3efe0",
+        "#f780d4"
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "headline-lines",
+      "message": "h3 runs to 7 lines",
+      "sample": [
+        "<h3> \"We believe independence grows when children are su\""
+      ],
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "headline-lines",
+      "message": "h2 runs to 4 lines",
+      "sample": [
+        "<h2> \"We understand this can be a big step, but we made \""
+      ],
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "screenshots-capped",
+      "message": "Page is 14875px tall; only the first 14 screens were captured",
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "text-at-edge",
+      "message": "14 text elements within 12px of the screen edge",
+      "sample": [
+        "<span> \"Early Intervention\"",
+        "<span> \"Adaptive Skills Training\"",
+        "<span> \"Workforce Development\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    }
+  ]
+}

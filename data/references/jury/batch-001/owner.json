@@ -1,0 +1,11 @@
+{
+  "juror": "owner",
+  "kind": "human",
+  "date": "2026-10-30",
+  "refs": {
+    "ref-0001": { "overall": 8, "answers": { "balance_and_selling": "\"saya rasa betul\" (ambiguous: agrees with the jury's reading; which of the two questions was not stated)" } },
+    "ref-0002": { "overall": 8, "answers": { "texture_or_motion": "both", "small_type_meant": "both the mono labels and the body text" } },
+    "ref-0003": { "overall": 8, "answers": { "scroll_note": "the flying 'old way' papers on scroll" } }
+  },
+  "note": "Same overall score for all three references: no ranking signal."
+}

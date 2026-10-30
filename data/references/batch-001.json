@@ -2,7 +2,7 @@
   "batch": "batch-001",
   "received": "2026-10-30",
   "from": "user (chat)",
-  "status": "captured and judged by 5 AI jurors (2026-10-30); awaiting human scores and answers to the questions",
+  "status": "captured, judged by 5 AI jurors and the owner (2026-10-30)",
   "entries": [
     {
       "id": "ref-0001",
@@ -92,7 +92,17 @@
         "Transparent sticky logo colliding with body text",
         "Promising a system (\"endless ways to play\") whose parts are all \"Coming soon\"",
         "Vague CTA (\"Get updates\") on a high-ticket pre-order"
-      ]
+      ],
+      "owner": {
+        "overall": 8,
+        "answers": "\"saya rasa betul\" (agrees with the jury reading; which of the two questions was not stated)"
+      },
+      "combined": {
+        "ai_weighted": 5.7,
+        "owner": 8,
+        "final": 6.8,
+        "gap": 2.3
+      }
     },
     {
       "id": "ref-0002",
@@ -188,7 +198,17 @@
         "Unsourced hero stats (\"Millions paid\", \"Billions removed\")",
         "No named proof on a high-risk ask",
         "A 15s auto-advancing carousel with no pause"
-      ]
+      ],
+      "owner": {
+        "overall": 8,
+        "answers": "likes both the texture and the motion; \"small type\" meant both the mono labels and the body"
+      },
+      "combined": {
+        "ai_weighted": 6.6,
+        "owner": 8,
+        "final": 7.3,
+        "gap": 1.4
+      }
     },
     {
       "id": "ref-0003",
@@ -279,7 +299,17 @@
         "Problem stated after the feature menu",
         "Endless loops and big scroll motion with no reduced-motion fallback",
         "The generic dark-SaaS hero kit (pill eyebrow, centred headline, two CTAs)"
-      ]
+      ],
+      "owner": {
+        "overall": 8,
+        "answers": "the scroll note meant the flying \"old way\" papers"
+      },
+      "combined": {
+        "ai_weighted": 6.6,
+        "owner": 8,
+        "final": 7.3,
+        "gap": 1.4
+      }
     }
   ],
   "jury": {
@@ -291,6 +321,7 @@
       "story-strategist",
       "motion-accessibility"
     ],
-    "human_votes": 0
-  }
+    "human_votes": 1
+  },
+  "owner_scoring_note": "The owner gave 8 to all three: no ranking signal. The largest gap (Playfolly, 2.3) comes from the business lens: the owner judged looks, the jurors counted that the page cannot sell."
 }
