@@ -23,7 +23,7 @@ Designs the team approved or rejected, with one line on why. Screenshots go in `
 | --- | --- | --- |
 
 ## Critic weights
-Clarity 25 · Distinctiveness 25 · Craft 25 · Fit 25
+Business 20 · Customer 20 · Story 15 · Clarity 15 · Distinctiveness 15 · Craft 15
 
 ## Review
 Rules older than three months are reviewed: keep, change or delete.

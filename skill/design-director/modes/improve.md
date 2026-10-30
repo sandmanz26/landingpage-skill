@@ -6,9 +6,12 @@ so the page ends up mixed. Work at the lowest layer that fixes the problem.
 
 | Mode | Steps |
 | --- | --- |
-| `review` | context → before → review → deliver |
-| `restyle` | context → before → review → choose → fix → after → gate → deliver → learn |
-| `redesign` | context → before → review → choose → argument → direction → spec → fix → after → gate → deliver → learn |
+| `review` | context → research → before → review → roast → deliver |
+| `restyle` | context → research → before → review → roast → choose → fix → after → gate → deliver → learn |
+| `redesign` | context → research → before → review → strategy → roast → choose → direction → spec → fix → after → gate → deliver → learn |
+
+Research and roast always run. A review that judges only looks misses the reason most pages
+underperform: they do not answer the customer, or do not lead to the action that pays.
 
 ## context
 
@@ -20,6 +23,12 @@ Read the project before touching anything and write `.design/context.md`:
   `brands/<client>.md`);
 - what must survive: routes, forms, data, behaviour, tracking, copy the client wrote;
 - page or app screen (add `modes/app-screen.md` for the latter).
+
+## research
+
+Follow `research/method.md`, starting from the existing page itself: it is the first piece of
+content to audit (claim, proof, objection answered, keep/rewrite/cut). Add competitors and customer
+voice as for a new page.
 
 ## before
 
@@ -34,34 +43,47 @@ sizes and nineteen greys is a finding in itself.
 
 ## review
 
-Brief a critic subagent with `rubric/critic.md` on the before screenshots. Write
-`.design/critique.md` as a ranked list:
+Brief a critic subagent with `rubric/critic.md` on the before screenshots, with the customer and
+their five questions from the research. Judge three lenses: **business** (is the action that pays
+clear?), **customer** (are their questions answered, in order, in their words?) and **look**.
+Write `.design/critique.md` as a ranked list:
 
 ```markdown
-| # | Finding | Evidence | Impact | Risk | Layer to fix |
-| 1 | Hero has no focal point: four elements at similar size | desktop-fold.png; sizes 32/28/24/22px | high | low | tokens (type scale) |
+| # | Lens | Finding | Evidence | Impact | Risk | Layer to fix |
+| 1 | Customer | The top fear (pain, research #1) is never answered | five-questions test, mobile-page-03.png | high | low | content + one section |
+| 2 | Look | Hero has no focal point: four elements at similar size | desktop-fold.png; sizes 32/28/24/22px | high | low | tokens (type scale) |
 ```
 
-Layer is one of: token, component, page. Prefer findings fixed at the token or component layer;
-they fix every page at once.
+Layer is one of: content, token, component, page. Prefer findings fixed at the content, token or
+component layer; they fix every page at once.
 
-In `review` mode, `deliver` is this list with the three changes that would move the page most, and
-the run stops. Change no code.
+## roast
+
+Follow `roast/method.md` against the list of proposed fixes: would these changes make the page
+sell better and answer the customer better, or only look different? Answer every point in the
+Response section.
+
+In `review` mode, `deliver` is the research summary, the ranked findings after the roast, and the
+three changes that would move the page most, and the run stops. Change no code.
 
 ## choose (gate)
 
 Show the findings as a checklist and let the user pick what to do now. Record the picks with
 `approve choose --note "..."`.
 
-## argument, direction, spec (redesign only)
+## strategy, direction, spec (redesign only)
 
-As in `modes/create.md`, with the existing content. Pass `--have` honestly. When the brand fixes
-colours or fonts, keep them and take only composition from the direction.
+As in `modes/create.md` (strategy, then the roast and the strategy gate), with the existing
+content. Pass `--have` honestly. When the brand fixes colours or fonts, keep them and take only
+composition from the direction.
 
 ## fix
 
 - **Lowest layer first.** Token → component → page. Never add a page-level override when a token
   or component change fixes it.
+- **Content first** when the review found business or customer problems: the storyline order, the
+  missing answers to objections, the proof next to its claim. A better-looking page that still does
+  not answer the customer has not been improved.
 - **Order of work:** type (faces and scale) → colour (ground, ink, accent) → frame and spacing
   (margins, rhythm, headings on sections) → states (hover, focus, loading, empty, error) → components.
 - **Map, don't replace.** Change values inside the existing system: the Tailwind theme, the CSS
@@ -82,7 +104,8 @@ Playwright check for the critical paths).
 
 ## gate, deliver, learn
 
-As in `modes/create.md`. The deliver package leads with the before/after table:
+As in `modes/create.md`. The deliver package leads with the research summary and the before/after
+table:
 
 ```markdown
 | Measure | Before | After |

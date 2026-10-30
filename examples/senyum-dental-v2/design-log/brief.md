@@ -1,0 +1,11 @@
+# Brief: Senyum Dental
+- What: Klinik gigi umum dengan 3 dokter; pemeriksaan + pembersihan 30 menit, Rp 350.000.
+- For: Pekerja kantoran di Bandung yang takut ke dokter gigi; membuka halaman dari ponsel saat jam istirahat.
+- One action: Booking lewat WhatsApp.
+- Real content: Rp 350.000 untuk pemeriksaan + pembersihan, 30 menit. Jl. Riau 12, Bandung. Senin–Sabtu 09.00–20.00. 3 dokter gigi.
+- Imagery that exists: none for this simulation (the brief mentions 6 practice photos; they are not available here).
+- Brand: dark green #0F5C4D is fixed. Typefaces free.
+- Avoid: stock photos of smiling models, cartoon teeth, invented testimonials (none exist).
+- Stack: static HTML.
+- Materials: none given (no reviews, chats or old site); research relies on public sources.
+- My reading: "takut ke dokter gigi" + "jam istirahat" means the page must remove two fears: pain/uncertainty and lost time. The 30-minute promise is the strongest real fact.

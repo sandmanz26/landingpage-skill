@@ -1,0 +1,68 @@
+{
+  "mode": "create",
+  "effort": "standard",
+  "gates": "autopilot",
+  "created": "2026-10-30T15:44:20.190Z",
+  "steps": {
+    "brief": {
+      "status": "done",
+      "at": "2026-10-30T15:44:20.336Z",
+      "note": ""
+    },
+    "research": {
+      "status": "done",
+      "at": "2026-10-30T15:44:20.406Z",
+      "note": ""
+    },
+    "strategy": {
+      "status": "done",
+      "at": "2026-10-30T15:44:35.761Z",
+      "note": ""
+    },
+    "roast": {
+      "status": "done",
+      "at": "2026-10-30T15:45:07.513Z",
+      "note": ""
+    },
+    "direction": {
+      "status": "pending"
+    },
+    "skeleton": {
+      "status": "pending"
+    },
+    "spec": {
+      "status": "pending"
+    },
+    "copy": {
+      "status": "pending"
+    },
+    "build": {
+      "status": "pending"
+    },
+    "gate": {
+      "status": "pending"
+    },
+    "look": {
+      "status": "pending"
+    },
+    "deliver": {
+      "status": "pending"
+    },
+    "learn": {
+      "status": "pending"
+    }
+  },
+  "approvals": {
+    "brief": {
+      "by": "claude",
+      "at": "2026-10-30T15:44:20.266Z",
+      "note": "autopilot"
+    },
+    "strategy": {
+      "by": "claude",
+      "at": "2026-10-30T15:45:07.436Z",
+      "note": "autopilot: strategy v2 after roast, 8/8 points answered, launch blocker listed"
+    }
+  },
+  "history": []
+}

@@ -6,29 +6,43 @@ description: >-
   single sections, and improving, restyling, redesigning or reviewing an existing web UI or app
   screen. Use it whenever the user asks to design, build, redesign, restyle, polish, review or audit
   a web page, site, hero, section or dashboard, or says a page looks generic, templated or AI-made.
-  It applies the team's taste profile and the client's brand, asks the designer at short gates,
-  and checks the result in a real browser. Not for backend work, data pipelines, slides or documents.
+  Every run researches the business, competitors and customers, builds a storyline that serves both
+  the business and the customer, roasts its own plan, applies the team's taste and the client's
+  brand, asks the designer at short gates, checks the result in a real browser, and returns the
+  research with the work. Not for backend work, data pipelines, slides or documents.
 ---
 
 # Design Director
 
-A model left to itself designs the average of every page it has seen. This skill closes the open
-decisions before any code is written, puts the designer's taste in at the two moments that matter
-most, and checks the result with a browser and a second pair of eyes instead of trusting the code.
+A model left to itself designs the average of every page it has seen, for a customer it has
+imagined. This skill starts from research into the real business and its real customers, turns it
+into a storyline, attacks that plan before building, puts the designer's taste in at the moments
+that matter most, and checks the result with a browser and a second pair of eyes. Good design here
+means three things at once: it serves the business, it answers the customer, and it looks right.
 
 `<skill>` below means this skill's folder. Run scripts from the project root; working files go to
 `.design/` there. Scripts need Node 18+ and Playwright with Chromium (`CHROME_PATH` if needed).
 
 ## Principles
 
-1. **Decide before you build.** Every decision is written to `.design/` before code. Code only uses
+1. **Research first, always.** Every run researches the business, the competitors and the customers
+   (`research/method.md`) without being asked, and every decision can be traced to a finding. The
+   research report is returned to the user with the work.
+2. **Business and customer before looks.** The strategy names the action that pays and the
+   customer's questions; the storyline answers them in order (`strategy/method.md`). Looks serve the
+   story, not the other way round.
+3. **Roast before you build, always.** A separate agent attacks the plan in four voices
+   (`roast/method.md`); every point is accepted and acted on, or rejected with a reason. The roast
+   may change the direction; that is its job.
+4. **Decide before you build.** Every decision is written to `.design/` before code. Code only uses
    what the spec says.
-2. **The designer chooses; you propose.** Two short gates: the brief and the direction.
-3. **The team's taste is data.** `team/taste.md` and the brand file outrank your own preferences.
-4. **Never judge from code.** Judge screenshots. The critic is a separate agent that did not build it.
-5. **Respect what exists.** In an existing project, change tokens and components, not page overrides.
-6. **Never invent proof.** No made-up testimonials, client logos, statistics, awards or press.
-7. **Read only what the step needs.** Each step names its files; do not load the whole skill.
+5. **The designer chooses; you propose.** Short gates: the brief, the strategy, the direction, and
+   the final result.
+6. **The team's taste is data.** `team/taste.md` and the brand file outrank your own preferences.
+7. **Never judge from code.** Judge screenshots. The critic is a separate agent that did not build it.
+8. **Respect what exists.** In an existing project, change tokens and components, not page overrides.
+9. **Never invent proof.** No made-up testimonials, client logos, statistics, awards or press.
+10. **Read only what the step needs.** Each step names its files; do not load the whole skill.
 
 ## Start every run
 
@@ -80,6 +94,15 @@ situation, the one action, the real content and assets that exist, brand constra
 avoid, and your one-line reading of anything unclear. Ask at most 5 questions, only for facts that
 block the work.
 
+**Strategy gate** (`approve strategy`, after the roast). This is where the user first sees the
+research. Show, in this order:
+1. the research summary: the 3–5 findings that change the design, the category clichés, the
+   customer's top questions in their own words, and how many sources were read;
+2. the strategy: the action that pays, the customer and their awareness level, the message house
+   (promise, three pillars, objections), and the storyline as a list of beats;
+3. what the roast changed, and any high-severity point you rejected, with the reason;
+4. the open questions for the client and the proof that is missing.
+
 **Direction gate** (`approve direction`).
 - *Guided:* three cards from `draw.mjs`, each with the idea sentence, composition in one line, type
   and colour approach, and why it fits this subject. Say which you recommend and why. The user may
@@ -96,10 +119,11 @@ desktop and phone, what is sample content, open issues.
 ## When the user changes their mind
 
 Every step depends on the ones before it:
-brief → argument → direction → skeleton → spec → copy → build → gate → look → deliver.
+brief → research → strategy → roast → direction → skeleton → spec → copy → build → gate → look →
+deliver.
 
 1. Find the earliest decision that changed ("go back to direction B" → `direction`; "the audience is
-   students now" → `brief`).
+   students now" → `brief`; "the real problem is price, not fear" → `strategy`).
 2. Say the impact in one line before doing anything: what will be redone and what stays.
 3. Run `progress.mjs back <step> --reason "<what changed>"`, then redo from that step.
 4. Keep earlier work: dealt directions stay in `.design/directions/`, old screenshots in
@@ -128,6 +152,9 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 | --- | --- |
 | `modes/*.md` | The chosen mode, at the start |
 | `rules/precedence.md` | At the start |
+| `research/method.md` | The research step (every run) |
+| `strategy/method.md` | The strategy step: business canvas, customer, message house, storyline |
+| `roast/method.md` | The roast step (every run) |
 | `rules/objective.md` | Building and fixing: what the inspector measures and the targets |
 | `rules/defaults.md` | Writing the spec: the AI defaults to avoid and what to use instead |
 | `rules/copyright.md` | Before using any reference |

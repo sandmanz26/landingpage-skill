@@ -49,14 +49,25 @@ const check = (name, ok, detail = '') => {
 {
   const p = (...a) => run('progress.mjs', a);
   p('init', '--mode', 'create');
-  check('progress refuses a step out of order', p('done', 'argument').status === 1);
+  check('progress refuses a step out of order', p('done', 'research').status === 1);
   check('progress refuses a gate without approval', p('done', 'brief').status === 1);
   check('progress refuses self-approval outside autopilot', p('approve', 'brief', '--by', 'claude').status === 1);
   fs.writeFileSync(path.join(tmp, '.design/brief.md'), '# brief');
   p('approve', 'brief', '--note', 'ok');
   check('progress accepts an approved, evidenced step', p('done', 'brief').status === 0);
+  fs.writeFileSync(path.join(tmp, '.design/research.md'), '# research\nno sources section');
+  check('progress refuses research without sources', p('done', 'research').status === 1);
+  fs.appendFileSync(path.join(tmp, '.design/research.md'), '\n## Sources\n| 1 | brief | ... | today |');
+  check('progress accepts research with sources', p('done', 'research').status === 0);
+  fs.writeFileSync(path.join(tmp, '.design/strategy.md'), '# strategy');
+  p('done', 'strategy');
+  fs.writeFileSync(path.join(tmp, '.design/roast.md'), '# roast\n## Points\n| 1 | ... |');
+  p('approve', 'strategy', '--note', 'ok');
+  check('progress refuses a roast nobody answered', p('done', 'roast').status === 1);
+  fs.appendFileSync(path.join(tmp, '.design/roast.md'), '\n## Response\n| 1 | Accepted | ... |');
+  check('progress accepts an answered roast', p('done', 'roast').status === 0);
   const back = p('back', 'brief', '--reason', 'audience changed');
-  check('progress turns back and reopens later steps', back.status === 0 && /Reopened: brief/.test(back.stdout), back.stdout + back.stderr);
+  check('progress turns back and reopens later steps', back.status === 0 && /Reopened: brief, research, strategy, roast/.test(back.stdout), back.stdout + back.stderr);
   check('progress logs decisions', fs.readFileSync(path.join(tmp, '.design/decisions.log'), 'utf8').includes('back brief'));
 }
 

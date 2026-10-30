@@ -1,7 +1,8 @@
 # Mode: site
 
-Several pages, or a stepped flow (landing → pricing → sign-up → onboarding). Steps: brief → sitemap
-→ argument → direction → skeleton → system → spec → copy → build → gate → look → deliver → learn.
+Several pages, or a stepped flow (landing → pricing → sign-up → onboarding). Steps: brief → research
+→ sitemap → strategy → roast → direction → skeleton → system → spec → copy → build → gate → look →
+deliver → learn. Research and roast cover the whole site at once.
 Everything not described here works as in `modes/create.md`.
 
 ## sitemap
@@ -21,7 +22,8 @@ only use this system; a new component is added to the system first, then used.
 
 ## spec, copy, build
 
-One spec section per page: its argument, sections and content. For each step with behaviour, add a
+One spec section per page: its storyline beats (the strategy gives one storyline per page, all
+serving the same message house), sections and content. For each step with behaviour, add a
 logic spec: the rules, every state (idle, loading, success, error, empty), edge cases, and
 acceptance tests with the expected answers written out.
 

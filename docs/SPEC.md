@@ -347,3 +347,14 @@ pipeline/             capture (layout + motion), dedupe, palette, slice, tag
 - Apakah perpustakaan 1000 referensi menambah kemenangan di atas proses yang kuat.
 
 Masing-masing diuji di versi yang memperkenalkannya (§10), dan dibuang bila tidak menang.
+
+## 24. Riset, strategi dan roast sebagai langkah wajib (v0.2)
+
+Desain dinilai dari tiga hal sekaligus: melayani bisnis, menjawab konsumen, dan tampil benar. Karena itu setiap run kini menjalankan tiga langkah tanpa harus diminta:
+
+- **Research** (`research/method.md`): bisnis, 3–6 pesaing dan klise kategorinya, suara konsumen dalam kata-kata mereka sendiri, tingkat kesadaran, bukti yang ada dan yang kurang. Setiap temuan diberi label Fakta/Inferensi/Asumsi beserta dampaknya ke desain. Laporan ini dikembalikan ke pemakai.
+- **Strategy** (`strategy/method.md`): kanvas bisnis, profil konsumen, message house, storyline yang dipilih dari tingkat kesadaran (satu langkah per section: pertanyaan → jawaban → bukti → alasan lanjut), lalu ide.
+- **Roast** (`roast/method.md`): subagent terpisah menyerang rencana dari empat sudut pandang (konsumen skeptis, marketer pesaing, pemilik bisnis, art director senior), ditambah pre-mortem dan pengecekan kontradiksi dengan riset. Setiap poin wajib ditanggapi; roast boleh mengubah arah desain.
+- **Gerbang strategi** baru: pemakai melihat riset, strategi, dan perubahan dari roast sebelum memilih arah visual.
+- Rubrik kritikus kini menilai bisnis, konsumen, dan story di samping kejelasan, kekhasan, dan craft, termasuk "uji 5 pertanyaan".
+- `progress.mjs` menolak riset tanpa daftar sumber dan roast yang belum ditanggapi. Riset dan roast tidak bisa dilewati di tingkat usaha mana pun.

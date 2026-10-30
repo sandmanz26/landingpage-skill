@@ -11,13 +11,21 @@ Give it exactly this, and nothing about what you meant to do:
 You are reviewing a web page you did not make. Read <skill>/rubric/critic.md and follow the
 "Critique" (or "Ranking") format.
 Brief card: <paste .design/brief.md>
+Customer: <the customer profile from .design/strategy.md, and the five questions they most need
+answered, from the research, in their own words>
 Team anchors: <paste the "Anchors" section of team/taste.md, if any>
 Screenshots: <list of paths: desktop fold and pages, mobile fold and pages>
 Write your answer to <.design/critique.md | .design/variants/ranking.md>.
 ```
 
 If subagents are not available, do the review as a separate step that loads only this file, the
-brief card, the anchors and the screenshots, and say in the report that it was not independent.
+brief card, the customer profile and questions, the anchors and the screenshots, and say in the
+report that it was not independent.
+
+The critic judges three things at once, because a page can be beautiful and still fail: does it
+serve the **business** (the action that pays), does it serve the **customer** (their questions, in
+their order, in their words), and does it **look** right (clear, distinctive, well made). The
+storyline is what joins the first two.
 
 ## How to look
 
@@ -47,7 +55,7 @@ own.
     the page, is the template showing.
 11. **Phone.** Its own composition, or the desktop squeezed? Is the first screen still one clear thing?
 12. **Completeness.** Is everything the visitor came for there, at a readable size?
-13. **Fit.** Against the brief and the team anchors: is this the kind of page the team approves, or
+13. **Fit.** Against the brief, the customer and the team anchors: is this the kind of page the team approves, or
     the kind it rejects? Say which anchor it is closest to.
 
 ## Score
@@ -57,18 +65,32 @@ weights"); without them use these:
 
 | Criterion | Weight | Question |
 | --- | --- | --- |
-| Clarity | 25% | Passes 1–2: does a stranger get it in five seconds? |
-| Distinctiveness | 25% | Pass 4: does it belong to this client and no other? |
-| Craft | 25% | Passes 3, 5–11: is it composed, consistent, finished? |
-| Fit | 25% | Passes 12–13: right for this audience, brand and team taste? |
+| Business | 20% | Is the action that pays obvious on every screen? Is the offer clear enough to say yes to? Is trust built before the ask? |
+| Customer | 20% | The five-questions test (below): are their questions answered, in their order, in their words, on a phone? |
+| Story | 15% | Does each section answer the question the previous one raised? Any section that is there by habit? |
+| Clarity | 15% | Passes 1–2: does a stranger get it in five seconds? |
+| Distinctiveness | 15% | Pass 4: does it belong to this client and no other? |
+| Craft | 15% | Passes 3, 5–11: is it composed, consistent, finished? |
 
 Caps: a failed five-second test caps Clarity at 4. A page a competitor could use caps
-Distinctiveness at 5. Any broken thing visible in a screenshot (overflow, cut text, missing image,
-unreadable contrast) caps Craft at 5.
+Distinctiveness at 5. Any broken thing visible in a screenshot caps Craft at 5. Fewer than four of
+the five customer questions answered caps Customer at 5. No visible action on the first screen caps
+Business at 4.
+
+### The five-questions test
+
+Read the page as the customer described in the brief, on the phone screenshots. For each of the
+five questions you were given: is it answered? In which section (screenshot file)? Before or after
+the customer is asked to act? In their words or in the company's?
+
+| # | Customer question | Answered? | Where | Before the ask? | Their words? |
 
 ## Critique format
 
 ```markdown
+## Five-questions test
+| # | Customer question | Answered? | Where | Before the ask? | Their words? |
+
 ## Scores
 | Criterion | Score | Reason |
 ...

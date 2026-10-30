@@ -2,13 +2,14 @@
 
 Skill untuk Claude yang membuat dan memperbaiki desain web supaya terasa didesain untuk kliennya, bukan hasil generate rata-rata. Rancangan lengkapnya ada di [`docs/SPEC.md`](docs/SPEC.md).
 
-**Status: v0.1.** Alur inti, gerbang, dan alat pemeriksa sudah jalan. Perpustakaan referensi tim (v0.4) dan perpustakaan section kode (v0.5) belum ada; arah desain sementara diambil dari pustaka awal taste-skill (MIT, lihat [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md)).
+**Status: v0.2.** Alur inti, gerbang, dan alat pemeriksa sudah jalan. Setiap run kini wajib riset (bisnis, pesaing, konsumen), menyusun strategi dan storyline, dan me-roast rencananya sendiri; hasil riset dikembalikan ke pemakai. Perpustakaan referensi tim (v0.4) dan perpustakaan section kode (v0.5) belum ada; arah desain sementara diambil dari pustaka awal taste-skill (MIT, lihat [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md)).
 
 ## Isi
 
 ```
 skill/design-director/      ← folder skill yang dipasang
 ├── SKILL.md                pintu masuk: mode, prinsip, gerbang, turn back
+├── research/, strategy/, roast/   metode riset, strategi + storyline, roast (wajib)
 ├── modes/                  create, improve (review/restyle/redesign), site, section, app-screen
 ├── rules/                  aturan objektif, default AI, copyright, prioritas, copy Indonesia
 ├── motion/                 motion sebagai UX

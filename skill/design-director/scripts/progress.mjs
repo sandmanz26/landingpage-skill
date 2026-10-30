@@ -8,7 +8,7 @@
 //   node progress.mjs status | next
 //   node progress.mjs check <step>              exit 1 if the step may not start yet
 //   node progress.mjs done <step> [--note "..."]
-//   node progress.mjs approve <gate> [--by user|claude] [--note "..."]
+//   node progress.mjs approve <brief|strategy|direction|choose|final> [--by user|claude] [--note "..."]
 //   node progress.mjs skip <step> --reason "..."
 //   node progress.mjs back <step> --reason "..." turn back: reopen this step and all after it
 //   node progress.mjs log "<decision>" [--step s] [--by user|claude]
@@ -20,26 +20,31 @@ const DIR = path.resolve('.design');
 const STATE = path.join(DIR, 'progress.json');
 const LOG = path.join(DIR, 'decisions.log');
 
+// Steps per mode. "step:gate" means the step needs that approval before it can
+// be marked done. Research and roast run in every mode: they are not optional.
 const FLOWS = {
-  create: ['brief', 'argument', 'direction', 'skeleton', 'spec', 'copy', 'build', 'gate', 'look', 'deliver', 'learn'],
-  site: ['brief', 'sitemap', 'argument', 'direction', 'skeleton', 'system', 'spec', 'copy', 'build', 'gate', 'look', 'deliver', 'learn'],
-  section: ['brief', 'spec', 'build', 'gate', 'look', 'deliver'],
-  review: ['context', 'before', 'review', 'deliver'],
-  restyle: ['context', 'before', 'review', 'choose', 'fix', 'after', 'gate', 'deliver', 'learn'],
-  redesign: ['context', 'before', 'review', 'choose', 'argument', 'direction', 'spec', 'fix', 'after', 'gate', 'deliver', 'learn'],
+  create: ['brief:brief', 'research', 'strategy', 'roast:strategy', 'direction:direction', 'skeleton', 'spec', 'copy', 'build', 'gate', 'look', 'deliver:final', 'learn'],
+  site: ['brief:brief', 'research', 'sitemap', 'strategy', 'roast:strategy', 'direction:direction', 'skeleton', 'system', 'spec', 'copy', 'build', 'gate', 'look', 'deliver:final', 'learn'],
+  section: ['brief:brief', 'research', 'spec', 'roast', 'build', 'gate', 'look', 'deliver:final'],
+  review: ['context', 'research', 'before', 'review', 'roast', 'deliver:final'],
+  restyle: ['context', 'research', 'before', 'review', 'roast', 'choose:choose', 'fix', 'after', 'gate', 'deliver:final', 'learn'],
+  redesign: ['context', 'research', 'before', 'review', 'strategy', 'roast:strategy', 'choose:choose', 'direction:direction', 'spec', 'fix', 'after', 'gate', 'deliver:final', 'learn'],
 };
-// Steps that may only be marked done once the named approval exists.
-const GATES = { brief: 'brief', direction: 'direction', choose: 'choose', deliver: 'final' };
-// Steps an effort level may skip, with a reason.
+const stepsOf = (mode) => FLOWS[mode].map((x) => x.split(':')[0]);
+const gateOf = (mode, step) => (FLOWS[mode].find((x) => x.split(':')[0] === step) || '').split(':')[1];
+// Steps an effort level may skip, with a reason. Research and roast are never
+// skippable; quick effort runs them in their light form.
 const SKIPPABLE = {
-  quick: ['skeleton', 'look', 'learn', 'argument'],
+  quick: ['skeleton', 'look', 'learn'],
   standard: ['learn'],
   thorough: [],
 };
 // Files that must exist before a step counts as done.
 const EVIDENCE = {
   brief: 'brief.md',
-  argument: 'argument.md',
+  research: 'research.md',
+  strategy: 'strategy.md',
+  roast: 'roast.md',
   sitemap: 'sitemap.md',
   spec: 'spec.md',
   copy: 'copy.md',
@@ -80,16 +85,21 @@ function newestSourceMtime(root = process.cwd()) {
 }
 
 function blockers(s, step) {
-  const flow = FLOWS[s.mode];
+  const flow = stepsOf(s.mode);
   const i = flow.indexOf(step);
   if (i < 0) return [`"${step}" is not a step of mode ${s.mode}. Steps: ${flow.join(' → ')}`];
   return flow.slice(0, i).filter((p) => !['done', 'skipped'].includes(s.steps[p].status)).map((p) => `step "${p}" is not done`);
 }
 
 function summary(s) {
-  const flow = FLOWS[s.mode];
+  const flow = stepsOf(s.mode);
   const marks = { done: '✓', skipped: '–', pending: '·' };
-  const line = flow.map((p) => `${marks[s.steps[p].status]} ${p}${GATES[p] ? (s.approvals[GATES[p]] ? ' [approved]' : ' [gate]') : ''}`).join('\n  ');
+  const line = flow
+    .map((p) => {
+      const g = gateOf(s.mode, p);
+      return `${marks[s.steps[p].status]} ${p}${g ? (s.approvals[g] ? ` [${g} approved]` : ` [${g} gate]`) : ''}`;
+    })
+    .join('\n  ');
   const next = flow.find((p) => s.steps[p].status === 'pending');
   return `Mode ${s.mode} · effort ${s.effort} · gates ${s.gates}\n  ${line}\nNext: ${next || 'nothing; the run is complete'}`;
 }
@@ -105,7 +115,7 @@ switch (cmd) {
     if (!['guided', 'quick', 'autopilot'].includes(gates)) fail('--gates must be guided, quick or autopilot');
     fs.mkdirSync(DIR, { recursive: true });
     const s = { mode, effort, gates, created: now(), steps: {}, approvals: {}, history: [] };
-    for (const p of FLOWS[mode]) s.steps[p] = { status: 'pending' };
+    for (const p of stepsOf(mode)) s.steps[p] = { status: 'pending' };
     save(s);
     log(`init mode=${mode} effort=${effort} gates=${gates}`);
     console.log(summary(s));
@@ -125,7 +135,7 @@ switch (cmd) {
   case 'approve': {
     const s = load();
     const gate = arg;
-    if (!Object.values(GATES).includes(gate)) fail(`Unknown gate "${gate}". Gates: ${[...new Set(Object.values(GATES))].join(', ')}`);
+    if (!stepsOf(s.mode).some((p) => gateOf(s.mode, p) === gate)) fail(`Mode ${s.mode} has no gate "${gate}". Its gates: ${[...new Set(stepsOf(s.mode).map((p) => gateOf(s.mode, p)).filter(Boolean))].join(', ')}`);
     const by = args.by || (s.gates === 'autopilot' ? 'claude' : 'user');
     if (by === 'claude' && s.gates !== 'autopilot') fail('Only the user approves a gate unless the run uses --gates autopilot.');
     s.approvals[gate] = { by, at: now(), note: args.note || '' };
@@ -139,8 +149,17 @@ switch (cmd) {
     const step = arg;
     const b = blockers(s, step);
     if (b.length) fail(`Cannot mark "${step}" done: ${b.join('; ')}`);
-    if (GATES[step] && !s.approvals[GATES[step]]) fail(`"${step}" needs the ${GATES[step]} approval first. Show it to the user, then run: approve ${GATES[step]}`);
+    const gate = gateOf(s.mode, step);
+    if (gate && !s.approvals[gate]) fail(`"${step}" needs the ${gate} approval first. Show it to the user, then run: approve ${gate}`);
     if (EVIDENCE[step] && !fs.existsSync(path.join(DIR, EVIDENCE[step]))) fail(`"${step}" needs .design/${EVIDENCE[step]} to exist first.`);
+    if (step === 'roast') {
+      const r = fs.readFileSync(path.join(DIR, 'roast.md'), 'utf8');
+      if (!/##\s*(Response|Tanggapan)/i.test(r)) fail('roast.md needs a "## Response" section answering every point (accepted and changed, or rejected with a reason).');
+    }
+    if (step === 'research') {
+      const r = fs.readFileSync(path.join(DIR, 'research.md'), 'utf8');
+      if (!/##\s*(Sources|Sumber)/i.test(r)) fail('research.md needs a "## Sources" section listing what was read, with dates.');
+    }
     if (step === 'direction' && !fs.existsSync(path.join(DIR, 'directions'))) fail('"direction" needs the dealt directions in .design/directions/.');
     if (step === 'gate') {
       const rp = path.join(DIR, 'inspect/report.json');
@@ -172,14 +191,15 @@ switch (cmd) {
   }
   case 'back': {
     const s = load();
-    const flow = FLOWS[s.mode];
+    const flow = stepsOf(s.mode);
     const i = flow.indexOf(arg);
     if (i < 0) fail(`Unknown step "${arg}". Steps: ${flow.join(' → ')}`);
     if (!args.reason) fail('back needs --reason (what changed)');
     const reopened = flow.slice(i).filter((p) => s.steps[p].status !== 'pending');
     for (const p of flow.slice(i)) {
       s.steps[p] = { status: 'pending' };
-      if (GATES[p]) delete s.approvals[GATES[p]];
+      const g = gateOf(s.mode, p);
+      if (g) delete s.approvals[g];
     }
     s.history.push({ at: now(), back: arg, reason: args.reason, reopened });
     save(s);

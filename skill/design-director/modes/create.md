@@ -1,7 +1,8 @@
 # Mode: create
 
-A new page. Steps: brief → argument → direction → skeleton → spec → copy → build → gate → look →
-deliver → learn. Run `progress.mjs check <step>` before each and `done <step>` after.
+A new page. Steps: brief → research → strategy → roast → direction → skeleton → spec → copy → build →
+gate → look → deliver → learn. Run `progress.mjs check <step>` before each and `done <step>` after.
+Research and roast always run; the user never has to ask for them.
 
 ## 1. brief (gate)
 
@@ -12,7 +13,10 @@ Read the request and the project. Find out what is real:
 - the real content: services or products, prices, hours, address, numbers, quotes;
 - **the imagery that truly exists**: their photos, product shots, a real interface, an image tool
   you can call, or nothing;
-- brand constraints (colours, fonts, logo) and the stack.
+- brand constraints (colours, fonts, logo) and the stack;
+- **materials to research from**: existing copy, the old site, brochures, chat exports, reviews,
+  sales notes. Ask for them once if none were given; they are the best source of the customer's
+  real voice.
 
 Write `.design/brief.md`:
 
@@ -26,26 +30,36 @@ Write `.design/brief.md`:
 - Brand: <fixed colours/fonts, or "free">
 - Avoid: <what the user or the brand rules out>
 - Stack: <static HTML / Next / Astro / ...>
+- Materials: <what was given to research from, or "none yet">
 - My reading: <one line on anything unclear>
 ```
 
 Show it as the brief gate (SKILL.md). Ask only blocking questions, five at most. After the user
 answers: `approve brief --note "..."`, then `done brief`.
 
-## 2. argument
+## 2. research
 
-In your notes, **inventory the subject**: 8–12 things that belong to this client and no competitor.
-Its name and what it means; its street, city and what that place looks like; the numbers in the
-brief; the constraint it lives with; its materials, rituals, hours; the printed things of its
-world (a menu, a ticket, a receipt, a label).
+Follow `research/method.md`: the business, 3–6 competitors and the category clichés, the customers
+in their own words and their awareness level, the proof available and missing. Write
+`.design/research.md`; every finding says what it changes in the design.
 
-Then write the page as claims with proof, one line per section. The claims decide which sections
-exist and in what order; delete any section that has no claim. This replaces the stock sequence of
-hero, logos, three features, testimonial, pricing, CTA.
+## 3. strategy
 
-Write both to `.design/argument.md`. (Quick effort may skip this step with a reason.)
+Follow `strategy/method.md`: business canvas, customer profile, message house, the storyline chosen
+from the awareness level (one beat per section: the question the customer has at that point, the
+answer, the proof, why they read on), and the subject inventory with the idea sentence. Write
+`.design/strategy.md`, citing research findings by number.
 
-## 3. direction (gate)
+## 4. roast (strategy gate)
+
+Follow `roast/method.md`: a separate subagent attacks the strategy and storyline in four voices,
+writes a pre-mortem and lists contradictions with the research. Answer every point in the
+**Response** section: accept and change the strategy, or reject with a reason.
+
+Then show the **strategy gate** (SKILL.md): the research summary, the strategy, and what the roast
+changed. After the user answers: `approve strategy --note "..."`, then `done roast`.
+
+## 5. direction (gate)
 
 Deal directions:
 
@@ -57,7 +71,9 @@ node <skill>/scripts/draw.mjs --sector <sector> [--tone <tone>] [--have <assets>
 `product-photo`, `product-ui`, `illustration`, `video`). Read the three files it writes in
 `.design/directions/`.
 
-For each direction write the **idea sentence**, both blanks filled from the inventory:
+For each direction write the **idea sentence**, both blanks filled from the inventory in the
+strategy, and say how the direction serves the storyline (a direction that fights the story loses,
+however beautiful):
 
 > On this page, **[something that belongs to the subject]** becomes **[the device the direction calls for]**.
 
@@ -74,10 +90,11 @@ with `progress.mjs log`, `approve direction --note "..."`, `done direction`.
 Redraw (`draw.mjs` again with `--exclude <ids>`) only for a reason you can state: it needs an asset
 that does not exist, it contradicts the brand, or the user rejected all three.
 
-## 4. skeleton
+## 6. skeleton
 
 Before any styling, check the structure. Build `.design/skeleton.html`: grey boxes for pictures,
-the real headline and real copy lengths, one section per claim, composed as the direction says.
+the real headline and real copy lengths, one section per storyline beat, composed as the direction
+says.
 Inspect it (`inspect.mjs .design/skeleton.html --out .design/skeleton`) and look at the desktop and
 mobile screenshots for:
 
@@ -93,7 +110,7 @@ mobile screenshots for:
 Fix the skeleton, not the styled page. In `guided` gates, show the skeleton screenshots with the
 direction choice or right after it. (Quick effort may skip this step with a reason.)
 
-## 5. spec
+## 7. spec
 
 Write `.design/spec.md`. Code may only use what is in it.
 
@@ -120,8 +137,8 @@ Direction: <id> (+ mix notes)
 ## Tokens
 :root { --ground: ...; --ink: ...; --accent: ...; --font-display: ...; --step-0 ... --step-5; --space-1 ... }
 
-## Sections
-| # | Role | Claim | Composition | Content | Picture |
+## Sections (from the storyline)
+| # | Customer asks | Answer | Proof | Composition | Content | Picture |
 
 ## References and their roles
 | Decision | From | Detail |
@@ -142,7 +159,7 @@ of the subject's world from open collections with a licence that allows commerci
 drawn in code from the subject itself → type and colour alone. Never present a found or generated
 picture as the client's own product, room, dish or team.
 
-## 6. copy
+## 8. copy
 
 Write the whole page as text in `.design/copy.md` before markup:
 
@@ -154,7 +171,7 @@ Write the whole page as text in `.design/copy.md` before markup:
 - Bahasa Indonesia follows `rules/copy-id.md`;
 - `[SAMPLE]` on any filled gap; no invented proof.
 
-## 7. build
+## 9. build
 
 Order: tokens → hero → sections → pictures → states (hover, focus, error, empty) → motion.
 
@@ -171,7 +188,7 @@ Order: tokens → hero → sections → pictures → states (hover, focus, error
   first screen.
 - Motion last, from the motion spec (`motion/functions.md`).
 
-## 8. gate
+## 10. gate
 
 ```bash
 node <skill>/scripts/lint.mjs <source files or folder>
@@ -182,24 +199,30 @@ Fix every FAIL. Treat each WARN as wrong unless you can defend it to a designer 
 write that sentence in the report. Re-run until there is no FAIL, then `done gate` (it refuses if
 the source changed after the last inspection).
 
-## 9. look
+## 11. look
 
 Brief a critic subagent with `rubric/critic.md`: it gets the screenshots from `.design/inspect/`,
-the brief card and the team anchors, and nothing else (not the code, not your intentions). Write its
+the brief card, the customer profile and the five most important customer questions from the
+strategy, and the team anchors, and nothing else (not the code, not your intentions). Write its
 critique to `.design/critique.md`. Fix the top three problems, inspect again, look again. At most
 three rounds (one at quick effort).
 
 If subagents are unavailable, do the look in a separate step that reads only the screenshots and
 the rubric, and say in the report that the critique was not independent.
 
-## 10. deliver (gate)
+## 12. deliver (gate)
 
 Show the package:
 
+- **the research report** (`.design/research.md`): the findings that changed the design, the
+  competitors and category clichés, the customer's questions in their words, the sources;
+- **the rationale**: each major decision (storyline, idea, direction, key sections) with the research
+  finding or roast point behind it;
 - what was built and where (files, how to open it);
 - desktop and phone screenshots of the final version;
 - the direction (id, seed), the idea sentence, and any redraws or mixes with reasons;
-- the critic's final scores and what still falls short;
+- the critic's final scores, the five-questions test, and what still falls short;
+- the hypotheses to test after launch, with the metric for each;
 - every `[SAMPLE]` item to replace, every found picture with its credit, every picture that stands
   in for photography;
 - WARNs kept, each with its one-sentence defence.
@@ -207,6 +230,6 @@ Show the package:
 Copy the final screenshots to `.design/snapshots/<date>-v<n>/`. After the user approves:
 `approve final`, `done deliver`.
 
-## 11. learn
+## 13. learn
 
 See SKILL.md. Standard effort may skip with a reason when the user gave no feedback.
