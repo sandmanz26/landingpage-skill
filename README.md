@@ -19,6 +19,7 @@ skill/design-director/      ← folder skill yang dipasang
 ├── scripts/                progress, draw, inspect, lint, selftest
 └── evals/                  protokol uji, brief, trigger test, fixture
 docs/SPEC.md                spesifikasi dan alasan desainnya
+templates/referensi-dan-brief.xlsx   template Excel untuk mengumpulkan referensi, brief uji dan desainer
 ```
 
 ## Memasang di komputer lokal
