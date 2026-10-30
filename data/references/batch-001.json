@@ -1,0 +1,137 @@
+{
+  "batch": "batch-001",
+  "received": "2026-10-30",
+  "from": "user (chat)",
+  "status": "pending-capture: the three sites could not be opened from the cloud session (network allowlist)",
+  "entries": [
+    {
+      "id": "ref-0001",
+      "url": "https://playfolly.com",
+      "business": {
+        "what": "Modular backyard play fort for children (New Zealand), sold with an online configurator for windows and accessories",
+        "type": "physical product, direct to consumer",
+        "action_that_pays": "unknown until captured; probably configure and order",
+        "source": "search: bestawards.co.nz listing (not opened)",
+        "confidence": "medium"
+      },
+      "human_note_verbatim": [
+        "saya merasa permainan tipografi mereka sangat baik, permainan warna solid, font bold tebal dikombinasikan dengan text kecil yang ringan. Title dominan besar sehingga memberikan contrast dan membuat balance",
+        "permainan foto juga menjadi peranan penting"
+      ],
+      "parsed": {
+        "take": [
+          { "part": "typography", "device": "heavy bold display set very large against small light text", "quality": "strong size and weight contrast" },
+          { "part": "colour", "device": "solid flat colour fields", "quality": "not specified which colours or roles" },
+          { "part": "photography", "device": "photos play an important role", "quality": "not specified: lifestyle, product cut-out, children at play?" }
+        ],
+        "avoid": [],
+        "why_business": null,
+        "why_customer": null,
+        "fits": null
+      },
+      "gaps_in_note": [
+        "No business reason: the configurator is likely the page's key selling device and is not mentioned",
+        "Colour: which colours, in what proportion, and what each one does",
+        "Photography: what kind and what job it does (show scale? show children using it? show it in a real yard?)",
+        "'Contrast and balance' is an outcome; the measurable cause (size ratio, weight pair) is not given"
+      ],
+      "claims": [
+        { "claim": "Large heavy title against small light text creates contrast", "status": "unverifiable until captured" },
+        { "claim": "Solid colour use", "status": "unverifiable until captured" },
+        { "claim": "Photography is important", "status": "plausible: a physical product for families needs real photos; unverifiable until captured" }
+      ],
+      "questions": [
+        "Foto seperti apa yang Anda maksud, dan apa fungsinya (menunjukkan ukuran, anak bermain, produk di halaman rumah)?",
+        "Warna apa saja dan di mana dipakai?",
+        "Apakah konfiguratornya juga Anda anggap bagus, atau hanya tampilan halamannya?"
+      ],
+      "tags_pending": ["type: heavy-display + light text", "palette: solid fields", "imagery: photography-led"]
+    },
+    {
+      "id": "ref-0002",
+      "url": "https://www.replay.ai/",
+      "business": {
+        "what": "Not established: several unrelated products are named Replay. A preview build of what may be this site says it is backed by Andreessen Horowitz.",
+        "type": "unknown (likely software)",
+        "action_that_pays": "unknown",
+        "source": "search (inconclusive)",
+        "confidence": "low"
+      },
+      "human_note_verbatim": [
+        "ini adalah website yang bagus juga, karena permainan mereka tidak mengandalkan gambar tapi mengandalkan object vector sederhana yang di animasikan, mengikuti dari bisnis",
+        "permainan font dengan ukuran dominan kecil memberikan kesan rapi, walaupun tidak bertema modern(rounded)"
+      ],
+      "parsed": {
+        "take": [
+          { "part": "imagery + motion", "device": "simple animated vector objects instead of photos", "quality": "follows the business (which business is not stated)" },
+          { "part": "typography", "device": "mostly small type", "quality": "neat, orderly" }
+        ],
+        "avoid": [],
+        "why_business": "'mengikuti dari bisnis' is claimed but the business is not named; cannot be checked yet",
+        "why_customer": null,
+        "fits": null
+      },
+      "gaps_in_note": [
+        "Which business, and how exactly the vector objects express it",
+        "What the animation does (feedback, explanation, atmosphere) and when it runs",
+        "'Small type looks neat' needs a check: running text under 16px or low contrast costs readability, especially on phones",
+        "'Not modern (rounded)': rounded is one style, not the definition of modern; say what the type is (grotesk, mono, serif) instead"
+      ],
+      "claims": [
+        { "claim": "Uses animated simple vectors rather than photos", "status": "unverifiable until captured" },
+        { "claim": "Mostly small type reads as neat", "status": "contested in principle: depends on measured sizes and contrast; check after capture" }
+      ],
+      "questions": [
+        "Replay ini bisnis apa? (Ada beberapa produk bernama Replay.)",
+        "Animasi vektornya menjelaskan produk, atau hanya dekorasi?",
+        "Yang Anda sebut 'kecil', kira-kira teks body atau label/judul juga kecil?"
+      ],
+      "tags_pending": ["imagery: animated vector", "type: small, restrained"]
+    },
+    {
+      "id": "ref-0003",
+      "url": "https://scotchpos.com/",
+      "business": {
+        "what": "Point-of-sale and inventory system for liquor retailers (US, Denver area), from about $99/month",
+        "type": "B2B SaaS",
+        "action_that_pays": "unknown until captured; probably book a demo",
+        "source": "search: Software Advice, Korona POS review (not opened)",
+        "confidence": "medium"
+      },
+      "human_note_verbatim": [
+        "saya suka dengan permainan warna yang sederhana, mengandalkan gelap. permainan penggunaan wireframe asli juga sangat membantu",
+        "kemudian konsep micro interaction ketika di scrolldown akan ada"
+      ],
+      "parsed": {
+        "take": [
+          { "part": "colour", "device": "simple, dark-led palette", "quality": "restraint" },
+          { "part": "imagery", "device": "real product interface shown (the note says 'wireframe asli')", "quality": "helps understanding" },
+          { "part": "motion", "device": "micro-interactions on scroll", "quality": "note unfinished" }
+        ],
+        "avoid": [],
+        "why_business": "Implied and likely right: for B2B software, showing the real interface is proof the product exists and is usable",
+        "why_customer": null,
+        "fits": null
+      },
+      "corrections": [
+        "'Wireframe' means a low-fidelity grey layout. If the page shows the real product screens, the right term is 'product UI' or 'real interface'. The parsed fields use 'real product interface'; the original note is kept as written."
+      ],
+      "gaps_in_note": [
+        "Note 2 is cut off ('ketika di scrolldown akan ada ...'): what happens on scroll?",
+        "Dark palette: why it suits this business (liquor retail, evening trade?) or whether it is only taste",
+        "Which colour is the accent and where it is used"
+      ],
+      "claims": [
+        { "claim": "Simple dark palette", "status": "unverifiable until captured" },
+        { "claim": "Real product interface helps", "status": "plausible for B2B software; unverifiable until captured" },
+        { "claim": "Micro-interactions on scroll", "status": "unverifiable; note incomplete" }
+      ],
+      "questions": [
+        "Kalimat kedua terpotong: apa yang terjadi saat scroll?",
+        "Yang Anda sebut 'wireframe asli' itu tampilan aplikasi sungguhan, atau sketsa garis?",
+        "Menurut Anda, warna gelapnya cocok karena bisnisnya (toko minuman, operasi malam) atau karena selera?"
+      ],
+      "tags_pending": ["palette: dark, simple", "imagery: real product UI", "motion: scroll micro-interactions"]
+    }
+  ]
+}

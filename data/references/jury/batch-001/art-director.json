@@ -1,0 +1,93 @@
+{"juror":"art-director","kind":"ai","refs":{
+"ref-0001":{
+"scores":{"clarity":6,"distinctiveness":9,"craft":5},
+"reasons":{
+"clarity":"Fold is the brand name plus an object render. The only line explaining it is a 4-line white paragraph on sand at 1.70:1 contrast, and the only CTA is 'Get updates', so a stranger sees 'a yellow structure' before 'a modular backyard play fort'.",
+"distinctiveness":"The full-bleed wordmark with a render threaded through it, the finish swatches that double as palette and configurator, and the scale drawing with a child silhouette could only belong to this product.",
+"craft":"The type system is tight (one family, 6 sizes), but the sticky white logo has no backing and runs through body copy on desktop-page-04, -06, -07, -08 and mobile-page-02, and the 'Get updates' pill covers card text on desktop-page-04 and -06."},
+"claims":[
+{"claim":"Typography play is very good: heavy bold font combined with small text.","verdict":"confirmed","evidence":"report.json desktop: one family (Geograph 100%), sizes [234,60,30,18,16,14]. desktop-fold.png: the 234px heavy wordmark against an 18px paragraph is a 13:1 ratio, and 16.7:1 against 14px. Section heads drop to 60px, which is 3.3:1 against 18px body. Mobile: 92px vs 16px, about 5.8:1."},
+{"claim":"The small text is light.","verdict":"contested","evidence":"Body copy is regular or medium weight, not light: desktop-page-04.png 'Dangerously safe.' paragraph and desktop-page-06.png card text. Anything that reads as 'light' comes from colour: white on #edbf7a measures 1.70:1 (report.json contrast FAIL), which is illegible, not refined."},
+{"claim":"Solid colour play.","verdict":"confirmed","evidence":"report.json gradients: 0. Flat fields are sand #edbf7a (desktop-fold, -05, -06), signal yellow #f4d602/#f9ee16 (desktop-page-07 'Want one?' band) and black #000 (desktop-page-02/-04). Caveat: 6 chromatic colours, and the swatch labels fail contrast (Yellow 1.16:1, Sand 1.14:1, Green 3.20:1)."},
+{"claim":"The dominant large title gives contrast and balance.","verdict":"confirmed","evidence":"desktop-fold.png: the wordmark spans the full 1440px width, is cropped by the top edge and is occluded by the canopy render. That gives scale contrast and a strong top-heavy anchor, with the paragraph bottom-right as counterweight. Note the 'title' is the brand name, not a value statement, which is why clarity suffers. mobile-fold.png rotates it 90 degrees to run the full height."},
+{"claim":"Photography plays an important role.","verdict":"confirmed","evidence":"desktop-page-02.png: lifestyle carousel of children on the fort, natural light, 18px-radius cards. desktop-page-04.png: full-width night shot with the product lit beside a house. desktop-page-08.png: footer photo with a warm orange cast. Precision: the hero and the 'System' cards (desktop-fold, -05) are 3D renders on flat sand, not photography. The site alternates render and photo deliberately."}
+],
+"take":[
+"Wordmark-as-hero: brand name set edge to edge (234px at 1440, about 1.0 line-height, heavy geometric sans), cropped by the top edge, with the product image z-layered between the letters. Supporting copy is 16-18px in the same family (ratio about 13:1). On phones, rotate the wordmark 90 degrees (~92px) so it still fills the screen height.",
+"Palette = product finishes: 3 flat section fields (warm sand, signal yellow, black) with 0 gradients. The product's colour options appear as 5 circular swatches (~48px) in a frosted pill, so the palette UI is also the brand palette.",
+"Two-tone stacked headline: line 1 at full ink (black on sand, white on black), line 2 at the same size and weight in a ~60% tone of the background hue (brown on sand, grey on black). About 60px, leading about 1.0.",
+"Scale drawing as illustration: product silhouette in a muted monochrome of the background colour, dashed dimension lines, dark pill labels (white 12-14px numerals), plus a child silhouette for scale."
+],
+"avoid":[
+"A transparent sticky logo and CTA over scrolling content. The 60px white wordmark collides with paragraphs on 5 captured screens. Give it a backing plate or hide it on scroll.",
+"White text on pastel fields (white on #edbf7a = 1.70:1). The hero's only explanatory paragraph is the least readable text on the page.",
+"Rendering all copy client-side: report.json noJavaScript shows 0 of 3144 characters visible."
+],
+"missed_by_note":[
+"Logo and CTA overlap body text throughout (desktop-page-04, -06, -07, -08, mobile-page-02). This is the biggest craft defect and the note praises composition without seeing it.",
+"Contrast failures on the very pairs the note praises as 'colour play': swatch labels at 1.14-3.20:1 and the hero paragraph at 1.70:1.",
+"The two-tone headline device (black plus brown line) repeats in every section and holds the page together more than the wordmark does.",
+"The dimension-drawing section is the strongest bespoke imagery on the page and is not mentioned.",
+"Mobile hero switches to a vertical wordmark: an unusual, ownable move."
+]},
+"ref-0002":{
+"scores":{"clarity":8,"distinctiveness":7,"craft":6},
+"reasons":{
+"clarity":"The 72px serif headline plus a 2-line subhead state the offer outright (license your company's data to AI labs for money), and there is one CTA. The cookie bar eats the bottom ~50px of every screen.",
+"distinctiveness":"Banknote guilloche, denim and paper textures, and an exploded stack of labelled source documents tie the imagery to 'data as a paid asset'. The dashed-grid editorial shell is a current trend, though, and rivals could reuse it.",
+"craft":"Surfaces are polished and coherent, but measured discipline is poor: 14 font sizes on desktop, text at 4-8px, 24 background colours and 7 chromatic hues, body greys failing AA (#919191 on white = 3.15:1), and 15 elements never revealed."},
+"claims":[
+{"claim":"Relies not on images (no photography).","verdict":"confirmed","evidence":"No photographs in desktop-fold, -02, -03, -04, -05, -06, -07 or -09. Imagery is UI fragments, isometric blocks and textured fields."},
+{"claim":"Uses simple animated vector objects.","verdict":"contested","evidence":"Not simple and not flat vector. desktop-fold.png has a perspective stack of semi-transparent document layers. desktop-page-03/-04.png have fabric-grain blue fields and guilloche line patterns. desktop-page-05.png has extruded isometric slabs with textured faces. report.json: 8 gradients, 5 backdrop-blur panels, 121 animated elements, 133 transitions on desktop. This is dense, textured motion, not simple objects."},
+{"claim":"The visuals follow the business.","verdict":"confirmed","evidence":"Floating layers carry mono callouts naming data sources (desktop-fold/-01: EMAIL, JIRA, MEETING TRANSCRIPT). Guilloche reads as currency or certificate (value, licensing). desktop-page-06.png shows an email with identifiers being scanned out, which illustrates de-identification directly."},
+{"claim":"Font play with mostly small sizes gives a neat impression.","verdict":"contested","evidence":"Display sizes are not small: 72px serif h1 (desktop-fold) and 44-64px section heads (desktop-page-02 'Millions/Billions', -07). h1 to 16px body is 4.5:1. What is small is the supporting layer: 14px grey body (report body-size WARN), 10-12px uppercase mono labels, and decorative text at 8, 6 and 4.2px (tiny-text FAIL x16). The neatness comes from the dashed grid and the serif/sans/mono role split, not from small type. 14 distinct sizes is the opposite of neat."},
+{"claim":"It is not a modern (rounded) theme.","verdict":"confirmed","evidence":"report.json radii: 2.7px and 2.1px (pill 999px only on minor dots). desktop-fold.png shows square-cornered dark CTAs and dashed rectangular boxes. Note that sharp corners plus serif display is itself a current 2025-26 idiom, so 'not modern' really means 'not rounded'."}
+],
+"take":[
+"Three families, three jobs: an editorial serif for display (72px desktop / 42px mobile, regular weight, slightly tight tracking), a neutral grotesk for body (16px, mid-grey), and a mono for uppercase micro-labels (11-12px, +8% tracking, inside 1px dashed boxes). Measured shares: 63% sans / 18% serif / 18% mono.",
+"Visible construction grid: 1px dashed hairlines mark the column gutters and section bounds for the full page length, so the layout reads as a spec sheet or ledger.",
+"Texture instead of photography: fine fabric or paper grain plus guilloche (banknote) linework on flat fields. Light grey sections alternate with saturated denim-blue and near-black bands, which suits money and records businesses.",
+"Exploded document stack: 4-6 translucent UI sheets in perspective, each tied to a mono callout by an angled leader line, to show 'your data sources' without screenshots of one product."
+],
+"avoid":[
+"Fake micro-text as decoration (4-8px pseudo-code and IDs). It fails every size check, reads as noise on mobile, and wastes accessibility budget.",
+"Letting body greys drift: 16 text colours, with #919191, #898989 and #727272 all below 4.5:1 on light grounds. Pick 2 greys and test them.",
+"Reveal-on-scroll for key numbers: the valuation ranges are among the 15 elements that report.json found still invisible after a full scroll."
+],
+"missed_by_note":[
+"The display face is a serif (stkBureauSerif), not the sans the note implies. The serif display is the main typographic idea.",
+"The texture system (denim grain, guilloche, dashed grid) carries the brand far more than 'vector objects' do.",
+"Colour is not restrained: 7 chromatic hues on desktop and 9 on mobile, including blue, cyan, olive, mint and yellow barcode strips (desktop-page-02).",
+"The footer uses a giant ghosted serif wordmark across the full width (desktop-page-09). It is a strong closing device.",
+"Tiny-text and contrast failures are the main craft liabilities."
+]},
+"ref-0003":{
+"scores":{"clarity":9,"distinctiveness":5,"craft":7},
+"reasons":{
+"clarity":"Within 5 seconds: the headline names liquor, the subhead says POS for liquor retailers, the real inventory UI shows bottle SKUs, and there is a single orange CTA.",
+"distinctiveness":"The shell (black canvas, 'Introducing' pill eyebrow, centred headline, two CTAs, device-framed UI, logo row) is the standard dark-SaaS template. Only the B&W bottle backdrop, the liquor SKUs in the UI and the old-way paper props make it liquor-specific.",
+"craft":"Clean and consistent, with one accent and tidy UI crops. Weaknesses: 8 font sizes, 44 distinct spacing values (20 off-scale), 7 radii, 11 drop shadows, ~250px dead black gaps (desktop-page-03, -06), and the white-on-orange CTA at 3.60:1."},
+"claims":[
+{"claim":"Simple colour play relying on dark.","verdict":"confirmed","evidence":"report.json desktop: chromaticColours 1 (#f54900). Backgrounds are #000/#111/#1a1a1a/#292929. Text runs white to #a5a5a5 to #808080 to #666. desktop-fold, -03, -05, -07 are all black with orange reserved for CTA, links and active tab. Exceptions: the testimonial photos (desktop-page-02/-03) and the 20% photo card (-04) bring warm full colour. Contrast fails: white on #f54900 = 3.60:1 and #666 on #000 = 3.66:1."},
+{"claim":"The use of real wireframes helps a lot.","verdict":"contested","evidence":"These are not wireframes. They are high-fidelity product screens with real data (bottle names, stock badges, forecast chart) in a tablet bezel (desktop-fold, -04, -07) and on a POS terminal (desktop-page-05/-06). Their value is confirmed: they prove the product and its liquor specialisation better than any illustration. The terminology is wrong, and it matters for briefing: 'show the real UI at full fidelity', not 'wireframes'."},
+{"claim":"Micro-interaction concept when scrolling down.","verdict":"unverifiable","evidence":"Static captures cannot show the motion. Measured: 39 animated elements and 88 transitions on desktop. 12 text elements (e.g. section labels 'Back Office', 'POS & Payments') never became visible after a full scroll, and ~250px empty black bands appear in desktop-page-03 and -06, so the scroll reveals are at least partly failing in capture."}
+],
+"take":[
+"Black plus one hot accent: #000 canvas, 3 grey text steps (white, ~#a5a5a5, ~#808080), and a single saturated orange used only for primary CTA, text links, active tab and in-UI alerts. Fix the CTA contrast with a darker orange (~#c23a00) or near-black label text.",
+"Real UI over a desaturated category photo: product screen in a thin rounded device bezel, cropped by the fold, over a low-key black-and-white photo of the category's objects (here bottles) at the viewport edges.",
+"Old-way props: scatter 3-5 skeuomorphic artefacts of the legacy workflow (dated OS dialog, paper invoice with binder clip, sticky note) at 5-15 degree angles against the viewport edges, around a centred 42px two-tone statement (white clause, then grey continuation).",
+"Mixed-weight feature lines: icon (16px) + bold lead word in white + regular completion in grey, 16-18px, laid out in 3 columns."
+],
+"avoid":[
+"The interchangeable dark-SaaS hero kit (pill eyebrow, centred 54px headline, two CTAs, framed dashboard). report.json flags centred-hero-two-ctas. Without the bottle photo it could be any vertical SaaS.",
+"Drop shadows on 11 boxes and 7 different corner radii (5, 6, 8, 10, 12, 16, 9999px). Pick 2 radii and drop most shadows on a black canvas, where they barely read anyway.",
+"Leaving large reveal-dependent voids: ~250px black gaps appear when animations don't fire."
+],
+"missed_by_note":[
+"The B&W bottle photography behind the hero (desktop-fold) is the main reason the dark palette feels 'liquor' rather than 'generic SaaS'.",
+"The two-tone statement headline and the skeuomorphic old-way props (desktop-page-06/-07) are the most distinctive art-direction moves on the page.",
+"The display face is 'mori' (27% of text), with Inter for body. Display 54px vs body 16-18px is only ~3:1, a restrained hierarchy that the note doesn't discuss.",
+"Accessibility costs of the dark scheme: CTA 3.60:1, footer #4d4d4d on #000 = 2.48:1, and 2 images without alt.",
+"Full-colour customer testimonial video thumbnails break the monochrome deliberately and humanise the page."
+]}
+}}

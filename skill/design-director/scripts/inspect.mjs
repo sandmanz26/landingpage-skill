@@ -219,7 +219,9 @@ const all = [
 const grouped = new Map();
 for (const f of all) {
   const key = `${f.severity}|${f.rule}|${f.message}`;
-  if (grouped.has(key)) grouped.get(key).where.push(f.where);
+  if (grouped.has(key)) {
+    if (!grouped.get(key).where.includes(f.where)) grouped.get(key).where.push(f.where);
+  }
   else grouped.set(key, { ...f, where: [f.where] });
 }
 report.findings = [...grouped.values()].sort((a, b) => (a.severity === b.severity ? 0 : a.severity === 'FAIL' ? -1 : 1));

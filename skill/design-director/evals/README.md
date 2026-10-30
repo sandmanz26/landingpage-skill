@@ -29,8 +29,10 @@ contestants on every brief.
 - 20 briefs × 3 designers = 60 votes per pairing.
 - **Pass:** design-director wins ≥ 65% of its votes against each other contestant (p ≈ 0.014 at 60
   votes; 60% would be p ≈ 0.08, too close to chance).
-- Also recorded: inspector FAIL counts, lint counts, critic scores, and whether the critic's pick
-  matched the designers' (calibration, `rubric/critic-calibration.md`).
+- Also recorded: inspector FAIL counts, lint counts, and the AI jury's scores and rankings
+  (`rubric/jury.md`) on the same pairs, so each AI juror's agreement with the designers is measured
+  (`jury.mjs rank`, logged in `rubric/critic-calibration.md`). The pass mark is decided by the
+  designers' votes; the AI jury is calibrated against them, not the other way round.
 
 ## Trigger tests
 

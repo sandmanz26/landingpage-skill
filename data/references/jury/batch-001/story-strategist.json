@@ -1,0 +1,133 @@
+{
+  "juror": "story-strategist",
+  "kind": "ai",
+  "refs": {
+    "ref-0001": {
+      "message": "Roof: 'Play beautiful' - a treehouse without a tree, designed like architecture, that fits a real garden. Pillars: (1) a new way to play: tall, elevated, imaginative ('A treehouse, without a tree'); (2) safe and built to last ('Dangerously safe', conical stance, ground anchors, ISO 8124-4, powder-coated aluminium + macrocarpa); (3) modular system that grows ('One adapter, endless ways to play', hoop/canopy accessories); (4) fits real gardens and real households (2.4m tall, 1700mm footprint, flat-packed, two adults in a morning). Commercial reality: limited production, waitlist only.",
+      "storyline": {
+        "structure": "story-first (brand/object reveal, then features, then fit, then a waitlist ask)",
+        "beats": [
+          {"section": "Hero: giant 'Playfolly' wordmark over a 3D render of the tower, colour swatches, one sentence 'what happens when architecture meets a treehouse. Modular, customisable, built to last'", "customer_question_it_answers": "What is this thing? (answered only by the small paragraph; the wordmark answers nothing)", "screenshot": "ref-0001/desktop-fold.png"},
+          {"section": "Hero scroll-through: render pans down to legs and ladder, 'Get updates' appears", "customer_question_it_answers": "What does the whole object look like?", "screenshot": "ref-0001/desktop-page-02.png"},
+          {"section": "Features carousel 'A new way to play. Designed for imagination. Built for real life.' with real kids on the product", "customer_question_it_answers": "Will my kids actually love it and is it real?", "screenshot": "ref-0001/desktop-page-03.png"},
+          {"section": "Feature captions: 'A treehouse, without a tree', 'Dangerously safe' (ISO 8124-4, NZ certification pending), modular/configure", "customer_question_it_answers": "Is it safe and why is it different from a normal fort?", "screenshot": "ref-0001/desktop-page-04.png"},
+          {"section": "Night lifestyle carousel (tower lit next to a house, scene tabs 'Run' + 7 dots)", "customer_question_it_answers": "How does it live in my garden over time? (mood, weak on information)", "screenshot": "ref-0001/desktop-page-04.png"},
+          {"section": "'The Playfolly System. One adapter, endless ways to play.' accessory cards (Adapter, Hoop, Canopy...) each marked 'Coming soon'", "customer_question_it_answers": "Can it grow with my kids?", "screenshot": "ref-0001/desktop-page-05.png"},
+          {"section": "'Big enough for adventure. Small enough for real gardens.' dimension drawing with child silhouette, materials, flat-pack assembly", "customer_question_it_answers": "Will it fit my garden and can I install it?", "screenshot": "ref-0001/desktop-page-06.png"},
+          {"section": "'Want one?' limited production, email capture for next release", "customer_question_it_answers": "How do I get one?", "screenshot": "ref-0001/desktop-page-07.png"},
+          {"section": "Footer: Instagram, email, trade-mark registrations, 'Play beautiful' sign-off over studio film still", "customer_question_it_answers": "Is this a legit, protected design?", "screenshot": "ref-0001/desktop-page-09.png"}
+        ]
+      },
+      "scores": {"story": 7},
+      "reasons": {"story": "The sequence is clean (what it is -> why it is different -> safe -> grows -> fits -> want one?) and the 'Want one?' close is earned by the dimensions beat right before it. But the price question, the next obvious one after 'fits my garden', is never answered, the night carousel is a mood beat that adds no information, and 'endless ways to play' is undercut by every accessory being 'Coming soon'."},
+      "claims": [
+        {"claim": "Big display typography (giant wordmark) is a strength", "verdict": "contested", "evidence": "desktop-fold.png: the 234px wordmark spends the fold on the brand name; the only line saying what the product is sits in a white paragraph on sand that the report measures at 1.70:1 contrast (FAIL). Memorable name, but the category message is the least legible text on the fold."},
+        {"claim": "Colour palette / colour swatches are a highlight", "verdict": "confirmed", "evidence": "desktop-fold.png and desktop-page-06.png: the swatch picker (yellow, navy, olive, sand, custom) appears in the hero and again under the accessory cards, so colour carries the 'customisable' pillar instead of being decoration."},
+        {"claim": "Lifestyle photography is strong", "verdict": "confirmed", "evidence": "desktop-page-03.png: real children climbing and pointing from the tower in a real garden backs 'Built for real life' right after the render-only hero; desktop-page-04.png night shot next to a house supports 'fits real gardens'."},
+        {"claim": "The site sells via an online configurator (business brief)", "verdict": "contested", "evidence": "No configurator, price or buy button in any desktop screenshot; the only CTA is 'Get updates' and the close is 'released in limited production... join the list' (desktop-page-08.png). The page is a waitlist teaser, not a configurator funnel."}
+      ],
+      "take": [
+        "Fit-proof before the ask: put a dimensioned drawing with a human/child silhouette ('Big enough for adventure. Small enough for real gardens.') directly before the purchase/waitlist block, so the last objection (will it fit, can I build it) is closed right before the CTA.",
+        "Twin-line headlines that pair aspiration with reassurance ('Designed for imagination. Built for real life.' / 'Big enough for adventure. Small enough for real gardens.'): the first half sells to the child in the parent, the second to the parent's practical worry.",
+        "Name the fear outright and turn it into a feature heading ('Dangerously safe.') followed by a hard standard (ISO 8124-4): playful voice, verifiable substance."
+      ],
+      "avoid": [
+        "Promising a system you cannot show yet: 'One adapter, endless ways to play' followed by cards that all say 'Coming soon' (desktop-page-06.png) turns the modularity pillar into a roadmap.",
+        "Letting the brand name eat the hero while the one explanatory sentence fails contrast (1.70:1 on desktop-fold.png): a visitor who does not read the small white paragraph learns only a name and a shape."
+      ],
+      "missed_by_note": [
+        "No price anywhere, not even a 'from' price or release date; for a premium play structure this is the parent's first question after 'will it fit'.",
+        "The CTA is a waitlist ('Get updates', 'join the list'), so the page's real job is demand capture for a limited release; the note judges it as if it were a shop.",
+        "Scarcity is stated ('limited production') but not made concrete (no batch size, no date, no deposit), so it does not create urgency.",
+        "Accessory section undercuts the modular pillar with 'Coming soon' on every visible card.",
+        "Proof is thin: no reviews, no parent quotes; trust rests on the ISO line and trade-mark registrations in the footer."
+      ]
+    },
+    "ref-0002": {
+      "message": "Roof: 'Fund growth by licensing the data you already have' - Replay is a broker that values a company's historical operating data (email, CRM, tickets, logs, docs), strips identifiers, and licenses it to frontier AI labs, paying the company up front plus revenue share. Pillars: (1) found money: non-dilutive revenue from an asset you already own ('You already own your next revenue stream'); (2) it is worth real money and here is how it is priced ($10K-$100K / $100K-$1M by headcount, paid up front + recurring share); (3) low effort ('Four steps. 120 minutes of your time.'); (4) safe and ethical ('cleaner than a medical record', HIPAA 18 categories +, sold only to frontier labs, never to foreign adversaries or brokers).",
+      "storyline": {
+        "structure": "offer-first, then problem->solution, then objection handling in the order a CFO would raise them",
+        "beats": [
+          {"section": "Hero: 'Fund growth by licensing the data you already have.' + 'Frontier AI labs need training data... You're sitting on years of it' + 'Value my data'; layered stack of emails/tables labelled EMAIL / MESSAGE LIST / PLANNING THREAD", "customer_question_it_answers": "What is this and why would anyone pay me?", "screenshot": "ref-0002/desktop-fold.png"},
+          {"section": "Stats band: 'Millions - paid to businesses like yours' / 'Billions - personal identifiers removed', with registry-style metadata strip", "customer_question_it_answers": "Is this real and is it at scale?", "screenshot": "ref-0002/desktop-page-02.png"},
+          {"section": "'You already own your next revenue stream.' Equity costs, debt must be repaid, revenue takes quarters; your operating record was worthless until now", "customer_question_it_answers": "Why should I care versus other ways to fund growth?", "screenshot": "ref-0002/desktop-page-02.png"},
+          {"section": "'Historical operating data' shelf: decision threads, financial records, support history, product logs, CRM, sales conversations, presentations, analytics", "customer_question_it_answers": "Which of my data counts?", "screenshot": "ref-0002/desktop-page-03.png"},
+          {"section": "'What companies your size get paid': $10K-$100K (20-50 employees), $100K-$1M (50-250), 250+; how data is valued; paid up front + revenue share, recurring", "customer_question_it_answers": "How much would I get and how is it paid?", "screenshot": "ref-0002/desktop-page-04.png"},
+          {"section": "'Four steps. 120 minutes of your time.' Value / Terms / Protect / Payout with data-slab visual (Code 25k+, Tickets 720+, Messages 32k+ -> 25M+ records -> 8M indicated value)", "customer_question_it_answers": "How much work is this for my team?", "screenshot": "ref-0002/desktop-page-05.png"},
+          {"section": "'Data De-Identification': 'Your data leaves cleaner than a medical record' with a redaction scan over a sample email; tabs PII Coverage / Our Pipeline / Data Policy", "customer_question_it_answers": "Will I leak customer or employee data?", "screenshot": "ref-0002/desktop-page-06.png"},
+          {"section": "'Where your data gets sold': only frontier AI and data labs; never foreign adversaries or brokers", "customer_question_it_answers": "Who ends up with it - can this embarrass me?", "screenshot": "ref-0002/desktop-page-07.png"},
+          {"section": "'Any industry. One requirement.' - you need a record of how you did the work; industry tiles", "customer_question_it_answers": "Does my kind of company qualify?", "screenshot": "ref-0002/desktop-page-07.png"},
+          {"section": "Final CTA 'Find out what your data is worth' + 'Value my data' over archival-paper collage", "customer_question_it_answers": "What do I do now?", "screenshot": "ref-0002/desktop-page-08.png"},
+          {"section": "Footer: Product / Company / Partners (AI buyers, data privacy, referrals) / Legal", "customer_question_it_answers": "Where are the details?", "screenshot": "ref-0002/desktop-page-09.png"}
+        ]
+      },
+      "scores": {"story": 8},
+      "reasons": {"story": "Almost every section answers the objection the previous one creates (worth money? -> which data -> how much -> how much effort -> is it safe -> who buys -> do I qualify -> value it), a textbook objection ladder for a novel, slightly scary offer. Points lost because the 'Millions / Billions' stats band is there by habit (vague, unattributed, placed before the problem is even stated) and there is not one named customer, buyer or quote, so the scariest claims rest on assertion."},
+      "claims": [
+        {"claim": "The animated vectors are 'following the business'", "verdict": "confirmed", "evidence": "Mostly true and the strongest point of the page: the hero stack shows real-looking emails and tables labelled EMAIL / MESSAGE LIST / PLANNING THREAD (= 'the data you already have'); the shelf lists the exact data types (desktop-page-03.png); the slab stack turns Code/Documents/Tickets/Messages into '25M+ records -> 8M indicated value' (desktop-page-05.png, = valuation); the scan line redacting names, emails and an API key in an email (desktop-page-06.png, = de-identification); bar tiers by headcount (desktop-page-04.png, = payout). Each illustration is the step it sits beside."},
+        {"claim": "The animated vectors are 'following the business' (atmospheric pieces)", "verdict": "contested", "evidence": "Not everywhere: the blue denim tunnel/plane between the data shelf and pricing (desktop-page-03.png) and the torn-paper/barcode collage behind the final CTA (desktop-page-08.png) are mood transitions with no message; the registry metadata strip ('RL-2026-001 // VERSION 1.0', 'CLASSIFICATION PROPRIETARY DATA / LICENSING') is rendered at 4-8px per the report's tiny-text fails, decoration dressed as information."},
+        {"claim": "The editorial serif / paper texture look suits the brand", "verdict": "confirmed", "evidence": "The serif headlines, paper grain and document-registry details make a novel 'sell your data to AI labs' offer read like a licensing contract rather than a data broker; the tone lowers the trust barrier the copy then addresses ('cleaner than a medical record')."},
+        {"claim": "Scroll micro-interactions add to the experience", "verdict": "unverifiable", "evidence": "Static captures only; the 'Four steps' accordion (Value open, Terms/Protect/Payout collapsed, progress bar) suggests scroll-driven stepping, which would pace the effort argument, but the hidden steps mean Terms, Protect and Payout copy is not visible in any capture."}
+      ],
+      "take": [
+        "Objection ladder for a novel offer: after the promise, order sections exactly as the buyer's fears arrive - what counts -> how much -> how much effort -> is it safe -> who gets it -> do I qualify -> CTA. Each heading is the answer, not a label ('Your data leaves cleaner than a medical record.').",
+        "Reframe against the alternatives the buyer already knows: 'Raising a round costs equity. Debt has to be paid back. Getting more revenue might take quarters you don't have.' - position the offer as a fourth funding option before explaining it.",
+        "Price-anchor by company size in the body ($10K-$100K at 20-50 employees, $100K-$1M at 50-250) so the CTA 'Value my data' feels like confirming a number, not starting a sales call.",
+        "Illustrate each step with the literal artefact it acts on (the email being redacted, the data slabs being valued) instead of abstract icons."
+      ],
+      "avoid": [
+        "Vague hero stats with no unit or source ('Millions - paid to businesses like yours', 'Billions - personal identifiers removed', desktop-page-02.png): on a page that asks for trust with sensitive data, unattributed big words read as filler and cost credibility.",
+        "Zero named proof for a high-risk ask: no customer logos, no testimonial, no named AI buyer; 'only sold to frontier AI and data labs' is an assertion the page never backs (desktop-page-07.png)."
+      ],
+      "missed_by_note": [
+        "Business inferred from the page: Replay is a data-licensing marketplace that pays companies for de-identified operating data sold to frontier AI labs; buyer is a founder/CFO looking for non-dilutive funding.",
+        "The copy, not the vectors, does the heavy lifting: the 'equity / debt / revenue' reframe and the headcount price tiers are what make the offer believable.",
+        "The single CTA 'Value my data' is repeated in nav, hero and close with no secondary path - correct for a one-job page, and the verb matches the curiosity the page creates ('Find out what your data is worth').",
+        "The 250+ employees tier shows no amount in the captures, and the '8M indicated value' example has no caveat visible: expectation-setting risk.",
+        "Ethics and reputational risk (employees, customers learning their emails trained an AI) is only answered by PII coverage; consent and contractual obligations to customers are not addressed on the page."
+      ]
+    },
+    "ref-0003": {
+      "message": "Roof: 'The system that knows liquor like you do' - an all-in-one operating system (POS + back office) built only for liquor retailers. Pillars: (1) back office that does the chores (inventory, ordering, invoice reading, analytics; '20% less time on inventory management'); (2) connected to everything (delivery apps, ecommerce, API; 'no double entry'); (3) faster checkout with 'the lowest fees guaranteed', loyalty sign-up, offline mode; (4) endorsed by real liquor store owners (retailer logos, video stories).",
+      "storyline": {
+        "structure": "difference-first ('far from just another POS... designed exclusively for liquor retailers'), with the problem beat ('The old way') arriving late",
+        "beats": [
+          {"section": "Hero: 'Introducing Scotch' / 'The system that knows liquor like you do.' / 'Far from just another POS' + Book a demo / See it in action; real product UI with liquor SKUs and a demand forecast", "customer_question_it_answers": "What is this and why is it different from my current POS?", "screenshot": "ref-0003/desktop-fold.png"},
+          {"section": "Hero UI module tabs (Ordering etc.) + logo bar 'Designed with support from top retailers' (Big Bear, TLS, Green's, JAX, Buster's, Argonaut)", "customer_question_it_answers": "Do stores like mine use it?", "screenshot": "ref-0003/desktop-page-02.png"},
+          {"section": "'Liquor store owners, in their own words' - three video cards with name, role, store", "customer_question_it_answers": "What do owners actually say about it?", "screenshot": "ref-0003/desktop-page-02.png"},
+          {"section": "Back Office: 'Simplify inventory, ordering, and analytics' - optimize stock, read invoices automatically, real-time dashboards; tabs Ordering/Receiving/Analytics; '20% less time spent on inventory management'", "customer_question_it_answers": "What does it do for the back office?", "screenshot": "ref-0003/desktop-page-03.png"},
+          {"section": "'Synchronize your tools - Made to fit your workflow': delivery apps, ecommerce, API", "customer_question_it_answers": "Will it work with what I already use?", "screenshot": "ref-0003/desktop-page-04.png"},
+          {"section": "POS & Payments: 'Process transactions faster with the lowest fees guaranteed'; terminal + customer display; lowest fees / sign up customers instantly / keep selling offline", "customer_question_it_answers": "What about the counter and card fees?", "screenshot": "ref-0003/desktop-page-05.png"},
+          {"section": "'The old way': 'For decades, liquor retailers have been forced to choose between 90s technology or tools built for restaurants. We finally built the system liquor stores deserve.' with Windows-95 item window and paper invoices, then a modern invoice-matching screen", "customer_question_it_answers": "Why switch now? (asked too late)", "screenshot": "ref-0003/desktop-page-07.png"},
+          {"section": "Benefit list: Net changes not manual chores (20% less time), Total control from anywhere, AI-powered for profitability", "customer_question_it_answers": "What do I get overall?", "screenshot": "ref-0003/desktop-page-08.png"},
+          {"section": "Closing CTA card: 'Spend 20% less time on the stuff you hate. POS is typically generic, outdated and clunky. But it doesn't have to be.' + Book a demo", "customer_question_it_answers": "What's the next step?", "screenshot": "ref-0003/desktop-page-09.png"},
+          {"section": "Footer: products, pricing, about, blog, careers", "customer_question_it_answers": "Where are prices and details?", "screenshot": "ref-0003/desktop-page-09.png"}
+        ]
+      },
+      "scores": {"story": 6},
+      "reasons": {"story": "Strong opening (specific promise + real liquor UI + logos + owner videos) but then the page turns into a product-menu (Back Office, Integrations, POS, each with 'Find out more') and only afterwards states the problem ('The old way'), so the 'why switch' beat answers a question the reader needed four sections earlier. The '20% less time' claim is repeated three times and the closing benefit list re-says the hero, which is recap by habit rather than progression."},
+      "claims": [
+        {"claim": "Dark palette gives a premium feel", "verdict": "contested", "evidence": "Fits the spirits category (glass decanter and tumbler renders on black, desktop-fold.png, desktop-page-09.png), but the buyer is a store operator, not a whisky drinker; and the dark scheme dims the proof: 'Designed with support from top retailers' measures 3.66:1 and the orange 'Book a demo' 3.60:1 in the report - the trust line and the main CTA are the weakest-contrast text."},
+        {"claim": "Real product UI instead of illustrations", "verdict": "confirmed", "evidence": "The UI is the message: real SKUs (New Riff Sour Mash Single Malt, Chateau Pape Clement Bordeaux), distributor filters, a 60-day stock forecast with 'Stage for order' (desktop-fold.png) and invoice-vs-PO discrepancy checks (desktop-page-08.png) prove 'knows liquor like you do' far better than any adjective."},
+        {"claim": "The old-way visuals (retro software, paper invoices) are a nice touch", "verdict": "confirmed", "evidence": "desktop-page-06/07.png: a Windows-95 'Item' dialog, a clipped paper invoice and a sticky note 'Adjust inventory' literally illustrate '90s technology' - the right visual for the right sentence; the issue is placement, not the image."},
+        {"claim": "Scroll micro-interactions add polish", "verdict": "unverifiable", "evidence": "Static captures only; the hero module tabs (Ordering tooltip) and Ordering/Receiving/Analytics tabs suggest interactive demos, but their narrative effect cannot be judged from screenshots."}
+      ],
+      "take": [
+        "Category-ownership headline + proof-by-detail: claim a vertical ('knows liquor like you do', 'designed exclusively for liquor retailers') and immediately show the product doing a vertical-specific task with real category data (named bottles, distributors, case quantities) so the specificity is seen, not asserted.",
+        "Name the two bad alternatives the buyer is stuck between ('90s technology or tools built for restaurants') and show both visually (retro window, paper invoice) next to the new screen - a before/after in one beat.",
+        "Peer proof in the buyer's own setting: video cards with owner name + store name filmed inside liquor stores, placed right after the logo bar."
+      ],
+      "avoid": [
+        "Problem stated after the solution menu: 'The old way' (desktop-page-07.png) arrives after Back Office, Integrations and POS sections; moved after the proof bar it would frame every feature as a fix, where it is now it reads as an afterthought.",
+        "Repeating one number as the whole value case: '20% less time' appears on the photo card (desktop-page-04.png), in 'Net changes' and in the closing headline (desktop-page-08.png) while 'lowest fees guaranteed' is never quantified."
+      ],
+      "missed_by_note": [
+        "The structural problem is order, not looks: difference -> proof -> features -> problem -> recap -> CTA; the problem beat should sit before the features.",
+        "Customer stories carry no quote text on the page - three faces with play buttons; a scanner who will not play video gets zero testimonial content.",
+        "'Lowest fees guaranteed' is the most commercially powerful claim on the page and has no number, comparison or guarantee terms; Pricing exists in the nav but nothing on the page bridges to it.",
+        "'Introducing Scotch' pill frames an established-looking product as new, which slightly contradicts the logo bar and owner testimonials.",
+        "Two CTAs in the hero ('Book a demo', 'See it in action') but only 'Book a demo' at the close; the low-commitment video path disappears at the moment a hesitant buyer needs it."
+      ]
+    }
+  }
+}

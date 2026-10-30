@@ -1,0 +1,758 @@
+{
+  "target": "https://scotchpos.com/",
+  "time": "2026-10-30T16:03:46.498Z",
+  "rules": {
+    "purple-gradient": "warn",
+    "gradient": "info",
+    "glass": "info",
+    "system-font-only": "warn",
+    "too-many-font-sizes": "warn",
+    "too-many-colours": "warn",
+    "shadow-on-everything": "warn",
+    "icon-card-row": "warn",
+    "centred-hero-two-ctas": "warn",
+    "emoji": "warn"
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "pageHeight": 8083,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "too-many-font-sizes",
+          "message": "8 different font sizes on the page (aim for 5 or fewer doing the visible work)"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "4 text colour pairs below WCAG AA",
+          "sample": [
+            "#808080 on #1a1a1a = 4.41:1 (needs 4.5) <div> \"Control your store\"",
+            "#ffffff on #f54900 = 3.60:1 (needs 4.5) <div> \"Book a demo\"",
+            "#666666 on #000000 = 3.66:1 (needs 4.5) <div> \"Designed with support from top retailers\"",
+            "#4d4d4d on #000000 = 2.48:1 (needs 4.5) <div> \"© Scotch 2026. All rights reserved\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "img-alt",
+          "message": "2 images without an alt attribute",
+          "sample": [
+            "/IntegrationAnimContent/dark%20background.png",
+            "/_next/image/?url=https%3A%2F%2Fscotchcms.wpenginepowered.com%2Fwp-content%2Fuploads%2F2025%2F04%2F0.png&w=1080&q=75"
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "img-broken",
+          "message": "1 images failed to load",
+          "sample": [
+            "https://bat.bing.com/action/0?ti=343253256&tm=gtm002&Ver=2&mid=17b767d6-6135-41ab-8d23-ebeef2cee316&bo=1&sid=7ebff420d47b11f1b3098d3d882f8c32&vid=7ec07380d47b11f180b9b3a8587ee9f2&vids=1&msclkid=N&gtm_tag_source=1&pi=0&lg=en-US&sw=1440&sh=900&sc=24&nwd=1&tl=Scotch%20%7C%20POS,%20Back%20Office%20%26%20eComm%20for%20Liquor%20Stores&p=https%3A%2F%2Fscotchpos.com%2F&r=&lt=1282&evt=pageLoad&sv=2&cdb=AQAQ&rn=574377"
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "5 gradient backgrounds"
+        },
+        {
+          "severity": "WARN",
+          "rule": "shadow-on-everything",
+          "message": "11 boxes carry a drop shadow"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "hidden-content",
+          "message": "12 text elements are still invisible after scrolling the whole page (a reveal that never fires?)",
+          "sample": [
+            "Back Office",
+            "Control your store",
+            "POS & Payments",
+            "Hardware for every store",
+            "The new way"
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Inter",
+            "share": 73
+          },
+          {
+            "family": "mori",
+            "share": 27
+          }
+        ],
+        "fontSizes": [
+          54,
+          42,
+          34,
+          18,
+          16,
+          15,
+          14,
+          13
+        ],
+        "textColours": [
+          "#ffffff",
+          "#808080",
+          "#000000",
+          "#a5a5a5",
+          "#666666",
+          "#f54900",
+          "#999999",
+          "#cccccc"
+        ],
+        "backgroundColours": [
+          "#000000",
+          "#1a1a1a",
+          "#ffffff",
+          "#f54900",
+          "#141413",
+          "#292929",
+          "#3e3e3e",
+          "#111111"
+        ],
+        "chromaticColours": 1,
+        "spacing": {
+          "distinct": 44,
+          "offScale": 20,
+          "values": [
+            4,
+            5.5,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            16,
+            17,
+            18,
+            19,
+            20,
+            22,
+            24,
+            28,
+            30,
+            32,
+            34,
+            36,
+            39,
+            40,
+            42,
+            44,
+            46,
+            48,
+            52,
+            56,
+            60,
+            66,
+            68,
+            70,
+            76,
+            84,
+            88,
+            96,
+            100,
+            108,
+            128
+          ]
+        },
+        "radii": [
+          "12px",
+          "6px",
+          "9999px",
+          "16px",
+          "8px",
+          "5px",
+          "10px"
+        ],
+        "shadows": 11,
+        "gradients": 5,
+        "backdropBlur": 0,
+        "transitions": 88,
+        "animatedElements": 39,
+        "cls": 0
+      },
+      "screenshots": [
+        "data/references/captures/ref-0003/desktop-fold.png",
+        "data/references/captures/ref-0003/desktop-page-01.png",
+        "data/references/captures/ref-0003/desktop-page-02.png",
+        "data/references/captures/ref-0003/desktop-page-03.png",
+        "data/references/captures/ref-0003/desktop-page-04.png",
+        "data/references/captures/ref-0003/desktop-page-05.png",
+        "data/references/captures/ref-0003/desktop-page-06.png",
+        "data/references/captures/ref-0003/desktop-page-07.png",
+        "data/references/captures/ref-0003/desktop-page-08.png",
+        "data/references/captures/ref-0003/desktop-page-09.png"
+      ]
+    },
+    "tablet": {
+      "width": 768,
+      "pageHeight": 6670,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15px (16px or more reads better)",
+          "sample": [
+            "<p> \"Far from just another POS, Scotch is the all-in-on\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15px (16px or more reads better)",
+          "sample": [
+            "<p> \"Real-time inventory and pricing, synced to deliver\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "3 text colour pairs below WCAG AA",
+          "sample": [
+            "#ffffff on #f54900 = 3.60:1 (needs 4.5) <div> \"Book a demo\"",
+            "#666666 on #000000 = 3.66:1 (needs 4.5) <div> \"Designed with support from top retailers\"",
+            "#4d4d4d on #000000 = 2.48:1 (needs 4.5) <div> \"© Scotch 2026. All rights reserved\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "img-alt",
+          "message": "1 images without an alt attribute",
+          "sample": [
+            "/_next/image/?url=https%3A%2F%2Fscotchcms.wpenginepowered.com%2Fwp-content%2Fuploads%2F2025%2F04%2F0.png&w=1080&q=75"
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "img-broken",
+          "message": "1 images failed to load",
+          "sample": [
+            "https://bat.bing.com/action/0?ti=343253256&tm=gtm002&Ver=2&mid=0c0e41c6-38e4-4bf8-8050-81c0ce76eedd&bo=1&sid=8b033610d47b11f1a0490ddb4be7e697&vid=8b037b50d47b11f1b301ed9276df6edc&vids=1&msclkid=N&gtm_tag_source=1&pi=0&lg=en-US&sw=768&sh=1024&sc=24&nwd=1&tl=Scotch%20%7C%20POS,%20Back%20Office%20%26%20eComm%20for%20Liquor%20Stores&p=https%3A%2F%2Fscotchpos.com%2F&r=&lt=1045&evt=pageLoad&sv=2&cdb=AQAQ&rn=830135"
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "3 gradient backgrounds"
+        },
+        {
+          "severity": "WARN",
+          "rule": "shadow-on-everything",
+          "message": "8 boxes carry a drop shadow"
+        },
+        {
+          "severity": "WARN",
+          "rule": "centred-hero-two-ctas",
+          "message": "Centred hero headline with two buttons, the most common generated layout"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Inter",
+            "share": 72
+          },
+          {
+            "family": "mori",
+            "share": 28
+          }
+        ],
+        "fontSizes": [
+          36,
+          28,
+          24,
+          16,
+          15,
+          14,
+          13
+        ],
+        "textColours": [
+          "#a5a5a5",
+          "#ffffff",
+          "#666666",
+          "#f54900",
+          "#999999",
+          "#cccccc"
+        ],
+        "backgroundColours": [
+          "#000000",
+          "#1a1a1a",
+          "#f54900",
+          "#ffffff",
+          "#141413",
+          "#292929",
+          "#3e3e3e",
+          "#111111"
+        ],
+        "chromaticColours": 1,
+        "spacing": {
+          "distinct": 29,
+          "offScale": 14,
+          "values": [
+            4,
+            5.5,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            16,
+            17,
+            18,
+            19,
+            20,
+            22,
+            24,
+            28,
+            32,
+            34,
+            36,
+            40,
+            46,
+            47,
+            48,
+            56,
+            64,
+            96,
+            108,
+            148.5
+          ]
+        },
+        "radii": [
+          "9999px",
+          "16px",
+          "8px",
+          "6px",
+          "5px",
+          "10px"
+        ],
+        "shadows": 9,
+        "gradients": 3,
+        "backdropBlur": 0,
+        "transitions": 55,
+        "animatedElements": 18,
+        "cls": 0.001
+      },
+      "screenshots": [
+        "data/references/captures/ref-0003/tablet-fold.png",
+        "data/references/captures/ref-0003/tablet-page-01.png",
+        "data/references/captures/ref-0003/tablet-page-02.png",
+        "data/references/captures/ref-0003/tablet-page-03.png",
+        "data/references/captures/ref-0003/tablet-page-04.png",
+        "data/references/captures/ref-0003/tablet-page-05.png",
+        "data/references/captures/ref-0003/tablet-page-06.png",
+        "data/references/captures/ref-0003/tablet-page-07.png"
+      ]
+    },
+    "mobile": {
+      "width": 390,
+      "pageHeight": 6186,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15px (16px or more reads better)",
+          "sample": [
+            "<p> \"Far from just another POS, Scotch is the all-in-on\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15px (16px or more reads better)",
+          "sample": [
+            "<p> \"Real-time inventory and pricing, synced to deliver\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "3 text colour pairs below WCAG AA",
+          "sample": [
+            "#ffffff on #f54900 = 3.60:1 (needs 4.5) <div> \"Book a demo\"",
+            "#666666 on #000000 = 3.66:1 (needs 4.5) <div> \"Designed with support from top retailers\"",
+            "#4d4d4d on #000000 = 2.48:1 (needs 4.5) <div> \"© Scotch 2026. All rights reserved\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tap-target",
+          "message": "12 controls smaller than 24x24px on a phone",
+          "sample": [
+            "111x20 <a> \"Find out more\"",
+            "109x2 <button> \"Ordering\"",
+            "109x2 <button> \"Receiving\"",
+            "109x2 <button> \"Analytics\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "text-at-edge",
+          "message": "4 text elements within 12px of the screen edge",
+          "sample": [
+            "<div> \"Keegan Jenks\"",
+            "<div> \"Owner of Bacchus\"",
+            "<div> \"Jay Patel\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "img-alt",
+          "message": "2 images without an alt attribute",
+          "sample": [
+            "/IntegrationAnimContent/dark%20background.png",
+            "/_next/image/?url=https%3A%2F%2Fscotchcms.wpenginepowered.com%2Fwp-content%2Fuploads%2F2025%2F04%2F0.png&w=1080&q=75"
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "img-broken",
+          "message": "1 images failed to load",
+          "sample": [
+            "https://bat.bing.com/action/0?ti=343253256&tm=gtm002&Ver=2&mid=9d4f859a-faf1-448c-a55f-5e26a3771adf&bo=1&sid=9533f040d47b11f1a6e9b5341542834e&vid=9533f220d47b11f1b79ecfc2d032382f&vids=1&msclkid=N&gtm_tag_source=1&pi=0&lg=en-US&sw=390&sh=844&sc=24&nwd=1&tl=Scotch%20%7C%20POS,%20Back%20Office%20%26%20eComm%20for%20Liquor%20Stores&p=https%3A%2F%2Fscotchpos.com%2F&r=&lt=869&evt=pageLoad&sv=2&cdb=AQAQ&rn=667179"
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "5 gradient backgrounds"
+        },
+        {
+          "severity": "WARN",
+          "rule": "shadow-on-everything",
+          "message": "7 boxes carry a drop shadow"
+        },
+        {
+          "severity": "WARN",
+          "rule": "centred-hero-two-ctas",
+          "message": "Centred hero headline with two buttons, the most common generated layout"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Inter",
+            "share": 71
+          },
+          {
+            "family": "mori",
+            "share": 29
+          }
+        ],
+        "fontSizes": [
+          36,
+          28,
+          24,
+          16,
+          15,
+          14,
+          13
+        ],
+        "textColours": [
+          "#a5a5a5",
+          "#ffffff",
+          "#666666",
+          "#f54900",
+          "#999999",
+          "#cccccc"
+        ],
+        "backgroundColours": [
+          "#000000",
+          "#1a1a1a",
+          "#f54900",
+          "#ffffff",
+          "#292929",
+          "#3e3e3e",
+          "#111111"
+        ],
+        "chromaticColours": 1,
+        "spacing": {
+          "distinct": 21,
+          "offScale": 8,
+          "values": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            13,
+            14,
+            16,
+            17,
+            18,
+            20,
+            22,
+            24,
+            28,
+            32,
+            36,
+            40,
+            48,
+            64,
+            80
+          ]
+        },
+        "radii": [
+          "9999px",
+          "6px",
+          "12px",
+          "8px",
+          "5px",
+          "10px"
+        ],
+        "shadows": 8,
+        "gradients": 5,
+        "backdropBlur": 0,
+        "transitions": 111,
+        "animatedElements": 24,
+        "cls": 0.001
+      },
+      "screenshots": [
+        "data/references/captures/ref-0003/mobile-fold.png",
+        "data/references/captures/ref-0003/mobile-page-01.png",
+        "data/references/captures/ref-0003/mobile-page-02.png",
+        "data/references/captures/ref-0003/mobile-page-03.png",
+        "data/references/captures/ref-0003/mobile-page-04.png",
+        "data/references/captures/ref-0003/mobile-page-05.png",
+        "data/references/captures/ref-0003/mobile-page-06.png",
+        "data/references/captures/ref-0003/mobile-page-07.png",
+        "data/references/captures/ref-0003/mobile-page-08.png"
+      ]
+    }
+  },
+  "checks": {
+    "reducedMotion": {
+      "findings": [
+        {
+          "severity": "FAIL",
+          "rule": "reduced-motion",
+          "message": "12 text elements stay hidden when the visitor asks for reduced motion",
+          "sample": [
+            "Back Office",
+            "Control your store",
+            "POS & Payments",
+            "Hardware for every store",
+            "The new way"
+          ]
+        }
+      ],
+      "screenshot": "data/references/captures/ref-0003/reduced-motion-fold.png"
+    },
+    "noJavaScript": {
+      "findings": [],
+      "withJs": 1853,
+      "withoutJs": 1845
+    }
+  },
+  "summary": {
+    "fail": 8,
+    "warn": 7
+  },
+  "url": "https://scotchpos.com/",
+  "findings": [
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "4 text colour pairs below WCAG AA",
+      "sample": [
+        "#808080 on #1a1a1a = 4.41:1 (needs 4.5) <div> \"Control your store\"",
+        "#ffffff on #f54900 = 3.60:1 (needs 4.5) <div> \"Book a demo\"",
+        "#666666 on #000000 = 3.66:1 (needs 4.5) <div> \"Designed with support from top retailers\"",
+        "#4d4d4d on #000000 = 2.48:1 (needs 4.5) <div> \"© Scotch 2026. All rights reserved\""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "img-alt",
+      "message": "2 images without an alt attribute",
+      "sample": [
+        "/IntegrationAnimContent/dark%20background.png",
+        "/_next/image/?url=https%3A%2F%2Fscotchcms.wpenginepowered.com%2Fwp-content%2Fuploads%2F2025%2F04%2F0.png&w=1080&q=75"
+      ],
+      "where": [
+        "desktop",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "img-broken",
+      "message": "1 images failed to load",
+      "sample": [
+        "https://bat.bing.com/action/0?ti=343253256&tm=gtm002&Ver=2&mid=17b767d6-6135-41ab-8d23-ebeef2cee316&bo=1&sid=7ebff420d47b11f1b3098d3d882f8c32&vid=7ec07380d47b11f180b9b3a8587ee9f2&vids=1&msclkid=N&gtm_tag_source=1&pi=0&lg=en-US&sw=1440&sh=900&sc=24&nwd=1&tl=Scotch%20%7C%20POS,%20Back%20Office%20%26%20eComm%20for%20Liquor%20Stores&p=https%3A%2F%2Fscotchpos.com%2F&r=&lt=1282&evt=pageLoad&sv=2&cdb=AQAQ&rn=574377"
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "hidden-content",
+      "message": "12 text elements are still invisible after scrolling the whole page (a reveal that never fires?)",
+      "sample": [
+        "Back Office",
+        "Control your store",
+        "POS & Payments",
+        "Hardware for every store",
+        "The new way"
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "3 text colour pairs below WCAG AA",
+      "sample": [
+        "#ffffff on #f54900 = 3.60:1 (needs 4.5) <div> \"Book a demo\"",
+        "#666666 on #000000 = 3.66:1 (needs 4.5) <div> \"Designed with support from top retailers\"",
+        "#4d4d4d on #000000 = 2.48:1 (needs 4.5) <div> \"© Scotch 2026. All rights reserved\""
+      ],
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "img-alt",
+      "message": "1 images without an alt attribute",
+      "sample": [
+        "/_next/image/?url=https%3A%2F%2Fscotchcms.wpenginepowered.com%2Fwp-content%2Fuploads%2F2025%2F04%2F0.png&w=1080&q=75"
+      ],
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tap-target",
+      "message": "12 controls smaller than 24x24px on a phone",
+      "sample": [
+        "111x20 <a> \"Find out more\"",
+        "109x2 <button> \"Ordering\"",
+        "109x2 <button> \"Receiving\"",
+        "109x2 <button> \"Analytics\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "reduced-motion",
+      "message": "12 text elements stay hidden when the visitor asks for reduced motion",
+      "sample": [
+        "Back Office",
+        "Control your store",
+        "POS & Payments",
+        "Hardware for every store",
+        "The new way"
+      ],
+      "where": [
+        "reducedMotion"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "too-many-font-sizes",
+      "message": "8 different font sizes on the page (aim for 5 or fewer doing the visible work)",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "gradient",
+      "message": "5 gradient backgrounds",
+      "where": [
+        "desktop",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "shadow-on-everything",
+      "message": "11 boxes carry a drop shadow",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "body-size",
+      "message": "Running text at 15px (16px or more reads better)",
+      "sample": [
+        "<p> \"Far from just another POS, Scotch is the all-in-on\""
+      ],
+      "where": [
+        "tablet",
+        "tablet",
+        "mobile",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "gradient",
+      "message": "3 gradient backgrounds",
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "shadow-on-everything",
+      "message": "8 boxes carry a drop shadow",
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "centred-hero-two-ctas",
+      "message": "Centred hero headline with two buttons, the most common generated layout",
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "text-at-edge",
+      "message": "4 text elements within 12px of the screen edge",
+      "sample": [
+        "<div> \"Keegan Jenks\"",
+        "<div> \"Owner of Bacchus\"",
+        "<div> \"Jay Patel\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "shadow-on-everything",
+      "message": "7 boxes carry a drop shadow",
+      "where": [
+        "mobile"
+      ]
+    }
+  ]
+}

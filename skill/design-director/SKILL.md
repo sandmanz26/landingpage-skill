@@ -39,7 +39,9 @@ means three things at once: it serves the business, it answers the customer, and
 5. **The designer chooses; you propose.** Short gates: the brief, the strategy, the direction, and
    the final result.
 6. **The team's taste is data.** `team/taste.md` and the brand file outrank your own preferences.
-7. **Never judge from code.** Judge screenshots. The critic is a separate agent that did not build it.
+7. **Never judge from code, and never judge alone.** Judge screenshots. At standard effort and above a
+   jury of separate expert agents judges (`rubric/jury.md`), and designers' votes are combined with
+   theirs; taste ties go to the humans, accessibility vetoes cannot be outvoted.
 8. **Respect what exists.** In an existing project, change tokens and components, not page overrides.
 9. **Never invent proof.** No made-up testimonials, client logos, statistics, awards or press.
 10. **Read only what the step needs.** Each step names its files; do not load the whole skill.
@@ -160,7 +162,9 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 | `rules/copyright.md` | Before using any reference |
 | `rules/copy-id.md` | Writing copy in Bahasa Indonesia |
 | `motion/functions.md` | Writing the motion spec and building motion |
-| `rubric/critic.md` | Briefing the critic subagent |
+| `rubric/critic.md` | Briefing the critic subagent; the critique format every juror uses |
+| `rubric/jury.md` | The look step and best-of-N at standard effort and above; judging references |
+| `library/intake.md` | When the team sends references with their notes |
 | `team/taste.md`, `brands/`, `designers/` | At the start, if present |
 
 ## Scripts
@@ -171,3 +175,4 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 | `draw.mjs --sector <s> [--tone <t>] [--have a,b] [--options 3]` | Deals directions into `.design/directions/` (`--list sectors`) |
 | `inspect.mjs <url or file> [--out dir] [--allow rule]` | Real-browser check at 1440/768/390, screenshots, design inventory |
 | `lint.mjs <files or folders>` | Stock copy, placeholders, default styling patterns in source |
+| `jury.mjs score / rank <dir>` | Combines AI and human jurors: blended scores, disagreements, vetoes, best-of-N winner |

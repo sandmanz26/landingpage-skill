@@ -120,7 +120,9 @@ export function measure({ rules, viewport }) {
       .join(' ')
       .replace(/\s+/g, ' ')
       .trim();
-  const textEls = vis.filter((el) => ownText(el).length > 0);
+  // Text inside decorative art (aria-hidden, role=img) is not read; skip it for
+  // size and contrast checks.
+  const textEls = vis.filter((el) => ownText(el).length > 0 && !el.closest('[aria-hidden="true"], [role="img"]'));
   const snippet = (el) => `<${el.tagName.toLowerCase()}> "${(el.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 50)}"`;
   const inCode = (el) => !!el.closest('pre, code, kbd, samp');
 

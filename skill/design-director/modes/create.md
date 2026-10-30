@@ -179,8 +179,9 @@ Order: tokens → hero → sections → pictures → states (hover, focus, error
   stack). Everything downstream uses tokens only.
 - **Hero best-of-3** (standard and thorough effort): build three hero variants that differ in
   composition, not just colour, as `.design/variants/hero-a.html`, `-b`, `-c`. Screenshot each
-  (`inspect.mjs <file> --out .design/variants/<x> --quiet`), then brief a critic subagent with
-  `rubric/critic.md` (ranking format). Keep the winner, log why.
+  (`inspect.mjs <file> --out .design/variants/<x> --quiet`), then put them before the jury
+  (`rubric/jury.md`): each AI juror ranks them, designers may add their ranking, and
+  `jury.mjs rank` picks the winner. Keep the winner, log why.
 - Each section from its row in the spec. Carry the idea into every section, pricing, FAQ and footer
   included; the usual failure is a distinctive first screen followed by stock blocks.
 - Sticky and fixed elements: give each sticky panel its own wrapper (the part of the page it belongs
@@ -201,11 +202,16 @@ the source changed after the last inspection).
 
 ## 11. look
 
-Brief a critic subagent with `rubric/critic.md`: it gets the screenshots from `.design/inspect/`,
-the brief card, the customer profile and the five most important customer questions from the
-strategy, and the team anchors, and nothing else (not the code, not your intentions). Write its
-critique to `.design/critique.md`. Fix the top three problems, inspect again, look again. At most
-three rounds (one at quick effort).
+At standard and thorough effort, the look is done by the **jury** (`rubric/jury.md`): each AI juror is
+a separate subagent that gets the screenshots from `.design/inspect/`, the brief card, the customer
+profile and the five most important customer questions from the strategy, and the team anchors,
+and nothing else (not the code, not your intentions). Designers may add their votes in the same
+folder. Combine with `jury.mjs score .design/jury/<round>` and write the combined critique to
+`.design/critique.md`: the scores, the flagged disagreements, any veto, and the top three problems
+across all jurors. At quick effort one critic (`rubric/critic.md`) is enough.
+
+Fix the top three problems (every veto first), inspect again, look again. At most three rounds
+(one at quick effort).
 
 If subagents are unavailable, do the look in a separate step that reads only the screenshots and
 the rubric, and say in the report that the critique was not independent.

@@ -1,0 +1,1674 @@
+{
+  "target": "https://www.replay.ai/",
+  "time": "2026-10-30T16:02:12.701Z",
+  "rules": {
+    "purple-gradient": "warn",
+    "gradient": "info",
+    "glass": "info",
+    "system-font-only": "warn",
+    "too-many-font-sizes": "warn",
+    "too-many-colours": "warn",
+    "shadow-on-everything": "warn",
+    "icon-card-row": "warn",
+    "centred-hero-two-ctas": "warn",
+    "emoji": "warn"
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "pageHeight": 8022,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "too-many-font-sizes",
+          "message": "14 different font sizes on the page (aim for 5 or fewer doing the visible work)"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<p> \"process\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"identified\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"structured\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"verified\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"licensed\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<p> \"RL-2026-001 // Version 1.0\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<p> \"classification: proprietary data / licensing\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 6.00011px",
+          "sample": [
+            "<p> \"process\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 6.00011px",
+          "sample": [
+            "<span> \"identified\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 6.00011px",
+          "sample": [
+            "<span> \"structured\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 6.00011px",
+          "sample": [
+            "<span> \"verified\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 6.00011px",
+          "sample": [
+            "<span> \"licensed\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 6.00011px",
+          "sample": [
+            "<p> \"RL-2026-001 // Version 1.0\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 6.00011px",
+          "sample": [
+            "<p> \"classificationproprietary data / licensing\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 4.20016px",
+          "sample": [
+            "<p> \"def load_dataset(source):records = source.read()re\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 4.20016px",
+          "sample": [
+            "<p> \"def load_dataset(source):records = source.read()re\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10px",
+          "sample": [
+            "<p> \"© 2026 Replay. All rights reservedSunsets HQ Corp.\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14px (16px or more reads better)",
+          "sample": [
+            "<p> \"Optional measurement helps us understand how you f\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "7 text colour pairs below WCAG AA",
+          "sample": [
+            "#777777 on #ffffff = 4.48:1 (needs 4.5) <a> \"AI buyers\"",
+            "#898989 on #fcfcfc = 3.41:1 (needs 4.5) <p> \"process\"",
+            "#919191 on #ffffff = 3.15:1 (needs 4.5) <p> \"Paid to businesses like yours\"",
+            "#727272 on #eaebf1 = 4.04:1 (needs 4.5) <p> \"Raising a round costs equity. Debt has to be paid \"",
+            "#727272 on #0c0c0b = 4.07:1 (needs 4.5) <p> \"Replay reviews your industry, the systems you run \""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "8 gradient backgrounds"
+        },
+        {
+          "severity": "INFO",
+          "rule": "glass",
+          "message": "5 blurred glass panels"
+        },
+        {
+          "severity": "WARN",
+          "rule": "too-many-colours",
+          "message": "7 distinct chromatic colours",
+          "sample": [
+            "#499df8",
+            "#54702f",
+            "#c2edc8",
+            "#eae058",
+            "#13a8ff",
+            "#a9b8c8",
+            "#25fff9"
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "centred-hero-two-ctas",
+          "message": "Centred hero headline with two buttons, the most common generated layout"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "hidden-content",
+          "message": "15 text elements are still invisible after scrolling the whole page (a reveal that never fires?)",
+          "sample": [
+            "$10K - $100K",
+            "$100K - $1M",
+            "$1,000,000+",
+            "Receive an offer",
+            "Replay presents an offer to license your data. These are typ"
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "1 console or page errors",
+          "sample": [
+            "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Geist",
+            "share": 63
+          },
+          {
+            "family": "Geist Mono",
+            "share": 18
+          },
+          {
+            "family": "stkBureauSerif",
+            "share": 18
+          }
+        ],
+        "fontSizes": [
+          72,
+          64,
+          50,
+          44,
+          32,
+          24,
+          18,
+          16,
+          14,
+          12,
+          10,
+          8,
+          6,
+          4
+        ],
+        "textColours": [
+          "#777777",
+          "#ffffff",
+          "#000000",
+          "#727272",
+          "#898989",
+          "#2a2a2a",
+          "#919191",
+          "#181a1b",
+          "#a9b8c8",
+          "#f1f1f1",
+          "#dddddd",
+          "#cfcfcf",
+          "#f2f2f2",
+          "#090909",
+          "#565656",
+          "#141518"
+        ],
+        "backgroundColours": [
+          "#fcfcfc",
+          "#141518",
+          "#000000",
+          "#499df8",
+          "#54702f",
+          "#c2edc8",
+          "#eae058",
+          "#13a8ff",
+          "#8c8c8c",
+          "#e3edf3",
+          "#7e7e7e",
+          "#eaebf1",
+          "#ffffff",
+          "#a8a8a8",
+          "#0c0c0b",
+          "#25fff9",
+          "#383535",
+          "#cdcdcd",
+          "#171717",
+          "#c0c0c8",
+          "#dddee4",
+          "#080808",
+          "#898989",
+          "#faf9f6"
+        ],
+        "chromaticColours": 7,
+        "spacing": {
+          "distinct": 28,
+          "offScale": 10,
+          "values": [
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18,
+            20,
+            24,
+            26,
+            32,
+            40,
+            48,
+            49,
+            54,
+            56,
+            60,
+            64,
+            72,
+            80,
+            86,
+            96,
+            108,
+            110,
+            120,
+            176,
+            571
+          ]
+        },
+        "radii": [
+          "2.7px",
+          "999px",
+          "2.1px",
+          "3.35544e+07px"
+        ],
+        "shadows": 4,
+        "gradients": 8,
+        "backdropBlur": 5,
+        "transitions": 133,
+        "animatedElements": 121,
+        "cls": 0.001
+      },
+      "screenshots": [
+        "data/references/captures/ref-0002/desktop-fold.png",
+        "data/references/captures/ref-0002/desktop-page-01.png",
+        "data/references/captures/ref-0002/desktop-page-02.png",
+        "data/references/captures/ref-0002/desktop-page-03.png",
+        "data/references/captures/ref-0002/desktop-page-04.png",
+        "data/references/captures/ref-0002/desktop-page-05.png",
+        "data/references/captures/ref-0002/desktop-page-06.png",
+        "data/references/captures/ref-0002/desktop-page-07.png",
+        "data/references/captures/ref-0002/desktop-page-08.png",
+        "data/references/captures/ref-0002/desktop-page-09.png"
+      ]
+    },
+    "tablet": {
+      "width": 768,
+      "pageHeight": 8762,
+      "findings": [
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<p> \"process\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"process:\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"identified\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"structured\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"verified\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"licensed\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 6.8px",
+          "sample": [
+            "<p> \"RL-2026-001 // Version 1.0\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 7px",
+          "sample": [
+            "<p> \"classification: proprietary data / licensing\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<p> \"Historical operating data\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14px (16px or more reads better)",
+          "sample": [
+            "<p> \"Headcount is a proxy. How long you've been operati\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14px (16px or more reads better)",
+          "sample": [
+            "<p> \"You're paid up front, plus a revenue share of ever\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14px (16px or more reads better)",
+          "sample": [
+            "<p> \"The federal standard for de-identifying medical re\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14px (16px or more reads better)",
+          "sample": [
+            "<p> \"General-purpose models aren't trained to find PII \""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14px (16px or more reads better)",
+          "sample": [
+            "<p> \"Every engagement runs in its own isolated environm\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 2.88891px",
+          "sample": [
+            "<p> \"process\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 2.88891px",
+          "sample": [
+            "<span> \"identified\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 2.88891px",
+          "sample": [
+            "<span> \"structured\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 2.88891px",
+          "sample": [
+            "<span> \"verified\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 2.88891px",
+          "sample": [
+            "<span> \"licensed\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 2.88891px",
+          "sample": [
+            "<p> \"RL-2026-001 // Version 1.0\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 2.88891px",
+          "sample": [
+            "<p> \"classificationproprietary data / licensing\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 2.02228px",
+          "sample": [
+            "<p> \"def load_dataset(source):records = source.read()re\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 2.02228px",
+          "sample": [
+            "<p> \"def load_dataset(source):records = source.read()re\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10px",
+          "sample": [
+            "<p> \"© 2026 Replay. All rights reservedSunsets HQ Corp.\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14px (16px or more reads better)",
+          "sample": [
+            "<p> \"Optional measurement helps us understand how you f\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "10 text colour pairs below WCAG AA",
+          "sample": [
+            "#777777 on #ffffff = 4.48:1 (needs 4.5) <a> \"AI buyers\"",
+            "#898989 on #fcfcfc = 3.41:1 (needs 4.5) <p> \"process\"",
+            "#8d8d8d on #fcfcfc = 3.24:1 (needs 4.5) <p> \"RL-2026-001 // Version 1.0\"",
+            "#aaaaaa on #fcfcfc = 2.26:1 (needs 4.5) <p> \"classification: proprietary data / licensing\"",
+            "#919191 on #ffffff = 3.15:1 (needs 4.5) <p> \"Paid to businesses like yours\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "headline-lines",
+          "message": "h1 runs to 4 lines",
+          "sample": [
+            "<h1> \"Fund growth by licensing the data you already have\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "8 gradient backgrounds"
+        },
+        {
+          "severity": "INFO",
+          "rule": "glass",
+          "message": "5 blurred glass panels"
+        },
+        {
+          "severity": "WARN",
+          "rule": "too-many-colours",
+          "message": "7 distinct chromatic colours",
+          "sample": [
+            "#54702f",
+            "#13a8ff",
+            "#499df8",
+            "#c2edc8",
+            "#eae058",
+            "#a9b8c8",
+            "#25fff9"
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "centred-hero-two-ctas",
+          "message": "Centred hero headline with two buttons, the most common generated layout"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "hidden-content",
+          "message": "15 text elements are still invisible after scrolling the whole page (a reveal that never fires?)",
+          "sample": [
+            "$10K - $100K",
+            "$100K - $1M",
+            "$1,000,000+",
+            "Receive an offer",
+            "Replay presents an offer to license your data. These are typ"
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "1 console or page errors",
+          "sample": [
+            "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Geist",
+            "share": 63
+          },
+          {
+            "family": "stkBureauSerif",
+            "share": 19
+          },
+          {
+            "family": "Geist Mono",
+            "share": 18
+          }
+        ],
+        "fontSizes": [
+          64,
+          56,
+          44,
+          24,
+          20,
+          19,
+          16,
+          14,
+          12,
+          11,
+          10,
+          8,
+          7,
+          3,
+          2
+        ],
+        "textColours": [
+          "#777777",
+          "#ffffff",
+          "#000000",
+          "#727272",
+          "#898989",
+          "#8d8d8d",
+          "#aaaaaa",
+          "#2a2a2a",
+          "#919191",
+          "#181a1b",
+          "#a9b8c8",
+          "#f1f1f1",
+          "#dddddd",
+          "#cfcfcf",
+          "#f2f2f2",
+          "#090909",
+          "#666666",
+          "#565656",
+          "#141518"
+        ],
+        "backgroundColours": [
+          "#fcfcfc",
+          "#141518",
+          "#000000",
+          "#54702f",
+          "#13a8ff",
+          "#499df8",
+          "#c2edc8",
+          "#eae058",
+          "#8c8c8c",
+          "#e3edf3",
+          "#7e7e7e",
+          "#eaebf1",
+          "#ffffff",
+          "#0c0c0b",
+          "#25fff9",
+          "#383535",
+          "#cdcdcd",
+          "#171717",
+          "#c0c0c8",
+          "#dddee4",
+          "#080808",
+          "#898989",
+          "#faf9f6"
+        ],
+        "chromaticColours": 7,
+        "spacing": {
+          "distinct": 25,
+          "offScale": 8,
+          "values": [
+            2,
+            3,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            15.5,
+            16,
+            17,
+            20,
+            24,
+            27,
+            28,
+            32,
+            40,
+            56,
+            60,
+            64,
+            72,
+            80,
+            96,
+            108,
+            120
+          ]
+        },
+        "radii": [
+          "2.7px",
+          "999px",
+          "2.1px",
+          "3.35544e+07px"
+        ],
+        "shadows": 4,
+        "gradients": 8,
+        "backdropBlur": 5,
+        "transitions": 123,
+        "animatedElements": 50,
+        "cls": 0.04
+      },
+      "screenshots": [
+        "data/references/captures/ref-0002/tablet-fold.png",
+        "data/references/captures/ref-0002/tablet-page-01.png",
+        "data/references/captures/ref-0002/tablet-page-02.png",
+        "data/references/captures/ref-0002/tablet-page-03.png",
+        "data/references/captures/ref-0002/tablet-page-04.png",
+        "data/references/captures/ref-0002/tablet-page-05.png",
+        "data/references/captures/ref-0002/tablet-page-06.png",
+        "data/references/captures/ref-0002/tablet-page-07.png",
+        "data/references/captures/ref-0002/tablet-page-08.png",
+        "data/references/captures/ref-0002/tablet-page-09.png"
+      ]
+    },
+    "mobile": {
+      "width": 390,
+      "pageHeight": 7831,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14.5px (16px or more reads better)",
+          "sample": [
+            "<p> \"Frontier AI labs need training data on how real co\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<p> \"process\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"process:\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"identified\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"structured\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"verified\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"licensed\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 6.8px",
+          "sample": [
+            "<p> \"RL-2026-001 // Version 1.0\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 7px",
+          "sample": [
+            "<p> \"classification: proprietary data / licensing\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<p> \"Historical operating data\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14px (16px or more reads better)",
+          "sample": [
+            "<p> \"Headcount is a proxy. How long you've been operati\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14px (16px or more reads better)",
+          "sample": [
+            "<p> \"You're paid up front, plus a revenue share of ever\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14px (16px or more reads better)",
+          "sample": [
+            "<p> \"The federal standard for de-identifying medical re\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14px (16px or more reads better)",
+          "sample": [
+            "<p> \"General-purpose models aren't trained to find PII \""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14px (16px or more reads better)",
+          "sample": [
+            "<p> \"Every engagement runs in its own isolated environm\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 7.15802px",
+          "sample": [
+            "<p> \"Tech\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 7.15802px",
+          "sample": [
+            "<p> \"B2C\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 7.15802px",
+          "sample": [
+            "<p> \"E-commerce\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 7.15802px",
+          "sample": [
+            "<p> \"Services\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 7.15802px",
+          "sample": [
+            "<p> \"Legal\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 7.15802px",
+          "sample": [
+            "<p> \"Hardware\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 7.15802px",
+          "sample": [
+            "<p> \"CPG\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 7.15802px",
+          "sample": [
+            "<p> \"Finance\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 2.808px",
+          "sample": [
+            "<p> \"process\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 2.808px",
+          "sample": [
+            "<p> \"identified → structured → verified → licensed\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 2.808px",
+          "sample": [
+            "<p> \"RL-2026-001 // Version 1.0\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 2.808px",
+          "sample": [
+            "<p> \"classificationproprietary data / licensing\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 2.301px",
+          "sample": [
+            "<p> \"def load_dataset(source):records = source.read()re\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 2.301px",
+          "sample": [
+            "<p> \"def load_dataset(source):records = source.read()re\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10px",
+          "sample": [
+            "<p> \"© 2026 Replay. All rights reservedSunsets HQ Corp.\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14px (16px or more reads better)",
+          "sample": [
+            "<p> \"Optional measurement helps us understand how you f\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "9 text colour pairs below WCAG AA",
+          "sample": [
+            "#898989 on #fcfcfc = 3.41:1 (needs 4.5) <p> \"process\"",
+            "#8d8d8d on #fcfcfc = 3.24:1 (needs 4.5) <p> \"RL-2026-001 // Version 1.0\"",
+            "#aaaaaa on #fcfcfc = 2.26:1 (needs 4.5) <p> \"classification: proprietary data / licensing\"",
+            "#919191 on #ffffff = 3.15:1 (needs 4.5) <p> \"Paid to businesses like yours\"",
+            "#727272 on #eaebf1 = 4.04:1 (needs 4.5) <p> \"Raising a round costs equity. Debt has to be paid \""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tap-target",
+          "message": "12 controls smaller than 24x24px on a phone",
+          "sample": [
+            "63x16 <a> \"Overview\"",
+            "95x16 <a> \"How it works\"",
+            "71x16 <a> \"Valuation\"",
+            "103x16 <a> \"Data cleaning\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "7 gradient backgrounds"
+        },
+        {
+          "severity": "INFO",
+          "rule": "glass",
+          "message": "5 blurred glass panels"
+        },
+        {
+          "severity": "WARN",
+          "rule": "too-many-colours",
+          "message": "9 distinct chromatic colours",
+          "sample": [
+            "#13a8ff",
+            "#f8f2d8",
+            "#499df8",
+            "#f9e9d8",
+            "#54702f",
+            "#f5e4d8",
+            "#eae058",
+            "#a9b8c8"
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "centred-hero-two-ctas",
+          "message": "Centred hero headline with two buttons, the most common generated layout"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "hidden-content",
+          "message": "15 text elements are still invisible after scrolling the whole page (a reveal that never fires?)",
+          "sample": [
+            "$10K - $100K",
+            "$100K - $1M",
+            "$1,000,000+",
+            "Receive an offer",
+            "Replay presents an offer to license your data. These are typ"
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "1 console or page errors",
+          "sample": [
+            "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Geist",
+            "share": 63
+          },
+          {
+            "family": "Geist Mono",
+            "share": 19
+          },
+          {
+            "family": "stkBureauSerif",
+            "share": 18
+          }
+        ],
+        "fontSizes": [
+          42,
+          39,
+          36,
+          28,
+          24,
+          20,
+          16,
+          15,
+          14,
+          12,
+          11,
+          10,
+          8,
+          7,
+          3,
+          2
+        ],
+        "textColours": [
+          "#000000",
+          "#727272",
+          "#ffffff",
+          "#898989",
+          "#8d8d8d",
+          "#aaaaaa",
+          "#2a2a2a",
+          "#919191",
+          "#181a1b",
+          "#a9b8c8",
+          "#f1f1f1",
+          "#dddddd",
+          "#cfcfcf",
+          "#f2f2f2",
+          "#090909",
+          "#666666",
+          "#565656",
+          "#141518"
+        ],
+        "backgroundColours": [
+          "#fcfcfc",
+          "#141518",
+          "#000000",
+          "#13a8ff",
+          "#f8f2d8",
+          "#499df8",
+          "#f9e9d8",
+          "#54702f",
+          "#f5e4d8",
+          "#8c8c8c",
+          "#f7f2f7",
+          "#eae058",
+          "#7e7e7e",
+          "#eaebf1",
+          "#ffffff",
+          "#0c0c0b",
+          "#25fff9",
+          "#383535",
+          "#cdcdcd",
+          "#171717",
+          "#c0c0c8",
+          "#dddee4",
+          "#080808",
+          "#f4f4f4",
+          "#898989",
+          "#faf9f6"
+        ],
+        "chromaticColours": 9,
+        "spacing": {
+          "distinct": 24,
+          "offScale": 9,
+          "values": [
+            0.5,
+            1,
+            2,
+            2.5,
+            3.5,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            17,
+            20,
+            24,
+            28,
+            32,
+            40,
+            48,
+            52,
+            56,
+            64,
+            80,
+            108
+          ]
+        },
+        "radii": [
+          "2.7px",
+          "2.1px",
+          "3.35544e+07px"
+        ],
+        "shadows": 3,
+        "gradients": 7,
+        "backdropBlur": 5,
+        "transitions": 77,
+        "animatedElements": 52,
+        "cls": 0.004
+      },
+      "screenshots": [
+        "data/references/captures/ref-0002/mobile-fold.png",
+        "data/references/captures/ref-0002/mobile-page-01.png",
+        "data/references/captures/ref-0002/mobile-page-02.png",
+        "data/references/captures/ref-0002/mobile-page-03.png",
+        "data/references/captures/ref-0002/mobile-page-04.png",
+        "data/references/captures/ref-0002/mobile-page-05.png",
+        "data/references/captures/ref-0002/mobile-page-06.png",
+        "data/references/captures/ref-0002/mobile-page-07.png",
+        "data/references/captures/ref-0002/mobile-page-08.png",
+        "data/references/captures/ref-0002/mobile-page-09.png",
+        "data/references/captures/ref-0002/mobile-page-10.png"
+      ]
+    }
+  },
+  "checks": {
+    "reducedMotion": {
+      "findings": [
+        {
+          "severity": "FAIL",
+          "rule": "reduced-motion",
+          "message": "15 text elements stay hidden when the visitor asks for reduced motion",
+          "sample": [
+            "$10K - $100K",
+            "$100K - $1M",
+            "$1,000,000+",
+            "Receive an offer",
+            "Replay presents an offer to license your data. These are typ"
+          ]
+        }
+      ],
+      "screenshot": "data/references/captures/ref-0002/reduced-motion-fold.png"
+    },
+    "noJavaScript": {
+      "findings": [],
+      "withJs": 4557,
+      "withoutJs": 4265
+    }
+  },
+  "summary": {
+    "fail": 17,
+    "warn": 8
+  },
+  "url": "https://www.replay.ai/",
+  "findings": [
+    {
+      "severity": "FAIL",
+      "rule": "tiny-text",
+      "message": "Text at 8px",
+      "sample": [
+        "<p> \"process\""
+      ],
+      "where": [
+        "desktop",
+        "desktop",
+        "desktop",
+        "desktop",
+        "desktop",
+        "desktop",
+        "desktop",
+        "tablet",
+        "tablet",
+        "tablet",
+        "tablet",
+        "tablet",
+        "tablet",
+        "tablet",
+        "mobile",
+        "mobile",
+        "mobile",
+        "mobile",
+        "mobile",
+        "mobile",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tiny-text",
+      "message": "Text at 6.00011px",
+      "sample": [
+        "<p> \"process\""
+      ],
+      "where": [
+        "desktop",
+        "desktop",
+        "desktop",
+        "desktop",
+        "desktop",
+        "desktop",
+        "desktop"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tiny-text",
+      "message": "Text at 4.20016px",
+      "sample": [
+        "<p> \"def load_dataset(source):records = source.read()re\""
+      ],
+      "where": [
+        "desktop",
+        "desktop"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "7 text colour pairs below WCAG AA",
+      "sample": [
+        "#777777 on #ffffff = 4.48:1 (needs 4.5) <a> \"AI buyers\"",
+        "#898989 on #fcfcfc = 3.41:1 (needs 4.5) <p> \"process\"",
+        "#919191 on #ffffff = 3.15:1 (needs 4.5) <p> \"Paid to businesses like yours\"",
+        "#727272 on #eaebf1 = 4.04:1 (needs 4.5) <p> \"Raising a round costs equity. Debt has to be paid \"",
+        "#727272 on #0c0c0b = 4.07:1 (needs 4.5) <p> \"Replay reviews your industry, the systems you run \""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "hidden-content",
+      "message": "15 text elements are still invisible after scrolling the whole page (a reveal that never fires?)",
+      "sample": [
+        "$10K - $100K",
+        "$100K - $1M",
+        "$1,000,000+",
+        "Receive an offer",
+        "Replay presents an offer to license your data. These are typ"
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tiny-text",
+      "message": "Text at 6.8px",
+      "sample": [
+        "<p> \"RL-2026-001 // Version 1.0\""
+      ],
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tiny-text",
+      "message": "Text at 7px",
+      "sample": [
+        "<p> \"classification: proprietary data / licensing\""
+      ],
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tiny-text",
+      "message": "Text at 2.88891px",
+      "sample": [
+        "<p> \"process\""
+      ],
+      "where": [
+        "tablet",
+        "tablet",
+        "tablet",
+        "tablet",
+        "tablet",
+        "tablet",
+        "tablet"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tiny-text",
+      "message": "Text at 2.02228px",
+      "sample": [
+        "<p> \"def load_dataset(source):records = source.read()re\""
+      ],
+      "where": [
+        "tablet",
+        "tablet"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "10 text colour pairs below WCAG AA",
+      "sample": [
+        "#777777 on #ffffff = 4.48:1 (needs 4.5) <a> \"AI buyers\"",
+        "#898989 on #fcfcfc = 3.41:1 (needs 4.5) <p> \"process\"",
+        "#8d8d8d on #fcfcfc = 3.24:1 (needs 4.5) <p> \"RL-2026-001 // Version 1.0\"",
+        "#aaaaaa on #fcfcfc = 2.26:1 (needs 4.5) <p> \"classification: proprietary data / licensing\"",
+        "#919191 on #ffffff = 3.15:1 (needs 4.5) <p> \"Paid to businesses like yours\""
+      ],
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "headline-lines",
+      "message": "h1 runs to 4 lines",
+      "sample": [
+        "<h1> \"Fund growth by licensing the data you already have\""
+      ],
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tiny-text",
+      "message": "Text at 7.15802px",
+      "sample": [
+        "<p> \"Tech\""
+      ],
+      "where": [
+        "mobile",
+        "mobile",
+        "mobile",
+        "mobile",
+        "mobile",
+        "mobile",
+        "mobile",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tiny-text",
+      "message": "Text at 2.808px",
+      "sample": [
+        "<p> \"process\""
+      ],
+      "where": [
+        "mobile",
+        "mobile",
+        "mobile",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tiny-text",
+      "message": "Text at 2.301px",
+      "sample": [
+        "<p> \"def load_dataset(source):records = source.read()re\""
+      ],
+      "where": [
+        "mobile",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "9 text colour pairs below WCAG AA",
+      "sample": [
+        "#898989 on #fcfcfc = 3.41:1 (needs 4.5) <p> \"process\"",
+        "#8d8d8d on #fcfcfc = 3.24:1 (needs 4.5) <p> \"RL-2026-001 // Version 1.0\"",
+        "#aaaaaa on #fcfcfc = 2.26:1 (needs 4.5) <p> \"classification: proprietary data / licensing\"",
+        "#919191 on #ffffff = 3.15:1 (needs 4.5) <p> \"Paid to businesses like yours\"",
+        "#727272 on #eaebf1 = 4.04:1 (needs 4.5) <p> \"Raising a round costs equity. Debt has to be paid \""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tap-target",
+      "message": "12 controls smaller than 24x24px on a phone",
+      "sample": [
+        "63x16 <a> \"Overview\"",
+        "95x16 <a> \"How it works\"",
+        "71x16 <a> \"Valuation\"",
+        "103x16 <a> \"Data cleaning\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "reduced-motion",
+      "message": "15 text elements stay hidden when the visitor asks for reduced motion",
+      "sample": [
+        "$10K - $100K",
+        "$100K - $1M",
+        "$1,000,000+",
+        "Receive an offer",
+        "Replay presents an offer to license your data. These are typ"
+      ],
+      "where": [
+        "reducedMotion"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "too-many-font-sizes",
+      "message": "14 different font sizes on the page (aim for 5 or fewer doing the visible work)",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "small-text",
+      "message": "Text at 10px",
+      "sample": [
+        "<p> \"© 2026 Replay. All rights reservedSunsets HQ Corp.\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "body-size",
+      "message": "Running text at 14px (16px or more reads better)",
+      "sample": [
+        "<p> \"Optional measurement helps us understand how you f\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "tablet",
+        "tablet",
+        "tablet",
+        "tablet",
+        "tablet",
+        "mobile",
+        "mobile",
+        "mobile",
+        "mobile",
+        "mobile",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "gradient",
+      "message": "8 gradient backgrounds",
+      "where": [
+        "desktop",
+        "tablet"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "glass",
+      "message": "5 blurred glass panels",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "too-many-colours",
+      "message": "7 distinct chromatic colours",
+      "sample": [
+        "#499df8",
+        "#54702f",
+        "#c2edc8",
+        "#eae058",
+        "#13a8ff",
+        "#a9b8c8",
+        "#25fff9"
+      ],
+      "where": [
+        "desktop",
+        "tablet"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "centred-hero-two-ctas",
+      "message": "Centred hero headline with two buttons, the most common generated layout",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "console-errors",
+      "message": "1 console or page errors",
+      "sample": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "body-size",
+      "message": "Running text at 14.5px (16px or more reads better)",
+      "sample": [
+        "<p> \"Frontier AI labs need training data on how real co\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "gradient",
+      "message": "7 gradient backgrounds",
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "too-many-colours",
+      "message": "9 distinct chromatic colours",
+      "sample": [
+        "#13a8ff",
+        "#f8f2d8",
+        "#499df8",
+        "#f9e9d8",
+        "#54702f",
+        "#f5e4d8",
+        "#eae058",
+        "#a9b8c8"
+      ],
+      "where": [
+        "mobile"
+      ]
+    }
+  ]
+}

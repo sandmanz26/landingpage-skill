@@ -1,0 +1,81 @@
+{"juror":"conversion-strategist","kind":"ai","refs":{
+"ref-0001":{
+"business_read":"A premium modular backyard play tower (aluminium + macrocarpa timber, 2.4m+ tall, 1.7m footprint, flat-packed, two-adult assembly) for design-conscious parents with a garden. The page does NOT sell it today: the 'Want one?' block (desktop-page-07/08, mobile-page-07) says it is released in limited production runs and asks for an email to hear when the next release opens. The action that pays right now is an email sign-up to a waitlist ('Get updates' pill, 'Your email' field). No price, no cart, no configurator flow on this page; accessories are all 'Coming soon.'",
+"scores":{"business":4},
+"reasons":{"business":"The fold has no CTA, no price, no nav (desktop-fold, mobile-fold) and the giant headline is just the brand name; a sticky 'Get updates' pill appears from the second screen on and the real ask ('Want one?') only lands at the very bottom. Trust is built properly before the ask (real kids in real gardens, ISO 8124:4 with NZ certification pending, dimensioned drawing, materials, assembly time), but 'Get updates' undersells a scarce pre-order and gives no price to say yes to."},
+"claims":[
+{"claim":"Heavy bold large title + small light text gives contrast","verdict":"contested","evidence":"desktop-fold.png: the heavy title is only the word 'Playfolly' (brand, not value proposition); the small text that actually explains the product ('architecture meets a treehouse. Modular, customisable...') is white on sand, measured 1.70:1 in report.json and it never reveals on mobile (hidden-content). Visual contrast yes, message contrast no: the big type carries no offer and the small type carrying the offer is the hardest to read."},
+{"claim":"Solid colours","verdict":"contested","evidence":"desktop-fold.png / mobile-fold.png: the solid circles at the bottom are product colour options (Yellow, Blue, Green, Sand, custom wheel) plus day/night toggle, i.e. a mini configurator, not decoration. Their labels fail contrast (Yellow 1.16:1, Sand 1.14:1). The note reads a sales tool as a palette choice."},
+{"claim":"Photography plays an important role","verdict":"confirmed","evidence":"desktop-page-02.png (children pointing from the tower, a child climbing the ladder), desktop-page-04.png (tower lit at night next to a real house), desktop-page-09.png (kids playing). For a not-yet-shippable, design-led physical product, real photos in real gardens are the main proof it exists and fits a normal backyard. Caveat: the fold itself is a 3D render, not a photo."},
+{"claim":"Business context: sold with an online configurator","verdict":"contested","evidence":"desktop-page-07/08.png and mobile-page-07.png: 'Playfolly is released in limited production runs. Join the list to hear when the next release opens' + email field. desktop-page-06.png: every accessory card says 'Coming soon.' while the section claims 'Available now'. Only a colour switcher is visible; no price, cart or step-by-step configurator. report.json shows a blocked shop.app frame, so a Shopify store may exist but is not surfaced on this page."}
+],
+"take":[
+"Interactive variant picker on the hero: let visitors recolour the product (swatches + day/night) on the first screen so they start 'owning' a configuration before any copy; follow it with a CTA that carries their choice ('Reserve this in Sand').",
+"Dimensioned fit drawing with a child silhouette for scale (desktop-page-06/07): answers the 'will it fit my garden / is it big enough' objection in one picture; pair with materials and 'two adults, one morning' assembly time.",
+"Scarcity-framed waitlist: 'Released in limited production runs. Join the list for the next release' turns a product you can't buy yet into a reason to sign up now; one field + arrow button, no extra form fields."
+],
+"avoid":[
+"A brand-name-only hero with no CTA and no one-line offer: on desktop-fold and mobile-fold a cold visitor cannot tell what is for sale, at what price, or what to do next.",
+"A vague CTA label ('Get updates') on a scarce, high-ticket pre-order: it sounds like a newsletter; say what the visitor gets (release-date alert, first access, reservation) and ideally an indicative price.",
+"Sticky logo + CTA overlaying body copy (desktop-page-04/06/07/08: the white 'Playfolly' wordmark sits on top of the safety and materials text) and a CTA pill that loses its fill on a same-colour section (mobile-page-07): it hides the trust copy exactly where it is needed."
+],
+"missed_by_note":[
+"It is a waitlist page, not a shop: the conversion is an email, and the business is selling scarcity (limited production runs).",
+"No price anywhere. For a premium garden structure, price is the first filter; hiding it fills the list with unqualified sign-ups.",
+"Safety is a selling point the page handles well ('Dangerously safe.', ISO 8124:4, ground anchors), but the certification is 'pending' and the claim is half-hidden under the sticky logo.",
+"The colour swatches are the product's options, i.e. the start of a configurator, not a style choice.",
+"'Available now, with more to come' sits above accessory cards that all say 'Coming soon.', which undercuts credibility."
+]},
+"ref-0002":{
+"business_read":"Replay pays established companies (20 to 250+ employees, any industry) to license their historical operating data (email, Jira/issues, meeting transcripts, CRM, support history, financial records, product logs) to frontier AI labs as training data, after stripping personal identifiers. Pitched as non-dilutive funding: 'Fund growth by licensing the data you already have'. Paid up front plus a revenue share per license, indicative bands $10K-$100K / $100K-$1M / $1M+ by headcount. The action that pays: 'Value my data' (start a valuation), the first of four steps ('120 minutes of your time').",
+"scores":{"business":6},
+"reasons":{"business":"The ask is unmistakable: 'Value my data' sits in the sticky nav on every desktop screen, in the hero and in the closing block, and the offer is concrete (price bands by headcount, upfront + rev share, 4 steps, 120 minutes). But for a high-anxiety offer (handing over company email and finance records) proof is thin: no named customers, no testimonials, no team, no security certification, 'Millions paid' is unquantified, and the price bands are invisible on mobile and with reduced motion."},
+"claims":[
+{"claim":"Relies on simple animated vector objects instead of images","verdict":"contested","evidence":"desktop-fold.png / desktop-page-01.png: the hero is a stack of realistic document facsimiles (an invoice with CPT codes and unit prices, email message list, Jira issue list, meeting transcript); desktop-page-03/04.png use textured, denim-like raster backgrounds; desktop-page-06.png shows a realistic email being redacted. These are illustrations of documents, not simple vector objects."},
+{"claim":"The visual approach is 'following the business'","verdict":"confirmed","evidence":"Business is licensing a company's own records, and the visuals show exactly those records: document stack in the hero, the data-type grid (Financial records, Support history, CRM data, Sales conversations; desktop-page-03.png), the '25M+ Records / 8M Indicated value' block (desktop-page-05.png) and the live-redaction email (desktop-page-06.png). The visuals show the asset being sold and the de-identification that makes selling it acceptable."},
+{"claim":"Mostly small type looks neat","verdict":"contested","evidence":"report.json: text down to 4.2-8px, running text at 14px, 14 font sizes, 7 contrast failures on desktop including the proof caption 'Paid to businesses like yours' at 3.15:1 and the explanation paragraphs at 4.04:1. desktop-page-02.png: the process/classification labels are unreadable. Neat to a designer, but the faintest type on the page is carrying the claims that build trust."}
+],
+"take":[
+"Value-led CTA that is the first step of the deal: 'Value my data' / 'Find out what your data is worth' promises the visitor a number for free instead of a sales call, and is repeated identically in the sticky nav, hero and close.",
+"Anchor the payout with indicative bands by a self-identifiable variable (headcount 20-50 / 50-250 / 250+), then explain what moves the price and how payment works (upfront + recurring rev share). Visitors can place themselves before they click.",
+"Cost-of-effort framing for the process: 'Four steps. 120 minutes of your time.' with named steps (Value, Terms, Protect, Payout) to kill the 'this will be a huge project' objection, plus a live demo of the risk-removal step (an email being redacted) beside the claim."
+],
+"avoid":[
+"Hiding the key numbers behind scroll animations: report.json shows the price bands '$10K - $100K', '$100K - $1M', '$1,000,000+' and 'Receive an offer' stay invisible with reduced motion, and mobile-page-04.png shows the headcount bars with no dollar labels. The most persuasive content on the page disappears for part of the audience.",
+"Vague social proof ('Millions' paid, 'Billions' of identifiers removed; desktop-page-02.png) with no names, logos or case studies on a page asking companies to hand over email and financial records. It reads as filler exactly where proof is needed.",
+"Very small, low-contrast type for trust copy and a cookie bar permanently covering the bottom of every screen (all desktop pages, mobile-fold): it lowers legibility and the impression of a serious, accountable counterparty."
+],
+"missed_by_note":[
+"What the business is: a two-sided data marketplace that pays companies for their operating data. The core objection is privacy/legal risk, not looks, and the page spends most of its length on that objection (PII coverage, HIPAA's 18 identifiers, 'never sold to foreign adversaries or resold through brokers').",
+"The offer is unusually concrete for the category (price bands, upfront + rev share, time cost), which is the page's real conversion strength.",
+"Trust gap: no customer names, testimonials, team, compliance badges or legal entity on screen, for a request to share email and finance records.",
+"Business-critical numbers are lost on mobile and under reduced motion (hidden-content / reduced-motion failures in report.json).",
+"The mobile header has only a hamburger, so the persistent 'Value my data' button seen on desktop is gone on phones once the hero scrolls away."
+]},
+"ref-0003":{
+"business_read":"Scotch is an all-in-one operating system for independent liquor retailers in the US: POS and payments (claiming 'lowest fees guaranteed'), back office (inventory, ordering with forecasts, invoice reconciliation, analytics), integrations with delivery apps and e-commerce, and in-store hardware. Sold to store owners and GMs. The action that pays is 'Book a demo' (secondary: 'See it in action' video; 'Pricing' in the nav).",
+"scores":{"business":7},
+"reasons":{"business":"'Book a demo' is the only orange filled button and is obvious at the fold on desktop and mobile, with a strong, specific promise ('designed exclusively for liquor retailers') and trust stacked before the final ask (retailer logos, named video testimonials, real liquor-specific UI, '20% less time'). It is not on every screen though: the nav is not sticky and the middle five desktop screens only offer orange 'Find out more' / 'Learn more' text links, and the page states no price or fee number."},
+"claims":[
+{"claim":"Real 'wireframes' (probably real product UI) help a lot","verdict":"confirmed","evidence":"They are high-fidelity product screens, not wireframes, and they are liquor-specific: desktop-fold.png shows a Product List with 'New Riff Sour Mash Single Malt', 'Chateau Pape Clement Bordeaux', Low/Out of Stock flags, a sales forecast and a 'Stage for order' button; desktop-page-05/06.png show a checkout with loyalty points and a $120.08 balance; desktop-page-07/08.png show invoice reconciliation against POs with quantity/cost discrepancies. This turns the headline 'knows liquor like you do' into something the buyer can check."},
+{"claim":"Simple dark palette","verdict":"confirmed","evidence":"report.json counts one chromatic colour (#f54900), so every filled orange element ('Book a demo', play buttons on the testimonials, 'Stage for order' in the UI) pulls the eye; the bright product screenshots stand out on black (desktop-fold.png). Cost: white on #f54900 on the main CTA is 3.60:1, below AA, and the logo strip label 'Designed with support from top retailers' is 3.66:1."},
+{"claim":"Micro-interactions on scroll","verdict":"unverifiable","evidence":"Static screenshots cannot show motion. report.json does show the risk: 12 text elements (e.g. 'Back Office', 'POS & Payments', 'Control your store', 'The new way') stay hidden after scrolling and with reduced motion, so the scroll reveals can hide section labels from part of the audience."}
+],
+"take":[
+"Vertical-specific product UI in the hero: fill the real interface with the buyer's own world (actual whisky and wine SKUs, stock flags, an 'order now' action) so the claim 'built for your industry' is shown rather than said.",
+"Peer proof in the buyer's own setting: named owners/GMs with store names ('Owner of Bacchus', 'GM of Cheers') on video thumbnails shot in their shops, placed right after the hero and before any feature talk.",
+"'Old way' vs new: show the pain artefacts the buyer knows (a Windows-95 style item dialog, a paper invoice with a binder clip, sticky note 'Adjust inventory'; desktop-page-06/07.png) next to the clean new screen, with a named enemy ('90s technology or tools built for restaurants')."
+],
+"avoid":[
+"Dropping the primary CTA for most of the scroll: the header does not stick and desktop-page-02 to 07 only offer 'Find out more' / 'Learn more' text links, so a convinced reader has to scroll to the end or back up to book a demo.",
+"Claims without numbers or sources at the decision point: 'lowest fees guaranteed' has no rate, and '20% less time spent on inventory management' has no source. On a page that withholds pricing, unanchored claims weaken the demo ask.",
+"Hedged logo-strip copy and a sub-AA primary button: 'Designed with support from top retailers' reads as advisors, not customers, and the CTA label at 3.60:1 is the least legible thing on the button that pays."
+],
+"missed_by_note":[
+"The page sells a specific positioning: liquor-only, against generic or restaurant POS. The real UI matters because it proves that positioning, not because it looks good.",
+"Trust is built in the right order: logos and named video testimonials sit directly under the hero, before features.",
+"Payments are a revenue line ('lowest fees guaranteed') and probably the main switching argument, but the page gives no number to compare against the current processor.",
+"The logo strip says 'designed with support from', not 'used by'; customer proof is weaker than it looks.",
+"The footer ends with links only: no demo button, phone number or contact for an owner who prefers to call."
+]}
+}}

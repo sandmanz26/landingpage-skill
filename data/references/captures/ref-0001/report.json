@@ -1,0 +1,522 @@
+{
+  "target": "https://playfolly.com",
+  "time": "2026-10-30T15:59:29.308Z",
+  "rules": {
+    "purple-gradient": "warn",
+    "gradient": "info",
+    "glass": "info",
+    "system-font-only": "warn",
+    "too-many-font-sizes": "warn",
+    "too-many-colours": "warn",
+    "shadow-on-everything": "warn",
+    "icon-card-row": "warn",
+    "centred-hero-two-ctas": "warn",
+    "emoji": "warn"
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "pageHeight": 7569,
+      "findings": [
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "4 text colour pairs below WCAG AA",
+          "sample": [
+            "#fefcd0 on #f9ee16 = 1.16:1 (needs 4.5) <span> \"Yellow\"",
+            "#e7e6da on #888048 = 3.20:1 (needs 4.5) <span> \"Green\"",
+            "#fefbf3 on #faecc2 = 1.14:1 (needs 4.5) <span> \"Sand\"",
+            "#ffffff on #edbf7a = 1.70:1 (needs 3) <p> \"Playfolly is what happens when architecture meets \""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "glass",
+          "message": "4 blurred glass panels"
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "2 console or page errors",
+          "sample": [
+            "Framing 'https://shop.app/' violates the following Content Security Policy directive: \"frame-ancestors 'self' https://shop.app https://admin.shopify.com\". The request has been blocked.\n",
+            "Failed to load resource: the server responded with a status of 403 ()"
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Geograph",
+            "share": 100
+          }
+        ],
+        "fontSizes": [
+          234,
+          60,
+          30,
+          18,
+          16,
+          14
+        ],
+        "textColours": [
+          "#000000",
+          "#ffffff",
+          "#f9ee16"
+        ],
+        "backgroundColours": [
+          "#edbf7a",
+          "#f9ee16",
+          "#ffffff",
+          "#45528a",
+          "#888048",
+          "#faecc2",
+          "#000000",
+          "#333335",
+          "#262626",
+          "#f4d602"
+        ],
+        "chromaticColours": 6,
+        "spacing": {
+          "distinct": 23,
+          "offScale": 6,
+          "values": [
+            5,
+            6,
+            8,
+            12,
+            14,
+            16,
+            20,
+            24,
+            36,
+            40,
+            45,
+            60,
+            64,
+            72,
+            78,
+            80,
+            84,
+            96,
+            100,
+            104,
+            124,
+            128,
+            171
+          ]
+        },
+        "radii": [
+          "3.35544e+07px",
+          "18px",
+          "32px"
+        ],
+        "shadows": 4,
+        "gradients": 0,
+        "backdropBlur": 4,
+        "transitions": 43,
+        "animatedElements": 4,
+        "cls": 0
+      },
+      "screenshots": [
+        "data/references/captures/ref-0001/desktop-fold.png",
+        "data/references/captures/ref-0001/desktop-page-01.png",
+        "data/references/captures/ref-0001/desktop-page-02.png",
+        "data/references/captures/ref-0001/desktop-page-03.png",
+        "data/references/captures/ref-0001/desktop-page-04.png",
+        "data/references/captures/ref-0001/desktop-page-05.png",
+        "data/references/captures/ref-0001/desktop-page-06.png",
+        "data/references/captures/ref-0001/desktop-page-07.png",
+        "data/references/captures/ref-0001/desktop-page-08.png",
+        "data/references/captures/ref-0001/desktop-page-09.png"
+      ]
+    },
+    "tablet": {
+      "width": 768,
+      "pageHeight": 8796,
+      "findings": [
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "4 text colour pairs below WCAG AA",
+          "sample": [
+            "#fefcd0 on #f9ee16 = 1.16:1 (needs 4.5) <span> \"Yellow\"",
+            "#e7e6da on #888048 = 3.20:1 (needs 4.5) <span> \"Green\"",
+            "#fefbf3 on #faecc2 = 1.14:1 (needs 4.5) <span> \"Sand\"",
+            "#ffffff on #edbf7a = 1.70:1 (needs 3) <p> \"Playfolly is what happens when architecture meets \""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "glass",
+          "message": "4 blurred glass panels"
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "2 console or page errors",
+          "sample": [
+            "Framing 'https://shop.app/' violates the following Content Security Policy directive: \"frame-ancestors 'self' https://shop.app https://admin.shopify.com\". The request has been blocked.\n",
+            "Failed to load resource: the server responded with a status of 403 ()"
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Geograph",
+            "share": 100
+          }
+        ],
+        "fontSizes": [
+          125,
+          60,
+          30,
+          18,
+          16,
+          14
+        ],
+        "textColours": [
+          "#000000",
+          "#ffffff",
+          "#f9ee16"
+        ],
+        "backgroundColours": [
+          "#edbf7a",
+          "#f9ee16",
+          "#ffffff",
+          "#45528a",
+          "#888048",
+          "#faecc2",
+          "#000000",
+          "#333335",
+          "#262626",
+          "#f4d602"
+        ],
+        "chromaticColours": 6,
+        "spacing": {
+          "distinct": 23,
+          "offScale": 6,
+          "values": [
+            5,
+            6,
+            8,
+            12,
+            14,
+            16,
+            20,
+            24,
+            36,
+            40,
+            45,
+            60,
+            64,
+            72,
+            78,
+            80,
+            84,
+            96,
+            100,
+            104,
+            124,
+            128,
+            171
+          ]
+        },
+        "radii": [
+          "3.35544e+07px",
+          "18px",
+          "32px"
+        ],
+        "shadows": 4,
+        "gradients": 0,
+        "backdropBlur": 4,
+        "transitions": 43,
+        "animatedElements": 4,
+        "cls": 0
+      },
+      "screenshots": [
+        "data/references/captures/ref-0001/tablet-fold.png",
+        "data/references/captures/ref-0001/tablet-page-01.png",
+        "data/references/captures/ref-0001/tablet-page-02.png",
+        "data/references/captures/ref-0001/tablet-page-03.png",
+        "data/references/captures/ref-0001/tablet-page-04.png",
+        "data/references/captures/ref-0001/tablet-page-05.png",
+        "data/references/captures/ref-0001/tablet-page-06.png",
+        "data/references/captures/ref-0001/tablet-page-07.png",
+        "data/references/captures/ref-0001/tablet-page-08.png",
+        "data/references/captures/ref-0001/tablet-page-09.png"
+      ]
+    },
+    "mobile": {
+      "width": 390,
+      "pageHeight": 6798,
+      "findings": [
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "4 text colour pairs below WCAG AA",
+          "sample": [
+            "#fefcd0 on #f9ee16 = 1.16:1 (needs 4.5) <span> \"Yellow\"",
+            "#e7e6da on #888048 = 3.20:1 (needs 4.5) <span> \"Green\"",
+            "#fefbf3 on #faecc2 = 1.14:1 (needs 4.5) <span> \"Sand\"",
+            "#ffffff on #edbf7a = 1.70:1 (needs 3) <p> \"Playfolly is what happens when architecture meets \""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "headline-lines",
+          "message": "h3 runs to 4 lines",
+          "sample": [
+            "<h3> \"Playfolly is released in limited production runs. \""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tap-target",
+          "message": "7 controls smaller than 24x24px on a phone",
+          "sample": [
+            "12x48 <button> \"\"",
+            "12x48 <button> \"\"",
+            "12x48 <button> \"\"",
+            "12x48 <button> \"\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "text-at-edge",
+          "message": "27 text elements within 12px of the screen edge",
+          "sample": [
+            "<strong> \"Dangerously safe.\"",
+            "<p> \"An inherently stable conical form and broad stance\"",
+            "<strong> \"Match your mood. Or your moodboard.\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "glass",
+          "message": "4 blurred glass panels"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "hidden-content",
+          "message": "1 text elements are still invisible after scrolling the whole page (a reveal that never fires?)",
+          "sample": [
+            "Playfolly is what happens when architecture meets a treehous"
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "2 console or page errors",
+          "sample": [
+            "Framing 'https://shop.app/' violates the following Content Security Policy directive: \"frame-ancestors 'self' https://shop.app https://admin.shopify.com\". The request has been blocked.\n",
+            "Failed to load resource: the server responded with a status of 403 ()"
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Geograph",
+            "share": 100
+          }
+        ],
+        "fontSizes": [
+          92,
+          30,
+          18,
+          16,
+          14
+        ],
+        "textColours": [
+          "#000000",
+          "#ffffff",
+          "#f9ee16"
+        ],
+        "backgroundColours": [
+          "#edbf7a",
+          "#f9ee16",
+          "#ffffff",
+          "#45528a",
+          "#888048",
+          "#faecc2",
+          "#000000",
+          "#333335",
+          "#262626",
+          "#f4d602"
+        ],
+        "chromaticColours": 6,
+        "spacing": {
+          "distinct": 19,
+          "offScale": 4,
+          "values": [
+            5,
+            6,
+            8,
+            12,
+            14,
+            16,
+            20,
+            24,
+            28,
+            40,
+            48,
+            64,
+            72,
+            80,
+            84,
+            96,
+            124,
+            128,
+            250.5
+          ]
+        },
+        "radii": [
+          "3.35544e+07px",
+          "18px",
+          "32px"
+        ],
+        "shadows": 4,
+        "gradients": 0,
+        "backdropBlur": 4,
+        "transitions": 43,
+        "animatedElements": 4,
+        "cls": 0
+      },
+      "screenshots": [
+        "data/references/captures/ref-0001/mobile-fold.png",
+        "data/references/captures/ref-0001/mobile-page-01.png",
+        "data/references/captures/ref-0001/mobile-page-02.png",
+        "data/references/captures/ref-0001/mobile-page-03.png",
+        "data/references/captures/ref-0001/mobile-page-04.png",
+        "data/references/captures/ref-0001/mobile-page-05.png",
+        "data/references/captures/ref-0001/mobile-page-06.png",
+        "data/references/captures/ref-0001/mobile-page-07.png",
+        "data/references/captures/ref-0001/mobile-page-08.png",
+        "data/references/captures/ref-0001/mobile-page-09.png"
+      ]
+    }
+  },
+  "checks": {
+    "reducedMotion": {
+      "findings": [],
+      "screenshot": "data/references/captures/ref-0001/reduced-motion-fold.png"
+    },
+    "noJavaScript": {
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "needs-javascript",
+          "message": "Without JavaScript only 0 of 3144 characters of text are visible"
+        }
+      ],
+      "withJs": 3144,
+      "withoutJs": 0
+    }
+  },
+  "summary": {
+    "fail": 3,
+    "warn": 4
+  },
+  "url": "https://playfolly.com",
+  "findings": [
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "4 text colour pairs below WCAG AA",
+      "sample": [
+        "#fefcd0 on #f9ee16 = 1.16:1 (needs 4.5) <span> \"Yellow\"",
+        "#e7e6da on #888048 = 3.20:1 (needs 4.5) <span> \"Green\"",
+        "#fefbf3 on #faecc2 = 1.14:1 (needs 4.5) <span> \"Sand\"",
+        "#ffffff on #edbf7a = 1.70:1 (needs 3) <p> \"Playfolly is what happens when architecture meets \""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tap-target",
+      "message": "7 controls smaller than 24x24px on a phone",
+      "sample": [
+        "12x48 <button> \"\"",
+        "12x48 <button> \"\"",
+        "12x48 <button> \"\"",
+        "12x48 <button> \"\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "hidden-content",
+      "message": "1 text elements are still invisible after scrolling the whole page (a reveal that never fires?)",
+      "sample": [
+        "Playfolly is what happens when architecture meets a treehous"
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "glass",
+      "message": "4 blurred glass panels",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "console-errors",
+      "message": "2 console or page errors",
+      "sample": [
+        "Framing 'https://shop.app/' violates the following Content Security Policy directive: \"frame-ancestors 'self' https://shop.app https://admin.shopify.com\". The request has been blocked.\n",
+        "Failed to load resource: the server responded with a status of 403 ()"
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "headline-lines",
+      "message": "h3 runs to 4 lines",
+      "sample": [
+        "<h3> \"Playfolly is released in limited production runs. \""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "text-at-edge",
+      "message": "27 text elements within 12px of the screen edge",
+      "sample": [
+        "<strong> \"Dangerously safe.\"",
+        "<p> \"An inherently stable conical form and broad stance\"",
+        "<strong> \"Match your mood. Or your moodboard.\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "needs-javascript",
+      "message": "Without JavaScript only 0 of 3144 characters of text are visible",
+      "where": [
+        "noJavaScript"
+      ]
+    }
+  ]
+}

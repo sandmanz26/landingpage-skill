@@ -1,3 +1,7 @@
 node_modules/
 .design/
 .DS_Store
+# Reference captures are reproducible with inspect.mjs; keep only the reports and the first screens.
+data/references/captures/**/*.png
+!data/references/captures/**/desktop-fold.png
+!data/references/captures/**/mobile-fold.png
