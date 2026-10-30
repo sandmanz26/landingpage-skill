@@ -134,19 +134,19 @@ for (const vp of VIEWPORTS) {
   const hidden = await page.evaluate(hiddenText);
   const cls = await page.evaluate(() => window.__cls || 0);
 
+  // Screens as a visitor sees them: scroll, then photograph the viewport, so
+  // sticky and fixed elements appear where they really are.
   const height = await page.evaluate(() => document.documentElement.scrollHeight);
   const sliceH = vp.height;
   const slices = Math.min(Math.ceil(height / sliceH), 14);
   for (let i = 0; i < slices; i++) {
     const p = path.join(outDir, `${vp.name}-page-${String(i + 1).padStart(2, '0')}.png`);
-    const y = i * sliceH;
-    await page.screenshot({
-      path: p,
-      fullPage: true,
-      clip: { x: 0, y, width: vp.width, height: Math.min(sliceH, height - y) },
-    });
+    await page.evaluate((y) => window.scrollTo(0, y), i * sliceH);
+    await page.waitForTimeout(250);
+    await page.screenshot({ path: p });
     shots.push(p);
   }
+  await page.evaluate(() => window.scrollTo(0, 0));
 
   const findings = m.findings;
   if (hidden.count > 0)

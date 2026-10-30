@@ -1,0 +1,13 @@
+{
+  "seed": 109772034,
+  "library": "directions-seed.json",
+  "sector": "health",
+  "tone": "quiet",
+  "have": [],
+  "brief": "dental clinic, 30-minute visits in a lunch break, Bandung",
+  "dealt": [
+    "split-stage",
+    "colour-chapters",
+    "place-carries-it"
+  ]
+}

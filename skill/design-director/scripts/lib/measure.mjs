@@ -290,7 +290,8 @@ export function measure({ rules, viewport }) {
       if (v > 0) spacing.set(Math.round(v * 2) / 2, (spacing.get(Math.round(v * 2) / 2) || 0) + 1);
     }
     if (cs.borderTopLeftRadius !== '0px') radii.add(cs.borderTopLeftRadius);
-    if (cs.boxShadow !== 'none') shadows++;
+    const dropShadow = cs.boxShadow !== 'none' && cs.boxShadow.split(/,(?![^(]*\))/).some((x) => !/inset/.test(x));
+    if (dropShadow) shadows++;
     if (cs.backgroundImage.includes('gradient')) {
       gradients++;
       const cols = cs.backgroundImage.match(/(rgba?|oklch|oklab|hsla?|color)\([^)]*\)|#[0-9a-f]{3,8}/gi) || [];
@@ -310,7 +311,10 @@ export function measure({ rules, viewport }) {
   if (gradients) style('gradient', `${gradients} gradient backgrounds`);
   if (backdropBlur) style('glass', `${backdropBlur} blurred glass panels`);
   if (chromatic.size > 6) style('too-many-colours', `${chromatic.size} distinct chromatic colours`, [...chromatic].slice(0, 8));
-  const cardish = vis.filter((el) => getComputedStyle(el).boxShadow !== 'none' && el.getBoundingClientRect().width < vw * 0.6);
+  const cardish = vis.filter((el) => {
+    const bs = getComputedStyle(el).boxShadow;
+    return bs !== 'none' && bs.split(/,(?![^(]*\))/).some((x) => !/inset/.test(x)) && el.getBoundingClientRect().width < vw * 0.6;
+  });
   if (cardish.length >= 6) style('shadow-on-everything', `${cardish.length} boxes carry a drop shadow`);
 
   // Rows of 3-4 look-alike cards, each with a small icon, a heading and a line.

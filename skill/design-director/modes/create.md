@@ -166,6 +166,9 @@ Order: tokens → hero → sections → pictures → states (hover, focus, error
   `rubric/critic.md` (ranking format). Keep the winner, log why.
 - Each section from its row in the spec. Carry the idea into every section, pricing, FAQ and footer
   included; the usual failure is a distinctive first screen followed by stock blocks.
+- Sticky and fixed elements: give each sticky panel its own wrapper (the part of the page it belongs
+  to), or it stays stuck over the sections that follow. Check it in the scrolled screenshots, not the
+  first screen.
 - Motion last, from the motion spec (`motion/functions.md`).
 
 ## 8. gate

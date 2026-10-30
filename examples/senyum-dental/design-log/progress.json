@@ -1,0 +1,81 @@
+{
+  "mode": "create",
+  "effort": "standard",
+  "gates": "autopilot",
+  "created": "2026-10-30T05:26:03.448Z",
+  "steps": {
+    "brief": {
+      "status": "done",
+      "at": "2026-10-30T05:26:11.165Z",
+      "note": ""
+    },
+    "argument": {
+      "status": "done",
+      "at": "2026-10-30T05:26:21.616Z",
+      "note": ""
+    },
+    "direction": {
+      "status": "done",
+      "at": "2026-10-30T05:26:38.160Z",
+      "note": ""
+    },
+    "skeleton": {
+      "status": "done",
+      "at": "2026-10-30T05:27:46.360Z",
+      "note": "2 structural fixes carried into the spec"
+    },
+    "spec": {
+      "status": "done",
+      "at": "2026-10-30T05:27:46.421Z",
+      "note": ""
+    },
+    "copy": {
+      "status": "done",
+      "at": "2026-10-30T05:28:01.896Z",
+      "note": ""
+    },
+    "build": {
+      "status": "done",
+      "at": "2026-10-30T05:31:49.233Z",
+      "note": ""
+    },
+    "gate": {
+      "status": "done",
+      "at": "2026-10-30T05:32:57.283Z",
+      "note": ""
+    },
+    "look": {
+      "status": "done",
+      "at": "2026-10-30T05:35:24.763Z",
+      "note": ""
+    },
+    "deliver": {
+      "status": "done",
+      "at": "2026-10-30T05:35:24.893Z",
+      "note": ""
+    },
+    "learn": {
+      "status": "skipped",
+      "at": "2026-10-30T05:35:24.951Z",
+      "note": "simulation: no user feedback to learn from"
+    }
+  },
+  "approvals": {
+    "brief": {
+      "by": "claude",
+      "at": "2026-10-30T05:26:11.087Z",
+      "note": "autopilot: brief card complete, no blocking gaps"
+    },
+    "direction": {
+      "by": "claude",
+      "at": "2026-10-30T05:26:38.103Z",
+      "note": "autopilot: recommended A, see direction-gate.md"
+    },
+    "final": {
+      "by": "claude",
+      "at": "2026-10-30T05:35:24.833Z",
+      "note": "autopilot: delivered with 0 FAIL, sample content listed"
+    }
+  },
+  "history": []
+}

@@ -56,8 +56,12 @@ export async function resolveTarget(target) {
   const abs = path.resolve(target);
   if (!fs.existsSync(abs)) throw new Error(`Not found: ${target}`);
   const isDir = fs.statSync(abs).isDirectory();
-  const root = isDir ? abs : path.dirname(abs);
-  const entry = isDir ? 'index.html' : path.basename(abs);
+  const file = isDir ? path.join(abs, 'index.html') : abs;
+  // Serve from the project root when the page lives inside it, so relative
+  // links that climb folders (../../assets/site.css) still resolve.
+  const cwd = process.cwd();
+  const root = file.startsWith(cwd + path.sep) ? cwd : path.dirname(file);
+  const entry = path.relative(root, file).split(path.sep).join('/');
   const server = http.createServer((req, res) => {
     const urlPath = decodeURIComponent(new URL(req.url, 'http://x').pathname);
     let file = path.join(root, urlPath);

@@ -1,0 +1,73 @@
+/* Layout and sections. Tokens and base styles are in base.css. */
+.split { display: grid; grid-template-columns: 45% 55%; align-items: start; }
+.stage { position: sticky; top: 0; height: 100svh; background: var(--stage); display: grid; place-items: center; align-content: center; gap: var(--space-4); padding: var(--space-5); }
+.clock { width: min(68%, 400px); height: auto; }
+.clock .arc { transition: none; }
+.readout { text-align: center; }
+.readout .time { font: 560 var(--step-4)/1 var(--font-display); font-variation-settings: "SOFT" 100, "opsz" 144; letter-spacing: -0.03em; color: var(--accent); margin: 0; }
+.readout .step { font: 600 var(--step-0)/1.3 var(--font-text); color: var(--ink-2); margin: var(--space-2) 0 0; min-height: 1.3em; }
+.read { padding: 0 var(--space-6); }
+.read > * { max-width: 46ch; }
+.hero { min-height: 100svh; display: flex; flex-direction: column; justify-content: center; padding: var(--space-6) 0; }
+.name { font: 600 var(--step-0)/1 var(--font-text); margin: 0 0 var(--space-6); }
+h1 { font-size: var(--step-3); line-height: 1; margin: 0; max-width: 11ch; }
+.lead { margin: var(--space-3) 0 var(--space-5); color: var(--ink-2); max-width: 34ch; }
+.facts { color: var(--ink-2); margin: var(--space-4) 0 0; }
+section { padding: var(--space-8) 0; }
+h2 { font-size: var(--step-2); line-height: 1.05; margin: 0 0 var(--space-3); }
+.intro { color: var(--ink-2); margin: 0 0 var(--space-6); }
+
+/* The half hour: times in the display face, one step per row */
+.steps { list-style: none; margin: 0; padding: 0; }
+.steps li { display: grid; grid-template-columns: 112px 1fr; gap: var(--space-3); padding: var(--space-5) 0; }
+.steps li + li { border-top: 1px solid rgb(19 34 30 / 0.12); }
+.steps time { font: 560 var(--step-1)/1.2 var(--font-display); color: var(--accent); }
+.steps strong { display: block; font-weight: 600; }
+.steps p { margin: var(--space-1) 0 0; color: var(--ink-2); }
+
+/* Price: breaks the split and runs full width on a field of brand green */
+.price { background: var(--accent); color: var(--on-accent); padding: var(--space-8) var(--space-6); display: grid; grid-template-columns: 1.3fr 1fr; gap: var(--space-6); align-items: end; }
+.price h2 { color: var(--on-accent); font-size: var(--step-1); font-family: var(--font-text); font-weight: 600; letter-spacing: 0; margin: 0 0 var(--space-3); }
+.price .amount { white-space: nowrap; font: 560 clamp(56px, 8vw, 132px)/0.9 var(--font-display); font-variation-settings: "SOFT" 100, "opsz" 144; letter-spacing: -0.04em; margin: 0; }
+.price .line { max-width: 34ch; margin: var(--space-4) 0 0; }
+.price ul { list-style: none; margin: 0; padding: 0; font-size: var(--step-1); line-height: 1.35; }
+.price li { padding: var(--space-3) 0; border-bottom: 1px solid rgb(255 255 255 / 0.25); }
+
+/* Hours */
+.hours { width: 100%; border-collapse: collapse; margin: var(--space-4) 0; }
+.hours th, .hours td { text-align: left; padding: var(--space-3) 0; border-bottom: 1px solid rgb(19 34 30 / 0.15); font-weight: 400; }
+.hours td { font-family: var(--font-display); font-size: var(--step-1); text-align: right; }
+.note { color: var(--ink-2); }
+
+/* Booking: the live thing */
+.book { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); margin: var(--space-5) 0; }
+.book label { display: grid; gap: var(--space-1); font-weight: 600; }
+.book select { min-height: 52px; padding: 0 var(--space-2); font: 400 var(--step-0) var(--font-text); color: var(--ink); background: #fff; border: 1px solid rgb(19 34 30 / 0.35); border-radius: 0; }
+.message { font-family: var(--font-display); font-size: var(--step-1); line-height: 1.35; margin: 0 0 var(--space-5); padding-left: var(--space-3); border-left: 4px solid var(--accent); }
+
+/* Location */
+.maplink { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; }
+.address { font: 560 var(--step-3)/1 var(--font-display); font-variation-settings: "SOFT" 100; letter-spacing: -0.02em; margin: 0 0 var(--space-4); }
+
+footer { padding: var(--space-8) var(--space-6) var(--space-6); background: var(--ink); color: var(--ground); }
+footer .big { font: 560 clamp(64px, 12vw, 200px)/0.9 var(--font-display); font-variation-settings: "SOFT" 100, "opsz" 144; letter-spacing: -0.04em; margin: 0 0 var(--space-5); }
+footer p { margin: 0; }
+
+@media (max-width: 800px) {
+  .split { grid-template-columns: 1fr; }
+  .stage { height: auto; z-index: 2; grid-template-columns: 56px 1fr; padding: var(--space-2) var(--space-3); gap: var(--space-3); place-items: center start; }
+  .stage.second { display: none; }
+  .clock { width: 56px; }
+  .readout { text-align: left; display: flex; align-items: baseline; gap: var(--space-2); }
+  .readout .time { font-size: var(--step-1); }
+  .readout .step { margin: 0; font-size: 16px; }
+  .read { padding: 0 var(--space-3); }
+  .hero { min-height: auto; padding: var(--space-6) 0 var(--space-7); }
+  .name { margin-bottom: var(--space-5); }
+  section { padding: 88px 0; }
+  .steps li { grid-template-columns: 72px 1fr; }
+  .price { grid-template-columns: 1fr; padding: 88px var(--space-3); }
+  .book { grid-template-columns: 1fr; }
+  footer { padding: 88px var(--space-3) var(--space-5); }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }

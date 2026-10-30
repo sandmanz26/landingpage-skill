@@ -1,0 +1,32 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Skeleton</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font:18px/1.55 sans-serif;color:#222;background:#fafafa}
+.page{display:grid;grid-template-columns:45% 55%}
+.stage{position:sticky;top:0;height:100svh;background:#d4d4d4;display:grid;place-items:center;color:#555}
+.read{padding:48px 64px;max-width:640px}
+section{padding:120px 0;border-top:1px dashed #bbb}
+h1{font-size:64px;line-height:1;margin:96px 0 24px}h2{font-size:40px;line-height:1.05;margin:0 0 24px}
+.box{background:#ddd;height:48px;margin:12px 0}
+.wide{grid-column:1/-1;background:#c4c4c4;padding:120px 64px}
+.wide .big{font-size:120px;line-height:1}
+@media(max-width:800px){.page{grid-template-columns:1fr}.stage{height:72px;z-index:2}.read{padding:24px}h1{font-size:44px;margin-top:48px}.wide{padding:72px 24px}.wide .big{font-size:64px}}
+</style></head><body>
+<div class="page">
+ <div class="stage">[ clock 12.00 → 12.30 ]</div>
+ <main class="read">
+  <p>Senyum Dental</p>
+  <h1>Ke dokter gigi di jam istirahat</h1>
+  <p>Periksa dan bersihkan gigi dalam 30 menit, Rp 350.000, di Jl. Riau 12, Bandung.</p>
+  <div class="box" style="width:240px"></div>
+  <section><h2>Setengah jam Anda, menit demi menit</h2><div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div></section>
+ </main>
+ <section class="wide"><div class="big">Rp 350.000</div><p>Pemeriksaan dan pembersihan karang gigi. Tidak ada biaya tambahan tanpa persetujuan Anda.</p></section>
+ <div class="stage" style="background:#e4e4e4">[ clock, done ]</div>
+ <main class="read">
+  <section><h2>Selalu ada dokter yang praktik</h2><div class="box" style="height:160px"></div></section>
+  <section><h2>Pilih jam, kirim satu pesan</h2><div class="box"></div><div class="box"></div><div class="box" style="width:240px"></div></section>
+  <section><h2>Jl. Riau 12, Bandung</h2><div class="box" style="height:120px"></div></section>
+ </main>
+</div>
+<footer class="wide" style="background:#bbb"><div class="big">Senyum Dental</div></footer>
+</body></html>

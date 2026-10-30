@@ -1,0 +1,25 @@
+{
+  "mode": "create",
+  "effort": "standard",
+  "gates": "autopilot",
+  "created": "2026-10-30T05:26:03.448Z",
+  "delivered": "2026-10-30T05:35:24.895Z",
+  "approvals": {
+    "brief": {
+      "by": "claude",
+      "at": "2026-10-30T05:26:11.087Z",
+      "note": "autopilot: brief card complete, no blocking gaps"
+    },
+    "direction": {
+      "by": "claude",
+      "at": "2026-10-30T05:26:38.103Z",
+      "note": "autopilot: recommended A, see direction-gate.md"
+    },
+    "final": {
+      "by": "claude",
+      "at": "2026-10-30T05:35:24.833Z",
+      "note": "autopilot: delivered with 0 FAIL, sample content listed"
+    }
+  },
+  "history": []
+}
