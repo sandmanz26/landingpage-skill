@@ -111,6 +111,19 @@ export function measure({ rules, viewport }) {
   // Effective background behind an element; null when an image or gradient is
   // underneath (contrast cannot be judged from styles alone).
   const backdrop = (el) => {
+    // A picture, video or canvas painted behind the text (not as a CSS background)
+    // makes the real backdrop unknowable from styles.
+    const r = el.getBoundingClientRect();
+    const cx = Math.min(Math.max(r.left + r.width / 2, 0), innerWidth - 1);
+    const cy = Math.min(Math.max(r.top + r.height / 2, 0), innerHeight - 1);
+    if (r.bottom > 0 && r.top < innerHeight) {
+      for (const under of document.elementsFromPoint(cx, cy)) {
+        if (under === el || el.contains(under)) continue;
+        if (['IMG', 'VIDEO', 'CANVAS', 'PICTURE', 'IFRAME'].includes(under.tagName)) return null;
+        const bg = rgba(getComputedStyle(under).backgroundColor);
+        if (bg.a >= 0.99) break;
+      }
+    }
     const layers = [];
     for (let e = el; e && e.nodeType === 1; e = e.parentElement) {
       const cs = getComputedStyle(e);

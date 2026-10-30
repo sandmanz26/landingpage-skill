@@ -1,0 +1,161 @@
+{
+  "juror": "art-director",
+  "kind": "ai",
+  "method": "Judged only from captures (desktop fold + desktop pages, mobile fold + mobile pages) and report.json. Motion was not observed live; anything about animation quality is inferred from frame-to-frame differences and measured counts only.",
+  "refs": {
+    "ref-0004": {
+      "scores": { "clarity": 5, "distinctiveness": 9, "craft": 6 },
+      "reasons": {
+        "clarity": "The fold (desktop-fold.png, mobile-fold.png) is a brand splash: logo, 'SEE LIFE FROM A DIFFERENT ANGLE' and a 3-line blue subline; no nav, no CTA, no word 'therapy' or 'programs' - a stranger gets 'they support people with differences', not what they buy or what to do next.",
+        "distinctiveness": "Rounded condensed display caps, an 'm' logo built from two arch-shaped figures, primitive-shape characters and per-program colour keys form a system no other therapy provider in the set shares.",
+        "craft": "The illustration system is finished and consistent, but execution breaks: 5 contrast pairs fail AA, 6 'how it works' texts never become visible, the fixed nav pill sits on top of headlines (desktop-page-06), the h1 runs to 5 lines, and on mobile the 'About Maxima' button renders as a 190px yellow disc over a collided headline (mobile-page-06)."
+      },
+      "claims": [
+        {
+          "claim": "Colour play",
+          "verdict": "confirmed",
+          "evidence": "report.json: 8 chromatic colours (#fd4401, #2668fd, #fdcb40, #fff2b7, #f3efe0, #00b351, #a7eb98, #ffcccd), 0 gradients. Screens switch full-bleed keys: cream #f3efe0 fold, yellow #fdcb40/#fff2b7 program block (desktop-page-01..05), green #00b351 'Next stop' band (desktop-page-11..13). The play is real, but the discipline is not: white on #fd4401 body text = 3.50:1, #fd4401 on #fdcb40 = 2.30:1, #a7eb98 on #00b351 = 1.98:1 (all FAIL)."
+        },
+        {
+          "claim": "Good typography play",
+          "verdict": "confirmed",
+          "evidence": "Display play is strong: Robuck Rounded condensed caps at 575px/214px desktop (fontSizes 575, 214, 62, 33...), the word 'ANGLE' set off-axis ~8 degrees to enact the line (desktop-fold.png), the letters of 'learn' scattered as giant blue shapes (desktop-page-06). Caveat that limits 'good': h1 'The First Years Matter Most' breaks to 5 lines with a dead gap before 'YEARS' (desktop-page-08), 'GROWTH.' is a one-word orphan line (desktop-page-06), and the fixed nav covers part of that headline."
+        },
+        {
+          "claim": "Graphics are made to fit the goal without modern 3D vectors",
+          "verdict": "confirmed",
+          "evidence": "report.json: shadows 0, gradients 0, backdropBlur 0. Illustrations are flat primitives - arches, circles, triangles, scalloped clouds - with dot eyes (desktop-page-01, -10, -13); the logo arches recur in the characters and the footer wordmark (desktop-page-13). Toy-block motifs match play-based child therapy. Limit: every image reviewed shows young children, while the business also serves 18-65 and 65+; this kids' visual language does not stretch to those audiences."
+        },
+        {
+          "claim": "The scrolling is good",
+          "verdict": "contested",
+          "evidence": "Choreography exists: the program card goes from straight (desktop-page-02) to tilted (desktop-page-03) to rotated ~15 degrees (desktop-page-05) and clouds shift between frames; animatedElements 11. But measured failures: 6 text elements never visible during a full scroll and still hidden under reduced motion (the 'Start with a Referral / Create a Customized Plan' steps - visibly greyed in desktop-page-10/-11), the nav pill overlaps headline type (desktop-page-06), and on mobile the headline collides with logo and Donate (mobile-page-06). Smoothness itself is unverifiable from stills."
+        },
+        {
+          "claim": "Uses other objects to give a modern impression",
+          "verdict": "contested",
+          "evidence": "The objects are there (clouds, sun, butterfly, kite, castle stickers cut into photos - desktop-page-07, -08, -09), but the impression they create is naive/children's-book and playful, not 'modern'. Some objects damage legibility: clouds sit over 'ADAPTIVE SKILLS' letters (desktop-page-11) and a butterfly sticker interrupts 'THE FIRST YEARS' (desktop-page-08)."
+        }
+      ],
+      "take": [
+        "Two rounded families with strict jobs: a condensed rounded display face only for headlines (~12% of text) at extreme scale (575px desktop / 156px mobile, roughly 30:1 against 19px body), and a rounded grotesk for everything else (~88%). Rounding is chosen for warmth toward an anxious care audience - use it as voice, not as a 'modern' signal.",
+        "Colour-key each offer: every program owns a saturated + tint pair as full-bleed section background (e.g. yellow #fdcb40 / #fff2b7, green #00b351 / #a7eb98, pink #f780d4 / #f5cbff) while one constant accent (#fd4401) is reserved for actions and the program card; a 'next stop' band previews the next key to pull the scroll forward.",
+        "Flat primitive illustration kit (arch, circle, triangle, scalloped cloud, 2-dot faces) with zero shadows and zero gradients, whose arch also builds the logo mark - one shape vocabulary from logo to footer. Cut 1-2 shapes into photos as stickers to marry photo and illustration.",
+        "One word-as-image moment per page: rotate or scatter a single headline word (about 8 degrees, or letters spread across 100% width) so the type acts out the message; keep every other headline straight."
+      ],
+      "avoid": [
+        "Light text on saturated fills (white on #fd4401 = 3.50:1 for body, #fd4401 on #fdcb40 = 2.30:1, mint on green = 1.98:1): a playful palette still needs a dark text role (#000 measured exists - use it on the bright fills).",
+        "Scroll-triggered reveals on the conversion path: the 3 'how it works' steps stay invisible (6 elements, also under reduced motion), so the referral process - the thing parents need - may never be read.",
+        "A brand-splash fold with no nav, no CTA and no service noun, plus a floating nav pill that rides over 575px headlines; and stickers/clouds placed on top of headline letters."
+      ],
+      "missed_by_note": [
+        "Both fonts are ROUNDED (ABC Diatype Rounded Plus 88%, Robuck Rounded 12%). Here rounding signals softness/care for families, not modernity - this is the 'rounded = modern' equation again and it does not hold.",
+        "Colour is used as wayfinding: each age program has its own background key, which is the real strength of the colour system, not just 'colour play'.",
+        "Accessibility failures are an art-direction problem: 5 failing contrast pairs, white-on-white 'Donate' state, 20 phone tap targets under 24px.",
+        "The fold does not say what the company does or offer an action; the first readable program name appears only on the second screen.",
+        "Photography looks stock (child in teepee, boy with teddy - desktop-page-07, -09) and is the weakest asset; the flat stickers are doing the work of making it ownable.",
+        "Imagery addresses only young children while programs run to 65+."
+      ]
+    },
+    "ref-0005": {
+      "scores": { "clarity": 4, "distinctiveness": 8, "craft": 5 },
+      "reasons": {
+        "clarity": "A program page for ages 3-18 opens with the identical brand splash as the homepage (desktop-fold.png, 'SEE LIFE FROM A DIFFERENT ANGLE'); 'Adaptive Skills Training / AGES 3-18' appears only on the next screen (desktop-page-01), so the page's own subject is not in the first 5 seconds.",
+        "distinctiveness": "Same ownable system re-keyed to green (#00b351 / #a7eb98 / dark green) with a reading-girl character and a pink-wave balloon - recognisably Maxima, slightly less fresh because it is a template of the homepage.",
+        "craft": "Worse than the homepage: 9 failing contrast pairs and 10 chromatic colours; nav overlays body text (desktop-page-11); a pencil and a book sticker cover letters of 'LEARNING' and 'YEARS' (desktop-page-08, mobile-page-07); on mobile the card is clipped at the right edge and the Donate button loses its fill (mobile-page-05)."
+      },
+      "claims": [
+        {
+          "claim": "Colour play",
+          "verdict": "confirmed",
+          "evidence": "report.json: 10 chromatic colours incl. #00b351, #a7eb98, #f780d4, #f5cbff; green keys the whole page (desktop-page-01, -03, -05) and pink #f780d4 keys the 'Next stop WORKFORCE DEVELOPMENT' band (desktop-page-11). But the green key is the weakest for text: #fdcb40 on #00b351 = 1.82:1, white on #00b351 body = 2.78:1, #00b351 headings on white = 2.78:1 (FAIL)."
+        },
+        {
+          "claim": "Good typography play",
+          "verdict": "contested",
+          "evidence": "Same display scale (575/214/62px) and same font split (87% Diatype Rounded Plus / 13% Robuck Rounded), but the key headline is damaged: h1 'The Learning Years Shape Us' runs to 5 lines, a pencil sticker sits over the 'L' of 'LEARNING' and a book over the 'R/S' of 'YEARS' (desktop-page-08); h3 runs to 7 lines on mobile. Play is present; 'good' is not earned on this page."
+        },
+        {
+          "claim": "Graphics are made to fit the goal without modern 3D vectors",
+          "verdict": "confirmed",
+          "evidence": "shadows 0, gradients 0, backdropBlur 0. Flat characters (girl reading, pencil, books, rainbow arcs over the photo - desktop-page-01, -07, -10); school props fit the 3-18 'learning years' theme better than the homepage's toddler toys."
+        },
+        {
+          "claim": "The scrolling is good",
+          "verdict": "contested",
+          "evidence": "Same rotating-card choreography (desktop-page-03 straight, desktop-page-05 rotated ~15 degrees). Measured: 6 elements never visible on desktop, 4 on mobile, 6 under reduced motion; steps are greyed out in desktop-page-10 and mobile-page-09. Mid-scroll states leak: nav sits over a body line (desktop-page-11), Donate turns white-on-white and the card is cut off on mobile (mobile-page-05)."
+        },
+        {
+          "claim": "Uses other objects to give a modern impression",
+          "verdict": "contested",
+          "evidence": "Clouds, rainbow, elephant and tree stickers layered over photos (desktop-page-07, mobile-page-07) read as playful/children's-book, not modern; on this page they also obscure headline letters (desktop-page-08)."
+        }
+      ],
+      "take": [
+        "Template a family of pages by swapping only the colour key and the hero character: same grid, same card, same type scale (575/214/62/33/19px), new saturated + tint pair per program - consistent but instantly distinguishable.",
+        "Bleed the next section's colour and a giant 'Next stop' title (about 200px caps in the tint colour on the saturated colour) at the end of each program page to sequence related offers.",
+        "Rainbow/arch shapes laid over a documentary-style photo of adult and child (desktop-page-07) - one bold flat shape per photo, behind the subjects' heads, adds warmth without hiding faces."
+      ],
+      "avoid": [
+        "Reusing the generic homepage splash as the fold of a specific offer page - the first screen should name the program and age band.",
+        "Green as a text background with light text (2.78:1 and 1.82:1 measured): mid-luminance greens need black text.",
+        "Stickers overlapping headline letters and a fixed nav pill that floats over running text."
+      ],
+      "missed_by_note": [
+        "Fonts are both rounded (ABC Diatype Rounded Plus 87-88%, Robuck Rounded 12-13%); the rounding is a warmth/child-friendliness choice, not a 'modern' one.",
+        "The page is a recolour of the homepage template - the system's strength is reuse, but it also means the program page has no unique first screen.",
+        "Colour count grows to 10 and contrast failures to 9 pairs here; the green key is the least legible of the program colours.",
+        "The photo on this page (adult and child at a table, desktop-page-07) is the strongest image in either Maxima capture - better than the stock-looking toddler shots."
+      ]
+    },
+    "ref-0006": {
+      "scores": { "clarity": 7, "distinctiveness": 5, "craft": 7 },
+      "reasons": {
+        "clarity": "Fold has the category ('Personal training, reimagined'), a subline, one CTA 'Find Your Coach' and the price '$50 first month, then $199/month' (desktop-fold.png); 'reimagined' is vague and the remote/app nature only becomes visible on mobile (phone in fold) or on screen 2 on desktop.",
+        "distinctiveness": "Neutral palette, light serif display, black product-phone sections and frosted-glass cards are the shared look of premium health/fitness apps; remove the logo and it could be several competitors.",
+        "craft": "Consistently composed and finished, with real photography, but: 57 blurred glass panels and 50+ shadows, 14 font sizes and 11px text on desktop, SF Pro referenced but not loaded, #787878 on #f0f0f0 = 3.87:1, and the carousel crops the first card's headline at the left edge ('d for real life', desktop-page-03)."
+      },
+      "claims": [
+        {
+          "claim": "I like their photography",
+          "verdict": "confirmed",
+          "evidence": "Hero: athlete with kettlebell under a grey veil, red outfit as the only strong colour (desktop-fold.png); coaches in real gym light (desktop-page-03); member testimonials shot as front-camera selfies (desktop-page-06); footer in black-and-white with motion blur (desktop-page-07). One grade across the page. Caveat: the grey veil lowers the subline's contrast in the hero (light grey on mid grey); the tool reads it as #fff on #fff so the exact ratio is unverifiable."
+        },
+        {
+          "claim": "The prototypes [product screens] let the user focus",
+          "verdict": "confirmed",
+          "evidence": "One phone, centred, about 330px wide on a 1440px canvas (about 23%), on pure #000 with a 84-100px headline above and nothing else (desktop-page-02 'Together, we go further', desktop-page-04 'Say hello to your accountability partner'); a single chat bubble breaks the frame as the only secondary element."
+        },
+        {
+          "claim": "Image cards with some icons",
+          "verdict": "confirmed",
+          "evidence": "Large rounded photo cards (radius ~20-30px) carry glass UI chips: day circles with checkmarks, an Apple Watch screen and an exercise list with green check icons (desktop-page-03); member cards with name, tenure and a play button (desktop-page-06). Note these are product-UI fragments more than icons; report.json counts 57 backdrop-blur panels and 52 shadows - the device is overused."
+        },
+        {
+          "claim": "The animation in every section is very good",
+          "verdict": "unverifiable",
+          "evidence": "Stills cannot show motion quality. Measured: 42 transitions, 13 animated elements on desktop; mobile CLS 0.092 (just under the 0.1 limit) and a console error refusing a script chunk for wrong MIME type, so some motion may not have run in the capture."
+        }
+      ],
+      "take": [
+        "Zero-chroma interface: report.json counts 0 chromatic colours - only #000, #fff, #f0f0f0, #2a2c2a and greys - so all colour comes from photography (a red outfit in the hero). CTAs are off-white pills (radius about 16-20px) that read on both photo and black.",
+        "Device isolation for product proof: one phone at ~23% of viewport width on solid black, a 84-100px headline above, one overlapping message bubble - one focal point per section, alternating dark product sections with white proof sections.",
+        "Two-voice type from one superfamily: a light, tightly tracked serif/hybrid display (seasonMix, 68-100px) for headlines against a neutral sans (seasonSans, 80% of text) for UI and body; the elegance comes from light weight at large size, not from colour.",
+        "Price as part of the CTA lock-up: a bold price line plus an 11-13px reassurance line directly under every primary button; and member proof as 320px square selfie-video cards with a bottom scrim, name, tenure and play button."
+      ],
+      "avoid": [
+        "Glass-and-shadow on everything (57 blur panels, 52 shadows): it is the stock 'premium app' look, lowers legibility of white text on blurred photos, and erases distinctiveness.",
+        "Type sprawl: 14 font sizes, 11px running text, and a UI font (SF Pro) named but never loaded - pick about 5 sizes doing the visible work.",
+        "A grey veil over the hero photo that flattens the subline, and a carousel that crops the first card's headline on load (desktop-page-03)."
+      ],
+      "missed_by_note": [
+        "The palette is entirely neutral (0 chromatic colours); the photography is carrying all colour and mood - that is the real art-direction decision behind 'I like their photography'.",
+        "The serif display face (seasonMix) is what makes it feel premium; the note does not mention typography at all.",
+        "Price transparency is designed into every CTA block and is a key trust device for a $199/month service.",
+        "Testimonials deliberately use low-fi selfie footage against polished coach photography - authenticity by contrast.",
+        "Distinctiveness is low: the black-phone + glass-card language is shared across fitness and health apps; liking it is not the same as it being ownable.",
+        "Accessibility/finish issues: #787878 on #f0f0f0 = 3.87:1, 16 phone tap targets under 24px, 32 text elements within 12px of the mobile edge."
+      ]
+    }
+  }
+}

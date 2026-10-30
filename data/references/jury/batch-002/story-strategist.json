@@ -1,0 +1,138 @@
+{
+  "juror": "story-strategist",
+  "kind": "ai",
+  "verification_note": "Judged only from desktop/mobile screenshots and report.json. Not verified: whether the 'See life from a different angle' screen is a one-time preloader or a real first section (the rotated 'ANGLE' in ref-0004 vs straight in ref-0005 suggests an animation captured mid-state); what the Maxima hero carousel arrows reveal; the full content of the future.co benefit carousel (cards are cut off at the screen edge); why future.co desktop and mobile show different copy ('accountability partner' vs 'personal trainer', different top banner): A/B test or capture timing, unknown.",
+  "refs": {
+    "ref-0004": {
+      "message": "Roof: 'We don't treat disabilities. We support differences, from birth to golden age.' (fold). Pillars as the page actually delivers them: (1) start early: 'The First Years Matter Most'; (2) therapy through play, curiosity and parent support (PT/OT cards, 'We bring fun and curiosity to therapy...'); (3) a simple 3-step referral path ('Start with a Referral / Create a Customized Plan / Learn and Grow Together'); (4) a lifelong journey ('Next stop: Adaptive Skills Training'). Blunt verdict: the roof promises every age, but below the fold this home page is the 0-3 Early Intervention page. Visitors aged 18-65 or 65+ get toddler content and carousel arrows.",
+      "storyline": {
+        "structure": "Brand manifesto splash, then a single-program 'chapter' page: program hero (carousel) > program card > service cards > belief statement > emotional photo + urgency headline > empathy + 3-step process > 'Next stop' hand-off to the next age chapter > footer. It is a linear life-journey metaphor, but only one stop of it is told here. There is no proof beat, no cost/eligibility beat and no overview of all four programs.",
+        "beats": [
+          {"section": "Intro splash: 'SEE LIFE FROM A DIFFERENT ANGLE' + 'We don't treat disabilities. We support differences, from birth to golden age.'", "customer_question_it_answers": "Who are you and what do you believe?", "screenshot": "desktop-fold.png"},
+          {"section": "Hero carousel: illustrated playground, 'EARLY INTERVENTION / AGES 0-3' card, prev/next arrows", "customer_question_it_answers": "Is there something for my child's age? (Only answered for 0-3; other ages hidden behind arrows.)", "screenshot": "desktop-page-01.png"},
+          {"section": "Program card: 'Nurturing growth through play, therapy, and parent support.'", "customer_question_it_answers": "What is this program in one line?", "screenshot": "desktop-page-02.png"},
+          {"section": "Tilted service cards: Physical Therapy, Occupational Therapy (definitional copy)", "customer_question_it_answers": "Which services do you offer?", "screenshot": "desktop-page-04.png"},
+          {"section": "Belief statement: 'We bring fun and curiosity to therapy, supporting each child's unique path to growth.' + 'About Maxima' + giant 'learn' letters", "customer_question_it_answers": "What is your approach, and why you?", "screenshot": "desktop-page-06.png"},
+          {"section": "Photo of a toddler playing, with illustration overlay", "customer_question_it_answers": "Will my child be happy there? (emotional reassurance)", "screenshot": "desktop-page-07.png"},
+          {"section": "'THE FIRST YEARS MATTER MOST' + Early Intervention paragraph (milestones, evidence-based, natural learning environments)", "customer_question_it_answers": "Why act now?", "screenshot": "desktop-page-08.png"},
+          {"section": "'We understand this can be a big step...' + 3 steps (Referral / Customized Plan / Learn and Grow Together) + 'Get started'", "customer_question_it_answers": "How do I start, and will it be hard?", "screenshot": "desktop-page-10.png"},
+          {"section": "'Next stop: ADAPTIVE SKILLS TRAINING' + 'Explore Ages 3-18'", "customer_question_it_answers": "What happens when my child outgrows this?", "screenshot": "desktop-page-11.png"},
+          {"section": "Footer with 'Get started', socials, character logo", "customer_question_it_answers": "Where do I go next?", "screenshot": "desktop-page-13.png"}
+        ]
+      },
+      "scores": {"story": 4},
+      "reasons": {
+        "story": "The roof line and the 'different angle' motif are strong and distinctive, and the empathy line plus 3 steps is the right beat for an anxious parent.\nAs a home page it fails: it tells only the 0-3 story, has no proof, makes Donate the primary CTA, and its key process beat fails to render (hidden-content and reduced-motion FAIL on the three steps)."
+      },
+      "claims": [
+        {"claim": "Graphics fit the goal without 3D vectors", "verdict": "partly supported", "evidence": "Flat geometric 2D illustration with smiling characters and toy shapes (desktop-page-01, -10) fits parents of 0-3s and the warm 'support differences' tone. For a brand that says 'from birth to golden age', the same toy style used for adults (barista figure on ref-0005 page-12) risks reading as childish to adult clients and their families. Not tested with users."},
+        {"claim": "Scroll objects that feel modern", "verdict": "supported for brand, harmful for message", "evidence": "Tilted type ('ANGLE' rotated on desktop-fold), tilted service cards (page-04, -05) and rotated 'learn' letters (page-06) put the tagline 'see life from a different angle' into the visuals. The cost: each service gets a full screen for one generic sentence of rotated, hard-to-read text. report.json also flags 6 text elements never visible on scroll and hidden under reduced motion, and these are exactly the 3 process steps."},
+        {"claim": "Photography", "verdict": "underused", "evidence": "Only two stock-looking photos (page-07 toddler, page-09 boy with teddy), both decorated with stickers. No photos of the therapists, real sessions or the team, so photography adds mood but no proof of competence."},
+        {"claim": "Image cards with icons", "verdict": "supported visually, weak in copy", "evidence": "PT/OT cards pair an icon with a definition ('Pediatric physical therapy focuses on improving a child's movement...'). They say what the therapy is, not what changes for the child or family."},
+        {"claim": "Animation per section", "verdict": "contradicted where it matters", "evidence": "The reveal animation on the process steps never fires on desktop or mobile (report.json hidden-content FAIL; page-10 shows step 1 greyed out, page-11 shows step 2's heading missing). The beat that answers 'how do I start' is the one the animation breaks."}
+      ],
+      "take": [
+        "Tagline becomes the visual system: one verbal idea ('a different angle') drives tilted type, tilted cards and rotated letters, so the brand is recognisable without the logo.",
+        "Life-journey chaining: end each program page with 'Next stop: <next age program>' in that program's colour, so the site reads as stations on one lifelong route rather than a menu of services.",
+        "Name the emotion before the process: 'We understand this can be a big step, but we made the process as quick, easy, and stress-free as possible' followed by exactly three verb-led steps. This handles the anxious buyer's main objection right where the CTA is."
+      ],
+      "avoid": [
+        "Home page = one program page. The fold promises 'birth to golden age', but the body covers only Early Intervention 0-3 and the other ages sit behind carousel arrows (desktop-page-01 to -11). A home page needs an age-routing beat right after the roof.",
+        "Donate as the loudest CTA on a service page. The orange 'Donate' pill is the only filled button in the nav on every screen, while 'Get started' appears only at the process block and footer (page-11, -13). Paying or referred families are the business, and the CTA hierarchy points them away from it."
+      ],
+      "missed_by_note": [
+        "No trust or proof beat at all: no therapist credentials, outcomes, testimonials, licences, years in service or numbers. For parents of neurodivergent children, competence proof matters as much as warmth.",
+        "Funding and eligibility are buried in jargon: 'Regional Center', 'IFSP Team' appear only inside the hidden process steps and are never explained. Who pays, and who qualifies, is the parent's first practical question.",
+        "Audience routing: four age segments (0-3, 3-18, 18-65, 65+) with very different buyers (parents, teens, adults, adult children of elders) share one home page that speaks only to parents of toddlers.",
+        "CTA hierarchy (Donate vs Get started) is a business decision the looks-only note does not cover.",
+        "Copy is definitional and generic ('evidence-based supports in natural learning environments'). The visuals are distinctive, but the words could belong to any provider."
+      ]
+    },
+    "ref-0005": {
+      "message": "Roof: same brand line ('We don't treat disabilities. We support differences...'), then 'The Learning Years Shape Us'. Pillars: (1) independence through essential life skills ('Helping kids help themselves through the development of essential life skills'); (2) behaviour support that prevents problems (PBIS card); (3) caregivers coached to continue at home (Parent/Caregiver Education card); (4) the same 3-step referral path; plus a hand-off to 'Workforce Development 18-65'. Verdict: it is the home-page template with words, colours and two cards swapped. The structure works as a series system, but the content does not earn the specific '3-18' promise.",
+      "storyline": {
+        "structure": "Identical skeleton to ref-0004, re-coloured green: splash > program hero carousel > program card > 2 service cards > belief statement + identical 'learn' graphic > photo > big headline + paragraph > identical empathy + 3 steps > 'Next stop' (Workforce Development, pink) > footer. Only nouns, colours, photos and two cards change. Nothing addresses how a 4-year-old's needs differ from a 16-year-old's.",
+        "beats": [
+          {"section": "Same intro splash 'SEE LIFE FROM A DIFFERENT ANGLE'", "customer_question_it_answers": "Who are you? (Repeated on a deep-link page, which delays the answer the visitor came for.)", "screenshot": "desktop-fold.png"},
+          {"section": "Hero carousel: girl reading in park, 'ADAPTIVE SKILLS TRAINING / AGES 3-18', arrows", "customer_question_it_answers": "Am I on the right program for my child's age?", "screenshot": "desktop-page-01.png"},
+          {"section": "Program card: 'Helping kids help themselves through the development of essential life skills.'", "customer_question_it_answers": "What does this program do?", "screenshot": "desktop-page-02.png"},
+          {"section": "Tilted service cards: 'Positive Behavioral Intervention & Support' (prevent challenging behaviours), 'Parent/Caregiver Education'", "customer_question_it_answers": "Can you help with difficult behaviour, and what is my role as a parent?", "screenshot": "desktop-page-04.png"},
+          {"section": "Belief: 'We believe independence grows when children are supported with care, respect, and the freedom to learn at their own pace' + 'About Maxima' + 'learn' letters", "customer_question_it_answers": "What is your philosophy?", "screenshot": "desktop-page-06.png"},
+          {"section": "Photo: adult and girl with Down syndrome face to face, rainbow overlay", "customer_question_it_answers": "Do you see my child as a person? (dignity, connection)", "screenshot": "desktop-page-07.png"},
+          {"section": "'THE LEARNING YEARS SHAPE US' + paragraph (collaboration, empathy, confidence, self-awareness)", "customer_question_it_answers": "Why does this stage matter?", "screenshot": "desktop-page-08.png"},
+          {"section": "Teen photo (boy with tablet)", "customer_question_it_answers": "Is this for teenagers too?", "screenshot": "desktop-page-09.png"},
+          {"section": "Empathy line + 3 steps (Referral via Regional Center Service Coordinator / Plan with IPP team / Learn and Grow Together) + 'Get started'", "customer_question_it_answers": "How do I start?", "screenshot": "desktop-page-10.png"},
+          {"section": "'Next stop: WORKFORCE DEVELOPMENT' + 'Explore Ages 18-65'", "customer_question_it_answers": "What comes after school age?", "screenshot": "desktop-page-11.png"},
+          {"section": "Footer", "customer_question_it_answers": "Where else can I go?", "screenshot": "desktop-page-13.png"}
+        ]
+      },
+      "scores": {"story": 5},
+      "reasons": {
+        "story": "As a program sub-page, the template makes sense: predictable structure, an age-coded colour, PBIS and caregiver cards that touch real parent pains, and a clean hand-off to the next chapter.\nBut it is word-swapped: the same splash, 'learn' graphic and process copy, no proof, no teen-specific beat across a 15-year age span, and the process steps again fail to render."
+      },
+      "claims": [
+        {"claim": "Same template as the home page with different words: does it work?", "verdict": "works as a system, fails as persuasion", "evidence": "Side-by-side, ref-0004 and ref-0005 pages 01-13 match one to one (same splash, carousel, card stack, 'learn' letters, empathy+3 steps, 'Next stop', footer). Predictability helps navigation and the colour per age chapter (yellow 0-3, green 3-18, pink 18-65) is a good wayfinding device. But the identical 'learn' graphic and near-identical process copy (only IFSP→IPP and 'Service Coordinator' change) show that nothing in the story adapts to a 3-18 buyer."},
+        {"claim": "Graphics fit the goal without 3D vectors", "verdict": "partly supported", "evidence": "Flat illustration suits young children. The page's own teen photo (page-09) sits next to toy-style illustration, and the 3-18 range includes teenagers who would reject a childish look. The style does not age with the audience."},
+        {"claim": "Photography", "verdict": "supported, the best moment on the page", "evidence": "page-07 (adult and girl with Down syndrome at eye level) carries the 'support differences, with respect' message better than any headline. It is still stock-like, with no Maxima staff identified."},
+        {"claim": "Colour coding per program", "verdict": "supported for wayfinding, harmful for legibility", "evidence": "Green chapter colour is clear. report.json lists 9 contrast failures, e.g. yellow #fdcb40 on green #00b351 = 1.82:1 and white on green 2.78:1, so the age-coded colour makes some program text hard to read."},
+        {"claim": "Animation per section", "verdict": "contradicted", "evidence": "Process steps hidden on scroll and under reduced motion (report.json FAIL; page-10 shows steps greyed, page-11 shows step 2 heading missing)."}
+      ],
+      "take": [
+        "Chapter colour per audience segment: each age program owns one background colour, carried into the 'Next stop' teaser of the previous page, so visitors know where they are in the lifelong route.",
+        "Pain-named service cards: 'PBIS helps prevent challenging behaviors...' names a problem the parent lives with. This is the one card on either Maxima page that sells an outcome, not a definition; write all cards this way."
+      ],
+      "avoid": [
+        "Word-swapped templating: the identical 'learn' letter graphic (ref-0004 page-06 vs ref-0005 page-06) and near-identical process copy add scroll length without adding meaning for this audience. Reuse the skeleton, but give each chapter at least one beat only that audience needs (for 3-18: school coordination, teen autonomy, what a session looks like).",
+        "Brand splash and carousel on a deep-link page: a parent arriving from search for 'adaptive skills training' first sees the generic brand line, then a carousel with arrows that suggests they are on a browsing page, not on the program page (desktop-fold, desktop-page-01)."
+      ],
+      "missed_by_note": [
+        "Segment specificity: a 3-18 range covers preschoolers and teens. The copy never separates them, and the only teen signal is one photo.",
+        "Proof and practical facts are missing: session format, location ('where your child lives, learns, and plays' is only in the hidden step), duration, cost/funding, eligibility.",
+        "Run-on, jargon-heavy body copy ('...giving them skills needed for them to better direct their own steps', 'IPP team', 'PBIS'). Copy quality is outside a looks-only note.",
+        "The deep-link visitor journey: sub-pages should open on the program answer, not on the brand manifesto."
+      ]
+    },
+    "ref-0006": {
+      "message": "Roof: 'A real personal coach in your pocket, who builds and keeps adapting your training, for $50 then $199/month, risk-free.' Pillars: (1) a plan made for you ('A 360° roadmap that's uniquely yours': schedule, experience, goals, equipment, injury record); (2) accountability from a human ('Say hello to your accountability partner', coach video check-ins); (3) it bends to real life ('Built for real life': moved workouts, hotel-gym HIIT for travel; 'Momentum that lasts'); (4) proof ('Our members get real results': 4.9/5 App Store, 98% more consistent in 4 weeks, video testimonials with tenure).",
+      "storyline": {
+        "structure": "Offer-first product tour with proof and close: hero with price and risk reversal > product screen ('Together, we go further') > CTA repeat > horizontal benefit carousel > coach relationship > personalisation demo > social proof > final 'Find your coach'. Price and refund handle the objection up front. The middle shows the product mostly through UI screens. There is no explicit problem beat and no 'how it works / how you get matched' beat.",
+        "beats": [
+          {"section": "Hero: 'Personal training, reimagined' / 'Dedicated coaching and support to help you train for what's next' / 'Find Your Coach' / '$50 first month, then $199/month. Cancel within 30 days for a full refund.'", "customer_question_it_answers": "What is it, what does it cost, what if I don't like it?", "screenshot": "desktop-fold.png"},
+          {"section": "'Together, we go further' + phone UI: coach note 'Hey Tom, shorter + lighter workouts to fit this week's travels!', '20-min Hotel Gym HIIT', weekly schedule", "customer_question_it_answers": "What does it look like day to day?", "screenshot": "desktop-page-02.png"},
+          {"section": "CTA repeat with price, then carousel cards 'Built for real life' (2 workouts moved Wed→Sat) and 'Momentum that lasts' (watch + completed exercises)", "customer_question_it_answers": "Will it fit my messy schedule, and will I keep going?", "screenshot": "desktop-page-03.png"},
+          {"section": "'Say hello to your accountability partner' + Coach Andrew video check-in + chat bubble 'Nice lift, Alex!...'", "customer_question_it_answers": "Is there a real human who notices me?", "screenshot": "desktop-page-04.png"},
+          {"section": "'A 360° roadmap that's uniquely yours' + member Michelle's profile cards (Schedule, Experience, Goals, Equipment, Injury Record) + 'Get Started'", "customer_question_it_answers": "How personal is 'personal'? Does it account for my injuries and my equipment?", "screenshot": "desktop-page-05.png"},
+          {"section": "'Our members get real results' + 4.9/5 App Store + '98% say they're more consistent within 4 weeks' + 3 video testimonials with tenure + 'Start the 1-Minute Quiz'", "customer_question_it_answers": "Does it work for people like me?", "screenshot": "desktop-page-06.png"},
+          {"section": "'Find your coach' + 'Get Started' + footer + app QR", "customer_question_it_answers": "What do I do now?", "screenshot": "desktop-page-07.png"}
+        ]
+      },
+      "scores": {"story": 7},
+      "reasons": {
+        "story": "Clear offer, price and refund in the hero, concrete UI scenarios (travel week, moved workouts, injury record) and proof with tenure make a tight, persuasive arc.\nHeadlines are generic slogans ('reimagined', 'Together, we go further', 'Momentum that lasts') that leave the visuals to carry all the specificity. Coach credentials and the matching process are missing, and the CTAs switch labels three ways."
+      },
+      "claims": [
+        {"claim": "Product screens that focus the user", "verdict": "strongly supported", "evidence": "page-02: one coach line on the app screen ('shorter + lighter workouts to fit this week's travels') shows personalisation and a human coach in a single image. page-04: video check-in plus chat bubble makes 'accountability' concrete. This page is the clearest proof in the batch that a product screen can carry the message."},
+        {"claim": "Photography", "verdict": "supported", "evidence": "Real-looking, diverse members across ages (page-03 older man smiling, page-05 Michelle), and member selfie-video testimonials (page-06) read as authentic, not stock. Photography carries both aspiration (hero athlete) and relatability (selfies). Tension: the hero model is a fit athlete while the buyer is often a beginner; the 'Michelle' and testimonial beats recover this."},
+        {"claim": "Image cards with icons", "verdict": "supported in a better form", "evidence": "The 360° roadmap uses text cards on a photo (Schedule/Experience/Goals/Equipment/Injury Record) instead of icon cards. Showing the member's intake data proves personalisation better than an icon + generic benefit would."},
+        {"claim": "Scroll objects that feel modern / animation per section", "verdict": "partly supported", "evidence": "Horizontal benefit carousel and in-phone video feel modern, but the carousel cuts off key benefit cards: 'd for real life' clipped at the left on page-03, and mobile text-at-edge flags 'Made by experts' and 'Never train alone'. The coach-expertise pillar is hidden in a scroll strip most people will not swipe. Not verified how many cards exist."},
+        {"claim": "Colour/typography fit the goal", "verdict": "supported for premium positioning", "evidence": "Monochrome palette (0 chromatic colours per report.json), light serif display type and black product sections signal a premium $199/month service, not a cheap fitness app. Cost: light hero text over a light grey photo is low-contrast (report.json contrast FAIL), and 14 font sizes plus 4 typefaces dilute the restraint."}
+      ],
+      "take": [
+        "Price + risk reversal directly under the hero CTA ('$50 first month, then $199/month. Cancel within 30 days for a full refund.'), repeated under the second CTA. It answers the biggest objection before the visitor has to ask.",
+        "Scenario-in-the-screen: write the product UI copy as a micro-story in the customer's life (coach adapts workouts for a travel week; '2 workouts moved Wed↔Sat'), so each screenshot is a testimonial for the feature.",
+        "Show the intake to prove 'personal': display a named member's profile data (schedule, experience, goals, equipment, injury record) as cards over her photo, then close the proof loop with tenure-tagged video testimonials ('13 months with Future')."
+      ],
+      "avoid": [
+        "Generic slogan headlines: 'Personal training, reimagined', 'Together, we go further' and 'Momentum that lasts' could sit on any fitness brand. The specific promise (a human coach who adapts your plan) lives only in screens and subcopy (desktop-fold, page-02, page-03).",
+        "CTA label drift: 'Find Your Coach', 'Get Started' and 'Start the 1-Minute Quiz' (page-01, -05, -06, -07) probably lead into the same funnel, yet read as three different commitments. The lowest-friction one (the quiz) appears only once, late."
+      ],
+      "missed_by_note": [
+        "No explicit problem or 'why remote coach vs gym trainer vs app' beat. The page assumes the visitor already wants a coach.",
+        "No 'how it works / how you get matched' beat, and no coach credentials on the page body. 'Find your coach' is the main CTA, but coaches as experts appear only as one face (Coach Andrew) and in a carousel card likely hidden off-screen.",
+        "Desktop and mobile carry different copy ('accountability partner' vs 'personal trainer'; banner 'New health coaching + DEXA plan in beta.' vs 'NEW: health coaching— nutrition, sleep, and more'). Either an A/B test or inconsistent messaging; not verified.",
+        "Proof framing: '98% say they're more consistent within 4 weeks' is self-reported and carries no source line. It is fine as copy, but the note does not consider claim credibility.",
+        "Price transparency and refund as story devices: the strongest persuasion move on the page has nothing to do with looks."
+      ]
+    }
+  }
+}

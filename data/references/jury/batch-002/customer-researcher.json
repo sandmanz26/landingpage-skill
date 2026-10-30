@@ -1,0 +1,277 @@
+{
+  "juror": "customer-researcher",
+  "kind": "ai",
+  "refs": {
+    "ref-0004": {
+      "customer": "Parent of a young (0-3) neurodivergent or developmentally delayed child, often weeks after a diagnosis or a paediatrician's concern, anxious, comparing providers on a phone at night. Secondary: neurodivergent adults checking the 'birth to golden age' promise, for whom sensory load and readability decide whether they stay.",
+      "five_questions_test": [
+        {
+          "question": "Is this for my child? What ages, and do you work with autism or a delay like ours?",
+          "answered": "partial",
+          "where": "data/references/captures/ref-0004/mobile-page-01.png, mobile-page-02.png ('EARLY INTERVENTION / AGES 0-3'); mobile-fold.png ('We don't treat disabilities. We support differences')",
+          "before_ask": "yes, but only because the parent's ask (Get started) comes so late",
+          "in_their_words": "partial",
+          "note": "The age band is clear. No diagnosis or need is ever named (autism, speech delay, ADHD). 'Early Intervention' is system language a newly diagnosed parent may not know yet."
+        },
+        {
+          "question": "How much does it cost? Is it covered by insurance or free through the state?",
+          "answered": "no",
+          "where": "data/references/captures/ref-0004/desktop-page-10.png, mobile-page-09.png ('Have your Regional Center refer your child')",
+          "before_ask": "n/a",
+          "in_their_words": "no",
+          "note": "Funding is only implied by 'Regional Center'. The page never says 'no cost to families', never mentions insurance or private pay. For this parent that is the top dealbreaker, and it is missing."
+        },
+        {
+          "question": "Do you serve where we live? Do we come to you or do you come to us?",
+          "answered": "partial",
+          "where": "data/references/captures/ref-0004/desktop-page-01.png (header 'Service Areas' link); desktop-page-11.png ('Services take place where your child lives, learns, and plays')",
+          "before_ask": "partial",
+          "in_their_words": "partial",
+          "note": "There are no city or county names on the page. On mobile 'Service Areas' sits only in the hamburger menu and the footer (mobile-page-11.png). The 'where your child lives' sentence is one of the elements report.json lists as never visible on mobile and hidden under reduced motion."
+        },
+        {
+          "question": "How long is the waitlist? How fast can we start?",
+          "answered": "no",
+          "where": "nowhere; mobile-page-08.png/09.png only says 'we made the process as quick, easy, and stress-free as possible'",
+          "before_ask": "n/a",
+          "in_their_words": "no",
+          "note": "It says 'quick' with no number. An anxious parent who is comparing providers reads a missing timeline as a long one."
+        },
+        {
+          "question": "What actually happens in therapy? Who comes, how often, and what do I do as the parent?",
+          "answered": "partial",
+          "where": "data/references/captures/ref-0004/desktop-page-04.png, desktop-page-05.png (Physical / Occupational Therapy cards); desktop-page-10.png/11.png (3 steps: referral, plan, learn together)",
+          "before_ask": "yes",
+          "in_their_words": "partial",
+          "note": "The cards are one-sentence definitions set in rotated text. There is nothing on session length or frequency, therapist credentials, or a typical first visit. 'IFSP Team' is not explained. The 3 steps, the most useful block on the page, are the content report.json flags as never revealed (hidden-content FAIL desktop + mobile, reduced-motion FAIL)."
+        }
+      ],
+      "scores": {
+        "customer": 3
+      },
+      "reasons": {
+        "customer": "Warm, non-clinical tone and real photos of kids lower a parent's anxiety. But cost, waitlist and location are missing, and the header ask is 'Donate', not 'get started'.\nThe 'how to start' steps are the content that never appears: report.json measures them as never visible on scroll and still hidden under reduced motion, which hits the most sensory-sensitive visitors hardest."
+      },
+      "claims": [
+        {
+          "claim": "Colour play fits the goal",
+          "verdict": "partly true, partly false",
+          "evidence": "True for emotion: the saturated, toy-like palette signals 'not a clinic' (desktop-page-01.png). False for reading: report.json counts 8 chromatic colours and 5 contrast failures. Body text white on #fd4401 is 3.50:1 ('Nurturing growth...', the first descriptive sentence, mobile-page-02.png). #a7eb98 on #00b351 is 1.98:1 and #fd4401 on #fdcb40 is 2.30:1. Full-bleed yellow, blue, green and red screen after screen is a high sensory load for ND adults."
+        },
+        {
+          "claim": "Typography fits the goal",
+          "verdict": "false for this audience",
+          "evidence": "The display type goes up to 575px desktop / 156px mobile. The h1 'The First Years Matter Most' runs 5 lines and is split across two screens (desktop-page-08.png 'THE FIRST YEARS', desktop-page-09.png 'MOST'), and the 'learn' wordmark takes a whole screen (desktop-page-06.png). The headings are condensed all-caps, which is slow to read for dyslexic readers, and the body copy inside the program cards is rotated 5-15 degrees (desktop-page-04.png, mobile-page-05.png). The fixed header covers headings: 'WE BRING FUN AND CURIOSITY TO THERAPY' (mobile-page-06.png) and 'We understand this can be a big step' (mobile-page-09.png)."
+        },
+        {
+          "claim": "Graphics fit the goal",
+          "verdict": "partly true",
+          "evidence": "The friendly characters and real photos of children at play (desktop-page-07.png, mobile-page-08.png) show the right setting. But graphics fill most of an 11195px desktop / 9264px mobile page that carries about six short paragraphs. Whole screens hold no information (desktop-page-09.png, desktop-page-10.png)."
+        },
+        {
+          "claim": "Scrolling uses other objects to feel modern",
+          "verdict": "false where it touches the customer",
+          "evidence": "The scroll choreography is exactly what fails. report.json: 6 text elements, the referral/plan/learn steps, are 'never visible during a full scroll' on desktop (5 on mobile) and 'stay hidden when the visitor asks for reduced motion'. The steps render faded grey even in the capture (mobile-page-09.png). A full-screen splash with no navigation also delays the page (mobile-fold.png, desktop-fold.png). 'Modern' here costs the parent the one block that explains how to begin."
+        }
+      ],
+      "take": [
+        "Pair warm, non-clinical illustration with real photos of children in home or play settings, so an anxious parent sees 'play', not 'clinic' (desktop-page-07.png). Keep it, but give it a quarter of the page, not most of it.",
+        "Name the age band as a label on each program ('AGES 0-3' chip, mobile-page-02.png). It is the fastest eligibility cue on the page.",
+        "Give the 'how to start' a numbered 3-step block led by the empathy line 'We understand this can be a big step' (desktop-page-10.png). The pattern is right; it must be visible without any animation."
+      ],
+      "avoid": [
+        "Content revealed only by scroll animation: report.json hidden-content FAIL (6 desktop, 5 mobile) and reduced-motion FAIL. The 'Start with a Referral' steps never become visible.",
+        "Body text on saturated fills below AA: white on #fd4401 3.50:1, #a7eb98 on #00b351 1.98:1 (report.json). Also rotated paragraphs inside cards (desktop-page-04.png).",
+        "'Donate' as the persistent header CTA on a page whose visitor is a parent seeking services (mobile-page-01.png). 'Get started' appears only after the steps and in the footer (desktop-page-11.png, mobile-page-11.png)."
+      ],
+      "missed_by_note": [
+        "No cost/funding statement, no waitlist or timeline, no named service area. These are the parent's top three questions.",
+        "Unexplained system jargon: 'Regional Center', 'IFSP Team', 'Early Intervention'.",
+        "The primary ask is wrong: the header CTA is Donate, and 'Get started' appears near the end.",
+        "The fixed header overlaps headings on mobile (mobile-page-06.png, mobile-page-09.png). 20 footer and menu links are under 24px tall (report.json tap-target FAIL, e.g. 18x34 'FAQ').",
+        "There is no visible FAQ, phone number or 'talk to someone' option for a hesitant parent. Only a mail icon on desktop and footer links.",
+        "A splash screen with no navigation is the first thing the visitor sees (mobile-fold.png)."
+      ]
+    },
+    "ref-0005": {
+      "customer": "Parent of a school-age child or teen (3-18) with autism, ADHD or behaviour challenges. Often already in the Regional Center system, sometimes referred by a school or service coordinator. Wants to know if this program will help with daily-living skills and behaviour at home and school, and how to get it funded and scheduled.",
+      "five_questions_test": [
+        {
+          "question": "Is this right for my kid's age and needs (behaviour, meltdowns, independence)?",
+          "answered": "partial",
+          "where": "data/references/captures/ref-0005/mobile-page-01.png/02.png ('ADAPTIVE SKILLS TRAINING / AGES 3-18', 'Helping kids help themselves through the development of essential life skills'); mobile-page-04.png (PBIS card)",
+          "before_ask": "yes",
+          "in_their_words": "partial",
+          "note": "'Challenging behaviors' finally appears in the PBIS card (mobile-page-04.png), in rotated text. No diagnosis is named, and no concrete skills are listed (dressing, transitions, social, school routines)."
+        },
+        {
+          "question": "How much does it cost? Is it funded by the Regional Center, insurance, or out of pocket?",
+          "answered": "no",
+          "where": "data/references/captures/ref-0005/mobile-page-09.png ('Have your Regional Center Service Coordinator refer your child')",
+          "before_ask": "n/a",
+          "in_their_words": "no",
+          "note": "Funding is implied only through the referral route. A family outside the Regional Center system gets no answer."
+        },
+        {
+          "question": "Do you come to us or do we come to you, and do you cover my area?",
+          "answered": "partial",
+          "where": "data/references/captures/ref-0005/mobile-page-08.png ('Service Areas' button); desktop-page-10/11 ('Services take place where your child lives, learns, and plays')",
+          "before_ask": "partial",
+          "in_their_words": "partial",
+          "note": "This page is better than ref-0004: a 'Service Areas' button sits in the content. It is still a link, not an answer. The 'where your child lives' line is listed in report.json as never visible on mobile."
+        },
+        {
+          "question": "What happens in sessions? Who works with my child, and what is my role?",
+          "answered": "partial",
+          "where": "data/references/captures/ref-0005/mobile-page-04.png/05.png (PBIS, Parent/Caregiver Education cards); mobile-page-07.png (paragraph 'Rooted in collaboration, empathy, and consistency, our adaptive skills trainers...')",
+          "before_ask": "yes",
+          "in_their_words": "partial",
+          "note": "It names 'adaptive skills trainers' and 'family-centered coaching'. There is no frequency, setting detail or example goal. 'IPP team' is not explained."
+        },
+        {
+          "question": "How do I start, and how long until services begin?",
+          "answered": "partial",
+          "where": "data/references/captures/ref-0005/mobile-page-09.png (Start With a Referral / Create a Customized Plan / Learn and Grow Together)",
+          "before_ask": "yes",
+          "in_their_words": "partial",
+          "note": "The steps exist but are faded and, per report.json, never fully visible on scroll (hidden-content FAIL on desktop, tablet and mobile; reduced-motion FAIL). There is no timeline."
+        }
+      ],
+      "scores": {
+        "customer": 3
+      },
+      "reasons": {
+        "customer": "Same template as ref-0004 with the same blind spots on cost, waitlist and named locations, plus the same animation-gated 'how to start' steps. Contrast is worse: 9 failing pairs, and the program description body text is white on #00b351 at 2.78:1.\nOne small gain: a 'Service Areas' button in the content (mobile-page-08.png). Losses: decorative stickers cover the headline letters, and the h3 runs 7 lines on mobile."
+      },
+      "claims": [
+        {
+          "claim": "Colour play fits the goal",
+          "verdict": "partly true, partly false",
+          "evidence": "The green palette shifts the page's mood for the older age band (desktop-page-01.png vs ref-0004), which is a sensible wayfinding cue between programs. report.json: 10 chromatic colours, 9 contrast failures. #fdcb40 on #00b351 is 1.82:1 ('Adaptive Skills Training' h4), white on #00b351 is 2.78:1 for the program description paragraph, and #00b351 on white is 2.78:1 for the 'Positive Behavioral Intervention & Support' heading (mobile-page-04.png). The text that describes the service is the text that fails."
+        },
+        {
+          "claim": "Typography fits the goal",
+          "verdict": "false for this audience",
+          "evidence": "The h1 'The Learning Years Shape Us' runs 5 lines across two screens (desktop-page-08.png 'THE LEARNING YEARS', desktop-page-09.png 'US'). A pencil sticker covers the 'L' of LEARNING and a book sticker covers the 'R' of YEARS (mobile-page-07.png reads 'YE_RS'). The h3 'We believe independence grows...' runs 7 lines on mobile and is overlapped by the fixed header (mobile-page-06.png, desktop-page-06.png). Decoration over letters is a direct readability hit for dyslexic readers."
+        },
+        {
+          "claim": "Graphics fit the goal",
+          "verdict": "partly true",
+          "evidence": "A teen photo (mobile-page-08.png) and the mother-and-child photo (mobile-page-06.png) show the right ages. But the mobile splash still says 'from birth to golden age' on a 3-18 page (mobile-fold.png), and the illustrations take whole screens with no information (desktop-page-09.png)."
+        },
+        {
+          "claim": "Scrolling uses other objects to feel modern",
+          "verdict": "false where it touches the customer",
+          "evidence": "report.json: 6 step elements never visible on desktop, 4 on mobile, 1 on tablet, and all 6 hidden under reduced motion. The rotating program cards put body copy at an angle mid-animation (mobile-page-05.png shows 'Parent/Caregiver Education' clipped and tilted under the header)."
+        }
+      ],
+      "take": [
+        "Shift the colour scheme per program/age band so a parent knows which program page they are on (orange 0-3, green 3-18, pink 18-65: mobile-page-10.png 'Next stop Workforce Development'). It is a strong wayfinding device if the text contrast is fixed.",
+        "Use a 'Next stop' handoff to the adjacent age program (mobile-page-10.png). It answers 'what happens when my child ages out?'",
+        "Put a 'Service Areas' button inside the content near the program description (mobile-page-08.png), and upgrade it to an inline list of counties."
+      ],
+      "avoid": [
+        "Stickers or decorative objects layered over headline letters (mobile-page-07.png 'YE_RS', desktop-page-08.png pencil over 'L').",
+        "Service-description body text on #00b351 green at 2.78:1, and green headings on white at 2.78:1 (report.json contrast FAIL).",
+        "Process steps gated by scroll-reveal that never fires (report.json hidden-content FAIL on 3 viewports + reduced-motion FAIL)."
+      ],
+      "missed_by_note": [
+        "Cost and funding, waitlist and timeline are absent. 'Regional Center Service Coordinator' and 'IPP team' are jargon with no explanation for families outside the system.",
+        "The splash copy is reused from the homepage ('birth to golden age') on an age-specific page (mobile-fold.png).",
+        "Header 'Donate' is again the only persistent CTA. 20 links are under 24px on mobile (report.json).",
+        "The fixed header overlaps headings and card titles on mobile (mobile-page-05.png, mobile-page-06.png, mobile-page-09.png).",
+        "No outcomes or proof for parents: no testimonials, no parent quotes, no credentials anywhere in the captures."
+      ]
+    },
+    "ref-0006": {
+      "customer": "Adult, roughly 28-55, who has bought gym memberships or apps before and quit within weeks. Busy, possibly travelling for work, unsure of their level. Wants accountability from a real human without commuting to a trainer, and wants to know the price before investing emotionally.",
+      "five_questions_test": [
+        {
+          "question": "How much does it cost, and can I get out if it doesn't work?",
+          "answered": "yes",
+          "where": "data/references/captures/ref-0006/mobile-fold.png, desktop-fold.png ('$50 first month, then $199/month. Cancel within 30 days for a full refund.')",
+          "before_ask": "yes, directly under the first CTA",
+          "in_their_words": "yes",
+          "note": "Best-in-batch: price and risk reversal sit in the fold and are repeated under every major CTA (mobile-page-02.png, desktop-page-03.png)."
+        },
+        {
+          "question": "How does a coach actually work through an app? Is it a real person who checks on me?",
+          "answered": "yes",
+          "where": "data/references/captures/ref-0006/mobile-page-03.png/04.png, desktop-page-04.png (Coach Andrew 'New video check-in', 'Nice lift, Alex! You recovered quickly between sets'); desktop-page-02.png (coach note 'shorter + lighter workouts to fit this week's travels')",
+          "before_ask": "yes for the second ask; after the fold CTA",
+          "in_their_words": "yes",
+          "note": "Product screens show the actual mechanism: a video check-in, a message and an adjusted plan. Desktop 'accountability partner' matches this customer's pain exactly. Mobile says only 'personal trainer', a weaker word."
+        },
+        {
+          "question": "Will it fit my schedule, and what if I miss days or travel?",
+          "answered": "partial",
+          "where": "data/references/captures/ref-0006/desktop-page-03.png (card '...for real life / ...adjust days, and adapt your plan at any time without penalty', '2 WORKOUTS MOVED WED<->SAT'); mobile-page-04.png (Michelle 'Schedule: Committed to 4 days/week, Travels for work 1x/month')",
+          "before_ask": "yes",
+          "in_their_words": "partial",
+          "note": "The answer exists but sits in a carousel card cropped off the left edge (desktop-page-03.png; mobile-page-02.png shows only fragments 'ts / ur plan over time'). report.json: 32 text elements within 12px of the mobile edge."
+        },
+        {
+          "question": "Is it for someone at my level? I'm out of shape, not an athlete.",
+          "answered": "partial",
+          "where": "data/references/captures/ref-0006/desktop-page-05.png, mobile-page-05.png (Experience / Injury Record / Goals cards: 'Feel confident in the gym', 'Lower back pain'); desktop-page-06.png (Rohan: 'Before Future, I lacked any sort of plan')",
+          "before_ask": "yes",
+          "in_their_words": "partial",
+          "note": "Never stated outright ('all levels', 'beginners welcome'). The hero shows a very fit athlete (desktop-fold.png), which can say 'not for me' to this customer. Reassurance arrives only in the profile cards and testimonials, 4-5 screens down."
+        },
+        {
+          "question": "Will I actually stick with it this time? Does it work for people like me?",
+          "answered": "yes",
+          "where": "data/references/captures/ref-0006/mobile-page-06.png, desktop-page-06.png ('98% say they're more consistent within 4 weeks', '4.9/5 on the AppStore', video testimonials with tenure '5/13/15 months with Future')",
+          "before_ask": "after the first ask, before the quiz CTA",
+          "in_their_words": "yes",
+          "note": "'More consistent' is the customer's own word for their failure. Tenure labels ('15 months with Future') answer 'do people stay?'. That label is set at 11px (report.json small-text WARN)."
+        }
+      ],
+      "scores": {
+        "customer": 7
+      },
+      "reasons": {
+        "customer": "Price, refund, the remote coaching mechanism and consistency proof are all answered in the customer's language, mostly before or beside each ask. It is a short page (6280px desktop) that respects their time.\nPoints lost: there is no explicit 'any level' reassurance, the intimidating athlete hero, the schedule-flex answer cropped inside carousels, grey body text at 3.87:1, and 11px tenure labels."
+      },
+      "claims": [
+        {
+          "claim": "Photography",
+          "verdict": "true, with one mismatch",
+          "evidence": "The member-testimonial webcam portraits (desktop-page-06.png) and the coach selfie video (desktop-page-04.png) are believable and relatable. The hero athlete (desktop-fold.png, mobile-fold.png) is aspirational but signals 'already fit' to a customer who failed alone. A relatable member in the hero would serve this audience better."
+        },
+        {
+          "claim": "Product screens let the user focus",
+          "verdict": "true",
+          "evidence": "Each phone or watch mock carries one idea: today's plan adjusted for travel (desktop-page-02.png), the coach check-in (desktop-page-04.png), rep tracking (desktop-page-03.png). They answer 'how does remote coaching work?' better than any copy would."
+        },
+        {
+          "claim": "Image cards with icons",
+          "verdict": "partly true",
+          "evidence": "The profile cards (Schedule / Equipment / Experience / Injury Record / Goals, desktop-page-05.png) are the strongest 'is this for me' device on the page. But the feature carousel crops its cards at both edges (desktop-page-03.png, mobile-page-02.png), and the glass cards on photos fail contrast in places. report.json: #787878 on #f0f0f0 is 3.87:1 for 'Your coach checks in, monitors your progress', and #f5f6f6 on white is 1.08:1 for '+ Committed to 4 days/week' on mobile."
+        },
+        {
+          "claim": "Animation in every section is very good",
+          "verdict": "not verifiable from screenshots; no customer harm measured",
+          "evidence": "Static captures cannot show the motion quality. What can be checked: the reduced-motion check passes (no hidden content), CLS is 0.092 (just under 0.1), and the page has 42 transitions. report.json also logs a mobile console error (a script refused for MIME type) and the sfProDisplay font never loads. Motion here does not gate content, which is the right baseline."
+        }
+      ],
+      "take": [
+        "Put the price and the refund promise directly under the hero CTA and repeat them under every later CTA ('$50 first month, then $199/month. Cancel within 30 days for a full refund.', desktop-fold.png, desktop-page-03.png).",
+        "Use a sample member profile as cards (Schedule, Equipment, Experience, Injury, Goals; desktop-page-05.png) so the visitor can map themselves onto it. It answers fit, level and schedule without a FAQ.",
+        "Pair a proof bar in the customer's own pain word ('98% say they're more consistent within 4 weeks') with video testimonials that show tenure (desktop-page-06.png)."
+      ],
+      "avoid": [
+        "Key reassurance ('adjust days... without penalty') inside a horizontal carousel cropped off-screen (desktop-page-03.png, mobile-page-02.png; report.json 32 text elements at the mobile edge).",
+        "Light-grey body copy on near-white panels: #787878 on #f0f0f0 3.87:1, #f5f6f6 on white 1.08:1, and 11px tenure labels (report.json).",
+        "An elite-athlete hero for a customer whose problem is not sticking with exercise (desktop-fold.png). It works against the 'is this for my level' question."
+      ],
+      "missed_by_note": [
+        "The price and refund in the fold do most of the conversion work. The note does not mention them.",
+        "Mobile and desktop copy differ: 'personal trainer' (mobile-page-03.png) vs 'accountability partner' (desktop-page-04.png). The desktop wording fits the customer better.",
+        "There is no explicit beginner/all-levels line and no inline FAQ (only a footer FAQ link, mobile-page-07.png).",
+        "Mobile has 16 controls under 24px, including the announcement-bar link at 307x18 (report.json). The nav 'Coaches' link measures white on white 1.00:1 in some state.",
+        "The CTA vocabulary splits four ways: Find Your Coach / Get Started / Start the 1-Minute Quiz / Find your coach. The visitor cannot tell whether these lead to the same thing."
+      ]
+    }
+  }
+}
