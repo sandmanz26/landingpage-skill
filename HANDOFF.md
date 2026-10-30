@@ -1,7 +1,7 @@
 # Handoff
 
 Read this first if you are a new session, a different model or a different AI tool picking up
-this project. It is kept up to date at every milestone. Last updated: **2026-10-30**.
+this project. It is kept up to date at every milestone. Last updated: **2026-10-30** (after batch-002).
 
 ## 1. Goal
 
@@ -67,6 +67,19 @@ Batch-001 (done 2026-10-30, awaiting the owner):
   research must open its sources; motion can only be judged live, so the motion juror observes the
   page in a browser.
 
+Batch-002 (done 2026-10-30, awaiting the owner): Maxima Therapy (home + 3-18 page, same
+template) and Future. Reconciled in `data/references/batch-002.json` and
+`data/references/batch-002-review.md`. AI weighted vs owner: Maxima 5.0/9 and 4.7/9 (gap > 4),
+Future 6.9/8. Key finding about the owner's taste across six references: their scores follow
+distinctiveness and art direction, not business or customer. Proposed: from the next batch the
+owner gives two scores (visual; would-ship-to-a-client), and six team-taste rules are proposed in
+the review, pending approval (not yet in `team/taste.md`).
+
+Inspector changes from batch-002: suspected contrast failures are re-measured on real screen
+pixels (median of background pixels decides; worst tenth reported), text over photos in sibling
+layers is no longer compared against white, symbol-only text is skipped, scrolling samples in
+half-screen steps. `report-v2.json` beside each capture holds the re-measured report.
+
 ## 4. Decisions and why (do not undo without a reason)
 
 | Decision | Why |
@@ -91,8 +104,8 @@ Batch-001 (done 2026-10-30, awaiting the owner):
 
 ## 6. Next steps, in order
 
-1. Collect the owner's scores and answers for batch-001; record them as a human juror file
-   (`data/references/jury/batch-001/<name>.json`, `kind: human`) and re-run `jury.mjs score --ref`.
+1. Get the owner's answers to the batch-002 questions (still 9 for Maxima? approve the six taste
+   rules? two-score format from now on?). Batch-001 answers are recorded.
 2. Build the reference pipeline (v0.4): read the Excel, capture each URL (layout + motion), run the
    jury, write library entries, derive directions/recipes/taste-rule proposals, version as an epoch.
 3. Mini eval: 5 briefs × (no skill, taste-skill, ours) judged by 2 designers + AI jury.

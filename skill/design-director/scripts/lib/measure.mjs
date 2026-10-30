@@ -116,22 +116,31 @@ export function measure({ rules, viewport }) {
     const r = el.getBoundingClientRect();
     const cx = Math.min(Math.max(r.left + r.width / 2, 0), innerWidth - 1);
     const cy = Math.min(Math.max(r.top + r.height / 2, 0), innerHeight - 1);
-    if (r.bottom > 0 && r.top < innerHeight) {
+    const onScreen = r.bottom > 0 && r.top < innerHeight;
+    if (onScreen) {
       for (const under of document.elementsFromPoint(cx, cy)) {
         if (under === el || el.contains(under)) continue;
         if (['IMG', 'VIDEO', 'CANVAS', 'PICTURE', 'IFRAME'].includes(under.tagName)) return null;
-        const bg = rgba(getComputedStyle(under).backgroundColor);
-        if (bg.a >= 0.99) break;
+        const ucs = getComputedStyle(under);
+        if (ucs.backgroundImage && ucs.backgroundImage !== 'none') return null;
+        if (rgba(ucs.backgroundColor).a >= 0.99) break;
       }
     }
     const layers = [];
+    let opaque = false;
     for (let e = el; e && e.nodeType === 1; e = e.parentElement) {
       const cs = getComputedStyle(e);
       if (cs.backgroundImage && cs.backgroundImage !== 'none') return null;
       const c = rgba(cs.backgroundColor);
       if (c.a > 0) layers.push(c);
-      if (c.a >= 0.99) break;
+      if (c.a >= 0.99) {
+        opaque = true;
+        break;
+      }
     }
+    // Off screen, with no opaque background of its own: whatever is painted
+    // behind it (a photo in a sibling layer, a video) cannot be seen from here.
+    if (!opaque && !onScreen) return null;
     let base = { r: 255, g: 255, b: 255, a: 1 };
     for (let i = layers.length - 1; i >= 0; i--) base = over(layers[i], base);
     return base;
@@ -227,7 +236,8 @@ export function measure({ rules, viewport }) {
 
   // --- text size, contrast
   const seenPairs = new Set();
-  const lowContrast = [];
+  const contrastCandidates = [];
+  let unknownBackdrops = 0;
   for (const el of textEls) {
     const cs = getComputedStyle(el);
     const px = parseFloat(cs.fontSize);
@@ -236,21 +246,31 @@ export function measure({ rules, viewport }) {
     else if (px < 12 && text.length > 20 && !inCode(el)) add('WARN', 'small-text', `Text at ${px}px`, [snippet(el)]);
     const running = ['P', 'LI', 'DD', 'BLOCKQUOTE', 'TD'].includes(el.tagName) && text.length > 80;
     if (running && px < 16) add('WARN', 'body-size', `Running text at ${px}px (16px or more reads better)`, [snippet(el)]);
+    if (!/[\p{L}\p{N}]/u.test(text)) continue; // separators and symbols are not read as text
     const fg = rgba(cs.color);
-    const bg = backdrop(el);
-    if (!bg) continue;
-    const ink = over({ ...fg, a: fg.a * parseFloat(cs.opacity) }, bg);
-    const ratio = contrast(ink, bg);
     const weight = parseInt(cs.fontWeight, 10) || 400;
     const large = px >= 24 || (px >= 18.66 && weight >= 700);
     const need = large ? 3 : 4.5;
+    const bg = backdrop(el);
+    // Suspects are checked again on real screen pixels by inspect.mjs: pairs that
+    // fail on styles, and text whose backdrop cannot be read from styles at all.
+    if (!bg) {
+      if (unknownBackdrops < 30 && text.length > 2) {
+        el.setAttribute('data-dd-lc', String(contrastCandidates.length));
+        contrastCandidates.push({ id: contrastCandidates.length, fg: hex(fg), styleBg: null, need, text: snippet(el) });
+        unknownBackdrops++;
+      }
+      continue;
+    }
+    const ink = over({ ...fg, a: fg.a * parseFloat(cs.opacity) }, bg);
+    const ratio = contrast(ink, bg);
     const key = `${hex(ink)}|${hex(bg)}|${large}`;
     if (ratio < need && !seenPairs.has(key)) {
       seenPairs.add(key);
-      lowContrast.push(`${hex(ink)} on ${hex(bg)} = ${ratio.toFixed(2)}:1 (needs ${need}) ${snippet(el)}`);
+      el.setAttribute('data-dd-lc', String(contrastCandidates.length));
+      contrastCandidates.push({ id: contrastCandidates.length, fg: hex(ink), styleBg: hex(bg), styleRatio: Number(ratio.toFixed(2)), need, text: snippet(el) });
     }
   }
-  if (lowContrast.length) add('FAIL', 'contrast', `${lowContrast.length} text colour pairs below WCAG AA`, lowContrast.slice(0, 5));
 
   // --- headings
   const h1s = [...document.querySelectorAll('h1')].filter(visible);
@@ -390,6 +410,7 @@ export function measure({ rules, viewport }) {
 
   return {
     findings,
+    contrastCandidates,
     inventory: {
       families,
       fontSizes,

@@ -1,0 +1,64 @@
+{
+  "cmd": "score",
+  "jurors": 6,
+  "ai": 5,
+  "humans": 1,
+  "humanWeight": 0.5,
+  "rows": [
+    {
+      "criterion": "clarity",
+      "ai": 4,
+      "human": null,
+      "final": 4,
+      "spread": 0,
+      "flag": false
+    },
+    {
+      "criterion": "distinctiveness",
+      "ai": 8,
+      "human": null,
+      "final": 8,
+      "spread": 0,
+      "flag": false
+    },
+    {
+      "criterion": "craft",
+      "ai": 6,
+      "human": null,
+      "final": 6,
+      "spread": 2,
+      "flag": false
+    },
+    {
+      "criterion": "business",
+      "ai": 3,
+      "human": null,
+      "final": 3,
+      "spread": 0,
+      "flag": false
+    },
+    {
+      "criterion": "customer",
+      "ai": 3,
+      "human": null,
+      "final": 3,
+      "spread": 0,
+      "flag": false
+    },
+    {
+      "criterion": "story",
+      "ai": 5,
+      "human": null,
+      "final": 5,
+      "spread": 0,
+      "flag": false
+    }
+  ],
+  "weighted": 4.7,
+  "humanOverall": 9,
+  "final": 6.8,
+  "gap": 4.4,
+  "vetoes": [
+    "motion-accessibility: Same as ref-0004: remove the idle auto-navigation and add a full reduced-motion path before borrowing any of it. Also do not copy the green-on-green type pairs (1.82-2.78:1)."
+  ]
+}

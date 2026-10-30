@@ -1,0 +1,64 @@
+{
+  "cmd": "score",
+  "jurors": 6,
+  "ai": 5,
+  "humans": 1,
+  "humanWeight": 0.5,
+  "rows": [
+    {
+      "criterion": "clarity",
+      "ai": 5,
+      "human": null,
+      "final": 5,
+      "spread": 0,
+      "flag": false
+    },
+    {
+      "criterion": "distinctiveness",
+      "ai": 9,
+      "human": null,
+      "final": 9,
+      "spread": 0,
+      "flag": false
+    },
+    {
+      "criterion": "craft",
+      "ai": 7,
+      "human": null,
+      "final": 7,
+      "spread": 2,
+      "flag": false
+    },
+    {
+      "criterion": "business",
+      "ai": 3,
+      "human": null,
+      "final": 3,
+      "spread": 0,
+      "flag": false
+    },
+    {
+      "criterion": "customer",
+      "ai": 3,
+      "human": null,
+      "final": 3,
+      "spread": 0,
+      "flag": false
+    },
+    {
+      "criterion": "story",
+      "ai": 4,
+      "human": null,
+      "final": 4,
+      "spread": 0,
+      "flag": false
+    }
+  ],
+  "weighted": 5,
+  "humanOverall": 9,
+  "final": 7,
+  "gap": 4.1,
+  "vetoes": [
+    "motion-accessibility: Do not copy the motion system as-is for any audience, least of all a neurodivergent one. The idle auto-navigation (about 12.5 s, URL change, also under reduced motion) must be removed, and every scrubbed or rotating effect needs a prefers-reduced-motion fallback to static layout. The page currently ignores that setting entirely."
+  ]
+}

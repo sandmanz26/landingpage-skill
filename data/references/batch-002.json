@@ -1,0 +1,216 @@
+{
+  "batch": "batch-002",
+  "received": "2026-10-30",
+  "from": "owner (chat)",
+  "status": "captured, judged by 5 AI jurors and the owner (2026-10-30)",
+  "jury": {
+    "folder": "data/references/jury/batch-002",
+    "jurors": [
+      "art-director",
+      "conversion-strategist",
+      "customer-researcher",
+      "story-strategist",
+      "motion-accessibility"
+    ],
+    "human_votes": 1
+  },
+  "entries": [
+    {
+      "id": "ref-0004",
+      "url": "https://maximatherapy.com/",
+      "site": "maxima",
+      "note": "home page; in practice the ages 0-3 program page behind a brand splash",
+      "business": {
+        "what": "Therapy programs for neurodivergent people of all ages (0-3, 3-18, 18-65, 65+). Main action 'Get started' (referral). Funding not stated; the wording (Regional Center, IFSP, IPP) points to California's state-funded system, so families probably pay nothing (inference).",
+        "type": "health / social services",
+        "action_that_pays": "'Get started' referral; 'Donate' is the loudest button",
+        "source": "captured page",
+        "confidence": "high, funding inferred"
+      },
+      "owner": {
+        "overall": 9
+      },
+      "jury_scores": {
+        "clarity": 5,
+        "distinctiveness": 9,
+        "craft": 7,
+        "business": 3,
+        "customer": 3,
+        "story": 4,
+        "weighted": 5.0
+      },
+      "combined": {
+        "ai_weighted": 5.0,
+        "owner": 9,
+        "final": 7.0,
+        "gap": 4.0
+      },
+      "veto": "Motion ignores prefers-reduced-motion entirely; after ~12.5 s idle the page navigates itself to the next program URL (also under reduced motion); process steps fade out after they pass.",
+      "claims": [
+        {
+          "claim": "Colour play",
+          "verdict": "confirmed for feeling, contested for function",
+          "evidence": "8 flat chromatic colours, 0 gradients; reads as 'not a clinic'. But the strongest orange goes to Donate, and green/yellow/white pairs fail contrast (1.82-2.78:1)."
+        },
+        {
+          "claim": "Good typography play",
+          "verdict": "confirmed for distinctiveness, contested for readability",
+          "evidence": "Robuck Rounded display up to 575px; the h1 'The first years matter most' runs 5 lines split over two screens. Both faces are rounded (ABC Diatype Rounded Plus 88%, Robuck Rounded 12%): rounded reads as warmth here, not as 'modern'."
+        },
+        {
+          "claim": "Graphics fit the goal without modern 3D vectors",
+          "verdict": "confirmed",
+          "evidence": "Flat illustration, 0 shadows, 0 gradients, 0 blur; friendly for parents of young children. It builds warmth, not trust."
+        },
+        {
+          "claim": "Scrolling is good, objects give a modern impression",
+          "verdict": "contested",
+          "evidence": "Well built (GSAP ScrollTrigger, SplitText, Lenis, Lottie; motion craft 8), but the motion is mostly decoration, ignores reduced motion, fades the referral steps out after they pass, and auto-navigates when idle. The objects read as a children's book, not modern."
+        }
+      ],
+      "library_candidates": [
+        "Tagline as the visual system: 'see life from a different angle' becomes tilted type, tilted cards and rotated letters.",
+        "Program pages as chapters of one life journey, each with its own colour and a 'Next stop' hand-off to the next age band.",
+        "Name the visitor's worry in one sentence right before a three-step process.",
+        "Flat, subject-specific illustration (no 3D) for warmth with families.",
+        "Scroll card deck that tilts as it passes (only with a static reduced-motion layout)."
+      ],
+      "avoid": [
+        "Donate louder than the main action; no action on the first screen",
+        "A 575px slogan headline over 5 lines",
+        "Idle auto-navigation to another URL",
+        "Motion with no reduced-motion path, above all for a neurodivergent audience",
+        "Content that fades out after the visitor passes it",
+        "No proof, no cost or eligibility answer for anxious parents"
+      ]
+    },
+    {
+      "id": "ref-0005",
+      "url": "https://maximatherapy.com/programs/3-to-18",
+      "site": "maxima",
+      "note": "same template as the home page, page for page; count Maxima's lessons once",
+      "business": {
+        "what": "Same company, program page for ages 3-18; step 1 names who refers the child (Regional Center Service Coordinator).",
+        "type": "health / social services",
+        "action_that_pays": "'Get started' referral",
+        "source": "captured page",
+        "confidence": "high"
+      },
+      "owner": {
+        "overall": 9
+      },
+      "jury_scores": {
+        "clarity": 4,
+        "distinctiveness": 8,
+        "craft": 6,
+        "business": 3,
+        "customer": 3,
+        "story": 5,
+        "weighted": 4.7
+      },
+      "combined": {
+        "ai_weighted": 4.7,
+        "owner": 9,
+        "final": 6.8,
+        "gap": 4.3
+      },
+      "veto": "As ref-0004, plus green-on-green type pairs at 1.82-2.78:1.",
+      "claims": [
+        {
+          "claim": "Colour play",
+          "verdict": "confirmed as program coding, contested for reading",
+          "evidence": "Green keys the 3-18 chapter (sensible per-program colour), but 9-10 chromatic colours and 9 failing contrast pairs."
+        },
+        {
+          "claim": "Good typography play",
+          "verdict": "contested",
+          "evidence": "Stickers cover letters of the main headline ('YE_RS'); h1 5 lines, h3 7 lines on mobile."
+        },
+        {
+          "claim": "Graphics fit the goal",
+          "verdict": "partly",
+          "evidence": "Flat illustration suits young children; nothing speaks to teenagers, the same 'learn' graphic as the home page."
+        },
+        {
+          "claim": "Scrolling is good",
+          "verdict": "contested",
+          "evidence": "Same mechanism and same defects as ref-0004."
+        }
+      ],
+      "library_candidates": [
+        "Per-program colour chapters inside one template, with a hand-off to the next program."
+      ],
+      "avoid": [
+        "Reusing one page template so literally that the age band changes nothing but the colour"
+      ]
+    },
+    {
+      "id": "ref-0006",
+      "url": "https://future.co/",
+      "site": "future",
+      "business": {
+        "what": "Remote 1-on-1 personal training with a human coach through an app: $50 first month, then $199/month, 30-day full refund.",
+        "type": "consumer subscription (health and fitness)",
+        "action_that_pays": "'Find your coach' / 'Get started' / 'Start the 1-Minute Quiz' (three labels for one action)",
+        "source": "captured page",
+        "confidence": "high"
+      },
+      "owner": {
+        "overall": 8
+      },
+      "jury_scores": {
+        "clarity": 7,
+        "distinctiveness": 5,
+        "craft": 7,
+        "business": 8,
+        "customer": 7,
+        "story": 7,
+        "weighted": 6.9
+      },
+      "combined": {
+        "ai_weighted": 6.9,
+        "owner": 8,
+        "final": 7.5,
+        "gap": 1.1
+      },
+      "veto": "Infinite card marquee with readable text that pauses only on hover (WCAG 2.2.2); the rotating headline word keeps going under reduced motion.",
+      "claims": [
+        {
+          "claim": "Photography",
+          "verdict": "confirmed",
+          "evidence": "Real members across ages, coach selfie video, member video testimonials. The hero athlete may be too fit for someone who failed to train alone."
+        },
+        {
+          "claim": "Product screens let the user focus",
+          "verdict": "confirmed",
+          "evidence": "One phone, centred on black, one headline, one action; the screens show scenes from the customer's life (a travel week, moved workouts, an injury record). The marquee and rotating word compete with it."
+        },
+        {
+          "claim": "Image cards with icons",
+          "verdict": "term corrected",
+          "evidence": "They are photo cards with app-UI overlay chips (day pickers, watch screen), not icon cards."
+        },
+        {
+          "claim": "Animation in every section is very good",
+          "verdict": "contested",
+          "evidence": "Measured live: restrained CSS fades (600/300 ms), header hide (200 ms), phone splash-to-app, video cards growing on scroll. Results, testimonials and footer have no scroll motion; the marquee is the weakest piece."
+        }
+      ],
+      "library_candidates": [
+        "Price and refund right under the hero action ('$50 first month, then $199/month. Cancel within 30 days for a full refund.').",
+        "App screens written as small scenes from the customer's life.",
+        "Show a member's intake data (schedule, equipment, injuries, goals) to prove 'personal'.",
+        "One product screen alone on black under one headline to focus attention.",
+        "Monochrome palette so the photographs carry all colour; a light serif display for a premium voice.",
+        "Header that hides on scroll-down (200 ms) and returns on scroll-up."
+      ],
+      "avoid": [
+        "Three labels for one action",
+        "Infinite marquee with readable text and no pause control",
+        "Unsourced statistics ('98% more consistent')",
+        "Key benefit cards cut off at the carousel edge"
+      ]
+    }
+  ],
+  "owner_taste_signal": "Across six references the owner's scores follow distinctiveness and visual craft, not business or customer: the two pages the AI jury ranks lowest (Maxima, 4.7-5.0) get the owner's highest score (9), the page the jury ranks highest (Future, 6.9) gets 8. That is a real taste signal for art direction; it is not a judgement of whether a page works for its business."
+}

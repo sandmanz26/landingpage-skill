@@ -14,6 +14,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { launch, resolveTarget, parseArgs } from './lib/browser.mjs';
 import { measure, hiddenText, markSeen } from './lib/measure.mjs';
+import { decodePng } from './lib/png.mjs';
 
 const args = parseArgs(process.argv.slice(2));
 const target = args._[0];
@@ -106,11 +107,13 @@ async function scrollThrough(page, vh) {
   };
   await sample();
   await page.mouse.move(200, 200);
-  for (let i = 0; i < 60; i++) {
+  // Half-screen steps: text that fades in only while it sits in one part of the
+  // screen is caught before it fades out again.
+  for (let i = 0; i < 140; i++) {
     const done = await page.evaluate(() => innerHeight + scrollY >= document.documentElement.scrollHeight - 2);
     if (done) break;
-    await page.mouse.wheel(0, Math.round(vh * 0.8));
-    await page.waitForTimeout(260);
+    await page.mouse.wheel(0, Math.round(vh * 0.45));
+    await page.waitForTimeout(220);
     await sample();
   }
   await page.waitForTimeout(600);
@@ -118,6 +121,49 @@ async function scrollThrough(page, vh) {
   await page.evaluate(() => window.scrollTo(0, 0));
   await page.waitForTimeout(500);
   return moved.size;
+}
+
+// Re-measures suspected contrast failures on what the screen really shows: the
+// text colour against the pixels around the text, so photos, videos and layered
+// backgrounds count. Returns { failures, unverified }.
+async function verifyContrast(page, candidates) {
+  const failures = [];
+  let unverified = 0;
+  const lum = (r, g, b) => {
+    const f = (x) => ((x /= 255) <= 0.03928 ? x / 12.92 : Math.pow((x + 0.055) / 1.055, 2.4));
+    return 0.2126 * f(r) + 0.7152 * f(g) + 0.0722 * f(b);
+  };
+  const ratioOf = (l1, l2) => (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);
+  for (const c of candidates) {
+    const loc = page.locator(`[data-dd-lc="${c.id}"]`).first();
+    try {
+      await loc.scrollIntoViewIfNeeded({ timeout: 2000 });
+      await page.waitForTimeout(150);
+      const box = await loc.boundingBox();
+      if (!box || box.width < 2 || box.height < 2) throw new Error('no box');
+      const png = decodePng(await page.screenshot({ clip: { x: Math.max(0, box.x), y: Math.max(0, box.y), width: Math.min(box.width, 1200), height: Math.min(box.height, 400) } }));
+      const fr = parseInt(c.fg.slice(1, 3), 16), fgG = parseInt(c.fg.slice(3, 5), 16), fb = parseInt(c.fg.slice(5, 7), 16);
+      const fl = lum(fr, fgG, fb);
+      // Background = pixels clearly different from the text colour (anti-aliased
+      // glyph edges mostly drop out). Decide on the median; report the worst tenth
+      // too, which matters for text over photographs.
+      const ratios = [];
+      for (let i = 0; i < png.data.length; i += png.channels * 2) {
+        const r = png.data[i], g = png.data[i + 1], b = png.data[i + 2];
+        if (Math.abs(r - fr) + Math.abs(g - fgG) + Math.abs(b - fb) < 90) continue;
+        ratios.push(ratioOf(fl, lum(r, g, b)));
+      }
+      if (ratios.length < 20) throw new Error('no background pixels');
+      ratios.sort((a, b) => a - b);
+      const median = ratios[Math.floor(ratios.length * 0.5)];
+      const worst = ratios[Math.floor(ratios.length * 0.1)];
+      if (median < c.need) failures.push(`${c.fg} on screen = ${median.toFixed(2)}:1 median, ${worst.toFixed(2)}:1 in the worst tenth (needs ${c.need}) ${c.text}`);
+    } catch {
+      unverified++;
+      if (c.styleBg) failures.push(`${c.fg} on ${c.styleBg} = ${c.styleRatio}:1 (needs ${c.need}, not re-checked on screen) ${c.text}`);
+    }
+  }
+  return { failures, unverified };
 }
 
 function add(list, severity, rule, message, sample) {
@@ -132,6 +178,8 @@ for (const vp of VIEWPORTS) {
   shots.push(fold);
   const animated = await scrollThrough(page, vp.height);
   const m = await page.evaluate(measure, { rules, viewport: vp.name });
+  const contrastCheck = await verifyContrast(page, m.contrastCandidates || []);
+  await page.evaluate(() => window.scrollTo(0, 0));
   const hidden = await page.evaluate(hiddenText);
   const cls = await page.evaluate(() => window.__cls || 0);
 
@@ -150,6 +198,10 @@ for (const vp of VIEWPORTS) {
   await page.evaluate(() => window.scrollTo(0, 0));
 
   const findings = m.findings;
+  if (contrastCheck.failures.length)
+    add(findings, 'FAIL', 'contrast', `${contrastCheck.failures.length} text elements below WCAG AA (measured on screen pixels)`, contrastCheck.failures.slice(0, 5));
+  if (contrastCheck.unverified)
+    add(findings, 'INFO', 'contrast-unverified', `${contrastCheck.unverified} suspected contrast problems could not be re-measured on screen`);
   if (hidden.count > 0)
     add(findings, 'FAIL', 'hidden-content', `${hidden.count} text elements were never visible during a full scroll (a reveal that never fires?)`, hidden.samples);
   if (cls > 0.25) add(findings, 'FAIL', 'layout-shift', `Layout shift ${cls.toFixed(3)} (over 0.25)`);

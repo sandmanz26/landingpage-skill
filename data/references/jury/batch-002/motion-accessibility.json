@@ -1,0 +1,180 @@
+{
+ "juror": "motion-accessibility",
+ "kind": "ai",
+ "method": "Live Playwright Chromium 1440x900 on 2026-10-30, normal and reducedMotion:'reduce'; frames every ~150 ms during load plus every 400 px wheel step (+100 ms/+600 ms); document.getAnimations() and a MutationObserver on style/class at each step; extra runs for timing, keyboard scrolling, focus, anchor jumps and the marquee under hover. Frames and scripts: /tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/motion2. Not verified: real phones, screen readers, real network timing (the sandbox goes through a proxy, so load times are upper-bound), aria-live on rotating text.",
+ "refs": {
+  "ref-0004": {
+   "motion": "Load: about 3.8 s of blank beige (measured through a proxy, so treat as an upper bound), then a Lottie/SplitText curtain where 'SEE LIFE FROM A DIFFERENT ANGLE' tumbles in word by word, each word rotated and wobbling (~4.7-5.5 s), then the hero. Hero: illustrated program carousel (left/right buttons, Draggable). After about 12.5 s idle at the top the page navigates itself to /programs/3-to-18 (URL and h1 change; measured three times, including under reducedMotion). Only a scroll cancels it. Scroll: everything is GSAP ScrollTrigger scrubbed through Lenis smoothing; getAnimations() is almost empty because it is all inline-style tweens. The sampled top-12 mutations came to about 56k style writes over 27 wheel steps. Sequence: (1) the hero sticky panel parallaxes up (translate3d 0 to -28%) and its arrows fly out (translateY -100%, opacity 0); (2) a pinned card deck: 5 service cards (Child Development, Speech, Physical, Occupational...) stacked, the top card rotates from about -4 deg to -27 deg and translates off upward while the next is revealed, about 400 px of scroll per card. Function: story/orientation, one service at a time. (3) A tagline section, then the giant blue letters 'learn' dropping in letter by letter (SplitText, transform-origin 50% 100%, rotate/translate), a decorative story beat. (4) A photo with a clip-path polygon wipe (0%/14%/82%/85% to 0/0/89/100) plus floating illustrated stickers (castle, worm, bus) on parallax translate3d. Function: atmosphere/continuity into the h1 'THE FIRST YEARS MATTER MOST', which sits at about 6,450 px, not in the hero. (5) Decorative stickers spin in (rotate 179 deg, scale 0 to 1). CTA buttons scale between 0.66 and 1.10 with scroll position; this is decoration that resembles feedback. (6) A 3-step 'how it works' list: each description's opacity is scrubbed 0 to 1 and the icon pops scale 0 to 1.12 to 1 as it reaches the middle, then fades back to 0 once passed. Function: orientation. (7) 'Next stop' footer teaser: a giant light-green title over green that moves to the next program. Ambient: CSS clouds translateX 20 s/25 s/35 s linear infinite everywhere; function: atmosphere. Small CSS transitions: fill 0.5 s cubic-bezier(.4,0,.2,1) on icons, 0.15 s colour on links. Libraries: GSAP 3 bundled as ES modules (ScrollTrigger, SplitText, Draggable chunks in the HTML preload list; GSAP's inline-style signature 'translate: none; rotate: none; scale: none; transform: ...' on every animated node), Lenis smooth scroll (html.lenis / lenis-smooth classes), lottie-web for the intro curtain and decorative loops, React Router/Remix shell. window.gsap is not global, so a global-variable check alone misses it.",
+   "accessibility": "Most serious, in order. (1) Automatic navigation: an idle visitor (a slow reader, a screen-reader user, someone reading the hero) is taken to a different URL after about 12.5 s with no pause, stop or warning. It is not suppressed by prefers-reduced-motion and only scrolling cancels it. This fails WCAG 2.2.2 (Pause, Stop, Hide) in spirit and is an unexpected change of context (3.2.x). For a neurodivergent audience it is the worst thing on the page. (2) There is no reduced-motion handling at all. The only prefers-reduced-motion rule in the CSS is for the cookie modal, and the three main bundles contain no 'prefers-reduced-motion' or gsap.matchMedia. Under reduce the page made more sampled style writes (78.5k vs 56k), and the rm frames show the card deck still rotating and Lenis still smoothing. The infinite clouds keep running. (3) Body text is set on cards that rotate up to about 27 deg while moving, so it has to be read in motion. (4) Real contrast failures (measured by the capture): white body text on orange #fd4401 3.50:1, orange #fd4401 h4 on yellow #fdcb40 2.30:1, white 'Next stop' on #00b351 2.78:1, light-green #a7eb98 display title on #00b351 1.98:1 (fails even the large-text 3:1). (5) Heavy sensory load overall: 8 chromatic colours, constant parallax and stickers, scale-pulsing buttons. Checked and fine: keyboard paging works with Lenis (PageDown 0 to 787, Space to 1574), and links show the default focus ring (auto 1px). The hero arrow buttons become visibility:hidden after scroll. Not verified: screen reader announcement of the carousel or route change, and mobile touch behaviour.",
+   "scores": {
+    "craft": 8
+   },
+   "reasons": {
+    "craft": "Technically excellent, cohesive GSAP choreography: scrubbed card deck, SplitText kinetic type, clip-path wipes and parallax stickers all come from one illustration language and run smoothly with Lenis.\nIt loses points because most motion is decoration, the reveal-then-fade steps undo themselves, and craft without a reduced-motion path is incomplete engineering."
+   },
+   "veto": "Do not copy the motion system as-is for any audience, least of all a neurodivergent one. The idle auto-navigation (about 12.5 s, URL change, also under reduced motion) must be removed, and every scrubbed or rotating effect needs a prefers-reduced-motion fallback to static layout. The page currently ignores that setting entirely.",
+   "claims": [
+    {
+     "claim": "The scrolling is good: how it uses other objects to give a modern impression.",
+     "verdict": "Partly true on craft, wrong as a recommendation for this audience.",
+     "evidence": "The scroll does use secondary objects well: illustrated stickers on parallax, a card deck that rotates up to -27 deg, giant SplitText letters and a clip-path photo wipe. It is smooth, scrubbed and coherent. But the function is mostly atmosphere and decoration, not orientation. It ignores prefers-reduced-motion completely (more sampled style writes under reduce: 78.5k vs 56k), puts body text on rotating cards, and sits on a page that navigates away by itself after about 12.5 s. 'Modern' here costs sensory load that a therapy site for neurodivergent families should not impose by default."
+    }
+   ],
+   "take": [
+    {
+     "name": "Scrubbed service card deck",
+     "trigger": "Section pinned while scrolling through it (ScrollTrigger scrub, about 400 px of scroll per card)",
+     "property": "Top card translateY to -120% plus rotate 0 to -6 deg max (not -27), next card already in place underneath",
+     "duration": "Scroll-linked, about 400 px per card; for a time-based fallback 450 ms",
+     "easing": "Linear scrub with light smoothing (scrub 0.5 or Lenis lerp about 0.1); time-based fallback cubic-bezier(0.22,1,0.36,1)",
+     "stagger": "One card per scroll segment",
+     "function": "Story/orientation: one service at a time, in order",
+     "guardrails": "Keep the card being read at rotate(0). Under reduced motion, render a static vertical list."
+    },
+    {
+     "name": "Step list progressive highlight",
+     "trigger": "Each step crossing the viewport centre",
+     "property": "Description opacity 0.35 to 1, icon scale 0.9 to 1.05 to 1",
+     "duration": "About 300 ms time-based (better than scrubbed)",
+     "easing": "cubic-bezier(0.22,1,0.36,1)",
+     "stagger": "Driven by scroll position, one step at a time",
+     "function": "Orientation/feedback (where am I in the process)",
+     "guardrails": "Start text at legible opacity, not 0, and never fade completed steps back out. Maxima's go back to opacity 0 about 1,400 px later."
+    },
+    {
+     "name": "Ambient drifting clouds",
+     "trigger": "Always on",
+     "property": "translateX across the section",
+     "duration": "20-35 s per pass",
+     "easing": "linear",
+     "stagger": "Different durations per layer (20/25/35 s) to avoid sync",
+     "function": "Atmosphere",
+     "guardrails": "At most 2 layers, low contrast, paused under prefers-reduced-motion and when off-screen."
+    }
+   ],
+   "avoid": [
+    "Idle auto-advance that changes the URL and page content (about 12.5 s, no pause control, ignores reduced motion).",
+    "Body text on cards that rotate up to about 27 deg while the visitor reads; and buttons that scale 0.66 to 1.10 with scroll, which looks like feedback but is not.",
+    "A 4-7 s preloader/curtain (blank beige about 3.8 s, then a SplitText title) before any content, and a scroll-scrubbed reveal that fades content back to opacity 0 after it is passed."
+   ],
+   "false_positives": [
+    "hidden-content 'never visible during a full scroll' (desktop/mobile) is FALSE as stated. The 3 step descriptions are scrubbed by scroll position: frames during wheel scrolling show them at full opacity (mutations opacity 0.17 then 0.98 then 1), and an anchor jump (scrollIntoView) gives opacity 1. The capture's scroll method missed the scrub window. What is real but smaller: they fade back to opacity 0 after being passed.",
+    "reduced-motion 'text stays hidden' is likewise FALSE as stated: the reduce run shows all three steps visible at the right scroll position. The real reduced-motion failure is the opposite: nothing is reduced.",
+    "contrast '#ffffff on #ffffff Donate' is FALSE: Donate is white text on an orange #fd4401 pill; the tool picked the wrong background. (That pair, white on #fd4401, is about 3.5:1, which is still under 4.5:1 for small text.)",
+    "headline-lines 'h1 runs to 5 lines' is not a defect: a deliberate one-word-per-line stacked display style.",
+    "text-at-edge on mobile for 'Early Intervention / Adaptive Skills Training / Workforce Development' is probably carousel slide labels sitting off-canvas by design (not verified on a phone).",
+    "tap-target 18 px-high footer links: the height is real, but they may pass WCAG 2.5.8 through the spacing exception; not verified."
+   ]
+  },
+  "ref-0005": {
+   "motion": "Same template and motion system as ref-0004, re-skinned in greens: blank load then the Lottie/SplitText curtain; an illustrated hero with a program carousel; idle auto-navigation to /programs/18-to-65 after about 12.5 s (measured: loaded at 1.25 s, changed at 13.75 s; scrolling cancels it). Scroll: GSAP ScrollTrigger scrubbed through Lenis. Hero sticky parallax; a pinned card deck (Adaptive Skills Training, Evidence Based Practices, Positive Behavioral Intervention & Support, Parent/Caregiver Education) rotating and flying off, about 400 px per card (story/orientation); a green tagline; 'learn' SplitText letter drop; photo clip-path wipe with parallax stickers into the h1 'THE LEARNING YEARS SHAPE US' (atmosphere/continuity); stickers spinning in; the scrubbed 3-step list (opacity 0 to 1, icon scale pop, then back to 0); 'Next stop: WORKFORCE DEVELOPMENT' in pink on pink. CSS clouds 25 s and 35 s linear infinite. Libraries are the same as ref-0004: GSAP (ScrollTrigger, SplitText, Draggable) as ES modules, Lenis, lottie-web.",
+   "accessibility": "Everything in ref-0004 applies: auto-navigation after about 12.5 s idle with no pause; no prefers-reduced-motion handling (the reduce run still rotates cards and smooth-scrolls, and the clouds keep looping); body text on rotating cards. Contrast is worse than on the home page (capture-measured): white body paragraph on #00b351 2.78:1 (needs 4.5), yellow #fdcb40 h4 'Adaptive Skills Training' on #00b351 1.82:1, #00b351 h4 on white 2.78:1, and the green tagline 'We believe independence grows...' #00b351 on #a7eb98 1.98:1. A long display paragraph at 1.98:1 is effectively unreadable for low-vision visitors. 10 chromatic colours plus constant motion add sensory load. Keyboard paging and the default focus ring work, as on the home page (same template; tested on ref-0004).",
+   "scores": {
+    "craft": 7
+   },
+   "reasons": {
+    "craft": "The same well-built GSAP/Lenis choreography as the home page, applied consistently as a template.\nOne point lower: the green-on-green palette makes the moving cards and headlines harder to parse, and the motion adds nothing specific to this program."
+   },
+   "veto": "Same as ref-0004: remove the idle auto-navigation and add a full reduced-motion path before borrowing any of it. Also do not copy the green-on-green type pairs (1.82-2.78:1).",
+   "claims": [
+    {
+     "claim": "The scrolling is good: how it uses other objects to give a modern impression (Maxima).",
+     "verdict": "Partly true on craft; not acceptable as-is.",
+     "evidence": "Identical mechanism to the home page: scrubbed rotating card deck, parallax stickers and kinetic type. In the frames it is smooth and coherent, but there is no reduced-motion support, and the page navigated itself to /programs/18-to-65 at 13.75 s in a measured run. Several of the moving text pairs measure 1.82-2.78:1."
+    }
+   ],
+   "take": [
+    {
+     "name": "Clip-path photo reveal into a section title",
+     "trigger": "Photo entering the viewport, scrubbed over about 600-800 px",
+     "property": "clip-path polygon corners from a skewed band (about 0/14/82/85%) to the full rectangle, plus stickers at a different parallax rate",
+     "duration": "Scroll-linked; time-based fallback 600 ms",
+     "easing": "Linear scrub; fallback cubic-bezier(0.22,1,0.36,1)",
+     "stagger": "Stickers offset 50-100 ms or at different parallax speeds",
+     "function": "Continuity (bridges the illustration world into the photo and the h1)",
+     "guardrails": "Under reduced motion, show the final rectangle with no parallax."
+    }
+   ],
+   "avoid": [
+    "Self-advancing route change (3-to-18 to 18-to-65 at about 12.5 s idle).",
+    "Moving or rotating cards carrying white or yellow text on #00b351 (1.82-2.78:1).",
+    "Fading completed steps back to opacity 0 after the visitor scrolls past them."
+   ],
+   "false_positives": [
+    "hidden-content 'never visible during a full scroll' (desktop, tablet, mobile) is FALSE as stated. It is the same scrubbed 3-step list, and the steps are visible in the wheel-scroll frames (e.g. step frames showing 'Start With a Referral / Create a Customized Plan / Learn and Grow Together' at full opacity). Real but smaller: they fade back out once passed.",
+    "reduced-motion 'text stays hidden' is FALSE as stated: the steps reveal by scroll position under reduce as well. The real failure is that no motion is reduced.",
+    "contrast '#ffffff on #ffffff Donate' is FALSE: white on the orange pill (3.5:1, still low for small text).",
+    "headline-lines h1/h2/h3 4-7 lines: the h1 is a deliberate stacked display. The h3 tagline at 7 lines on tablet/mobile is a genuine readability note, not a defect of the tool.",
+    "tap-target and text-at-edge on mobile: same caveats as ref-0004 (spacing exception and off-canvas carousel labels; not verified)."
+   ]
+  },
+  "ref-0006": {
+   "motion": "Restrained, CSS/Tailwind and Swiper based (Next.js/Turbopack; no GSAP, Lenis, Framer Motion or Lottie found). Load: the hero goes from a dark placeholder to the photo/video at about 1.4 s; images fade in with keyframes fadeIn 600 ms ease-in, text 300 ms (function: continuity, avoiding a pop-in). Fixed nav: hides on scroll-down (translateY(-150px), top transition 200 ms cubic-bezier(0,0,0.2,1)); function: focus/space. 'Together, we go further' shows a centred phone mockup on black that swaps from a 'Customized Programming' splash to the real app UI when it comes into view; function: story (product reveal). Below it, a card strip ('Made by experts', 'Never train alone', 'Designed for real life'...) is an infinite marquee: Swiper wrapper transitions 3000 ms linear, about 75 px/s, pauses on hover only; function: decoration/atmosphere. 'Say hello to your ___': a rotating headline word cycling 'motivation buddy / fitness coach / personal trainer / accountability partner' about every 2 s with 300 ms fadeIn/fadeout; function: decoration/messaging. The coach video card and the 360-degree roadmap card grow on scroll (scale about 0.88 to 0.97-1 and border-radius about 40 px to 11 px, inline style per scroll frame); function: continuity/focus. The roadmap, results and footer sections are otherwise static apart from hover transitions (opacity 150-300 ms, colour 200-300 ms, a 60 px play button scale 200 ms). Under reduced motion the marquee stops (a CSS rule sets the swiper transition to 0 s), the scroll-scale effects are not applied (26 vs 1,201 sampled style writes), the hero video is not shown and smooth scroll is off. Only the rotating word still cycles.",
+   "accessibility": "Most serious: (1) The infinite text marquee runs continuously, longer than 5 s, with no pause/stop control. It pauses on mouse hover only, which does not help keyboard or touch users, and that fails WCAG 2.2.2 (it does stop under prefers-reduced-motion, which mitigates but does not satisfy 2.2.2). (2) The rotating headline word changes about every 2 s and keeps cycling under reduced motion. Whether it is announced (aria-live) was not verified. (3) Real contrast issues: marquee card body #787878 on #f0f0f0 3.87:1; testimonial meta #767778 on white 4.49:1 (just under), at 11 px; footer legal text at 11 px. (4) Mobile: 16 controls under 24 px high, including an 18 px-high announcement-banner link and a logo link. (5) White hero text sits on a light lilac/peach photo gradient: visually weak in the frames, but not measured (the tool could not). Focus: default auto outline, 1-2 px, grey rgb(146,146,146) on 'Coaches' over the photo, which is weak. Good: reduced motion is mostly honoured, there are no scroll-jacking libraries, and the testimonial videos have labelled play buttons ('Play Laura's testimonial video').",
+   "scores": {
+    "craft": 7
+   },
+   "reasons": {
+    "craft": "Clean, purposeful, cheap motion: short Tailwind-standard easings, a scroll-linked card grow that guides focus, a product reveal in the phone, and a real reduced-motion branch.\nIt is not more than 7 because there is little of it, the marquee and rotating word are generic decoration, and the marquee has no pause control."
+   },
+   "veto": "Do not copy the infinite card marquee as-is: it carries readable text, moves continuously and has only hover-pause. It needs a visible pause control (or user-driven scrolling) plus the existing reduced-motion stop.",
+   "claims": [
+    {
+     "claim": "The animation in every section is very good.",
+     "verdict": "False as stated; the motion is good but sparse.",
+     "evidence": "Measured: hero fade-in (600/300 ms), nav hide (200 ms), phone splash-to-UI swap, card marquee (3000 ms linear, about 75 px/s), rotating headline word (about 2 s cycle) and scroll-scaled video and roadmap cards (scale about 0.88 to 1). The results/testimonial section and the footer have no entrance or scroll motion, only hover transitions. What is there is tasteful and honours reduced motion (except the word rotator), but it is not 'every section', and the marquee is the weakest piece, not a highlight."
+    },
+    {
+     "claim": "Product screens let the user focus.",
+     "verdict": "Mostly true.",
+     "evidence": "The phone mockup is centred, alone on full black, with one headline and one CTA; the coach video in the phone grows on scroll (scale and radius change) to pull attention. Caveats: the auto-scrolling card marquee directly below and the rotating headline word compete for attention, and the in-phone UI uses an unloaded font (sfProDisplay fallback) at tiny sizes (11 px)."
+    }
+   ],
+   "take": [
+    {
+     "name": "Scroll-linked card grow (zoom to focus)",
+     "trigger": "Card entering the viewport until it reaches about the centre",
+     "property": "transform scale 0.88 to 1, border-radius about 40 px to 12 px",
+     "duration": "Scroll-linked over about 1 viewport; for a time-based version 500 ms",
+     "easing": "Linear scrub (or cubic-bezier(0.22,1,0.36,1) time-based)",
+     "stagger": "none",
+     "function": "Continuity/focus: the product video becomes the stage",
+     "guardrails": "Off under prefers-reduced-motion (Future does this)."
+    },
+    {
+     "name": "Product reveal in a device frame",
+     "trigger": "Device frame 30-50% in view (IntersectionObserver)",
+     "property": "Opacity crossfade from a splash screen to the real UI screenshot, or a short translateY 16 px to 0",
+     "duration": "300-400 ms",
+     "easing": "cubic-bezier(0.4,0,0.2,1)",
+     "stagger": "UI elements 40-60 ms if split",
+     "function": "Story (show the product doing the job)",
+     "guardrails": "Under reduced motion, show the final UI with no crossfade."
+    },
+    {
+     "name": "Hide-on-scroll header",
+     "trigger": "Scroll direction down past the hero; reappear on scroll up",
+     "property": "translateY(0) to translateY(-150px)",
+     "duration": "200 ms",
+     "easing": "cubic-bezier(0,0,0.2,1)",
+     "stagger": "none",
+     "function": "Focus/space for content; feedback on direction",
+     "guardrails": "Must reappear when any element inside it receives keyboard focus."
+    }
+   ],
+   "avoid": [
+    "An infinite marquee carrying readable text with only hover-pause (no button, no keyboard/touch pause).",
+    "A rotating headline word every about 2 s that ignores prefers-reduced-motion.",
+    "Grey body copy on light grey cards (#787878 on #f0f0f0, 3.87:1) and 11 px meta text."
+   ],
+   "false_positives": [
+    "contrast '#ffffff on #ffffff' for 'Coaches', h1 'Personal training, reimagined', the hero paragraph and h2 'A 360 roadmap...' is FALSE: the text sits on a photo/video, and the tool measured against the page's white base. (Contrast over the image is still unmeasured and visually weak in places.)",
+    "contrast '#272a2b on #2a2c2a' / '#272a2b on #000000' for 'Find Your Coach' is FALSE: the button is a white pill with dark text.",
+    "contrast '#f5f6f6 on #ffffff' for '+ Committed to 4 days/week' is FALSE: these are glass chips over a darkened photo.",
+    "img-broken is a Bing ads tracking pixel, not page content.",
+    "console-errors on mobile (502 on a JS chunk, MIME refusal) look transient or proxy-related: not reproduced on desktop, not a design finding.",
+    "reduced-motion: the capture found no failure, which is correct for hidden content, but it missed that the rotating headline word keeps cycling under reduce."
+   ]
+  }
+ }
+}
