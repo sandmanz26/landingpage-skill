@@ -1,0 +1,145 @@
+{
+  "juror": "conversion-strategist",
+  "kind": "ai",
+  "refs": {
+    "ref-0004": {
+      "business_read": "Maxima Therapy sells developmental therapy services (Early Intervention, physical therapy, occupational therapy, adaptive skills training, workforce development) for neurodivergent people. Despite being the root URL, the page behaves as the ages 0-3 Early Intervention page: the carousel defaults to 'EARLY INTERVENTION / AGES 0-3' (desktop-page-01) and the body is 'The First Years Matter Most' (desktop-page-08). Other age groups sit behind carousel arrows and a 'Next stop: Adaptive Skills Training / Explore Ages 3-18' link (desktop-page-11/12). Buyer: parents of infants and toddlers with developmental delays. Payer: by inference, state funding. The page never shows a price or mentions insurance. Step 1 reads 'Have your Regional Center refer your child to our program to begin services' and step 2 mentions the 'Individual Family Service Planning (IFSP) Team' (desktop-page-10/11, report hidden-content sample). That is California Regional Center / IDEA Part C language, which means a publicly funded service where the referral, not a payment, starts the relationship. The action that pays is a referral or intake through 'Get started'. Revenue comes from the state funder after the Regional Center authorises services. A 'Donate' button and a 'Shop' footer link suggest a nonprofit or mixed model, but no screenshot states nonprofit status.",
+      "scores": { "business": 3 },
+      "reasons": {
+        "business": "The action is not visible on most screens. The fold has no nav and no CTA (desktop-fold, mobile-fold), the only filled header button is 'Donate', and 'Get started' first appears at desktop-page-11 (~85% depth) and then in the footer. The offer and trust are missing: no eligibility, no service area, no payer explanation, no credentials, no testimonials, no numbers. The one anxiety-reducing block (the 3-step referral process) is rendered faded or never revealed (report hidden-content FAIL, reduced-motion FAIL)."
+      },
+      "claims": [
+        {
+          "claim": "Colour play",
+          "verdict": "contested",
+          "evidence": "As decoration it is confirmed: 8 chromatic colours (report too-many-colours), full-bleed yellow/green panels (desktop-page-01, 11). As a conversion tool it fails. The most saturated colour (#fd4401 orange) is spent on headlines and on the 'Donate' pill (every desktop-page header), while the intake CTA 'Get started' is a smaller blue button (desktop-page-11). Colour points the eye at the wrong action. White on orange body text is 3.50:1 and 'Next stop' white on green is 2.78:1 (report contrast FAIL)."
+        },
+        {
+          "claim": "Good typography",
+          "verdict": "contested",
+          "evidence": "The display type is distinctive, but it carries no offer. The fold headline 'SEE LIFE FROM A DIFFERENT ANGLE' (desktop-fold) does not say what is sold or to whom. The h1 'The First Years Matter Most' runs to 5 lines and is split across two screens (desktop-page-08/09, report headline-lines FAIL on all viewports). A parent scanning for 'can you help my child, and how do I start' gets slogans first and the service description in small body copy (desktop-page-08 right column)."
+        },
+        {
+          "claim": "Graphics made to fit the goal, without modern 3D vectors",
+          "verdict": "confirmed",
+          "evidence": "Flat, rounded, child-friendly illustration throughout (desktop-page-01 characters, desktop-page-10 snail/train, desktop-page-11 reading girl). Business caveat: roughly 5 of 14 desktop screens are pure illustration with no information. For a stressed parent the tone builds warmth, not trust. There are no therapist faces, no clinic, and no licences."
+        },
+        {
+          "claim": "Scrolling uses other objects to feel modern",
+          "verdict": "contested",
+          "evidence": "The motion is real: tilted, stacked service cards that rotate on scroll (desktop-page-04, 05) and 11 animated elements (report). But the motion actively hides conversion copy. The 3-step referral block ('Start with a Referral', 'Create a Customized Plan', 'Learn and Grow Together') was never fully visible during a full scroll (report hidden-content FAIL desktop + mobile) and stays hidden under reduced motion (checks.reducedMotion FAIL). In desktop-page-10 the step text is visibly greyed out next to the CTA."
+        }
+      ],
+      "take": [
+        "Anxiety-acknowledging process block next to the CTA: a headline that names the fear ('We understand this can be a big step, but we made the process as quick, easy, and stress-free as possible'), then 3 numbered steps, each a verb plus one line ('Start with a Referral' → 'Create a Customized Plan' → 'Learn and Grow Together'), with the primary CTA in the same card (desktop-page-10/11). Copy it with the text always visible and the CTA as the most prominent element.",
+        "Age-badge self-segmentation: each program card carries a pill tag ('AGES 0-3', 'AGES 3-18') so the visitor confirms 'this is for my child' in one glance (desktop-page-02, ref-0005 desktop-page-02). Reusable for any segmented offer (tiers, company sizes, life stages).",
+        "'Next stop' cross-route at the page end: a full-bleed panel naming the next segment with one button ('Explore Ages 3-18', desktop-page-11/12). It keeps a visitor who is in the wrong segment from bouncing."
+      ],
+      "avoid": [
+        "A splash fold with no navigation, no CTA and a slogan-only headline (desktop-fold, mobile-fold). The first screen spends the visitor's highest attention on brand mood.",
+        "Making a secondary goal ('Donate') the only filled, highest-contrast header button on a page whose job is client intake. 'Get started' is absent from the sticky header on every screen.",
+        "Scroll-reveal animations on process or eligibility text. If the reveal fails or reduced motion is on, the trust-building copy is invisible (report hidden-content + reduced-motion FAIL)."
+      ],
+      "missed_by_note": [
+        "Payer and eligibility are the real conversion barrier and the page barely addresses them. Words like 'Regional Center' and 'IFSP' imply state-funded, referral-gated services, but nothing near the CTA says 'no cost to families', 'who qualifies' or 'which areas we serve' ('Service Areas' is only a nav link).",
+        "There is a second audience: Regional Center service coordinators who make the referral. Nothing on the page speaks to them (no referral form, no fax/contact, no provider credentials).",
+        "No trust proof at all: no therapist photos or credentials, no licensing or accreditation, no years in operation, no family count, no testimonials. Only stock-style child photos (desktop-page-07, 09).",
+        "The 'all ages' homepage is effectively the 0-3 program page. Visitors with older children must find the carousel arrows or scroll ~12 screens to 'Next stop'.",
+        "Mobile usability problems that hurt a stressed visitor: 20 tap targets under 24px, 13 text elements at the screen edge (report mobile tap-target FAIL, text-at-edge WARN), and a white-on-white 'Donate' text pair at 1.00:1 (report contrast)."
+      ]
+    },
+    "ref-0005": {
+      "business_read": "The same company's program page for Adaptive Skills Training, ages 3-18. Sub-services: Positive Behavioral Intervention & Support (PBIS), Parent/Caregiver Education (desktop-page-04/05), adaptive skills training (desktop-page-08 body copy). Buyer: parents of school-age children and teens, plus the Regional Center Service Coordinator who refers them. Payer: by inference, state funding through California Regional Centers. Step 1 says 'Have your Regional Center Service Coordinator refer your child to our program to begin services' and step 2 names 'the IPP team' (Individual Program Plan, Lanterman Act terminology) (desktop-page-10/11). No price, no insurance mention. The action that pays is the referral or intake via 'Get started'. The page is the same template as ref-0004 with different colours and copy.",
+      "scores": { "business": 3 },
+      "reasons": {
+        "business": "Same structural failures as ref-0004: a CTA-less splash fold (desktop-fold, mobile-fold), 'Donate' as the only header button, and 'Get started' only at desktop-page-11 (~80% depth) and in the footer. It is slightly clearer than the homepage because it names the 'Service Coordinator' as the referrer. Still there is no trust proof, no outcome evidence and no eligibility statement, and the process steps are partly hidden by the reveal animation (report hidden-content FAIL desktop + mobile, reduced-motion FAIL)."
+      },
+      "claims": [
+        {
+          "claim": "Colour play",
+          "verdict": "contested",
+          "evidence": "10 chromatic colours (report too-many-colours). Page-specific green/pink theming (desktop-page-01, 11) works as program wayfinding. But contrast fails on conversion-relevant text: 'Adaptive Skills Training' card body white on green 2.78:1, PBIS heading green on white 2.78:1, hero card body white on orange 3.50:1 (report contrast FAIL, 9 pairs). The orange 'Donate' still out-shouts the blue 'Get started'."
+        },
+        {
+          "claim": "Good typography",
+          "verdict": "contested",
+          "evidence": "The h1 'The Learning Years Shape Us' runs to 5 lines over two screens (desktop-page-08/09). The h3 manifesto runs to 4 lines on desktop, 7 on tablet, and is cut off under the sticky header (desktop-page-06). The only concrete description of what a child gets is a 9-line body paragraph in small type (desktop-page-08 right column). The style is expressive, but the information hierarchy is inverted."
+        },
+        {
+          "claim": "Graphics made to fit the goal, without modern 3D vectors",
+          "verdict": "confirmed",
+          "evidence": "Flat illustration (reading girl desktop-page-01, books and pencil desktop-page-10) plus one real photo of a caregiver with a child with Down syndrome (desktop-page-07). That photo is the most trust-relevant image on either Maxima page because it shows the actual audience. Business caveat as for ref-0004: illustration dominates, and there are no people from the company."
+        },
+        {
+          "claim": "Scrolling uses other objects to feel modern",
+          "verdict": "contested",
+          "evidence": "Tilting service cards (desktop-page-04/05). The same reveal defect hides 'Start With a Referral', 'Have your Regional Center Service Coordinator refer...' and 'Learn and Grow Together' on mobile and desktop (report hidden-content FAIL). The steps show greyed out in desktop-page-10 and mobile-page-09."
+        }
+      ],
+      "take": [
+        "Name the referrer in the first step: 'Have your Regional Center Service Coordinator refer your child' (desktop-page-10) tells the parent exactly whom to call. In any referral-gated or third-party-paid service, the first step should name the gatekeeper role.",
+        "Program-level colour coding (green for 3-18, yellow/orange for 0-3, pink for 18-65 'Next stop' in desktop-page-11) as wayfinding between sibling offers. It works only if the CTA colour stays constant across all themes.",
+        "Real-audience photography in the middle of an illustrated page (desktop-page-07: caregiver and child with Down syndrome) to anchor trust. Use more of it, and pair it with a name and quote."
+      ],
+      "avoid": [
+        "Reusing the brand splash ('SEE LIFE FROM A DIFFERENT ANGLE') as the fold of a program page (desktop-fold). A visitor who arrives from search or a coordinator's link for 'ages 3-18' does not see '3-18' until the next screen.",
+        "A sticky header whose only action is 'Donate'. On mobile, the Donate pill also overlaps the process heading (mobile-page-09).",
+        "Using the most important explanatory copy as an animated reveal (see hidden-content and reduced-motion FAILs)."
+      ],
+      "missed_by_note": [
+        "Funding model: Regional Center / IPP language implies families pay nothing directly. That is the strongest possible 'yes' lever and the page never says it.",
+        "No outcome or credibility evidence: no measurable outcomes, no BCBA or therapist credentials, no years or families served, no testimonials.",
+        "Teen-age users (13-18) are not addressed. All copy speaks about 'kids' to parents. One teen photo (desktop-page-09) has no supporting message.",
+        "Same template as ref-0004. Any lesson drawn from Maxima should be counted once, not twice, in the jury's pattern weighting."
+      ]
+    },
+    "ref-0006": {
+      "business_read": "Future ('future Pro') sells a monthly subscription to remote 1-on-1 personal training. A human coach builds and adjusts your program and checks in by video and chat through an iPhone and Apple Watch app (desktop-page-02, 04). Audience: adults who want accountability and a personalized plan without an in-person trainer, including travellers ('20-min Hotel Gym HIIT') and people with injuries ('Injury Record: lower back pain', desktop-page-05). Price is on the fold, privately paid: '$50 first month, then $199/month. Cancel within 30 days for a full refund.' (desktop-fold, mobile-fold). The action that pays is 'Find Your Coach', which by inference leads to a 1-minute quiz, coach matching and a paid subscription. An upsell is flagged in the top bar: 'New health coaching + DEXA plan in beta.'",
+      "scores": { "business": 8 },
+      "reasons": {
+        "business": "Strong. The fold has the offer, the price, an intro discount and a refund guarantee right under the CTA. The CTA repeats after the product demo (desktop-page-03), in the plan section, after social proof (desktop-page-06) and in the footer, and proof (4.9/5 App Store, 98% stat, 3 video testimonials with tenure) comes before the late asks. Points lost: three different CTA labels for one action, no persistent header CTA after the hero on desktop (desktop-page-02..06 show only the announcement bar), coaches' credentials never shown, and an unsourced '98%' claim."
+      },
+      "claims": [
+        {
+          "claim": "Photography",
+          "verdict": "confirmed",
+          "evidence": "Full-bleed hero photo (desktop-fold), lifestyle photos behind feature cards (desktop-page-03, 05), member headshots in testimonials (desktop-page-06), and a b/w footer photo (desktop-page-07). Business split: the member faces ('Laura, 5 months with Future') carry trust because they look like phone selfies and not models. The hero is an athletic model, which sells aspiration but may read as 'not for me' to beginners."
+        },
+        {
+          "claim": "Product screens ('prototypes') let the user focus",
+          "verdict": "confirmed",
+          "evidence": "Single centred phone on black with no competing content (desktop-page-02). The screen content does the selling: a named coach avatar with a personal message ('Hey Tom, shorter + lighter workouts to fit this week's travels!'), and 'Coach Andrew, New video check-in' with a chat bubble (desktop-page-04). The mockups prove the differentiator (a real human coach), not just the app UI."
+        },
+        {
+          "claim": "Image cards with icons",
+          "verdict": "contested",
+          "evidence": "The cards are photo cards with UI overlays, not icon cards. '2 WORKOUTS MOVED WED ↔ SAT' with a day-picker, and an Apple Watch screen with an exercise checklist (desktop-page-03). The conversion value comes from these feature-proof overlays. Icons are incidental (the workout-type icon row in desktop-page-02 is tiny)."
+        },
+        {
+          "claim": "Animation in every section",
+          "verdict": "unverifiable",
+          "evidence": "Stills cannot show motion. The report counts 42 transitions and 13 animated elements, CLS 0, and reduced motion passes with no hidden content (checks.reducedMotion findings: []). So motion exists and does not hide copy, but 'every section' cannot be confirmed. The phone screens look like video frames (mobile-fold workout timer 23:17), which suggests video rather than CSS animation."
+        }
+      ],
+      "take": [
+        "Price + risk reversal directly under every primary CTA: '$50 first month, then $199/month.' with 'Cancel within 30 days for a full refund.' in smaller type underneath (desktop-fold, desktop-page-03, mobile-fold). It removes the 'how much / what if it doesn't work' click and pre-qualifies leads.",
+        "Show the human inside the product mockup: the coach's face, name and a personalised message in the app UI (desktop-page-02, 04). For any service-plus-software offer, the screenshot should prove the human part, not just the dashboard.",
+        "Proof stack before the late ask: a one-line proof bar (rating + outcome stat), then 3 video testimonials labelled with tenure ('13 months with Future'), then a low-commitment CTA ('Start the 1-Minute Quiz') (desktop-page-06). The tenure label signals retention, which is stronger than satisfaction.",
+        "Preview the intake: the 'Michelle, Future Member' profile card (Schedule / Experience / Goals / Equipment / Injury Record) shows what the quiz will ask and what you get back, which lowers form anxiety (desktop-page-05)."
+      ],
+      "avoid": [
+        "Three labels for one action ('Find Your Coach', 'Get Started', 'Start the 1-Minute Quiz'). It splits measurement and makes the visitor wonder whether these are different commitments. Pick one primary label, with the quiz as an explicit sub-label.",
+        "A sticky announcement bar for a beta upsell ('New health coaching + DEXA plan in beta.') that stays on every screen, while the main CTA disappears from the header after the hero (desktop-page-02..07). The persistent slot is given to the off-offer link.",
+        "Unsourced precision stats ('98% say they're more consistent within 4 weeks') and 11px tenure or legal text (report small-text WARN). Copy the proof pattern only with a source or footnote."
+      ],
+      "missed_by_note": [
+        "The core conversion device is the pricing line with intro discount and 30-day refund under the CTA. The note talks only about visuals.",
+        "Social proof: 4.9/5 App Store and 3 video testimonials with membership tenure (desktop-page-06).",
+        "The quiz as a low-friction first step ('1-Minute Quiz'), previewed by the profile card (desktop-page-05).",
+        "Coach credentials are never shown on the page (no certifications, no coach roster), although 'Coaches' is a nav link. For a $199/month human service, this is the main remaining trust gap.",
+        "The footer has a QR code plus 'Download the app' as a secondary path for desktop visitors (desktop-page-07).",
+        "Report caveats: the 'Find Your Coach' 1.03:1 contrast flag looks like a measurement artifact over the translucent button. The screenshots show dark text on a white pill that is readable. Mobile has 16 tap targets under 24px and 32 text elements at the screen edge, worth fixing if copied."
+      ]
+    }
+  }
+}
