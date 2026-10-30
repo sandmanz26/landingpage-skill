@@ -82,9 +82,8 @@ Batch-001 (done 2026-10-30, awaiting the owner):
 
 ## 5. Blockers and environment
 
-- **GitHub push fails (403)** from the cloud session: the Claude GitHub App lacks access to
-  `sandmanz26/landingpage-skill`. Commits exist locally on branch `claude/affectionate-cray-t2nlj1`;
-  zips were sent to the owner. Fix: reconnect at https://claude.ai/connect-github.
+- GitHub: pushing to `sandmanz26/landingpage-skill`, branch `claude/affectionate-cray-t2nlj1`, works
+  since 2026-10-30 (earlier pushes failed with 403 until access was granted). No pull request yet.
 - **Network**: the owner opened network access on 2026-10-30; the three reference sites and
   PubMed now load, but `www.awwwards.com` still fails (likely bot protection or still not allowed).
 - Subagents: in the cloud session, spawn them only when the owner asks (they asked for the jury).
