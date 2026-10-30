@@ -1,14 +1,35 @@
 // Functions that run inside the page (passed to page.evaluate). Each one must be
 // self-contained: Playwright sends only the function's source to the browser.
 
-export function hiddenText() {
-  const out = [];
+// Marks text that is visible in the viewport right now. Called at every scroll
+// step, so text revealed on the way down counts as seen even if a script hides
+// it again once it leaves the screen.
+export function markSeen() {
   const els = document.body ? document.body.querySelectorAll('*') : [];
   for (const el of els) {
+    if (el.__ddSeen || ['SCRIPT', 'STYLE', 'NOSCRIPT', 'TEMPLATE'].includes(el.tagName)) continue;
+    if (![...el.childNodes].some((n) => n.nodeType === 3 && n.textContent.trim().length > 1)) continue;
+    const r = el.getBoundingClientRect();
+    if (r.width === 0 || r.height === 0 || r.bottom < 0 || r.top > innerHeight) continue;
+    let op = 1;
+    for (let e = el; e && e.nodeType === 1; e = e.parentElement) op *= parseFloat(getComputedStyle(e).opacity);
+    if (op >= 0.05) el.__ddSeen = true;
+  }
+}
+
+// Text that was never visible during the whole scroll. Closed menus and dialogs,
+// and hidden duplicates of text that is visible elsewhere, are not counted.
+export function hiddenText() {
+  const out = [];
+  const els = document.body ? [...document.body.querySelectorAll('*')] : [];
+  const own = (el) => [...el.childNodes].filter((n) => n.nodeType === 3).map((n) => n.textContent).join(' ').replace(/\s+/g, ' ').trim();
+  const seenText = new Set(els.filter((el) => el.__ddSeen).map(own));
+  for (const el of els) {
     if (['SCRIPT', 'STYLE', 'NOSCRIPT', 'TEMPLATE'].includes(el.tagName)) continue;
-    if (el.closest('[aria-hidden="true"], [hidden], dialog:not([open]), details:not([open]) > :not(summary)')) continue;
-    const own = [...el.childNodes].some((n) => n.nodeType === 3 && n.textContent.trim().length > 1);
-    if (!own) continue;
+    if (el.__ddSeen) continue;
+    if (el.closest('[aria-hidden="true"], [hidden], nav, [role="menu"], [role="dialog"], [aria-modal="true"], dialog:not([open]), details:not([open]) > :not(summary)')) continue;
+    const text = own(el);
+    if (text.length < 2 || seenText.has(text)) continue;
     const r = el.getBoundingClientRect();
     if (r.width === 0 || r.height === 0) continue;
     let op = 1;
@@ -19,7 +40,7 @@ export function hiddenText() {
       if (cs.display === 'none' || cs.visibility === 'hidden') shown = false;
     }
     if (!shown) continue; // deliberately hidden (closed menus and the like)
-    if (op < 0.05) out.push(el.textContent.trim().slice(0, 60));
+    if (op < 0.05) out.push(text.slice(0, 60));
   }
   return { count: out.length, samples: out.slice(0, 5) };
 }

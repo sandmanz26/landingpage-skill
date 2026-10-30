@@ -1,6 +1,6 @@
 {
   "target": "https://www.replay.ai/",
-  "time": "2026-10-30T16:02:12.701Z",
+  "time": "2026-10-30T16:19:59.003Z",
   "rules": {
     "purple-gradient": "warn",
     "gradient": "info",
@@ -194,11 +194,11 @@
           "rule": "too-many-colours",
           "message": "7 distinct chromatic colours",
           "sample": [
-            "#499df8",
-            "#54702f",
-            "#c2edc8",
             "#eae058",
+            "#c2edc8",
+            "#54702f",
             "#13a8ff",
+            "#499df8",
             "#a9b8c8",
             "#25fff9"
           ]
@@ -211,13 +211,13 @@
         {
           "severity": "FAIL",
           "rule": "hidden-content",
-          "message": "15 text elements are still invisible after scrolling the whole page (a reveal that never fires?)",
+          "message": "9 text elements were never visible during a full scroll (a reveal that never fires?)",
           "sample": [
-            "$10K - $100K",
             "$100K - $1M",
             "$1,000,000+",
             "Receive an offer",
-            "Replay presents an offer to license your data. These are typ"
+            "De-identify your data",
+            "Get paid"
           ]
         },
         {
@@ -282,13 +282,14 @@
           "#fcfcfc",
           "#141518",
           "#000000",
-          "#499df8",
-          "#54702f",
-          "#c2edc8",
           "#eae058",
+          "#c2edc8",
+          "#54702f",
           "#13a8ff",
+          "#499df8",
           "#8c8c8c",
           "#e3edf3",
+          "#edf1f8",
           "#7e7e7e",
           "#eaebf1",
           "#ffffff",
@@ -341,15 +342,14 @@
         },
         "radii": [
           "2.7px",
-          "999px",
           "2.1px",
           "3.35544e+07px"
         ],
         "shadows": 4,
         "gradients": 8,
         "backdropBlur": 5,
-        "transitions": 133,
-        "animatedElements": 121,
+        "transitions": 132,
+        "animatedElements": 127,
         "cls": 0.001
       },
       "screenshots": [
@@ -604,11 +604,11 @@
           "rule": "too-many-colours",
           "message": "7 distinct chromatic colours",
           "sample": [
+            "#499df8",
+            "#eae058",
+            "#c2edc8",
             "#54702f",
             "#13a8ff",
-            "#499df8",
-            "#c2edc8",
-            "#eae058",
             "#a9b8c8",
             "#25fff9"
           ]
@@ -621,13 +621,13 @@
         {
           "severity": "FAIL",
           "rule": "hidden-content",
-          "message": "15 text elements are still invisible after scrolling the whole page (a reveal that never fires?)",
+          "message": "8 text elements were never visible during a full scroll (a reveal that never fires?)",
           "sample": [
-            "$10K - $100K",
-            "$100K - $1M",
             "$1,000,000+",
             "Receive an offer",
-            "Replay presents an offer to license your data. These are typ"
+            "De-identify your data",
+            "Get paid",
+            "We built the pipeline and trained the model."
           ]
         },
         {
@@ -696,11 +696,11 @@
           "#fcfcfc",
           "#141518",
           "#000000",
+          "#499df8",
+          "#eae058",
+          "#c2edc8",
           "#54702f",
           "#13a8ff",
-          "#499df8",
-          "#c2edc8",
-          "#eae058",
           "#8c8c8c",
           "#e3edf3",
           "#7e7e7e",
@@ -758,8 +758,8 @@
         "shadows": 4,
         "gradients": 8,
         "backdropBlur": 5,
-        "transitions": 123,
-        "animatedElements": 50,
+        "transitions": 128,
+        "animatedElements": 48,
         "cls": 0.04
       },
       "screenshots": [
@@ -1083,13 +1083,13 @@
         {
           "severity": "FAIL",
           "rule": "hidden-content",
-          "message": "15 text elements are still invisible after scrolling the whole page (a reveal that never fires?)",
+          "message": "9 text elements were never visible during a full scroll (a reveal that never fires?)",
           "sample": [
-            "$10K - $100K",
             "$100K - $1M",
             "$1,000,000+",
             "Receive an offer",
-            "Replay presents an offer to license your data. These are typ"
+            "De-identify your data",
+            "Get paid"
           ]
         },
         {
@@ -1166,8 +1166,8 @@
           "#f5e4d8",
           "#8c8c8c",
           "#f7f2f7",
-          "#eae058",
           "#7e7e7e",
+          "#eae058",
           "#eaebf1",
           "#ffffff",
           "#0c0c0b",
@@ -1221,9 +1221,9 @@
         "shadows": 3,
         "gradients": 7,
         "backdropBlur": 5,
-        "transitions": 77,
-        "animatedElements": 52,
-        "cls": 0.004
+        "transitions": 75,
+        "animatedElements": 51,
+        "cls": 0
       },
       "screenshots": [
         "data/references/captures/ref-0002/mobile-fold.png",
@@ -1246,13 +1246,13 @@
         {
           "severity": "FAIL",
           "rule": "reduced-motion",
-          "message": "15 text elements stay hidden when the visitor asks for reduced motion",
+          "message": "9 text elements stay hidden when the visitor asks for reduced motion",
           "sample": [
-            "$10K - $100K",
             "$100K - $1M",
             "$1,000,000+",
             "Receive an offer",
-            "Replay presents an offer to license your data. These are typ"
+            "De-identify your data",
+            "Get paid"
           ]
         }
       ],
@@ -1260,12 +1260,12 @@
     },
     "noJavaScript": {
       "findings": [],
-      "withJs": 4557,
+      "withJs": 4551,
       "withoutJs": 4265
     }
   },
   "summary": {
-    "fail": 17,
+    "fail": 18,
     "warn": 8
   },
   "url": "https://www.replay.ai/",
@@ -1279,25 +1279,7 @@
       ],
       "where": [
         "desktop",
-        "desktop",
-        "desktop",
-        "desktop",
-        "desktop",
-        "desktop",
-        "desktop",
         "tablet",
-        "tablet",
-        "tablet",
-        "tablet",
-        "tablet",
-        "tablet",
-        "tablet",
-        "mobile",
-        "mobile",
-        "mobile",
-        "mobile",
-        "mobile",
-        "mobile",
         "mobile"
       ]
     },
@@ -1309,12 +1291,6 @@
         "<p> \"process\""
       ],
       "where": [
-        "desktop",
-        "desktop",
-        "desktop",
-        "desktop",
-        "desktop",
-        "desktop",
         "desktop"
       ]
     },
@@ -1326,7 +1302,6 @@
         "<p> \"def load_dataset(source):records = source.read()re\""
       ],
       "where": [
-        "desktop",
         "desktop"
       ]
     },
@@ -1348,17 +1323,16 @@
     {
       "severity": "FAIL",
       "rule": "hidden-content",
-      "message": "15 text elements are still invisible after scrolling the whole page (a reveal that never fires?)",
+      "message": "9 text elements were never visible during a full scroll (a reveal that never fires?)",
       "sample": [
-        "$10K - $100K",
         "$100K - $1M",
         "$1,000,000+",
         "Receive an offer",
-        "Replay presents an offer to license your data. These are typ"
+        "De-identify your data",
+        "Get paid"
       ],
       "where": [
         "desktop",
-        "tablet",
         "mobile"
       ]
     },
@@ -1394,12 +1368,6 @@
         "<p> \"process\""
       ],
       "where": [
-        "tablet",
-        "tablet",
-        "tablet",
-        "tablet",
-        "tablet",
-        "tablet",
         "tablet"
       ]
     },
@@ -1411,7 +1379,6 @@
         "<p> \"def load_dataset(source):records = source.read()re\""
       ],
       "where": [
-        "tablet",
         "tablet"
       ]
     },
@@ -1443,19 +1410,27 @@
     },
     {
       "severity": "FAIL",
+      "rule": "hidden-content",
+      "message": "8 text elements were never visible during a full scroll (a reveal that never fires?)",
+      "sample": [
+        "$1,000,000+",
+        "Receive an offer",
+        "De-identify your data",
+        "Get paid",
+        "We built the pipeline and trained the model."
+      ],
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "FAIL",
       "rule": "tiny-text",
       "message": "Text at 7.15802px",
       "sample": [
         "<p> \"Tech\""
       ],
       "where": [
-        "mobile",
-        "mobile",
-        "mobile",
-        "mobile",
-        "mobile",
-        "mobile",
-        "mobile",
         "mobile"
       ]
     },
@@ -1467,9 +1442,6 @@
         "<p> \"process\""
       ],
       "where": [
-        "mobile",
-        "mobile",
-        "mobile",
         "mobile"
       ]
     },
@@ -1481,7 +1453,6 @@
         "<p> \"def load_dataset(source):records = source.read()re\""
       ],
       "where": [
-        "mobile",
         "mobile"
       ]
     },
@@ -1517,13 +1488,13 @@
     {
       "severity": "FAIL",
       "rule": "reduced-motion",
-      "message": "15 text elements stay hidden when the visitor asks for reduced motion",
+      "message": "9 text elements stay hidden when the visitor asks for reduced motion",
       "sample": [
-        "$10K - $100K",
         "$100K - $1M",
         "$1,000,000+",
         "Receive an offer",
-        "Replay presents an offer to license your data. These are typ"
+        "De-identify your data",
+        "Get paid"
       ],
       "where": [
         "reducedMotion"
@@ -1560,16 +1531,6 @@
       "where": [
         "desktop",
         "tablet",
-        "tablet",
-        "tablet",
-        "tablet",
-        "tablet",
-        "tablet",
-        "mobile",
-        "mobile",
-        "mobile",
-        "mobile",
-        "mobile",
         "mobile"
       ]
     },
@@ -1597,11 +1558,11 @@
       "rule": "too-many-colours",
       "message": "7 distinct chromatic colours",
       "sample": [
-        "#499df8",
-        "#54702f",
-        "#c2edc8",
         "#eae058",
+        "#c2edc8",
+        "#54702f",
         "#13a8ff",
+        "#499df8",
         "#a9b8c8",
         "#25fff9"
       ],

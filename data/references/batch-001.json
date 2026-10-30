@@ -2,17 +2,17 @@
   "batch": "batch-001",
   "received": "2026-10-30",
   "from": "user (chat)",
-  "status": "pending-capture: the three sites could not be opened from the cloud session (network allowlist)",
+  "status": "captured and judged by 5 AI jurors (2026-10-30); awaiting human scores and answers to the questions",
   "entries": [
     {
       "id": "ref-0001",
       "url": "https://playfolly.com",
       "business": {
-        "what": "Modular backyard play fort for children (New Zealand), sold with an online configurator for windows and accessories",
-        "type": "physical product, direct to consumer",
-        "action_that_pays": "unknown until captured; probably configure and order",
-        "source": "search: bestawards.co.nz listing (not opened)",
-        "confidence": "medium"
+        "what": "Modular backyard play fort for children (New Zealand). The page is a waitlist: limited production runs, email sign-up, no price, accessories marked \"Coming soon\".",
+        "type": "physical product, pre-order / waitlist",
+        "action_that_pays": "\"Get updates\" email sign-up",
+        "source": "captured page (corrects the search snippet, which said \"sold with an online configurator\")",
+        "confidence": "high"
       },
       "human_note_verbatim": [
         "saya merasa permainan tipografi mereka sangat baik, permainan warna solid, font bold tebal dikombinasikan dengan text kecil yang ringan. Title dominan besar sehingga memberikan contrast dan membuat balance",
@@ -20,14 +20,27 @@
       ],
       "parsed": {
         "take": [
-          { "part": "typography", "device": "heavy bold display set very large against small light text", "quality": "strong size and weight contrast" },
-          { "part": "colour", "device": "solid flat colour fields", "quality": "not specified which colours or roles" },
-          { "part": "photography", "device": "photos play an important role", "quality": "not specified: lifestyle, product cut-out, children at play?" }
+          {
+            "part": "typography",
+            "device": "heavy bold display set very large against small light text",
+            "quality": "strong size and weight contrast"
+          },
+          {
+            "part": "colour",
+            "device": "solid flat colour fields",
+            "quality": "not specified which colours or roles"
+          },
+          {
+            "part": "photography",
+            "device": "photos play an important role",
+            "quality": "not specified: lifestyle, product cut-out, children at play?"
+          }
         ],
         "avoid": [],
         "why_business": null,
         "why_customer": null,
-        "fits": null
+        "fits": null,
+        "take_corrected_terms": true
       },
       "gaps_in_note": [
         "No business reason: the configurator is likely the page's key selling device and is not mentioned",
@@ -36,26 +49,60 @@
         "'Contrast and balance' is an outcome; the measurable cause (size ratio, weight pair) is not given"
       ],
       "claims": [
-        { "claim": "Large heavy title against small light text creates contrast", "status": "unverifiable until captured" },
-        { "claim": "Solid colour use", "status": "unverifiable until captured" },
-        { "claim": "Photography is important", "status": "plausible: a physical product for families needs real photos; unverifiable until captured" }
+        {
+          "claim": "Heavy bold title + small light text gives contrast and balance",
+          "verdict": "confirmed with corrections",
+          "evidence": "One family (Geograph), 234px wordmark vs 14-18px text, about 13:1. The small text is regular weight, not light. The big title is only the brand name and carries no offer; the one sentence saying what the product is fails contrast (1.70:1)."
+        },
+        {
+          "claim": "Solid colour play",
+          "verdict": "confirmed, reinterpreted",
+          "evidence": "0 gradients; flat sand, yellow, black fields. The colours are the product's own colourways (swatch picker), which is why they work."
+        },
+        {
+          "claim": "Photography plays an important role",
+          "verdict": "confirmed",
+          "evidence": "Real children on the fort in real gardens; the night shot beside a house answers \"will it fit my garden\". The first screen is a 3D render, and photos have no captions."
+        }
       ],
       "questions": [
-        "Foto seperti apa yang Anda maksud, dan apa fungsinya (menunjukkan ukuran, anak bermain, produk di halaman rumah)?",
-        "Warna apa saja dan di mana dipakai?",
-        "Apakah konfiguratornya juga Anda anggap bagus, atau hanya tampilan halamannya?"
+        "Apa yang Anda maksud dengan \"balance\": komposisinya, atau perpaduan besar-kecilnya?",
+        "Anda tidak menyebut bahwa halaman ini tidak menjual (tanpa harga, hanya waitlist). Apakah tetap Anda nilai bagus untuk klien yang perlu menjual langsung?"
       ],
-      "tags_pending": ["type: heavy-display + light text", "palette: solid fields", "imagery: photography-led"]
+      "jury_scores": {
+        "clarity": 6,
+        "distinctiveness": 9,
+        "craft": 5,
+        "business": 4,
+        "customer": 4,
+        "story": 7,
+        "weighted": 5.7
+      },
+      "veto": "Hero sentence white on sand #edbf7a = 1.70:1; 0 of 3144 characters render without JavaScript.",
+      "library_candidates": [
+        "Palette = the product's colourways: flat section fields in the product finishes; a swatch picker recolours the product (opacity cross-fade 300ms) and tweens the page background (700ms). Function: the visitor starts owning a configuration.",
+        "Fit proof before the ask: a dimensioned drawing (mm) with a child silhouette + one plain sentence (\"small enough for real gardens\"), placed right before the sign-up.",
+        "Effort in human units: \"assembled by two adults in a morning\" instead of specs.",
+        "Two-tone stacked headline: line 1 full ink, line 2 same size in ~60% tone of the field colour, pairing aspiration with reassurance.",
+        "Name the fear as a heading (\"Dangerously safe.\") followed by a hard standard (ISO 8124-4)."
+      ],
+      "avoid": [
+        "Brand-name-only hero with no offer and no action",
+        "White or tinted text on mid-tone fields (1.14-1.70:1)",
+        "Transparent sticky logo colliding with body text",
+        "Promising a system (\"endless ways to play\") whose parts are all \"Coming soon\"",
+        "Vague CTA (\"Get updates\") on a high-ticket pre-order"
+      ]
     },
     {
       "id": "ref-0002",
       "url": "https://www.replay.ai/",
       "business": {
-        "what": "Not established: several unrelated products are named Replay. A preview build of what may be this site says it is backed by Andreessen Horowitz.",
-        "type": "unknown (likely software)",
-        "action_that_pays": "unknown",
-        "source": "search (inconclusive)",
-        "confidence": "low"
+        "what": "Replay pays companies (20 to 250+ employees) to license their de-identified operating data (email, Jira, CRM, finance records) to frontier AI labs; upfront payment + revenue share, bands $10K to $1M+; main action \"Value my data\".",
+        "type": "B2B marketplace",
+        "action_that_pays": "\"Value my data\"",
+        "source": "captured page (search could not establish it)",
+        "confidence": "high"
       },
       "human_note_verbatim": [
         "ini adalah website yang bagus juga, karena permainan mereka tidak mengandalkan gambar tapi mengandalkan object vector sederhana yang di animasikan, mengikuti dari bisnis",
@@ -63,13 +110,22 @@
       ],
       "parsed": {
         "take": [
-          { "part": "imagery + motion", "device": "simple animated vector objects instead of photos", "quality": "follows the business (which business is not stated)" },
-          { "part": "typography", "device": "mostly small type", "quality": "neat, orderly" }
+          {
+            "part": "imagery + motion",
+            "device": "simple animated vector objects instead of photos",
+            "quality": "follows the business (which business is not stated)"
+          },
+          {
+            "part": "typography",
+            "device": "mostly small type",
+            "quality": "neat, orderly"
+          }
         ],
         "avoid": [],
         "why_business": "'mengikuti dari bisnis' is claimed but the business is not named; cannot be checked yet",
         "why_customer": null,
-        "fits": null
+        "fits": null,
+        "take_corrected_terms": true
       },
       "gaps_in_note": [
         "Which business, and how exactly the vector objects express it",
@@ -78,25 +134,71 @@
         "'Not modern (rounded)': rounded is one style, not the definition of modern; say what the type is (grotesk, mono, serif) instead"
       ],
       "claims": [
-        { "claim": "Uses animated simple vectors rather than photos", "status": "unverifiable until captured" },
-        { "claim": "Mostly small type reads as neat", "status": "contested in principle: depends on measured sizes and contrast; check after capture" }
+        {
+          "claim": "Relies not on images",
+          "verdict": "confirmed",
+          "evidence": "No photography on any screen; imagery is document facsimiles, isometric blocks, texture."
+        },
+        {
+          "claim": "Simple animated vector objects",
+          "verdict": "contested",
+          "evidence": "Dense, textured, isometric stacks of realistic documents; 121 animated elements. Not simple and not flat vector."
+        },
+        {
+          "claim": "Follows the business",
+          "verdict": "confirmed (mostly)",
+          "evidence": "The visuals show the very records being licensed (emails, Jira, transcripts, redaction). Exceptions: the blue tunnel and the closing collage are decoration."
+        },
+        {
+          "claim": "Mostly small type looks neat",
+          "verdict": "contested",
+          "evidence": "Headlines are large serifs (72px desktop, 42px mobile); 14-16 font sizes; text at 2-8px and running text at 14px; grey proof captions 2.26-3.41:1."
+        },
+        {
+          "claim": "Not a modern (rounded) theme",
+          "verdict": "confirmed (square corners, 2-3px radii); framing corrected",
+          "evidence": "\"Rounded\" is one style, not the definition of modern. The look is editorial: serif display, grotesk body, mono labels, visible dashed grid."
+        }
       ],
       "questions": [
-        "Replay ini bisnis apa? (Ada beberapa produk bernama Replay.)",
-        "Animasi vektornya menjelaskan produk, atau hanya dekorasi?",
-        "Yang Anda sebut 'kecil', kira-kira teks body atau label/judul juga kecil?"
+        "\"Ukuran dominan kecil\" maksudnya label-label kecil (mono) di sekitar visual, atau teks body? Headline-nya justru besar (72px).",
+        "Yang Anda sebut \"vektor sederhana\" ternyata tumpukan dokumen yang detail. Apakah yang Anda suka justru teksturnya, atau gerakannya?"
       ],
-      "tags_pending": ["imagery: animated vector", "type: small, restrained"]
+      "jury_scores": {
+        "clarity": 8,
+        "distinctiveness": 7,
+        "craft": 6,
+        "business": 6,
+        "customer": 5,
+        "story": 8,
+        "weighted": 6.6
+      },
+      "veto": "Readable copy at 2-8px and grey text down to 2.26:1; the price bands stay hidden on phones and under reduced motion.",
+      "library_candidates": [
+        "Objection ladder for a novel offer: sections in the order the buyer's fears arrive (what counts, how much, how much effort, is it safe, who buys it, do I qualify).",
+        "Self-locating price anchor: bands by a variable the buyer knows (\"20-50 employees: $10K-$100K\") so the CTA confirms a number rather than starting a sales call. Keep the numbers visible without animation.",
+        "Effort in minutes: \"Four steps. 120 minutes of your time.\"",
+        "Reframe against known alternatives: equity costs ownership, debt must be repaid, revenue takes time.",
+        "House-curve reveal: clip-path wipe 270-470ms, cubic-bezier(0.32,0.72,0,1), 55ms stagger; one curve for the whole site.",
+        "Three faces, three jobs: editorial serif display, neutral grotesk body, mono for labels."
+      ],
+      "avoid": [
+        "Micro-text at 2-8px as decoration",
+        "Key numbers that only appear through scroll animation",
+        "Unsourced hero stats (\"Millions paid\", \"Billions removed\")",
+        "No named proof on a high-risk ask",
+        "A 15s auto-advancing carousel with no pause"
+      ]
     },
     {
       "id": "ref-0003",
       "url": "https://scotchpos.com/",
       "business": {
-        "what": "Point-of-sale and inventory system for liquor retailers (US, Denver area), from about $99/month",
+        "what": "POS and inventory system made only for liquor retailers (US); main action \"Book a demo\".",
         "type": "B2B SaaS",
-        "action_that_pays": "unknown until captured; probably book a demo",
-        "source": "search: Software Advice, Korona POS review (not opened)",
-        "confidence": "medium"
+        "action_that_pays": "\"Book a demo\"",
+        "source": "captured page + search",
+        "confidence": "high"
       },
       "human_note_verbatim": [
         "saya suka dengan permainan warna yang sederhana, mengandalkan gelap. permainan penggunaan wireframe asli juga sangat membantu",
@@ -104,14 +206,27 @@
       ],
       "parsed": {
         "take": [
-          { "part": "colour", "device": "simple, dark-led palette", "quality": "restraint" },
-          { "part": "imagery", "device": "real product interface shown (the note says 'wireframe asli')", "quality": "helps understanding" },
-          { "part": "motion", "device": "micro-interactions on scroll", "quality": "note unfinished" }
+          {
+            "part": "colour",
+            "device": "simple, dark-led palette",
+            "quality": "restraint"
+          },
+          {
+            "part": "imagery",
+            "device": "real product interface shown (the note says 'wireframe asli')",
+            "quality": "helps understanding"
+          },
+          {
+            "part": "motion",
+            "device": "micro-interactions on scroll",
+            "quality": "note unfinished"
+          }
         ],
         "avoid": [],
         "why_business": "Implied and likely right: for B2B software, showing the real interface is proof the product exists and is usable",
         "why_customer": null,
-        "fits": null
+        "fits": null,
+        "take_corrected_terms": true
       },
       "corrections": [
         "'Wireframe' means a low-fidelity grey layout. If the page shows the real product screens, the right term is 'product UI' or 'real interface'. The parsed fields use 'real product interface'; the original note is kept as written."
@@ -122,16 +237,60 @@
         "Which colour is the accent and where it is used"
       ],
       "claims": [
-        { "claim": "Simple dark palette", "status": "unverifiable until captured" },
-        { "claim": "Real product interface helps", "status": "plausible for B2B software; unverifiable until captured" },
-        { "claim": "Micro-interactions on scroll", "status": "unverifiable; note incomplete" }
+        {
+          "claim": "Simple dark palette",
+          "verdict": "confirmed with a cost",
+          "evidence": "Black canvas + one chromatic accent (#f54900). It suits spirits, but dims the trust line (3.66:1) and the main button (3.60:1)."
+        },
+        {
+          "claim": "Real \"wireframes\" help a lot",
+          "verdict": "confirmed, term corrected",
+          "evidence": "They are high-fidelity product screens, not wireframes, filled with real whisky and wine SKUs and stock flags. All jurors call this the strongest part: it proves \"built for liquor\"."
+        },
+        {
+          "claim": "Micro-interaction on scroll",
+          "verdict": "confirmed, and bigger than micro",
+          "evidence": "Observed live: the header hides on scroll (300ms); the main motion is a scroll story where \"old way\" paper props fly out (to 250px, 50deg), a sentence lights up word by word, then the clean product screen fades in."
+        }
       ],
       "questions": [
-        "Kalimat kedua terpotong: apa yang terjadi saat scroll?",
-        "Yang Anda sebut 'wireframe asli' itu tampilan aplikasi sungguhan, atau sketsa garis?",
-        "Menurut Anda, warna gelapnya cocok karena bisnisnya (toko minuman, operasi malam) atau karena selera?"
+        "Catatan kedua terpotong: apakah yang Anda maksud adegan \"old way\" yang berterbangan saat scroll, atau header yang bersembunyi?"
       ],
-      "tags_pending": ["palette: dark, simple", "imagery: real product UI", "motion: scroll micro-interactions"]
+      "jury_scores": {
+        "clarity": 9,
+        "distinctiveness": 5,
+        "craft": 6.5,
+        "business": 7,
+        "customer": 6,
+        "story": 6,
+        "weighted": 6.6
+      },
+      "veto": "No prefers-reduced-motion handling (scroll rotations to 50deg/250px, endless rotating waves, unpausable marquees); primary CTA white on #f54900 = 3.60:1.",
+      "library_candidates": [
+        "Product UI filled with the buyer's own world (real SKUs, stock flags) in the hero: proof of the vertical by detail.",
+        "Old way vs new way with the buyer's own artefacts (90s dialog, paper invoice, sticky note), animated away on scroll into the clean screen. Function: story.",
+        "Peer proof in the buyer's setting: named owners with store names, filmed in their shops, right after the hero.",
+        "Black + one hot accent used only for the action, links and alerts (darken the orange to ~#c23a00 for white text).",
+        "Scroll-scrubbed word reveal at 30-45px, words resting at 40% opacity."
+      ],
+      "avoid": [
+        "Dropping the main action for most of the scroll (non-sticky header, only \"Find out more\" links)",
+        "Claims without numbers (\"lowest fees guaranteed\")",
+        "Problem stated after the feature menu",
+        "Endless loops and big scroll motion with no reduced-motion fallback",
+        "The generic dark-SaaS hero kit (pill eyebrow, centred headline, two CTAs)"
+      ]
     }
-  ]
+  ],
+  "jury": {
+    "folder": "data/references/jury/batch-001",
+    "jurors": [
+      "art-director",
+      "conversion-strategist",
+      "customer-researcher",
+      "story-strategist",
+      "motion-accessibility"
+    ],
+    "human_votes": 0
+  }
 }

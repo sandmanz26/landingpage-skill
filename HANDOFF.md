@@ -29,7 +29,7 @@ explicitly:
 
 ## 3. Current state (v0.2 + jury)
 
-Done and tested (`cd skill/design-director && npm test`, 31 checks):
+Done and tested (`cd skill/design-director && npm test`):
 - Skill core: `SKILL.md` router; modes create, site, section, review/restyle/redesign, app-screen.
 - Mandatory steps in every mode: **research → strategy → roast** before direction
   (`research/method.md`, `strategy/method.md`, `roast/method.md`). Gates: brief, strategy,
@@ -52,12 +52,20 @@ Done and tested (`cd skill/design-director && npm test`, 31 checks):
   https://claude.ai/artifact/L4QfVHybTmdhTvg4KKhEVv. Explainer page:
   https://claude.ai/artifact/SSVpDi4o3ce1emXfnu5Rpy.
 
-In progress (2026-10-30):
-- **Reference batch-001** (`data/references/`): three sites the owner sent with notes
-  (playfolly.com, replay.ai, scotchpos.com). Captured with `inspect.mjs` into
-  `data/references/captures/`. Five AI jurors write to `data/references/jury/batch-001/`.
-  Next: reconcile the owner's notes with the jury (confirmed / contested / unverifiable) into
-  `data/references/batch-001.json` and a readable review, then send the owner the questions.
+Batch-001 (done 2026-10-30, awaiting the owner):
+- Three sites the owner sent with notes (playfolly.com, replay.ai, scotchpos.com), captured with
+  `inspect.mjs` (`data/references/captures/`), judged by five AI jurors
+  (`data/references/jury/batch-001/`), reconciled in `data/references/batch-001.json` and the
+  readable `data/references/batch-001-review.md` (Bahasa Indonesia).
+- Result: of the owner's 10 claims, 3 confirmed, 5 confirmed with corrections, 2 contested; all
+  three sites carry an accessibility veto; the notes were aesthetic only and missed the business
+  and customer gaps the jurors found. Waiting on: the owner's 1–10 scores (human juror) and answers
+  to the questions at the end of the review.
+- Lessons fed back into the skill: the inspector now tracks text seen during the scroll (fixes
+  false "hidden content" on reveal-and-hide pages, closed menus and hidden duplicates); a search
+  snippet gave Playfolly the wrong business model ("configurator"; it is a waitlist), which is why
+  research must open its sources; motion can only be judged live, so the motion juror observes the
+  page in a browser.
 
 ## 4. Decisions and why (do not undo without a reason)
 
@@ -84,7 +92,8 @@ In progress (2026-10-30):
 
 ## 6. Next steps, in order
 
-1. Finish batch-001 reconciliation; ask the owner the open questions per reference.
+1. Collect the owner's scores and answers for batch-001; record them as a human juror file
+   (`data/references/jury/batch-001/<name>.json`, `kind: human`) and re-run `jury.mjs score --ref`.
 2. Build the reference pipeline (v0.4): read the Excel, capture each URL (layout + motion), run the
    jury, write library entries, derive directions/recipes/taste-rule proposals, version as an epoch.
 3. Mini eval: 5 briefs × (no skill, taste-skill, ours) judged by 2 designers + AI jury.

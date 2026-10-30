@@ -1,6 +1,6 @@
 {
   "target": "https://scotchpos.com/",
-  "time": "2026-10-30T16:03:46.498Z",
+  "time": "2026-10-30T16:21:28.567Z",
   "rules": {
     "purple-gradient": "warn",
     "gradient": "info",
@@ -48,7 +48,7 @@
           "rule": "img-broken",
           "message": "1 images failed to load",
           "sample": [
-            "https://bat.bing.com/action/0?ti=343253256&tm=gtm002&Ver=2&mid=17b767d6-6135-41ab-8d23-ebeef2cee316&bo=1&sid=7ebff420d47b11f1b3098d3d882f8c32&vid=7ec07380d47b11f180b9b3a8587ee9f2&vids=1&msclkid=N&gtm_tag_source=1&pi=0&lg=en-US&sw=1440&sh=900&sc=24&nwd=1&tl=Scotch%20%7C%20POS,%20Back%20Office%20%26%20eComm%20for%20Liquor%20Stores&p=https%3A%2F%2Fscotchpos.com%2F&r=&lt=1282&evt=pageLoad&sv=2&cdb=AQAQ&rn=574377"
+            "https://bat.bing.com/action/0?ti=343253256&tm=gtm002&Ver=2&mid=4808840a-21d9-4f1f-bee9-9b4b35f5c409&bo=1&sid=f7786100d47d11f1aedf4755271a98f3&vid=f7789b50d47d11f18e8b9f662a12fe15&vids=1&msclkid=N&gtm_tag_source=1&pi=0&lg=en-US&sw=1440&sh=900&sc=24&nwd=1&tl=Scotch%20%7C%20POS,%20Back%20Office%20%26%20eComm%20for%20Liquor%20Stores&p=https%3A%2F%2Fscotchpos.com%2F&r=&lt=945&evt=pageLoad&sv=2&cdb=AQAQ&rn=694869"
           ]
         },
         {
@@ -60,18 +60,6 @@
           "severity": "WARN",
           "rule": "shadow-on-everything",
           "message": "11 boxes carry a drop shadow"
-        },
-        {
-          "severity": "FAIL",
-          "rule": "hidden-content",
-          "message": "12 text elements are still invisible after scrolling the whole page (a reveal that never fires?)",
-          "sample": [
-            "Back Office",
-            "Control your store",
-            "POS & Payments",
-            "Hardware for every store",
-            "The new way"
-          ]
         }
       ],
       "inventory": {
@@ -234,7 +222,7 @@
           "rule": "img-broken",
           "message": "1 images failed to load",
           "sample": [
-            "https://bat.bing.com/action/0?ti=343253256&tm=gtm002&Ver=2&mid=0c0e41c6-38e4-4bf8-8050-81c0ce76eedd&bo=1&sid=8b033610d47b11f1a0490ddb4be7e697&vid=8b037b50d47b11f1b301ed9276df6edc&vids=1&msclkid=N&gtm_tag_source=1&pi=0&lg=en-US&sw=768&sh=1024&sc=24&nwd=1&tl=Scotch%20%7C%20POS,%20Back%20Office%20%26%20eComm%20for%20Liquor%20Stores&p=https%3A%2F%2Fscotchpos.com%2F&r=&lt=1045&evt=pageLoad&sv=2&cdb=AQAQ&rn=830135"
+            "https://bat.bing.com/action/0?ti=343253256&tm=gtm002&Ver=2&mid=f7ed9c8a-8c58-4f45-b11c-37d5813c264e&bo=1&sid=03da94d0d47e11f1882bc5c1d3c4b304&vid=03daf040d47e11f198f307b145907ca4&vids=1&msclkid=N&gtm_tag_source=1&pi=0&lg=en-US&sw=768&sh=1024&sc=24&nwd=1&tl=Scotch%20%7C%20POS,%20Back%20Office%20%26%20eComm%20for%20Liquor%20Stores&p=https%3A%2F%2Fscotchpos.com%2F&r=&lt=1052&evt=pageLoad&sv=2&cdb=AQAQ&rn=364843"
           ]
         },
         {
@@ -339,7 +327,7 @@
         "gradients": 3,
         "backdropBlur": 0,
         "transitions": 55,
-        "animatedElements": 18,
+        "animatedElements": 19,
         "cls": 0.001
       },
       "screenshots": [
@@ -418,7 +406,7 @@
           "rule": "img-broken",
           "message": "1 images failed to load",
           "sample": [
-            "https://bat.bing.com/action/0?ti=343253256&tm=gtm002&Ver=2&mid=9d4f859a-faf1-448c-a55f-5e26a3771adf&bo=1&sid=9533f040d47b11f1a6e9b5341542834e&vid=9533f220d47b11f1b79ecfc2d032382f&vids=1&msclkid=N&gtm_tag_source=1&pi=0&lg=en-US&sw=390&sh=844&sc=24&nwd=1&tl=Scotch%20%7C%20POS,%20Back%20Office%20%26%20eComm%20for%20Liquor%20Stores&p=https%3A%2F%2Fscotchpos.com%2F&r=&lt=869&evt=pageLoad&sv=2&cdb=AQAQ&rn=667179"
+            "https://bat.bing.com/action/0?ti=343253256&tm=gtm002&Ver=2&mid=74179b57-0f04-413d-8b72-cd921f8098b6&bo=1&sid=0e1d8690d47e11f19f58334f2fa3ab80&vid=0e1d9ca0d47e11f1807e37d28caa96af&vids=1&msclkid=N&gtm_tag_source=1&pi=0&lg=en-US&sw=390&sh=844&sc=24&nwd=1&tl=Scotch%20%7C%20POS,%20Back%20Office%20%26%20eComm%20for%20Liquor%20Stores&p=https%3A%2F%2Fscotchpos.com%2F&r=&lt=888&evt=pageLoad&sv=2&cdb=AQAQ&rn=479077"
           ]
         },
         {
@@ -514,7 +502,7 @@
         "gradients": 5,
         "backdropBlur": 0,
         "transitions": 111,
-        "animatedElements": 24,
+        "animatedElements": 23,
         "cls": 0.001
       },
       "screenshots": [
@@ -532,20 +520,7 @@
   },
   "checks": {
     "reducedMotion": {
-      "findings": [
-        {
-          "severity": "FAIL",
-          "rule": "reduced-motion",
-          "message": "12 text elements stay hidden when the visitor asks for reduced motion",
-          "sample": [
-            "Back Office",
-            "Control your store",
-            "POS & Payments",
-            "Hardware for every store",
-            "The new way"
-          ]
-        }
-      ],
+      "findings": [],
       "screenshot": "data/references/captures/ref-0003/reduced-motion-fold.png"
     },
     "noJavaScript": {
@@ -555,7 +530,7 @@
     }
   },
   "summary": {
-    "fail": 8,
+    "fail": 6,
     "warn": 7
   },
   "url": "https://scotchpos.com/",
@@ -592,27 +567,12 @@
       "rule": "img-broken",
       "message": "1 images failed to load",
       "sample": [
-        "https://bat.bing.com/action/0?ti=343253256&tm=gtm002&Ver=2&mid=17b767d6-6135-41ab-8d23-ebeef2cee316&bo=1&sid=7ebff420d47b11f1b3098d3d882f8c32&vid=7ec07380d47b11f180b9b3a8587ee9f2&vids=1&msclkid=N&gtm_tag_source=1&pi=0&lg=en-US&sw=1440&sh=900&sc=24&nwd=1&tl=Scotch%20%7C%20POS,%20Back%20Office%20%26%20eComm%20for%20Liquor%20Stores&p=https%3A%2F%2Fscotchpos.com%2F&r=&lt=1282&evt=pageLoad&sv=2&cdb=AQAQ&rn=574377"
+        "https://bat.bing.com/action/0?ti=343253256&tm=gtm002&Ver=2&mid=4808840a-21d9-4f1f-bee9-9b4b35f5c409&bo=1&sid=f7786100d47d11f1aedf4755271a98f3&vid=f7789b50d47d11f18e8b9f662a12fe15&vids=1&msclkid=N&gtm_tag_source=1&pi=0&lg=en-US&sw=1440&sh=900&sc=24&nwd=1&tl=Scotch%20%7C%20POS,%20Back%20Office%20%26%20eComm%20for%20Liquor%20Stores&p=https%3A%2F%2Fscotchpos.com%2F&r=&lt=945&evt=pageLoad&sv=2&cdb=AQAQ&rn=694869"
       ],
       "where": [
         "desktop",
         "tablet",
         "mobile"
-      ]
-    },
-    {
-      "severity": "FAIL",
-      "rule": "hidden-content",
-      "message": "12 text elements are still invisible after scrolling the whole page (a reveal that never fires?)",
-      "sample": [
-        "Back Office",
-        "Control your store",
-        "POS & Payments",
-        "Hardware for every store",
-        "The new way"
-      ],
-      "where": [
-        "desktop"
       ]
     },
     {
@@ -655,21 +615,6 @@
       ]
     },
     {
-      "severity": "FAIL",
-      "rule": "reduced-motion",
-      "message": "12 text elements stay hidden when the visitor asks for reduced motion",
-      "sample": [
-        "Back Office",
-        "Control your store",
-        "POS & Payments",
-        "Hardware for every store",
-        "The new way"
-      ],
-      "where": [
-        "reducedMotion"
-      ]
-    },
-    {
       "severity": "WARN",
       "rule": "too-many-font-sizes",
       "message": "8 different font sizes on the page (aim for 5 or fewer doing the visible work)",
@@ -703,8 +648,6 @@
       ],
       "where": [
         "tablet",
-        "tablet",
-        "mobile",
         "mobile"
       ]
     },

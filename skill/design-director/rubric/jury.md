@@ -18,7 +18,7 @@ builder's intentions, never another juror's answer.
 | **Conversion strategist** | Offers, funnels, landing-page testing | Is the action that pays obvious? Is the offer clear? Is trust built before the ask? | business |
 | **Customer researcher** | User research, usability | The five-questions test, in the customer's order and words, on a phone | customer |
 | **Brand and story strategist** | Messaging, copywriting, narrative | Does the message house come through? Does each section earn the next? | story |
-| **Interaction and motion designer** | Motion, micro-interaction, states | Does motion have a function? Are states and feedback right? (only when the page moves or has controls) | craft (motion) |
+| **Interaction and motion designer** | Motion, micro-interaction, states | Does motion have a function? Are states and feedback right? Motion cannot be judged from stills: this juror opens the page in a browser, records frames on load and scroll and reads `document.getAnimations()` | craft (motion) |
 | **Front-end and accessibility engineer** | Performance, accessibility, responsive | Reads the inspector report and the screenshots: contrast, tap targets, reflow, hidden content | craft (technical) |
 
 Each juror answers in the critique format of `rubric/critic.md`, scoring **only its own criteria**

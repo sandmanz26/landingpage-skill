@@ -1,7 +1,7 @@
 {
   "cmd": "score",
-  "jurors": 4,
-  "ai": 4,
+  "jurors": 5,
+  "ai": 5,
   "humans": 0,
   "humanWeight": 0,
   "rows": [
@@ -23,10 +23,10 @@
     },
     {
       "criterion": "craft",
-      "ai": 7,
+      "ai": 6.5,
       "human": null,
-      "final": 7,
-      "spread": 0,
+      "final": 6.5,
+      "spread": 1,
       "flag": false
     },
     {
@@ -54,6 +54,8 @@
       "flag": false
     }
   ],
-  "weighted": 6.7,
-  "vetoes": []
+  "weighted": 6.6,
+  "vetoes": [
+    "motion-accessibility: Large scroll-linked rotations (to 50deg/250px), infinite rotating waves and unpausable marquees with zero prefers-reduced-motion handling, plus a 3.60:1 primary CTA: do not copy without a reduce fallback and a darker CTA orange."
+  ]
 }

@@ -1,0 +1,88 @@
+{
+ "juror": "motion-accessibility",
+ "kind": "ai",
+ "refs": {
+  "ref-0001": {
+   "motion": "Almost static, CSS only (no GSAP/ScrollTrigger/Lenis/Framer/Lottie, 0 canvases, 4 animated elements). LOAD: hero product block 'appearUp' 750ms ease-out, opacity 0->1 + translateY(20%)->0; colour/mode control bar 'fadeIn' 750ms ease-out with 500ms delay (orientation: product first, then controls). SCROLL: no scroll-linked motion. The 234px 'Playfolly' wordmark simply scrolls off and a fixed compact header logo (320px wide) stays, which only works as orientation. CLICK (the one strong motion): a colourway swatch cross-fades the product renders (img opacity 300ms cubic-bezier(0,0,0.2,1)) and tweens the whole page background to the matching colour (background-color 700ms cubic-bezier(0,0,0.2,1)); headings and swatch borders recolour in 300ms. This is feedback plus story, because the page becomes the product colour. HOVER: 14 controls use a colour/background transition of 300ms cubic-bezier(0,0,0.2,1) (feedback). Carousels have 7 pagination dots and a 'Run' button; nothing auto-plays. No prefers-reduced-motion rules (0 found), but there is so little motion that this does not matter.",
+   "accessibility": "1) No-JS: 0 of 3144 characters visible. The whole page is a JS-rendered Shopify front with no fallback. 2) Contrast: the positioning paragraph 'Playfolly is what happens when architecture meets a treehouse' is #ffffff on #edbf7a = 1.70:1 at 30px (needs 3:1) in the default sand colourway, and it is the key message. Swatch labels are near-invisible: 'Yellow' #fefcd0 on #f9ee16 = 1.16:1, 'Sand' #fefbf3 on #faecc2 = 1.14:1, 'Green' 3.20:1. 3) Tap targets: 7 carousel dots at 12x48px on mobile, with no aria-label. 4) Unlabelled icon buttons: the day/night toggle (53x53) and the carousel arrows (36x36) are SVG-only with aria-label=null, so a screen reader announces 'button'. The swatches have no aria-pressed state. 5) The report's mobile 'hidden content' FAIL is a false positive: it is a display:none duplicate, and the visible copy has opacity 1. 6) 27 text elements sit within 12px of the screen edge on mobile.",
+   "scores": {
+    "craft": 5
+   },
+   "reasons": {
+    "craft": "The motion is sparse but disciplined: one 750ms ease-out entrance and a 700ms page-wide colour tween on swatch click that really sells the product. The technical base is poor: zero text without JS, a 1.70:1 hero statement, unlabelled icon buttons and 12px-wide dots."
+   },
+   "veto": "Hero copy white on sand #edbf7a = 1.70:1 at 30px and a page that renders 0 characters without JS: do not copy the colour-on-colour text or the JS-only rendering.",
+   "claims": [],
+   "take": [
+    "Colourway configurator tween: on swatch click, cross-fade the product image (opacity 300ms, cubic-bezier(0,0,0.2,1)) and tween the page/section background to the chosen colour (background-color 700ms, same curve). Retint headings and borders in 300ms. Function: feedback plus story (the page 'becomes' the product). Mark the swatch with aria-pressed and keep the text contrast at 4.5:1 or more on every colourway.",
+    "Two-beat hero entrance: product block opacity 0->1 + translateY(20%)->0 over 750ms ease-out, then the control bar fades in 750ms ease-out after a 500ms delay. Function: orientation (subject first, then the controls). Only CSS, so drop it under prefers-reduced-motion."
+   ],
+   "avoid": [
+    "White text on mid-tone brand colour fields (1.70:1 on #edbf7a) and swatch labels in tints of the swatch itself (1.14-1.16:1). If the background changes per colourway, the text colour must be re-checked per colourway.",
+    "Icon-only buttons (day/night toggle, carousel arrows) and 12x48px dots with no accessible name: give each an aria-label and a hit area of at least 24x24, ideally 44x44.",
+    "Rendering all copy client-side: 0/3144 characters without JS. Server-render the text."
+   ]
+  },
+  "ref-0002": {
+   "motion": "The richest and most finely tuned of the three. It is hand-rolled (no GSAP/ScrollTrigger/Lenis/Framer; CSS transitions plus rAF-driven inline styles): 121 animated elements and 133 transitions on desktop. LOAD/HERO LOOP: a perspective 'data stack' shows source labels (EMAIL, PDF, SLACK, JIRA, SCAN, MEETING) whose leader lines draw in via stroke-dashoffset 650-710ms cubic-bezier(0.32,0.72,0,1), with the label groups at opacity 420ms and a 90ms offset. Then document fragments (16 '.mote' cards: invoices, chat threads, code) wipe in with clip-path inset(0 100% 0 0)->inset(0) 270-470ms on the same curve, staggered 55ms, settle onto the stack and cycle to the next sources every ~2-3s. Function: story (your scattered data becomes a licensable asset). SCROLL: the motes move further with scroll position (translate3d updated per scroll, ~686 inline-style changes per 200px). The nav condenses into a pill (links translate ±12px and fade, 500ms cubic-bezier(0.4,0,0.2,1)) for orientation. Bracket-corner ticks around boxes fade in at 200ms with 200ms stagger up to 1800ms (decoration). The pricing bars rise at opacity + translateY(16px)->0 over 500ms cubic-bezier(0,0,0.2,1) with a 90ms stagger, and the tier labels slide in from translateX(-24px). Both reverse when they leave the viewport, so they replay. An image reveal is scroll-scrubbed (clip-path inset right 98.9% -> 72% across ~1400px of scroll). The 'Four steps' module auto-cycles VALUE/TERMS/PROTECT/PAYOUT with a 15000ms linear clip-path progress bar. Pipeline cards move with a 260ms stagger. HOVER: 150ms transform with cubic-bezier(0.23,1,0.32,1) on buttons, 300ms opacity elsewhere. REDUCED MOTION: two @media rules disable the hero transitions (.stp/.ps/.lead/.src/.kind set to transition:none), and in a reduce context the motes did not move. This is better than the other two.",
+   "accessibility": "1) Micro-type rendered as content: text at 8px ('process'), 6px, 4.2px (code 'def load_dataset...') on desktop, and down to 2.02-2.89px on tablet and 2.3-2.8px on mobile. Labels at 6.8-7.2px on mobile ('RL-2026-001 // Version 1.0', 'Tech'). There are 14-16 distinct font sizes; body copy is 14-14.5px and the footer is 10px. 2) Low-contrast greys everywhere: #aaaaaa on #fcfcfc = 2.26:1, #919191 on #fff = 3.15:1 ('Paid to businesses like yours'), #8d8d8d = 3.24:1, #898989 = 3.41:1, #727272 on #0c0c0b = 4.07:1, nav #777 = 4.48:1. 3) Mobile tap targets: 12 controls at 16px height (nav links 63x16, 95x16 ...). 4) The 'Four steps' tabs auto-advance on a 15s timer and the button list shows no pause control (WCAG 2.2.2 risk). Inactive panels ('Receive an offer', 'Get paid') sit at opacity 0. 5) The report's reduced-motion/hidden FAIL for '$10K - $100K' etc. is mostly an artifact. Live, those reveal at opacity 1 when in view even under reduce; they reset to opacity 0 when they leave the viewport, so an end-of-page sweep sees them hidden. No-JS is fine (4265/4557 characters).",
+   "scores": {
+    "craft": 6
+   },
+   "reasons": {
+    "craft": "The motion engineering is excellent: one consistent house curve, cubic-bezier(0.32,0.72,0,1), short 270-500ms durations, tight 55-90ms staggers, a narrative hero, and partial reduced-motion support. It is dragged down hard by 2-8px text used as readable content, greys at 2.26-4.48:1, 16px-tall tap targets and an unpausable 15s auto-cycle."
+   },
+   "veto": "Readable copy set at 2-8px and grey text down to 2.26:1: the 'neat micro-type' look must not be copied as-is.",
+   "claims": [
+    {
+     "claim": "relies on simple animated vector objects, following the business",
+     "verdict": "contested",
+     "evidence": "'Following the business' holds: the hero animates data sources (EMAIL, PDF, SLACK, JIRA) feeding document fragments onto a stack, which is exactly the product story. 'Simple vector objects' does not hold: these are 16 DOM 'mote' cards with dense mock invoices, chats and code (with text down to 2-4px), wiped in by clip-path at 270-470ms in a perspective scene, plus 45 SVG paths for the leader lines. It is layered, not simple."
+    },
+    {
+     "claim": "mostly small type looks neat",
+     "verdict": "contested",
+     "evidence": "Visually tidy, but measured: 14 font sizes on desktop (up to 16 on mobile), text at 8/6/4.2px on desktop and 2.0-2.9px on tablet/mobile, 10px footer, 14px body, and the small greys fail contrast (#aaaaaa on #fcfcfc 2.26:1, #919191 on #fff 3.15:1). Neat to the eye, not legible."
+    }
+   ],
+   "take": [
+    "House-curve clip-path wipe: reveal cards/labels with clip-path inset(0 100% 0 0) -> inset(0) over 270-470ms, cubic-bezier(0.32,0.72,0,1), with a 55ms stagger. Draw connector lines with stroke-dashoffset 1->0 over ~650ms on the same curve, and fade labels in 420ms with a 90ms offset. Function: story/continuity (data flows into the product). Wrap it in @media (prefers-reduced-motion: reduce) { transition: none } as Replay does.",
+    "Staggered bar rise for tiers: each bar opacity 0->1 + translateY(16px)->0, 500ms cubic-bezier(0,0,0.2,1), 90ms stagger, triggered on entering the viewport. Function: orientation (bigger tier = more bars). Use it once and do not reverse on exit unless the comparison benefits from replay.",
+    "Nav condense on scroll: when scrollY > ~1 viewport, collapse the links into a compact pill (links translate ±12px and fade, 500ms cubic-bezier(0.4,0,0.2,1)) and keep the primary CTA. Function: orientation plus keeping the CTA in reach."
+   ],
+   "avoid": [
+    "Decorative micro-labels and code snippets at 2-8px in grey (2.26-3.41:1): if it is meant to be read, make it 12px or more and 4.5:1. If it is texture, hide it from assistive tech with aria-hidden and do not count it as content.",
+    "A 15s auto-advancing step carousel with no pause, whose inactive panels sit at opacity 0: add pause/play (WCAG 2.2.2) or let the user drive the steps.",
+    "Reveals that reset to opacity 0 on viewport exit: anyone scrolling back or using find-in-page meets blank blocks, and automated audits flag the text as hidden."
+   ]
+  },
+  "ref-0003": {
+   "motion": "Framer-Motion-style (SSR inline 'opacity:0;transform:translateY(40px)'; no GSAP/ScrollTrigger/Lenis) with spring/lerp-smoothed scroll values, plus CSS loops. LOAD: the hero product UI fades into its device frame (img opacity 200ms cubic-bezier(0.4,0,0.2,1)). Behind it, 10 'wave' layers rotate 360deg forever at 5000ms and 10000ms linear (atmosphere). Two logo marquees run forever at 18.9s and 113.6s linear with no pause. SCROLL (what the 'micro-interaction when scrolling down' really is, and it is a full scroll story): (a) the header slides away on wheel-down, translateY(-100%) 300ms cubic-bezier(0.4,0,0.2,1), for orientation/space. (b) Hero side images (receipt and spreadsheet) drift apart, scroll-linked to translateX ±40px, translateY ±10px, rotate ±4deg over the first ~1600px with eased settling. (c) Feature icons fade in through WAAPI, 1000ms cubic-bezier(0.22,1,0.36,1), with a 140ms stagger; the grid takes 1200ms ease-out. (d) An orange tab-progress bar fills 28%->91% across the Ordering/Receiving/Analytics tabs. (e) The hardware 3D render is a 2s video that plays once when it enters view, not scrubbed. (f) Centrepiece 'The old way': paper clutter (invoices, sticky note 'Adjust inventory', 90s spreadsheets) flies outward, scroll-linked to translate(-250px,-150px) and rotate 50deg (and -190/-100/-10deg) between ~4600 and 7000px. Meanwhile the paragraph 'For decades, liquor retailers have been forced to choose...' lights up word by word, each word opacity 0.4->1, scroll-scrubbed with smoothing, about 300px of scroll per word offset. Then 'The new way' fades in late (opacity 0.04 at 410px from the top, 0.69 at 210px, 1 at -190px) together with the clean invoice UI sliding up from translateY(40px). Function: story (chaos of the old way swept away, the clean system revealed). Hover: 200-300ms colour transitions only. REDUCED MOTION: 0 prefers-reduced-motion rules. In a reduce context the waves, marquees, scroll-linked transforms, word scrub and video all ran exactly the same.",
+   "accessibility": "1) Reduced motion entirely ignored (0 @media rules). Infinite 5s/10s rotations, two endless marquees and scroll-linked rotations up to 50deg / 250px all run under prefers-reduced-motion: reduce, which can trigger vestibular symptoms, and the marquees have no pause (WCAG 2.2.2). 2) Primary CTA contrast: 'Book a demo' #ffffff on #f54900 = 3.60:1 at button size (needs 4.5). Also 'Designed with support from top retailers' #666 on #000 = 3.66:1, footer #4d4d4d on #000 = 2.48:1, and menu sub-label #808080 on #1a1a1a = 4.41:1. The word-scrub resting state is white at 0.4 opacity on black (about 3.7:1), which passes only because it is 42px. 3) Mobile tap targets: tab triggers 'Ordering/Receiving/Analytics' measured 109x2px, and 'Find out more' is 111x20. 4) 2 images without an alt attribute (one is the integration animation background). 5) The report's 'hidden content' and 'reduced-motion' FAILs ('Back Office', 'Control your store', 'Hardware for every store') are mostly false positives: they are opacity-0 nav mega-menu items. 'The new way' does appear, but only once the block is in the top ~40% of the viewport. No-JS is fine (1845/1853 characters).",
+   "scores": {
+    "craft": 6
+   },
+   "reasons": {
+    "craft": "The best storytelling motion of the three: the old-way paper explosion plus the word-by-word scrub plus the new-way reveal is a coherent, product-specific narrative, with smoothed scroll values and a 140ms stagger. It is undermined by zero reduced-motion handling for large rotations and endless loops, a 3.60:1 primary CTA and 2px-tall mobile tab targets."
+   },
+   "veto": "Large scroll-linked rotations (to 50deg/250px), infinite rotating waves and unpausable marquees with zero prefers-reduced-motion handling, plus a 3.60:1 primary CTA: do not copy without a reduce fallback and a darker CTA orange.",
+   "claims": [
+    {
+     "claim": "micro-interaction when scrolling down",
+     "verdict": "confirmed",
+     "evidence": "Measured on the live site. The only true micro-interaction is the header hiding on wheel-down (translateY(-100%), 300ms cubic-bezier(0.4,0,0.2,1)). The rest is macro scroll storytelling: hero side images drift to ±40px/±4deg, the 'old way' paper clutter flies out to translate(-250px,-150px) rotate(50deg), the paragraph lights up word by word (opacity 0.4->1 scrubbed), and 'The new way' fades in with the clean UI rising from translateY(40px)."
+    }
+   ],
+   "take": [
+    "Scroll-scrubbed word reveal: split a 30-45px statement into word spans resting at opacity 0.4; map scroll progress to each word's opacity (0.4->1) with a lerp/spring smoothing so words lead by ~300px of scroll each. Function: story/pacing (forces the key sentence to be read in rhythm). Under prefers-reduced-motion, show all words at opacity 1, and keep the resting state at 3:1 or more for large text.",
+    "Old-vs-new sweep: scatter 'old way' artefacts (paper, spreadsheets) around a statement and, scroll-linked over ~2000px, push them outward (translate up to ~250x150px, rotate up to ~50deg, eased to rest). Then fade in the 'new way' product UI (opacity 0->1 + translateY(40px)->0, ~1000ms cubic-bezier(0.22,1,0.36,1)). Function: story (before/after contrast). Replace it with a static before/after layout under reduce.",
+    "Hide-on-scroll-down header: translateY(-100%) over 300ms cubic-bezier(0.4,0,0.2,1) on wheel-down, return on scroll-up. Function: orientation plus reclaimed space."
+   ],
+   "avoid": [
+    "Endless background loops (10 'wave' layers rotating 360deg at 5s/10s linear) and logo marquees at 18.9s/113.6s with no pause control and no reduced-motion stop: this is decoration that costs battery and accessibility.",
+    "White text on #f54900 (3.60:1) for the primary CTA: darken the orange to about #c23a00 or use dark text.",
+    "Tab triggers whose hit area collapses to 109x2px on mobile (the visible progress line is the button): give tabs at least a 44px tall hit area."
+   ]
+  }
+ }
+}

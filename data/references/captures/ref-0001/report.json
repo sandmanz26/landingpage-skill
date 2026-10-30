@@ -1,6 +1,6 @@
 {
   "target": "https://playfolly.com",
-  "time": "2026-10-30T15:59:29.308Z",
+  "time": "2026-10-30T16:17:30.658Z",
   "rules": {
     "purple-gradient": "warn",
     "gradient": "info",
@@ -298,14 +298,6 @@
           "message": "4 blurred glass panels"
         },
         {
-          "severity": "FAIL",
-          "rule": "hidden-content",
-          "message": "1 text elements are still invisible after scrolling the whole page (a reveal that never fires?)",
-          "sample": [
-            "Playfolly is what happens when architecture meets a treehous"
-          ]
-        },
-        {
           "severity": "WARN",
           "rule": "console-errors",
           "message": "2 console or page errors",
@@ -416,7 +408,7 @@
     }
   },
   "summary": {
-    "fail": 3,
+    "fail": 2,
     "warn": 4
   },
   "url": "https://playfolly.com",
@@ -446,17 +438,6 @@
         "12x48 <button> \"\"",
         "12x48 <button> \"\"",
         "12x48 <button> \"\""
-      ],
-      "where": [
-        "mobile"
-      ]
-    },
-    {
-      "severity": "FAIL",
-      "rule": "hidden-content",
-      "message": "1 text elements are still invisible after scrolling the whole page (a reveal that never fires?)",
-      "sample": [
-        "Playfolly is what happens when architecture meets a treehous"
       ],
       "where": [
         "mobile"

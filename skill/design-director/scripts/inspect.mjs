@@ -13,7 +13,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { launch, resolveTarget, parseArgs } from './lib/browser.mjs';
-import { measure, hiddenText } from './lib/measure.mjs';
+import { measure, hiddenText, markSeen } from './lib/measure.mjs';
 
 const args = parseArgs(process.argv.slice(2));
 const target = args._[0];
@@ -102,6 +102,7 @@ async function scrollThrough(page, vh) {
       return ids;
     });
     n.forEach((id) => moved.add(id));
+    await page.evaluate(markSeen);
   };
   await sample();
   await page.mouse.move(200, 200);
@@ -150,7 +151,7 @@ for (const vp of VIEWPORTS) {
 
   const findings = m.findings;
   if (hidden.count > 0)
-    add(findings, 'FAIL', 'hidden-content', `${hidden.count} text elements are still invisible after scrolling the whole page (a reveal that never fires?)`, hidden.samples);
+    add(findings, 'FAIL', 'hidden-content', `${hidden.count} text elements were never visible during a full scroll (a reveal that never fires?)`, hidden.samples);
   if (cls > 0.25) add(findings, 'FAIL', 'layout-shift', `Layout shift ${cls.toFixed(3)} (over 0.25)`);
   else if (cls > 0.1) add(findings, 'WARN', 'layout-shift', `Layout shift ${cls.toFixed(3)} (over 0.1)`);
   if (errors.length) add(findings, 'WARN', 'console-errors', `${errors.length} console or page errors`, errors.slice(0, 5));
