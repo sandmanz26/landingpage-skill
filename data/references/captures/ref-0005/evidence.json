@@ -1,0 +1,271 @@
+{
+  "url": "https://maximatherapy.com/programs/3-to-18",
+  "time": "2026-10-31T18:54:09.147Z",
+  "sheets": {
+    "desktop": "data/references/captures/ref-0005/sheet-desktop.png",
+    "mobile": "data/references/captures/ref-0005/sheet-mobile.png",
+    "motion": "data/references/captures/ref-0005/motion-sheet.png"
+  },
+  "outline": {
+    "title": "Adaptive Skills Training for Children & Teens | Maxima Therapy",
+    "description": "Maxima Therapy offers adaptive skills training for ages 3–18, helping children and teens build communication, independence, emotional regulation, and daily life skills.",
+    "headings": [
+      "H3 7% ADAPTIVE SKILLS TRAINING",
+      "H3 41% WE BELIEVE INDEPENDENCE GROWS WHEN CHILDREN ARE SUPPORTED WITH CARE, RESPECT, AND THE FREE",
+      "H1 59% THE LEARNING YEARS SHAPE US",
+      "H2 79% We understand this can be a big step, but we made the process as quick, easy, and stress-f",
+      "H3 79% Start With a Referral",
+      "H3 81% Create a Customized Plan",
+      "H3 82% Learn and Grow Together",
+      "H2 87% WORKFORCE DEVELOPMENT"
+    ],
+    "actions": [
+      {
+        "label": "Donate",
+        "count": 2,
+        "firstAt": 0,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Programs",
+        "count": 1,
+        "firstAt": 94,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Careers",
+        "count": 1,
+        "firstAt": 94,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Shop",
+        "count": 1,
+        "firstAt": 94,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Service Areas",
+        "count": 1,
+        "firstAt": 94,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Our Story",
+        "count": 1,
+        "firstAt": 94,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "FAQ",
+        "count": 1,
+        "firstAt": 94,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Contact",
+        "count": 1,
+        "firstAt": 94,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Set cookie preferences",
+        "count": 1,
+        "firstAt": 98,
+        "firstScreen": false,
+        "sticky": false
+      }
+    ],
+    "prices": [],
+    "proofMentions": {},
+    "logoImages": 0,
+    "forms": 0,
+    "pageHeight": 11104
+  },
+  "motion": {
+    "libraries": {
+      "gsap": true,
+      "scrollTrigger": true,
+      "splitText": true,
+      "lenis": true,
+      "locomotive": false,
+      "swiper": false,
+      "lottie": true,
+      "framerMotion": false,
+      "viewTransitions": true
+    },
+    "maxRunning": 2,
+    "durationsMs": {
+      "min": 25000,
+      "max": 35000
+    },
+    "easings": [
+      "linear"
+    ],
+    "properties": [
+      "transform"
+    ],
+    "movingWithoutInput": 350,
+    "movingWithoutInputFurtherDown": [
+      {
+        "y": 900,
+        "moving": 11
+      },
+      {
+        "y": 1800,
+        "moving": 13
+      },
+      {
+        "y": 2700,
+        "moving": 11
+      },
+      {
+        "y": 3600,
+        "moving": 10
+      },
+      {
+        "y": 4500,
+        "moving": 7
+      }
+    ],
+    "scriptDrivenOnScroll": 20,
+    "infiniteLoops": 4,
+    "infiniteLoopsWithText": 0,
+    "pauseControl": false,
+    "steps": [
+      {
+        "y": 439,
+        "running": 2,
+        "scriptDriven": 19,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "path",
+            "hasText": false,
+            "duration": 25000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "path",
+            "hasText": false,
+            "duration": 35000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 900,
+        "running": 2,
+        "scriptDriven": 17,
+        "idleMoving": 11,
+        "sample": [
+          {
+            "target": "path",
+            "hasText": false,
+            "duration": 25000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "path",
+            "hasText": false,
+            "duration": 35000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1301,
+        "running": 0,
+        "scriptDriven": 13,
+        "idleMoving": null,
+        "sample": []
+      },
+      {
+        "y": 1800,
+        "running": 0,
+        "scriptDriven": 20,
+        "idleMoving": 13,
+        "sample": []
+      },
+      {
+        "y": 2210,
+        "running": 0,
+        "scriptDriven": 10,
+        "idleMoving": null,
+        "sample": []
+      },
+      {
+        "y": 2700,
+        "running": 0,
+        "scriptDriven": 12,
+        "idleMoving": 11,
+        "sample": []
+      },
+      {
+        "y": 3095,
+        "running": 0,
+        "scriptDriven": 9,
+        "idleMoving": null,
+        "sample": []
+      },
+      {
+        "y": 3600,
+        "running": 0,
+        "scriptDriven": 10,
+        "idleMoving": 10,
+        "sample": []
+      },
+      {
+        "y": 3982,
+        "running": 0,
+        "scriptDriven": 10,
+        "idleMoving": null,
+        "sample": []
+      },
+      {
+        "y": 4500,
+        "running": 0,
+        "scriptDriven": 6,
+        "idleMoving": 7,
+        "sample": []
+      }
+    ]
+  },
+  "reducedMotion": {
+    "movingWithoutInput": 56,
+    "movingOnScroll": 35,
+    "idleNavigation": null
+  },
+  "idleNavigation": {
+    "navigatedTo": "https://maximatherapy.com/programs/18-to-65",
+    "afterSeconds": 15
+  }
+}

@@ -88,6 +88,43 @@ const check = (name, ok, detail = '') => {
   check('jury ranks with human votes', rk.winner === 'B' && rk.humanTop === 'B');
 }
 
+// jury: two-score human votes
+{
+  const dir = path.join(tmp, 'jury2');
+  fs.mkdirSync(dir);
+  fs.writeFileSync(path.join(dir, 'ad.json'), JSON.stringify({ juror: 'art-director', kind: 'ai', scores: { distinctiveness: 7, craft: 7 } }));
+  fs.writeFileSync(path.join(dir, 'cs.json'), JSON.stringify({ juror: 'conversion-strategist', kind: 'ai', scores: { business: 4 } }));
+  fs.writeFileSync(path.join(dir, 'owner.json'), JSON.stringify({ juror: 'owner', kind: 'human', visual: 9, ship: 6 }));
+  const s = JSON.parse(run('jury.mjs', ['score', dir, '--json']).stdout);
+  check('jury reads a human visual score as distinctiveness and craft', s.rows.find((r) => r.criterion === 'craft').human === 9);
+  check('jury reads a human ship score as the overall', s.humanOverall === 6 && s.visualVsShip === 3, JSON.stringify(s));
+}
+
+// evidence
+{
+  const dir = path.join(tmp, 'evidence');
+  const r = run('evidence.mjs', [path.join(fixtures, 'motion.html'), '--dir', dir, '--idle', '3']);
+  const ev = fs.existsSync(path.join(dir, 'evidence.json')) ? JSON.parse(fs.readFileSync(path.join(dir, 'evidence.json'), 'utf8')) : null;
+  check('evidence runs and writes evidence.json', !!ev, r.stdout + r.stderr);
+  if (ev) {
+    check('evidence catches a page that navigates by itself', !!ev.idleNavigation, JSON.stringify(ev.idleNavigation));
+    check('evidence catches motion with no input', ev.motion.movingWithoutInput > 0);
+    check('evidence catches endless moving text', ev.motion.infiniteLoopsWithText > 0 && !ev.motion.pauseControl, JSON.stringify(ev.motion));
+    check('evidence catches motion that ignores reduced motion', ev.reducedMotion.movingWithoutInput > 0, JSON.stringify(ev.reducedMotion));
+    check('evidence outlines headings and actions', ev.outline.headings.length === 3 && ev.outline.actions.some((a) => a.label === 'Start today' && !a.firstScreen), JSON.stringify(ev.outline));
+    check('evidence flags no price and no action on the first screen', /no price/.test(r.stdout) && /no styled action in the first screen/.test(r.stdout), r.stdout);
+    check('evidence draws a motion sheet', fs.existsSync(path.join(dir, 'motion-sheet.png')));
+  }
+}
+
+// capture
+{
+  const list = path.join(tmp, 'empty.txt');
+  fs.writeFileSync(list, '# nothing here\nnot-a-url line\n');
+  const r = run('capture.mjs', [list, '--out', path.join(tmp, 'captures')]);
+  check('capture refuses a list without "<id> <url>" lines', r.status === 2 && /No "<id> <url>" lines/.test(r.stderr), r.stdout + r.stderr);
+}
+
 // draw
 {
   const a = run('draw.mjs', ['--sector', 'health', '--seed', '7']);

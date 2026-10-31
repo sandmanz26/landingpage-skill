@@ -10,10 +10,13 @@ page itself and against the other jurors before it shapes the skill.
    says nothing yet about the business or the customer.
 3. **Find out the business** behind the site (research, short): what it sells, to whom, and the
    action the page wants. A visual choice can only be judged against that.
-4. **Capture** the site (layout, fonts, colours, motion) when network access allows; until then the
-   entry stays `pending-capture` and no visual claim is confirmed.
-5. **Jury** (`rubric/jury.md`): the AI jurors judge the captured screens. Their views are added
-   beside the human note.
+4. **Capture** the whole batch at once: write `<id> <url>` lines to `data/references/batch-<n>.txt`
+   and run `capture.mjs data/references/batch-<n>.txt --jobs 3`. Each reference gets its evidence
+   pack in `data/references/captures/<id>/`. Without network access the entry stays
+   `pending-capture` and no visual claim is confirmed.
+5. **Jury** (`rubric/jury.md`): the AI jurors read the evidence packs, not the live sites. Their
+   views are added beside the human note. The human score is two numbers, `visual` and `ship`
+   (would send it to a client), 1–10 each.
 6. **Reconcile**: for each claim in the note, mark *confirmed* (the capture and the jurors agree),
    *contested* (a juror disagrees, with evidence) or *unverifiable* (not visible in the capture).
    Wrong terms are corrected in the parsed fields (for example "wireframe" for a real product UI),

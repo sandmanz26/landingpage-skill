@@ -1,6 +1,6 @@
 {
-  "target": "https://future.co/?ref=lapaninja",
-  "time": "2026-10-30T16:39:04.657Z",
+  "target": "https://future.co",
+  "time": "2026-10-31T18:51:24.286Z",
   "rules": {
     "purple-gradient": "warn",
     "gradient": "info",
@@ -16,7 +16,7 @@
   "viewports": {
     "desktop": {
       "width": 1440,
-      "pageHeight": 6280,
+      "pageHeight": 5996,
       "findings": [
         {
           "severity": "FAIL",
@@ -31,7 +31,7 @@
         {
           "severity": "WARN",
           "rule": "too-many-font-sizes",
-          "message": "14 different font sizes on the page (aim for 5 or fewer doing the visible work)"
+          "message": "12 different font sizes on the page (aim for 5 or fewer doing the visible work)"
         },
         {
           "severity": "WARN",
@@ -67,28 +67,16 @@
         },
         {
           "severity": "FAIL",
-          "rule": "contrast",
-          "message": "8 text colour pairs below WCAG AA",
-          "sample": [
-            "#ffffff on #ffffff = 1.00:1 (needs 4.5) <a> \"Coaches\"",
-            "#272a2b on #2a2c2a = 1.03:1 (needs 4.5) <span> \"Find Your Coach\"",
-            "#272a2b on #000000 = 1.45:1 (needs 4.5) <span> \"Find Your Coach\"",
-            "#787878 on #f0f0f0 = 3.87:1 (needs 4.5) <p> \"Your coach checks in, monitors your progress, and \"",
-            "#ffffff on #ffffff = 1.00:1 (needs 3) <h2> \"A 360° roadmap that’s uniquely yours\""
-          ]
-        },
-        {
-          "severity": "FAIL",
           "rule": "img-broken",
           "message": "1 images failed to load",
           "sample": [
-            "https://bat.bing.com/action/0?ti=343275762&tm=gtm002&Ver=2&mid=ac234920-78ce-42c9-a9ac-eea697109b41&bo=1&sid=6d399800d48011f1915cff041c2e55ff&vid=6d3a2e40d48011f1876fb78935699c0b&vids=1&msclkid=N&pi=0&lg=en-US&sw=1440&sh=900&sc=24&nwd=1&tl=Future%20%7C%20Custom,%201-on-1%20Personal%20Training&kw=personal%20training,fitness%20coaching,online%20personal%20trainer,workout%20plans,fitness%20app,personal%20coach,exercise%20program,fitness%20goals,health%20coaching,Future%20Fit&p=https%3A%2F%2Ffuture.co%2F%3Fref%3Dlapaninja&r=&lt=735&evt=pageLoad&sv=2&cdb=AQAQ&rn=169014"
+            "https://bat.bing.com/action/0?ti=343275762&tm=gtm002&Ver=2&mid=0746144c-bd28-489a-b8cf-63c0fc300149&bo=1&sid=14888fb0d55c11f181d3c549991dd53b&vid=14897f50d55c11f1b4921fc178c5d390&vids=1&msclkid=N&pi=0&lg=en-US&sw=1440&sh=900&sc=24&nwd=1&tl=Future%20%7C%20Custom,%201-on-1%20Personal%20Training&kw=personal%20training,fitness%20coaching,online%20personal%20trainer,workout%20plans,fitness%20app,personal%20coach,exercise%20program,fitness%20goals,health%20coaching,Future%20Fit&p=https%3A%2F%2Ffuture.co%2F&r=&lt=849&evt=pageLoad&sv=2&cdb=AQAQ&rn=198915"
           ]
         },
         {
           "severity": "WARN",
           "rule": "purple-gradient",
-          "message": "8 purple or indigo gradients",
+          "message": "9 purple or indigo gradients",
           "sample": [
             "<div> \"\"",
             "<div> \"\"",
@@ -98,17 +86,34 @@
         {
           "severity": "INFO",
           "rule": "gradient",
-          "message": "16 gradient backgrounds"
+          "message": "17 gradient backgrounds"
         },
         {
           "severity": "INFO",
           "rule": "glass",
-          "message": "57 blurred glass panels"
+          "message": "58 blurred glass panels"
         },
         {
           "severity": "WARN",
           "rule": "shadow-on-everything",
-          "message": "50 boxes carry a drop shadow"
+          "message": "52 boxes carry a drop shadow"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "7 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#ffffff on screen = 4.35:1 median, 1.54:1 in the worst tenth (needs 4.5) <a> \"Blog\"",
+            "#ffffff on screen = 4.34:1 median, 2.85:1 in the worst tenth (needs 4.5) <p> \"Dedicated coaching and support to help you train f\"",
+            "#ffffff on screen = 4.28:1 median, 1.94:1 in the worst tenth (needs 4.5) <span> \"$50 first month, then $199/month.\"",
+            "#ffffff on screen = 4.28:1 median, 2.35:1 in the worst tenth (needs 4.5) <p> \"Cancel within 30 days for a full refund.\"",
+            "#787878 on #f0f0f0 = 3.87:1 (needs 4.5, not re-checked on screen) <p> \"Your coach checks in, monitors your progress, and \""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "contrast-unverified",
+          "message": "22 suspected contrast problems could not be re-measured on screen"
         }
       ],
       "inventory": {
@@ -134,7 +139,6 @@
           100,
           84,
           68,
-          50,
           48,
           30,
           22,
@@ -143,7 +147,6 @@
           17,
           16,
           14,
-          13,
           11
         ],
         "textColours": [
@@ -159,18 +162,16 @@
         ],
         "backgroundColours": [
           "#ffffff",
-          "#2a2c2a",
           "#000000",
           "#f0f0f0",
           "#1a1a1a"
         ],
         "chromaticColours": 0,
         "spacing": {
-          "distinct": 30,
-          "offScale": 16,
+          "distinct": 29,
+          "offScale": 15,
           "values": [
             2,
-            3,
             4,
             6,
             8,
@@ -178,27 +179,27 @@
             10,
             12,
             13.5,
+            15,
             16,
             18,
             20,
-            22,
             22.5,
             23,
             24,
             25,
-            26,
             27,
             30,
             32,
             36,
             40,
+            48,
             60,
             64,
             84,
             87,
             100,
-            120,
-            125
+            125,
+            139
           ]
         },
         "radii": [
@@ -213,12 +214,12 @@
           "50px",
           "27px"
         ],
-        "shadows": 52,
-        "gradients": 16,
-        "backdropBlur": 57,
-        "transitions": 42,
+        "shadows": 54,
+        "gradients": 17,
+        "backdropBlur": 58,
+        "transitions": 46,
         "animatedElements": 13,
-        "cls": 0
+        "cls": 0.001
       },
       "screenshots": [
         "data/references/captures/ref-0006/desktop-fold.png",
@@ -327,22 +328,10 @@
         },
         {
           "severity": "FAIL",
-          "rule": "contrast",
-          "message": "8 text colour pairs below WCAG AA",
-          "sample": [
-            "#272a2b on #2a2c2a = 1.03:1 (needs 4.5) <span> \"Find Your Coach\"",
-            "#272a2b on #000000 = 1.45:1 (needs 4.5) <span> \"Find Your Coach\"",
-            "#787878 on #f0f0f0 = 3.87:1 (needs 4.5) <p> \"Your coach checks in, monitors your progress, and \"",
-            "#3b3b3b on #000000 = 1.87:1 (needs 3) <span> \"personal trainer\"",
-            "#ffffff on #ffffff = 1.00:1 (needs 3) <h2> \"A 360° roadmap that’s uniquely yours\""
-          ]
-        },
-        {
-          "severity": "FAIL",
           "rule": "img-broken",
           "message": "1 images failed to load",
           "sample": [
-            "https://bat.bing.com/action/0?ti=343275762&tm=gtm002&Ver=2&mid=b4b9a6a2-9946-4314-a3f3-f9154f657fbd&bo=1&sid=7fcc9a80d48011f19bc3b38bd81b72f4&vid=7fccf1d0d48011f181b05dd56a46af7b&vids=1&msclkid=N&pi=0&lg=en-US&sw=768&sh=1024&sc=24&nwd=1&tl=Future%20%7C%20Custom,%201-on-1%20Personal%20Training&kw=personal%20training,fitness%20coaching,online%20personal%20trainer,workout%20plans,fitness%20app,personal%20coach,exercise%20program,fitness%20goals,health%20coaching,Future%20Fit&p=https%3A%2F%2Ffuture.co%2F%3Fref%3Dlapaninja&r=&lt=706&evt=pageLoad&sv=2&cdb=AQAQ&rn=92080"
+            "https://bat.bing.com/action/0?ti=343275762&tm=gtm002&Ver=2&mid=51f3f6ba-50ab-4110-a19c-4a3da5c53526&bo=1&sid=44f78a80d55c11f1bcbfdb3f81312ffe&vid=44f7ddf0d55c11f1bfa73d9b628c8c13&vids=1&msclkid=N&pi=0&lg=en-US&sw=768&sh=1024&sc=24&nwd=1&tl=Future%20%7C%20Custom,%201-on-1%20Personal%20Training&kw=personal%20training,fitness%20coaching,online%20personal%20trainer,workout%20plans,fitness%20app,personal%20coach,exercise%20program,fitness%20goals,health%20coaching,Future%20Fit&p=https%3A%2F%2Ffuture.co%2F&r=&lt=574&evt=pageLoad&sv=2&cdb=AQAQ&rn=490213"
           ]
         },
         {
@@ -369,6 +358,21 @@
           "severity": "WARN",
           "rule": "shadow-on-everything",
           "message": "48 boxes carry a drop shadow"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "3 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#787878 on #f0f0f0 = 3.87:1 (needs 4.5, not re-checked on screen) <p> \"Your coach checks in, monitors your progress, and \"",
+            "#f5f6f6 on screen = 3.22:1 median, 1.93:1 in the worst tenth (needs 4.5) <div> \"+ Committed to 4 days/week\"",
+            "#767778 on screen = 3.44:1 median, 2.23:1 in the worst tenth (needs 4.5) <p> \"5 months with Future\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "contrast-unverified",
+          "message": "25 suspected contrast problems could not be re-measured on screen"
         }
       ],
       "inventory": {
@@ -470,7 +474,7 @@
         "backdropBlur": 56,
         "transitions": 38,
         "animatedElements": 11,
-        "cls": 0.003
+        "cls": 0.005
       },
       "screenshots": [
         "data/references/captures/ref-0006/tablet-fold.png",
@@ -484,7 +488,7 @@
     },
     "mobile": {
       "width": 390,
-      "pageHeight": 5677,
+      "pageHeight": 5967,
       "findings": [
         {
           "severity": "FAIL",
@@ -586,24 +590,12 @@
         },
         {
           "severity": "FAIL",
-          "rule": "contrast",
-          "message": "5 text colour pairs below WCAG AA",
-          "sample": [
-            "#ffffff on #ffffff = 1.00:1 (needs 3) <h1> \"Personal training, reimagined\"",
-            "#ffffff on #ffffff = 1.00:1 (needs 4.5) <p> \"Dedicated coaching and support to help you train f\"",
-            "#787878 on #f0f0f0 = 3.87:1 (needs 4.5) <p> \"Your coach checks in, monitors your progress, and \"",
-            "#f5f6f6 on #ffffff = 1.08:1 (needs 4.5) <div> \"+ Committed to 4 days/week\"",
-            "#767778 on #ffffff = 4.49:1 (needs 4.5) <p> \"5 months with Future\""
-          ]
-        },
-        {
-          "severity": "FAIL",
           "rule": "tap-target",
           "message": "16 controls smaller than 24x24px on a phone",
           "sample": [
             "18x24 <a> \"\"",
             "111x20 <a> \"\"",
-            "307x18 <a> \"NEW: health coaching— nutrition, sleep, and more\"",
+            "253x18 <a> \"New health coaching + DEXA plan in beta.\"",
             "59x19 <a> \"Coaches\""
           ]
         },
@@ -622,13 +614,13 @@
           "rule": "img-broken",
           "message": "1 images failed to load",
           "sample": [
-            "https://bat.bing.com/action/0?ti=343275762&tm=gtm002&Ver=2&mid=0360dfc2-9341-4892-8fbd-2eb2d373d23a&bo=1&sid=91801040d48011f1a8f1c1c33f46ff11&vid=9180ab20d48011f194b5cb80ad6b111c&vids=1&msclkid=N&pi=0&lg=en-US&sw=390&sh=844&sc=24&nwd=1&tl=Future%20%7C%20Custom,%201-on-1%20Personal%20Training&kw=personal%20training,fitness%20coaching,online%20personal%20trainer,workout%20plans,fitness%20app,personal%20coach,exercise%20program,fitness%20goals,health%20coaching,Future%20Fit&p=https%3A%2F%2Ffuture.co%2F%3Fref%3Dlapaninja&r=&lt=692&evt=pageLoad&sv=2&cdb=AQAQ&rn=151979"
+            "https://bat.bing.com/action/0?ti=343275762&tm=gtm002&Ver=2&mid=507df0e6-e8e2-45f8-a462-eacb9d8b822a&bo=1&sid=77ec1490d55c11f19c9b5912be9baeea&vid=77ec6de0d55c11f19c49955881f40c19&vids=1&msclkid=N&pi=0&lg=en-US&sw=390&sh=844&sc=24&nwd=1&tl=Future%20%7C%20Custom,%201-on-1%20Personal%20Training&kw=personal%20training,fitness%20coaching,online%20personal%20trainer,workout%20plans,fitness%20app,personal%20coach,exercise%20program,fitness%20goals,health%20coaching,Future%20Fit&p=https%3A%2F%2Ffuture.co%2F&r=&lt=1378&evt=pageLoad&sv=2&cdb=AQAQ&rn=273307"
           ]
         },
         {
           "severity": "WARN",
           "rule": "purple-gradient",
-          "message": "8 purple or indigo gradients",
+          "message": "7 purple or indigo gradients",
           "sample": [
             "<div> \"\"",
             "<div> \"\"",
@@ -638,33 +630,40 @@
         {
           "severity": "INFO",
           "rule": "gradient",
-          "message": "16 gradient backgrounds"
+          "message": "15 gradient backgrounds"
         },
         {
           "severity": "INFO",
           "rule": "glass",
-          "message": "57 blurred glass panels"
+          "message": "56 blurred glass panels"
         },
         {
           "severity": "WARN",
           "rule": "shadow-on-everything",
-          "message": "45 boxes carry a drop shadow"
+          "message": "43 boxes carry a drop shadow"
         },
         {
-          "severity": "WARN",
-          "rule": "console-errors",
-          "message": "2 console or page errors",
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "4 text elements below WCAG AA (measured on screen pixels)",
           "sample": [
-            "Failed to load resource: the server responded with a status of 502 (Bad Gateway)",
-            "Refused to execute script from 'https://future.co/_next/static/chunks/1subvkojcvw2o.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+            "#ffffff on screen = 3.54:1 median, 3.28:1 in the worst tenth (needs 4.5) <p> \"Cancel within 30 days for a full refund.\"",
+            "#787878 on #f0f0f0 = 3.87:1 (needs 4.5, not re-checked on screen) <p> \"Your coach checks in, monitors your progress, and \"",
+            "#f5f6f6 on screen = 2.53:1 median, 1.65:1 in the worst tenth (needs 4.5) <div> \"+ Committed to 4 days/week\"",
+            "#767778 on screen = 3.44:1 median, 2.23:1 in the worst tenth (needs 4.5) <p> \"5 months with Future\""
           ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "contrast-unverified",
+          "message": "25 suspected contrast problems could not be re-measured on screen"
         }
       ],
       "inventory": {
         "families": [
           {
             "family": "seasonSans",
-            "share": 80
+            "share": 79
           },
           {
             "family": "seasonMix",
@@ -681,13 +680,16 @@
         ],
         "fontSizes": [
           34,
+          32,
           31,
           24,
           23,
+          18,
           17,
           16,
           15,
           14,
+          13,
           11,
           10
         ],
@@ -703,6 +705,7 @@
         ],
         "backgroundColours": [
           "#ffffff",
+          "#2a2c2a",
           "#000000",
           "#f0f0f0",
           "#1a1a1a",
@@ -710,10 +713,11 @@
         ],
         "chromaticColours": 0,
         "spacing": {
-          "distinct": 24,
-          "offScale": 12,
+          "distinct": 27,
+          "offScale": 15,
           "values": [
             2,
+            3,
             4,
             6,
             8,
@@ -721,13 +725,14 @@
             11,
             12,
             13,
-            15,
             16,
+            18,
             20,
-            23,
+            22,
             24,
             25,
             25.5,
+            26,
             30,
             32,
             35,
@@ -736,7 +741,8 @@
             48,
             64,
             84,
-            100
+            101.5,
+            120
           ]
         },
         "radii": [
@@ -748,12 +754,12 @@
           "32px",
           "30px"
         ],
-        "shadows": 51,
-        "gradients": 16,
-        "backdropBlur": 57,
-        "transitions": 42,
-        "animatedElements": 11,
-        "cls": 0.092
+        "shadows": 49,
+        "gradients": 15,
+        "backdropBlur": 56,
+        "transitions": 38,
+        "animatedElements": 12,
+        "cls": 0.01
       },
       "screenshots": [
         "data/references/captures/ref-0006/mobile-fold.png",
@@ -763,7 +769,8 @@
         "data/references/captures/ref-0006/mobile-page-04.png",
         "data/references/captures/ref-0006/mobile-page-05.png",
         "data/references/captures/ref-0006/mobile-page-06.png",
-        "data/references/captures/ref-0006/mobile-page-07.png"
+        "data/references/captures/ref-0006/mobile-page-07.png",
+        "data/references/captures/ref-0006/mobile-page-08.png"
       ]
     }
   },
@@ -774,15 +781,15 @@
     },
     "noJavaScript": {
       "findings": [],
-      "withJs": 3087,
-      "withoutJs": 3101
+      "withJs": 3095,
+      "withoutJs": 3090
     }
   },
   "summary": {
-    "fail": 5,
-    "warn": 12
+    "fail": 6,
+    "warn": 11
   },
-  "url": "https://future.co/?ref=lapaninja",
+  "url": "https://future.co",
   "findings": [
     {
       "severity": "FAIL",
@@ -796,26 +803,10 @@
     },
     {
       "severity": "FAIL",
-      "rule": "contrast",
-      "message": "8 text colour pairs below WCAG AA",
-      "sample": [
-        "#ffffff on #ffffff = 1.00:1 (needs 4.5) <a> \"Coaches\"",
-        "#272a2b on #2a2c2a = 1.03:1 (needs 4.5) <span> \"Find Your Coach\"",
-        "#272a2b on #000000 = 1.45:1 (needs 4.5) <span> \"Find Your Coach\"",
-        "#787878 on #f0f0f0 = 3.87:1 (needs 4.5) <p> \"Your coach checks in, monitors your progress, and \"",
-        "#ffffff on #ffffff = 1.00:1 (needs 3) <h2> \"A 360° roadmap that’s uniquely yours\""
-      ],
-      "where": [
-        "desktop",
-        "tablet"
-      ]
-    },
-    {
-      "severity": "FAIL",
       "rule": "img-broken",
       "message": "1 images failed to load",
       "sample": [
-        "https://bat.bing.com/action/0?ti=343275762&tm=gtm002&Ver=2&mid=ac234920-78ce-42c9-a9ac-eea697109b41&bo=1&sid=6d399800d48011f1915cff041c2e55ff&vid=6d3a2e40d48011f1876fb78935699c0b&vids=1&msclkid=N&pi=0&lg=en-US&sw=1440&sh=900&sc=24&nwd=1&tl=Future%20%7C%20Custom,%201-on-1%20Personal%20Training&kw=personal%20training,fitness%20coaching,online%20personal%20trainer,workout%20plans,fitness%20app,personal%20coach,exercise%20program,fitness%20goals,health%20coaching,Future%20Fit&p=https%3A%2F%2Ffuture.co%2F%3Fref%3Dlapaninja&r=&lt=735&evt=pageLoad&sv=2&cdb=AQAQ&rn=169014"
+        "https://bat.bing.com/action/0?ti=343275762&tm=gtm002&Ver=2&mid=0746144c-bd28-489a-b8cf-63c0fc300149&bo=1&sid=14888fb0d55c11f181d3c549991dd53b&vid=14897f50d55c11f1b4921fc178c5d390&vids=1&msclkid=N&pi=0&lg=en-US&sw=1440&sh=900&sc=24&nwd=1&tl=Future%20%7C%20Custom,%201-on-1%20Personal%20Training&kw=personal%20training,fitness%20coaching,online%20personal%20trainer,workout%20plans,fitness%20app,personal%20coach,exercise%20program,fitness%20goals,health%20coaching,Future%20Fit&p=https%3A%2F%2Ffuture.co%2F&r=&lt=849&evt=pageLoad&sv=2&cdb=AQAQ&rn=198915"
       ],
       "where": [
         "desktop",
@@ -826,16 +817,29 @@
     {
       "severity": "FAIL",
       "rule": "contrast",
-      "message": "5 text colour pairs below WCAG AA",
+      "message": "7 text elements below WCAG AA (measured on screen pixels)",
       "sample": [
-        "#ffffff on #ffffff = 1.00:1 (needs 3) <h1> \"Personal training, reimagined\"",
-        "#ffffff on #ffffff = 1.00:1 (needs 4.5) <p> \"Dedicated coaching and support to help you train f\"",
-        "#787878 on #f0f0f0 = 3.87:1 (needs 4.5) <p> \"Your coach checks in, monitors your progress, and \"",
-        "#f5f6f6 on #ffffff = 1.08:1 (needs 4.5) <div> \"+ Committed to 4 days/week\"",
-        "#767778 on #ffffff = 4.49:1 (needs 4.5) <p> \"5 months with Future\""
+        "#ffffff on screen = 4.35:1 median, 1.54:1 in the worst tenth (needs 4.5) <a> \"Blog\"",
+        "#ffffff on screen = 4.34:1 median, 2.85:1 in the worst tenth (needs 4.5) <p> \"Dedicated coaching and support to help you train f\"",
+        "#ffffff on screen = 4.28:1 median, 1.94:1 in the worst tenth (needs 4.5) <span> \"$50 first month, then $199/month.\"",
+        "#ffffff on screen = 4.28:1 median, 2.35:1 in the worst tenth (needs 4.5) <p> \"Cancel within 30 days for a full refund.\"",
+        "#787878 on #f0f0f0 = 3.87:1 (needs 4.5, not re-checked on screen) <p> \"Your coach checks in, monitors your progress, and \""
       ],
       "where": [
-        "mobile"
+        "desktop"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "3 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#787878 on #f0f0f0 = 3.87:1 (needs 4.5, not re-checked on screen) <p> \"Your coach checks in, monitors your progress, and \"",
+        "#f5f6f6 on screen = 3.22:1 median, 1.93:1 in the worst tenth (needs 4.5) <div> \"+ Committed to 4 days/week\"",
+        "#767778 on screen = 3.44:1 median, 2.23:1 in the worst tenth (needs 4.5) <p> \"5 months with Future\""
+      ],
+      "where": [
+        "tablet"
       ]
     },
     {
@@ -845,8 +849,22 @@
       "sample": [
         "18x24 <a> \"\"",
         "111x20 <a> \"\"",
-        "307x18 <a> \"NEW: health coaching— nutrition, sleep, and more\"",
+        "253x18 <a> \"New health coaching + DEXA plan in beta.\"",
         "59x19 <a> \"Coaches\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "4 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#ffffff on screen = 3.54:1 median, 3.28:1 in the worst tenth (needs 4.5) <p> \"Cancel within 30 days for a full refund.\"",
+        "#787878 on #f0f0f0 = 3.87:1 (needs 4.5, not re-checked on screen) <p> \"Your coach checks in, monitors your progress, and \"",
+        "#f5f6f6 on screen = 2.53:1 median, 1.65:1 in the worst tenth (needs 4.5) <div> \"+ Committed to 4 days/week\"",
+        "#767778 on screen = 3.44:1 median, 2.23:1 in the worst tenth (needs 4.5) <p> \"5 months with Future\""
       ],
       "where": [
         "mobile"
@@ -865,7 +883,7 @@
     {
       "severity": "WARN",
       "rule": "too-many-font-sizes",
-      "message": "14 different font sizes on the page (aim for 5 or fewer doing the visible work)",
+      "message": "12 different font sizes on the page (aim for 5 or fewer doing the visible work)",
       "where": [
         "desktop"
       ]
@@ -886,39 +904,44 @@
     {
       "severity": "WARN",
       "rule": "purple-gradient",
-      "message": "8 purple or indigo gradients",
+      "message": "9 purple or indigo gradients",
       "sample": [
         "<div> \"\"",
         "<div> \"\"",
         "<div> \"\""
       ],
       "where": [
-        "desktop",
-        "mobile"
+        "desktop"
       ]
     },
     {
       "severity": "INFO",
       "rule": "gradient",
-      "message": "16 gradient backgrounds",
+      "message": "17 gradient backgrounds",
       "where": [
-        "desktop",
-        "mobile"
+        "desktop"
       ]
     },
     {
       "severity": "INFO",
       "rule": "glass",
-      "message": "57 blurred glass panels",
+      "message": "58 blurred glass panels",
       "where": [
-        "desktop",
-        "mobile"
+        "desktop"
       ]
     },
     {
       "severity": "WARN",
       "rule": "shadow-on-everything",
-      "message": "50 boxes carry a drop shadow",
+      "message": "52 boxes carry a drop shadow",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "contrast-unverified",
+      "message": "22 suspected contrast problems could not be re-measured on screen",
       "where": [
         "desktop"
       ]
@@ -945,7 +968,8 @@
         "<div> \"\""
       ],
       "where": [
-        "tablet"
+        "tablet",
+        "mobile"
       ]
     },
     {
@@ -953,7 +977,8 @@
       "rule": "gradient",
       "message": "15 gradient backgrounds",
       "where": [
-        "tablet"
+        "tablet",
+        "mobile"
       ]
     },
     {
@@ -961,7 +986,8 @@
       "rule": "glass",
       "message": "56 blurred glass panels",
       "where": [
-        "tablet"
+        "tablet",
+        "mobile"
       ]
     },
     {
@@ -970,6 +996,15 @@
       "message": "48 boxes carry a drop shadow",
       "where": [
         "tablet"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "contrast-unverified",
+      "message": "25 suspected contrast problems could not be re-measured on screen",
+      "where": [
+        "tablet",
+        "mobile"
       ]
     },
     {
@@ -999,19 +1034,7 @@
     {
       "severity": "WARN",
       "rule": "shadow-on-everything",
-      "message": "45 boxes carry a drop shadow",
-      "where": [
-        "mobile"
-      ]
-    },
-    {
-      "severity": "WARN",
-      "rule": "console-errors",
-      "message": "2 console or page errors",
-      "sample": [
-        "Failed to load resource: the server responded with a status of 502 (Bad Gateway)",
-        "Refused to execute script from 'https://future.co/_next/static/chunks/1subvkojcvw2o.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
-      ],
+      "message": "43 boxes carry a drop shadow",
       "where": [
         "mobile"
       ]

@@ -1,6 +1,6 @@
 {
-  "target": "https://maximatherapy.com/",
-  "time": "2026-10-30T16:36:26.406Z",
+  "target": "https://maximatherapy.com",
+  "time": "2026-10-31T18:51:24.292Z",
   "rules": {
     "purple-gradient": "warn",
     "gradient": "info",
@@ -18,18 +18,6 @@
       "width": 1440,
       "pageHeight": 11195,
       "findings": [
-        {
-          "severity": "FAIL",
-          "rule": "contrast",
-          "message": "5 text colour pairs below WCAG AA",
-          "sample": [
-            "#ffffff on #ffffff = 1.00:1 (needs 4.5) <span> \"Donate\"",
-            "#ffffff on #fd4401 = 3.50:1 (needs 4.5) <p> \"Nurturing growth through play, therapy, and parent\"",
-            "#fd4401 on #fdcb40 = 2.30:1 (needs 3) <h4> \"Child Development Services\"",
-            "#ffffff on #00b351 = 2.78:1 (needs 3) <h4> \"Next stop\"",
-            "#a7eb98 on #00b351 = 1.98:1 (needs 3) <div> \"Adaptive\""
-          ]
-        },
         {
           "severity": "FAIL",
           "rule": "headline-lines",
@@ -63,14 +51,13 @@
         },
         {
           "severity": "FAIL",
-          "rule": "hidden-content",
-          "message": "6 text elements were never visible during a full scroll (a reveal that never fires?)",
+          "rule": "contrast",
+          "message": "4 text elements below WCAG AA (measured on screen pixels)",
           "sample": [
-            "Start with a Referral",
-            "Have your Regional Center refer your child to our program to",
-            "Create a Customized Plan",
-            "We collaborate with families and the Individual Family Servi",
-            "Learn and Grow Together"
+            "#ffffff on screen = 3.50:1 median, 3.35:1 in the worst tenth (needs 4.5) <span> \"Donate\"",
+            "#ffffff on screen = 3.50:1 median, 2.57:1 in the worst tenth (needs 4.5) <p> \"Nurturing growth through play, therapy, and parent\"",
+            "#ffffff on screen = 2.28:1 median, 1.40:1 in the worst tenth (needs 3) <h4> \"Next stop\"",
+            "#a7eb98 on screen = 1.98:1 median, 1.47:1 in the worst tenth (needs 3) <div> \"Adaptive\""
           ]
         }
       ],
@@ -183,17 +170,6 @@
       "pageHeight": 14931,
       "findings": [
         {
-          "severity": "FAIL",
-          "rule": "contrast",
-          "message": "4 text colour pairs below WCAG AA",
-          "sample": [
-            "#ffffff on #ffffff = 1.00:1 (needs 3) <span> \"Donate\"",
-            "#fd4401 on #fdcb40 = 2.30:1 (needs 3) <h4> \"Child Development Services\"",
-            "#ffffff on #00b351 = 2.78:1 (needs 3) <h4> \"Next stop\"",
-            "#a7eb98 on #00b351 = 1.98:1 (needs 3) <div> \"Adaptive\""
-          ]
-        },
-        {
           "severity": "WARN",
           "rule": "headline-lines",
           "message": "h3 runs to 5 lines",
@@ -230,6 +206,15 @@
             "#00b351",
             "#a7eb98",
             "#ffcccd"
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "2 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#ffffff on screen = 2.78:1 median, 2.37:1 in the worst tenth (needs 3) <h4> \"Next stop\"",
+            "#a7eb98 on screen = 1.98:1 median, 1.40:1 in the worst tenth (needs 3) <div> \"Adaptive\""
           ]
         },
         {
@@ -328,7 +313,7 @@
         "gradients": 0,
         "backdropBlur": 0,
         "transitions": 2,
-        "animatedElements": 12,
+        "animatedElements": 11,
         "cls": 0.001
       },
       "screenshots": [
@@ -353,18 +338,6 @@
       "width": 390,
       "pageHeight": 9264,
       "findings": [
-        {
-          "severity": "FAIL",
-          "rule": "contrast",
-          "message": "5 text colour pairs below WCAG AA",
-          "sample": [
-            "#ffffff on #ffffff = 1.00:1 (needs 4.5) <span> \"Donate\"",
-            "#ffffff on #fd4401 = 3.50:1 (needs 4.5) <p> \"Nurturing growth through play, therapy, and parent\"",
-            "#fd4401 on #fdcb40 = 2.30:1 (needs 3) <h4> \"Child Development Services\"",
-            "#ffffff on #00b351 = 2.78:1 (needs 3) <h4> \"Next stop\"",
-            "#a7eb98 on #00b351 = 1.98:1 (needs 3) <div> \"Adaptive\""
-          ]
-        },
         {
           "severity": "WARN",
           "rule": "headline-lines",
@@ -419,14 +392,13 @@
         },
         {
           "severity": "FAIL",
-          "rule": "hidden-content",
-          "message": "5 text elements were never visible during a full scroll (a reveal that never fires?)",
+          "rule": "contrast",
+          "message": "4 text elements below WCAG AA (measured on screen pixels)",
           "sample": [
-            "Start with a Referral",
-            "Have your Regional Center refer your child to our program to",
-            "Create a Customized Plan",
-            "Learn and Grow Together",
-            "Services take place where your child lives, learns, and play"
+            "#ffffff on screen = 3.50:1 median, 2.73:1 in the worst tenth (needs 4.5) <span> \"Donate\"",
+            "#ffffff on screen = 3.50:1 median, 2.15:1 in the worst tenth (needs 4.5) <p> \"Nurturing growth through play, therapy, and parent\"",
+            "#ffffff on screen = 2.78:1 median, 1.69:1 in the worst tenth (needs 3) <h4> \"Next stop\"",
+            "#a7eb98 on screen = 1.98:1 median, 1.40:1 in the worst tenth (needs 3) <div> \"Adaptive\""
           ]
         }
       ],
@@ -521,7 +493,7 @@
         "gradients": 0,
         "backdropBlur": 0,
         "transitions": 2,
-        "animatedElements": 11,
+        "animatedElements": 13,
         "cls": 0
       },
       "screenshots": [
@@ -546,13 +518,10 @@
         {
           "severity": "FAIL",
           "rule": "reduced-motion",
-          "message": "6 text elements stay hidden when the visitor asks for reduced motion",
+          "message": "2 text elements stay hidden when the visitor asks for reduced motion",
           "sample": [
-            "Start with a Referral",
-            "Have your Regional Center refer your child to our program to",
             "Create a Customized Plan",
-            "We collaborate with families and the Individual Family Servi",
-            "Learn and Grow Together"
+            "We collaborate with families and the Individual Family Servi"
           ]
         }
       ],
@@ -565,27 +534,11 @@
     }
   },
   "summary": {
-    "fail": 7,
+    "fail": 5,
     "warn": 6
   },
-  "url": "https://maximatherapy.com/",
+  "url": "https://maximatherapy.com",
   "findings": [
-    {
-      "severity": "FAIL",
-      "rule": "contrast",
-      "message": "5 text colour pairs below WCAG AA",
-      "sample": [
-        "#ffffff on #ffffff = 1.00:1 (needs 4.5) <span> \"Donate\"",
-        "#ffffff on #fd4401 = 3.50:1 (needs 4.5) <p> \"Nurturing growth through play, therapy, and parent\"",
-        "#fd4401 on #fdcb40 = 2.30:1 (needs 3) <h4> \"Child Development Services\"",
-        "#ffffff on #00b351 = 2.78:1 (needs 3) <h4> \"Next stop\"",
-        "#a7eb98 on #00b351 = 1.98:1 (needs 3) <div> \"Adaptive\""
-      ],
-      "where": [
-        "desktop",
-        "mobile"
-      ]
-    },
     {
       "severity": "FAIL",
       "rule": "headline-lines",
@@ -601,28 +554,26 @@
     },
     {
       "severity": "FAIL",
-      "rule": "hidden-content",
-      "message": "6 text elements were never visible during a full scroll (a reveal that never fires?)",
+      "rule": "contrast",
+      "message": "4 text elements below WCAG AA (measured on screen pixels)",
       "sample": [
-        "Start with a Referral",
-        "Have your Regional Center refer your child to our program to",
-        "Create a Customized Plan",
-        "We collaborate with families and the Individual Family Servi",
-        "Learn and Grow Together"
+        "#ffffff on screen = 3.50:1 median, 3.35:1 in the worst tenth (needs 4.5) <span> \"Donate\"",
+        "#ffffff on screen = 3.50:1 median, 2.57:1 in the worst tenth (needs 4.5) <p> \"Nurturing growth through play, therapy, and parent\"",
+        "#ffffff on screen = 2.28:1 median, 1.40:1 in the worst tenth (needs 3) <h4> \"Next stop\"",
+        "#a7eb98 on screen = 1.98:1 median, 1.47:1 in the worst tenth (needs 3) <div> \"Adaptive\""
       ],
       "where": [
-        "desktop"
+        "desktop",
+        "mobile"
       ]
     },
     {
       "severity": "FAIL",
       "rule": "contrast",
-      "message": "4 text colour pairs below WCAG AA",
+      "message": "2 text elements below WCAG AA (measured on screen pixels)",
       "sample": [
-        "#ffffff on #ffffff = 1.00:1 (needs 3) <span> \"Donate\"",
-        "#fd4401 on #fdcb40 = 2.30:1 (needs 3) <h4> \"Child Development Services\"",
-        "#ffffff on #00b351 = 2.78:1 (needs 3) <h4> \"Next stop\"",
-        "#a7eb98 on #00b351 = 1.98:1 (needs 3) <div> \"Adaptive\""
+        "#ffffff on screen = 2.78:1 median, 2.37:1 in the worst tenth (needs 3) <h4> \"Next stop\"",
+        "#a7eb98 on screen = 1.98:1 median, 1.40:1 in the worst tenth (needs 3) <div> \"Adaptive\""
       ],
       "where": [
         "tablet"
@@ -644,29 +595,11 @@
     },
     {
       "severity": "FAIL",
-      "rule": "hidden-content",
-      "message": "5 text elements were never visible during a full scroll (a reveal that never fires?)",
-      "sample": [
-        "Start with a Referral",
-        "Have your Regional Center refer your child to our program to",
-        "Create a Customized Plan",
-        "Learn and Grow Together",
-        "Services take place where your child lives, learns, and play"
-      ],
-      "where": [
-        "mobile"
-      ]
-    },
-    {
-      "severity": "FAIL",
       "rule": "reduced-motion",
-      "message": "6 text elements stay hidden when the visitor asks for reduced motion",
+      "message": "2 text elements stay hidden when the visitor asks for reduced motion",
       "sample": [
-        "Start with a Referral",
-        "Have your Regional Center refer your child to our program to",
         "Create a Customized Plan",
-        "We collaborate with families and the Individual Family Servi",
-        "Learn and Grow Together"
+        "We collaborate with families and the Individual Family Servi"
       ],
       "where": [
         "reducedMotion"

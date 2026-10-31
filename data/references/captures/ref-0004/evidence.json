@@ -1,0 +1,249 @@
+{
+  "url": "https://maximatherapy.com",
+  "time": "2026-10-31T18:54:13.850Z",
+  "sheets": {
+    "desktop": "data/references/captures/ref-0004/sheet-desktop.png",
+    "mobile": "data/references/captures/ref-0004/sheet-mobile.png",
+    "motion": "data/references/captures/ref-0004/motion-sheet.png"
+  },
+  "outline": {
+    "title": "Maxima Therapy | Personalized Support for Neurodivergent Individuals",
+    "description": "Maxima Therapy provides compassionate, individualized programs for neurodivergent children, adults, and families, from early intervention to workforce and residential support.",
+    "headings": [
+      "H3 7% EARLY INTERVENTION",
+      "H3 40% WE BRING FUN AND CURIOSITY TO THERAPY, SUPPORTING EACH CHILD’S UNIQUE PATH TO GROWTH.",
+      "H1 58% THE FIRST YEARS MATTER MOST",
+      "H2 79% We understand this can be a big step, but we made the process as quick, easy, and stress-f",
+      "H3 79% Start with a Referral",
+      "H3 81% Create a Customized Plan",
+      "H3 82% Learn and Grow Together",
+      "H2 88% ADAPTIVE SKILLS TRAINING"
+    ],
+    "actions": [
+      {
+        "label": "Donate",
+        "count": 2,
+        "firstAt": 0,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Programs",
+        "count": 1,
+        "firstAt": 94,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Careers",
+        "count": 1,
+        "firstAt": 94,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Shop",
+        "count": 1,
+        "firstAt": 94,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Service Areas",
+        "count": 1,
+        "firstAt": 94,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Our Story",
+        "count": 1,
+        "firstAt": 94,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "FAQ",
+        "count": 1,
+        "firstAt": 94,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Contact",
+        "count": 1,
+        "firstAt": 94,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Set cookie preferences",
+        "count": 1,
+        "firstAt": 98,
+        "firstScreen": false,
+        "sticky": false
+      }
+    ],
+    "prices": [],
+    "proofMentions": {},
+    "logoImages": 0,
+    "forms": 0,
+    "pageHeight": 11195
+  },
+  "motion": {
+    "libraries": {
+      "gsap": true,
+      "scrollTrigger": true,
+      "splitText": true,
+      "lenis": true,
+      "locomotive": false,
+      "swiper": false,
+      "lottie": true,
+      "framerMotion": false,
+      "viewTransitions": true
+    },
+    "maxRunning": 1,
+    "durationsMs": {
+      "min": 20000,
+      "max": 20000
+    },
+    "easings": [
+      "linear"
+    ],
+    "properties": [
+      "transform"
+    ],
+    "movingWithoutInput": 282,
+    "movingWithoutInputFurtherDown": [
+      {
+        "y": 900,
+        "moving": 14
+      },
+      {
+        "y": 1800,
+        "moving": 15
+      },
+      {
+        "y": 2700,
+        "moving": 10
+      },
+      {
+        "y": 3600,
+        "moving": 9
+      },
+      {
+        "y": 4500,
+        "moving": 5
+      }
+    ],
+    "scriptDrivenOnScroll": 23,
+    "infiniteLoops": 2,
+    "infiniteLoopsWithText": 0,
+    "pauseControl": false,
+    "steps": [
+      {
+        "y": 448,
+        "running": 1,
+        "scriptDriven": 23,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "g",
+            "hasText": false,
+            "duration": 20000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 900,
+        "running": 1,
+        "scriptDriven": 12,
+        "idleMoving": 14,
+        "sample": [
+          {
+            "target": "g",
+            "hasText": false,
+            "duration": 20000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1298,
+        "running": 0,
+        "scriptDriven": 14,
+        "idleMoving": null,
+        "sample": []
+      },
+      {
+        "y": 1800,
+        "running": 0,
+        "scriptDriven": 20,
+        "idleMoving": 15,
+        "sample": []
+      },
+      {
+        "y": 2192,
+        "running": 0,
+        "scriptDriven": 12,
+        "idleMoving": null,
+        "sample": []
+      },
+      {
+        "y": 2700,
+        "running": 0,
+        "scriptDriven": 10,
+        "idleMoving": 10,
+        "sample": []
+      },
+      {
+        "y": 3085,
+        "running": 0,
+        "scriptDriven": 10,
+        "idleMoving": null,
+        "sample": []
+      },
+      {
+        "y": 3600,
+        "running": 0,
+        "scriptDriven": 11,
+        "idleMoving": 9,
+        "sample": []
+      },
+      {
+        "y": 4006,
+        "running": 0,
+        "scriptDriven": 9,
+        "idleMoving": null,
+        "sample": []
+      },
+      {
+        "y": 4500,
+        "running": 0,
+        "scriptDriven": 5,
+        "idleMoving": 5,
+        "sample": []
+      }
+    ]
+  },
+  "reducedMotion": {
+    "movingWithoutInput": 68,
+    "movingOnScroll": 39,
+    "idleNavigation": null
+  },
+  "idleNavigation": {
+    "navigatedTo": "https://maximatherapy.com/programs/3-to-18",
+    "afterSeconds": 15
+  }
+}

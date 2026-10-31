@@ -5,7 +5,8 @@
 //   node jury.mjs rank  <dir> [--human-weight 0.5] [--json]
 //
 // <dir> holds one JSON file per juror: { juror, kind: "ai"|"human", scores: {criterion: 1-10},
-// ranking: ["B","A","C"], veto: "reason" }. Writes <dir>/summary.json.
+// ranking: ["B","A","C"], veto: "reason" }. Humans may instead give visual and ship (1-10).
+// Writes <dir>/summary.json.
 import fs from 'node:fs';
 import path from 'node:path';
 import { parseArgs } from './lib/browser.mjs';
@@ -25,7 +26,18 @@ const jurors = fs
   .filter((f) => f.endsWith('.json') && !f.startsWith('summary'))
   .map((f) => ({ file: f, ...JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')) }))
   .map((j) => (args.ref && j.refs ? (j.refs[args.ref] ? { juror: j.juror, kind: j.kind, ...j.refs[args.ref] } : null) : j))
-  .filter(Boolean);
+  .filter(Boolean)
+  // Two-score human votes: "visual" is the human view on the look (distinctiveness and craft),
+  // "ship" (would I send this to a client) is the human overall. Explicit scores win.
+  .map((j) =>
+    j.kind === 'human' && (typeof j.visual === 'number' || typeof j.ship === 'number')
+      ? {
+          ...j,
+          scores: { ...(typeof j.visual === 'number' ? { distinctiveness: j.visual, craft: j.visual } : {}), ...(j.scores || {}) },
+          overall: typeof j.overall === 'number' ? j.overall : j.ship,
+        }
+      : j
+  );
 if (!jurors.length) {
   console.error(`No juror files in ${dir}`);
   process.exit(1);
@@ -54,7 +66,11 @@ if (cmd === 'score') {
   const humanOverall = mean(humans.filter((j) => typeof j.overall === 'number').map((j) => j.overall));
   const final = r1(blend(total, humanOverall));
   const gap = humanOverall === null ? null : r1(Math.abs(humanOverall - total));
-  summary = { cmd, jurors: jurors.length, ai: ai.length, humans: humans.length, humanWeight: humans.length ? hw : 0, rows, weighted: r1(total), humanOverall: r1(humanOverall), final, gap, vetoes };
+  // Beautiful but not shippable (or the reverse) is a taste signal worth reading, not noise.
+  const humanVisual = mean(humans.filter((j) => typeof j.visual === 'number').map((j) => j.visual));
+  const humanShip = mean(humans.filter((j) => typeof j.ship === 'number').map((j) => j.ship));
+  const visualVsShip = humanVisual === null || humanShip === null ? null : r1(humanVisual - humanShip);
+  summary = { cmd, jurors: jurors.length, ai: ai.length, humans: humans.length, humanWeight: humans.length ? hw : 0, rows, weighted: r1(total), humanOverall: r1(humanOverall), final, gap, humanVisual: r1(humanVisual), humanShip: r1(humanShip), visualVsShip, vetoes };
   if (!args.json) {
     console.log(`${jurors.length} jurors (${ai.length} AI, ${humans.length} human)${humans.length ? `, human weight ${hw}` : ', AI only: no human votes yet'}\n`);
     console.log('criterion        AI    human  final  spread');
@@ -63,6 +79,8 @@ if (cmd === 'score') {
     console.log(`\nWeighted score: ${summary.weighted}`);
     if (humanOverall !== null)
       console.log(`Human overall: ${summary.humanOverall} → final ${final}${gap >= 2 ? `  ← AI and humans are ${gap} apart: find out why before trusting either` : ''}`);
+    if (visualVsShip !== null && Math.abs(visualVsShip) >= 2)
+      console.log(`Humans: visual ${summary.humanVisual} vs would ship ${summary.humanShip}  ← ${visualVsShip > 0 ? 'liked the look more than they would ship it' : 'would ship it although the look is not their taste'}`);
   }
 } else {
   // Borda count: in a ranking of n, first place gets n-1 points, last gets 0.

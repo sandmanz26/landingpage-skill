@@ -1,6 +1,6 @@
 {
   "target": "https://maximatherapy.com/programs/3-to-18",
-  "time": "2026-10-30T16:37:49.733Z",
+  "time": "2026-10-31T18:51:24.290Z",
   "rules": {
     "purple-gradient": "warn",
     "gradient": "info",
@@ -18,18 +18,6 @@
       "width": 1440,
       "pageHeight": 11104,
       "findings": [
-        {
-          "severity": "FAIL",
-          "rule": "contrast",
-          "message": "9 text colour pairs below WCAG AA",
-          "sample": [
-            "#ffffff on #ffffff = 1.00:1 (needs 4.5) <span> \"Donate\"",
-            "#ffffff on #fd4401 = 3.50:1 (needs 4.5) <p> \"Helping kids help themselves through the developme\"",
-            "#fdcb40 on #00b351 = 1.82:1 (needs 3) <h4> \"Adaptive Skills Training\"",
-            "#ffffff on #00b351 = 2.78:1 (needs 4.5) <p> \"Adaptive Skills Training focuses on building the e\"",
-            "#00b351 on #ffffff = 2.78:1 (needs 3) <h4> \"Positive Behavioral Intervention & Support\""
-          ]
-        },
         {
           "severity": "WARN",
           "rule": "headline-lines",
@@ -71,14 +59,14 @@
         },
         {
           "severity": "FAIL",
-          "rule": "hidden-content",
-          "message": "6 text elements were never visible during a full scroll (a reveal that never fires?)",
+          "rule": "contrast",
+          "message": "9 text elements below WCAG AA (measured on screen pixels)",
           "sample": [
-            "Start With a Referral",
-            "Have your Regional Center Service Coordinator refer your chi",
-            "Create a Customized Plan",
-            "We collaborate with families and the IPP team to design a pl",
-            "Learn and Grow Together"
+            "#ffffff on screen = 3.50:1 median, 3.50:1 in the worst tenth (needs 4.5) <span> \"Donate\"",
+            "#ffffff on screen = 3.50:1 median, 2.78:1 in the worst tenth (needs 4.5) <p> \"Helping kids help themselves through the developme\"",
+            "#fdcb40 on screen = 2.30:1 median, 1.35:1 in the worst tenth (needs 3) <h4> \"Adaptive Skills Training\"",
+            "#ffffff on screen = 3.50:1 median, 3.50:1 in the worst tenth (needs 4.5) <p> \"Adaptive Skills Training focuses on building the e\"",
+            "#00b351 on screen = 1.26:1 median, 1.26:1 in the worst tenth (needs 3) <h4> \"Positive Behavioral Intervention & Support\""
           ]
         }
       ],
@@ -192,18 +180,6 @@
       "pageHeight": 14875,
       "findings": [
         {
-          "severity": "FAIL",
-          "rule": "contrast",
-          "message": "8 text colour pairs below WCAG AA",
-          "sample": [
-            "#ffffff on #ffffff = 1.00:1 (needs 3) <span> \"Donate\"",
-            "#fdcb40 on #00b351 = 1.82:1 (needs 3) <h4> \"Adaptive Skills Training\"",
-            "#ffffff on #00b351 = 2.78:1 (needs 3) <p> \"Adaptive Skills Training focuses on building the e\"",
-            "#00b351 on #ffffff = 2.78:1 (needs 3) <h4> \"Positive Behavioral Intervention & Support\"",
-            "#00b351 on #a7eb98 = 1.98:1 (needs 3) <div> \"We\""
-          ]
-        },
-        {
           "severity": "WARN",
           "rule": "headline-lines",
           "message": "h3 runs to 7 lines",
@@ -244,10 +220,14 @@
         },
         {
           "severity": "FAIL",
-          "rule": "hidden-content",
-          "message": "1 text elements were never visible during a full scroll (a reveal that never fires?)",
+          "rule": "contrast",
+          "message": "6 text elements below WCAG AA (measured on screen pixels)",
           "sample": [
-            "Create a Customized Plan"
+            "#fdcb40 on screen = 1.35:1 median, 1.35:1 in the worst tenth (needs 3) <h4> \"Adaptive Skills Training\"",
+            "#00b351 on screen = 1.26:1 median, 1.26:1 in the worst tenth (needs 3) <h4> \"Positive Behavioral Intervention & Support\"",
+            "#00b351 on screen = 1.98:1 median, 1.70:1 in the worst tenth (needs 3) <div> \"We\"",
+            "#00b351 on screen = 2.41:1 median, 2.41:1 in the worst tenth (needs 3) <div> \"The\"",
+            "#ffffff on screen = 2.34:1 median, 2.34:1 in the worst tenth (needs 3) <h4> \"Next stop\""
           ]
         },
         {
@@ -374,18 +354,6 @@
       "pageHeight": 9236,
       "findings": [
         {
-          "severity": "FAIL",
-          "rule": "contrast",
-          "message": "9 text colour pairs below WCAG AA",
-          "sample": [
-            "#ffffff on #ffffff = 1.00:1 (needs 4.5) <span> \"Donate\"",
-            "#ffffff on #fd4401 = 3.50:1 (needs 4.5) <p> \"Helping kids help themselves through the developme\"",
-            "#fdcb40 on #00b351 = 1.82:1 (needs 3) <h4> \"Adaptive Skills Training\"",
-            "#ffffff on #00b351 = 2.78:1 (needs 4.5) <p> \"Adaptive Skills Training focuses on building the e\"",
-            "#00b351 on #ffffff = 2.78:1 (needs 3) <h4> \"Positive Behavioral Intervention & Support\""
-          ]
-        },
-        {
           "severity": "WARN",
           "rule": "headline-lines",
           "message": "h3 runs to 7 lines",
@@ -439,13 +407,14 @@
         },
         {
           "severity": "FAIL",
-          "rule": "hidden-content",
-          "message": "4 text elements were never visible during a full scroll (a reveal that never fires?)",
+          "rule": "contrast",
+          "message": "9 text elements below WCAG AA (measured on screen pixels)",
           "sample": [
-            "Start With a Referral",
-            "Have your Regional Center Service Coordinator refer your chi",
-            "Learn and Grow Together",
-            "Services take place where your child lives, learns, and play"
+            "#ffffff on screen = 3.50:1 median, 3.50:1 in the worst tenth (needs 4.5) <span> \"Donate\"",
+            "#ffffff on screen = 3.50:1 median, 2.38:1 in the worst tenth (needs 4.5) <p> \"Helping kids help themselves through the developme\"",
+            "#fdcb40 on screen = 1.35:1 median, 1.35:1 in the worst tenth (needs 3) <h4> \"Adaptive Skills Training\"",
+            "#ffffff on screen = 3.50:1 median, 3.30:1 in the worst tenth (needs 4.5) <p> \"Adaptive Skills Training focuses on building the e\"",
+            "#00b351 on screen = 1.26:1 median, 1.26:1 in the worst tenth (needs 3) <h4> \"Positive Behavioral Intervention & Support\""
           ]
         }
       ],
@@ -541,7 +510,7 @@
         "gradients": 0,
         "backdropBlur": 0,
         "transitions": 2,
-        "animatedElements": 12,
+        "animatedElements": 14,
         "cls": 0
       },
       "screenshots": [
@@ -566,12 +535,8 @@
         {
           "severity": "FAIL",
           "rule": "reduced-motion",
-          "message": "6 text elements stay hidden when the visitor asks for reduced motion",
+          "message": "1 text elements stay hidden when the visitor asks for reduced motion",
           "sample": [
-            "Start With a Referral",
-            "Have your Regional Center Service Coordinator refer your chi",
-            "Create a Customized Plan",
-            "We collaborate with families and the IPP team to design a pl",
             "Learn and Grow Together"
           ]
         }
@@ -585,27 +550,11 @@
     }
   },
   "summary": {
-    "fail": 8,
+    "fail": 5,
     "warn": 7
   },
   "url": "https://maximatherapy.com/programs/3-to-18",
   "findings": [
-    {
-      "severity": "FAIL",
-      "rule": "contrast",
-      "message": "9 text colour pairs below WCAG AA",
-      "sample": [
-        "#ffffff on #ffffff = 1.00:1 (needs 4.5) <span> \"Donate\"",
-        "#ffffff on #fd4401 = 3.50:1 (needs 4.5) <p> \"Helping kids help themselves through the developme\"",
-        "#fdcb40 on #00b351 = 1.82:1 (needs 3) <h4> \"Adaptive Skills Training\"",
-        "#ffffff on #00b351 = 2.78:1 (needs 4.5) <p> \"Adaptive Skills Training focuses on building the e\"",
-        "#00b351 on #ffffff = 2.78:1 (needs 3) <h4> \"Positive Behavioral Intervention & Support\""
-      ],
-      "where": [
-        "desktop",
-        "mobile"
-      ]
-    },
     {
       "severity": "FAIL",
       "rule": "headline-lines",
@@ -621,40 +570,30 @@
     },
     {
       "severity": "FAIL",
-      "rule": "hidden-content",
-      "message": "6 text elements were never visible during a full scroll (a reveal that never fires?)",
+      "rule": "contrast",
+      "message": "9 text elements below WCAG AA (measured on screen pixels)",
       "sample": [
-        "Start With a Referral",
-        "Have your Regional Center Service Coordinator refer your chi",
-        "Create a Customized Plan",
-        "We collaborate with families and the IPP team to design a pl",
-        "Learn and Grow Together"
+        "#ffffff on screen = 3.50:1 median, 3.50:1 in the worst tenth (needs 4.5) <span> \"Donate\"",
+        "#ffffff on screen = 3.50:1 median, 2.78:1 in the worst tenth (needs 4.5) <p> \"Helping kids help themselves through the developme\"",
+        "#fdcb40 on screen = 2.30:1 median, 1.35:1 in the worst tenth (needs 3) <h4> \"Adaptive Skills Training\"",
+        "#ffffff on screen = 3.50:1 median, 3.50:1 in the worst tenth (needs 4.5) <p> \"Adaptive Skills Training focuses on building the e\"",
+        "#00b351 on screen = 1.26:1 median, 1.26:1 in the worst tenth (needs 3) <h4> \"Positive Behavioral Intervention & Support\""
       ],
       "where": [
-        "desktop"
+        "desktop",
+        "mobile"
       ]
     },
     {
       "severity": "FAIL",
       "rule": "contrast",
-      "message": "8 text colour pairs below WCAG AA",
+      "message": "6 text elements below WCAG AA (measured on screen pixels)",
       "sample": [
-        "#ffffff on #ffffff = 1.00:1 (needs 3) <span> \"Donate\"",
-        "#fdcb40 on #00b351 = 1.82:1 (needs 3) <h4> \"Adaptive Skills Training\"",
-        "#ffffff on #00b351 = 2.78:1 (needs 3) <p> \"Adaptive Skills Training focuses on building the e\"",
-        "#00b351 on #ffffff = 2.78:1 (needs 3) <h4> \"Positive Behavioral Intervention & Support\"",
-        "#00b351 on #a7eb98 = 1.98:1 (needs 3) <div> \"We\""
-      ],
-      "where": [
-        "tablet"
-      ]
-    },
-    {
-      "severity": "FAIL",
-      "rule": "hidden-content",
-      "message": "1 text elements were never visible during a full scroll (a reveal that never fires?)",
-      "sample": [
-        "Create a Customized Plan"
+        "#fdcb40 on screen = 1.35:1 median, 1.35:1 in the worst tenth (needs 3) <h4> \"Adaptive Skills Training\"",
+        "#00b351 on screen = 1.26:1 median, 1.26:1 in the worst tenth (needs 3) <h4> \"Positive Behavioral Intervention & Support\"",
+        "#00b351 on screen = 1.98:1 median, 1.70:1 in the worst tenth (needs 3) <div> \"We\"",
+        "#00b351 on screen = 2.41:1 median, 2.41:1 in the worst tenth (needs 3) <div> \"The\"",
+        "#ffffff on screen = 2.34:1 median, 2.34:1 in the worst tenth (needs 3) <h4> \"Next stop\""
       ],
       "where": [
         "tablet"
@@ -676,27 +615,9 @@
     },
     {
       "severity": "FAIL",
-      "rule": "hidden-content",
-      "message": "4 text elements were never visible during a full scroll (a reveal that never fires?)",
-      "sample": [
-        "Start With a Referral",
-        "Have your Regional Center Service Coordinator refer your chi",
-        "Learn and Grow Together",
-        "Services take place where your child lives, learns, and play"
-      ],
-      "where": [
-        "mobile"
-      ]
-    },
-    {
-      "severity": "FAIL",
       "rule": "reduced-motion",
-      "message": "6 text elements stay hidden when the visitor asks for reduced motion",
+      "message": "1 text elements stay hidden when the visitor asks for reduced motion",
       "sample": [
-        "Start With a Referral",
-        "Have your Regional Center Service Coordinator refer your chi",
-        "Create a Customized Plan",
-        "We collaborate with families and the IPP team to design a pl",
         "Learn and Grow Together"
       ],
       "where": [

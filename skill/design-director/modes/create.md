@@ -203,7 +203,8 @@ the source changed after the last inspection).
 ## 11. look
 
 At standard and thorough effort, the look is done by the **jury** (`rubric/jury.md`): each AI juror is
-a separate subagent that gets the screenshots from `.design/inspect/`, the brief card, the customer
+a separate subagent that gets the evidence pack (run `evidence.mjs <file> --dir .design/inspect`
+after the gate's inspection: folds, contact sheets, `evidence.json`, `report.json`), the brief card, the customer
 profile and the five most important customer questions from the strategy, and the team anchors,
 and nothing else (not the code, not your intentions). Designers may add their votes in the same
 folder. Combine with `jury.mjs score .design/jury/<round>` and write the combined critique to

@@ -1,0 +1,49 @@
+{
+  "list": "data/references/batch-002.txt",
+  "jobs": 3,
+  "seconds": 414,
+  "results": [
+    {
+      "id": "ref-0005",
+      "url": "https://maximatherapy.com/programs/3-to-18",
+      "ok": true,
+      "inspectSeconds": 101,
+      "evidenceSeconds": 64,
+      "flags": [
+        "page navigates by itself after 15s idle → https://maximatherapy.com/programs/18-to-65",
+        "under reduced motion 56 elements still move on their own and 35 move with the scroll",
+        "350 elements move with no input at the top (loops, marquees, auto-play)",
+        "elements keep moving with no input further down at 900px (11), 1800px (13), 2700px (11), 3600px (10), 4500px (7); no pause control found",
+        "no price on the page"
+      ],
+      "error": null
+    },
+    {
+      "id": "ref-0004",
+      "url": "https://maximatherapy.com",
+      "ok": true,
+      "inspectSeconds": 104,
+      "evidenceSeconds": 65,
+      "flags": [
+        "page navigates by itself after 15s idle → https://maximatherapy.com/programs/3-to-18",
+        "under reduced motion 68 elements still move on their own and 39 move with the scroll",
+        "282 elements move with no input at the top (loops, marquees, auto-play)",
+        "elements keep moving with no input further down at 900px (14), 1800px (15), 2700px (10), 3600px (9), 4500px (5); no pause control found",
+        "no price on the page"
+      ],
+      "error": null
+    },
+    {
+      "id": "ref-0006",
+      "url": "https://future.co",
+      "ok": true,
+      "inspectSeconds": 313,
+      "evidenceSeconds": 101,
+      "flags": [
+        "under reduced motion 1 elements still move on their own and 2 move with the scroll",
+        "elements keep moving with no input further down at 1800px (4), 2700px (5); no pause control found"
+      ],
+      "error": null
+    }
+  ]
+}

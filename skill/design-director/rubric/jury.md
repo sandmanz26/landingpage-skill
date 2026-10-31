@@ -8,9 +8,9 @@ effort, when judging references, and in every eval. Quick effort may use a singl
 
 ## The panel
 
-Each AI juror is a **separate subagent with a fresh context**. It sees the screenshots, the brief
-card, the customer profile with the five questions, and the team anchors; never the code, never the
-builder's intentions, never another juror's answer.
+Each AI juror is a **separate subagent with a fresh context**. It sees the evidence pack (below),
+the brief card, the customer profile with the five questions, and the team anchors; never the code,
+never the builder's intentions, never another juror's answer.
 
 | Juror | Expertise | Judges | Scores |
 | --- | --- | --- | --- |
@@ -18,8 +18,35 @@ builder's intentions, never another juror's answer.
 | **Conversion strategist** | Offers, funnels, landing-page testing | Is the action that pays obvious? Is the offer clear? Is trust built before the ask? | business |
 | **Customer researcher** | User research, usability | The five-questions test, in the customer's order and words, on a phone | customer |
 | **Brand and story strategist** | Messaging, copywriting, narrative | Does the message house come through? Does each section earn the next? | story |
-| **Interaction and motion designer** | Motion, micro-interaction, states | Does motion have a function? Are states and feedback right? Motion cannot be judged from stills: this juror opens the page in a browser, records frames on load and scroll and reads `document.getAnimations()` | craft (motion) |
+| **Interaction and motion designer** | Motion, micro-interaction, states | Does motion have a function? Are states and feedback right? Motion cannot be judged from stills: this juror reads the motion log, reduced-motion and idle results in `evidence.json` and the frames in `motion-sheet.png`, and opens a browser only to check a specific doubt | craft (motion) |
 | **Front-end and accessibility engineer** | Performance, accessibility, responsive | Reads the inspector report and the screenshots: contrast, tap targets, reflow, hidden content | craft (technical) |
+
+## The evidence pack (read this, not every screenshot)
+
+Capture once, before any juror starts, so no juror opens a browser or re-reads thirty screenshots:
+
+```bash
+node <skill>/scripts/inspect.mjs  <url or file> --out <dir> --quiet   # report.json, folds, pages
+node <skill>/scripts/evidence.mjs <url or file> --dir <dir>          # sheets + evidence.json
+node <skill>/scripts/capture.mjs  <list.txt> --jobs 3                # both, for a whole batch
+```
+
+| File | What it holds | Who needs it |
+| --- | --- | --- |
+| `desktop-fold.png`, `mobile-fold.png` | The first screen as the visitor sees it | Everyone |
+| `sheet-desktop.png`, `sheet-mobile.png` | Every captured screen on one image | Everyone |
+| `evidence.json` → `outline` | Headings with page position, actions (label, count, first screen, sticky), prices, proof mentions, forms | Conversion, customer, story |
+| `evidence.json` → `motion`, `reducedMotion`, `idleNavigation` | Libraries, what moves on load, scroll and idle, what still moves under reduced motion, whether the page leaves by itself | Motion |
+| `motion-sheet.png` | Frames on load and while scrolling | Motion, art director |
+| `report.json` | Inspector findings: contrast measured on screen pixels, overflow, fonts, tap targets, hidden content | Engineer |
+
+Reading order for every juror: the two folds, then the sheets, then the parts of `evidence.json` and
+`report.json` its row names. Open a single full screenshot only to check a doubt, and say which.
+The pack holds measurements, not verdicts: a FLAG is something to judge (an endless marquee may be
+fine with a pause control), and anything a juror claims beyond the pack is marked *unverified*.
+
+One juror may judge a whole batch in one pass (`refs` in its answer file, below) when the batch
+shares a business type; judge each reference against its own business, not against the others.
 
 Each juror answers in the critique format of `rubric/critic.md`, scoring **only its own criteria**
 (1–10, with reasons and evidence), plus its top three problems and one thing to keep. Write each
@@ -37,8 +64,16 @@ answer to `.design/jury/<round>/<juror>.json`:
 
 ## Human jurors
 
-Designers vote too, in the same folder with `"kind": "human"`: either full scores, or only a
-ranking with one sentence why. Human votes are collected blind (variants unlabeled, in random
+Designers vote too, in the same folder with `"kind": "human"`: full scores, two scores, or only a
+ranking with one sentence why. The two-score vote is the default for references:
+
+```json
+{ "juror": "owner", "kind": "human", "visual": 9, "ship": 6, "note": "Smooth motion, but no price" }
+```
+
+`visual` (how good the look is) counts as the human score for distinctiveness and craft; `ship`
+(would I send this to a client) counts as the human overall. A gap of 2 or more between them is
+reported: it separates taste from what sells, which one number cannot. Human votes are collected blind (variants unlabeled, in random
 order). A client or a few real customers may join as jurors for **customer** and **business** only.
 
 ## Combining
