@@ -100,6 +100,15 @@ const check = (name, ok, detail = '') => {
   check('jury reads a human ship score as the overall', s.humanOverall === 6 && s.visualVsShip === 3, JSON.stringify(s));
 }
 
+// jury: one file judging several references
+{
+  const dir = path.join(tmp, 'jury3');
+  fs.mkdirSync(dir);
+  fs.writeFileSync(path.join(dir, 'ad.json'), JSON.stringify({ juror: 'art-director', kind: 'ai', refs: { 'ref-1': { scores: { craft: 6 } }, 'ref-2': { scores: { craft: 4 } } } }));
+  run('jury.mjs', ['score', dir]);
+  check('jury scores every reference in a batch file', fs.existsSync(path.join(dir, 'summary-ref-1.json')) && fs.existsSync(path.join(dir, 'summary-ref-2.json')));
+}
+
 // evidence
 {
   const dir = path.join(tmp, 'evidence');
@@ -109,10 +118,15 @@ const check = (name, ok, detail = '') => {
   if (ev) {
     check('evidence catches a page that navigates by itself', !!ev.idleNavigation, JSON.stringify(ev.idleNavigation));
     check('evidence catches motion with no input', ev.motion.movingWithoutInput > 0);
+    check('evidence finds sticky panels used as a scroll device', ev.motion.stickyPanels.length >= 2, JSON.stringify(ev.motion.stickyPanels));
     check('evidence catches endless moving text', ev.motion.infiniteLoopsWithText > 0 && !ev.motion.pauseControl, JSON.stringify(ev.motion));
     check('evidence catches motion that ignores reduced motion', ev.reducedMotion.movingWithoutInput > 0, JSON.stringify(ev.reducedMotion));
     check('evidence outlines headings and actions', ev.outline.headings.length === 3 && ev.outline.actions.some((a) => a.label === 'Start today' && !a.firstScreen), JSON.stringify(ev.outline));
     check('evidence flags no price and no action on the first screen', /no price/.test(r.stdout) && /no styled action in the first screen/.test(r.stdout), r.stdout);
+    fs.writeFileSync(path.join(dir, 'report.json'), JSON.stringify({ url: ev.url, viewports: {}, findings: [{ severity: 'FAIL', rule: 'contrast', message: 'low contrast', where: ['desktop'] }] }));
+    const d = run('digest.mjs', [dir]);
+    const digest = fs.existsSync(path.join(dir, 'digest.md')) ? fs.readFileSync(path.join(dir, 'digest.md'), 'utf8') : '';
+    check('digest summarises outline, motion, findings and text', /Loved by teams/.test(digest) && /sticky panels \(CSS scroll device\): 2/.test(digest) && /FAIL contrast/.test(digest) && /Start today/.test(digest), d.stdout + d.stderr + digest.slice(0, 600));
     check('evidence draws a motion sheet and saves the page text', fs.existsSync(path.join(dir, 'motion-sheet.png')) && /Start today/.test(fs.readFileSync(path.join(dir, 'page-text.txt'), 'utf8')));
   }
 }
@@ -123,6 +137,13 @@ const check = (name, ok, detail = '') => {
   run('evidence.mjs', [path.join(fixtures, 'popup.html'), '--dir', dir, '--idle', '1']);
   const ev = fs.existsSync(path.join(dir, 'evidence.json')) ? JSON.parse(fs.readFileSync(path.join(dir, 'evidence.json'), 'utf8')) : null;
   check('evidence closes a newsletter pop-up', !!ev && ev.overlaysDismissed.some((l) => /no thanks/i.test(l)) && !ev.idleNavigation, ev && JSON.stringify(ev.overlaysDismissed));
+}
+
+// a server error page is reported, never judged as the page
+{
+  const dir = path.join(tmp, 'error-page');
+  const r = spawnSync(process.execPath, [path.join(here, 'evidence.mjs'), path.join(fixtures, 'error-page.html'), '--dir', dir, '--idle', '1'], { cwd: tmp, encoding: 'utf8', env: { ...process.env, DD_LOAD_TRIES: '1' } });
+  check('evidence reports a page that did not load', /did not load/.test(r.stdout) && /loaded an error page/.test(r.stdout), r.stdout + r.stderr);
 }
 
 // capture

@@ -1,9 +1,9 @@
 {
   "url": "https://swehl.com/",
-  "time": "2026-10-31T19:36:26.948Z",
+  "time": "2026-10-31T20:01:18.569Z",
   "sheets": {
-    "desktop": "data/references/captures/ref-0007/sheet-desktop.png",
-    "mobile": "data/references/captures/ref-0007/sheet-mobile.png",
+    "desktop": null,
+    "mobile": null,
     "motion": "data/references/captures/ref-0007/motion-sheet.png"
   },
   "load": {
@@ -32,8 +32,8 @@
       "H2 19% virtual talk circles",
       "H2 19% made by parents & docs",
       "H2 24% BREASTFEEDING ESSENTIALS",
-      "H2 24% YOUR #1 RESOURCE FOR PREGNANCY AND BEYOND.",
-      "H3 30% L E T ’ S T A L K I T O U T"
+      "H2 42% YOUR #1 RESOURCE FOR PREGNANCY AND BEYOND.",
+      "H3 65% L E T ’ S T A L K I T O U T"
     ],
     "actions": [
       {
@@ -94,6 +94,28 @@
       "framerMotion": false,
       "viewTransitions": false
     },
+    "stickyPanels": [
+      {
+        "tag": "div",
+        "edge": "top",
+        "zIndex": "auto"
+      },
+      {
+        "tag": "section",
+        "edge": "bottom",
+        "zIndex": "2"
+      },
+      {
+        "tag": "section",
+        "edge": "bottom",
+        "zIndex": "1"
+      },
+      {
+        "tag": "div",
+        "edge": "top",
+        "zIndex": "auto"
+      }
+    ],
     "maxRunning": 6,
     "durationsMs": {
       "min": 300,
@@ -376,7 +398,9 @@
   "reducedMotion": {
     "movingWithoutInput": 1,
     "movingOnScroll": 2,
-    "idleNavigation": null
+    "idleNavigation": null,
+    "loadFailed": false
   },
+  "idleRunLoadFailed": false,
   "idleNavigation": null
 }

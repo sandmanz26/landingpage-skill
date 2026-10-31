@@ -9,6 +9,8 @@
 // Writes <dir>/summary.json.
 import fs from 'node:fs';
 import path from 'node:path';
+import { spawnSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
 import { parseArgs } from './lib/browser.mjs';
 
 const args = parseArgs(process.argv.slice(2));
@@ -21,10 +23,21 @@ const hw = args['human-weight'] !== undefined ? Number(args['human-weight']) : 0
 const WEIGHTS = { business: 20, customer: 20, story: 15, clarity: 15, distinctiveness: 15, craft: 15 };
 
 // A juror file may judge several items at once ({ refs: { "ref-0001": {...} } }); --ref picks one.
-const jurors = fs
+// Without --ref, every item is scored in turn.
+const files = fs
   .readdirSync(dir)
-  .filter((f) => f.endsWith('.json') && !f.startsWith('summary'))
-  .map((f) => ({ file: f, ...JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')) }))
+  .filter((f) => f.endsWith('.json') && !f.startsWith('summary') && !f.startsWith('_'))
+  .map((f) => ({ file: f, ...JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')) }));
+const refIds = [...new Set(files.flatMap((j) => Object.keys(j.refs || {})))];
+if (!args.ref && refIds.length && !files.some((j) => j.scores || j.ranking)) {
+  for (const id of refIds) {
+    if (!args.json) console.log(`\n=== ${id}`);
+    const r = spawnSync(process.execPath, [fileURLToPath(import.meta.url), ...process.argv.slice(2), '--ref', id], { stdio: 'inherit' });
+    if (r.status) process.exit(r.status);
+  }
+  process.exit(0);
+}
+const jurors = files
   .map((j) => (args.ref && j.refs ? (j.refs[args.ref] ? { juror: j.juror, kind: j.kind, ...j.refs[args.ref] } : null) : j))
   .filter(Boolean)
   // Two-score human votes: "visual" is the human view on the look (distinctiveness and craft),

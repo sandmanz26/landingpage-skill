@@ -176,5 +176,6 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 | `inspect.mjs <url or file> [--out dir] [--allow rule]` | Real-browser check at 1440/768/390, screenshots, design inventory |
 | `lint.mjs <files or folders>` | Stock copy, placeholders, default styling patterns in source |
 | `evidence.mjs <url or file> --dir <dir>` | Evidence pack for the jury: contact sheets, motion frames, outline, motion, reduced-motion and idle results |
-| `capture.mjs <list.txt> [--jobs 3]` | Runs inspect and evidence for a whole batch in parallel |
+| `digest.mjs <dir>` | `digest.md`: the one short file a juror reads first (outline, motion, inventory, findings, page text) |
+| `capture.mjs <list.txt> [--jobs 3]` | Runs inspect, evidence and digest for a whole batch in parallel |
 | `jury.mjs score / rank <dir>` | Combines AI and human jurors: blended scores, disagreements, vetoes, best-of-N winner |

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Motion fixture</title>
 <!-- Everything evidence.mjs should catch: an endless text marquee with no pause control and
-     no reduced-motion path, script-driven motion, a page that moves on by itself, no price,
+     no reduced-motion path, script-driven motion, sticky panels stacking as a CSS scroll device, a page that moves on by itself, no price,
      and no action on the first screen. -->
 <style>
   body { margin: 0; font: 18px/1.5 system-ui, sans-serif; color: #111; background: #fff; }
@@ -18,8 +18,10 @@
 </head>
 <body>
   <section><h1>A page that never stops moving</h1><div class="orb" id="orb"></div></section>
-  <section><h2>Loved by teams</h2><div class="track"><span>Fast delivery</span><span>Friendly people</span><span>Fast delivery</span><span>Friendly people</span></div></section>
-  <section><h2>Start today</h2><a class="btn" href="#start">Start today</a></section>
+  <section style="position:sticky;bottom:0;background:#fef3c7">
+    <h2>Loved by teams</h2><div class="track"><span>Fast delivery</span><span>Friendly people</span><span>Fast delivery</span><span>Friendly people</span></div>
+  </section>
+  <section style="position:sticky;bottom:0;background:#dbeafe"><h2>Start today</h2><a class="btn" href="#start">Start today</a></section>
   <script>
     const orb = document.getElementById('orb');
     (function spin(t) { orb.style.transform = `translateX(${Math.sin(t / 300) * 100}px)`; requestAnimationFrame(spin); })(0);

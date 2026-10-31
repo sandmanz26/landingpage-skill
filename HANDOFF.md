@@ -1,7 +1,7 @@
 # Handoff
 
 Read this first if you are a new session, a different model or a different AI tool picking up
-this project. It is kept up to date at every milestone. Last updated: **2026-10-31** (evidence pack and faster jury, after batch-002).
+this project. It is kept up to date at every milestone. Last updated: **2026-10-31** (batch-003 judged from evidence packs; digest added).
 
 ## 1. Goal
 
@@ -79,6 +79,25 @@ single score measures art direction and motion feel, which confirms the need for
 (the owner was told to correct this reading if wrong). The six rules are now in `team/taste.md`;
 `jury/batch-002/owner.json` records the answers.
 
+Batch-003 (judged 2026-10-31, owner scores pending): swehl.com (ref-0007) and theresolute.ai
+(ref-0008), notes from the owner, no scores. AI weighted: Swehl 5.8, Resolute 4.9 with two vetoes
+(motion ignores reduced motion + endless text with no pause; unsourced health claims and a
+misspelt "HIPPA" badge). Owner's notes: Swehl's "fixed-bottom CTA with circular radius" merged the
+hero pill buttons (not fixed) with an arched newsletter pop-up that covers the hero after 1 s;
+Resolute's "page transitions" are section transitions on one page; Swehl's "unique scroll" was
+contested by three jurors (no library) but confirmed by the motion juror and a measurement (4
+full-screen sticky panels, CSS curtain reveal). Review: `data/references/batch-003-review.md`; four
+questions to the owner at its end. Third batch in a row where the owner's motion claims need
+correction: the owner judges motion by feel, which nobody measures yet.
+
+Capture fixes from batch-003: `lib/browser.mjs` `gotoStable` retries server error pages (a 502
+"upstream request failed" had been captured as Swehl's desktop) and every failed load is reported
+(`page-did-not-load`; set `DD_LOAD_TRIES` to change the 3 tries); `dismissOverlays` closes
+pop-ups and cookie banners after photographing them (`*-overlay.png`); evidence records
+`stickyPanels` and measures the outline with sticky turned off (bottom-sticky panels had looked
+like first-screen content); "stays-visible" now means a bar or fixed element under 40% of the
+screen; `page-text.txt`; `jury.mjs score <dir>` scores every ref of batch-style juror files.
+
 Inspector changes from batch-002: suspected contrast failures are re-measured on real screen
 pixels (median of background pixels decides; worst tenth reported), text over photos in sibling
 layers is no longer compared against white, symbol-only text is skipped, scrolling samples in
@@ -101,9 +120,16 @@ Evaluation speed (2026-10-31, owner asked "how do we make evaluation faster"):
   itself after idle, keeps moving under reduced motion, uses GSAP + ScrollTrigger + SplitText +
   Lenis + Lottie; Future has a moving card strip with no pause control and has price ($50, $199/mo)
   and "Find Your Coach" on the first screen.
-- Not yet measured: the jury's own time and tokens when reading the pack. Estimate (unverified):
-  jurors no longer open a browser or read every screenshot, so roughly 3–5 minutes per juror and
-  well under half the tokens. Measure it on the next batch and record the real numbers here.
+- Measured on batch-003 (2 sites, jurors read the evidence pack, no browser except one transition
+  check): capture 8 min (0 tokens), jury 5 min 53 s wall time (jurors 2.8–5.9 min each),
+  648,860 subagent tokens. Time per batch fell (about 14 min vs about 20 min) but tokens per site
+  did **not** (324k vs 240k per site): jurors made 24–47 tool calls each and every call re-reads
+  the growing context; the files they read were about 125 KB of text plus 10–20 images.
+- Response (2026-10-31): `scripts/digest.mjs` writes `digest.md` (about 3k tokens: outline,
+  actions, prices, motion, inventory, findings, the first 6,000 characters of page text);
+  `capture.mjs` runs it; the brief template `rubric/jury-brief.md` tells jurors to read the digest,
+  folds and sheets in one parallel turn and stay under 10 tool calls. Not yet measured: run it on
+  batch-004 and record time and tokens here.
 - Known limits: the outline's action detection is heuristic (testimonial cards with backgrounds
   are counted as actions; counts vary a little between loads); Future's inspect took 313 s under
   parallel load (three viewports with half-screen scroll steps). Possible next cut: one browser
@@ -138,16 +164,22 @@ Evaluation speed (2026-10-31, owner asked "how do we make evaluation faster"):
 
 ## 6. Next steps, in order
 
-1. Next batch (batch-003): write `data/references/batch-003.txt`, run `capture.mjs`, then the jury
-   on the evidence packs only; measure the jury's time and tokens against batch-002 (about 20 min,
-   about 720k tokens) and record it in §3. Ask the owner for two scores per site.
-2. Confirm with the owner that "ya tidak masalah" meant approving the six taste rules and two scores.
-3. Build the reference pipeline (v0.4): read the Excel, capture each URL (layout + motion), run the
+1. Get the owner's two scores (visual, ship) for ref-0007 and ref-0008 and answers to the four
+   questions in `batch-003-review.md`; add them to `jury/batch-003/owner.json` and re-run
+   `jury.mjs score data/references/jury/batch-003`.
+2. Batch-004: capture, then jurors with `rubric/jury-brief.md` (digest first); record time and
+   tokens against batch-003 (5.9 min, 649k tokens for 2 sites).
+3. Measure motion smoothness so "smooth" stops being a matter of feel on either side: frame
+   timing during scripted scroll (long frames, p95 frame time). Caveat: headless software rendering
+   in a container is slower than a real device, so compare sites with each other, not with a
+   threshold.
+4. Confirm with the owner that "ya tidak masalah" meant approving the six taste rules and two scores.
+5. Build the reference pipeline (v0.4): read the Excel, capture each URL (layout + motion), run the
    jury, write library entries, derive directions/recipes/taste-rule proposals, version as an epoch.
-4. Mini eval: 5 briefs × (no skill, taste-skill, ours) judged by 2 designers + AI jury.
-5. Adopt taste-skill's open-collection image search (MIT, with attribution) to close the
+6. Mini eval: 5 briefs × (no skill, taste-skill, ours) judged by 2 designers + AI jury.
+7. Adopt taste-skill's open-collection image search (MIT, with attribution) to close the
    "no photos" gap seen in the Senyum Dental runs.
-6. Owner to provide: 4–6 business models for test briefs, real (anonymised) briefs with customer
+8. Owner to provide: 4–6 business models for test briefs, real (anonymised) briefs with customer
    voice (reviews, WhatsApp questions), 2–3 designers for voting, more references with notes.
 
 ## 7. Map

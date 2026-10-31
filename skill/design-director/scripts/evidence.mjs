@@ -119,6 +119,15 @@ await page.evaluate(() => window.scrollTo(0, 0));
 const pageText = await page.evaluate(() => (document.body ? document.body.innerText : '').replace(/\n{3,}/g, '\n\n').slice(0, 20000));
 fs.writeFileSync(path.join(dir, 'page-text.txt'), pageText);
 const outline = await page.evaluate(() => {
+  // Sticky panels sit wherever they are stuck (a bottom-sticky section shows up "on the first
+  // screen" under the one covering it): measure document order with sticky turned off.
+  const stickies = [...document.querySelectorAll('body *')].filter((e) => getComputedStyle(e).position === 'sticky');
+  for (const e of stickies) {
+    // Only a bar stays in view; a full-screen sticky panel gets covered by the next one.
+    e.__ddSticky = e.getBoundingClientRect().height < innerHeight * 0.4;
+    e.__ddPos = e.style.position;
+    e.style.position = 'static';
+  }
   const H = document.documentElement.scrollHeight || 1;
   const t = (e) => (e.innerText || e.textContent || '').replace(/\s+/g, ' ').trim();
   const at = (e) => Math.round(((e.getBoundingClientRect().top + scrollY) / H) * 100);
@@ -128,7 +137,7 @@ const outline = await page.evaluate(() => {
     return r.width > 0 && r.height > 0 && cs.visibility !== 'hidden' && cs.display !== 'none';
   };
   const stuck = (e) => {
-    for (let x = e; x; x = x.parentElement) if (['fixed', 'sticky'].includes(getComputedStyle(x).position)) return true;
+    for (let x = e; x; x = x.parentElement) if (x.__ddSticky || (getComputedStyle(x).position === 'fixed' && x.getBoundingClientRect().height < innerHeight * 0.4)) return true;
     return false;
   };
   const headings = [...document.querySelectorAll('h1, h2, h3')].filter(visible).map((h) => `${h.tagName} ${at(h)}% ${t(h).slice(0, 90)}`).slice(0, 40);
@@ -161,6 +170,7 @@ const outline = await page.evaluate(() => {
   const prices = [...new Set(body.match(/(Rp\.?\s?\d[\d.,]*|[$€£]\s?\d[\d.,]*(\s?(k|K|M|\/mo|\/month|per month))?)/g) || [])].slice(0, 12);
   const proofWords = ['testimonial', 'review', 'rating', 'stars', 'trusted', 'customers', 'clients', 'case study', 'ulasan', 'pelanggan'];
   const lower = body.toLowerCase();
+  for (const e of stickies) e.style.position = e.__ddPos;
   return {
     title: document.title,
     description: (document.querySelector('meta[name="description"]') || {}).content || '',
@@ -174,6 +184,13 @@ const outline = await page.evaluate(() => {
   };
 });
 
+// Scroll devices built without a library: full-screen sticky panels that stack or uncover
+// each other (a "curtain" reveal) are pure CSS and never show up as a library.
+const stickyPanels = await page.evaluate(() =>
+  [...document.querySelectorAll('body *')]
+    .filter((e) => getComputedStyle(e).position === 'sticky' && e.getBoundingClientRect().height >= innerHeight * 0.6)
+    .map((e) => ({ tag: e.tagName.toLowerCase(), edge: getComputedStyle(e).top !== 'auto' ? 'top' : 'bottom', zIndex: getComputedStyle(e).zIndex }))
+);
 // Script-driven motion (GSAP and the like) never shows up in getAnimations(): watch
 // where elements actually are instead.
 const moverProbe = () =>
@@ -234,7 +251,7 @@ await context.close();
 async function idleRun(reducedMotion) {
   const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 }, reducedMotion });
   const p = await ctx.newPage();
-  await gotoStable(p, url, { timeout: 45000 });
+  const loaded = await gotoStable(p, url, { timeout: 45000 });
   // Closing a pop-up through a bare "#" link must not count as navigating.
   const bare = (u) => u.replace(/#$/, '');
   const start = bare(p.url());
@@ -271,7 +288,7 @@ async function idleRun(reducedMotion) {
   await p.waitForTimeout(idleSeconds * 1000);
   const navigated = bare(p.url()) !== start ? p.url() : null;
   await ctx.close();
-  return { movingWithoutInput: moving, movingOnScroll: scrollMoving, navigatedTo: navigated };
+  return { movingWithoutInput: moving, movingOnScroll: scrollMoving, navigatedTo: navigated, loadFailed: !!loaded.failed };
 }
 const normalIdle = await idleRun('no-preference');
 const reducedIdle = await idleRun('reduce');
@@ -291,6 +308,7 @@ const evidence = {
   outline,
   motion: {
     libraries,
+    stickyPanels,
     maxRunning: Math.max(0, ...scrollSteps.map((s) => s.running)),
     durationsMs: durations.length ? { min: Math.min(...durations), max: Math.max(...durations) } : null,
     easings: [...new Set(all.map((a) => a.easing).filter(Boolean))].slice(0, 6),
@@ -303,13 +321,16 @@ const evidence = {
     pauseControl,
     steps: scrollSteps,
   },
-  reducedMotion: { movingWithoutInput: reducedIdle.movingWithoutInput, movingOnScroll: reducedIdle.movingOnScroll, idleNavigation: reducedIdle.navigatedTo },
+  reducedMotion: { movingWithoutInput: reducedIdle.movingWithoutInput, movingOnScroll: reducedIdle.movingOnScroll, idleNavigation: reducedIdle.navigatedTo, loadFailed: reducedIdle.loadFailed },
+  idleRunLoadFailed: normalIdle.loadFailed,
   idleNavigation,
 };
 fs.writeFileSync(path.join(dir, 'evidence.json'), JSON.stringify(evidence, null, 2));
 
 const flags = [];
 if (load.failed) flags.push('the page did not load (server error after 3 tries): this evidence describes an error page');
+if (normalIdle.loadFailed || reducedIdle.loadFailed) flags.push(`the ${[normalIdle.loadFailed && 'idle', reducedIdle.loadFailed && 'reduced-motion'].filter(Boolean).join(' and ')} run loaded an error page: its results mean nothing, capture again`);
+if (stickyPanels.length >= 2) flags.push(`${stickyPanels.length} full-screen sticky panels: a CSS scroll device (stacking or curtain reveal) even with no scroll library`);
 if (overlays.length) flags.push(`pop-up or banner on load, closed for the outline: ${overlays.join(', ')}`);
 if (idleNavigation) flags.push(`page navigates by itself after ${idleSeconds}s idle → ${idleNavigation.navigatedTo}`);
 if (reducedIdle.navigatedTo) flags.push('navigates by itself under reduced motion too');

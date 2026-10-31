@@ -1,0 +1,68 @@
+{
+  "cmd": "score",
+  "jurors": 5,
+  "ai": 5,
+  "humans": 0,
+  "humanWeight": 0,
+  "rows": [
+    {
+      "criterion": "clarity",
+      "ai": 5,
+      "human": null,
+      "final": 5,
+      "spread": 0,
+      "flag": false
+    },
+    {
+      "criterion": "distinctiveness",
+      "ai": 5,
+      "human": null,
+      "final": 5,
+      "spread": 0,
+      "flag": false
+    },
+    {
+      "criterion": "craft",
+      "ai": 4.5,
+      "human": null,
+      "final": 4.5,
+      "spread": 1,
+      "flag": false
+    },
+    {
+      "criterion": "business",
+      "ai": 5,
+      "human": null,
+      "final": 5,
+      "spread": 0,
+      "flag": false
+    },
+    {
+      "criterion": "customer",
+      "ai": 4,
+      "human": null,
+      "final": 4,
+      "spread": 0,
+      "flag": false
+    },
+    {
+      "criterion": "story",
+      "ai": 6,
+      "human": null,
+      "final": 6,
+      "spread": 0,
+      "flag": false
+    }
+  ],
+  "weighted": 4.9,
+  "humanOverall": null,
+  "final": 4.9,
+  "gap": null,
+  "humanVisual": null,
+  "humanShip": null,
+  "visualVsShip": null,
+  "vetoes": [
+    "conversion-strategist: Veto on reusing this page's claims, not its layout. It presents health outcomes ('Reduced Cardiovascular Risk', 'Eliminate inflammation', 'add more disease-free ... years to your life'), a scale figure ('10,000+ Personalised Journeys') and a compliance badge ('HIPPA NPP Compliant') as fact, with no source on the page. The outcome lines are promises a health business cannot guarantee for an individual, and the compliance badge names a certification that does not officially exist. These must not enter the library as a copy pattern. The structural patterns under 'keep' may.",
+    "motion-accessibility: Accessibility veto: motion that ignores reduced motion at scale. Evidence: evidence.json reducedMotion = 4 elements moving with no input and 14 moving on scroll with prefers-reduced-motion set (no less than the normal run); 4 endless text animations (promo bar 30 s, benefits marquee 50 s, team carousel 15 s, blinking 'LIVE NOW' 1.5 s) with no pause control (WCAG 2.2.2, Level A); one text never revealed under reduced motion (report.json checks.reducedMotion FAIL). Scope: the offer itself stays reachable, so this does not hide the paying action; it excludes motion-sensitive visitors from the whole scroll experience, which the team rules out in team/taste.md 'Never'. The pattern may enter the library only as 'scroll choreography + mandatory static path', never as copied."
+  ]
+}

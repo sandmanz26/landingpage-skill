@@ -1,0 +1,84 @@
+{
+  "juror": "motion-accessibility",
+  "kind": "ai",
+  "method": "Read for both refs: desktop-fold, mobile-fold, desktop-overlay, mobile-overlay, sheet-desktop, sheet-mobile, page-text.txt, evidence.json (outline, motion incl. steps, reducedMotion, idleNavigation, overlaysDismissed), motion-sheet.png, report.json (all viewports + checks), and evidence.mjs to know what each motion number measures. Single images opened: ref-0007 motion-frames/06-scroll-1350px.png, 07-scroll-2250px.png, desktop-page-03.png; ref-0008 motion-frames/05-scroll-450px.png, 08-scroll-3150px.png, 09-scroll-4050px.png, desktop-page-05.png, reduced-motion-fold.png. Live check: I did use the one allowed Playwright check, on ref-0008 only (script in the session scratchpad, pagetrans.mjs): loaded https://www.theresolute.ai/, closed the promo bar, looked for page-transition libraries (Barba, Swup, Taxi, view-transition CSS: none found), clicked 'Our Approach' and took screenshots. The page is so heavy that each screenshot took 1-1.6 s, not the planned 150 ms, so the check shows states (before, blank, settled), not how smooth the motion is. Not verified: whether motion looks smooth to the eye on either site (the evidence holds frames and counts, not frame rate); what the fixed dice icon on ref-0007 does; how ref-0007 looks with its hero video playing (the video failed to load in headless Chromium, so the hero contrast was measured against the fallback); motion on ref-0008 below 4500px (the motion log covers 10 x 450px steps of a 13022px page, about 35%); how screen readers announce the per-letter heading on ref-0007; whether the marquees pause on hover.",
+  "refs": {
+    "ref-0007": {
+      "business": "Swehl sells breastfeeding kits and accessories (Latch Kit $99.99, Cloud 9 $65, Nips Duo $22) to pregnant people and new parents in the US, and gives away education (Swehl School videos, Swehl Circles community) to win them over. The action that pays is buying a kit ('SHOP KITS'); the newsletter form (email + due date) captures leads. Inference: all three products shown are labelled SOLD OUT, so the paying action on this page leads nowhere at capture time.",
+      "scores": { "craft": 6 },
+      "reasons": {
+        "craft": "Motion is modest, mostly CSS and safe. No scroll library (evidence.json motion.libraries all false). Transitions last 300-900 ms with standard easing (cubic-bezier(0.4,0,0.2,1) and ease) on transform, opacity and colour. At most 6 run at once (the testimonial cards fading in at y=3600). CLS 0, nothing hidden (no hidden-content finding), the page works without JS (noJavaScript 2026 vs 2044 chars), no self-navigation, and under reduced motion only 1 element still moves on its own and 2 move with the scroll. The scroll device is a stacked 'curtain' reveal: each next section sits pinned under the one before it and is uncovered as that one scrolls away (motion-frames/06 and 07 and desktop-page-03 show the next section's lower half under a hard edge while its heading is still covered). Technical execution costs points: the H1 'BREASTFEEDING TOOLS MADE FOR THIS CENTURY' measures 2.0-2.1:1 on screen against the 3:1 it needs, the nav labels 'Shop'/'Menu' measure 2.0-2.2:1 against 4.5:1 (report.json, all three viewports). 25 phone controls are below 24x24 px, including 'Menu' at 53x19 and unnamed 21x21 and 20x24 buttons. The JS marquee has no pause control, keeps moving under reduced motion (the 1 remaining mover, inferred) and puts 12 duplicate H2 headings in the outline. The 4 img-alt FAILs are Twitter tracking pixels, a false positive."
+      },
+      "claims": [
+        {
+          "claim": "1. Simple colour play",
+          "verdict": "confirmed with correction (accessibility side only; the visual judgement belongs to the art director)",
+          "evidence": "report.json: 3 text colours (#8b2a00, #ffd874, #fffbf2) and 7 flat backgrounds, 0 gradients, 0 shadows, so the palette really is simple. Correction: one pairing fails. Yellow #ffd874 on the tan hero measures 2.0-2.2:1 for the H1 and the nav on desktop, tablet and mobile. Caveat: the hero video did not load in the capture ('The element has no supported sources' x2), so this was measured on the fallback background. Brown on pastel elsewhere raised no contrast finding."
+        },
+        {
+          "claim": "2. Very balanced play of text sizes",
+          "verdict": "unverifiable from my criterion (typography is the art director's); one measurement against it",
+          "evidence": "report.json: 9 font sizes on desktop (100/94/70/36/22/16/14/12/10), WARN too-many-font-sizes (aim for 5 or fewer). 'Balanced' is a judgement of rhythm that I do not score."
+        },
+        {
+          "claim": "3. Unique scrolling concept",
+          "verdict": "confirmed with correction: there is a deliberate scroll concept, but the technique is not unique",
+          "evidence": "No GSAP, Lenis, Locomotive or ScrollTrigger (evidence.json). At most 2 script-driven changes per scroll step. The concept is a stacked sticky 'curtain' reveal: sections layered, the next one pinned underneath and uncovered (motion-frames/06-scroll-1350px.png: the bottom of the 'Watch Now' row shows under the product section; 07-scroll-2250px.png: the Circles section shows under the video carousel; desktop-page-03.png). It is combined with arch-shaped sections ('LET'S TALK IT OUT' on an arch over a photo, the arched pop-up), a slow marquee and fade-up testimonial cards (500 ms, y=3600). Correct term: sticky stacked sections or curtain reveal, a common CSS pattern; the arches are what make it Swehl's. Side effect: the reveal uncovers each section from the bottom up, so the 'Watch Now' links appear before their 'SWEHL SCHOOL' heading."
+        },
+        {
+          "claim": "4. CTA early on, positioned fixed at the bottom, with a circular radius",
+          "verdict": "contested in part: early and pill-shaped yes; fixed at the bottom no",
+          "evidence": "Early: 'SHOP KITS' + 'GET EDUCATED' ('LET'S LEARN' on mobile) are in the first screen (evidence.json actions firstScreen true) and are pills (report.json radii 9999px). Not fixed: every action has sticky=false, and the buttons are gone from desktop-page-02 and mobile-page-02 onwards. The only thing fixed at the bottom of every screen is an unlabelled dice icon at the bottom right (what it does is unverified), plus a down-arrow scroll cue on the mobile fold only. What does come up from the bottom early with a round shape is the newsletter pop-up: it appears about 1 s after load (motion-frames/02-load-1000ms.png) as a large circular arch covering the H1's second line, with a pill 'SIGN UP'. That is an email-capture modal, not a fixed purchase CTA, and it closes. Term correction: 'circular radius' = pill / fully rounded (border-radius 9999px); the pop-up is an arch (circular segment)."
+        }
+      ],
+      "problems": [
+        "Key text contrast: the H1 measures 2.0-2.1:1 (needs 3:1) and the nav 'Shop'/'Menu' 2.0-2.2:1 (needs 4.5:1), yellow #ffd874 on the tan hero, on all three viewports (report.json). Caveat: measured on the fallback because the hero video failed in headless Chromium; if it holds with the video playing, this is a blocking failure for low-vision visitors on the first screen.",
+        "Phone tap targets: 25 controls under 24x24 px, including 'Menu' 53x19 and icon buttons 21x21 and 20x24 with no text name (report.json mobile). These are the primary navigation and close controls.",
+        "Pop-up timing and marquee semantics: the newsletter modal rises over the H1 about 1 s after load (motion-frames/02), before the visitor has read the offer. The JS marquee has no pause control, still moves under reduced motion (inferred: the 1 remaining mover), and is marked up as 12 duplicate H2 headings, which pollutes the screen-reader heading list (evidence.json outline). 'LET'S TALK IT OUT' is split into per-letter elements (page-text.txt), so it may be read letter by letter (unverified)."
+      ],
+      "keep": [
+        "Stacked curtain reveal between flat-colour sections, done in CSS: gives each section a turn of the page without a scroll library, with CLS 0 and nothing hidden when JS is off. Fix the order so a section's heading shows before its links.",
+        "Short, uniform motion tokens (300-900 ms, one standard easing) on transform and opacity only, used for feedback and the testimonial fade-in rather than for spectacle: a cheap, safe motion system to copy."
+      ]
+    },
+    "ref-0008": {
+      "business": "Resolute (Applied Healthspan Pvt Ltd, India, +91 contact) sells doctor-guided, AI-assisted personalised health programmes (100-day journeys built on blood biomarkers, optional MRI, coaching and supplements; plus a workplace offer) to adults who want to optimise their health. The action that pays is 'Get Your Blueprint', which leaves to get-started.theresolute.ai. Inference: that is a sign-up or assessment funnel; the page shows no price.",
+      "scores": { "craft": 4 },
+      "reasons": {
+        "craft": "The motion is ambitious and in the first third it is choreographed. evidence.json finds GSAP + ScrollTrigger + SplitText + Lenis smooth scroll + Lottie, with up to 13 script-driven elements per scroll step. The frames show a hero zoom-and-darken inside a brace frame (motion-frames/05), a spiral text scene (06), a 3D head with floating chips (07) and a curved, rotated card carousel (09, desktop-page-05). Execution is weak. (1) There is no reduced-motion path: under prefers-reduced-motion 4 elements still move on their own and 14 move with the scroll, which is no less than the normal run, and one tagline stays hidden (report.json checks.reducedMotion FAIL). (2) Endless moving text with no pause: the promo bar (30 s loop), the benefits marquee (50 s), the team carousel (15 s) and a blinking 'LIVE NOW' (1.5 s opacity loop); pauseControl false. (3) Layout shift on desktop: CLS 1.73, FAIL (over 0.25). (4) 7 console errors, including a JS syntax error and Rive 'View Model' errors. (5) In 3 of 5 scroll frames the fixed header group drops 51-110 px with a white strip above it, frame 08 shows the lower ~55% of the viewport empty mid-scene, and my live check caught a fully white frame after an anchor click. The cause is unverified (possibly capture timing during Lenis interpolation), but it shows in the evidence. (6) Contrast FAILs on 8-10 elements, including body text at 3.36:1, testimonial text at 3.32:1, 'optiME' at 2.64:1 on mobile and 'LIVE NOW' at 1.9-2.2:1. Also 11 phone tap targets under 24 px, 10 px role labels, 17 font sizes, and a section heading blurred under the glass header in desktop-page-05. Not capped by a broken static screen, but the motion evidence shows enough breakage to keep it below 5."
+      },
+      "claims": [
+        {
+          "claim": "(overall) The scrolling is excellent",
+          "verdict": "contested: extensive, yes; excellent, no",
+          "evidence": "Extensive: GSAP/ScrollTrigger/SplitText/Lenis, up to 13 script-driven elements per scroll step (evidence.json). Not excellent: no reduced-motion path (reducedMotion movingOnScroll 14, movingWithoutInput 4), CLS 1.73 on desktop (report.json), header displaced with a white strip in motion-frames/05, 08 and 09, half-empty viewport mid-scene in 08, 4 endless text loops with no pause control. Lenis smooth scroll also replaces native scroll inertia for everyone, which is a cost for keyboard and motion-sensitive visitors (general knowledge, not measured here)."
+        },
+        {
+          "claim": "1. Every section is packaged with good scrolling",
+          "verdict": "confirmed with correction for the first ~35% of the page; unverifiable below that; 'good' contested",
+          "evidence": "The motion log covers 0-4500 px of a 13022 px page. There, each section has its own scroll scene: hero zoom/darken (frame 05), spiral text (06), 3D head + chips (07), curved card carousel (09). Below 4500 px only stills exist: 'How it Works' looks pinned with image stacks (desktop-page-06-08), the team is an endless 15 s carousel, and the blogs, FAQ and footer read as static (desktop-page-12-14), so 'every section' is not supported. 'Good' is contested by the reduced-motion, CLS and blank-frame evidence above."
+        },
+        {
+          "claim": "2. Transitions between pages are smooth",
+          "verdict": "contested, and a wrong term: what the note describes are transitions between sections inside one long page, not between pages",
+          "evidence": "Live check (the one allowed): no page-transition library on the page (no Barba, Swup or Taxi, no view-transition CSS, no viewTransitions in evidence.json). The internal header link 'Our Approach' is an in-page anchor (#companion): the URL changed to /#companion with no page load (a JS marker survived). The frame captured ~1.5 s after the click was completely white (mean luminance 255); at ~2.3 s the target section showed with the header group pushed down 61 px under a white strip; by ~4 s it had settled. Screenshots could only be taken every 1-1.6 s on this page, so smoothness itself is not verified. The paying link 'Get Your Blueprint' goes to another subdomain (get-started.theresolute.ai), a full page load where no animated transition is possible. Correct term: scroll-driven section transitions (ScrollTrigger scenes with Lenis smooth scroll)."
+        },
+        {
+          "claim": "3. Every section has a unique design",
+          "verdict": "confirmed with correction on the motion side for the measured sections; layout uniqueness is the art director's call",
+          "evidence": "Motion devices differ per section in the measured range (zoom, spiral, 3D head, card arc). Repeats exist: three marquee/loop strips with the same linear endless motion (promo bar, benefits, team), and dark maroon panels reused for 'How it Works' (desktop-page-06-08) and the footer (desktop-page-14)."
+        }
+      ],
+      "problems": [
+        "No reduced-motion path: with prefers-reduced-motion set, 14 elements still move with the scroll and 4 by themselves, the same as without it, and the tagline 'designed for the life you're meant to live' never appears (evidence.json reducedMotion; report.json checks.reducedMotion FAIL; hidden-content FAIL on all viewports). This is the team's 'Never' rule, and the batch-002 Maxima failure again.",
+        "Moving and blinking text with no way to stop it: the promo bar (30 s loop), the benefits marquee (50 s), the team carousel (15 s), all endless, plus 'LIVE NOW' blinking every 1.5 s, measured at 1.1-2.2:1 contrast; pauseControl false. WCAG 2.2.2 (Pause, Stop, Hide, Level A) requires a pause for auto-moving content over 5 s.",
+        "Unstable rendering: desktop CLS 1.73, 7 console errors (a JS syntax error, Rive artboard errors), the header group dropping 51-110 px with a white strip in 3 of 5 scroll frames, and a fully white frame after an anchor click (live check). Cause unverified, but a visitor on a mid-range phone would likely see these jumps (inference)."
+      ],
+      "keep": [
+        "Curved card carousel for the programme line-up (optiME, superGUT, galaxyBRAIN...: rotated cards on an arc, desktop-page-05): makes a set of parallel offers browsable as one object. Take it with a static grid under reduced motion.",
+        "Hero scroll-in that zooms and darkens the photo inside the brace frame until it becomes the next section's background (motion-frames/05): the one transition that carries the brand mark into the story. Copy it only with a reduced-motion fallback (cross-fade or none)."
+      ],
+      "veto": "Accessibility veto: motion that ignores reduced motion at scale. Evidence: evidence.json reducedMotion = 4 elements moving with no input and 14 moving on scroll with prefers-reduced-motion set (no less than the normal run); 4 endless text animations (promo bar 30 s, benefits marquee 50 s, team carousel 15 s, blinking 'LIVE NOW' 1.5 s) with no pause control (WCAG 2.2.2, Level A); one text never revealed under reduced motion (report.json checks.reducedMotion FAIL). Scope: the offer itself stays reachable, so this does not hide the paying action; it excludes motion-sensitive visitors from the whole scroll experience, which the team rules out in team/taste.md 'Never'. The pattern may enter the library only as 'scroll choreography + mandatory static path', never as copied."
+    }
+  }
+}

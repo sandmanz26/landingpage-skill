@@ -105,7 +105,7 @@ export function parseArgs(argv) {
 
 // Goes to a page and retries when the server answers with an error page (a 5xx, or a proxy's
 // "upstream request failed"), so one hiccup does not become a capture of an error message.
-export async function gotoStable(page, url, { timeout = 30000, tries = 3 } = {}) {
+export async function gotoStable(page, url, { timeout = 30000, tries = Number(process.env.DD_LOAD_TRIES || 3) } = {}) {
   for (let i = 0; i < tries; i++) {
     let res = null;
     try {

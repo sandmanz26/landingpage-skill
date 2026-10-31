@@ -64,6 +64,9 @@ const { url, close } = await resolveTarget(target);
 report.url = url;
 const browser = await launch();
 
+// Every check loads the page again; any load that ends on a server error page is recorded, so a
+// check never silently describes an error page.
+const loadFailures = [];
 async function open(ctxOpts) {
   const context = await browser.newContext({ deviceScaleFactor: 1, ...ctxOpts });
   const page = await context.newPage();
@@ -79,6 +82,8 @@ async function open(ctxOpts) {
     } catch {}
   });
   const load = await gotoStable(page, url);
+  if (load.failed)
+    loadFailures.push(ctxOpts.reducedMotion ? 'reduced motion' : ctxOpts.javaScriptEnabled === false ? 'no JavaScript' : `${ctxOpts.viewport ? ctxOpts.viewport.width : '?'}px`);
   await page.waitForTimeout(1200);
   return { context, page, errors, load };
 }
@@ -167,7 +172,7 @@ function add(list, severity, rule, message, sample) {
 }
 
 for (const vp of VIEWPORTS) {
-  const { context, page, errors, load } = await open({ viewport: { width: vp.width, height: vp.height } });
+  const { context, page, errors } = await open({ viewport: { width: vp.width, height: vp.height } });
   const shots = [];
   const fold = path.join(outDir, `${vp.name}-fold.png`);
   await page.screenshot({ path: fold });
@@ -202,7 +207,6 @@ for (const vp of VIEWPORTS) {
   await page.evaluate(() => window.scrollTo(0, 0));
 
   const findings = m.findings;
-  if (load.failed) add(findings, 'FAIL', 'page-did-not-load', 'The server answered with an error page after 3 tries: everything below describes that error page');
   if (overlays.length) add(findings, 'INFO', 'overlays-dismissed', `Closed ${overlays.length} pop-up or banner(s) before capturing the screens`, overlays);
   if (contrastCheck.failures.length)
     add(findings, 'FAIL', 'contrast', `${contrastCheck.failures.length} text elements below WCAG AA (measured on screen pixels)`, contrastCheck.failures.slice(0, 5));
@@ -270,6 +274,11 @@ for (const vp of VIEWPORTS) {
 await browser.close();
 await close();
 
+if (loadFailures.length) {
+  const findings = [];
+  add(findings, 'FAIL', 'page-did-not-load', `The server answered with an error page after 3 tries for: ${[...new Set(loadFailures)].join(', ')}. Results of those checks describe the error page; capture again`);
+  report.checks.load = { findings };
+}
 const all = [
   ...Object.entries(report.viewports).flatMap(([k, v]) => v.findings.map((f) => ({ ...f, where: k }))),
   ...Object.entries(report.checks).flatMap(([k, v]) => v.findings.map((f) => ({ ...f, where: k }))),

@@ -1,0 +1,171 @@
+{
+ "batch": "batch-003",
+ "received": "2026-10-31",
+ "from": "owner (chat)",
+ "status": "captured with capture.mjs, judged by 5 AI jurors from evidence packs; owner scores pending",
+ "jury": {
+  "folder": "data/references/jury/batch-003",
+  "jurors": [
+   "art-director",
+   "conversion-strategist",
+   "customer-researcher",
+   "story-strategist",
+   "motion-accessibility"
+  ],
+  "human_votes": 0,
+  "brief": "data/references/jury/batch-003/_brief.md"
+ },
+ "measured_cost": {
+  "capture_seconds": 483,
+  "jury_wall_seconds": 353,
+  "jury_tokens": 648860,
+  "per_juror": {
+   "conversion-strategist": [
+    165,
+    104680
+   ],
+   "story-strategist": [
+    207,
+    125581
+   ],
+   "art-director": [
+    209,
+    136813
+   ],
+   "customer-researcher": [
+    213,
+    117812
+   ],
+   "motion-accessibility": [
+    353,
+    163974
+   ]
+  },
+  "note": "[seconds, subagent tokens]. Batch-002: about 20 min and about 720k tokens for 3 sites."
+ },
+ "entries": [
+  {
+   "id": "ref-0007",
+   "url": "https://swehl.com/",
+   "site": "swehl",
+   "business": {
+    "what": "US direct-to-consumer breastfeeding kits and accessories (Latch Kit $99.99, Cloud 9 $65, Nips Duo $22) for pregnant and new parents, plus free education (video school, talk circles) and a newsletter.",
+    "action_that_pays": "SHOP KITS; every featured kit was SOLD OUT at capture (2026-10-31)",
+    "source": "captured page text",
+    "confidence": "high; market (US) inferred"
+   },
+   "owner": {
+    "visual": null,
+    "ship": null,
+    "note": "scores pending"
+   },
+   "jury_scores": {
+    "clarity": 6,
+    "distinctiveness": 7,
+    "craft": 6,
+    "business": 4,
+    "customer": 6,
+    "story": 6,
+    "weighted": 5.8
+   },
+   "veto": null,
+   "claims": [
+    {
+     "claim": "Simple colour play",
+     "verdict": "confirmed with correction",
+     "evidence": "Simple in use: flat colour blocks, one ink colour (#8b2a00), 0 gradients, 0 shadows. Not few colours: 6 chromatic backgrounds, each section its own colour (works as chapter markers). The yellow H1 on the tan hero fails contrast (2.0-2.1:1)."
+    },
+    {
+     "claim": "Very balanced play of text sizes",
+     "verdict": "confirmed with correction",
+     "evidence": "What works is contrast, not balance: a decisive jump from display (94-100px desktop, 58px mobile, Caslon Rounded) to 16px body (Roobert). 9 sizes on desktop, down to 10px."
+    },
+    {
+     "claim": "Unique scrolling concept",
+     "verdict": "confirmed with correction (after a disagreement, settled by a measurement)",
+     "evidence": "No scroll library and only CSS transitions, which led three jurors to contest it. The motion juror saw a sticky 'curtain' reveal; a follow-up measurement found 4 full-screen sticky panels (bottom:0, stacked by z-index): each section uncovers the next. The technique is common CSS; what makes it Swehl's is the arch shape and colour per section."
+    },
+    {
+     "claim": "CTA early, fixed at the bottom, with a circular radius",
+     "verdict": "partly right; two different elements merged",
+     "evidence": "The early CTAs (SHOP KITS, GET EDUCATED) are pill buttons (radius 9999px) in the middle of the hero, not fixed. The arched element fixed at the bottom is a newsletter pop-up (bottom sheet with an arched top) asking for email + due date about 1 s after load; it covers the H1 and the shop button. It is lead capture, not the action that pays."
+    }
+   ],
+   "library_candidates": [
+    "Colour-coded chapters: one flat background per pillar, one ink colour for all text, no shadows or gradients",
+    "Arch shape framing curved display type over documentary photography ('LET'S TALK IT OUT')",
+    "CSS sticky curtain reveal between flat sections (no library, CLS 0, nothing hidden without JS)",
+    "Price inside the product title and the buy button",
+    "Optional due-date field on the lead form to time follow-ups (life-stage products)",
+    "Customer-voice copy: frank, warm titles ('Partners are People, Too.', 'Because Options.')",
+    "Marquee as table of contents right after the hero"
+   ],
+   "avoid": [
+    "Pop-up over the hero and the paying CTA one second after load",
+    "Selling sold-out products with no restock date or waitlist",
+    "Proof that praises a different pillar than the one the hero sells"
+   ]
+  },
+  {
+   "id": "ref-0008",
+   "url": "https://www.theresolute.ai/",
+   "site": "resolute",
+   "note": "received as ?ref=lapaninja",
+   "business": {
+    "what": "Personalised preventive-health / longevity programmes (diagnostics with 85+ biomarkers, doctors + AI, 100-day journeys) from Applied Healthspan Private Limited, India (inferred from +91 number and company suffix).",
+    "action_that_pays": "Get Your Blueprint (sticky); no price on the page",
+    "source": "captured page text",
+    "confidence": "medium; country inferred"
+   },
+   "owner": {
+    "visual": null,
+    "ship": null,
+    "note": "scores pending"
+   },
+   "jury_scores": {
+    "clarity": 5,
+    "distinctiveness": 5,
+    "craft": 4.5,
+    "business": 5,
+    "customer": 4,
+    "story": 6,
+    "weighted": 4.9
+   },
+   "veto": "Two vetoes. Accessibility: motion ignores prefers-reduced-motion (14 elements still move with the scroll, 4 on their own), 4 endless text animations incl. blinking 'LIVE NOW' with no pause control (WCAG 2.2.2), content that stays hidden. Business: unsourced health outcomes ('Reduced Cardiovascular Risk', 'Eliminate inflammation'), '10,000+ Personalised Journeys' and a 'HIPPA NPP Compliant' badge (misspelt; HIPAA has no official certification) presented as fact. The layout patterns may enter the library; the claims and the motion-without-static-path may not.",
+   "claims": [
+    {
+     "claim": "Every section is packaged with good scrolling",
+     "verdict": "confirmed with correction for the first ~60%; contested on 'good'",
+     "evidence": "Real machinery: GSAP, ScrollTrigger, SplitText, Lenis, Lottie; up to 13 script-driven elements per scroll step; each upper section has its own scene (hero zoom, spiral text, 3D head, card arc). Against 'good': no reduced-motion path, CLS 1.73 on desktop, 1-11 texts never visible during a scroll, header dropping with a white strip in 3 of 5 frames, empty bands while reveals are pending. Blog, FAQ and footer are plain blocks."
+    },
+    {
+     "claim": "Transitions between pages are smooth",
+     "verdict": "term corrected; smoothness unverified",
+     "evidence": "It is one 13,022px page, so these are transitions between sections. No page-transition library; the header link 'Our Approach' is an in-page anchor (a fully white frame after the click in the live check); the paying CTA goes to another subdomain without a transition. Lenis smooth scrolling is the likely source of the 'smooth' feeling; frame smoothness itself cannot be measured from stills."
+    },
+    {
+     "claim": "Every section has a unique design",
+     "verdict": "confirmed with correction",
+     "evidence": "True for the first ~60% (photo hero, arrows statement, 3D head with chips, fanned cards, burgundy sticky steps, human/AI diagram). From testimonials down the sections are standard. Variety without one idea: stock hiker, iridescent 3D head, gradient blobs and glass are the category's default look (distinctiveness capped at 5)."
+    }
+   ],
+   "library_candidates": [
+    "Fanned, tilted programme cards with each name as a wordmark over its own photo",
+    "Two-pole human expert vs AI copilot diagram meeting at the outcome",
+    "Problem then reframe pair ('Tired of one-size-fits-all health hacks?' / 'Your health doesn't live in silos. Neither do we.')",
+    "CTA label that is also a named step of the process ('Get Your Blueprint' = step 2)",
+    "Three-step How it Works with an INCLUDES list per step",
+    "Named clinical team with specialty and photo before the closing ask",
+    "Hero scroll-in that zooms the photo into the next section's background (only with a static path)"
+   ],
+   "avoid": [
+    "Scroll choreography without a reduced-motion path",
+    "Endless or blinking text with no pause control",
+    "Unsourced health outcomes and compliance badges",
+    "A promo bar for another product that outranks the main action",
+    "Coined jargon carrying the explanation (Centaur Team, Human 360 Body Data Stack)"
+   ]
+  }
+ ],
+ "owner_taste_signal": "Third batch in a row where the owner's motion claims need correction (Maxima 'modern scrolling', Future 'animation in every section', Resolute 'page transitions'): the owner judges motion by feel, which the jury cannot measure from stills; the jury in turn missed a CSS scroll device until a measurement settled it. Both sides need a measurement of smoothness."
+}

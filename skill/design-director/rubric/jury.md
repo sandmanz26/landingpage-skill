@@ -28,20 +28,30 @@ Capture once, before any juror starts, so no juror opens a browser or re-reads t
 ```bash
 node <skill>/scripts/inspect.mjs  <url or file> --out <dir> --quiet   # report.json, folds, pages
 node <skill>/scripts/evidence.mjs <url or file> --dir <dir>          # sheets + evidence.json
-node <skill>/scripts/capture.mjs  <list.txt> --jobs 3                # both, for a whole batch
+node <skill>/scripts/digest.mjs   <dir>                              # digest.md from both
+node <skill>/scripts/capture.mjs  <list.txt> --jobs 3                # all three, for a whole batch
 ```
 
 | File | What it holds | Who needs it |
 | --- | --- | --- |
+| `digest.md` | One short summary of everything below plus the page text: read it first | Everyone |
 | `desktop-fold.png`, `mobile-fold.png` | The first screen as the visitor sees it | Everyone |
 | `sheet-desktop.png`, `sheet-mobile.png` | Every captured screen on one image | Everyone |
 | `evidence.json` → `outline` | Headings with page position, actions (label, count, first screen, sticky), prices, proof mentions, forms | Conversion, customer, story |
 | `evidence.json` → `motion`, `reducedMotion`, `idleNavigation` | Libraries, what moves on load, scroll and idle, what still moves under reduced motion, whether the page leaves by itself | Motion |
 | `motion-sheet.png` | Frames on load and while scrolling | Motion, art director |
 | `report.json` | Inspector findings: contrast measured on screen pixels, overflow, fonts, tap targets, hidden content | Engineer |
+| `page-text.txt` | The page's words in order (the digest holds the first 6,000 characters) | Story, customer |
+| `*-overlay.png` | The first screen once a pop-up or banner appeared; capture closes it afterwards | Everyone |
 
-Reading order for every juror: the two folds, then the sheets, then the parts of `evidence.json` and
-`report.json` its row names. Open a single full screenshot only to check a doubt, and say which.
+Reading order for every juror: `digest.md`, the folds, the overlays and the sheets, read together in
+one turn; then the raw JSON or a single full screenshot only to check a specific doubt, and say
+which. Every extra turn re-reads everything read before it: in batch-003 jurors took 24-47 tool
+calls and 105-164k tokens each, mostly from re-reading. Brief template: `rubric/jury-brief.md`.
+
+No scroll library does not mean no scroll design: full-screen sticky panels stacking over each
+other are pure CSS (`stickyPanels` in the digest). In batch-003 three of five jurors missed one for
+that reason until a measurement settled it.
 The pack holds measurements, not verdicts: a FLAG is something to judge (an endless marquee may be
 fine with a pause control), and anything a juror claims beyond the pack is marked *unverified*.
 
