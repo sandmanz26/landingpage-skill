@@ -1,0 +1,71 @@
+{
+  "juror": "conversion-strategist",
+  "kind": "ai",
+  "method": "Read the brief, rubric/jury.md, rubric/critic.md and team/taste.md. For both refs I read the evidence pack in the brief's order: desktop-fold, mobile-fold, desktop-overlay, mobile-overlay, sheet-desktop, sheet-mobile, page-text.txt, evidence.json (outline, overlaysDismissed, motion summary, reducedMotion, idleNavigation), motion-sheet.png (ref-0007 only) and report.json findings. I opened one single screenshot: ref-0007/mobile-page-03.png, to check whether the sold-out state shows on the buy button itself (it does: 'SOLD OUT • $99.99'). No browser was opened. Not verified: where any link goes (checkout, booking or sign-up flow), what the fixed dice button on ref-0007 does (it has no label in the pack), whether the ref-0007 pop-up stays fixed while scrolling (the capture closed it), whether the New York Times coverage, the press logos, the '10,000+ journeys' figure, the TruDiagnostics partnership or the 'HIPPA NPP Compliant' claim are real, and Resolute's prices (none appear on the page). Every statement about the business model is an inference from page text.",
+  "refs": {
+    "ref-0007": {
+      "business": "Inference: Swehl is a direct-to-consumer brand that sells breastfeeding product kits (Latch Kit $99.99, Cloud 9 $65, Nips Duo $22) to pregnant people and new parents. Free education (Swehl School videos, Swehl Circles community chats) brings people in. The action that pays is buying a kit through 'SHOP KITS'. The email sign-up (pop-up and footer) is the secondary, lead-capture action.",
+      "scores": { "business": 4 },
+      "reasons": {
+        "business": "Working: the paying action is on the first screen ('SHOP KITS', evidence.json actions firstAt 11%, firstScreen true), so the no-action cap of 4 does not apply. The products are shown with prices beside them (prices $99.99 / $65 / $22 at about 24% of the page, sheet-desktop page-02/03), which matches the team's 'price near the action' rule. A trust line sits on the first screen: the 'So nice The New York Times wrote about us (thrice)' banner in desktop-fold and mobile-fold. Not working: (1) all three featured products are SOLD OUT (page-text.txt; mobile-page-03.png shows the buy button reading 'SOLD OUT • $99.99'), so on this page the action that pays cannot be completed. Only the email capture still converts. (2) The email pop-up slides up about 1 s after load (motion-sheet frames 01-load-500ms → 02-load-1000ms) and covers the hero's own 'SHOP KITS / GET EDUCATED' buttons on desktop and mobile (desktop-fold, mobile-overlay). The visitor's first ask is therefore 'give us your email and due date', made before any product, testimonial or price is seen. (3) 'SHOP KITS' and 'GET EDUCATED / LET'S LEARN' are identical pills, so the paying action has no priority over the free one (mobile-fold). (4) There is no risk reversal anywhere in page-text.txt: no returns, guarantee, shipping or HSA/FSA line. (5) Most proof comes after the ask. The three testimonials are at about 70% of the page and the press logos (Forbes, Fast Company, Vogue, Glamour) at about 90%, both below the shop section (sheet-desktop page-05/06). The testimonials carry a first name and city only. 'made by parents & docs' and 'expert-led' name no expert. The structure would score about 5 (clear product, price shown, proof present) without the sold-out state and the pop-up that covers the CTA. Together they bring it to 4."
+      },
+      "claims": [
+        {
+          "claim": "4. CTA early on, positioned fixed at the bottom, with a circular radius",
+          "verdict": "confirmed with correction (it merges two different elements, and the bottom one is not the action that pays)",
+          "evidence": "The early CTA exists, but it is neither fixed nor at the bottom. 'SHOP KITS' and 'GET EDUCATED' are two fully rounded pill buttons (the correct term is 'pill', not 'circular radius') in the middle of the hero. evidence.json marks both as firstScreen true and sticky false, and the outline reports no sticky action at all. The element at the bottom of the viewport with a large circular curve is the email pop-up: an arc-topped bottom sheet ('GET CUSTOMIZED CONTENT IN YOUR INBOX' with email, optional due date/birth date, 'SIGN UP' and 'No Thanks'), listed in overlaysDismissed as 'Close button'. It appears about 1 s after load (motion-sheet 02-load-1000ms) and covers the hero pills. The action it asks for is a newsletter sign-up in exchange for content, with no discount or offer attached. That builds a lead list and a due-date segment, which is useful for a pregnancy-timed product (inference), but it is not the action that pays, and it competes with 'SHOP KITS', which is the action that pays. Two more elements sit at the bottom of the screen: an orange scroll-down arrow (mobile-fold only) and a dice icon fixed at bottom-right on every screen (sheet-mobile). The dice has no label in the pack, so its function is unverified. Whether the pop-up stays fixed during scrolling is unverified because the capture closed it."
+        },
+        {
+          "claim": "1. Simple colour play / 2. Balanced play of text sizes / 3. Unique scrolling concept",
+          "verdict": "not judged (outside the business criterion; for the art director and motion jurors)",
+          "evidence": "One business-relevant note on claim 3: evidence.json shows no scroll library (gsap, lenis and the others all false) and only 2 script-driven scroll effects. The pack therefore shows no scroll mechanism that affects the offer or the action."
+        }
+      ],
+      "problems": [
+        "The action that pays is dead on arrival: all three featured kits read SOLD OUT (page-text.txt, mobile-page-03.png), so 'SHOP KITS' leads to products that cannot be bought. Smallest fix: when stock is out, swap the button for 'Notify me when back' or 'Join the waitlist' with the due date, which turns the sold-out state into the lead capture the pop-up is trying to get.",
+        "The email pop-up covers the paying CTA about 1 s after load and asks for email plus due date before any product, price or proof is shown (motion-sheet 01→02, desktop-fold, mobile-overlay). Smallest fix: trigger it on exit intent or after the shop section, and give it a reason to say yes (a first-order discount or a due-date-matched guide).",
+        "There is no risk reversal and most proof sits after the ask. No returns, guarantee or shipping line appears anywhere, the testimonials use first name and city only, the press logos sit at about 90%, and 'made by parents & docs' names no doctor. Smallest fix: one line under each price (free returns or a guarantee, the HSA/FSA eligibility if true), and the named lactation consultant or doctor next to the kits."
+      ],
+      "keep": [
+        "A press-proof announcement bar on the first screen ('So nice The New York Times wrote about us (thrice)'). It builds trust before any ask, at no layout cost. Copy only with a link to the article.",
+        "Price written into the product title and the buy button ('The Latch Kit • $99.99', button 'SOLD OUT • $99.99'). The cost is answered on the button itself, in line with the team's price rule.",
+        "A due-date field on the lead form (optional). For a product tied to a life stage it segments the list by timing, so follow-ups can arrive when the buyer actually needs the kit (inference about intent)."
+      ]
+    },
+    "ref-0008": {
+      "business": "Inference: Resolute (Applied Healthspan Private Limited, an Indian company going by the +91 phone number in the footer) sells paid 100-day preventive and longevity health programmes. They are built on diagnostics (85+ biomarkers, optional MRI, aging test with TruDiagnostics) plus doctor consults, coaching and an app, for health-optimising professionals and athletes, with a corporate line ('Resolute Workplace'). The action that pays is 'Get Your Blueprint' (programme enrolment or booking; the destination is unverified). A second product, Supp[RX] supplement recommendations, is pushed through 'Reveal Your Stack'.",
+      "scores": { "business": 5 },
+      "reasons": {
+        "business": "Working: 'Get Your Blueprint' is sticky on every screen and repeats in the footer (evidence.json sticky true, count 2; sheet-mobile shows it on every screen). 'How it Works' lists what you get at each step (Human 360 Body Data Stack, Hyper Personalised Action Plan, Specialist Doctor Consults, Health Coaching, 24/7 Care Concierge, app; page-text.txt, 38–50%). Trust comes before the closing ask: four testimonials with name and role at about 65% and twelve named clinicians with specialties and photos at about 73% (sheet-mobile page-09/10), ahead of the final CTA at 94%. Not working: (1) no price anywhere (evidence.json prices []), against the team's strongest rule, for a high-consideration paid programme. (2) No risk reversal: no guarantee, refund or 'cancel anytime'. 'Outcomes, Not Promises' is a slogan, not a policy, and the heading 'From risk reversal, to high performance' uses the term to mean health risk, not buyer risk. (3) The promo bar's filled maroon 'Reveal Your Stack →' outweighs the nav's ghost-style 'Get Your Blueprint' pill on every screen (desktop-fold, sheet-mobile). The supplement upsell is visually the main action, and the hero itself has no button, only a scroll arrow. (4) Eight sticky menu links (Resolute Club, Workplace, Aging Test, Supplement Clinic, blog, about) split attention. (5) Several proof and outcome claims are unsourced (see veto). The page is competent in structure and proof, and generic in the offer: no price, no guarantee, and a competing upsell. That puts it at 5."
+      },
+      "claims": [
+        {
+          "claim": "1. Every section is packaged with good scrolling",
+          "verdict": "contested (business angle only; the motion juror owns the quality judgement)",
+          "evidence": "In two places the scroll packaging hides the offer. report.json shows hidden-content FAIL: 11 text elements were never visible during a full scroll on tablet and mobile. They include the 'what you get' role lines of the AI-companion section ('Interprets, prescribes and guides your care', 'Designs food, supplement and workout plans...'), and one element stays hidden under reduced motion. That breaks the team's 'Never' rule on content that only appears through animation. report.json also logs a layout shift of 1.730 on desktop (FAIL, over 0.25). In addition, no in-content CTA appears between the nav and the footer: the action list shows 'Get Your Blueprint' only in the sticky nav and the footer, so no scroll section ends in an ask."
+        },
+        {
+          "claim": "2. Transitions between pages are smooth",
+          "verdict": "unverifiable from the pack, and a term correction",
+          "evidence": "The capture is one page (13,022 px tall, report screenshots-capped after 14 screens). No page-to-page navigation was recorded and viewTransitions is false. What the note describes are section-to-section scroll transitions (gsap + ScrollTrigger + lenis are true in evidence.json), not transitions between pages. Their smoothness is for the motion juror."
+        },
+        {
+          "claim": "3. Every section has a unique design",
+          "verdict": "not judged (outside the business criterion)",
+          "evidence": "Business note only: because every section is designed differently, no repeated action pattern exists. The only recurring ask is the low-contrast sticky nav pill (see reasons)."
+        }
+      ],
+      "problems": [
+        "Unsourced health-outcome and proof claims presented as fact: an outcome ticker of 'Reduced Cardiovascular Risk', 'Improved Insulin Sensitivity', 'Functionally Regulated Immunity' and more; 'Eliminate inflammation'; 'We help you add more disease-free, high-performing years to your life'; 'Real Stories from 10,000+ Personalised Journeys'; the 100-day framework 'designed around the neuroscience of habit formation and cellular renewal cycles'; and a footer 'HIPPA NPP Compliant' badge (misspelt, and HIPAA has no official compliance certification). None carries a source, study, count basis or audit (page-text.txt). Smallest fix: cite or remove each one, and turn the outcomes into goals ('programmes target...') with a clinical-evidence link.",
+        "No price and no risk reversal for a paid, high-consideration health programme (evidence.json prices []; no guarantee or refund text in page-text.txt). Smallest fix: a 'from ₹X / 100 days, includes...' line next to 'Get Your Blueprint', plus the refund or consult-first terms.",
+        "The secondary upsell outranks the action that pays: the filled 'Reveal Your Stack →' in the promo bar beats the ghost 'Get Your Blueprint' pill on every screen, the hero has no button, and eight sticky menu links compete (desktop-fold, sheet-mobile). Smallest fix: make 'Get Your Blueprint' the one filled button (in the hero and at the end of 'How it Works') and demote the promo to a text link."
+      ],
+      "keep": [
+        "A named clinical team with specialty and photo (CMO, cardiologists, pharmacologist and others, page-text.txt about 73%) placed before the closing ask. For a medical-adjacent offer this is the strongest trust pattern on either page.",
+        "'How it Works' as three steps, each with an 'INCLUDES' list. It answers 'what exactly do I get' concretely, which a price can later sit beside.",
+        "A sticky primary action available on every screen ('Get Your Blueprint'). Keep the pattern but give it the visual weight, which here goes to the promo bar."
+      ],
+      "veto": "Veto on reusing this page's claims, not its layout. It presents health outcomes ('Reduced Cardiovascular Risk', 'Eliminate inflammation', 'add more disease-free ... years to your life'), a scale figure ('10,000+ Personalised Journeys') and a compliance badge ('HIPPA NPP Compliant') as fact, with no source on the page. The outcome lines are promises a health business cannot guarantee for an individual, and the compliance badge names a certification that does not officially exist. These must not enter the library as a copy pattern. The structural patterns under 'keep' may."
+    }
+  }
+}
