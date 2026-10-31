@@ -12,7 +12,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { launch, resolveTarget, parseArgs } from './lib/browser.mjs';
+import { launch, resolveTarget, parseArgs, gotoStable, dismissOverlays } from './lib/browser.mjs';
 import { measure, hiddenText, markSeen } from './lib/measure.mjs';
 import { decodePng } from './lib/png.mjs';
 
@@ -78,13 +78,9 @@ async function open(ctxOpts) {
       }).observe({ type: 'layout-shift', buffered: true });
     } catch {}
   });
-  try {
-    await page.goto(url, { waitUntil: 'networkidle', timeout: 30000 });
-  } catch {
-    await page.goto(url, { waitUntil: 'load', timeout: 30000 }).catch(() => {});
-  }
+  const load = await gotoStable(page, url);
   await page.waitForTimeout(1200);
-  return { context, page, errors };
+  return { context, page, errors, load };
 }
 
 // Scrolls with real wheel input so scroll-triggered effects fire, counting the
@@ -171,11 +167,19 @@ function add(list, severity, rule, message, sample) {
 }
 
 for (const vp of VIEWPORTS) {
-  const { context, page, errors } = await open({ viewport: { width: vp.width, height: vp.height } });
+  const { context, page, errors, load } = await open({ viewport: { width: vp.width, height: vp.height } });
   const shots = [];
   const fold = path.join(outDir, `${vp.name}-fold.png`);
   await page.screenshot({ path: fold });
   shots.push(fold);
+  // Pop-ups and cookie banners: photograph the first impression with them, then close them
+  // so the screens below show the content.
+  await page.waitForTimeout(1500);
+  const overlayShot = path.join(outDir, `${vp.name}-overlay.png`);
+  await page.screenshot({ path: overlayShot });
+  const overlays = await dismissOverlays(page);
+  if (overlays.length) shots.push(overlayShot);
+  else fs.rmSync(overlayShot, { force: true });
   const animated = await scrollThrough(page, vp.height);
   const m = await page.evaluate(measure, { rules, viewport: vp.name });
   const contrastCheck = await verifyContrast(page, m.contrastCandidates || []);
@@ -198,6 +202,8 @@ for (const vp of VIEWPORTS) {
   await page.evaluate(() => window.scrollTo(0, 0));
 
   const findings = m.findings;
+  if (load.failed) add(findings, 'FAIL', 'page-did-not-load', 'The server answered with an error page after 3 tries: everything below describes that error page');
+  if (overlays.length) add(findings, 'INFO', 'overlays-dismissed', `Closed ${overlays.length} pop-up or banner(s) before capturing the screens`, overlays);
   if (contrastCheck.failures.length)
     add(findings, 'FAIL', 'contrast', `${contrastCheck.failures.length} text elements below WCAG AA (measured on screen pixels)`, contrastCheck.failures.slice(0, 5));
   if (contrastCheck.unverified)

@@ -1,0 +1,965 @@
+{
+  "url": "https://www.theresolute.ai/",
+  "time": "2026-10-31T19:37:08.567Z",
+  "sheets": {
+    "desktop": "data/references/captures/ref-0008/sheet-desktop.png",
+    "mobile": "data/references/captures/ref-0008/sheet-mobile.png",
+    "motion": "data/references/captures/ref-0008/motion-sheet.png"
+  },
+  "load": {
+    "status": 200,
+    "retries": 0,
+    "failed": false
+  },
+  "overlaysDismissed": [
+    "Close promotion ×"
+  ],
+  "outline": {
+    "title": "Resolute AI",
+    "description": "Building the future of healthier, longer living.",
+    "headings": [
+      "H1 1% More Healthy Years.",
+      "H2 1% Built With You.",
+      "H3 7% Hyper-Personalised Health Plans Powered by Experts and AI",
+      "H3 7% Built on Diagnostics, Not Guesswork",
+      "H3 7% One Size Fits You, Not One Size Fits All",
+      "H2 20% Welcome to What Your Health Can Be",
+      "H2 28% From risk reversal, to high performance",
+      "H3 32% optiME",
+      "H3 32% superGUT",
+      "H3 33% paceFORGE",
+      "H3 33% galaxyBRAIN",
+      "H3 32% eternAGE",
+      "H2 38% How it Works",
+      "H3 40% Know Your Baseline",
+      "H3 45% Get Your Blueprint",
+      "H3 50% Transform Your Health",
+      "H2 55% Meet Your Smart AI Companion",
+      "H2 65% Real Stories from ‍10,000+ Personalised Journeys",
+      "H2 73% Not just a system - real care, from a team that knows your health is personal",
+      "H2 81% Guides & Blogs",
+      "H2 84% Whole-Body MRI: The Guardian of Your Healthspan",
+      "H3 82% Why Your Blood Test Might Be Your Best Starting Point For Your Supplement Regimen",
+      "H3 84% 10 Ways Your Blood Test Data Can Transform Your Health",
+      "H3 85% Understanding the Polyvagal Theory to Navigate Burnout and Find Calm",
+      "H2 87% FAQs",
+      "H2 93% Footer",
+      "H2 94% Start your 100-day health transformation today. Powered by your data, guided by experts.",
+      "H3 95% GET IN TOUCH",
+      "H3 96% Follow us"
+    ],
+    "actions": [
+      {
+        "label": "Resolute Club",
+        "count": 1,
+        "firstAt": -4,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Resolute Workplace",
+        "count": 1,
+        "firstAt": -4,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Resolute Aging Test x TruDiagnostics",
+        "count": 1,
+        "firstAt": -3,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "The Supplement Clinic",
+        "count": 1,
+        "firstAt": -3,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Browse Blog >",
+        "count": 1,
+        "firstAt": -3,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "About Us >",
+        "count": 1,
+        "firstAt": -3,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Reveal Your Stack →",
+        "count": 2,
+        "firstAt": 0,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "×",
+        "count": 1,
+        "firstAt": 0,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Get Your Blueprint",
+        "count": 2,
+        "firstAt": 0,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Doctor",
+        "count": 1,
+        "firstAt": 56,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "What health goals can I pursue?",
+        "count": 1,
+        "firstAt": 88,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Why 100 days?",
+        "count": 1,
+        "firstAt": 89,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "How involved are your experts?",
+        "count": 1,
+        "firstAt": 90,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "What does progress really look like?",
+        "count": 1,
+        "firstAt": 91,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Read All FAQs",
+        "count": 1,
+        "firstAt": 93,
+        "firstScreen": false,
+        "sticky": false
+      }
+    ],
+    "prices": [],
+    "proofMentions": {},
+    "logoImages": 0,
+    "forms": 0,
+    "pageHeight": 13022
+  },
+  "motion": {
+    "libraries": {
+      "gsap": true,
+      "scrollTrigger": true,
+      "splitText": true,
+      "lenis": true,
+      "locomotive": false,
+      "swiper": false,
+      "lottie": true,
+      "framerMotion": false,
+      "viewTransitions": false
+    },
+    "maxRunning": 9,
+    "durationsMs": {
+      "min": 750,
+      "max": 50000
+    },
+    "easings": [
+      "linear",
+      "cubic-bezier(0.25, 0.46, 0.45, 0.94)"
+    ],
+    "properties": [
+      "transform",
+      "opacity"
+    ],
+    "movingWithoutInput": 2,
+    "movingWithoutInputFurtherDown": [
+      {
+        "y": 900,
+        "moving": 4
+      },
+      {
+        "y": 1800,
+        "moving": 4
+      },
+      {
+        "y": 2700,
+        "moving": 7
+      },
+      {
+        "y": 3600,
+        "moving": 10
+      },
+      {
+        "y": 4500,
+        "moving": 8
+      }
+    ],
+    "scriptDrivenOnScroll": 13,
+    "infiniteLoops": 58,
+    "infiniteLoopsWithText": 58,
+    "pauseControl": false,
+    "steps": [
+      {
+        "y": 449,
+        "running": 7,
+        "scriptDriven": 2,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.hb__track",
+            "hasText": true,
+            "duration": 30000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "strong.hb__live",
+            "hasText": true,
+            "duration": 1500,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "strong.hb__live",
+            "hasText": true,
+            "duration": 1500,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.journey_marquee",
+            "hasText": true,
+            "duration": 50000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.journey_marquee",
+            "hasText": true,
+            "duration": 50000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.team_collection_wrap",
+            "hasText": true,
+            "duration": 15000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 900,
+        "running": 7,
+        "scriptDriven": 6,
+        "idleMoving": 4,
+        "sample": [
+          {
+            "target": "div.hb__track",
+            "hasText": true,
+            "duration": 30000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "strong.hb__live",
+            "hasText": true,
+            "duration": 1500,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "strong.hb__live",
+            "hasText": true,
+            "duration": 1500,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.journey_marquee",
+            "hasText": true,
+            "duration": 50000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.journey_marquee",
+            "hasText": true,
+            "duration": 50000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.team_collection_wrap",
+            "hasText": true,
+            "duration": 15000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1350,
+        "running": 7,
+        "scriptDriven": 5,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.hb__track",
+            "hasText": true,
+            "duration": 30000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "strong.hb__live",
+            "hasText": true,
+            "duration": 1500,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "strong.hb__live",
+            "hasText": true,
+            "duration": 1500,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.journey_marquee",
+            "hasText": true,
+            "duration": 50000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.journey_marquee",
+            "hasText": true,
+            "duration": 50000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.team_collection_wrap",
+            "hasText": true,
+            "duration": 15000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1800,
+        "running": 7,
+        "scriptDriven": 5,
+        "idleMoving": 4,
+        "sample": [
+          {
+            "target": "div.hb__track",
+            "hasText": true,
+            "duration": 30000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "strong.hb__live",
+            "hasText": true,
+            "duration": 1500,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "strong.hb__live",
+            "hasText": true,
+            "duration": 1500,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.journey_marquee",
+            "hasText": true,
+            "duration": 50000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.journey_marquee",
+            "hasText": true,
+            "duration": 50000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.team_collection_wrap",
+            "hasText": true,
+            "duration": 15000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 2250,
+        "running": 7,
+        "scriptDriven": 4,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.hb__track",
+            "hasText": true,
+            "duration": 30000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "strong.hb__live",
+            "hasText": true,
+            "duration": 1500,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "strong.hb__live",
+            "hasText": true,
+            "duration": 1500,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.journey_marquee",
+            "hasText": true,
+            "duration": 50000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.journey_marquee",
+            "hasText": true,
+            "duration": 50000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.team_collection_wrap",
+            "hasText": true,
+            "duration": 15000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 2700,
+        "running": 7,
+        "scriptDriven": 6,
+        "idleMoving": 7,
+        "sample": [
+          {
+            "target": "div.hb__track",
+            "hasText": true,
+            "duration": 30000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "strong.hb__live",
+            "hasText": true,
+            "duration": 1500,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "strong.hb__live",
+            "hasText": true,
+            "duration": 1500,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.journey_marquee",
+            "hasText": true,
+            "duration": 50000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.journey_marquee",
+            "hasText": true,
+            "duration": 50000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.team_collection_wrap",
+            "hasText": true,
+            "duration": 15000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 3150,
+        "running": 7,
+        "scriptDriven": 5,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.hb__track",
+            "hasText": true,
+            "duration": 30000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "strong.hb__live",
+            "hasText": true,
+            "duration": 1500,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "strong.hb__live",
+            "hasText": true,
+            "duration": 1500,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.journey_marquee",
+            "hasText": true,
+            "duration": 50000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.journey_marquee",
+            "hasText": true,
+            "duration": 50000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.team_collection_wrap",
+            "hasText": true,
+            "duration": 15000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 3600,
+        "running": 7,
+        "scriptDriven": 9,
+        "idleMoving": 10,
+        "sample": [
+          {
+            "target": "div.hb__track",
+            "hasText": true,
+            "duration": 30000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "strong.hb__live",
+            "hasText": true,
+            "duration": 1500,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "strong.hb__live",
+            "hasText": true,
+            "duration": 1500,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.journey_marquee",
+            "hasText": true,
+            "duration": 50000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.journey_marquee",
+            "hasText": true,
+            "duration": 50000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.team_collection_wrap",
+            "hasText": true,
+            "duration": 15000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 4049,
+        "running": 9,
+        "scriptDriven": 12,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.slide_content_front",
+            "hasText": true,
+            "duration": 750,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.slide_content_back",
+            "hasText": true,
+            "duration": 750,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.hb__track",
+            "hasText": true,
+            "duration": 30000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "strong.hb__live",
+            "hasText": true,
+            "duration": 1500,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "strong.hb__live",
+            "hasText": true,
+            "duration": 1500,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.journey_marquee",
+            "hasText": true,
+            "duration": 50000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 4500,
+        "running": 7,
+        "scriptDriven": 13,
+        "idleMoving": 8,
+        "sample": [
+          {
+            "target": "div.hb__track",
+            "hasText": true,
+            "duration": 30000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "strong.hb__live",
+            "hasText": true,
+            "duration": 1500,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "strong.hb__live",
+            "hasText": true,
+            "duration": 1500,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.journey_marquee",
+            "hasText": true,
+            "duration": 50000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.journey_marquee",
+            "hasText": true,
+            "duration": 50000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.team_collection_wrap",
+            "hasText": true,
+            "duration": 15000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      }
+    ]
+  },
+  "reducedMotion": {
+    "movingWithoutInput": 4,
+    "movingOnScroll": 14,
+    "idleNavigation": null
+  },
+  "idleNavigation": null
+}

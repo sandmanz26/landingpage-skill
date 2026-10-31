@@ -1,0 +1,37 @@
+{
+  "list": "data/references/batch-003.txt",
+  "jobs": 2,
+  "seconds": 483,
+  "results": [
+    {
+      "id": "ref-0007",
+      "url": "https://swehl.com/",
+      "ok": true,
+      "inspectSeconds": 242,
+      "evidenceSeconds": 199,
+      "flags": [
+        "pop-up or banner on load, closed for the outline: Close button",
+        "under reduced motion 1 elements still move on their own and 2 move with the scroll",
+        "109 elements move with no input at the top (loops, marquees, auto-play)",
+        "elements keep moving with no input further down at 900px (1), 2700px (1), 3600px (2); no pause control found"
+      ],
+      "error": null
+    },
+    {
+      "id": "ref-0008",
+      "url": "https://www.theresolute.ai/",
+      "ok": true,
+      "inspectSeconds": 392,
+      "evidenceSeconds": 91,
+      "flags": [
+        "pop-up or banner on load, closed for the outline: Close promotion ×",
+        "under reduced motion 4 elements still move on their own and 14 move with the scroll",
+        "2 elements move with no input at the top (loops, marquees, auto-play)",
+        "elements keep moving with no input further down at 900px (4), 1800px (4), 2700px (7), 3600px (10), 4500px (8); no pause control found",
+        "endless moving text with no pause control",
+        "no price on the page"
+      ],
+      "error": null
+    }
+  ]
+}

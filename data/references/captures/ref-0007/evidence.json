@@ -1,0 +1,382 @@
+{
+  "url": "https://swehl.com/",
+  "time": "2026-10-31T19:36:26.948Z",
+  "sheets": {
+    "desktop": "data/references/captures/ref-0007/sheet-desktop.png",
+    "mobile": "data/references/captures/ref-0007/sheet-mobile.png",
+    "motion": "data/references/captures/ref-0007/motion-sheet.png"
+  },
+  "load": {
+    "status": 200,
+    "retries": 0,
+    "failed": false
+  },
+  "overlaysDismissed": [
+    "Close button"
+  ],
+  "outline": {
+    "title": "✨Swehl✨",
+    "description": "Swehl is a one-stop-shop for your breastfeeding journey.",
+    "headings": [
+      "H1 7% BREASTFEEDING TOOLS MADE FOR THIS CENTURY",
+      "H2 19% expert-led video tutorials",
+      "H2 19% virtual talk circles",
+      "H2 19% made by parents & docs",
+      "H2 19% expert-led video tutorials",
+      "H2 19% virtual talk circles",
+      "H2 19% made by parents & docs",
+      "H2 19% expert-led video tutorials",
+      "H2 19% virtual talk circles",
+      "H2 19% made by parents & docs",
+      "H2 19% expert-led video tutorials",
+      "H2 19% virtual talk circles",
+      "H2 19% made by parents & docs",
+      "H2 24% BREASTFEEDING ESSENTIALS",
+      "H2 24% YOUR #1 RESOURCE FOR PREGNANCY AND BEYOND.",
+      "H3 30% L E T ’ S T A L K I T O U T"
+    ],
+    "actions": [
+      {
+        "label": "SHOP KITS",
+        "count": 1,
+        "firstAt": 11,
+        "firstScreen": true,
+        "sticky": false
+      },
+      {
+        "label": "GET EDUCATED",
+        "count": 1,
+        "firstAt": 11,
+        "firstScreen": true,
+        "sticky": false
+      },
+      {
+        "label": "Glossary",
+        "count": 1,
+        "firstAt": 94,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Log In",
+        "count": 1,
+        "firstAt": 94,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "SIGN UP",
+        "count": 1,
+        "firstAt": 97,
+        "firstScreen": false,
+        "sticky": false
+      }
+    ],
+    "prices": [
+      "$99.99",
+      "$65",
+      "$22"
+    ],
+    "proofMentions": {},
+    "logoImages": 0,
+    "forms": 1,
+    "pageHeight": 5150
+  },
+  "motion": {
+    "libraries": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "splitText": false,
+      "lenis": false,
+      "locomotive": false,
+      "swiper": false,
+      "lottie": false,
+      "framerMotion": false,
+      "viewTransitions": false
+    },
+    "maxRunning": 6,
+    "durationsMs": {
+      "min": 300,
+      "max": 900
+    },
+    "easings": [
+      "cubic-bezier(0.4, 0, 0.2, 1)",
+      "ease"
+    ],
+    "properties": [
+      "transform",
+      "backgroundColor",
+      "color",
+      "opacity"
+    ],
+    "movingWithoutInput": 109,
+    "movingWithoutInputFurtherDown": [
+      {
+        "y": 900,
+        "moving": 1
+      },
+      {
+        "y": 2700,
+        "moving": 1
+      },
+      {
+        "y": 3600,
+        "moving": 2
+      }
+    ],
+    "scriptDrivenOnScroll": 2,
+    "infiniteLoops": 0,
+    "infiniteLoopsWithText": 0,
+    "pauseControl": false,
+    "steps": [
+      {
+        "y": 450,
+        "running": 3,
+        "scriptDriven": 2,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.transition-transform",
+            "hasText": true,
+            "duration": 700,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.transition-colors",
+            "hasText": true,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "backgroundColor"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.transition-colors",
+            "hasText": true,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "color"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      },
+      {
+        "y": 900,
+        "running": 1,
+        "scriptDriven": 2,
+        "idleMoving": 1,
+        "sample": [
+          {
+            "target": "div.transition-transform",
+            "hasText": true,
+            "duration": 700,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      },
+      {
+        "y": 1350,
+        "running": 1,
+        "scriptDriven": 1,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "span.absolute",
+            "hasText": false,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      },
+      {
+        "y": 1800,
+        "running": 1,
+        "scriptDriven": 1,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "span.absolute",
+            "hasText": false,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      },
+      {
+        "y": 2250,
+        "running": 1,
+        "scriptDriven": 1,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "span.absolute",
+            "hasText": false,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      },
+      {
+        "y": 2700,
+        "running": 2,
+        "scriptDriven": 2,
+        "idleMoving": 1,
+        "sample": [
+          {
+            "target": "span.absolute",
+            "hasText": false,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.w-full",
+            "hasText": true,
+            "duration": 900,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      },
+      {
+        "y": 3150,
+        "running": 0,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": []
+      },
+      {
+        "y": 3600,
+        "running": 6,
+        "scriptDriven": 1,
+        "idleMoving": 2,
+        "sample": [
+          {
+            "target": "div.duration-500",
+            "hasText": true,
+            "duration": 500,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.duration-500",
+            "hasText": true,
+            "duration": 500,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.duration-500",
+            "hasText": true,
+            "duration": 500,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.duration-500",
+            "hasText": true,
+            "duration": 500,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.duration-500",
+            "hasText": true,
+            "duration": 500,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.duration-500",
+            "hasText": true,
+            "duration": 500,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      },
+      {
+        "y": 4050,
+        "running": 0,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": []
+      },
+      {
+        "y": 4250,
+        "running": 0,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": []
+      }
+    ]
+  },
+  "reducedMotion": {
+    "movingWithoutInput": 1,
+    "movingOnScroll": 2,
+    "idleNavigation": null
+  },
+  "idleNavigation": null
+}

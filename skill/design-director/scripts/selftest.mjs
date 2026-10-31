@@ -113,8 +113,16 @@ const check = (name, ok, detail = '') => {
     check('evidence catches motion that ignores reduced motion', ev.reducedMotion.movingWithoutInput > 0, JSON.stringify(ev.reducedMotion));
     check('evidence outlines headings and actions', ev.outline.headings.length === 3 && ev.outline.actions.some((a) => a.label === 'Start today' && !a.firstScreen), JSON.stringify(ev.outline));
     check('evidence flags no price and no action on the first screen', /no price/.test(r.stdout) && /no styled action in the first screen/.test(r.stdout), r.stdout);
-    check('evidence draws a motion sheet', fs.existsSync(path.join(dir, 'motion-sheet.png')));
+    check('evidence draws a motion sheet and saves the page text', fs.existsSync(path.join(dir, 'motion-sheet.png')) && /Start today/.test(fs.readFileSync(path.join(dir, 'page-text.txt'), 'utf8')));
   }
+}
+
+// pop-ups are closed before the outline is read
+{
+  const dir = path.join(tmp, 'popup');
+  run('evidence.mjs', [path.join(fixtures, 'popup.html'), '--dir', dir, '--idle', '1']);
+  const ev = fs.existsSync(path.join(dir, 'evidence.json')) ? JSON.parse(fs.readFileSync(path.join(dir, 'evidence.json'), 'utf8')) : null;
+  check('evidence closes a newsletter pop-up', !!ev && ev.overlaysDismissed.some((l) => /no thanks/i.test(l)) && !ev.idleNavigation, ev && JSON.stringify(ev.overlaysDismissed));
 }
 
 // capture

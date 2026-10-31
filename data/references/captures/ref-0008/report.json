@@ -1,0 +1,1288 @@
+{
+  "target": "https://www.theresolute.ai/",
+  "time": "2026-10-31T19:29:05.947Z",
+  "rules": {
+    "purple-gradient": "warn",
+    "gradient": "info",
+    "glass": "info",
+    "system-font-only": "warn",
+    "too-many-font-sizes": "warn",
+    "too-many-colours": "warn",
+    "shadow-on-everything": "warn",
+    "icon-card-row": "warn",
+    "centred-hero-two-ctas": "warn",
+    "emoji": "warn"
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "pageHeight": 13022,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "too-many-font-sizes",
+          "message": "17 different font sizes on the page (aim for 5 or fewer doing the visible work)"
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.4px",
+          "sample": [
+            "<div> \"Founder, Crossfit 9one\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.4px",
+          "sample": [
+            "<div> \"Founder, BHIVE Workspaces\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.4px",
+          "sample": [
+            "<div> \"Ultra Marathon Runner\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 11.4px",
+          "sample": [
+            "<div> \"Chief Medical Officer\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 11.4px",
+          "sample": [
+            "<div> \"Gynaecologist & Hormone Specialist\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 11.4px",
+          "sample": [
+            "<div> \"Lead Nutrition & Health Coach\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 11.4px",
+          "sample": [
+            "<div> \"Clinical Pharmacologist\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 11.4px",
+          "sample": [
+            "<div> \"Orthopaedic & Trauma Surgeon\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 11.4px",
+          "sample": [
+            "<div> \"Chief Medical Officer\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 11.4px",
+          "sample": [
+            "<div> \"Gynaecologist & Hormone Specialist\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 11.4px",
+          "sample": [
+            "<div> \"Lead Nutrition & Health Coach\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 11.4px",
+          "sample": [
+            "<div> \"Clinical Pharmacologist\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 11.4px",
+          "sample": [
+            "<div> \"Orthopaedic & Trauma Surgeon\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "11 gradient backgrounds"
+        },
+        {
+          "severity": "INFO",
+          "rule": "glass",
+          "message": "7 blurred glass panels"
+        },
+        {
+          "severity": "WARN",
+          "rule": "too-many-colours",
+          "message": "10 distinct chromatic colours",
+          "sample": [
+            "#ff3b30",
+            "#420b20",
+            "#d66f50",
+            "#eacab1",
+            "#f0865a",
+            "#dc65f6",
+            "#e6d7c4",
+            "#2b2f4a"
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "overlays-dismissed",
+          "message": "Closed 1 pop-up or banner(s) before capturing the screens",
+          "sample": [
+            "Close promotion ×"
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "8 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#ff3b30 on screen = 1.88:1 median, 1.11:1 in the worst tenth (needs 4.5) <strong> \"LIVE NOW 🚀\"",
+            "#ffffff on screen = 3.36:1 median, 2.66:1 in the worst tenth (needs 4.5) <div> \"Your health doesn’t live in silos. Neither do we. \"",
+            "#f9f7f4 on screen = 4.36:1 median, 3.00:1 in the worst tenth (needs 4.5) <div> \"Total Body Optimisation\"",
+            "#808080 on screen = 3.95:1 median, 2.83:1 in the worst tenth (needs 4.5) <div> \"Our Centaur Team (human experts + AI) work togethe\"",
+            "#ebebeb on screen = 3.32:1 median, 1.92:1 in the worst tenth (needs 4.5) <div> \"The hyper-personalised insights into my recovery, \""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "contrast-unverified",
+          "message": "1 suspected contrast problems could not be re-measured on screen"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "hidden-content",
+          "message": "1 text elements were never visible during a full scroll (a reveal that never fires?)",
+          "sample": [
+            "designed for the life you’re meant to live"
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "layout-shift",
+          "message": "Layout shift 1.730 (over 0.25)"
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "7 console or page errors",
+          "sample": [
+            "Unexpected token '}'",
+            "Could not find a View Model linked to Artboard Artboard.",
+            "Could not find a View Model linked to Artboard Artboard.",
+            "Could not find a View Model linked to Artboard Artboard.",
+            "Could not find a View Model linked to Artboard Artboard."
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "screenshots-capped",
+          "message": "Page is 13022px tall; only the first 14 screens were captured"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "DMSans-Light",
+            "share": 93
+          },
+          {
+            "family": "Pppangaia-Ultralight",
+            "share": 7
+          }
+        ],
+        "fontSizes": [
+          70,
+          57,
+          44,
+          43,
+          31,
+          28,
+          23,
+          20,
+          19,
+          18,
+          17,
+          16,
+          15,
+          13,
+          12,
+          11,
+          10
+        ],
+        "textColours": [
+          "#040404",
+          "#ff3b30",
+          "#ffffff",
+          "#222222",
+          "#000000",
+          "#161816",
+          "#420b20",
+          "#ebebeb",
+          "#d66f50"
+        ],
+        "backgroundColours": [
+          "#ffffff",
+          "#420b20",
+          "#000000",
+          "#d66f50",
+          "#eacab1",
+          "#f3efe9",
+          "#f5f5f5",
+          "#f7f7f7",
+          "#f0865a",
+          "#dc65f6",
+          "#e6d7c4",
+          "#2b2f4a",
+          "#b76d4a",
+          "#0c1029"
+        ],
+        "chromaticColours": 10,
+        "spacing": {
+          "distinct": 40,
+          "offScale": 20,
+          "values": [
+            1,
+            4,
+            6,
+            7.5,
+            8,
+            10,
+            11.5,
+            12,
+            15,
+            15.5,
+            16,
+            19,
+            20,
+            23,
+            24,
+            25,
+            28,
+            31,
+            37.5,
+            40,
+            44,
+            44.5,
+            48,
+            50,
+            55,
+            56,
+            57,
+            60,
+            64,
+            70.5,
+            80,
+            96,
+            97.5,
+            120,
+            138.5,
+            140,
+            144,
+            224,
+            360,
+            450
+          ]
+        },
+        "radii": [
+          "9999px",
+          "1440px",
+          "8px",
+          "16px",
+          "12px",
+          "6px"
+        ],
+        "shadows": 0,
+        "gradients": 11,
+        "backdropBlur": 7,
+        "transitions": 24,
+        "animatedElements": 9,
+        "cls": 1.73
+      },
+      "screenshots": [
+        "data/references/captures/ref-0008/desktop-fold.png",
+        "data/references/captures/ref-0008/desktop-overlay.png",
+        "data/references/captures/ref-0008/desktop-page-01.png",
+        "data/references/captures/ref-0008/desktop-page-02.png",
+        "data/references/captures/ref-0008/desktop-page-03.png",
+        "data/references/captures/ref-0008/desktop-page-04.png",
+        "data/references/captures/ref-0008/desktop-page-05.png",
+        "data/references/captures/ref-0008/desktop-page-06.png",
+        "data/references/captures/ref-0008/desktop-page-07.png",
+        "data/references/captures/ref-0008/desktop-page-08.png",
+        "data/references/captures/ref-0008/desktop-page-09.png",
+        "data/references/captures/ref-0008/desktop-page-10.png",
+        "data/references/captures/ref-0008/desktop-page-11.png",
+        "data/references/captures/ref-0008/desktop-page-12.png",
+        "data/references/captures/ref-0008/desktop-page-13.png",
+        "data/references/captures/ref-0008/desktop-page-14.png"
+      ]
+    },
+    "tablet": {
+      "width": 768,
+      "pageHeight": 13794,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.4px",
+          "sample": [
+            "<div> \"Founder, Crossfit 9one\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.4px",
+          "sample": [
+            "<div> \"Founder, BHIVE Workspaces\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.4px",
+          "sample": [
+            "<div> \"Ultra Marathon Runner\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.56px",
+          "sample": [
+            "<div> \"Chief Medical Officer\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.56px",
+          "sample": [
+            "<div> \"Gynaecologist & Hormone Specialist\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.56px",
+          "sample": [
+            "<div> \"Lead Nutrition & Health Coach\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.56px",
+          "sample": [
+            "<div> \"Clinical Pharmacologist\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.56px",
+          "sample": [
+            "<div> \"Orthopaedic & Trauma Surgeon\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.56px",
+          "sample": [
+            "<div> \"Chief Medical Officer\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.56px",
+          "sample": [
+            "<div> \"Gynaecologist & Hormone Specialist\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.56px",
+          "sample": [
+            "<div> \"Lead Nutrition & Health Coach\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.56px",
+          "sample": [
+            "<div> \"Clinical Pharmacologist\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.56px",
+          "sample": [
+            "<div> \"Orthopaedic & Trauma Surgeon\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "10 gradient backgrounds"
+        },
+        {
+          "severity": "INFO",
+          "rule": "glass",
+          "message": "7 blurred glass panels"
+        },
+        {
+          "severity": "WARN",
+          "rule": "too-many-colours",
+          "message": "9 distinct chromatic colours",
+          "sample": [
+            "#ff3b30",
+            "#420b20",
+            "#d66f50",
+            "#eacab1",
+            "#f0865a",
+            "#dc65f6",
+            "#e6d7c4",
+            "#2b2f4a"
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "overlays-dismissed",
+          "message": "Closed 1 pop-up or banner(s) before capturing the screens",
+          "sample": [
+            "Close promotion ×"
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "8 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#ff5248 on screen = 3.20:1 median, 1.36:1 in the worst tenth (needs 4.5) <strong> \"LIVE NOW 🚀\"",
+            "#ffffff on screen = 3.36:1 median, 3.36:1 in the worst tenth (needs 4.5) <div> \"Your health doesn’t live in silos. Neither do we. \"",
+            "#f9f7f4 on screen = 4.44:1 median, 2.99:1 in the worst tenth (needs 4.5) <div> \"Total Body Optimisation\"",
+            "#808080 on screen = 3.95:1 median, 2.72:1 in the worst tenth (needs 4.5) <div> \"Our Centaur Team (human experts + AI) work togethe\"",
+            "#ebebeb on screen = 3.32:1 median, 2.12:1 in the worst tenth (needs 4.5) <div> \"The hyper-personalised insights into my recovery, \""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "hidden-content",
+          "message": "11 text elements were never visible during a full scroll (a reveal that never fires?)",
+          "sample": [
+            "designed for the life you’re meant to live",
+            "Interprets, prescribes and guides your care",
+            "Keeps you motivated and inspires habit change",
+            "Connects symptoms, biomarkers and trends over time",
+            "Designs food, supplement and workout plans that work for you"
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "7 console or page errors",
+          "sample": [
+            "Unexpected token '}'",
+            "Could not find a View Model linked to Artboard Artboard.",
+            "Could not find a View Model linked to Artboard Artboard.",
+            "Could not find a View Model linked to Artboard Artboard.",
+            "Could not find a View Model linked to Artboard Artboard."
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "DMSans-Light",
+            "share": 92
+          },
+          {
+            "family": "Pppangaia-Ultralight",
+            "share": 8
+          }
+        ],
+        "fontSizes": [
+          57,
+          47,
+          39,
+          35,
+          29,
+          23,
+          22,
+          20,
+          19,
+          18,
+          17,
+          16,
+          15,
+          13,
+          12,
+          11,
+          10
+        ],
+        "textColours": [
+          "#030303",
+          "#ff3b30",
+          "#ffffff",
+          "#222222",
+          "#000000",
+          "#161816",
+          "#420b20",
+          "#ebebeb",
+          "#d66f50"
+        ],
+        "backgroundColours": [
+          "#ffffff",
+          "#420b20",
+          "#000000",
+          "#d66f50",
+          "#eacab1",
+          "#f3efe9",
+          "#f5f5f5",
+          "#f7f7f7",
+          "#f0865a",
+          "#dc65f6",
+          "#e6d7c4",
+          "#2b2f4a",
+          "#b76d4a"
+        ],
+        "chromaticColours": 9,
+        "spacing": {
+          "distinct": 39,
+          "offScale": 20,
+          "values": [
+            4,
+            6,
+            6.5,
+            8,
+            10,
+            10.5,
+            12,
+            14.5,
+            15,
+            16,
+            19,
+            20,
+            21,
+            24,
+            25,
+            28,
+            29,
+            34,
+            39.5,
+            40,
+            44,
+            46.5,
+            48,
+            49.5,
+            50,
+            55,
+            56,
+            57,
+            60,
+            64,
+            77.5,
+            80,
+            96,
+            108,
+            120,
+            140,
+            143.5,
+            224,
+            409
+          ]
+        },
+        "radii": [
+          "9999px",
+          "768px",
+          "8px",
+          "16px",
+          "12px",
+          "6px"
+        ],
+        "shadows": 0,
+        "gradients": 10,
+        "backdropBlur": 7,
+        "transitions": 24,
+        "animatedElements": 9,
+        "cls": 0.076
+      },
+      "screenshots": [
+        "data/references/captures/ref-0008/tablet-fold.png",
+        "data/references/captures/ref-0008/tablet-overlay.png",
+        "data/references/captures/ref-0008/tablet-page-01.png",
+        "data/references/captures/ref-0008/tablet-page-02.png",
+        "data/references/captures/ref-0008/tablet-page-03.png",
+        "data/references/captures/ref-0008/tablet-page-04.png",
+        "data/references/captures/ref-0008/tablet-page-05.png",
+        "data/references/captures/ref-0008/tablet-page-06.png",
+        "data/references/captures/ref-0008/tablet-page-07.png",
+        "data/references/captures/ref-0008/tablet-page-08.png",
+        "data/references/captures/ref-0008/tablet-page-09.png",
+        "data/references/captures/ref-0008/tablet-page-10.png",
+        "data/references/captures/ref-0008/tablet-page-11.png",
+        "data/references/captures/ref-0008/tablet-page-12.png",
+        "data/references/captures/ref-0008/tablet-page-13.png",
+        "data/references/captures/ref-0008/tablet-page-14.png"
+      ]
+    },
+    "mobile": {
+      "width": 390,
+      "pageHeight": 11066,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.4px",
+          "sample": [
+            "<div> \"Founder, Crossfit 9one\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.4px",
+          "sample": [
+            "<div> \"Founder, BHIVE Workspaces\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.0875px",
+          "sample": [
+            "<div> \"Chief Medical Officer\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.0875px",
+          "sample": [
+            "<div> \"Gynaecologist & Hormone Specialist\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.0875px",
+          "sample": [
+            "<div> \"Lead Nutrition & Health Coach\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.0875px",
+          "sample": [
+            "<div> \"Clinical Pharmacologist\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.0875px",
+          "sample": [
+            "<div> \"Orthopaedic & Trauma Surgeon\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.0875px",
+          "sample": [
+            "<div> \"Chief Medical Officer\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.0875px",
+          "sample": [
+            "<div> \"Gynaecologist & Hormone Specialist\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.0875px",
+          "sample": [
+            "<div> \"Lead Nutrition & Health Coach\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.0875px",
+          "sample": [
+            "<div> \"Clinical Pharmacologist\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.0875px",
+          "sample": [
+            "<div> \"Orthopaedic & Trauma Surgeon\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "headline-lines",
+          "message": "h2 runs to 4 lines",
+          "sample": [
+            "<h2> \"Start your 100-day health transformation today.Pow\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tap-target",
+          "message": "11 controls smaller than 24x24px on a phone",
+          "sample": [
+            "112x21 <a> \"\"",
+            "95x21 <a> \"Resolute Club\"",
+            "250x21 <a> \"Resolute Aging Test x TruDiagnostics\"",
+            "155x21 <a> \"The Supplement Clinic\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "text-at-edge",
+          "message": "103 text elements within 12px of the screen edge",
+          "sample": [
+            "<span> \"LIVE NOW 🚀 Supp[RX] Powered By Resolute AI - Conf\"",
+            "<a> \"Reveal Your Stack →\"",
+            "<span> \"•\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "10 gradient backgrounds"
+        },
+        {
+          "severity": "INFO",
+          "rule": "glass",
+          "message": "7 blurred glass panels"
+        },
+        {
+          "severity": "WARN",
+          "rule": "too-many-colours",
+          "message": "9 distinct chromatic colours",
+          "sample": [
+            "#ff3b30",
+            "#420b20",
+            "#d66f50",
+            "#eacab1",
+            "#b15244",
+            "#f0865a",
+            "#dc65f6",
+            "#e6d7c4"
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "overlays-dismissed",
+          "message": "Closed 1 pop-up or banner(s) before capturing the screens",
+          "sample": [
+            "Close promotion ×"
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "10 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#ff3b30 on screen = 2.21:1 median, 1.22:1 in the worst tenth (needs 4.5) <strong> \"LIVE NOW 🚀\"",
+            "#ff3b30 on screen = 2.22:1 median, 1.38:1 in the worst tenth (needs 4.5) <strong> \"LIVE NOW 🚀\"",
+            "#ffffff on screen = 3.36:1 median, 2.76:1 in the worst tenth (needs 4.5) <div> \"Your health doesn’t live in silos. Neither do we. \"",
+            "#ffffff on screen = 2.64:1 median, 1.42:1 in the worst tenth (needs 3) <h3> \"optiME\"",
+            "#f9f7f4 on screen = 4.00:1 median, 2.72:1 in the worst tenth (needs 4.5) <div> \"Total Body Optimisation\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "hidden-content",
+          "message": "11 text elements were never visible during a full scroll (a reveal that never fires?)",
+          "sample": [
+            "designed for the life you’re meant to live",
+            "Interprets, prescribes and guides your care",
+            "Keeps you motivated and inspires habit change",
+            "Connects symptoms, biomarkers and trends over time",
+            "Designs food, supplement and workout plans that work for you"
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "7 console or page errors",
+          "sample": [
+            "Unexpected token '}'",
+            "Could not find a View Model linked to Artboard Artboard.",
+            "Could not find a View Model linked to Artboard Artboard.",
+            "Could not find a View Model linked to Artboard Artboard.",
+            "Could not find a View Model linked to Artboard Artboard."
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "DMSans-Light",
+            "share": 92
+          },
+          {
+            "family": "Pppangaia-Ultralight",
+            "share": 8
+          }
+        ],
+        "fontSizes": [
+          37,
+          32,
+          28,
+          22,
+          20,
+          18,
+          16,
+          14,
+          13,
+          12,
+          10
+        ],
+        "textColours": [
+          "#000000",
+          "#ff3b30",
+          "#ffffff",
+          "#222222",
+          "#161816",
+          "#420b20",
+          "#ebebeb",
+          "#d66f50"
+        ],
+        "backgroundColours": [
+          "#ffffff",
+          "#420b20",
+          "#000000",
+          "#d66f50",
+          "#eacab1",
+          "#f3efe9",
+          "#f5f5f5",
+          "#b15244",
+          "#ebebeb",
+          "#f0865a",
+          "#dc65f6",
+          "#e6d7c4",
+          "#2b2f4a"
+        ],
+        "chromaticColours": 9,
+        "spacing": {
+          "distinct": 29,
+          "offScale": 15,
+          "values": [
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            15,
+            16,
+            19,
+            20,
+            24,
+            25,
+            28,
+            32,
+            32.5,
+            40,
+            41,
+            41.5,
+            48,
+            49.5,
+            55,
+            60,
+            64,
+            66,
+            80,
+            82,
+            117,
+            140,
+            338
+          ]
+        },
+        "radii": [
+          "9999px",
+          "390px",
+          "8px",
+          "16px",
+          "12px",
+          "6px"
+        ],
+        "shadows": 0,
+        "gradients": 10,
+        "backdropBlur": 7,
+        "transitions": 26,
+        "animatedElements": 12,
+        "cls": 0.015
+      },
+      "screenshots": [
+        "data/references/captures/ref-0008/mobile-fold.png",
+        "data/references/captures/ref-0008/mobile-overlay.png",
+        "data/references/captures/ref-0008/mobile-page-01.png",
+        "data/references/captures/ref-0008/mobile-page-02.png",
+        "data/references/captures/ref-0008/mobile-page-03.png",
+        "data/references/captures/ref-0008/mobile-page-04.png",
+        "data/references/captures/ref-0008/mobile-page-05.png",
+        "data/references/captures/ref-0008/mobile-page-06.png",
+        "data/references/captures/ref-0008/mobile-page-07.png",
+        "data/references/captures/ref-0008/mobile-page-08.png",
+        "data/references/captures/ref-0008/mobile-page-09.png",
+        "data/references/captures/ref-0008/mobile-page-10.png",
+        "data/references/captures/ref-0008/mobile-page-11.png",
+        "data/references/captures/ref-0008/mobile-page-12.png",
+        "data/references/captures/ref-0008/mobile-page-13.png",
+        "data/references/captures/ref-0008/mobile-page-14.png"
+      ]
+    }
+  },
+  "checks": {
+    "reducedMotion": {
+      "findings": [
+        {
+          "severity": "FAIL",
+          "rule": "reduced-motion",
+          "message": "1 text elements stay hidden when the visitor asks for reduced motion",
+          "sample": [
+            "designed for the life you’re meant to live"
+          ]
+        }
+      ],
+      "screenshot": "data/references/captures/ref-0008/reduced-motion-fold.png"
+    },
+    "noJavaScript": {
+      "findings": [],
+      "withJs": 12171,
+      "withoutJs": 11964
+    }
+  },
+  "summary": {
+    "fail": 7,
+    "warn": 11
+  },
+  "url": "https://www.theresolute.ai/",
+  "findings": [
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "8 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#ff3b30 on screen = 1.88:1 median, 1.11:1 in the worst tenth (needs 4.5) <strong> \"LIVE NOW 🚀\"",
+        "#ffffff on screen = 3.36:1 median, 2.66:1 in the worst tenth (needs 4.5) <div> \"Your health doesn’t live in silos. Neither do we. \"",
+        "#f9f7f4 on screen = 4.36:1 median, 3.00:1 in the worst tenth (needs 4.5) <div> \"Total Body Optimisation\"",
+        "#808080 on screen = 3.95:1 median, 2.83:1 in the worst tenth (needs 4.5) <div> \"Our Centaur Team (human experts + AI) work togethe\"",
+        "#ebebeb on screen = 3.32:1 median, 1.92:1 in the worst tenth (needs 4.5) <div> \"The hyper-personalised insights into my recovery, \""
+      ],
+      "where": [
+        "desktop",
+        "tablet"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "hidden-content",
+      "message": "1 text elements were never visible during a full scroll (a reveal that never fires?)",
+      "sample": [
+        "designed for the life you’re meant to live"
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "layout-shift",
+      "message": "Layout shift 1.730 (over 0.25)",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "hidden-content",
+      "message": "11 text elements were never visible during a full scroll (a reveal that never fires?)",
+      "sample": [
+        "designed for the life you’re meant to live",
+        "Interprets, prescribes and guides your care",
+        "Keeps you motivated and inspires habit change",
+        "Connects symptoms, biomarkers and trends over time",
+        "Designs food, supplement and workout plans that work for you"
+      ],
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tap-target",
+      "message": "11 controls smaller than 24x24px on a phone",
+      "sample": [
+        "112x21 <a> \"\"",
+        "95x21 <a> \"Resolute Club\"",
+        "250x21 <a> \"Resolute Aging Test x TruDiagnostics\"",
+        "155x21 <a> \"The Supplement Clinic\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "10 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#ff3b30 on screen = 2.21:1 median, 1.22:1 in the worst tenth (needs 4.5) <strong> \"LIVE NOW 🚀\"",
+        "#ff3b30 on screen = 2.22:1 median, 1.38:1 in the worst tenth (needs 4.5) <strong> \"LIVE NOW 🚀\"",
+        "#ffffff on screen = 3.36:1 median, 2.76:1 in the worst tenth (needs 4.5) <div> \"Your health doesn’t live in silos. Neither do we. \"",
+        "#ffffff on screen = 2.64:1 median, 1.42:1 in the worst tenth (needs 3) <h3> \"optiME\"",
+        "#f9f7f4 on screen = 4.00:1 median, 2.72:1 in the worst tenth (needs 4.5) <div> \"Total Body Optimisation\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "reduced-motion",
+      "message": "1 text elements stay hidden when the visitor asks for reduced motion",
+      "sample": [
+        "designed for the life you’re meant to live"
+      ],
+      "where": [
+        "reducedMotion"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "too-many-font-sizes",
+      "message": "17 different font sizes on the page (aim for 5 or fewer doing the visible work)",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "small-text",
+      "message": "Text at 10.4px",
+      "sample": [
+        "<div> \"Founder, Crossfit 9one\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "small-text",
+      "message": "Text at 11.4px",
+      "sample": [
+        "<div> \"Chief Medical Officer\""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "gradient",
+      "message": "11 gradient backgrounds",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "glass",
+      "message": "7 blurred glass panels",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "too-many-colours",
+      "message": "10 distinct chromatic colours",
+      "sample": [
+        "#ff3b30",
+        "#420b20",
+        "#d66f50",
+        "#eacab1",
+        "#f0865a",
+        "#dc65f6",
+        "#e6d7c4",
+        "#2b2f4a"
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "overlays-dismissed",
+      "message": "Closed 1 pop-up or banner(s) before capturing the screens",
+      "sample": [
+        "Close promotion ×"
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "contrast-unverified",
+      "message": "1 suspected contrast problems could not be re-measured on screen",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "console-errors",
+      "message": "7 console or page errors",
+      "sample": [
+        "Unexpected token '}'",
+        "Could not find a View Model linked to Artboard Artboard.",
+        "Could not find a View Model linked to Artboard Artboard.",
+        "Could not find a View Model linked to Artboard Artboard.",
+        "Could not find a View Model linked to Artboard Artboard."
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "screenshots-capped",
+      "message": "Page is 13022px tall; only the first 14 screens were captured",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "small-text",
+      "message": "Text at 10.56px",
+      "sample": [
+        "<div> \"Chief Medical Officer\""
+      ],
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "gradient",
+      "message": "10 gradient backgrounds",
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "too-many-colours",
+      "message": "9 distinct chromatic colours",
+      "sample": [
+        "#ff3b30",
+        "#420b20",
+        "#d66f50",
+        "#eacab1",
+        "#f0865a",
+        "#dc65f6",
+        "#e6d7c4",
+        "#2b2f4a"
+      ],
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "small-text",
+      "message": "Text at 10.0875px",
+      "sample": [
+        "<div> \"Chief Medical Officer\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "headline-lines",
+      "message": "h2 runs to 4 lines",
+      "sample": [
+        "<h2> \"Start your 100-day health transformation today.Pow\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "text-at-edge",
+      "message": "103 text elements within 12px of the screen edge",
+      "sample": [
+        "<span> \"LIVE NOW 🚀 Supp[RX] Powered By Resolute AI - Conf\"",
+        "<a> \"Reveal Your Stack →\"",
+        "<span> \"•\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    }
+  ]
+}

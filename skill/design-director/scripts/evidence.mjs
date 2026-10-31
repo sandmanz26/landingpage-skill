@@ -3,13 +3,14 @@
 // and re-recording motion itself:
 //   sheet-desktop.png, sheet-mobile.png  every captured screen on one image each
 //   motion-sheet.png                     frames on load and while scrolling
+//   page-text.txt                        the page's words, in order
 //   evidence.json                        outline (headings, actions, prices, proof),
 //                                        motion log, reduced-motion, idle navigation
 //
 //   node evidence.mjs <url> --dir <capture folder from inspect.mjs> [--idle 15]
 import fs from 'node:fs';
 import path from 'node:path';
-import { launch, resolveTarget, parseArgs } from './lib/browser.mjs';
+import { launch, resolveTarget, parseArgs, gotoStable, dismissOverlays } from './lib/browser.mjs';
 
 const args = parseArgs(process.argv.slice(2));
 const target = args._[0];
@@ -43,14 +44,14 @@ const pick = (prefix) =>
     ? fs.readdirSync(dir).filter((f) => f.startsWith(prefix) && f.endsWith('.png')).sort().map((f) => path.join(dir, f))
     : [];
 const sheets = {
-  desktop: await sheet([...pick('desktop-fold'), ...pick('desktop-page-')].slice(0, 16), 4, 340, path.join(dir, 'sheet-desktop.png')),
-  mobile: await sheet([...pick('mobile-fold'), ...pick('mobile-page-')].slice(0, 16), 8, 160, path.join(dir, 'sheet-mobile.png')),
+  desktop: await sheet([...pick('desktop-fold'), ...pick('desktop-overlay'), ...pick('desktop-page-')].slice(0, 16), 4, 340, path.join(dir, 'sheet-desktop.png')),
+  mobile: await sheet([...pick('mobile-fold'), ...pick('mobile-overlay'), ...pick('mobile-page-')].slice(0, 16), 8, 160, path.join(dir, 'sheet-mobile.png')),
 };
 
 // --- live session: outline and motion
 const context = await browser.newContext({ viewport: { width: 1440, height: 900 } });
 const page = await context.newPage();
-await page.goto(url, { waitUntil: 'networkidle', timeout: 45000 }).catch(() => page.goto(url, { waitUntil: 'load', timeout: 45000 }).catch(() => {}));
+const load = await gotoStable(page, url, { timeout: 45000 });
 
 const frames = [];
 const frameDir = path.join(dir, 'motion-frames');
@@ -108,9 +109,15 @@ const libraries = await page.evaluate(async () => {
     viewTransitions: has(/startViewTransition/),
   };
 });
+// Pop-ups seen during load stay in the frames above; close them so the outline and the scroll
+// frames show the page itself.
+const overlays = await dismissOverlays(page);
 // Outline: what the page says and asks for, in order. Read at the top, before any
 // scrolling, so positions and sticky headers are not skewed by the scroll offset.
 await page.evaluate(() => window.scrollTo(0, 0));
+// The words, so copy and story can be judged without squinting at screenshots.
+const pageText = await page.evaluate(() => (document.body ? document.body.innerText : '').replace(/\n{3,}/g, '\n\n').slice(0, 20000));
+fs.writeFileSync(path.join(dir, 'page-text.txt'), pageText);
 const outline = await page.evaluate(() => {
   const H = document.documentElement.scrollHeight || 1;
   const t = (e) => (e.innerText || e.textContent || '').replace(/\s+/g, ' ').trim();
@@ -227,8 +234,12 @@ await context.close();
 async function idleRun(reducedMotion) {
   const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 }, reducedMotion });
   const p = await ctx.newPage();
-  await p.goto(url, { waitUntil: 'networkidle', timeout: 45000 }).catch(() => {});
-  const start = p.url();
+  await gotoStable(p, url, { timeout: 45000 });
+  // Closing a pop-up through a bare "#" link must not count as navigating.
+  const bare = (u) => u.replace(/#$/, '');
+  const start = bare(p.url());
+  await p.waitForTimeout(1500);
+  await dismissOverlays(p);
   const probe = () =>
     p.evaluate(() => {
       const out = {};
@@ -258,7 +269,7 @@ async function idleRun(reducedMotion) {
     await p.evaluate(() => window.scrollTo(0, 0)).catch(() => {});
   }
   await p.waitForTimeout(idleSeconds * 1000);
-  const navigated = p.url() !== start ? p.url() : null;
+  const navigated = bare(p.url()) !== start ? p.url() : null;
   await ctx.close();
   return { movingWithoutInput: moving, movingOnScroll: scrollMoving, navigatedTo: navigated };
 }
@@ -275,6 +286,8 @@ const evidence = {
   url,
   time: new Date().toISOString(),
   sheets: { ...sheets, motion: motionSheet },
+  load: { status: load.status, retries: load.retries, failed: !!load.failed },
+  overlaysDismissed: overlays,
   outline,
   motion: {
     libraries,
@@ -296,6 +309,8 @@ const evidence = {
 fs.writeFileSync(path.join(dir, 'evidence.json'), JSON.stringify(evidence, null, 2));
 
 const flags = [];
+if (load.failed) flags.push('the page did not load (server error after 3 tries): this evidence describes an error page');
+if (overlays.length) flags.push(`pop-up or banner on load, closed for the outline: ${overlays.join(', ')}`);
 if (idleNavigation) flags.push(`page navigates by itself after ${idleSeconds}s idle → ${idleNavigation.navigatedTo}`);
 if (reducedIdle.navigatedTo) flags.push('navigates by itself under reduced motion too');
 if (reducedIdle.movingWithoutInput + reducedIdle.movingOnScroll > 0)
