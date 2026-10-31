@@ -1,0 +1,177 @@
+{
+  "juror": "customer-researcher",
+  "kind": "ai",
+  "method": "Read the jury brief, rubric/jury.md, rubric/critic.md, team/taste.md. For each ref: desktop-fold, mobile-fold, desktop-overlay, mobile-overlay, sheet-mobile, sheet-desktop, page-text.txt, evidence.json (outline, motion summary, reducedMotion, idleNavigation, overlaysDismissed), motion-sheet.png, report.json (all viewports, checks). Judged on the phone first. Single screenshots opened to check doubts: ref-0007/mobile-page-03.png (price and sold-out button legibility); ref-0008/mobile-page-03.png (empty area under the 'Tired of...' block), ref-0008/mobile-page-04.png (text over the header), ref-0008/mobile-page-05.png (programme cards readability). Not verified: where 'Get Your Blueprint', 'Shop Kits', 'Reveal Your Stack' lead and what the next step costs (destination pages not captured); whether Swehl School / Circles are free or paid; Swehl's hero background (two console errors 'The element has no supported sources' suggest a hero video did not load in the capture, so the real visitor may see a different first screen); smoothness of any scrolling (stills only, no browser per brief); who the real visitors are (no analytics, no interviews: the five questions below are my inference from the page and the category, not research data).",
+  "refs": {
+    "ref-0007": {
+      "business": "Swehl sells breastfeeding kits and accessories (The Latch Kit $99.99, Cloud 9 $65, The Nips Duo $22) to pregnant people and new breastfeeding parents, US market (inference from NYT banner, LA/NYC testimonials, USD prices); the action that pays is buying a kit (inference), with education (Swehl School, 75+ videos and articles) and community (Swehl Circles) as traffic and retention, and a due-date email sign-up as lead capture. Whether School/Circles are paid: unverified.",
+      "customer": "Inference: a pregnant person in the third trimester (or a parent in the first postpartum weeks) on a phone, often after a press mention or social post, who wants to be ready to breastfeed and is anxious about it going wrong.",
+      "five_questions_test": [
+        {
+          "question": "What is this, and is it for someone like me (pregnant / just had a baby)?",
+          "answered": "yes, weakly",
+          "where": "data/references/captures/ref-0007/mobile-fold.png (H1 'Breastfeeding tools made for this century.'); stage tags 'PREGNANT', 'LABOR & BIRTH' only from mobile-page-03.png",
+          "before_ask": "yes (H1 sits above SHOP KITS / LET'S LEARN), but the email pop-up arrives at ~1000 ms (motion-sheet 02-load-1000ms) and covers the lower half of the phone fold including both buttons (mobile-overlay.png)",
+          "in_their_words": "yes ('breastfeeding'); 'tools made for this century' is brand voice, not a stage",
+          "note": "The H1 is the lowest-contrast text on the page: #ffd874 at 2.03:1 median on mobile (report.json, needs 3). The first answer is the hardest to read."
+        },
+        {
+          "question": "What exactly is in the kit, and do I actually need it?",
+          "answered": "no (partial)",
+          "where": "data/references/captures/ref-0007/mobile-page-02.png, mobile-page-03.png ('A no-fuss kit with 8 all-inclusive tools to help you start breastfeeding'; photo of the bag)",
+          "before_ask": "after the hero ask",
+          "in_their_words": "yes ('no-fuss', 'sore nips')",
+          "note": "Says 8 tools but names none of them; 'do I need it' is not addressed. Visitor must leave the page to find out."
+        },
+        {
+          "question": "How much is it, and can I get it before the baby comes?",
+          "answered": "price yes; availability no",
+          "where": "data/references/captures/ref-0007/mobile-page-03.png ('The Latch Kit • $99.99', button 'SOLD OUT • $99.99'); page-text.txt shows all three products SOLD OUT",
+          "before_ask": "price is next to the buy button, good",
+          "in_their_words": "yes",
+          "note": "Every product shown is sold out with no restock date, waitlist or delivery time on the page. Shipping is not mentioned (only 'Contact & FAQ' in the footer)."
+        },
+        {
+          "question": "Who is behind this: real lactation experts or doctors? Did it help other parents?",
+          "answered": "partial",
+          "where": "'made by parents & docs' and 'expert-led video tutorials' only in a moving marquee (data/references/captures/ref-0007/mobile-page-02.png top); 'Real Talk' videos with real people (mobile-page-03.png); three testimonials, first name + initial + city, one at a time on phone (mobile-page-05.png); press logos Forbes / Fast Company / Vogue / Glamour (mobile-page-06.png, ~90% down); NYT line in the top bar",
+          "before_ask": "after",
+          "in_their_words": "testimonials yes ('last piece of my postpartum puzzle')",
+          "note": "No expert is named or credentialed anywhere; testimonials speak about community and education, none about the kit the page sells."
+        },
+        {
+          "question": "If breastfeeding gets hard, where do I get help?",
+          "answered": "yes",
+          "where": "data/references/captures/ref-0007/mobile-page-03.png, mobile-page-04.png ('Your #1 resource for pregnancy and beyond', '75+ videos and articles', video cards with stage tags and durations '2:07 Min'); mobile-page-04/05 ('Swehl Circles are digital, expert-led community chats')",
+          "before_ask": "after the hero, but 'LET'S LEARN' on the fold points straight to it",
+          "in_their_words": "mostly ('hype up & hang with other parents', 'Partners are People, Too')",
+          "note": "Cost and how to join Circles not stated."
+        }
+      ],
+      "scores": {
+        "customer": 6
+      },
+      "reasons": {
+        "customer": "Four of five questions get at least a partial answer on a short phone page (5430 px, 7 screens, sheet-mobile.png), mostly in the visitor's words, so the cap of 5 does not apply. What holds it at 6: (1) the purchase question ends in a dead end, all three products SOLD OUT with no restock date or waitlist (page-text.txt, mobile-page-03.png); (2) kit contents and expert identities are claims without detail; (3) the email pop-up at ~1 s covers the H1 and both hero buttons on the phone (mobile-overlay.png, motion-sheet 02-load-1000ms) before the visitor has learned anything; (4) phone readability: H1 2.03:1, 'Menu' 2.04:1 and 25 controls under 24x24 px incl. 'Menu' 53x19 (report.json mobile). Strength: price is beside the product name and inside the button."
+      },
+      "claims": [
+        {
+          "claim": "1. Simple colour play",
+          "verdict": "confirmed with correction",
+          "evidence": "One consistent warm palette, no gradients or shadows (report.json inventory), but it is not few colours: 6 chromatic colours and 7 background colours. Where it touches the visitor: the yellow H1 on the tan hero measures 2.03:1 on mobile / 2.11:1 on desktop (report.json contrast FAIL), so the headline that says what the shop is is the hardest text to read."
+        },
+        {
+          "claim": "2. Very balanced play of text sizes",
+          "verdict": "confirmed with correction",
+          "evidence": "On the phone the hierarchy reads clearly: big display H1, section H2s, body (sheet-mobile.png). But the size count is 9 on desktop and 8 on mobile (report.json WARN too-many-font-sizes, aim <= 5), down to 10 px; tags and testimonial names are small on the phone (mobile-page-05.png in sheet). 'Balanced' holds for hierarchy, not for economy."
+        },
+        {
+          "claim": "3. Unique scrolling concept",
+          "verdict": "contested",
+          "evidence": "No scroll library detected (evidence.json motion.libraries all false), CSS transitions 300-900 ms, 2 script-driven elements on scroll; motion-sheet.png shows ordinary scrolling with a text marquee and an arched section ('LET'S TALK IT OUT' set on a curve). No content depends on scrolling. Final word on motion belongs to the motion juror; for the visitor it neither helps nor hurts."
+        },
+        {
+          "claim": "4. CTA early on, positioned fixed at the bottom, with a circular radius",
+          "verdict": "confirmed with correction",
+          "evidence": "Early: confirmed, SHOP KITS + LET'S LEARN (page-text: 'GET EDUCATED') on the first screen (evidence.json actions firstScreen true). Fixed at the bottom: contested, no action is sticky (all actions sticky=false); the only fixed items on the phone are a down-arrow on the fold and an unlabelled dice icon (mobile-fold.png). The bottom shape with the circular top is the email-capture pop-up (modal / bottom sheet with an arched top) that appears at ~1000 ms (motion-sheet 02-load-1000ms, mobile-overlay.png); it is a newsletter ask, not the buy action, and on the phone it covers both hero buttons. Buttons are pill-shaped (radius 9999px, report.json), which is the correct term for 'circular radius'."
+        }
+      ],
+      "problems": [
+        "Every product on the page is SOLD OUT (page-text.txt; data/references/captures/ref-0007/mobile-page-03.png 'SOLD OUT • $99.99') with no restock date, waitlist or delivery time: the visitor who came to buy before her due date hits a dead end. Smallest fix: a 'notify me' that reuses the existing email + due-date fields, plus an expected restock date.",
+        "Email pop-up at ~1 s covers the H1 and both hero buttons on the phone (mobile-overlay.png, motion-sheet 02-load-1000ms) before any question is answered. Smallest fix: show it after scroll depth or exit intent, or keep only the inline sign-up already in the footer.",
+        "Kit contents and the experts are claims without detail: '8 all-inclusive tools' unnamed (mobile-page-03.png), 'made by parents & docs' only inside a moving marquee, no named lactation consultant or doctor; testimonials never mention the kit. Smallest fix: list the 8 items under the kit and name one credentialed expert near the shop."
+      ],
+      "keep": [
+        "Price beside the product name and inside the button ('The Latch Kit • $99.99' / 'SOLD OUT • $99.99'): answers 'what does it cost' at the point of decision (matches team 'Always' rule).",
+        "Optional due-date/birth-date field in the sign-up ('optional' label): personalises content to the visitor's stage at almost no extra effort.",
+        "Content cards with stage tags and a time cost ('PREGNANT', 'LABOR & BIRTH', 'Watch Now • 2:07 Min'): lets a tired parent pick by stage and know it takes two minutes.",
+        "Copy in the visitor's own voice ('sore nips', 'Real Talk', 'Partners are People, Too')."
+      ]
+    },
+    "ref-0008": {
+      "business": "Resolute (Applied Healthspan Private Limited) sells personalised, doctor-guided and AI-supported health programmes ('100-day health transformation'; programmes optiME, superGUT, paceFORGE, burnN, galaxyBRAIN, eternAGE) built on diagnostics (85+ biomarkers, optional whole-body MRI), plus a supplement product (Supp[RX], 'Reveal Your Stack'), an app and a workplace offer. Audience: health-conscious urban professionals and athletes in India (inference from +91 phone, 'Private Limited', Indian team names, founder/athlete testimonials). Action that pays: 'Get Your Blueprint', leading to a paid programme (inference; destination and price not captured).",
+      "customer": "Inference: a 30-50-year-old urban professional, tired or worried about weight, sleep or family risk, or a recreational athlete, comparing this with a standard annual health check-up on a phone after an ad or social post.",
+      "five_questions_test": [
+        {
+          "question": "What do you actually do: is this a doctor, a lab test, an app or supplements?",
+          "answered": "partial",
+          "where": "data/references/captures/ref-0008/mobile-fold.png ('Personalized, proactive health journeys, guided by doctors and powered by AI'); concrete answer only at 'How it Works', ~38-50% down (mobile-page-05 to -07 in sheet-mobile.png)",
+          "before_ask": "no: 'Get Your Blueprint' is in the sticky header from the first screen",
+          "in_their_words": "no ('health journeys', 'Blueprint', 'healthspan')",
+          "note": "The top bar advertises a different product (Supp[RX] supplements) above the headline, so the first screen offers two answers. The lower ~40% of the phone fold is empty dark navy (mobile-fold.png)."
+        },
+        {
+          "question": "What happens after I sign up: which tests, how many doctor consults, how long?",
+          "answered": "partial",
+          "where": "'How it Works' with INCLUDES lists (Human 360 - Body Data Stack, Health Status Assessment, Specialist Doctor Consults, Health Coaching, 24/7 Care Concierge, app) in sheet-mobile.png mobile-page-06/07; '100 days' only in FAQ and footer",
+          "before_ask": "after",
+          "in_their_words": "no ('Whole of Me Construct', 'Human 360 - Body Data Stack', 'Centaur Team')",
+          "note": "On the phone the programme cards render squashed and unreadable (data/references/captures/ref-0008/mobile-page-05.png) and the AI-companion role descriptions ('Interprets, prescribes and guides your care' etc.) were never visible during a full scroll (report.json mobile hidden-content FAIL, 11 elements). Number of consults, at-home vs clinic tests: not stated."
+        },
+        {
+          "question": "How much does it cost, and is it worth more than a normal health check-up?",
+          "answered": "no",
+          "where": "nowhere: evidence.json outline.prices is empty; the 8 FAQs in page-text.txt include none on cost",
+          "before_ask": "n/a",
+          "in_their_words": "n/a",
+          "note": "For a premium diagnostics + doctor programme this is the deciding question; the visitor must click 'Get Your Blueprint' to find out (unverified what happens there)."
+        },
+        {
+          "question": "Who are the doctors, and has it worked for people like me?",
+          "answered": "yes",
+          "where": "Team carousel, 12 named experts with specialisms (data/references/captures/ref-0008/mobile-page-10.png in sheet); 4 named testimonials with roles (mobile-page-09); '10,000+ Personalised Journeys' heading",
+          "before_ask": "after",
+          "in_their_words": "testimonials yes ('I was able to follow about 70-80% of their suggestions')",
+          "note": "Role titles are 10.09-10.4 px on the phone (report.json small-text). Testimonials come from founders and an ultra-runner; an ordinary visitor may not see themselves. '10,000+' has no source."
+        },
+        {
+          "question": "Can I do this where I live: online, in my city, do I need to visit a lab?",
+          "answered": "no",
+          "where": "only '+91 6360 265 906' and an email in the footer (mobile-page-13/14); 'optional MRI scans' implies a facility, location not given",
+          "before_ask": "n/a",
+          "in_their_words": "n/a",
+          "note": "Footer says 'HIPPA NPP Compliant' (misspelt US regulation HIPAA) on an Indian company page: for a visitor checking trust this reads as confusing at best; actual compliance unverified."
+        }
+      ],
+      "scores": {
+        "customer": 4
+      },
+      "reasons": {
+        "customer": "Only one of five questions is answered fully (who the experts are) and two partially, so the cap of 5 applies (rubric/critic.md). Cost and location are absent (evidence.json prices []; no FAQ on price; only a +91 phone number). The 'what do I get' answer exists in 'How it Works' with INCLUDES lists, but on the phone part of it is hidden or unreadable: 11 text elements never became visible (report.json mobile hidden-content FAIL), programme cards squashed (mobile-page-05.png), text overlapping the header (mobile-page-04.png). The page is 11066 px on the phone (13+ screens) and speaks in company terms (Blueprint, Human 360, Centaur Team, Whole of Me Construct). Scored 4 not lower because the sticky 'Get Your Blueprint' keeps the ask reachable and the team and testimonials are specific and named."
+      },
+      "claims": [
+        {
+          "claim": "Overall: 'the scrolling is excellent'",
+          "verdict": "unverifiable as stated; contested where it affects the visitor",
+          "evidence": "Smoothness cannot be judged from stills (no browser per brief). Present: Lenis smooth scroll, GSAP + ScrollTrigger + SplitText, Lottie; 13 script-driven elements on scroll; 58 endless loops containing text, no pause control (evidence.json motion). Against 'excellent' for the visitor: 11 text elements never visible on the phone (report.json hidden-content FAIL), 1 text still hidden under reduced motion (checks.reducedMotion FAIL), layout shift 1.730 on desktop (report.json FAIL, threshold 0.25)."
+        },
+        {
+          "claim": "1. Every section is packaged with good scrolling",
+          "verdict": "confirmed with correction",
+          "evidence": "Most sections are scroll-driven (13 script-driven on scroll, motion-sheet.png frames 05-09). 'Good' fails on the phone: programme cards render squashed and unreadable (data/references/captures/ref-0008/mobile-page-05.png), body text overlaps the logo/header mid-transition (mobile-page-04.png), the companion role descriptions never appear (hidden-content FAIL), and the 'Tired of...' block leaves about half a screen empty (mobile-page-03.png)."
+        },
+        {
+          "claim": "2. Transitions between pages are smooth",
+          "verdict": "confirmed with correction (term) / unverifiable (smoothness)",
+          "evidence": "Term: this is one long page (13022 px desktop, 11066 px mobile), so these are transitions between sections, not pages; there is no page navigation. Smooth-scroll library (Lenis) is present, but smoothness itself is not measurable from stills; the measured layout shift of 1.730 on desktop (report.json) is counter-evidence."
+        },
+        {
+          "claim": "3. Every section has a unique design",
+          "verdict": "confirmed with correction",
+          "evidence": "sheet-desktop.png / sheet-mobile.png show varied compositions (mountain photo, arrow swirl, 3D head with chips, fanned programme cards, maroon numbered steps, gradient orbs, team carousel). Not every section: blog list, FAQ accordion and footer are standard patterns. For the visitor the variety costs consistency: 9-10 chromatic colours (report.json WARN too-many-colours) and 17 font sizes on desktop (WARN), so each section has to be learned anew."
+        }
+      ],
+      "problems": [
+        "No price anywhere and no FAQ on cost (evidence.json prices []; page-text.txt FAQ list) for a premium diagnostics + doctor programme: the visitor's deciding question is unanswered and is pushed behind 'Get Your Blueprint'. Smallest fix: a 'from ₹X' line or price range per programme under the How-it-Works INCLUDES list, and a cost FAQ.",
+        "On the phone, the 'what do I get' answers are hidden or unreadable: programme cards squashed (data/references/captures/ref-0008/mobile-page-05.png), companion role descriptions never visible (report.json mobile hidden-content FAIL, 11 elements), text over the header (mobile-page-04.png), ~40% of the first screen empty navy (mobile-fold.png). Smallest fix: a static stacked layout for programme cards and role descriptions below a phone breakpoint.",
+        "Company language and missing practicals: 'health journeys', 'Blueprint', 'Human 360 - Body Data Stack', 'Centaur Team', programme names optiME / burnN; no word on where tests happen, online vs in-person, or city; 'HIPPA NPP Compliant' misspelt. Smallest fix: a subline that names the three concrete things (blood tests, doctor consults, 100-day coaching) and one line on where and how."
+      ],
+      "keep": [
+        "Three-step 'How it Works' (Know Your Baseline -> Get Your Blueprint -> Transform Your Health) with an 'INCLUDES' list under each step: answers 'what happens after I sign up' concretely.",
+        "Named team with specialisms (12 experts incl. cardiologist, gynaecologist, pharmacologist): answers 'who will look after me' with people, not a claim.",
+        "FAQ phrased as the visitor's own questions ('Why 100 days?', 'How involved are your experts?'), a pattern worth keeping if cost and location are added.",
+        "Sticky header action 'Get Your Blueprint' on every screen (evidence.json sticky true): the ask stays one tap away on the phone."
+      ]
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "juror": "art-director",
+  "kind": "ai",
+  "method": "Read the brief, rubric/jury.md, rubric/critic.md, team/taste.md. Per ref: desktop/mobile fold and overlay, sheet-desktop, sheet-mobile, page-text.txt, evidence.json (outline, motion, reducedMotion), motion-sheet.png, report.json (all three viewports). Single screenshots opened to check doubts: ref-0007 desktop-page-01 (hero without pop-up), desktop-page-02 (shop section), desktop-page-03 (missing Swehl School heading), desktop-page-04 (arch section), reduced-motion-fold.png (it shows only 'upstream request failed': the reduced-motion capture for ref-0007 FAILED, so its empty reducedMotion findings are not evidence of anything); ref-0008 desktop-page-02 (empty navy band), desktop-page-04 (3D head section), desktop-page-05 (fanned cards), desktop-page-09 (human/AI diagram), desktop-page-11 (empty cream band). Not verified: whether the ref-0007 hero video plays for real visitors (report.json logs 'The element has no supported sources' twice in headless Chrome, so the captured hero may be a fallback); motion quality of either page (stills only, motion juror's area); tablet screens not reviewed; ref-0008 desktop capture capped at 14 screens of 13,022px. No browser opened.",
+  "refs": {
+    "ref-0007": {
+      "business": "Swehl sells breastfeeding kits and accessories ($22-$99.99: Latch Kit, Cloud 9 sling, Nips Duo) plus free education (Swehl School videos, Swehl Circles community chats) to pregnant and new parents, US market (inference from NYC/LA testimonials and NYT mention); the action that pays is buying a kit ('SHOP KITS'), with email sign-up as lead capture. All three shown products were marked SOLD OUT at capture time.",
+      "scores": {
+        "clarity": 6,
+        "distinctiveness": 7,
+        "craft": 6
+      },
+      "reasons": {
+        "clarity": "Five-second test passes on words: H1 'BREASTFEEDING TOOLS MADE FOR THIS CENTURY' names the category and two pill actions sit under it (evidence.json actions firstScreen true, firstAt 11%). Squint gives one mass, the H1. But the hero holds no subject (no product, no person): a blurred mustard field (desktop-page-01), and the H1 itself is #ffd874 on that field at 2.11:1 desktop / 2.03:1 mobile (report.json contrast), so the most important words are the faintest thing on screen. On desktop the email pop-up's arc covers the H1's second line from ~1s (motion-sheet 02-04, desktop-fold).",
+        "distinctiveness": "Passes cover-the-logo on most screens: rounded heavy display face (Caslon Rounded, 6% share) with a matching rounded wordmark, rust ink on flat pastel blocks, an arch/dome shape used twice (pop-up, 'LET'S TALK IT OUT' curved type over documentary photo, desktop-page-04), product photography art-directed in each product's own pastel (desktop-page-02), and a dice icon as a mascot. Closest team anchor: Maxima (bold flat colour, expressive rounded display type). Held below 8 because the middle turns into stock blocks: 3-up product grid, video-card carousel, three testimonial cards, press-logo row (sheet-desktop pages 02-06), and the arch idea does not reach shop, testimonials or footer.",
+        "craft": "Finished system: 0 shadows, 0 gradients, radii limited to 9999/30/10/3px, one 1px rust outline on every card and pill, one text ink (#8b2a00) on six flat backgrounds, consistent 30px left edge for shop/video sections and centred axis for hero/circles/testimonials (desktop-page-02..04). Faults: hero contrast 2.1:1 on the H1 and nav; 9 font sizes desktop (100,94,70,36,22,16,14,12,10) with 10-12px tags; mobile H1 within 12px of the screen edge (report.json text-at-edge, visible in mobile-fold); desktop-page-03 lacks the 'YOUR #1 RESOURCE...' heading that motion-sheet frame 07 shows, and frame 06 shows video-card text ('Options.', 'Watch Now') floating inside the blue shop section, i.e. layers overlap mid-scroll (cause unverified). Not capped at 5 only because the hero fault may be a capture artefact (video codec); if the blurred hero is what visitors see, craft drops to 5."
+      },
+      "claims": [
+        {
+          "claim": "1. Simple colour play",
+          "verdict": "confirmed with correction",
+          "evidence": "Simple in use, not in count. report.json: 0 gradients, 0 shadows, one dominant text ink #8b2a00 (plus #ffd874 in hero, #fffbf2 in footer); but 6 chromatic background colours (#ead1ff lavender, #b4d2ff sky, #ffa977 peach, #ffd874 butter, #8b2a00 rust, cream #fffbf2) plus the mustard hero. The correct term is colour-blocking: one flat colour per section, which separates sections without lines. Weakness against the team rule 'one colour reserved for the main action': hero pills are lavender, SIGN UP is butter, SOLD OUT badges are peach, so no colour means 'act'."
+        },
+        {
+          "claim": "2. Very balanced play of text sizes",
+          "verdict": "confirmed with correction",
+          "evidence": "What works is contrast, not balance: a decisive jump from display (94-100px desktop, 58px mobile) to body (16px), and only two families (Roobert 94%, Caslon Rounded 6%). But report.json counts 9 sizes desktop and 8 mobile, above the rubric's 5, including 10-12px tags (PREGNANT, SOLD OUT). 'Balanced' would mean even steps; this is a two-level hierarchy (very large display, small body) with little in between (36, 22)."
+        },
+        {
+          "claim": "3. Unique scrolling concept",
+          "verdict": "contested (motion is the motion juror's call)",
+          "evidence": "evidence.json: no scroll library (gsap, ScrollTrigger, lenis, locomotive all false), only CSS transitions 300-900ms, scriptDrivenOnScroll 2, maxRunning 6; motion-sheet frames 05-09 show ordinary scrolling through colour-blocked sections. What is unique is static: the arch/dome shape and curved headline (desktop-page-04) and the colour sequence lavender-sky-peach-butter-rust. Reduced-motion capture failed ('upstream request failed'), so that path is unverified."
+        },
+        {
+          "claim": "4. CTA early, fixed at the bottom, with a circular radius",
+          "verdict": "partly confirmed, partly contested",
+          "evidence": "Early: yes, SHOP KITS + GET EDUCATED on the first screen (firstAt 11%). Shape: pill (border-radius 9999px), not circular. Fixed: no; every action is sticky:false in evidence.json. The element fixed at the bottom right on every screen is an unlabelled dice icon (sheet-desktop, sheet-mobile), function unknown (inference: a shuffle/surprise link, unverified); mobile also shows an orange down-arrow scroll cue in the fold only. Label mismatch: 'GET EDUCATED' on desktop, 'LET'S LEARN' on mobile-fold."
+        }
+      ],
+      "problems": [
+        "Hero has no subject and the weakest headline contrast on the page: H1 #ffd874 on a blurred mustard field at ~2.1:1 (report.json; desktop-page-01, mobile-fold); the field may be a video that failed in capture (unverified). Fix: rust or cream panel/scrim behind the H1 and a real product or parent image.",
+        "Desktop pop-up arc covers the H1 from ~1s (motion-sheet 02-04, desktop-fold), so the strongest composition on the page is hidden under an email ask before the visitor has read it.",
+        "The brand idea stops after two screens: shop grid, video carousel, testimonial cards and press logos are generic blocks (sheet-desktop 02-06); the arch motif appears twice and nowhere near the shop or footer; 9 font sizes with 10-12px tags."
+      ],
+      "keep": [
+        "Colour-blocked sections: one flat background per section, one ink colour for all text, no shadows or gradients, so sections separate by colour alone (sheet-desktop).",
+        "Arch/dome shape carrying curved display type over documentary photography ('LET'S TALK IT OUT', desktop-page-04): a brand shape that frames real photos instead of decorating them.",
+        "Product photography art-directed in each product's own pastel set (desktop-page-02): photos and page palette are one system.",
+        "One 1px outline in the ink colour on every card and pill: cheap, consistent finish."
+      ]
+    },
+    "ref-0008": {
+      "business": "Resolute (Applied Healthspan Private Limited, India: inference from +91 number and company suffix) sells personalised preventive-health/longevity programmes (85+ biomarkers, optional MRI, doctor + AI plan, coaching, app, 100-day framework) to health-conscious adults and workplaces; the action that pays is 'Get Your Blueprint' (inference: start a paid programme; no price on the page, evidence.json prices []), with a supplement-stack upsell 'Reveal Your Stack' in the promo bar.",
+      "scores": {
+        "clarity": 5,
+        "distinctiveness": 5,
+        "craft": 5
+      },
+      "reasons": {
+        "clarity": "H1 'More Healthy Years. Built With You.' says the promise, not the product; the subline (doctors + AI, personalised health journeys) carries the explanation, so a stranger gets it at second read, not in one glance. The hero image (a small hiker on a mountain, desktop-fold) shows aspiration, not the service. The strongest action on the first screen is the filled burgundy 'Reveal Your Stack' in the promo bar, which out-weighs the main 'Get Your Blueprint' ghost pill (desktop-fold). Mobile-fold bottom quarter is an empty navy band.",
+        "distinctiveness": "Fails cover-the-logo on most screens: stock-style mountain hiker hero, iridescent 3D head (desktop-page-04), orange/magenta gradient blobs (desktop-page-09), glass panels (report.json: 11 gradients, 7 backdrop-blur panels) and ultralight serif display are the shared vocabulary of longevity/AI-health startups; the team's own taste rejects generic 3D renders. Ownable parts: bracket shapes framing the hiker, programme names set as wordmarks on photo cards (optiME, galaxyBRAIN, desktop-page-05), real team portraits (desktop-page-11). Cap applied: a competitor could use the hero and the 3D section unchanged.",
+        "craft": "High production effort, uneven finish. Holes visible in screenshots: ~270px empty navy band under the header (desktop-page-02), ~380px empty cream band with a clipped burgundy shape under the header (desktop-page-11), empty bottom quarter on mobile-fold; headings ghosted behind the glass header (desktop-page-05 'From risk reversal...', desktop-page-09). report.json: 17 font sizes desktop / 11 mobile, 10 chromatic colours, text at 10-11px for credentials, hidden-content FAIL (text never visible during a full scroll, 11 elements on tablet/mobile), layout shift 1.73 desktop, contrast FAILs (white on orange 3.36:1, 'LIVE NOW' red 1.88:1). Two light weights (DM Sans Light 93%, Pangaia Ultralight 7%) on photo and orange grounds read thin. Capped at 5: broken states visible in screenshots."
+      },
+      "claims": [
+        {
+          "claim": "1. Every section is packaged with good scrolling",
+          "verdict": "unverifiable from stills (motion juror's call); 'every' contested",
+          "evidence": "The machinery is real: evidence.json libraries gsap, ScrollTrigger, SplitText, Lenis, Lottie all true; scriptDrivenOnScroll 13. Whether it is good cannot be judged from stills. What the stills show against 'good': empty bands while reveals are pending (desktop-page-02, -11), text that never becomes visible (report.json hidden-content), 58 endless loops with text and no pause control, and text still hidden under reduced motion (checks.reducedMotion FAIL). Blog grid and FAQ accordion (sheet-desktop 12-14) are standard sections, so not every section is scroll-packaged."
+        },
+        {
+          "claim": "2. Transitions between pages are smooth",
+          "verdict": "unverifiable; term corrected",
+          "evidence": "This is one page (13,022px desktop), so these are transitions between sections, not pages (no view transitions: viewTransitions false). Lenis smooth-scroll is present, which is likely what reads as 'smooth'. Against it in the data: layout shift 1.73 on desktop (report.json) and mid-transition ghosting under the header (desktop-page-05, -09). Smoothness itself needs the motion juror or a browser."
+        },
+        {
+          "claim": "3. Every section has a unique design",
+          "verdict": "confirmed with correction",
+          "evidence": "Layouts do vary: photo hero, statement over arrow lines (desktop-page-02), split text around a 3D head with floating chips (-04), fanned tilted cards (-05), marquee + sticky steps on burgundy (-06..08), two-pole human/AI diagram (-09), testimonial cards (-10), circular portraits (-11), blog grid, FAQ, footer CTA. Correction: unique per section is not the same as distinctive or coherent. Imagery switches register five times (stock landscape, 3D render, editorial photo cards, gradient blobs, real portraits), with 10 chromatic colours and 17 font sizes; the page reads as a showcase of effects rather than one idea, and several of the 'unique' compositions (glass header, fanned cards, gradient blobs) are common in this genre."
+        }
+      ],
+      "problems": [
+        "No single visual idea: stock hiker, iridescent 3D head, gradient blobs and glass are the category's default look (desktop-fold, desktop-page-04, -09); with 10 chromatic colours and 11 gradients the page could belong to any longevity startup. Fix: pick one image world (real members/clinicians, real diagnostics) and two colours with roles.",
+        "Holes and ghosting visible in screenshots: empty navy band (desktop-page-02), empty cream band with clipped shape (desktop-page-11), empty bottom quarter on mobile-fold, headings blurred behind the glass header (desktop-page-05, -09); hidden-content FAIL and CLS 1.73 point to reveals that leave space before content arrives.",
+        "Hierarchy of actions and type: the promo bar's filled 'Reveal Your Stack' outranks the main 'Get Your Blueprint' ghost pill; 17 font sizes, light/ultralight weights, 10-11px credentials, and unreadable blurred satellite labels in the human/AI diagram (desktop-page-09)."
+      ],
+      "keep": [
+        "Fanned, tilted product cards with each programme name set as a wordmark over its own photo (desktop-page-05): turns a list of six programmes into a browsable set.",
+        "Two-pole human expert vs AI copilot diagram with a shared centre outcome (desktop-page-09): explains the service model as a picture instead of a feature list (keep the structure, not the blurred labels).",
+        "Real team portraits in a consistent circular crop with name and role (desktop-page-11, mobile-page-10): real people as proof for a medical service."
+      ]
+    }
+  }
+}
