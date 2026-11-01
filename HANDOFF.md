@@ -1,7 +1,7 @@
 # Handoff
 
 Read this first if you are a new session, a different model or a different AI tool picking up
-this project. It is kept up to date at every milestone. Last updated: **2026-11-01** (second wedding run delivered; three-way blind test published).
+this project. It is kept up to date at every milestone. Last updated: **2026-11-01** (taste-skill added: four-way blind test).
 
 ## 1. Goal
 
@@ -163,6 +163,21 @@ Three-way blind test (A = run 2, B = no skill, C = run 1, random):
 https://claude.ai/artifact/B4UxMgyAhNq2AroTQVGr3G (copy in `examples/wedding-organizer-compare/three-way/`).
 Fit against the owner's dials: run 2 5/5, no skill 4/5, run 1 2/5. Waiting for the owner's scores
 and the final-gate approval of run 2.
+
+Taste-skill comparison (2026-11-01, owner asked "coba buat dulu dengan taste skill"): tasteskill v2.1.5
+(commit 12af471, MIT) run by a fresh agent with the same prompt, autopilot choices listed in
+`examples/wedding-organizer-compare/taste-skill/choices.md`. Correction of an earlier claim to the
+owner: taste-skill v2 does have a real-browser inspector and a look-and-fix loop; it has no
+per-project research, roast, multi-expert jury or team taste. Result: "Janur" WO Yogyakarta,
+page-is-the-object (tabbed folders), credited museum photos, interactive rundown, no invented
+proof; its own critic 7.4. Our measures: 1 FAIL (phone link tap target), fit 3/5 against the
+owner's dials (photos not illustration, type x5.5), 58.5 fps / 0 long frames, at least 326k tokens
+(the agent hit the account's 5-hour usage limit mid-run and was resumed; the part before the
+interruption is not in that number), 88 steps, over 30 minutes. So taste-skill is not cheap
+either; our run 2 subagents were about 630k plus the main session.
+Four-way blind test (same URL as the three-way, version 2): https://claude.ai/artifact/B4UxMgyAhNq2AroTQVGr3G
+— A no skill, B run 1, C run 2, D taste-skill (reshuffled so no version keeps its old letter).
+Waiting for the owner's scores.
 
 Capture fixes from batch-003: `lib/browser.mjs` `gotoStable` retries server error pages (a 502
 "upstream request failed" had been captured as Swehl's desktop) and every failed load is reported

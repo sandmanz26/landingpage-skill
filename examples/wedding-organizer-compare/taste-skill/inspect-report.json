@@ -1,0 +1,456 @@
+{
+  "target": "/tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/index.html",
+  "time": "2026-11-01T23:39:54.859Z",
+  "rules": {
+    "purple-gradient": "warn",
+    "gradient": "info",
+    "glass": "info",
+    "system-font-only": "warn",
+    "too-many-font-sizes": "warn",
+    "too-many-colours": "warn",
+    "shadow-on-everything": "warn",
+    "icon-card-row": "warn",
+    "centred-hero-two-ctas": "warn",
+    "emoji": "warn"
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "pageHeight": 11775,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "headline-lines",
+          "message": "h2 runs to 11 lines",
+          "sample": [
+            "<h2> \"Tanya jawab\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "centred-hero-two-ctas",
+          "message": "Centred hero headline with two buttons, the most common generated layout"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Bricolage Grotesque",
+            "share": 100
+          }
+        ],
+        "fontSizes": [
+          144,
+          64,
+          39,
+          26,
+          19,
+          14
+        ],
+        "textColours": [
+          "#ececec",
+          "#f0eaea",
+          "#7d0c14",
+          "#e2e2e2",
+          "#6f3f43"
+        ],
+        "backgroundColours": [
+          "#3b060a",
+          "#6f3f43",
+          "#7d0c14",
+          "#b9abac",
+          "#d6d6d6",
+          "#e2e2e2",
+          "#c6c2c2"
+        ],
+        "chromaticColours": 3,
+        "colourFamilies": 1,
+        "spacing": {
+          "distinct": 40,
+          "offScale": 22,
+          "values": [
+            2,
+            4,
+            6,
+            7,
+            8,
+            9.5,
+            10,
+            12,
+            13,
+            14,
+            16,
+            18,
+            19,
+            20,
+            22,
+            24,
+            28,
+            29,
+            31.5,
+            32,
+            35,
+            38.5,
+            40,
+            48,
+            56,
+            60,
+            64,
+            71.5,
+            72,
+            75,
+            79.5,
+            83,
+            96,
+            99,
+            119.5,
+            120,
+            128,
+            140,
+            167,
+            203.5
+          ]
+        },
+        "radii": [
+          "8px"
+        ],
+        "shadows": 0,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 93,
+        "animatedElements": 60,
+        "cls": 0
+      },
+      "screenshots": [
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/desktop-fold.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/desktop-page-01.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/desktop-page-02.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/desktop-page-03.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/desktop-page-04.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/desktop-page-05.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/desktop-page-06.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/desktop-page-07.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/desktop-page-08.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/desktop-page-09.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/desktop-page-10.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/desktop-page-11.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/desktop-page-12.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/desktop-page-13.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/desktop-page-14.png"
+      ]
+    },
+    "tablet": {
+      "width": 768,
+      "pageHeight": 14009,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "centred-hero-two-ctas",
+          "message": "Centred hero headline with two buttons, the most common generated layout"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Bricolage Grotesque",
+            "share": 100
+          }
+        ],
+        "fontSizes": [
+          96,
+          45,
+          24,
+          23,
+          18,
+          13
+        ],
+        "textColours": [
+          "#ececec",
+          "#f0eaea",
+          "#7d0c14",
+          "#e2e2e2",
+          "#6f3f43"
+        ],
+        "backgroundColours": [
+          "#3b060a",
+          "#6f3f43",
+          "#7d0c14",
+          "#b9abac",
+          "#d6d6d6",
+          "#e2e2e2",
+          "#c6c2c2"
+        ],
+        "chromaticColours": 3,
+        "colourFamilies": 1,
+        "spacing": {
+          "distinct": 35,
+          "offScale": 17,
+          "values": [
+            2,
+            4,
+            6,
+            8,
+            9.5,
+            10,
+            12,
+            13,
+            14,
+            16,
+            17,
+            18,
+            19,
+            20,
+            22,
+            23,
+            24,
+            28,
+            32,
+            35,
+            36,
+            38.5,
+            40,
+            43,
+            48,
+            56,
+            60,
+            63.5,
+            64,
+            72,
+            75,
+            83,
+            96,
+            120,
+            140
+          ]
+        },
+        "radii": [
+          "8px"
+        ],
+        "shadows": 0,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 92,
+        "animatedElements": 55,
+        "cls": 0
+      },
+      "screenshots": [
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/tablet-fold.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/tablet-page-01.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/tablet-page-02.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/tablet-page-03.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/tablet-page-04.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/tablet-page-05.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/tablet-page-06.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/tablet-page-07.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/tablet-page-08.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/tablet-page-09.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/tablet-page-10.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/tablet-page-11.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/tablet-page-12.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/tablet-page-13.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/tablet-page-14.png"
+      ]
+    },
+    "mobile": {
+      "width": 390,
+      "pageHeight": 14003,
+      "findings": [
+        {
+          "severity": "FAIL",
+          "rule": "tap-target",
+          "message": "1 controls smaller than 24x24px on a phone",
+          "sample": [
+            "115x21 <a> \"0812 2700 4141\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "text-at-edge",
+          "message": "30 text elements within 12px of the screen edge",
+          "sample": [
+            "<h1> \"Janur\"",
+            "<p> \"Wedding organizer di Yogyakarta untuk pernikahan a\"",
+            "<span> \"19.00\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "centred-hero-two-ctas",
+          "message": "Centred hero headline with two buttons, the most common generated layout"
+        },
+        {
+          "severity": "WARN",
+          "rule": "screenshots-capped",
+          "message": "Page is 14003px tall; only the first 14 screens were captured"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Bricolage Grotesque",
+            "share": 100
+          }
+        ],
+        "fontSizes": [
+          101,
+          33,
+          24,
+          20,
+          18,
+          17,
+          15,
+          13
+        ],
+        "textColours": [
+          "#ececec",
+          "#f0eaea",
+          "#7d0c14",
+          "#e2e2e2",
+          "#6f3f43"
+        ],
+        "backgroundColours": [
+          "#3b060a",
+          "#6f3f43",
+          "#7d0c14",
+          "#b9abac",
+          "#d6d6d6",
+          "#e2e2e2",
+          "#c6c2c2"
+        ],
+        "chromaticColours": 3,
+        "colourFamilies": 1,
+        "spacing": {
+          "distinct": 28,
+          "offScale": 12,
+          "values": [
+            2,
+            4,
+            6,
+            8,
+            9.5,
+            10,
+            12,
+            13,
+            14,
+            16,
+            18,
+            19,
+            20,
+            22,
+            24,
+            25.5,
+            28,
+            32,
+            40,
+            48,
+            49.5,
+            56,
+            57.5,
+            64,
+            72,
+            96,
+            120,
+            140
+          ]
+        },
+        "radii": [
+          "8px"
+        ],
+        "shadows": 0,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 90,
+        "animatedElements": 55,
+        "cls": 0
+      },
+      "screenshots": [
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/mobile-fold.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/mobile-page-01.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/mobile-page-02.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/mobile-page-03.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/mobile-page-04.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/mobile-page-05.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/mobile-page-06.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/mobile-page-07.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/mobile-page-08.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/mobile-page-09.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/mobile-page-10.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/mobile-page-11.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/mobile-page-12.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/mobile-page-13.png",
+        "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/mobile-page-14.png"
+      ]
+    }
+  },
+  "checks": {
+    "reducedMotion": {
+      "findings": [],
+      "screenshot": "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/taste/.design/inspect/reduced-motion-fold.png"
+    },
+    "noJavaScript": {
+      "findings": [],
+      "withJs": 8457,
+      "withoutJs": 8444
+    }
+  },
+  "summary": {
+    "fail": 1,
+    "warn": 4
+  },
+  "url": "http://127.0.0.1:35063/index.html",
+  "findings": [
+    {
+      "severity": "FAIL",
+      "rule": "tap-target",
+      "message": "1 controls smaller than 24x24px on a phone",
+      "sample": [
+        "115x21 <a> \"0812 2700 4141\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "headline-lines",
+      "message": "h2 runs to 11 lines",
+      "sample": [
+        "<h2> \"Tanya jawab\""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "centred-hero-two-ctas",
+      "message": "Centred hero headline with two buttons, the most common generated layout",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "text-at-edge",
+      "message": "30 text elements within 12px of the screen edge",
+      "sample": [
+        "<h1> \"Janur\"",
+        "<p> \"Wedding organizer di Yogyakarta untuk pernikahan a\"",
+        "<span> \"19.00\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "screenshots-capped",
+      "message": "Page is 14003px tall; only the first 14 screens were captured",
+      "where": [
+        "mobile"
+      ]
+    }
+  ]
+}
