@@ -1,0 +1,49 @@
+{
+  "mode": "create",
+  "effort": "standard",
+  "gates": "guided",
+  "created": "2026-11-01T17:27:47.754Z",
+  "steps": {
+    "brief": {
+      "status": "pending"
+    },
+    "research": {
+      "status": "pending"
+    },
+    "strategy": {
+      "status": "pending"
+    },
+    "roast": {
+      "status": "pending"
+    },
+    "direction": {
+      "status": "pending"
+    },
+    "skeleton": {
+      "status": "pending"
+    },
+    "spec": {
+      "status": "pending"
+    },
+    "copy": {
+      "status": "pending"
+    },
+    "build": {
+      "status": "pending"
+    },
+    "gate": {
+      "status": "pending"
+    },
+    "look": {
+      "status": "pending"
+    },
+    "deliver": {
+      "status": "pending"
+    },
+    "learn": {
+      "status": "pending"
+    }
+  },
+  "approvals": {},
+  "history": []
+}

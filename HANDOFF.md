@@ -1,7 +1,7 @@
 # Handoff
 
 Read this first if you are a new session, a different model or a different AI tool picking up
-this project. It is kept up to date at every milestone. Last updated: **2026-11-01** (first with/without-skill comparison: wedding organizer).
+this project. It is kept up to date at every milestone. Last updated: **2026-11-01** (visual dials + fit check built; second wedding run waiting at the direction gate).
 
 ## 1. Goal
 
@@ -130,6 +130,30 @@ about 5 min / 83k tokens; with-skill about 40 min, subagents 148k tokens plus th
 first-glance visual; the owner's verdict is pending. Inspector bugs fixed in this run: smooth
 scroll measured mid-scroll; elements measured under a sticky bar (now centred first); the style
 tag hung the no-JavaScript check.
+
+Why the first with-skill page looked weak (diagnosed 2026-11-01, told to the owner): the team's
+taste was loaded but never enforced. Measured with the new `fit.mjs` against
+`team/visual-defaults.json`: it missed all four dials (2 calm colours instead of bold; type ratio
+x4.6 vs the owner's favourites x6.3-x24; no imagery at all; no scroll story); quick effort skipped
+the hero best-of-3; autopilot meant no human at the direction gate; critic weights favour business
+and story. Built in response: `rules/visual-dials.md` (dials + presets from the library + how to
+guide the user), `team/visual-defaults.json`, `scripts/fit.mjs`, `rules/illustration.md`
+(flat SVG from the subject + shot list), imagery detection in evidence/style, progress.mjs
+requires `targets.json` at direction and a Fit section for misses at the look, critic cap,
+"Supaya lebih bagus" list at the final gate. Owner said yes to "point 2" (build these and redo the
+WO page at standard effort with them choosing); the critic-weight question was not answered, so
+weights are unchanged.
+
+Second wedding run (standard effort, guided gates): `examples/wedding-organizer-compare/v2/`
+(working copy in the session scratchpad). Research extended to 7 opened sources (second fraud case,
+WO Marwah May 2026; Bridestory reviews as customer voice; competitor payment norm 20%/80% before
+the day). Strategy v3. Directions redrawn (A photo-led and B used in run 1 excluded): A "Hari H
+yang menempel" (pinned clock, the day's backstage work scrolls beneath; recommended), B colour
+chapters, C type only. Board with brief, research, strategy, cards, dials and a reply builder:
+https://claude.ai/artifact/Gmxe6XBbVSrR3rd29Gp5Fw. Waiting for the owner's reply; then approve brief
+and strategy, write targets.json from the dials, approve direction, and continue (skeleton, spec,
+copy, build, hero best-of-3 with the jury, gate, fit, look with the jury, deliver), then add it to
+the blind comparison as version C.
 
 Capture fixes from batch-003: `lib/browser.mjs` `gotoStable` retries server error pages (a 502
 "upstream request failed" had been captured as Swehl's desktop) and every failed load is reported

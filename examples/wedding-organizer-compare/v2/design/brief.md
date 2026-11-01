@@ -1,0 +1,11 @@
+# Brief: Jalinan Wedding Organizer [SAMPLE name]
+- What: a landing page for a wedding organizer (the user's request: "Buatkan sebuah landing page untuk wedding organizer"; nothing else given)
+- For: couples in Jakarta planning a wedding 6-12 months out, and the parents who often co-decide and co-pay (assumption, see research)
+- One action: book a free consultation / ask for available dates on WhatsApp
+- Real content: none given. Services, prices, team and policies are [SAMPLE] and must be confirmed by the client
+- Imagery that exists: none (and external images are blocked in the viewer)
+- Brand: free
+- Avoid: invented proof (testimonials, client counts, press logos)
+- Stack: one static HTML file
+- Materials: none. Research from public sources only
+- My reading: no client exists, so this is a demo run in autopilot; every fact about the business is a sample
