@@ -1,0 +1,96 @@
+{
+  "mode": "create",
+  "effort": "quick",
+  "gates": "autopilot",
+  "created": "2026-11-01T16:28:07.836Z",
+  "steps": {
+    "brief": {
+      "status": "done",
+      "at": "2026-11-01T16:29:12.454Z",
+      "note": ""
+    },
+    "research": {
+      "status": "done",
+      "at": "2026-11-01T16:29:35.013Z",
+      "note": ""
+    },
+    "strategy": {
+      "status": "done",
+      "at": "2026-11-01T16:30:06.390Z",
+      "note": ""
+    },
+    "roast": {
+      "status": "done",
+      "at": "2026-11-01T16:32:31.156Z",
+      "note": ""
+    },
+    "direction": {
+      "status": "done",
+      "at": "2026-11-01T16:32:52.988Z",
+      "note": ""
+    },
+    "skeleton": {
+      "status": "skipped",
+      "at": "2026-11-01T16:34:05.638Z",
+      "note": "quick effort; single page with a fixed storyline from strategy v2"
+    },
+    "spec": {
+      "status": "done",
+      "at": "2026-11-01T16:34:05.706Z",
+      "note": ""
+    },
+    "copy": {
+      "status": "done",
+      "at": "2026-11-01T16:34:05.767Z",
+      "note": ""
+    },
+    "build": {
+      "status": "done",
+      "at": "2026-11-01T16:35:45.887Z",
+      "note": ""
+    },
+    "gate": {
+      "status": "done",
+      "at": "2026-11-01T16:50:09.806Z",
+      "note": ""
+    },
+    "look": {
+      "status": "done",
+      "at": "2026-11-01T16:54:15.174Z",
+      "note": ""
+    },
+    "deliver": {
+      "status": "done",
+      "at": "2026-11-01T16:54:38.521Z",
+      "note": ""
+    },
+    "learn": {
+      "status": "skipped",
+      "at": "2026-11-01T16:54:38.582Z",
+      "note": "quick effort demo; the owner's blind verdict is the lesson"
+    }
+  },
+  "approvals": {
+    "brief": {
+      "by": "claude",
+      "at": "2026-11-01T16:29:12.357Z",
+      "note": "autopilot: demo comparison requested by the owner; no client, business facts are [SAMPLE]"
+    },
+    "strategy": {
+      "by": "claude",
+      "at": "2026-11-01T16:32:31.098Z",
+      "note": "autopilot: roast accepted (15 of 16 in full or in part), strategy v2"
+    },
+    "direction": {
+      "by": "claude",
+      "at": "2026-11-01T16:32:52.928Z",
+      "note": "autopilot: B, the rundown sheet as the object"
+    },
+    "final": {
+      "by": "claude",
+      "at": "2026-11-01T16:54:38.463Z",
+      "note": "autopilot: delivered for the owner's blind comparison"
+    }
+  },
+  "history": []
+}

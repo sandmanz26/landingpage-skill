@@ -1,0 +1,222 @@
+<title>Uji Buta Wedding Organizer</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+  /* Utility shell around two framed pages: quiet neutrals so the pages under test carry all the colour. */
+  :root {
+    --bg: #f5f5f3;
+    --panel: #ffffff;
+    --fg: #1d1f24;
+    --muted: #5d6170;
+    --line: #dcdcd8;
+    --accent: #2b59c3;
+    --accent-fg: #ffffff;
+    --good: #1d7a46;
+    --bad: #b3261e;
+    --sel: #e7edfb;
+    --ui: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --bg: #16171a; --panel: #1f2125; --fg: #ececea; --muted: #a3a6b0; --line: #34363c; --accent: #8fb0ff; --accent-fg: #0f1730; --good: #6cc796; --bad: #ff8a80; --sel: #26324f; color-scheme: dark; }
+  }
+  :root[data-theme="dark"] { --bg: #16171a; --panel: #1f2125; --fg: #ececea; --muted: #a3a6b0; --line: #34363c; --accent: #8fb0ff; --accent-fg: #0f1730; --good: #6cc796; --bad: #ff8a80; --sel: #26324f; color-scheme: dark; }
+
+  body { background: var(--bg); color: var(--fg); font: 15px/1.55 var(--ui); }
+  .page { max-width: 1400px; margin: 0 auto; padding-inline: max(16px, env(safe-area-inset-left, 0px)) max(16px, env(safe-area-inset-right, 0px)); padding-block: 28px 64px; display: grid; gap: 22px; }
+  h1 { font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.15; margin: 0; letter-spacing: -0.01em; text-wrap: balance; }
+  h2 { font-size: 1.15rem; margin: 0; }
+  p { margin: 0; max-width: 72ch; }
+  .muted { color: var(--muted); }
+  .prompt { font-family: var(--mono); background: var(--panel); border: 1px solid var(--line); padding: 10px 14px; border-radius: 6px; display: inline-block; }
+
+  .bar { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; justify-content: space-between; }
+  .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--panel); }
+  .seg button { font: 600 0.92rem/1 var(--ui); padding: 10px 14px; border: 0; background: transparent; color: var(--fg); cursor: pointer; min-height: 40px; }
+  .seg button + button { border-left: 1px solid var(--line); }
+  .seg button[aria-pressed="true"] { background: var(--accent); color: var(--accent-fg); }
+  .seg button:focus-visible, .btn:focus-visible, .score select:focus-visible, .pick input:focus-visible + span { outline: 3px solid var(--accent); outline-offset: 2px; }
+  .opens { display: flex; gap: 14px; flex-wrap: wrap; }
+  .opens a { color: var(--accent); font-weight: 600; }
+
+  .stage { display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); }
+  .stage.side { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .frame { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; display: grid; grid-template-rows: auto 1fr; min-width: 0; }
+  .frame-head { display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; border-bottom: 1px solid var(--line); font-weight: 700; }
+  .frame-head span { font: 400 0.8rem/1 var(--mono); color: var(--muted); }
+  .viewport { position: relative; overflow: hidden; margin: 0 auto; }
+  .viewport iframe { border: 0; position: absolute; top: 0; left: 0; transform-origin: 0 0; background: #fff; }
+  @media (max-width: 760px) { .stage.side { grid-template-columns: minmax(0, 1fr); } }
+
+  .judge { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 20px; display: grid; gap: 16px; }
+  .scores { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .score { display: grid; gap: 10px; border: 1px solid var(--line); border-radius: 8px; padding: 14px; }
+  .score label { display: flex; justify-content: space-between; gap: 10px; align-items: center; }
+  .score select { font: inherit; padding: 6px 8px; border-radius: 6px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); min-height: 36px; }
+  .picks { display: flex; gap: 12px; flex-wrap: wrap; }
+  .pick { position: relative; }
+  .pick input { position: absolute; opacity: 0; inset: 0; }
+  .pick span { display: inline-block; padding: 10px 16px; border: 1px solid var(--line); border-radius: 8px; font-weight: 600; cursor: pointer; min-height: 40px; }
+  .pick input:checked + span { background: var(--sel); border-color: var(--accent); }
+  .btn { font: 700 0.95rem/1 var(--ui); padding: 12px 18px; border-radius: 8px; border: 0; background: var(--accent); color: var(--accent-fg); cursor: pointer; min-height: 44px; justify-self: start; }
+  .btn[disabled] { opacity: 0.45; cursor: not-allowed; }
+  @media (max-width: 640px) { .scores { grid-template-columns: minmax(0, 1fr); } }
+
+  .reveal { display: grid; gap: 18px; }
+  .answer { font-size: 1.15rem; }
+  .answer b { color: var(--accent); }
+  .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; }
+  table { border-collapse: collapse; width: 100%; min-width: 720px; font-size: 0.93rem; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+  thead th { background: var(--bg); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); }
+  td:first-child { font-weight: 600; width: 16%; }
+  td.bad { color: var(--bad); }
+  td.good { color: var(--good); }
+  .limits { border-left: 3px solid var(--line); padding-left: 14px; display: grid; gap: 6px; }
+  .limits li { margin-left: 1em; }
+  .limits ul { margin: 0; padding: 0; }
+</style>
+
+<div class="page">
+  <header style="display:grid;gap:12px">
+    <h1>Uji buta: landing page wedding organizer</h1>
+    <p>Dua halaman dari prompt yang sama, dengan model yang sama. Satu dibuat dengan skill design-director, satu tanpa skill. Nilai keduanya dulu, lalu buka jawabannya.</p>
+    <p><span class="prompt">"Buatkan sebuah landing page untuk wedding organizer."</span></p>
+  </header>
+
+  <div class="bar">
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <div class="seg" role="group" aria-label="Tampilan">
+        <button type="button" data-view="a" aria-pressed="false">Versi A</button>
+        <button type="button" data-view="b" aria-pressed="false">Versi B</button>
+        <button type="button" data-view="side" aria-pressed="true">Berdampingan</button>
+      </div>
+      <div class="seg" role="group" aria-label="Perangkat">
+        <button type="button" data-device="desktop" aria-pressed="true">Desktop</button>
+        <button type="button" data-device="phone" aria-pressed="false">Ponsel</button>
+      </div>
+    </div>
+    <div class="opens"><a href="versi-a.html" target="_blank" rel="noopener">Buka A penuh ↗</a><a href="versi-b.html" target="_blank" rel="noopener">Buka B penuh ↗</a></div>
+  </div>
+
+  <div class="stage side" id="stage">
+    <div class="frame" data-frame="a"><div class="frame-head">Versi A <span id="size-a"></span></div><div class="viewport"><iframe src="versi-a.html" title="Versi A" loading="lazy"></iframe></div></div>
+    <div class="frame" data-frame="b"><div class="frame-head">Versi B <span id="size-b"></span></div><div class="viewport"><iframe src="versi-b.html" title="Versi B" loading="lazy"></iframe></div></div>
+  </div>
+
+  <section class="judge" aria-labelledby="judge-title">
+    <h2 id="judge-title">Nilai dulu</h2>
+    <div class="scores">
+      <div class="score">
+        <b>Versi A</b>
+        <label for="a-visual">Visual (1–10) <select id="a-visual"></select></label>
+        <label for="a-ship">Layak kirim ke klien (1–10) <select id="a-ship"></select></label>
+      </div>
+      <div class="score">
+        <b>Versi B</b>
+        <label for="b-visual">Visual (1–10) <select id="b-visual"></select></label>
+        <label for="b-ship">Layak kirim ke klien (1–10) <select id="b-ship"></select></label>
+      </div>
+    </div>
+    <div style="display:grid;gap:10px">
+      <span>Kalau hanya boleh mengirim satu ke klien, yang mana?</span>
+      <div class="picks" role="radiogroup" aria-label="Pilihan">
+        <label class="pick"><input type="radio" name="pick" id="pick-a" value="A"><span>Versi A</span></label>
+        <label class="pick"><input type="radio" name="pick" id="pick-b" value="B"><span>Versi B</span></label>
+      </div>
+    </div>
+    <button class="btn" id="reveal-btn" type="button" disabled>Buka jawaban</button>
+    <p class="muted" id="reveal-hint">Pilih salah satu dulu.</p>
+
+    <div class="reveal" id="reveal" hidden>
+      <p class="answer" id="answer"></p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Diukur</th><th>A · tanpa skill</th><th>B · dengan skill</th></tr></thead>
+          <tbody>
+            <tr><td>Proses</td><td>Prompt langsung jadi kode. 1 agen, sekitar 5 menit.</td><td>Brief → riset (3 sumber dibuka) → strategi → roast oleh agen terpisah (16 poin, 15 diterima) → 3 arah desain → spec → copy → build → inspector → kritikus independen (7,4/10) → 3 perbaikan. Gerbang dijalankan autopilot: saya yang memilih, bukan Anda.</td></tr>
+            <tr><td>Inspector browser (FAIL)</td><td class="bad">4: teks 9,9px; 15 teks di bawah kontras WCAG; tombol terlalu kecil di ponsel</td><td class="good">0 (2 ditemukan saat proses lalu diperbaiki)</td></tr>
+            <tr><td>Bukti</td><td class="bad">"320+ pernikahan", "rating 4,9/5", "140+ vendor", testimoni bernama dengan bintang: semuanya karangan</td><td class="good">Tidak ada angka atau testimoni karangan. Diganti hal yang bisa dicek calon klien: kantor, NIB ditunjukkan, nomor vendor, contoh kontrak, tiga pasangan terakhir</td></tr>
+            <tr><td>Riset</td><td>Tidak ada</td><td>Kasus penipuan WO 2024–2025 (230 korban, Rp 16–20 miliar, Jawa Pos) → cerita dibangun di atas kepercayaan dan alur uang: vendor dibayar langsung, fee 3 tahap, pelunasan setelah acara</td></tr>
+            <tr><td>Gaya</td><td>Krem + serif + aksen terakota (pola bawaan AI yang sering muncul), ilustrasi pelaminan</td><td>Objek dari dunia WO: lembar rundown. Hijau venue, kertas, stabilo kuning untuk aksi</td></tr>
+            <tr><td>Fitur</td><td>Lebih banyak: portofolio dengan filter, kalkulator budget, form konsultasi</td><td>Lebih sedikit: harga, cek kami, persiapan, hari H, tanya jawab, WhatsApp</td></tr>
+            <tr><td>Biaya</td><td>83 ribu token, sekitar 5 menit</td><td>Subagen 148 ribu token (roast + kritikus) + sesi utama yang tidak terukur; sekitar 40 menit, termasuk memperbaiki 3 bug di inspector</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="limits">
+        <b>Batas uji ini</b>
+        <ul>
+          <li>Satu brief, satu kali jalan per versi. Ini contoh, bukan bukti statistik.</li>
+          <li>Kedua versi memakai data bisnis contoh (nama, harga, alamat). Versi A menampilkan bukti karangan sebagai fakta; versi B tidak.</li>
+          <li>Versi B dibuat sesi yang sudah memegang konteks panjang (riset, referensi tim). Versi A oleh agen baru tanpa konteks itu.</li>
+          <li>Anda tahu prosesnya, jadi ini belum sepenuhnya buta. Uji yang sebenarnya: 3–5 brief, dinilai desainer yang tidak tahu versi mana yang mana.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+  (function () {
+    var view = 'side', device = 'desktop';
+    var DESK = { w: 1280, h: 800 }, PHONE = { w: 390, h: 780 };
+    var stage = document.getElementById('stage');
+
+    function layout() {
+      stage.classList.toggle('side', view === 'side');
+      document.querySelectorAll('[data-frame]').forEach(function (f) {
+        var key = f.getAttribute('data-frame');
+        f.hidden = !(view === 'side' || view === key);
+        if (f.hidden) return;
+        var dims = device === 'desktop' ? DESK : PHONE;
+        var vp = f.querySelector('.viewport'), fr = f.querySelector('iframe');
+        var avail = f.clientWidth - 2;
+        var scale = Math.min(1, avail / dims.w);
+        fr.style.width = dims.w + 'px';
+        fr.style.height = dims.h + 'px';
+        fr.style.transform = 'scale(' + scale + ')';
+        vp.style.width = Math.round(dims.w * scale) + 'px';
+        vp.style.height = Math.round(dims.h * scale) + 'px';
+        document.getElementById('size-' + key).textContent = dims.w + 'px' + (scale < 1 ? ' · ' + Math.round(scale * 100) + '%' : '');
+      });
+    }
+    document.querySelectorAll('[data-view]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        view = b.getAttribute('data-view');
+        document.querySelectorAll('[data-view]').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+        layout();
+      });
+    });
+    document.querySelectorAll('[data-device]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        device = b.getAttribute('data-device');
+        document.querySelectorAll('[data-device]').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+        layout();
+      });
+    });
+    window.addEventListener('resize', layout);
+    layout();
+
+    ['a-visual', 'a-ship', 'b-visual', 'b-ship'].forEach(function (id) {
+      var s = document.getElementById(id);
+      s.add(new Option('–', ''));
+      for (var i = 1; i <= 10; i++) s.add(new Option(String(i), String(i)));
+    });
+
+    var btn = document.getElementById('reveal-btn');
+    document.querySelectorAll('input[name="pick"]').forEach(function (r) {
+      r.addEventListener('change', function () { btn.disabled = false; document.getElementById('reveal-hint').hidden = true; });
+    });
+    btn.addEventListener('click', function () {
+      var pick = (document.querySelector('input[name="pick"]:checked') || {}).value;
+      var withSkill = 'B';
+      var v = function (id) { return document.getElementById(id).value || '–'; };
+      document.getElementById('answer').innerHTML =
+        'Versi <b>A dibuat tanpa skill</b>, versi <b>B dengan skill</b>. Anda memilih <b>' + pick + '</b> (' +
+        (pick === withSkill ? 'versi dengan skill' : 'versi tanpa skill') + '). Skor Anda: A ' + v('a-visual') + ' visual / ' + v('a-ship') +
+        ' layak kirim · B ' + v('b-visual') + ' visual / ' + v('b-ship') + ' layak kirim.';
+      document.getElementById('reveal').hidden = false;
+      btn.hidden = true;
+    });
+  })();
+</script>

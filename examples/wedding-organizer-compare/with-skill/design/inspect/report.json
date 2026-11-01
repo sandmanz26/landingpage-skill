@@ -1,0 +1,413 @@
+{
+  "target": "index.html",
+  "time": "2026-11-01T16:53:14.331Z",
+  "rules": {
+    "purple-gradient": "warn",
+    "gradient": "info",
+    "glass": "info",
+    "system-font-only": "warn",
+    "too-many-font-sizes": "warn",
+    "too-many-colours": "warn",
+    "shadow-on-everything": "warn",
+    "icon-card-row": "warn",
+    "centred-hero-two-ctas": "warn",
+    "emoji": "warn"
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "pageHeight": 5914,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "too-many-font-sizes",
+          "message": "15 different font sizes on the page (aim for 5 or fewer doing the visible work)"
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "6 gradient backgrounds"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Public Sans",
+            "share": 82
+          },
+          {
+            "family": "IBM Plex Mono",
+            "share": 12
+          },
+          {
+            "family": "Archivo",
+            "share": 7
+          }
+        ],
+        "fontSizes": [
+          74,
+          51,
+          38,
+          30,
+          27,
+          24,
+          22,
+          18,
+          17,
+          16,
+          15,
+          14,
+          13,
+          12,
+          11
+        ],
+        "textColours": [
+          "#f4f3ec",
+          "#c9d3cc",
+          "#1b2340",
+          "#4a5068",
+          "#c7cbe0",
+          "#fafaf6",
+          "#f2dd6e"
+        ],
+        "backgroundColours": [
+          "#20352d",
+          "#f2dd6e",
+          "#fafaf6",
+          "#f0efe8",
+          "#1b2340"
+        ],
+        "chromaticColours": 4,
+        "spacing": {
+          "distinct": 32,
+          "offScale": 20,
+          "values": [
+            2,
+            2.5,
+            3,
+            4,
+            5,
+            6,
+            7,
+            7.5,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            14.5,
+            16,
+            17,
+            17.5,
+            18,
+            20,
+            21,
+            22,
+            24,
+            26,
+            28,
+            30,
+            34,
+            36,
+            40,
+            48,
+            72,
+            88
+          ]
+        },
+        "radii": [
+          "2px"
+        ],
+        "shadows": 1,
+        "gradients": 6,
+        "backdropBlur": 0,
+        "transitions": 0,
+        "animatedElements": 2,
+        "cls": 0.015
+      },
+      "screenshots": [
+        ".design/inspect/desktop-fold.png",
+        ".design/inspect/desktop-page-01.png",
+        ".design/inspect/desktop-page-02.png",
+        ".design/inspect/desktop-page-03.png",
+        ".design/inspect/desktop-page-04.png",
+        ".design/inspect/desktop-page-05.png",
+        ".design/inspect/desktop-page-06.png",
+        ".design/inspect/desktop-page-07.png"
+      ]
+    },
+    "tablet": {
+      "width": 768,
+      "pageHeight": 7107,
+      "findings": [
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "6 gradient backgrounds"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Public Sans",
+            "share": 82
+          },
+          {
+            "family": "IBM Plex Mono",
+            "share": 12
+          },
+          {
+            "family": "Archivo",
+            "share": 7
+          }
+        ],
+        "fontSizes": [
+          43,
+          38,
+          34,
+          30,
+          27,
+          24,
+          22,
+          18,
+          17,
+          16,
+          15,
+          14,
+          13,
+          12,
+          11
+        ],
+        "textColours": [
+          "#f4f3ec",
+          "#c9d3cc",
+          "#1b2340",
+          "#4a5068",
+          "#c7cbe0",
+          "#fafaf6",
+          "#f2dd6e"
+        ],
+        "backgroundColours": [
+          "#20352d",
+          "#f2dd6e",
+          "#fafaf6",
+          "#f0efe8",
+          "#1b2340"
+        ],
+        "chromaticColours": 4,
+        "spacing": {
+          "distinct": 32,
+          "offScale": 21,
+          "values": [
+            2,
+            2.5,
+            3,
+            4,
+            5,
+            6,
+            7,
+            7.5,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            14.5,
+            16,
+            17,
+            17.5,
+            18,
+            20,
+            21,
+            22,
+            24,
+            26,
+            28,
+            30,
+            34,
+            36,
+            38.5,
+            40,
+            48,
+            64
+          ]
+        },
+        "radii": [
+          "2px"
+        ],
+        "shadows": 1,
+        "gradients": 6,
+        "backdropBlur": 0,
+        "transitions": 0,
+        "animatedElements": 2,
+        "cls": 0.028
+      },
+      "screenshots": [
+        ".design/inspect/tablet-fold.png",
+        ".design/inspect/tablet-page-01.png",
+        ".design/inspect/tablet-page-02.png",
+        ".design/inspect/tablet-page-03.png",
+        ".design/inspect/tablet-page-04.png",
+        ".design/inspect/tablet-page-05.png",
+        ".design/inspect/tablet-page-06.png",
+        ".design/inspect/tablet-page-07.png"
+      ]
+    },
+    "mobile": {
+      "width": 390,
+      "pageHeight": 8708,
+      "findings": [
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "6 gradient backgrounds"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Public Sans",
+            "share": 83
+          },
+          {
+            "family": "IBM Plex Mono",
+            "share": 10
+          },
+          {
+            "family": "Archivo",
+            "share": 7
+          }
+        ],
+        "fontSizes": [
+          43,
+          38,
+          32,
+          30,
+          27,
+          24,
+          22,
+          18,
+          17,
+          16,
+          15,
+          14,
+          13,
+          12,
+          11
+        ],
+        "textColours": [
+          "#f4f3ec",
+          "#c9d3cc",
+          "#1b2340",
+          "#4a5068",
+          "#c7cbe0",
+          "#fafaf6",
+          "#f2dd6e"
+        ],
+        "backgroundColours": [
+          "#20352d",
+          "#f2dd6e",
+          "#fafaf6",
+          "#f0efe8",
+          "#1b2340"
+        ],
+        "chromaticColours": 4,
+        "spacing": {
+          "distinct": 28,
+          "offScale": 17,
+          "values": [
+            2,
+            2.5,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            16,
+            17,
+            17.5,
+            18,
+            20,
+            21,
+            22,
+            24,
+            28,
+            30,
+            34,
+            36,
+            40,
+            48,
+            64
+          ]
+        },
+        "radii": [
+          "2px"
+        ],
+        "shadows": 1,
+        "gradients": 6,
+        "backdropBlur": 0,
+        "transitions": 1,
+        "animatedElements": 3,
+        "cls": 0.08
+      },
+      "screenshots": [
+        ".design/inspect/mobile-fold.png",
+        ".design/inspect/mobile-page-01.png",
+        ".design/inspect/mobile-page-02.png",
+        ".design/inspect/mobile-page-03.png",
+        ".design/inspect/mobile-page-04.png",
+        ".design/inspect/mobile-page-05.png",
+        ".design/inspect/mobile-page-06.png",
+        ".design/inspect/mobile-page-07.png",
+        ".design/inspect/mobile-page-08.png",
+        ".design/inspect/mobile-page-09.png",
+        ".design/inspect/mobile-page-10.png",
+        ".design/inspect/mobile-page-11.png"
+      ]
+    }
+  },
+  "checks": {
+    "reducedMotion": {
+      "findings": [],
+      "screenshot": ".design/inspect/reduced-motion-fold.png"
+    },
+    "noJavaScript": {
+      "findings": [],
+      "withJs": 4990,
+      "withoutJs": 4990
+    }
+  },
+  "summary": {
+    "fail": 0,
+    "warn": 1
+  },
+  "url": "http://127.0.0.1:41045/index.html",
+  "findings": [
+    {
+      "severity": "WARN",
+      "rule": "too-many-font-sizes",
+      "message": "15 different font sizes on the page (aim for 5 or fewer doing the visible work)",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "gradient",
+      "message": "6 gradient backgrounds",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    }
+  ]
+}

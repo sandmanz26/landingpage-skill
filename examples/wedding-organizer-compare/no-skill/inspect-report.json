@@ -1,0 +1,1120 @@
+{
+  "target": "/tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/index.html",
+  "time": "2026-11-01T16:48:48.516Z",
+  "rules": {
+    "purple-gradient": "warn",
+    "gradient": "info",
+    "glass": "info",
+    "system-font-only": "warn",
+    "too-many-font-sizes": "warn",
+    "too-many-colours": "warn",
+    "shadow-on-everything": "warn",
+    "icon-card-row": "warn",
+    "centred-hero-two-ctas": "warn",
+    "emoji": "warn"
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "pageHeight": 9323,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "too-many-font-sizes",
+          "message": "17 different font sizes on the page (aim for 5 or fewer doing the visible work)"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.92px",
+          "sample": [
+            "<small> \"Wedding Organizer\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15.36px (16px or more reads better)",
+          "sample": [
+            "<p> \"Timeline persiapan bulan demi bulan, alokasi budge\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15.36px (16px or more reads better)",
+          "sample": [
+            "<p> \"Venue, katering, dekorasi, MUA, dokumentasi, hibur\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15.36px (16px or more reads better)",
+          "sample": [
+            "<p> \"Moodboard, palet warna, dan layout venue yang kons\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15.36px (16px or more reads better)",
+          "sample": [
+            "<p> \"Siraman, midodareni, ngeuyeuk seureuh, mapacci, hi\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15.36px (16px or more reads better)",
+          "sample": [
+            "<p> \"8 sampai 14 crew dengan HT, rundown per menit, dan\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15.36px (16px or more reads better)",
+          "sample": [
+            "<p> \"RSVP digital, among tamu, penataan kursi keluarga,\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15.2px (16px or more reads better)",
+          "sample": [
+            "<p> \"Ngobrol santai 60 menit tentang impian, jumlah tam\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15.2px (16px or more reads better)",
+          "sample": [
+            "<p> \"Kami kirim moodboard, estimasi anggaran per pos, d\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15.2px (16px or more reads better)",
+          "sample": [
+            "<p> \"Survei venue, technical meeting, fitting, gladi re\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15.2px (16px or more reads better)",
+          "sample": [
+            "<p> \"Tim kami datang lebih awal, memegang rundown, dan \""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14.08px (16px or more reads better)",
+          "sample": [
+            "<p> \"Destination wedding di luar Jabodetabek dan Bandun\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12.8px (16px or more reads better)",
+          "sample": [
+            "<p> \"Asumsi kasar harga Jabodetabek 2026. Rincian akura\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.92px",
+          "sample": [
+            "<small> \"Wedding Organizer\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14.4px (16px or more reads better)",
+          "sample": [
+            "<p> \"Perencana dan koordinator pernikahan untuk pasanga\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "8 gradient backgrounds"
+        },
+        {
+          "severity": "INFO",
+          "rule": "glass",
+          "message": "1 blurred glass panels"
+        },
+        {
+          "severity": "WARN",
+          "rule": "too-many-colours",
+          "message": "11 distinct chromatic colours",
+          "sample": [
+            "#2e7d4f",
+            "#22372f",
+            "#2f4a3f",
+            "#a8604f",
+            "#5e9a6f",
+            "#f3ebdf",
+            "#334d40",
+            "#e7d9c5"
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "icon-card-row",
+          "message": "1 rows of identical icon cards",
+          "sample": [
+            "<div> \"Hari-HSudah punya vendor, butuh tim yang memegang \""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "7 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#a8604f on screen = 4.42:1 median, 3.82:1 in the worst tenth (needs 4.5) <p> \"Wedding Organizer · Jabodetabek, Bandung & Bali\"",
+            "#a8604f on screen = 3.99:1 median, 3.99:1 in the worst tenth (needs 4.5) <p> \"Tentang Saujana\"",
+            "#ffffff on screen = 2.71:1 median, 2.10:1 in the worst tenth (needs 3) <b> \"Alya & Bima\"",
+            "#ffffff on screen = 2.82:1 median, 2.19:1 in the worst tenth (needs 3) <b> \"Nadia & Raka\"",
+            "#ffffff on screen = 2.82:1 median, 2.31:1 in the worst tenth (needs 4.5) <span> \"Paling dipilih\""
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Plus Jakarta Sans",
+            "share": 85
+          },
+          {
+            "family": "Cormorant Garamond",
+            "share": 15
+          }
+        ],
+        "fontSizes": [
+          78,
+          53,
+          48,
+          42,
+          35,
+          32,
+          25,
+          24,
+          22,
+          21,
+          17,
+          16,
+          15,
+          14,
+          13,
+          12,
+          10
+        ],
+        "textColours": [
+          "#22372f",
+          "#6b746f",
+          "#4a5751",
+          "#fbf7f1",
+          "#a8604f",
+          "#2f4a3f",
+          "#1f2a26",
+          "#f3ebdf",
+          "#e7d9c5",
+          "#f3eadf",
+          "#ffffff",
+          "#b8935a"
+        ],
+        "backgroundColours": [
+          "#2e7d4f",
+          "#fcf7f1",
+          "#2f4a3f",
+          "#ffffff",
+          "#5e9a6f",
+          "#22372f",
+          "#f3ebdf",
+          "#334d40",
+          "#fbf7f1",
+          "#c98b7a",
+          "#7e9a7f",
+          "#a8604f"
+        ],
+        "chromaticColours": 11,
+        "spacing": {
+          "distinct": 27,
+          "offScale": 12,
+          "values": [
+            2,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            28,
+            30,
+            32,
+            44,
+            48,
+            56,
+            64,
+            72,
+            80,
+            88,
+            110,
+            120
+          ]
+        },
+        "radii": [
+          "50%",
+          "999px",
+          "14px",
+          "18px",
+          "240px",
+          "22px",
+          "24px",
+          "28px",
+          "12px"
+        ],
+        "shadows": 6,
+        "gradients": 8,
+        "backdropBlur": 1,
+        "transitions": 51,
+        "animatedElements": 39,
+        "cls": 0.068
+      },
+      "screenshots": [
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/desktop-fold.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/desktop-page-01.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/desktop-page-02.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/desktop-page-03.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/desktop-page-04.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/desktop-page-05.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/desktop-page-06.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/desktop-page-07.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/desktop-page-08.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/desktop-page-09.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/desktop-page-10.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/desktop-page-11.png"
+      ]
+    },
+    "tablet": {
+      "width": 768,
+      "pageHeight": 11714,
+      "findings": [
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.92px",
+          "sample": [
+            "<small> \"Wedding Organizer\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15.36px (16px or more reads better)",
+          "sample": [
+            "<p> \"Timeline persiapan bulan demi bulan, alokasi budge\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15.36px (16px or more reads better)",
+          "sample": [
+            "<p> \"Venue, katering, dekorasi, MUA, dokumentasi, hibur\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15.36px (16px or more reads better)",
+          "sample": [
+            "<p> \"Moodboard, palet warna, dan layout venue yang kons\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15.36px (16px or more reads better)",
+          "sample": [
+            "<p> \"Siraman, midodareni, ngeuyeuk seureuh, mapacci, hi\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15.36px (16px or more reads better)",
+          "sample": [
+            "<p> \"8 sampai 14 crew dengan HT, rundown per menit, dan\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15.36px (16px or more reads better)",
+          "sample": [
+            "<p> \"RSVP digital, among tamu, penataan kursi keluarga,\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15.2px (16px or more reads better)",
+          "sample": [
+            "<p> \"Ngobrol santai 60 menit tentang impian, jumlah tam\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15.2px (16px or more reads better)",
+          "sample": [
+            "<p> \"Kami kirim moodboard, estimasi anggaran per pos, d\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15.2px (16px or more reads better)",
+          "sample": [
+            "<p> \"Survei venue, technical meeting, fitting, gladi re\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15.2px (16px or more reads better)",
+          "sample": [
+            "<p> \"Tim kami datang lebih awal, memegang rundown, dan \""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14.08px (16px or more reads better)",
+          "sample": [
+            "<p> \"Destination wedding di luar Jabodetabek dan Bandun\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12.8px (16px or more reads better)",
+          "sample": [
+            "<p> \"Asumsi kasar harga Jabodetabek 2026. Rincian akura\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.92px",
+          "sample": [
+            "<small> \"Wedding Organizer\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14.4px (16px or more reads better)",
+          "sample": [
+            "<p> \"Perencana dan koordinator pernikahan untuk pasanga\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "8 gradient backgrounds"
+        },
+        {
+          "severity": "INFO",
+          "rule": "glass",
+          "message": "1 blurred glass panels"
+        },
+        {
+          "severity": "WARN",
+          "rule": "too-many-colours",
+          "message": "11 distinct chromatic colours",
+          "sample": [
+            "#2e7d4f",
+            "#22372f",
+            "#a8604f",
+            "#2f4a3f",
+            "#5e9a6f",
+            "#f3ebdf",
+            "#334d40",
+            "#e7d9c5"
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "8 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#a8604f on screen = 4.42:1 median, 4.42:1 in the worst tenth (needs 4.5) <p> \"Wedding Organizer · Jabodetabek, Bandung & Bali\"",
+            "#a8604f on screen = 3.99:1 median, 3.99:1 in the worst tenth (needs 4.5) <p> \"Tentang Saujana\"",
+            "#ffffff on screen = 2.71:1 median, 2.10:1 in the worst tenth (needs 3) <b> \"Alya & Bima\"",
+            "#ffffff on screen = 2.85:1 median, 2.20:1 in the worst tenth (needs 3) <b> \"Nadia & Raka\"",
+            "#ffffff on screen = 2.75:1 median, 2.00:1 in the worst tenth (needs 3) <b> \"Rani & Dimas\""
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Plus Jakarta Sans",
+            "share": 84
+          },
+          {
+            "family": "Cormorant Garamond",
+            "share": 16
+          }
+        ],
+        "fontSizes": [
+          49,
+          42,
+          35,
+          34,
+          32,
+          25,
+          24,
+          22,
+          21,
+          17,
+          16,
+          15,
+          14,
+          13,
+          12,
+          10
+        ],
+        "textColours": [
+          "#22372f",
+          "#6b746f",
+          "#a8604f",
+          "#4a5751",
+          "#fbf7f1",
+          "#2f4a3f",
+          "#1f2a26",
+          "#f3ebdf",
+          "#e7d9c5",
+          "#f3eadf",
+          "#ffffff",
+          "#b8935a"
+        ],
+        "backgroundColours": [
+          "#2e7d4f",
+          "#fcf7f1",
+          "#1f2a26",
+          "#2f4a3f",
+          "#ffffff",
+          "#5e9a6f",
+          "#22372f",
+          "#f3ebdf",
+          "#334d40",
+          "#fbf7f1",
+          "#c98b7a",
+          "#7e9a7f",
+          "#a8604f"
+        ],
+        "chromaticColours": 11,
+        "spacing": {
+          "distinct": 30,
+          "offScale": 18,
+          "values": [
+            1,
+            2,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            28,
+            30,
+            30.5,
+            32,
+            38.5,
+            40,
+            44,
+            46,
+            48,
+            54,
+            56,
+            64,
+            69,
+            77
+          ]
+        },
+        "radii": [
+          "50%",
+          "12px",
+          "999px",
+          "14px",
+          "18px",
+          "200px",
+          "22px",
+          "24px",
+          "28px"
+        ],
+        "shadows": 6,
+        "gradients": 8,
+        "backdropBlur": 1,
+        "transitions": 51,
+        "animatedElements": 38,
+        "cls": 0.002
+      },
+      "screenshots": [
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/tablet-fold.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/tablet-page-01.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/tablet-page-02.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/tablet-page-03.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/tablet-page-04.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/tablet-page-05.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/tablet-page-06.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/tablet-page-07.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/tablet-page-08.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/tablet-page-09.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/tablet-page-10.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/tablet-page-11.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/tablet-page-12.png"
+      ]
+    },
+    "mobile": {
+      "width": 390,
+      "pageHeight": 15905,
+      "findings": [
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.92px",
+          "sample": [
+            "<small> \"Wedding Organizer\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15.36px (16px or more reads better)",
+          "sample": [
+            "<p> \"Timeline persiapan bulan demi bulan, alokasi budge\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15.36px (16px or more reads better)",
+          "sample": [
+            "<p> \"Venue, katering, dekorasi, MUA, dokumentasi, hibur\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15.36px (16px or more reads better)",
+          "sample": [
+            "<p> \"Moodboard, palet warna, dan layout venue yang kons\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15.36px (16px or more reads better)",
+          "sample": [
+            "<p> \"Siraman, midodareni, ngeuyeuk seureuh, mapacci, hi\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15.36px (16px or more reads better)",
+          "sample": [
+            "<p> \"8 sampai 14 crew dengan HT, rundown per menit, dan\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15.36px (16px or more reads better)",
+          "sample": [
+            "<p> \"RSVP digital, among tamu, penataan kursi keluarga,\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15.2px (16px or more reads better)",
+          "sample": [
+            "<p> \"Ngobrol santai 60 menit tentang impian, jumlah tam\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15.2px (16px or more reads better)",
+          "sample": [
+            "<p> \"Kami kirim moodboard, estimasi anggaran per pos, d\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15.2px (16px or more reads better)",
+          "sample": [
+            "<p> \"Survei venue, technical meeting, fitting, gladi re\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15.2px (16px or more reads better)",
+          "sample": [
+            "<p> \"Tim kami datang lebih awal, memegang rundown, dan \""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14.08px (16px or more reads better)",
+          "sample": [
+            "<p> \"Destination wedding di luar Jabodetabek dan Bandun\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12.8px (16px or more reads better)",
+          "sample": [
+            "<p> \"Asumsi kasar harga Jabodetabek 2026. Rincian akura\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.92px",
+          "sample": [
+            "<small> \"Wedding Organizer\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14.4px (16px or more reads better)",
+          "sample": [
+            "<p> \"Perencana dan koordinator pernikahan untuk pasanga\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tap-target",
+          "message": "5 controls smaller than 24x24px on a phone",
+          "sample": [
+            "137x19 <a> \"0812-0000-2026\"",
+            "56x18 <a> \"Layanan\"",
+            "68x18 <a> \"Portofolio\"",
+            "39x18 <a> \"Paket\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "8 gradient backgrounds"
+        },
+        {
+          "severity": "INFO",
+          "rule": "glass",
+          "message": "1 blurred glass panels"
+        },
+        {
+          "severity": "WARN",
+          "rule": "too-many-colours",
+          "message": "11 distinct chromatic colours",
+          "sample": [
+            "#2e7d4f",
+            "#22372f",
+            "#a8604f",
+            "#2f4a3f",
+            "#5e9a6f",
+            "#f3ebdf",
+            "#334d40",
+            "#e7d9c5"
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "7 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#a8604f on screen = 4.42:1 median, 4.42:1 in the worst tenth (needs 4.5) <p> \"Wedding Organizer · Jabodetabek, Bandung & Bali\"",
+            "#a8604f on screen = 3.99:1 median, 3.99:1 in the worst tenth (needs 4.5) <p> \"Tentang Saujana\"",
+            "#ffffff on screen = 2.93:1 median, 2.29:1 in the worst tenth (needs 3) <b> \"Nadia & Raka\"",
+            "#ffffff on screen = 2.42:1 median, 1.92:1 in the worst tenth (needs 3) <b> \"Rani & Dimas\"",
+            "#ffffff on screen = 2.82:1 median, 2.68:1 in the worst tenth (needs 4.5) <span> \"Paling dipilih\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "screenshots-capped",
+          "message": "Page is 15905px tall; only the first 14 screens were captured"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Plus Jakarta Sans",
+            "share": 84
+          },
+          {
+            "family": "Cormorant Garamond",
+            "share": 16
+          }
+        ],
+        "fontSizes": [
+          42,
+          35,
+          34,
+          32,
+          25,
+          24,
+          22,
+          21,
+          17,
+          16,
+          15,
+          14,
+          13,
+          12,
+          10
+        ],
+        "textColours": [
+          "#22372f",
+          "#6b746f",
+          "#a8604f",
+          "#4a5751",
+          "#fbf7f1",
+          "#2f4a3f",
+          "#1f2a26",
+          "#f3ebdf",
+          "#e7d9c5",
+          "#f3eadf",
+          "#ffffff",
+          "#b8935a"
+        ],
+        "backgroundColours": [
+          "#2e7d4f",
+          "#fcf7f1",
+          "#1f2a26",
+          "#2f4a3f",
+          "#ffffff",
+          "#5e9a6f",
+          "#22372f",
+          "#f3ebdf",
+          "#334d40",
+          "#fbf7f1",
+          "#c98b7a",
+          "#7e9a7f",
+          "#a8604f"
+        ],
+        "chromaticColours": 11,
+        "spacing": {
+          "distinct": 25,
+          "offScale": 12,
+          "values": [
+            1,
+            2,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            28,
+            30,
+            32,
+            40,
+            44,
+            48,
+            56,
+            64,
+            72
+          ]
+        },
+        "radii": [
+          "50%",
+          "12px",
+          "999px",
+          "14px",
+          "18px",
+          "200px",
+          "22px",
+          "24px",
+          "28px"
+        ],
+        "shadows": 6,
+        "gradients": 8,
+        "backdropBlur": 1,
+        "transitions": 51,
+        "animatedElements": 41,
+        "cls": 0.001
+      },
+      "screenshots": [
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/mobile-fold.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/mobile-page-01.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/mobile-page-02.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/mobile-page-03.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/mobile-page-04.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/mobile-page-05.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/mobile-page-06.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/mobile-page-07.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/mobile-page-08.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/mobile-page-09.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/mobile-page-10.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/mobile-page-11.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/mobile-page-12.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/mobile-page-13.png",
+        "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/mobile-page-14.png"
+      ]
+    }
+  },
+  "checks": {
+    "reducedMotion": {
+      "findings": [],
+      "screenshot": "../../../../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/no-skill/.design/inspect/reduced-motion-fold.png"
+    },
+    "noJavaScript": {
+      "findings": [],
+      "withJs": 7245,
+      "withoutJs": 7218
+    }
+  },
+  "summary": {
+    "fail": 4,
+    "warn": 9
+  },
+  "url": "http://127.0.0.1:39339/index.html",
+  "findings": [
+    {
+      "severity": "FAIL",
+      "rule": "tiny-text",
+      "message": "Text at 9.92px",
+      "sample": [
+        "<small> \"Wedding Organizer\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "7 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#a8604f on screen = 4.42:1 median, 3.82:1 in the worst tenth (needs 4.5) <p> \"Wedding Organizer · Jabodetabek, Bandung & Bali\"",
+        "#a8604f on screen = 3.99:1 median, 3.99:1 in the worst tenth (needs 4.5) <p> \"Tentang Saujana\"",
+        "#ffffff on screen = 2.71:1 median, 2.10:1 in the worst tenth (needs 3) <b> \"Alya & Bima\"",
+        "#ffffff on screen = 2.82:1 median, 2.19:1 in the worst tenth (needs 3) <b> \"Nadia & Raka\"",
+        "#ffffff on screen = 2.82:1 median, 2.31:1 in the worst tenth (needs 4.5) <span> \"Paling dipilih\""
+      ],
+      "where": [
+        "desktop",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "8 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#a8604f on screen = 4.42:1 median, 4.42:1 in the worst tenth (needs 4.5) <p> \"Wedding Organizer · Jabodetabek, Bandung & Bali\"",
+        "#a8604f on screen = 3.99:1 median, 3.99:1 in the worst tenth (needs 4.5) <p> \"Tentang Saujana\"",
+        "#ffffff on screen = 2.71:1 median, 2.10:1 in the worst tenth (needs 3) <b> \"Alya & Bima\"",
+        "#ffffff on screen = 2.85:1 median, 2.20:1 in the worst tenth (needs 3) <b> \"Nadia & Raka\"",
+        "#ffffff on screen = 2.75:1 median, 2.00:1 in the worst tenth (needs 3) <b> \"Rani & Dimas\""
+      ],
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tap-target",
+      "message": "5 controls smaller than 24x24px on a phone",
+      "sample": [
+        "137x19 <a> \"0812-0000-2026\"",
+        "56x18 <a> \"Layanan\"",
+        "68x18 <a> \"Portofolio\"",
+        "39x18 <a> \"Paket\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "too-many-font-sizes",
+      "message": "17 different font sizes on the page (aim for 5 or fewer doing the visible work)",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "body-size",
+      "message": "Running text at 15.36px (16px or more reads better)",
+      "sample": [
+        "<p> \"Timeline persiapan bulan demi bulan, alokasi budge\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "body-size",
+      "message": "Running text at 15.2px (16px or more reads better)",
+      "sample": [
+        "<p> \"Ngobrol santai 60 menit tentang impian, jumlah tam\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "body-size",
+      "message": "Running text at 14.08px (16px or more reads better)",
+      "sample": [
+        "<p> \"Destination wedding di luar Jabodetabek dan Bandun\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "body-size",
+      "message": "Running text at 12.8px (16px or more reads better)",
+      "sample": [
+        "<p> \"Asumsi kasar harga Jabodetabek 2026. Rincian akura\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "body-size",
+      "message": "Running text at 14.4px (16px or more reads better)",
+      "sample": [
+        "<p> \"Perencana dan koordinator pernikahan untuk pasanga\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "gradient",
+      "message": "8 gradient backgrounds",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "glass",
+      "message": "1 blurred glass panels",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "too-many-colours",
+      "message": "11 distinct chromatic colours",
+      "sample": [
+        "#2e7d4f",
+        "#22372f",
+        "#2f4a3f",
+        "#a8604f",
+        "#5e9a6f",
+        "#f3ebdf",
+        "#334d40",
+        "#e7d9c5"
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "icon-card-row",
+      "message": "1 rows of identical icon cards",
+      "sample": [
+        "<div> \"Hari-HSudah punya vendor, butuh tim yang memegang \""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "screenshots-capped",
+      "message": "Page is 15905px tall; only the first 14 screens were captured",
+      "where": [
+        "mobile"
+      ]
+    }
+  ]
+}

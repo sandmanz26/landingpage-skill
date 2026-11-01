@@ -1,7 +1,7 @@
 # Handoff
 
 Read this first if you are a new session, a different model or a different AI tool picking up
-this project. It is kept up to date at every milestone. Last updated: **2026-11-01** (owner scores for batch-003, smoothness measurement, style cards and the library index the skill reads).
+this project. It is kept up to date at every milestone. Last updated: **2026-11-01** (first with/without-skill comparison: wedding organizer).
 
 ## 1. Goal
 
@@ -119,6 +119,18 @@ conflicts with the brand, needs what the client lacks, conflicts with another re
 a forbidden tag; never copy `doNotCopy`. Owner's request: "every time you save, read its style so
 it can adapt or be asked to the user" (interpreted as: every stored reference).
 
+First comparison, with vs without the skill (2026-11-01): one prompt ("Buatkan sebuah landing
+page untuk wedding organizer"), two pages, a blind A/B artifact for the owner
+(https://claude.ai/artifact/SxMfddTJtPUESjwoPxi7FG; A = no skill, B = with skill, random).
+Files and the full skill run in `examples/wedding-organizer-compare/`. Measured: no-skill 4 inspector
+FAIL and invented proof (320+ weddings, 4.9/5, named testimonials); with-skill 0 FAIL, no invented
+proof, story built on research (2024-2025 WO fraud case → trust and money flow). Cost: no-skill
+about 5 min / 83k tokens; with-skill about 40 min, subagents 148k tokens plus the main session
+(not measured). The no-skill page has more features and an illustration and may well win on
+first-glance visual; the owner's verdict is pending. Inspector bugs fixed in this run: smooth
+scroll measured mid-scroll; elements measured under a sticky bar (now centred first); the style
+tag hung the no-JavaScript check.
+
 Capture fixes from batch-003: `lib/browser.mjs` `gotoStable` retries server error pages (a 502
 "upstream request failed" had been captured as Swehl's desktop) and every failed load is reported
 (`page-did-not-load`; set `DD_LOAD_TRIES` to change the 3 tries); `dismissOverlays` closes
@@ -193,9 +205,9 @@ Evaluation speed (2026-10-31, owner asked "how do we make evaluation faster"):
 
 ## 6. Next steps, in order
 
-1. **Prove the skill beats no skill** (not yet shown): a blind mini eval, 3–5 briefs × (Claude
-   without the skill, with taste-skill, with this skill), judged by the jury and 2+ designers who
-   do not know which is which. Until then, "better" is a claim. Needs real or Excel briefs.
+1. **Prove the skill beats no skill** (not yet shown): one example exists (wedding organizer,
+   owner's verdict pending). Next: 3–5 briefs × (no skill, taste-skill, this skill), judged by the
+   jury and 2+ designers who do not know which is which. Needs real or Excel briefs.
 2. Owner's reply on the scoring proposal (rank within a batch + anchors) and on the conflict between
    "ship 9.5" for Resolute and the approved "Never" rule.
 3. Batch-004: capture, then jurors with `rubric/jury-brief.md` (digest first); record time and

@@ -1,0 +1,19 @@
+2026-11-01T16:28:07.840Z	init mode=create effort=quick gates=autopilot
+2026-11-01T16:29:12.358Z	approve brief by=claude note=autopilot: demo comparison requested by the owner; no client, business facts are [SAMPLE]
+2026-11-01T16:29:12.455Z	done brief
+2026-11-01T16:29:35.013Z	done research
+2026-11-01T16:30:06.391Z	done strategy
+2026-11-01T16:32:31.099Z	approve strategy by=claude note=autopilot: roast accepted (15 of 16 in full or in part), strategy v2
+2026-11-01T16:32:31.156Z	done roast
+2026-11-01T16:32:52.868Z	decision by=claude direction B (page is the object): the object is the WO's rundown sheet, not the invitation card (the category cliché). A rejected: needs photography, none exists. C (colour chapters) not chosen whole; its idea comes in through the library: Swehl ref-0007 colour chapters (flat, one ink) adapted to B's two-colour print job: paper + ink + one accent, chapter grounds as paper tints. Future ref-0006 / team rule: price next to the main action. Do not copy: Swehl's pop-up on load and yellow-on-tan contrast; Maxima's motion without reduced-motion path. Autopilot: adapted without asking; in a guided run the user would be asked whether to add loud chapter colours (owner taste) or keep the two-ink print look.
+2026-11-01T16:32:52.930Z	approve direction by=claude note=autopilot: B, the rundown sheet as the object
+2026-11-01T16:32:52.989Z	done direction
+2026-11-01T16:34:05.639Z	skip skeleton reason=quick effort; single page with a fixed storyline from strategy v2
+2026-11-01T16:34:05.707Z	done spec
+2026-11-01T16:34:05.768Z	done copy
+2026-11-01T16:35:45.887Z	done build
+2026-11-01T16:50:09.807Z	done gate
+2026-11-01T16:54:15.174Z	done look
+2026-11-01T16:54:38.464Z	approve final by=claude note=autopilot: delivered for the owner's blind comparison
+2026-11-01T16:54:38.522Z	done deliver
+2026-11-01T16:54:38.583Z	skip learn reason=quick effort demo; the owner's blind verdict is the lesson

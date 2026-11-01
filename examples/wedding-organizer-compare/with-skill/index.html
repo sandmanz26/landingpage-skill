@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jalinan Wedding Organizer · Jakarta</title>
+<meta name="description" content="Wedding organizer di Jakarta. Hari H berjalan, kalian tinggal hadir. Vendor dibayar langsung, fee kami bertahap, pelunasan setelah acara.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,800&family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;600&display=swap">
+<style>
+  /* The WO's rundown sheet is the object: paper on a venue-green ground, ballpoint ink, one highlighter. */
+  :root {
+    --ground: #20352d;
+    --ground-2: #2a4439;
+    --paper: #fafaf6;
+    --paper-2: #f0efe8;
+    --ink: #1b2340;
+    --ink-2: #4a5068;
+    --mark: #f2dd6e;
+    --on-ground: #f4f3ec;
+    --on-ground-2: #c9d3cc;
+    --display: "Archivo", "Arial Narrow", Arial, sans-serif;
+    --text: "Public Sans", "Segoe UI", Arial, sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+    --gutter: max(20px, 5vw);
+    --max: 1120px;
+    color-scheme: light;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 400 17px/1.6 var(--text); }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--mark); outline-offset: 3px; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding-inline: var(--gutter); }
+  h1, h2, h3 { font-family: var(--display); font-stretch: 72%; font-weight: 800; line-height: 1.02; letter-spacing: -0.01em; margin: 0; text-wrap: balance; }
+  h2 { font-size: clamp(2rem, 4.4vw, 3.2rem); }
+  h3 { font-size: 1.35rem; font-stretch: 85%; }
+  p { margin: 0; max-width: 62ch; }
+  .label { font: 500 0.78rem/1.3 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; }
+  .mark { background: linear-gradient(var(--mark), var(--mark)) no-repeat 0 60% / 100% 70%; padding-inline: 0.15em; }
+
+  /* Buttons: the highlighter is the action colour */
+  .btn { display: inline-flex; align-items: center; gap: 0.5em; min-height: 48px; padding: 0.8em 1.3em; font: 600 1rem/1.2 var(--text); text-decoration: none; border-radius: 2px; border: 2px solid transparent; }
+  .btn-main { background: var(--mark); color: var(--ink); }
+  .btn-main:hover { background: #f7e78f; }
+  .btn-ghost { border-color: currentColor; color: inherit; }
+  .btn svg { width: 1.2em; height: 1.2em; flex: none; }
+
+  /* Header */
+  .top { background: var(--ground); color: var(--on-ground); position: sticky; top: env(safe-area-inset-top, 0px); z-index: 30; border-bottom: 1px solid #2f4b40; }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 68px; }
+  .logo { font: 800 1.5rem/1 var(--display); font-stretch: 80%; text-decoration: none; letter-spacing: 0.01em; }
+  .logo span { font: 500 0.7rem/1 var(--mono); letter-spacing: 0.12em; margin-left: 0.5em; color: var(--on-ground-2); }
+  .nav { display: flex; gap: 22px; align-items: center; }
+  .nav a { text-decoration: none; font-size: 1rem; color: var(--on-ground-2); }
+  .nav a:hover { color: var(--on-ground); }
+  .nav .btn { min-height: 40px; padding: 0.55em 1em; font-size: 0.92rem; color: var(--ink); }
+  @media (max-width: 860px) { .nav a:not(.btn) { display: none; } }
+  @media (max-width: 720px) { .logo span, .nav .btn { display: none; } .top .wrap { min-height: 56px; } }
+
+  /* Hero: text left, the rundown sheet right */
+  .hero { background: var(--ground); color: var(--on-ground); padding-block: 48px 88px; overflow: hidden; }
+  .hero .wrap { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); gap: 48px; align-items: center; }
+  .hero h1 { font-size: clamp(2.7rem, 5.4vw, 4.6rem); margin-block: 14px 22px; }
+  .hero .sub { color: var(--on-ground-2); font-size: 1.12rem; }
+  .hero .sub strong { color: var(--on-ground); font-weight: 600; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+  .price-line { margin-top: 14px; font: 400 0.95rem/1.5 var(--mono); color: var(--on-ground-2); }
+  .price-line b { color: var(--on-ground); font-weight: 500; }
+
+  .sheet { background: var(--paper); color: var(--ink); padding: 26px 26px 22px; position: relative; transform: rotate(1.2deg);
+    clip-path: polygon(0 0, calc(100% - 26px) 0, 100% 26px, 100% 100%, 0 100%); box-shadow: 0 30px 50px -30px rgba(0,0,0,.55); }
+  .sheet::before { content: ""; position: absolute; top: 0; right: 0; width: 26px; height: 26px; background: var(--paper-2); }
+  .sheet-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; border-bottom: 2px solid var(--ink); padding-bottom: 10px; }
+  .sheet-head h2 { font-size: 1.7rem; font-stretch: 70%; }
+  .sheet-meta { font: 400 0.8rem/1.5 var(--mono); color: var(--ink-2); margin-top: 8px; }
+  .stamp { font: 500 0.7rem/1 var(--mono); letter-spacing: 0.12em; border: 1.5px solid var(--ink-2); color: var(--ink-2); padding: 5px 7px; transform: rotate(-4deg); white-space: nowrap; }
+  .rundown { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 1rem; }
+  .rundown td { padding: 9px 6px; border-bottom: 1px dotted #9aa0b4; vertical-align: top; }
+  .rundown td:first-child { font: 500 0.92rem/1.6 var(--mono); width: 4.2em; padding-left: 0; }
+  .rundown td:last-child { font: 400 0.8rem/1.9 var(--mono); color: var(--ink-2); text-align: right; white-space: nowrap; padding-right: 0; }
+  .rundown .hl span { background: linear-gradient(var(--mark), var(--mark)) no-repeat 0 60% / 100% 75%; padding-inline: 0.15em; }
+  @media (prefers-reduced-motion: no-preference) {
+    .rundown .hl span { animation: stroke 0.55s ease-out both; }
+    .rundown .hl:nth-of-type(3) span { animation-delay: 0.5s; }
+    .rundown .hl:nth-of-type(4) span { animation-delay: 1.05s; }
+    @keyframes stroke { from { background-size: 0% 75%; } to { background-size: 100% 75%; } }
+  }
+
+  /* Sections on paper */
+  section { padding-block: 88px; }
+  .head { display: grid; gap: 14px; margin-bottom: 40px; }
+  .head .label { color: var(--ink-2); }
+
+  /* Price slips */
+  .slips { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  .slip { background: var(--paper-2); padding: 28px 24px 24px; display: grid; gap: 14px; align-content: start; position: relative;
+    background-image: radial-gradient(circle at 6px 0, var(--paper) 4px, transparent 4.5px); background-size: 16px 8px; background-repeat: repeat-x; }
+  .slip .when { font: 500 0.8rem/1 var(--mono); color: var(--ink-2); letter-spacing: 0.06em; }
+  .slip .amount { font: 800 2.4rem/1 var(--display); font-stretch: 75%; }
+  .slip .amount small { font: 400 0.9rem/1 var(--text); color: var(--ink-2); }
+  .slip ul { margin: 0; padding-left: 1.1em; display: grid; gap: 6px; font-size: 1rem; }
+  .slip.featured { background-color: var(--ink); color: var(--paper); }
+  .slip.featured .when { color: #c7cbe0; }
+  .slip.featured .amount small { color: #c7cbe0; }
+
+  .stages { margin-top: 28px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 2px solid var(--ink); }
+  .stage { padding: 16px 16px 0 0; display: grid; gap: 4px; }
+  .stage b { font: 800 1.9rem/1 var(--display); font-stretch: 75%; }
+  .stage span { font-size: 1rem; color: var(--ink-2); }
+  .extra { margin-top: 22px; font-size: 1.05rem; }
+
+  .flow { margin-top: 48px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 36px; align-items: start; }
+  .flow-lines { display: grid; gap: 12px; }
+  .flow-line { display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: center; padding: 14px 16px; border: 2px solid var(--ink); }
+  .flow-line .arrow { font: 500 0.95rem/1.3 var(--mono); white-space: nowrap; }
+  .flow-line .arrow i { font-style: normal; color: var(--ink-2); margin-inline: 0.35em; }
+  .flow-line p { font-size: 1rem; color: var(--ink-2); }
+  .flow-notes { display: grid; gap: 14px; }
+  .flow-notes .aside { font-size: 1rem; color: var(--ink-2); border-left: 3px solid var(--mark); padding-left: 14px; }
+  .after-price { margin-top: 36px; }
+
+  /* Checks: a checklist sheet on a tint */
+  .checks-band { background: var(--paper-2); }
+  .checklist { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 40px; }
+  .checklist li { display: grid; grid-template-columns: 26px 1fr; gap: 14px; padding: 18px 0; border-bottom: 1px dotted #9aa0b4; }
+  .box { width: 22px; height: 22px; border: 2px solid var(--ink); margin-top: 2px; position: relative; }
+  .box::after { content: ""; position: absolute; left: 5px; top: 0; width: 7px; height: 13px; border: solid var(--ink); border-width: 0 3px 3px 0; transform: rotate(45deg); }
+  .checklist b { display: block; font-weight: 600; }
+  .checklist span { color: var(--ink-2); font-size: 1rem; }
+
+  /* Preparation: the rundown again, by days */
+  .prep { width: 100%; border-collapse: collapse; }
+  .prep th, .prep td { text-align: left; padding: 16px 10px; border-bottom: 1px dotted #9aa0b4; vertical-align: top; }
+  .prep thead th { font: 500 0.75rem/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); border-bottom: 2px solid var(--ink); }
+  .prep td:first-child { font: 500 1rem/1.5 var(--mono); width: 8em; white-space: nowrap; padding-left: 0; }
+  .prep td:last-child { font: 400 0.82rem/1.9 var(--mono); color: var(--ink-2); text-align: right; white-space: nowrap; }
+  .prep .day td { background: var(--mark); }
+  .prep .pay { font: 500 0.75rem/1 var(--mono); color: var(--ink); border: 1.5px solid var(--ink); padding: 3px 6px; margin-left: 8px; white-space: nowrap; }
+  .family { margin-top: 22px; color: var(--ink-2); }
+
+  /* The day: on the ground colour */
+  .day-band { background: var(--ground); color: var(--on-ground); }
+  .day-band .head .label { color: var(--on-ground-2); }
+  .day-grid { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 48px; }
+  .day-facts { display: grid; gap: 22px; align-content: start; justify-items: start; }
+  .day-facts p { color: var(--on-ground-2); }
+  .day-facts strong { color: var(--on-ground); font-weight: 600; }
+  .ifthen { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+  .ifthen li { padding: 18px 0; border-bottom: 1px dotted #5f7a6d; display: grid; gap: 6px; }
+  .ifthen b { font: 500 0.95rem/1.4 var(--mono); color: var(--mark); }
+  .ifthen span { color: var(--on-ground-2); }
+  .adat { margin-top: 30px; color: var(--on-ground-2); }
+
+  /* FAQ */
+  .faq { display: grid; gap: 0; max-width: 820px; }
+  .faq details { border-bottom: 1px dotted #9aa0b4; }
+  .faq summary { cursor: pointer; padding: 20px 36px 20px 0; font: 600 1.08rem/1.4 var(--text); list-style: none; position: relative; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; position: absolute; right: 4px; top: 16px; font: 500 1.4rem/1 var(--mono); }
+  .faq details[open] summary::after { content: "–"; }
+  .faq details p { padding: 0 0 20px; color: var(--ink-2); }
+
+  /* Closing */
+  .close { background: var(--ink); color: var(--paper); }
+  .close h2 { max-width: 16ch; }
+  .steps { list-style: none; margin: 30px 0 34px; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; counter-reset: s; }
+  .steps li { counter-increment: s; display: grid; gap: 8px; color: #c7cbe0; border-top: 2px solid #c7cbe0; padding-top: 14px; }
+  .steps li::before { content: counter(s); font: 800 2rem/1 var(--display); font-stretch: 75%; color: var(--paper); }
+  .wa-text { margin-top: 16px; font: 400 0.95rem/1.5 var(--mono); color: #c7cbe0; }
+
+  footer { background: var(--ground); color: var(--on-ground-2); padding-block: 36px; font-size: 0.92rem; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 30px; }
+  footer b { color: var(--on-ground); font-weight: 600; }
+
+  /* Sticky WhatsApp on phones */
+  .sticky-wa { display: none; }
+  @media (max-width: 720px) {
+    body { padding-bottom: 76px; }
+    .sticky-wa { display: flex; transition: transform 0.25s ease-out; position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; padding: 12px max(16px, env(safe-area-inset-left, 0px)) calc(12px + env(safe-area-inset-bottom, 0px)); background: var(--ground); }
+    .sticky-wa .btn { width: 100%; justify-content: center; }
+    .sticky-wa.away { transform: translateY(110%); }
+  }
+
+  @media (max-width: 860px) {
+    .hero .wrap, .flow, .day-grid { grid-template-columns: 1fr; }
+    .hero { padding-block: 28px 64px; }
+    .sheet { transform: rotate(0.6deg); }
+    .slips, .steps { grid-template-columns: 1fr; }
+    .checklist { grid-template-columns: 1fr; }
+    section { padding-block: 64px; }
+  }
+  @media (max-width: 520px) {
+    .stages { grid-template-columns: 1fr; }
+    .stage { padding-right: 0; border-bottom: 1px dotted #9aa0b4; padding-bottom: 14px; }
+    .prep td:last-child { display: none; }
+    .prep thead th:last-child { display: none; }
+    .prep td:first-child { width: auto; white-space: normal; }
+    .rundown td:last-child { display: none; }
+    .sheet { padding: 22px 18px 18px; }
+  }
+</style>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="logo" href="#">Jalinan<span>WEDDING ORGANIZER</span></a>
+      <nav class="nav" aria-label="Utama">
+        <a href="#harga">Harga</a>
+        <a href="#cek">Cek kami</a>
+        <a href="#persiapan">Persiapan</a>
+        <a href="#tanya">Tanya jawab</a>
+        <a class="btn btn-main" href="https://wa.me/6281200000000?text=Halo%20Jalinan%2C%20kami%20mau%20cek%20tanggal" target="_blank" rel="noopener">Cek tanggal</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="wrap">
+        <div>
+          <p class="label">Wedding organizer · Jakarta</p>
+          <h1>Hari H berjalan. Kalian tinggal hadir.</h1>
+          <p class="sub">Kami menyusun rundown, memegang vendor, dan menjaga jam di hari H. <strong>Vendor kalian bayar langsung ke vendor.</strong> Fee kami dibayar bertahap, pelunasan setelah acara selesai.</p>
+          <div class="actions">
+            <a class="btn btn-main" href="https://wa.me/6281200000000?text=Halo%20Jalinan%2C%20kami%20mau%20cek%20tanggal" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>
+              Cek tanggal kosong via WhatsApp
+            </a>
+            <a class="btn btn-ghost" href="#harga">Lihat harga</a>
+          </div>
+          <p class="price-line"><b>Koordinasi hari H mulai Rp 9,5 juta.</b> Fee saja, tanpa biaya tambahan.</p>
+        </div>
+
+        <figure class="sheet" aria-label="Contoh rundown hari H">
+          <div class="sheet-head">
+            <h2>Rundown</h2>
+            <span class="stamp">CONTOH</span>
+          </div>
+          <p class="sheet-meta">Sabtu, 13 Juni 2026 · Akad &amp; resepsi · 400 tamu</p>
+          <table class="rundown">
+            <tbody>
+              <tr><td>06.00</td><td>Rias pengantin</td><td>Tia</td></tr>
+              <tr><td>08.30</td><td>Keluarga berkumpul</td><td>Dimas</td></tr>
+              <tr class="hl"><td>09.00</td><td><span>Akad nikah</span></td><td>Rani</td></tr>
+              <tr class="hl"><td>11.00</td><td><span>Resepsi dibuka</span></td><td>Rani</td></tr>
+              <tr><td>12.30</td><td>Foto keluarga besar</td><td>Dimas</td></tr>
+              <tr><td>14.00</td><td>Acara selesai</td><td>Rani</td></tr>
+              <tr><td>15.00</td><td>Barang dikemas dan dicek</td><td>Tim</td></tr>
+            </tbody>
+          </table>
+        </figure>
+      </div>
+    </div>
+
+    <section id="harga">
+      <div class="wrap">
+        <div class="head">
+          <p class="label">Harga</p>
+          <h2>Harga, dan ke mana uang kalian pergi</h2>
+          <p>Harga di bawah adalah fee kerja kami. Vendor (venue, katering, rias, dekorasi, dokumentasi) kalian bayar sendiri, langsung ke mereka.</p>
+        </div>
+        <div class="slips">
+          <article class="slip">
+            <span class="when">MULAI H-30</span>
+            <h3>Hari H</h3>
+            <p class="amount">Rp 9,5 jt <small>fee</small></p>
+            <ul><li>Rundown dan technical meeting</li><li>Gladi resik di venue</li><li>Koordinasi penuh di hari H</li><li>6 kru</li></ul>
+          </article>
+          <article class="slip featured">
+            <span class="when">MULAI H-180</span>
+            <h3>Pendampingan</h3>
+            <p class="amount">Rp 24 jt <small>fee</small></p>
+            <ul><li>Semua di paket Hari H</li><li>Rencana anggaran</li><li>Pilih vendor, cek setiap kontrak sebelum ditandatangani</li><li>8 kru</li></ul>
+          </article>
+          <article class="slip">
+            <span class="when">MULAI H-365</span>
+            <h3>Penuh</h3>
+            <p class="amount">Rp 45 jt <small>fee</small></p>
+            <ul><li>Semua di Pendampingan</li><li>Cari dan survei venue</li><li>Susun upacara dan adat</li><li>10 kru</li></ul>
+          </article>
+        </div>
+
+        <div class="stages" aria-label="Tahap pembayaran fee">
+          <div class="stage"><b>30%</b><span>saat tanda tangan kontrak</span></div>
+          <div class="stage"><b>40%</b><span>di technical meeting, H-30</span></div>
+          <div class="stage"><b>30%</b><span>pelunasan H+1, setelah acara selesai</span></div>
+        </div>
+        <p class="extra"><span class="mark">Biaya tambahan: tidak ada.</span> Makan, parkir, dan transport kru sudah termasuk.</p>
+        <p class="extra">Kalau batal, tahap yang sudah dibayar menutup pekerjaan yang sudah dikerjakan. Tahap berikutnya tidak ditagih.</p>
+
+        <div class="flow">
+          <div class="flow-lines">
+            <div class="flow-line"><span class="arrow">Kalian<i>→</i>vendor</span><p>Langsung, dengan kontrak atas nama kalian.</p></div>
+            <div class="flow-line"><span class="arrow">Kalian<i>→</i>Jalinan</span><p>Hanya fee kerja kami, dalam tiga tahap.</p></div>
+          </div>
+          <div class="flow-notes">
+            <p>Kalian tidak mengurus vendor sendirian. Kami cek setiap invoice vendor terhadap kontraknya, mengingatkan jatuh tempo, dan menemani pelunasan kalau kalian mau.</p>
+            <p class="aside">Paket all-in memang cukup sekali transfer. Tapi satu transfer juga berarti satu titik risiko.</p>
+          </div>
+        </div>
+        <div class="after-price">
+          <a class="btn btn-main" href="https://wa.me/6281200000000?text=Halo%20Jalinan%2C%20kami%20mau%20tanya%20tanggal%20dan%20paket" target="_blank" rel="noopener">Tanya tanggal dan paket via WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="cek" class="checks-band">
+      <div class="wrap">
+        <div class="head">
+          <p class="label">Sebelum membayar apa pun</p>
+          <h2>Takut ketemu WO bodong? Wajar. Cek kami dulu.</h2>
+        </div>
+        <ul class="checklist">
+          <li><span class="box" aria-hidden="true"></span><div><b>Kantor yang bisa didatangi</b><span>Jl. Wijaya I no. 12, Kebayoran Baru. Datang saja Senin–Sabtu, 10.00–18.00.</span></div></li>
+          <li><span class="box" aria-hidden="true"></span><div><b>NIB dan akta usaha</b><span>Kami tunjukkan aslinya saat konsultasi. Silakan difoto.</span></div></li>
+          <li><span class="box" aria-hidden="true"></span><div><b>Daftar vendor beserta nomor teleponnya</b><span>Hubungi mereka sendiri dan tanyakan pengalaman bekerja dengan kami.</span></div></li>
+          <li><span class="box" aria-hidden="true"></span><div><b>Contoh kontrak</b><span>Untuk dibaca sebelum kalian memutuskan, termasuk aturan kalau batal.</span></div></li>
+          <li><span class="box" aria-hidden="true"></span><div><b>Tiga pasangan terakhir kami</b><span>Nomor mereka kami berikan dengan izin. Tanyakan apa saja.</span></div></li>
+          <li><span class="box" aria-hidden="true"></span><div><b>Satu koordinator bernama</b><span>Orang yang sama dari pertemuan pertama sampai H+1.</span></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="persiapan">
+      <div class="wrap">
+        <div class="head">
+          <p class="label">Persiapan</p>
+          <h2>Dari H-365 sampai H+1</h2>
+        </div>
+        <table class="prep">
+          <thead><tr><th scope="col">Kapan</th><th scope="col">Yang dikerjakan</th><th scope="col">Paket</th></tr></thead>
+          <tbody>
+            <tr><td>H-365</td><td>Cari dan survei venue, susun anggaran awal</td><td>Penuh</td></tr>
+            <tr><td>H-180</td><td>Pilih vendor; kami cek setiap kontrak sebelum kalian tanda tangan</td><td>Pendampingan</td></tr>
+            <tr><td>H-90</td><td>Draf rundown sesuai upacara dan adat kalian</td><td>Semua</td></tr>
+            <tr><td>H-30</td><td>Technical meeting dengan semua vendor <span class="pay">Tahap 2</span></td><td>Semua</td></tr>
+            <tr><td>H-7</td><td>Gladi resik di venue</td><td>Semua</td></tr>
+            <tr class="day"><td>Hari H</td><td>Kalian tinggal hadir</td><td>Semua</td></tr>
+            <tr><td>H+1</td><td>Barang titipan dikembalikan, pelunasan <span class="pay">Tahap 3</span></td><td>Semua</td></tr>
+          </tbody>
+        </table>
+        <p class="family">Jadwal ini kami kirim sebagai satu tautan. Bagikan ke orang tua dan keluarga, supaya semua melihat jadwal yang sama.</p>
+      </div>
+    </section>
+
+    <section class="day-band">
+      <div class="wrap">
+        <div class="head">
+          <p class="label">Hari H</p>
+          <h2>Satu hari, satu pernikahan</h2>
+        </div>
+        <div class="day-grid">
+          <div class="day-facts">
+            <p><strong>Maksimal enam pernikahan per bulan,</strong> tidak pernah dua di hari yang sama. Koordinator kalian tidak berangkat dari acara lain.</p>
+            <p><strong>Kru menyesuaikan tamu:</strong> 6 orang untuk sampai 300 tamu, 8 untuk 600, 10 untuk 1.000.</p>
+            <a class="btn btn-main" href="https://wa.me/6281200000000?text=Halo%20Jalinan%2C%20kami%20mau%20cek%20tanggal" target="_blank" rel="noopener">Cek apakah tanggal kalian masih kosong</a>
+          </div>
+          <ul class="ifthen">
+            <li><b>Kalau vendor terlambat</b><span>Kami punya cadangan MC, rias, dan dokumentasi, dan jam yang molor kami serap di rundown.</span></li>
+            <li><b>Kalau hujan di acara outdoor</b><span>Rencana B sudah disepakati di technical meeting, bukan diputuskan di hari H.</span></li>
+            <li><b>Kalau acara molor 30 menit</b><span>Sesi foto dan hiburan yang kami geser. Akad dan makan tidak.</span></li>
+            <li><b>Kalau tamu lebih banyak</b><span>Katering sudah kami minta menyiapkan cadangan 10%.</span></li>
+          </ul>
+        </div>
+        <p class="adat">Rundown kami susun sesuai upacara kalian: akad, pemberkatan, sangjit, tea pai, adat Jawa, Sunda, Batak, Minang, atau Betawi.</p>
+      </div>
+    </section>
+
+    <section id="tanya">
+      <div class="wrap">
+        <div class="head">
+          <p class="label">Tanya jawab</p>
+          <h2>Pertanyaan yang sebaiknya kalian tanyakan ke WO mana pun</h2>
+        </div>
+        <div class="faq">
+          <details><summary>Hanya koordinasi, atau juga dekorasi?</summary><p>Kami mengatur dan mengoordinasi. Dekorasi, katering, rias, dan dokumentasi berasal dari vendor yang kalian pilih, dan kami bantu memilihnya.</p></details>
+          <details><summary>Apakah sudah kenal venue kami?</summary><p>Kalau belum, survei venue termasuk di semua paket.</p></details>
+          <details><summary>Bisa menjaga anggaran kami?</summary><p>Di Pendampingan dan Penuh kami susun rencana anggaran, lalu cek setiap invoice vendor terhadap rencana itu.</p></details>
+          <details><summary>Berapa pernikahan yang kalian tangani sebulan?</summary><p>Maksimal enam, satu per hari.</p></details>
+          <details open><summary>Kenapa pelunasan setelah acara?</summary><p>Karena pekerjaan kami baru selesai setelah acara kalian selesai.</p></details>
+          <details><summary>Bisa di luar Jakarta?</summary><p>Jabodetabek tanpa biaya transport. Untuk luar kota, biayanya kami hitung terbuka sebelum kontrak.</p></details>
+          <details open><summary>Bagaimana kalau kami batal?</summary><p>Tahap yang sudah dibayar menutup pekerjaan yang sudah dikerjakan. Aturan lengkapnya ada di contoh kontrak, yang bisa kalian baca sebelum memutuskan.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="close">
+      <div class="wrap">
+        <h2>Kirim tanggal dan perkiraan jumlah tamu</h2>
+        <ol class="steps">
+          <li>Kami jawab ketersediaan tanggal dalam satu hari kerja.</li>
+          <li>Konsultasi 45 menit, online atau di kantor, gratis.</li>
+          <li>Contoh kontrak dan rincian biaya kami kirim sebelum kalian memutuskan.</li>
+        </ol>
+        <a class="btn btn-main" href="https://wa.me/6281200000000?text=Halo%20Jalinan%2C%20tanggal%20kami%3A%20...%20perkiraan%20tamu%3A%20..." target="_blank" rel="noopener">Cek tanggal via WhatsApp</a>
+        <p class="wa-text">WhatsApp 0812-0000-0000</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span><b>Jalinan Wedding Organizer</b> · Jl. Wijaya I no. 12, Kebayoran Baru, Jakarta Selatan</span>
+      <span>Senin–Sabtu, 10.00–18.00</span>
+    </div>
+  </footer>
+
+  <div class="sticky-wa">
+    <a class="btn btn-main" href="https://wa.me/6281200000000?text=Halo%20Jalinan%2C%20kami%20mau%20cek%20tanggal" target="_blank" rel="noopener">Cek tanggal via WhatsApp</a>
+  </div>
+  <script>
+    // The phone's sticky button waits until the hero's own button has scrolled away.
+    (function () {
+      var bar = document.querySelector('.sticky-wa');
+      var heroCta = document.querySelector('.hero .btn-main');
+      if (!bar || !heroCta || !('IntersectionObserver' in window)) return;
+      new IntersectionObserver(function (entries) {
+        bar.classList.toggle('away', entries[0].isIntersecting);
+      }).observe(heroCta);
+    })();
+  </script>
+</body>
+</html>

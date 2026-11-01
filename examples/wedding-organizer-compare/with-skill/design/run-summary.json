@@ -1,0 +1,30 @@
+{
+  "mode": "create",
+  "effort": "quick",
+  "gates": "autopilot",
+  "created": "2026-11-01T16:28:07.836Z",
+  "delivered": "2026-11-01T16:54:38.522Z",
+  "approvals": {
+    "brief": {
+      "by": "claude",
+      "at": "2026-11-01T16:29:12.357Z",
+      "note": "autopilot: demo comparison requested by the owner; no client, business facts are [SAMPLE]"
+    },
+    "strategy": {
+      "by": "claude",
+      "at": "2026-11-01T16:32:31.098Z",
+      "note": "autopilot: roast accepted (15 of 16 in full or in part), strategy v2"
+    },
+    "direction": {
+      "by": "claude",
+      "at": "2026-11-01T16:32:52.928Z",
+      "note": "autopilot: B, the rundown sheet as the object"
+    },
+    "final": {
+      "by": "claude",
+      "at": "2026-11-01T16:54:38.463Z",
+      "note": "autopilot: delivered for the owner's blind comparison"
+    }
+  },
+  "history": []
+}

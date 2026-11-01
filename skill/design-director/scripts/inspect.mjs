@@ -82,6 +82,10 @@ async function open(ctxOpts) {
     } catch {}
   });
   const load = await gotoStable(page, url);
+  // Pages with scroll-behavior: smooth would still be gliding when a screenshot is taken after
+  // scrollTo or scrollIntoView, so contrast and page screenshots would measure the wrong place.
+  // (Skipped without JavaScript: the style tag is injected by script and would wait forever.)
+  if (ctxOpts.javaScriptEnabled !== false) await page.addStyleTag({ content: 'html, body { scroll-behavior: auto !important; }' }).catch(() => {});
   if (load.failed)
     loadFailures.push(ctxOpts.reducedMotion ? 'reduced motion' : ctxOpts.javaScriptEnabled === false ? 'no JavaScript' : `${ctxOpts.viewport ? ctxOpts.viewport.width : '?'}px`);
   await page.waitForTimeout(1200);
@@ -138,7 +142,9 @@ async function verifyContrast(page, candidates) {
   for (const c of candidates) {
     const loc = page.locator(`[data-dd-lc="${c.id}"]`).first();
     try {
-      await loc.scrollIntoViewIfNeeded({ timeout: 2000 });
+      // Centre it: at the screen's edge a sticky bar (a WhatsApp button, a cookie banner) can sit
+      // on top of it and its pixels would be measured instead.
+      await loc.evaluate((el) => el.scrollIntoView({ block: 'center', behavior: 'instant' }), null, { timeout: 2000 });
       await page.waitForTimeout(150);
       const box = await loc.boundingBox();
       if (!box || box.width < 2 || box.height < 2) throw new Error('no box');
