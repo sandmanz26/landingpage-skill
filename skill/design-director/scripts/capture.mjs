@@ -4,6 +4,7 @@
 //   inspect.mjs  → report.json, folds and page screenshots
 //   evidence.mjs → contact sheets, motion sheet, evidence.json, page-text.txt
 //   digest.mjs   → digest.md, the one short file each juror reads first
+//   style.mjs    → style.json, the style card stored with the reference
 //
 //   node capture.mjs <list.txt | list.csv> [--out data/references/captures]
 //        [--jobs 3] [--idle 15] [--skip-existing]
@@ -68,6 +69,7 @@ async function worker() {
     const inspect = await run('inspect.mjs', [ref.url, '--out', dir, '--quiet']);
     const evidence = await run('evidence.mjs', [ref.url, '--dir', dir, '--idle', String(args.idle ?? 15)]);
     await run('digest.mjs', [dir]);
+    await run('style.mjs', [dir]);
     const flags = evidence.out.split('\n').filter((l) => l.trim().startsWith('FLAG')).map((l) => l.trim().slice(5));
     const ok = ['report.json', 'evidence.json', 'digest.md'].every((f) => fs.existsSync(path.join(dir, f)));
     results.push({ ...ref, ok, inspectSeconds: inspect.seconds, evidenceSeconds: evidence.seconds, flags, error: ok ? null : (inspect.out + evidence.out).slice(-600) });

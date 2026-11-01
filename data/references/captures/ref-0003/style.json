@@ -1,0 +1,99 @@
+{
+  "url": "https://scotchpos.com/",
+  "readAt": "2026-11-01T16:08:48.064Z",
+  "tags": [
+    "gradient-heavy",
+    "shadowed",
+    "restrained-colour",
+    "dark",
+    "pill-shapes"
+  ],
+  "palette": {
+    "chromatic": 1,
+    "text": [
+      "#ffffff",
+      "#808080",
+      "#000000",
+      "#a5a5a5",
+      "#666666",
+      "#f54900"
+    ],
+    "backgrounds": [
+      "#000000",
+      "#1a1a1a",
+      "#ffffff",
+      "#f54900",
+      "#141413",
+      "#292929",
+      "#3e3e3e",
+      "#111111"
+    ],
+    "gradients": 5,
+    "shadows": 11,
+    "blur": 0
+  },
+  "type": {
+    "families": [
+      {
+        "family": "Inter",
+        "share": 73
+      },
+      {
+        "family": "mori",
+        "share": 27
+      }
+    ],
+    "sizes": {
+      "desktop": [
+        54,
+        42,
+        34,
+        18,
+        16,
+        15,
+        14,
+        13
+      ],
+      "mobile": [
+        36,
+        28,
+        24,
+        16,
+        15,
+        14,
+        13
+      ]
+    },
+    "display": 54,
+    "body": 16,
+    "ratio": 3.4
+  },
+  "shape": {
+    "radii": [
+      "12px",
+      "6px",
+      "9999px",
+      "16px",
+      "8px",
+      "5px",
+      "10px"
+    ]
+  },
+  "spacing": {
+    "distinct": 44,
+    "offScale": 20
+  },
+  "motion": null,
+  "layout": {
+    "pageHeight": 8083,
+    "screens": 9
+  },
+  "doNotCopy": [
+    "contrast: 4 text colour pairs below WCAG AA",
+    "img-alt: 2 images without an alt attribute",
+    "img-broken: 1 images failed to load",
+    "contrast: 3 text colour pairs below WCAG AA",
+    "img-alt: 1 images without an alt attribute",
+    "tap-target: 12 controls smaller than 24x24px on a phone"
+  ]
+}

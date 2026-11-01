@@ -248,32 +248,40 @@
   },
   "smoothness": {
     "url": "https://maximatherapy.com/",
-    "time": "2026-11-01T15:52:03.428Z",
+    "time": "2026-11-01T16:01:09.915Z",
     "page": {
       "loadFailed": false,
       "cpuSlowdown": 1,
-      "scrolledMs": 12749,
-      "frames": 443,
-      "fps": 34.7,
+      "scrolledMs": 12397,
+      "frames": 425,
+      "fps": 34.3,
       "medianMs": 16.7,
-      "p95Ms": 83.3,
-      "maxMs": 383,
-      "longFrames": 34,
-      "droppedShare": 11
+      "p95Ms": 100,
+      "maxMs": 250,
+      "longFrames": 37,
+      "droppedShare": 13,
+      "longTasks": 36,
+      "longTaskMs": 2601,
+      "scriptBlockedShare": 21,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
     },
     "baseline": {
       "loadFailed": false,
       "cpuSlowdown": 1,
-      "scrolledMs": 1727,
-      "frames": 103,
-      "fps": 59.6,
+      "scrolledMs": 1732,
+      "frames": 104,
+      "fps": 60,
       "medianMs": 16.7,
-      "p95Ms": 16.8,
+      "p95Ms": 16.7,
       "maxMs": 17,
       "longFrames": 0,
-      "droppedShare": 0
+      "droppedShare": 0,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
     },
-    "longFramesOverBaseline": 34,
-    "p95OverBaseline": 66.5
+    "longFramesOverBaseline": 37,
+    "p95OverBaseline": 83.3
   }
 }

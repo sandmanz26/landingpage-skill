@@ -1,30 +1,38 @@
 {
   "url": "https://www.theresolute.ai/",
-  "time": "2026-11-01T15:56:19.419Z",
+  "time": "2026-11-01T16:05:24.281Z",
   "page": {
     "loadFailed": false,
     "cpuSlowdown": 1,
-    "scrolledMs": 126196,
-    "frames": 236,
+    "scrolledMs": 126489,
+    "frames": 237,
     "fps": 1.9,
-    "medianMs": 533.2,
-    "p95Ms": 750,
-    "maxMs": 917,
-    "longFrames": 236,
-    "droppedShare": 100
+    "medianMs": 533.3,
+    "p95Ms": 766.7,
+    "maxMs": 1000,
+    "longFrames": 237,
+    "droppedShare": 100,
+    "longTasks": 237,
+    "longTaskMs": 102224,
+    "scriptBlockedShare": 81,
+    "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
   },
   "baseline": {
     "loadFailed": false,
     "cpuSlowdown": 1,
-    "scrolledMs": 1737,
+    "scrolledMs": 1732,
     "frames": 104,
-    "fps": 59.9,
+    "fps": 60,
     "medianMs": 16.7,
     "p95Ms": 16.7,
     "maxMs": 17,
     "longFrames": 0,
-    "droppedShare": 0
+    "droppedShare": 0,
+    "longTasks": 0,
+    "longTaskMs": 0,
+    "scriptBlockedShare": 0,
+    "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
   },
-  "longFramesOverBaseline": 236,
-  "p95OverBaseline": 733.3
+  "longFramesOverBaseline": 237,
+  "p95OverBaseline": 750
 }

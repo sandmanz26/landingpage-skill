@@ -22,6 +22,11 @@ page itself and against the other jurors before it shapes the skill.
    Wrong terms are corrected in the parsed fields (for example "wireframe" for a real product UI),
    while the original note stays as written.
 7. **Questions back** to the contributor: anything unclear, unfinished or contested.
-8. **Store** the entry; it enters the skill only through the next epoch and its eval.
+8. **Read its style and store it.** `style.mjs <capture>` writes the style card (palette, type,
+   shape, spacing, motion, plain-word tags, and what must not be copied); `capture.mjs` does this
+   for the whole batch. Then `library.mjs build` puts the judged entries with their style cards into
+   `library/index.json`, which the skill reads at the direction step to adapt each reference to
+   the client or ask the user where they conflict (`modes/create.md`). Taste rules derived from the
+   batch still need the owner's approval before they enter `team/taste.md`.
 
 Entries for a batch go to `data/references/batch-<n>.json` with a readable review beside it.

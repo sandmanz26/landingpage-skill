@@ -161,6 +161,30 @@ const check = (name, ok, detail = '') => {
   check('capture refuses a list without "<id> <url>" lines', r.status === 2 && /No "<id> <url>" lines/.test(r.stderr), r.stdout + r.stderr);
 }
 
+// style card from an inspector report (the slop fixture inspected above)
+{
+  const dir = path.join(tmp, 'slop');
+  const st = run('style.mjs', [dir]);
+  const card = fs.existsSync(path.join(dir, 'style.json')) ? JSON.parse(fs.readFileSync(path.join(dir, 'style.json'), 'utf8')) : null;
+  check('style reads a style card with tags and a do-not-copy list', !!card && Array.isArray(card.tags) && card.doNotCopy.some((d) => /contrast/.test(d)) && card.type.body > 0, st.stdout + st.stderr);
+}
+
+// library: build from judged batches with style cards, then find by business words
+{
+  const data = path.join(tmp, 'refs');
+  fs.mkdirSync(path.join(data, 'captures', 'ref-9'), { recursive: true });
+  fs.writeFileSync(path.join(data, 'batch-099.json'), JSON.stringify({ batch: 'batch-099', entries: [{ id: 'ref-9', site: 'demo', url: 'https://example.com', business: { type: 'clinic', what: 'dental clinic' }, jury_scores: { weighted: 6 }, library_candidates: ['Price beside the booking button'] }] }));
+  fs.writeFileSync(path.join(data, 'captures', 'ref-9', 'style.json'), JSON.stringify({ tags: ['flat'], type: { families: [{ family: 'Inter', share: 100 }], display: 64, body: 16, ratio: 4, sizes: { desktop: [64, 16] } }, palette: { chromatic: 2, gradients: 0, shadows: 0, backgrounds: ['#ffffff'] }, shape: { radii: ['8px'] }, motion: null, doNotCopy: ['contrast: low'] }));
+  const index = path.join(skill, 'library', 'index.json');
+  const saved = fs.existsSync(index) ? fs.readFileSync(index) : null;
+  const b = run('library.mjs', ['build', '--data', data]);
+  const f = run('library.mjs', ['find', 'dental', 'clinic', '--tags', 'flat']);
+  if (saved) fs.writeFileSync(index, saved);
+  else fs.rmSync(index, { force: true });
+  check('library builds an index with style cards', /1 references/.test(b.stdout), b.stdout + b.stderr);
+  check('library finds a reference with its style and do-not-copy list', /ref-9/.test(f.stdout) && /style: flat/.test(f.stdout) && /do not copy: contrast/.test(f.stdout), f.stdout + f.stderr);
+}
+
 // draw
 {
   const a = run('draw.mjs', ['--sector', 'health', '--seed', '7']);

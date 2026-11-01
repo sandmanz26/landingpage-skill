@@ -81,7 +81,33 @@ Apply the **competitor test**: put the nearest real competitor in the sentence. 
 the idea belongs to the category, not to this client; find another item from the inventory.
 
 When the team library holds references (`library/index.json`), attach to each card the 2–3 closest
-references with the role each one plays (see `rules/copyright.md`).
+references with the role each one plays (see `rules/copyright.md`), and read their style first.
+
+### Stored references: read the style, then adapt or ask
+
+1. `node <skill>/scripts/library.mjs find <business type and customer words> --tags <the
+   direction's tags>` lists the closest references with their style card (tags, type, palette,
+   shape, motion), patterns, verdicts and a do-not-copy list.
+2. Each reference plays one role (`rules/copyright.md`). Read its style card for that role only.
+3. **Adapt without asking** when the role is structure, rhythm, a pattern or a motion device:
+   rebuild it in the client's fonts and colours, and write the mapping in the spec ("Swehl's
+   colour chapters → the brand's four colours, one per pillar").
+4. **Ask the user** (one question, options, your recommendation first) when the reference's style
+   and the client pull apart in a way the client would notice:
+   - the role is visual (palette, type, shape) and the brand sets something else (the reference is
+     flat and many-coloured, the brand is two muted colours);
+   - the style needs what the client lacks (photography, an illustrator, a display-font licence);
+   - two chosen references disagree (`expressive-type` against `quiet-type`);
+   - the reference carries a tag the team rules forbid or condition (`ignores-reduced-motion`,
+     `pop-up-on-load`, `endless-motion`): say what you will change.
+
+   > Referensi Swehl memakai 6 warna datar, satu per bab; brand Anda dua warna kalem.
+   > A) Pakai struktur bab berwarna dengan dua warna brand + tint-nya (rekomendasi: cerita tetap
+   > terbaca, brand tetap utuh) · B) Tambah satu warna aksen hanya untuk bab · C) Tidak pakai bab berwarna
+
+   At quick effort and in autopilot, adapt to the brand without asking and log the choice.
+5. Never carry over anything in `doNotCopy`, under a veto, or from an entry marked `patternOnly`
+   (those are used through their tags only).
 
 Show the direction gate (SKILL.md). Recommend the direction whose device carries something only
 this client has, not the most familiar one. After the user chooses: write the choice (or the mix)
@@ -141,7 +167,7 @@ Direction: <id> (+ mix notes)
 | # | Customer asks | Answer | Proof | Composition | Content | Picture |
 
 ## References and their roles
-| Decision | From | Detail |
+| Decision | From | Their style (style card) | Mapped to this client / asked |
 
 ## Motion spec
 (motion/functions.md)

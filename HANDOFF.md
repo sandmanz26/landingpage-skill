@@ -1,7 +1,7 @@
 # Handoff
 
 Read this first if you are a new session, a different model or a different AI tool picking up
-this project. It is kept up to date at every milestone. Last updated: **2026-10-31** (batch-003 judged from evidence packs; digest added).
+this project. It is kept up to date at every milestone. Last updated: **2026-11-01** (owner scores for batch-003, smoothness measurement, style cards and the library index the skill reads).
 
 ## 1. Goal
 
@@ -90,6 +90,35 @@ full-screen sticky panels, CSS curtain reveal). Review: `data/references/batch-0
 questions to the owner at its end. Third batch in a row where the owner's motion claims need
 correction: the owner judges motion by feel, which nobody measures yet.
 
+Owner answers for batch-003 (2026-11-01): 9.5 visual and 9.5 ship for both sites (recorded in
+`jury/batch-003/owner.json`; blended: Swehl 7.9, Resolute 7.5, gaps 3.3 and 3.9; Resolute's vetoes
+stand). The owner meant the arched-top newsletter pop-up (they like the shape), section
+transitions while scrolling, and "smooth" = no stutter. The owner was told plainly that identical
+9.5/9.5 scores do not yet separate taste from client-readiness, that "ship 9.5" contradicts the
+evidence and the team's own approved "Never" rule, and that 11 references scored 8–9.5 carry little
+ranking information; proposed: rank within each batch plus anchors (5 = tidy agency site, 9+ = top
+5%). Waiting for their reply.
+
+Smoothness (2026-11-01): `lib/smooth.mjs`, `scripts/smooth.mjs`, also inside `evidence.mjs` and the
+digest. It measures frame times during a trackpad-like scroll against a plain page on the same
+machine, plus long tasks (script blocking) and the WebGL renderer. This container renders with
+SwiftShader (no GPU) on a slow CPU, so results rank pages by weight and are not what a laptop
+shows. Measured: Playfolly 57.7 fps / 0 long frames, Scotch 54.7/0, Swehl 47/4, Future 44.7/13,
+Maxima 3–18 38.5/22, Maxima 34.3/37, Replay 17.5/55, Resolute 1.9/237 with scripts blocking 81%
+(plain page about 59.6/0). The owner was asked to run `smooth.mjs` on their own machine (with and
+without `--cpu 4`).
+
+Library the skill reads (2026-11-01): before this, `modes/create.md` pointed at
+`library/index.json` but it did not exist, so judged references reached the skill only through
+`team/taste.md`. Now: `style.mjs` writes a style card per capture (palette, type, shape, spacing,
+motion, tags, doNotCopy); `library.mjs build` turns judged batches + style cards into
+`skill/design-director/library/index.json`; `library.mjs find <words> --tags ...` returns the
+closest references at the direction step; `modes/create.md` says: read the style, adapt
+structural roles to the brand without asking, ask the user when the reference's visual style
+conflicts with the brand, needs what the client lacks, conflicts with another reference or carries
+a forbidden tag; never copy `doNotCopy`. Owner's request: "every time you save, read its style so
+it can adapt or be asked to the user" (interpreted as: every stored reference).
+
 Capture fixes from batch-003: `lib/browser.mjs` `gotoStable` retries server error pages (a 502
 "upstream request failed" had been captured as Swehl's desktop) and every failed load is reported
 (`page-did-not-load`; set `DD_LOAD_TRIES` to change the 3 tries); `dismissOverlays` closes
@@ -164,22 +193,22 @@ Evaluation speed (2026-10-31, owner asked "how do we make evaluation faster"):
 
 ## 6. Next steps, in order
 
-1. Get the owner's two scores (visual, ship) for ref-0007 and ref-0008 and answers to the four
-   questions in `batch-003-review.md`; add them to `jury/batch-003/owner.json` and re-run
-   `jury.mjs score data/references/jury/batch-003`.
-2. Batch-004: capture, then jurors with `rubric/jury-brief.md` (digest first); record time and
+1. **Prove the skill beats no skill** (not yet shown): a blind mini eval, 3–5 briefs × (Claude
+   without the skill, with taste-skill, with this skill), judged by the jury and 2+ designers who
+   do not know which is which. Until then, "better" is a claim. Needs real or Excel briefs.
+2. Owner's reply on the scoring proposal (rank within a batch + anchors) and on the conflict between
+   "ship 9.5" for Resolute and the approved "Never" rule.
+3. Batch-004: capture, then jurors with `rubric/jury-brief.md` (digest first); record time and
    tokens against batch-003 (5.9 min, 649k tokens for 2 sites).
-3. Measure motion smoothness so "smooth" stops being a matter of feel on either side: frame
-   timing during scripted scroll (long frames, p95 frame time). Caveat: headless software rendering
-   in a container is slower than a real device, so compare sites with each other, not with a
-   threshold.
-4. Confirm with the owner that "ya tidak masalah" meant approving the six taste rules and two scores.
-5. Build the reference pipeline (v0.4): read the Excel, capture each URL (layout + motion), run the
+4. Smoothness on a real machine: the owner runs `smooth.mjs` locally; record the numbers beside the
+   container's.
+5. Confirm with the owner that "ya tidak masalah" meant approving the six taste rules and two scores.
+6. Build the reference pipeline (v0.4): read the Excel, capture each URL (layout + motion), run the
    jury, write library entries, derive directions/recipes/taste-rule proposals, version as an epoch.
-6. Mini eval: 5 briefs × (no skill, taste-skill, ours) judged by 2 designers + AI jury.
-7. Adopt taste-skill's open-collection image search (MIT, with attribution) to close the
+7. Mini eval (see 1): 5 briefs × (no skill, taste-skill, ours) judged by 2 designers + AI jury.
+8. Adopt taste-skill's open-collection image search (MIT, with attribution) to close the
    "no photos" gap seen in the Senyum Dental runs.
-8. Owner to provide: 4–6 business models for test briefs, real (anonymised) briefs with customer
+9. Owner to provide: 4–6 business models for test briefs, real (anonymised) briefs with customer
    voice (reviews, WhatsApp questions), 2–3 designers for voting, more references with notes.
 
 ## 7. Map

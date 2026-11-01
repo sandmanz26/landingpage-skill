@@ -1,0 +1,769 @@
+{
+  "builtAt": "2026-11-01T16:08:48.822Z",
+  "source": "data/references (batch-*.json, captures/*/style.json)",
+  "count": 8,
+  "entries": [
+    {
+      "id": "ref-0001",
+      "url": "https://playfolly.com",
+      "batch": "batch-001",
+      "review": "data/references/batch-001-review.md",
+      "business": "physical product, pre-order / waitlist: Modular backyard play fort for children (New Zealand). The page is a waitlist: limited production runs, email sign-up, no price, accessories marked \"Coming soon\".",
+      "actionThatPays": "\"Get updates\" email sign-up",
+      "scores": {
+        "ai": 5.7,
+        "ownerOverall": 8,
+        "ownerVisual": null,
+        "ownerShip": null,
+        "final": 6.8
+      },
+      "veto": "Hero sentence white on sand #edbf7a = 1.70:1; 0 of 3144 characters render without JavaScript.",
+      "patternOnly": false,
+      "patterns": [
+        "Palette = the product's colourways: flat section fields in the product finishes; a swatch picker recolours the product (opacity cross-fade 300ms) and tweens the page background (700ms). Function: the visitor starts owning a configuration.",
+        "Fit proof before the ask: a dimensioned drawing (mm) with a child silhouette + one plain sentence (\"small enough for real gardens\"), placed right before the sign-up.",
+        "Effort in human units: \"assembled by two adults in a morning\" instead of specs.",
+        "Two-tone stacked headline: line 1 full ink, line 2 same size in ~60% tone of the field colour, pairing aspiration with reassurance.",
+        "Name the fear as a heading (\"Dangerously safe.\") followed by a hard standard (ISO 8124-4)."
+      ],
+      "avoid": [
+        "Brand-name-only hero with no offer and no action",
+        "White or tinted text on mid-tone fields (1.14-1.70:1)",
+        "Transparent sticky logo colliding with body text",
+        "Promising a system (\"endless ways to play\") whose parts are all \"Coming soon\"",
+        "Vague CTA (\"Get updates\") on a high-ticket pre-order"
+      ],
+      "style": {
+        "tags": [
+          "glass",
+          "many-colours",
+          "pill-shapes",
+          "expressive-type",
+          "one-typeface"
+        ],
+        "type": {
+          "families": [
+            "Geograph"
+          ],
+          "display": 234,
+          "body": 16,
+          "ratio": 14.6,
+          "sizes": 6
+        },
+        "palette": {
+          "chromatic": 6,
+          "gradients": 0,
+          "shadows": 4,
+          "backgrounds": [
+            "#edbf7a",
+            "#f9ee16",
+            "#ffffff",
+            "#45528a",
+            "#888048"
+          ]
+        },
+        "radii": [
+          "3.35544e+07px",
+          "18px",
+          "32px"
+        ],
+        "motion": null,
+        "doNotCopy": [
+          "contrast: 4 text colour pairs below WCAG AA",
+          "tap-target: 7 controls smaller than 24x24px on a phone"
+        ]
+      }
+    },
+    {
+      "id": "ref-0002",
+      "url": "https://www.replay.ai/",
+      "batch": "batch-001",
+      "review": "data/references/batch-001-review.md",
+      "business": "B2B marketplace: Replay pays companies (20 to 250+ employees) to license their de-identified operating data (email, Jira, CRM, finance records) to frontier AI labs; upfront payment + revenue share, bands $10K to $1M+; main action \"Value my data\".",
+      "actionThatPays": "\"Value my data\"",
+      "scores": {
+        "ai": 6.6,
+        "ownerOverall": 8,
+        "ownerVisual": null,
+        "ownerShip": null,
+        "final": 7.3
+      },
+      "veto": "Readable copy at 2-8px and grey text down to 2.26:1; the price bands stay hidden on phones and under reduced motion.",
+      "patternOnly": false,
+      "patterns": [
+        "Objection ladder for a novel offer: sections in the order the buyer's fears arrive (what counts, how much, how much effort, is it safe, who buys it, do I qualify).",
+        "Self-locating price anchor: bands by a variable the buyer knows (\"20-50 employees: $10K-$100K\") so the CTA confirms a number rather than starting a sales call. Keep the numbers visible without animation.",
+        "Effort in minutes: \"Four steps. 120 minutes of your time.\"",
+        "Reframe against known alternatives: equity costs ownership, debt must be repaid, revenue takes time.",
+        "House-curve reveal: clip-path wipe 270-470ms, cubic-bezier(0.32,0.72,0,1), 55ms stagger; one curve for the whole site.",
+        "Three faces, three jobs: editorial serif display, neutral grotesk body, mono for labels."
+      ],
+      "avoid": [
+        "Micro-text at 2-8px as decoration",
+        "Key numbers that only appear through scroll animation",
+        "Unsourced hero stats (\"Millions paid\", \"Billions removed\")",
+        "No named proof on a high-risk ask",
+        "A 15s auto-advancing carousel with no pause"
+      ],
+      "style": {
+        "tags": [
+          "gradient-heavy",
+          "glass",
+          "many-colours",
+          "pill-shapes",
+          "sharp-corners",
+          "many-type-sizes",
+          "serif"
+        ],
+        "type": {
+          "families": [
+            "Geist",
+            "Geist Mono",
+            "stkBureauSerif"
+          ],
+          "display": 72,
+          "body": 16,
+          "ratio": 4.5,
+          "sizes": 14
+        },
+        "palette": {
+          "chromatic": 7,
+          "gradients": 8,
+          "shadows": 4,
+          "backgrounds": [
+            "#fcfcfc",
+            "#141518",
+            "#000000",
+            "#eae058",
+            "#c2edc8"
+          ]
+        },
+        "radii": [
+          "2.7px",
+          "2.1px",
+          "3.35544e+07px"
+        ],
+        "motion": null,
+        "doNotCopy": [
+          "tiny-text: Text at 8px",
+          "tiny-text: Text at 6.00011px",
+          "tiny-text: Text at 4.20016px",
+          "contrast: 7 text colour pairs below WCAG AA",
+          "hidden-content: 9 text elements were never visible during a full scroll (a reveal that never fires?)",
+          "tiny-text: Text at 6.8px",
+          "tiny-text: Text at 7px",
+          "tiny-text: Text at 2.88891px",
+          "tiny-text: Text at 2.02228px",
+          "contrast: 10 text colour pairs below WCAG AA",
+          "headline-lines: h1 runs to 4 lines",
+          "hidden-content: 8 text elements were never visible during a full scroll (a reveal that never fires?)",
+          "tiny-text: Text at 7.15802px",
+          "tiny-text: Text at 2.808px",
+          "tiny-text: Text at 2.301px",
+          "contrast: 9 text colour pairs below WCAG AA",
+          "tap-target: 12 controls smaller than 24x24px on a phone",
+          "reduced-motion: 9 text elements stay hidden when the visitor asks for reduced motion"
+        ]
+      }
+    },
+    {
+      "id": "ref-0003",
+      "url": "https://scotchpos.com/",
+      "batch": "batch-001",
+      "review": "data/references/batch-001-review.md",
+      "business": "B2B SaaS: POS and inventory system made only for liquor retailers (US); main action \"Book a demo\".",
+      "actionThatPays": "\"Book a demo\"",
+      "scores": {
+        "ai": 6.6,
+        "ownerOverall": 8,
+        "ownerVisual": null,
+        "ownerShip": null,
+        "final": 7.3
+      },
+      "veto": "No prefers-reduced-motion handling (scroll rotations to 50deg/250px, endless rotating waves, unpausable marquees); primary CTA white on #f54900 = 3.60:1.",
+      "patternOnly": false,
+      "patterns": [
+        "Product UI filled with the buyer's own world (real SKUs, stock flags) in the hero: proof of the vertical by detail.",
+        "Old way vs new way with the buyer's own artefacts (90s dialog, paper invoice, sticky note), animated away on scroll into the clean screen. Function: story.",
+        "Peer proof in the buyer's setting: named owners with store names, filmed in their shops, right after the hero.",
+        "Black + one hot accent used only for the action, links and alerts (darken the orange to ~#c23a00 for white text).",
+        "Scroll-scrubbed word reveal at 30-45px, words resting at 40% opacity."
+      ],
+      "avoid": [
+        "Dropping the main action for most of the scroll (non-sticky header, only \"Find out more\" links)",
+        "Claims without numbers (\"lowest fees guaranteed\")",
+        "Problem stated after the feature menu",
+        "Endless loops and big scroll motion with no reduced-motion fallback",
+        "The generic dark-SaaS hero kit (pill eyebrow, centred headline, two CTAs)"
+      ],
+      "style": {
+        "tags": [
+          "gradient-heavy",
+          "shadowed",
+          "restrained-colour",
+          "dark",
+          "pill-shapes"
+        ],
+        "type": {
+          "families": [
+            "Inter",
+            "mori"
+          ],
+          "display": 54,
+          "body": 16,
+          "ratio": 3.4,
+          "sizes": 8
+        },
+        "palette": {
+          "chromatic": 1,
+          "gradients": 5,
+          "shadows": 11,
+          "backgrounds": [
+            "#000000",
+            "#1a1a1a",
+            "#ffffff",
+            "#f54900",
+            "#141413"
+          ]
+        },
+        "radii": [
+          "12px",
+          "6px",
+          "9999px",
+          "16px"
+        ],
+        "motion": null,
+        "doNotCopy": [
+          "contrast: 4 text colour pairs below WCAG AA",
+          "img-alt: 2 images without an alt attribute",
+          "img-broken: 1 images failed to load",
+          "contrast: 3 text colour pairs below WCAG AA",
+          "img-alt: 1 images without an alt attribute",
+          "tap-target: 12 controls smaller than 24x24px on a phone"
+        ]
+      }
+    },
+    {
+      "id": "ref-0004",
+      "site": "maxima",
+      "url": "https://maximatherapy.com/",
+      "batch": "batch-002",
+      "review": "data/references/batch-002-review.md",
+      "business": "health / social services: Therapy programs for neurodivergent people of all ages (0-3, 3-18, 18-65, 65+). Main action 'Get started' (referral). Funding not stated; the wording (Regional Center, IFSP, IPP) points to California's state-funded system, so families probably pay nothing (inference).",
+      "actionThatPays": "'Get started' referral; 'Donate' is the loudest button",
+      "scores": {
+        "ai": 5,
+        "ownerOverall": 9,
+        "ownerVisual": null,
+        "ownerShip": null,
+        "final": 7
+      },
+      "veto": "Motion ignores prefers-reduced-motion entirely; after ~12.5 s idle the page navigates itself to the next program URL (also under reduced motion); process steps fade out after they pass.",
+      "patternOnly": false,
+      "patterns": [
+        "Tagline as the visual system: 'see life from a different angle' becomes tilted type, tilted cards and rotated letters.",
+        "Program pages as chapters of one life journey, each with its own colour and a 'Next stop' hand-off to the next age band.",
+        "Name the visitor's worry in one sentence right before a three-step process.",
+        "Flat, subject-specific illustration (no 3D) for warmth with families.",
+        "Scroll card deck that tilts as it passes (only with a static reduced-motion layout)."
+      ],
+      "avoid": [
+        "Donate louder than the main action; no action on the first screen",
+        "A 575px slogan headline over 5 lines",
+        "Idle auto-navigation to another URL",
+        "Motion with no reduced-motion path, above all for a neurodivergent audience",
+        "Content that fades out after the visitor passes it",
+        "No proof, no cost or eligibility answer for anxious parents"
+      ],
+      "style": {
+        "tags": [
+          "flat",
+          "many-colours",
+          "expressive-type",
+          "rounded-type",
+          "scroll-choreography",
+          "smoothed-scroll",
+          "endless-motion",
+          "ignores-reduced-motion"
+        ],
+        "type": {
+          "families": [
+            "ABC Diatype Rounded Plus",
+            "Robuck Rounded",
+            "ABC Diatype Rounded"
+          ],
+          "display": 575,
+          "body": 24,
+          "ratio": 24,
+          "sizes": 8
+        },
+        "palette": {
+          "chromatic": 8,
+          "gradients": 0,
+          "shadows": 0,
+          "backgrounds": [
+            "#ffffff",
+            "#2668fd",
+            "#fdcb40",
+            "#fd4401",
+            "#fff2b7"
+          ]
+        },
+        "radii": [
+          "33.3333px",
+          "4.7619px",
+          "47.619px",
+          "50%"
+        ],
+        "motion": {
+          "libraries": [
+            "gsap",
+            "scrollTrigger",
+            "splitText",
+            "lenis",
+            "lottie",
+            "viewTransitions"
+          ],
+          "stickyPanels": 0,
+          "durationsMs": {
+            "min": 20000,
+            "max": 20000
+          },
+          "easings": [
+            "linear"
+          ],
+          "reducedMotionRespected": false,
+          "smoothness": {
+            "fps": 34.3,
+            "longFrames": 37,
+            "baselineLongFrames": 0,
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+          }
+        },
+        "doNotCopy": [
+          "headline-lines: h1 runs to 5 lines",
+          "contrast: 4 text elements below WCAG AA (measured on screen pixels)",
+          "contrast: 2 text elements below WCAG AA (measured on screen pixels)",
+          "tap-target: 20 controls smaller than 24x24px on a phone",
+          "reduced-motion: 2 text elements stay hidden when the visitor asks for reduced motion",
+          "motion without a reduced-motion path"
+        ]
+      }
+    },
+    {
+      "id": "ref-0005",
+      "site": "maxima",
+      "url": "https://maximatherapy.com/programs/3-to-18",
+      "batch": "batch-002",
+      "review": "data/references/batch-002-review.md",
+      "business": "health / social services: Same company, program page for ages 3-18; step 1 names who refers the child (Regional Center Service Coordinator).",
+      "actionThatPays": "'Get started' referral",
+      "scores": {
+        "ai": 4.7,
+        "ownerOverall": 9,
+        "ownerVisual": null,
+        "ownerShip": null,
+        "final": 6.8
+      },
+      "veto": "As ref-0004, plus green-on-green type pairs at 1.82-2.78:1.",
+      "patternOnly": false,
+      "patterns": [
+        "Per-program colour chapters inside one template, with a hand-off to the next program."
+      ],
+      "avoid": [
+        "Reusing one page template so literally that the age band changes nothing but the colour"
+      ],
+      "style": {
+        "tags": [
+          "flat",
+          "many-colours",
+          "expressive-type",
+          "rounded-type",
+          "scroll-choreography",
+          "smoothed-scroll",
+          "endless-motion",
+          "ignores-reduced-motion"
+        ],
+        "type": {
+          "families": [
+            "ABC Diatype Rounded Plus",
+            "Robuck Rounded",
+            "ABC Diatype Rounded"
+          ],
+          "display": 575,
+          "body": 24,
+          "ratio": 24,
+          "sizes": 8
+        },
+        "palette": {
+          "chromatic": 10,
+          "gradients": 0,
+          "shadows": 0,
+          "backgrounds": [
+            "#ffffff",
+            "#2668fd",
+            "#00b351",
+            "#fd4401",
+            "#a7eb98"
+          ]
+        },
+        "radii": [
+          "33.3333px",
+          "4.7619px",
+          "47.619px",
+          "50%"
+        ],
+        "motion": {
+          "libraries": [
+            "gsap",
+            "scrollTrigger",
+            "splitText",
+            "lenis",
+            "lottie",
+            "viewTransitions"
+          ],
+          "stickyPanels": 0,
+          "durationsMs": {
+            "min": 25000,
+            "max": 35000
+          },
+          "easings": [
+            "linear"
+          ],
+          "reducedMotionRespected": false,
+          "smoothness": {
+            "fps": 38.5,
+            "longFrames": 22,
+            "baselineLongFrames": 0,
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+          }
+        },
+        "doNotCopy": [
+          "headline-lines: h1 runs to 5 lines",
+          "contrast: 9 text elements below WCAG AA (measured on screen pixels)",
+          "contrast: 6 text elements below WCAG AA (measured on screen pixels)",
+          "tap-target: 20 controls smaller than 24x24px on a phone",
+          "reduced-motion: 1 text elements stay hidden when the visitor asks for reduced motion",
+          "motion without a reduced-motion path"
+        ]
+      }
+    },
+    {
+      "id": "ref-0006",
+      "site": "future",
+      "url": "https://future.co/",
+      "batch": "batch-002",
+      "review": "data/references/batch-002-review.md",
+      "business": "consumer subscription (health and fitness): Remote 1-on-1 personal training with a human coach through an app: $50 first month, then $199/month, 30-day full refund.",
+      "actionThatPays": "'Find your coach' / 'Get started' / 'Start the 1-Minute Quiz' (three labels for one action)",
+      "scores": {
+        "ai": 6.9,
+        "ownerOverall": 8,
+        "ownerVisual": null,
+        "ownerShip": null,
+        "final": 7.5
+      },
+      "veto": "Infinite card marquee with readable text that pauses only on hover (WCAG 2.2.2); the rotating headline word keeps going under reduced motion.",
+      "patternOnly": false,
+      "patterns": [
+        "Price and refund right under the hero action ('$50 first month, then $199/month. Cancel within 30 days for a full refund.').",
+        "App screens written as small scenes from the customer's life.",
+        "Show a member's intake data (schedule, equipment, injuries, goals) to prove 'personal'.",
+        "One product screen alone on black under one headline to focus attention.",
+        "Monochrome palette so the photographs carry all colour; a light serif display for a premium voice.",
+        "Header that hides on scroll-down (200 ms) and returns on scroll-up."
+      ],
+      "avoid": [
+        "Three labels for one action",
+        "Infinite marquee with readable text and no pause control",
+        "Unsourced statistics ('98% more consistent')",
+        "Key benefit cards cut off at the carousel edge"
+      ],
+      "style": {
+        "tags": [
+          "gradient-heavy",
+          "glass",
+          "shadowed",
+          "restrained-colour",
+          "pill-shapes",
+          "expressive-type",
+          "many-type-sizes",
+          "endless-motion",
+          "calm-motion"
+        ],
+        "type": {
+          "families": [
+            "seasonSans",
+            "seasonMix",
+            "sfProDisplay",
+            "sfProText"
+          ],
+          "display": 100,
+          "body": 16,
+          "ratio": 6.3,
+          "sizes": 12
+        },
+        "palette": {
+          "chromatic": 0,
+          "gradients": 17,
+          "shadows": 54,
+          "backgrounds": [
+            "#ffffff",
+            "#000000",
+            "#f0f0f0",
+            "#1a1a1a"
+          ]
+        },
+        "radii": [
+          "20px",
+          "16px",
+          "30px",
+          "3.35544e+07px"
+        ],
+        "motion": {
+          "libraries": [
+            "swiper",
+            "viewTransitions"
+          ],
+          "stickyPanels": 0,
+          "durationsMs": {
+            "min": 300,
+            "max": 3000
+          },
+          "easings": [
+            "linear"
+          ],
+          "reducedMotionRespected": true,
+          "smoothness": {
+            "fps": 44.7,
+            "longFrames": 13,
+            "baselineLongFrames": 0,
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+          }
+        },
+        "doNotCopy": [
+          "font-not-loaded: \"sfProDisplay\" is named in the CSS but never loaded; the browser shows a fallback font (4% of the text)",
+          "img-broken: 1 images failed to load",
+          "contrast: 7 text elements below WCAG AA (measured on screen pixels)",
+          "contrast: 3 text elements below WCAG AA (measured on screen pixels)",
+          "tap-target: 16 controls smaller than 24x24px on a phone",
+          "contrast: 4 text elements below WCAG AA (measured on screen pixels)"
+        ]
+      }
+    },
+    {
+      "id": "ref-0007",
+      "site": "swehl",
+      "url": "https://swehl.com/",
+      "batch": "batch-003",
+      "review": "data/references/batch-003-review.md",
+      "business": "US direct-to-consumer breastfeeding kits and accessories (Latch Kit $99.99, Cloud 9 $65, Nips Duo $22) for pregnant and new parents, plus free education (video school, talk circles) and a newsletter.",
+      "actionThatPays": "SHOP KITS; every featured kit was SOLD OUT at capture (2026-10-31)",
+      "scores": {
+        "ai": 5.8,
+        "ownerOverall": null,
+        "ownerVisual": 9.5,
+        "ownerShip": 9.5,
+        "final": 7.9
+      },
+      "veto": null,
+      "patternOnly": false,
+      "patterns": [
+        "Colour-coded chapters: one flat background per pillar, one ink colour for all text, no shadows or gradients",
+        "Arch shape framing curved display type over documentary photography ('LET'S TALK IT OUT')",
+        "CSS sticky curtain reveal between flat sections (no library, CLS 0, nothing hidden without JS)",
+        "Price inside the product title and the buy button",
+        "Optional due-date field on the lead form to time follow-ups (life-stage products)",
+        "Customer-voice copy: frank, warm titles ('Partners are People, Too.', 'Because Options.')",
+        "Marquee as table of contents right after the hero",
+        "Arched-top bottom sheet for lead capture (shape liked by the owner); trigger after scroll depth or exit intent, never over the hero"
+      ],
+      "avoid": [
+        "Pop-up over the hero and the paying CTA one second after load",
+        "Selling sold-out products with no restock date or waitlist",
+        "Proof that praises a different pillar than the one the hero sells"
+      ],
+      "style": {
+        "tags": [
+          "flat",
+          "many-colours",
+          "pill-shapes",
+          "expressive-type",
+          "many-type-sizes",
+          "rounded-type",
+          "serif",
+          "css-scroll-device",
+          "endless-motion",
+          "pop-up-on-load"
+        ],
+        "type": {
+          "families": [
+            "Roobert",
+            "Caslon Rounded"
+          ],
+          "display": 100,
+          "body": 16,
+          "ratio": 6.3,
+          "sizes": 9
+        },
+        "palette": {
+          "chromatic": 6,
+          "gradients": 0,
+          "shadows": 0,
+          "backgrounds": [
+            "#ead1ff",
+            "#8c2800",
+            "#8b2a00",
+            "#b4d2ff",
+            "#fffbf2"
+          ]
+        },
+        "radii": [
+          "9999px",
+          "30px",
+          "10px",
+          "3px"
+        ],
+        "motion": {
+          "libraries": [],
+          "stickyPanels": 4,
+          "durationsMs": {
+            "min": 300,
+            "max": 900
+          },
+          "easings": [
+            "cubic-bezier(0.4, 0, 0.2, 1)",
+            "ease"
+          ],
+          "reducedMotionRespected": true,
+          "smoothness": {
+            "fps": 47,
+            "longFrames": 4,
+            "baselineLongFrames": 0,
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+          }
+        },
+        "doNotCopy": [
+          "img-alt: 4 images without an alt attribute",
+          "contrast: 2 text elements below WCAG AA (measured on screen pixels)",
+          "img-alt: 2 images without an alt attribute",
+          "tap-target: 25 controls smaller than 24x24px on a phone",
+          "pop-up over the first screen on load"
+        ]
+      }
+    },
+    {
+      "id": "ref-0008",
+      "site": "resolute",
+      "url": "https://www.theresolute.ai/",
+      "batch": "batch-003",
+      "review": "data/references/batch-003-review.md",
+      "business": "Personalised preventive-health / longevity programmes (diagnostics with 85+ biomarkers, doctors + AI, 100-day journeys) from Applied Healthspan Private Limited, India (inferred from +91 number and company suffix).",
+      "actionThatPays": "Get Your Blueprint (sticky); no price on the page",
+      "scores": {
+        "ai": 4.9,
+        "ownerOverall": null,
+        "ownerVisual": 9.5,
+        "ownerShip": 9.5,
+        "final": 7.5
+      },
+      "veto": "Two vetoes. Accessibility: motion ignores prefers-reduced-motion (14 elements still move with the scroll, 4 on their own), 4 endless text animations incl. blinking 'LIVE NOW' with no pause control (WCAG 2.2.2), content that stays hidden. Business: unsourced health outcomes ('Reduced Cardiovascular Risk', 'Eliminate inflammation'), '10,000+ Personalised Journeys' and a 'HIPPA NPP Compliant' badge (misspelt; HIPAA has no official certification) presented as fact. The layout patterns may enter the library; the claims and the motion-without-static-path may not.",
+      "patternOnly": false,
+      "patterns": [
+        "Fanned, tilted programme cards with each name as a wordmark over its own photo",
+        "Two-pole human expert vs AI copilot diagram meeting at the outcome",
+        "Problem then reframe pair ('Tired of one-size-fits-all health hacks?' / 'Your health doesn't live in silos. Neither do we.')",
+        "CTA label that is also a named step of the process ('Get Your Blueprint' = step 2)",
+        "Three-step How it Works with an INCLUDES list per step",
+        "Named clinical team with specialty and photo before the closing ask",
+        "Hero scroll-in that zooms the photo into the next section's background (only with a static path)"
+      ],
+      "avoid": [
+        "Scroll choreography without a reduced-motion path",
+        "Endless or blinking text with no pause control",
+        "Unsourced health outcomes and compliance badges",
+        "A promo bar for another product that outranks the main action",
+        "Coined jargon carrying the explanation (Centaur Team, Human 360 Body Data Stack)"
+      ],
+      "style": {
+        "tags": [
+          "gradient-heavy",
+          "glass",
+          "many-colours",
+          "pill-shapes",
+          "many-type-sizes",
+          "scroll-choreography",
+          "smoothed-scroll",
+          "endless-motion",
+          "ignores-reduced-motion",
+          "pop-up-on-load",
+          "layout-shift"
+        ],
+        "type": {
+          "families": [
+            "DMSans-Light",
+            "Pppangaia-Ultralight"
+          ],
+          "display": 70,
+          "body": 16,
+          "ratio": 4.4,
+          "sizes": 17
+        },
+        "palette": {
+          "chromatic": 10,
+          "gradients": 11,
+          "shadows": 0,
+          "backgrounds": [
+            "#ffffff",
+            "#420b20",
+            "#000000",
+            "#d66f50",
+            "#eacab1"
+          ]
+        },
+        "radii": [
+          "9999px",
+          "1440px",
+          "8px",
+          "16px"
+        ],
+        "motion": {
+          "libraries": [
+            "gsap",
+            "scrollTrigger",
+            "splitText",
+            "lenis",
+            "lottie"
+          ],
+          "stickyPanels": 0,
+          "durationsMs": {
+            "min": 750,
+            "max": 50000
+          },
+          "easings": [
+            "linear",
+            "cubic-bezier(0.25, 0.46, 0.45, 0.94)"
+          ],
+          "reducedMotionRespected": false,
+          "smoothness": {
+            "fps": 1.9,
+            "longFrames": 237,
+            "baselineLongFrames": 0,
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+          }
+        },
+        "doNotCopy": [
+          "contrast: 8 text elements below WCAG AA (measured on screen pixels)",
+          "hidden-content: 1 text elements were never visible during a full scroll (a reveal that never fires?)",
+          "layout-shift: Layout shift 1.730 (over 0.25)",
+          "hidden-content: 11 text elements were never visible during a full scroll (a reveal that never fires?)",
+          "tap-target: 11 controls smaller than 24x24px on a phone",
+          "contrast: 10 text elements below WCAG AA (measured on screen pixels)",
+          "reduced-motion: 1 text elements stay hidden when the visitor asks for reduced motion",
+          "motion without a reduced-motion path",
+          "pop-up over the first screen on load"
+        ]
+      }
+    }
+  ]
+}

@@ -405,32 +405,40 @@
   "idleNavigation": null,
   "smoothness": {
     "url": "https://swehl.com/",
-    "time": "2026-11-01T15:53:58.571Z",
+    "time": "2026-11-01T16:03:03.173Z",
     "page": {
       "loadFailed": false,
       "cpuSlowdown": 1,
-      "scrolledMs": 5230,
-      "frames": 230,
-      "fps": 44,
+      "scrolledMs": 5066,
+      "frames": 238,
+      "fps": 47,
       "medianMs": 16.7,
       "p95Ms": 50,
-      "maxMs": 83,
-      "longFrames": 6,
-      "droppedShare": 11
+      "maxMs": 67,
+      "longFrames": 4,
+      "droppedShare": 7,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
     },
     "baseline": {
       "loadFailed": false,
       "cpuSlowdown": 1,
-      "scrolledMs": 1739,
+      "scrolledMs": 1732,
       "frames": 104,
-      "fps": 59.8,
+      "fps": 60,
       "medianMs": 16.7,
       "p95Ms": 16.8,
       "maxMs": 17,
       "longFrames": 0,
-      "droppedShare": 0
+      "droppedShare": 0,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
     },
-    "longFramesOverBaseline": 6,
+    "longFramesOverBaseline": 4,
     "p95OverBaseline": 33.2
   }
 }

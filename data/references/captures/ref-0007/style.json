@@ -1,0 +1,116 @@
+{
+  "url": "https://swehl.com/",
+  "readAt": "2026-11-01T16:08:48.638Z",
+  "tags": [
+    "flat",
+    "many-colours",
+    "pill-shapes",
+    "expressive-type",
+    "many-type-sizes",
+    "rounded-type",
+    "serif",
+    "css-scroll-device",
+    "endless-motion",
+    "pop-up-on-load"
+  ],
+  "palette": {
+    "chromatic": 6,
+    "text": [
+      "#8b2a00",
+      "#ffd874",
+      "#fffbf2"
+    ],
+    "backgrounds": [
+      "#ead1ff",
+      "#8c2800",
+      "#8b2a00",
+      "#b4d2ff",
+      "#fffbf2",
+      "#ffa977",
+      "#ffd874"
+    ],
+    "gradients": 0,
+    "shadows": 0,
+    "blur": 0
+  },
+  "type": {
+    "families": [
+      {
+        "family": "Roobert",
+        "share": 94
+      },
+      {
+        "family": "Caslon Rounded",
+        "share": 6
+      }
+    ],
+    "sizes": {
+      "desktop": [
+        100,
+        94,
+        70,
+        36,
+        22,
+        16,
+        14,
+        12,
+        10
+      ],
+      "mobile": [
+        58,
+        47,
+        40,
+        22,
+        16,
+        14,
+        12,
+        10
+      ]
+    },
+    "display": 100,
+    "body": 16,
+    "ratio": 6.3
+  },
+  "shape": {
+    "radii": [
+      "9999px",
+      "30px",
+      "10px",
+      "3px"
+    ]
+  },
+  "spacing": {
+    "distinct": 28,
+    "offScale": 8
+  },
+  "motion": {
+    "libraries": [],
+    "stickyPanels": 4,
+    "durationsMs": {
+      "min": 300,
+      "max": 900
+    },
+    "easings": [
+      "cubic-bezier(0.4, 0, 0.2, 1)",
+      "ease"
+    ],
+    "reducedMotionRespected": true,
+    "smoothness": {
+      "fps": 47,
+      "longFrames": 4,
+      "baselineLongFrames": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    }
+  },
+  "layout": {
+    "pageHeight": 5150,
+    "screens": 6
+  },
+  "doNotCopy": [
+    "img-alt: 4 images without an alt attribute",
+    "contrast: 2 text elements below WCAG AA (measured on screen pixels)",
+    "img-alt: 2 images without an alt attribute",
+    "tap-target: 25 controls smaller than 24x24px on a phone",
+    "pop-up over the first screen on load"
+  ]
+}

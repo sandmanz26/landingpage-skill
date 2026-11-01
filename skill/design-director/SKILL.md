@@ -165,6 +165,7 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 | `rubric/critic.md` | Briefing the critic subagent; the critique format every juror uses |
 | `rubric/jury.md` | The look step and best-of-N at standard effort and above; judging references |
 | `library/intake.md` | When the team sends references with their notes |
+| `library/index.json` (via `library.mjs find`) | The direction step: the team's judged references with their style cards; adapt each to the client or ask (`modes/create.md`) |
 | `team/taste.md`, `brands/`, `designers/` | At the start, if present |
 
 ## Scripts
@@ -177,5 +178,8 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 | `lint.mjs <files or folders>` | Stock copy, placeholders, default styling patterns in source |
 | `evidence.mjs <url or file> --dir <dir>` | Evidence pack for the jury: contact sheets, motion frames, outline, motion, reduced-motion and idle results |
 | `digest.mjs <dir>` | `digest.md`: the one short file a juror reads first (outline, motion, inventory, findings, page text) |
-| `capture.mjs <list.txt> [--jobs 3]` | Runs inspect, evidence and digest for a whole batch in parallel |
+| `capture.mjs <list.txt> [--jobs 3]` | Runs inspect, evidence, digest and style for a whole batch in parallel |
+| `style.mjs <dir>` | Style card of a captured reference: palette, type, shape, motion, tags, do-not-copy |
+| `library.mjs build` / `find <words> --tags a,b` | Builds `library/index.json` from judged batches; finds the closest references with their style |
+| `smooth.mjs <url> [--dir d] [--cpu 4]` | Scroll stutter against a plain page on the same machine |
 | `jury.mjs score / rank <dir>` | Combines AI and human jurors: blended scores, disagreements, vetoes, best-of-N winner |

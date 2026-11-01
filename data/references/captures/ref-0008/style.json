@@ -1,0 +1,144 @@
+{
+  "url": "https://www.theresolute.ai/",
+  "readAt": "2026-11-01T16:08:48.727Z",
+  "tags": [
+    "gradient-heavy",
+    "glass",
+    "many-colours",
+    "pill-shapes",
+    "many-type-sizes",
+    "scroll-choreography",
+    "smoothed-scroll",
+    "endless-motion",
+    "ignores-reduced-motion",
+    "pop-up-on-load",
+    "layout-shift"
+  ],
+  "palette": {
+    "chromatic": 10,
+    "text": [
+      "#040404",
+      "#ff3b30",
+      "#ffffff",
+      "#222222",
+      "#000000",
+      "#161816"
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#420b20",
+      "#000000",
+      "#d66f50",
+      "#eacab1",
+      "#f3efe9",
+      "#f5f5f5",
+      "#f7f7f7"
+    ],
+    "gradients": 11,
+    "shadows": 0,
+    "blur": 7
+  },
+  "type": {
+    "families": [
+      {
+        "family": "DMSans-Light",
+        "share": 93
+      },
+      {
+        "family": "Pppangaia-Ultralight",
+        "share": 7
+      }
+    ],
+    "sizes": {
+      "desktop": [
+        70,
+        57,
+        44,
+        43,
+        31,
+        28,
+        23,
+        20,
+        19,
+        18,
+        17,
+        16,
+        15,
+        13,
+        12,
+        11,
+        10
+      ],
+      "mobile": [
+        37,
+        32,
+        28,
+        22,
+        20,
+        18,
+        16,
+        14,
+        13,
+        12,
+        10
+      ]
+    },
+    "display": 70,
+    "body": 16,
+    "ratio": 4.4
+  },
+  "shape": {
+    "radii": [
+      "9999px",
+      "1440px",
+      "8px",
+      "16px",
+      "12px",
+      "6px"
+    ]
+  },
+  "spacing": {
+    "distinct": 40,
+    "offScale": 20
+  },
+  "motion": {
+    "libraries": [
+      "gsap",
+      "scrollTrigger",
+      "splitText",
+      "lenis",
+      "lottie"
+    ],
+    "stickyPanels": 0,
+    "durationsMs": {
+      "min": 750,
+      "max": 50000
+    },
+    "easings": [
+      "linear",
+      "cubic-bezier(0.25, 0.46, 0.45, 0.94)"
+    ],
+    "reducedMotionRespected": false,
+    "smoothness": {
+      "fps": 1.9,
+      "longFrames": 237,
+      "baselineLongFrames": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    }
+  },
+  "layout": {
+    "pageHeight": 13022,
+    "screens": 14
+  },
+  "doNotCopy": [
+    "contrast: 8 text elements below WCAG AA (measured on screen pixels)",
+    "hidden-content: 1 text elements were never visible during a full scroll (a reveal that never fires?)",
+    "layout-shift: Layout shift 1.730 (over 0.25)",
+    "hidden-content: 11 text elements were never visible during a full scroll (a reveal that never fires?)",
+    "tap-target: 11 controls smaller than 24x24px on a phone",
+    "contrast: 10 text elements below WCAG AA (measured on screen pixels)",
+    "reduced-motion: 1 text elements stay hidden when the visitor asks for reduced motion",
+    "motion without a reduced-motion path",
+    "pop-up over the first screen on load"
+  ]
+}

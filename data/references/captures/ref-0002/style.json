@@ -1,0 +1,128 @@
+{
+  "url": "https://www.replay.ai/",
+  "readAt": "2026-11-01T16:08:47.975Z",
+  "tags": [
+    "gradient-heavy",
+    "glass",
+    "many-colours",
+    "pill-shapes",
+    "sharp-corners",
+    "many-type-sizes",
+    "serif"
+  ],
+  "palette": {
+    "chromatic": 7,
+    "text": [
+      "#777777",
+      "#ffffff",
+      "#000000",
+      "#727272",
+      "#898989",
+      "#2a2a2a"
+    ],
+    "backgrounds": [
+      "#fcfcfc",
+      "#141518",
+      "#000000",
+      "#eae058",
+      "#c2edc8",
+      "#54702f",
+      "#13a8ff",
+      "#499df8"
+    ],
+    "gradients": 8,
+    "shadows": 4,
+    "blur": 5
+  },
+  "type": {
+    "families": [
+      {
+        "family": "Geist",
+        "share": 63
+      },
+      {
+        "family": "Geist Mono",
+        "share": 18
+      },
+      {
+        "family": "stkBureauSerif",
+        "share": 18
+      }
+    ],
+    "sizes": {
+      "desktop": [
+        72,
+        64,
+        50,
+        44,
+        32,
+        24,
+        18,
+        16,
+        14,
+        12,
+        10,
+        8,
+        6,
+        4
+      ],
+      "mobile": [
+        42,
+        39,
+        36,
+        28,
+        24,
+        20,
+        16,
+        15,
+        14,
+        12,
+        11,
+        10,
+        8,
+        7,
+        3,
+        2
+      ]
+    },
+    "display": 72,
+    "body": 16,
+    "ratio": 4.5
+  },
+  "shape": {
+    "radii": [
+      "2.7px",
+      "2.1px",
+      "3.35544e+07px"
+    ]
+  },
+  "spacing": {
+    "distinct": 28,
+    "offScale": 10
+  },
+  "motion": null,
+  "layout": {
+    "pageHeight": 8022,
+    "screens": 9
+  },
+  "doNotCopy": [
+    "tiny-text: Text at 8px",
+    "tiny-text: Text at 6.00011px",
+    "tiny-text: Text at 4.20016px",
+    "contrast: 7 text colour pairs below WCAG AA",
+    "hidden-content: 9 text elements were never visible during a full scroll (a reveal that never fires?)",
+    "tiny-text: Text at 6.8px",
+    "tiny-text: Text at 7px",
+    "tiny-text: Text at 2.88891px",
+    "tiny-text: Text at 2.02228px",
+    "contrast: 10 text colour pairs below WCAG AA",
+    "headline-lines: h1 runs to 4 lines",
+    "hidden-content: 8 text elements were never visible during a full scroll (a reveal that never fires?)",
+    "tiny-text: Text at 7.15802px",
+    "tiny-text: Text at 2.808px",
+    "tiny-text: Text at 2.301px",
+    "contrast: 9 text colour pairs below WCAG AA",
+    "tap-target: 12 controls smaller than 24x24px on a phone",
+    "reduced-motion: 9 text elements stay hidden when the visitor asks for reduced motion"
+  ]
+}

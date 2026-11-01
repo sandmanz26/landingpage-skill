@@ -1,0 +1,80 @@
+{
+  "url": "https://playfolly.com",
+  "readAt": "2026-11-01T16:08:47.801Z",
+  "tags": [
+    "glass",
+    "many-colours",
+    "pill-shapes",
+    "expressive-type",
+    "one-typeface"
+  ],
+  "palette": {
+    "chromatic": 6,
+    "text": [
+      "#000000",
+      "#ffffff",
+      "#f9ee16"
+    ],
+    "backgrounds": [
+      "#edbf7a",
+      "#f9ee16",
+      "#ffffff",
+      "#45528a",
+      "#888048",
+      "#faecc2",
+      "#000000",
+      "#333335"
+    ],
+    "gradients": 0,
+    "shadows": 4,
+    "blur": 4
+  },
+  "type": {
+    "families": [
+      {
+        "family": "Geograph",
+        "share": 100
+      }
+    ],
+    "sizes": {
+      "desktop": [
+        234,
+        60,
+        30,
+        18,
+        16,
+        14
+      ],
+      "mobile": [
+        92,
+        30,
+        18,
+        16,
+        14
+      ]
+    },
+    "display": 234,
+    "body": 16,
+    "ratio": 14.6
+  },
+  "shape": {
+    "radii": [
+      "3.35544e+07px",
+      "18px",
+      "32px"
+    ]
+  },
+  "spacing": {
+    "distinct": 23,
+    "offScale": 6
+  },
+  "motion": null,
+  "layout": {
+    "pageHeight": 7569,
+    "screens": 8
+  },
+  "doNotCopy": [
+    "contrast: 4 text colour pairs below WCAG AA",
+    "tap-target: 7 controls smaller than 24x24px on a phone"
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "url": "https://future.co",
+  "readAt": "2026-11-01T16:08:48.538Z",
+  "tags": [
+    "gradient-heavy",
+    "glass",
+    "shadowed",
+    "restrained-colour",
+    "pill-shapes",
+    "expressive-type",
+    "many-type-sizes",
+    "endless-motion",
+    "calm-motion"
+  ],
+  "palette": {
+    "chromatic": 0,
+    "text": [
+      "#ffffff",
+      "#272a2b",
+      "#232324",
+      "#010703",
+      "#000000",
+      "#b6b7b8"
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#000000",
+      "#f0f0f0",
+      "#1a1a1a"
+    ],
+    "gradients": 17,
+    "shadows": 54,
+    "blur": 58
+  },
+  "type": {
+    "families": [
+      {
+        "family": "seasonSans",
+        "share": 80
+      },
+      {
+        "family": "seasonMix",
+        "share": 12
+      },
+      {
+        "family": "sfProDisplay",
+        "share": 4
+      },
+      {
+        "family": "sfProText",
+        "share": 4
+      }
+    ],
+    "sizes": {
+      "desktop": [
+        100,
+        84,
+        68,
+        48,
+        30,
+        22,
+        20,
+        18,
+        17,
+        16,
+        14,
+        11
+      ],
+      "mobile": [
+        34,
+        32,
+        31,
+        24,
+        23,
+        18,
+        17,
+        16,
+        15,
+        14,
+        13,
+        11,
+        10
+      ]
+    },
+    "display": 100,
+    "body": 16,
+    "ratio": 6.3
+  },
+  "shape": {
+    "radii": [
+      "20px",
+      "16px",
+      "30px",
+      "3.35544e+07px",
+      "35px",
+      "10px",
+      "28px",
+      "25px",
+      "50px",
+      "27px"
+    ]
+  },
+  "spacing": {
+    "distinct": 29,
+    "offScale": 15
+  },
+  "motion": {
+    "libraries": [
+      "swiper",
+      "viewTransitions"
+    ],
+    "stickyPanels": 0,
+    "durationsMs": {
+      "min": 300,
+      "max": 3000
+    },
+    "easings": [
+      "linear"
+    ],
+    "reducedMotionRespected": true,
+    "smoothness": {
+      "fps": 44.7,
+      "longFrames": 13,
+      "baselineLongFrames": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    }
+  },
+  "layout": {
+    "pageHeight": 5996,
+    "screens": 7
+  },
+  "doNotCopy": [
+    "font-not-loaded: \"sfProDisplay\" is named in the CSS but never loaded; the browser shows a fallback font (4% of the text)",
+    "img-broken: 1 images failed to load",
+    "contrast: 7 text elements below WCAG AA (measured on screen pixels)",
+    "contrast: 3 text elements below WCAG AA (measured on screen pixels)",
+    "tap-target: 16 controls smaller than 24x24px on a phone",
+    "contrast: 4 text elements below WCAG AA (measured on screen pixels)"
+  ]
+}

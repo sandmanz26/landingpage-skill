@@ -1,0 +1,130 @@
+{
+  "url": "https://maximatherapy.com",
+  "readAt": "2026-11-01T16:08:48.253Z",
+  "tags": [
+    "flat",
+    "many-colours",
+    "expressive-type",
+    "rounded-type",
+    "scroll-choreography",
+    "smoothed-scroll",
+    "endless-motion",
+    "ignores-reduced-motion"
+  ],
+  "palette": {
+    "chromatic": 8,
+    "text": [
+      "#fd4401",
+      "#ffffff",
+      "#000000",
+      "#fff2b7",
+      "#fdcb40",
+      "#2668fd"
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#2668fd",
+      "#fdcb40",
+      "#fd4401",
+      "#fff2b7",
+      "#f3efe0",
+      "#00b351",
+      "#ffcccd"
+    ],
+    "gradients": 0,
+    "shadows": 0,
+    "blur": 0
+  },
+  "type": {
+    "families": [
+      {
+        "family": "ABC Diatype Rounded Plus",
+        "share": 88
+      },
+      {
+        "family": "Robuck Rounded",
+        "share": 12
+      },
+      {
+        "family": "ABC Diatype Rounded",
+        "share": 0
+      }
+    ],
+    "sizes": {
+      "desktop": [
+        575,
+        214,
+        62,
+        33,
+        24,
+        19,
+        15,
+        14
+      ],
+      "mobile": [
+        156,
+        88,
+        47,
+        42,
+        26,
+        22,
+        18,
+        15
+      ]
+    },
+    "display": 575,
+    "body": 24,
+    "ratio": 24
+  },
+  "shape": {
+    "radii": [
+      "33.3333px",
+      "4.7619px",
+      "47.619px",
+      "50%",
+      "23.8095px",
+      "9.5238px"
+    ]
+  },
+  "spacing": {
+    "distinct": 21,
+    "offScale": 18
+  },
+  "motion": {
+    "libraries": [
+      "gsap",
+      "scrollTrigger",
+      "splitText",
+      "lenis",
+      "lottie",
+      "viewTransitions"
+    ],
+    "stickyPanels": 0,
+    "durationsMs": {
+      "min": 20000,
+      "max": 20000
+    },
+    "easings": [
+      "linear"
+    ],
+    "reducedMotionRespected": false,
+    "smoothness": {
+      "fps": 34.3,
+      "longFrames": 37,
+      "baselineLongFrames": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    }
+  },
+  "layout": {
+    "pageHeight": 11195,
+    "screens": 12
+  },
+  "doNotCopy": [
+    "headline-lines: h1 runs to 5 lines",
+    "contrast: 4 text elements below WCAG AA (measured on screen pixels)",
+    "contrast: 2 text elements below WCAG AA (measured on screen pixels)",
+    "tap-target: 20 controls smaller than 24x24px on a phone",
+    "reduced-motion: 2 text elements stay hidden when the visitor asks for reduced motion",
+    "motion without a reduced-motion path"
+  ]
+}
