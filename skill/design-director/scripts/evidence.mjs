@@ -11,6 +11,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { launch, resolveTarget, parseArgs, gotoStable, dismissOverlays } from './lib/browser.mjs';
+import { measureSmoothness } from './lib/smooth.mjs';
+import { fileURLToPath } from 'node:url';
 
 const args = parseArgs(process.argv.slice(2));
 const target = args._[0];
@@ -290,6 +292,12 @@ async function idleRun(reducedMotion) {
   await ctx.close();
   return { movingWithoutInput: moving, movingOnScroll: scrollMoving, navigatedTo: navigated, loadFailed: !!loaded.failed };
 }
+// Stutter while scrolling, beside a plain page measured on the same machine.
+const plain = await resolveTarget(path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'evals/fixtures/clean.html'));
+const smoothBaseline = await measureSmoothness(browser, plain.url);
+await plain.close();
+const smoothPage = await measureSmoothness(browser, url);
+const smoothness = { page: smoothPage, baseline: smoothBaseline, longFramesOverBaseline: smoothPage.longFrames - smoothBaseline.longFrames, p95OverBaseline: Math.round((smoothPage.p95Ms - smoothBaseline.p95Ms) * 10) / 10 };
 const normalIdle = await idleRun('no-preference');
 const reducedIdle = await idleRun('reduce');
 const idleNavigation = normalIdle.navigatedTo ? { navigatedTo: normalIdle.navigatedTo, afterSeconds: idleSeconds } : null;
@@ -321,6 +329,7 @@ const evidence = {
     pauseControl,
     steps: scrollSteps,
   },
+  smoothness,
   reducedMotion: { movingWithoutInput: reducedIdle.movingWithoutInput, movingOnScroll: reducedIdle.movingOnScroll, idleNavigation: reducedIdle.navigatedTo, loadFailed: reducedIdle.loadFailed },
   idleRunLoadFailed: normalIdle.loadFailed,
   idleNavigation,
@@ -331,6 +340,7 @@ const flags = [];
 if (load.failed) flags.push('the page did not load (server error after 3 tries): this evidence describes an error page');
 if (normalIdle.loadFailed || reducedIdle.loadFailed) flags.push(`the ${[normalIdle.loadFailed && 'idle', reducedIdle.loadFailed && 'reduced-motion'].filter(Boolean).join(' and ')} run loaded an error page: its results mean nothing, capture again`);
 if (stickyPanels.length >= 2) flags.push(`${stickyPanels.length} full-screen sticky panels: a CSS scroll device (stacking or curtain reveal) even with no scroll library`);
+if (smoothness.longFramesOverBaseline >= 5) flags.push(`stutters while scrolling: ${smoothPage.longFrames} long frames (>50 ms) vs ${smoothBaseline.longFrames} on a plain page, p95 ${smoothPage.p95Ms} ms`);
 if (overlays.length) flags.push(`pop-up or banner on load, closed for the outline: ${overlays.join(', ')}`);
 if (idleNavigation) flags.push(`page navigates by itself after ${idleSeconds}s idle → ${idleNavigation.navigatedTo}`);
 if (reducedIdle.navigatedTo) flags.push('navigates by itself under reduced motion too');

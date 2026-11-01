@@ -402,5 +402,35 @@
     "loadFailed": false
   },
   "idleRunLoadFailed": false,
-  "idleNavigation": null
+  "idleNavigation": null,
+  "smoothness": {
+    "url": "https://swehl.com/",
+    "time": "2026-11-01T15:53:58.571Z",
+    "page": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 5230,
+      "frames": 230,
+      "fps": 44,
+      "medianMs": 16.7,
+      "p95Ms": 50,
+      "maxMs": 83,
+      "longFrames": 6,
+      "droppedShare": 11
+    },
+    "baseline": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 1739,
+      "frames": 104,
+      "fps": 59.8,
+      "medianMs": 16.7,
+      "p95Ms": 16.8,
+      "maxMs": 17,
+      "longFrames": 0,
+      "droppedShare": 0
+    },
+    "longFramesOverBaseline": 6,
+    "p95OverBaseline": 33.2
+  }
 }

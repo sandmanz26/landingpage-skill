@@ -1,0 +1,30 @@
+{
+  "url": "https://www.theresolute.ai/",
+  "time": "2026-11-01T15:56:19.419Z",
+  "page": {
+    "loadFailed": false,
+    "cpuSlowdown": 1,
+    "scrolledMs": 126196,
+    "frames": 236,
+    "fps": 1.9,
+    "medianMs": 533.2,
+    "p95Ms": 750,
+    "maxMs": 917,
+    "longFrames": 236,
+    "droppedShare": 100
+  },
+  "baseline": {
+    "loadFailed": false,
+    "cpuSlowdown": 1,
+    "scrolledMs": 1737,
+    "frames": 104,
+    "fps": 59.9,
+    "medianMs": 16.7,
+    "p95Ms": 16.7,
+    "maxMs": 17,
+    "longFrames": 0,
+    "droppedShare": 0
+  },
+  "longFramesOverBaseline": 236,
+  "p95OverBaseline": 733.3
+}

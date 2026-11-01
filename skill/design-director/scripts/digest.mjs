@@ -57,7 +57,13 @@ if (ev) {
   line(`- On scroll: up to ${m.scriptDrivenOnScroll} script-driven elements per step, up to ${m.maxRunning} CSS/Web animations; durations ${m.durationsMs ? `${m.durationsMs.min}-${m.durationsMs.max} ms` : 'n/a'}; easings ${m.easings.join(', ') || 'n/a'}; properties ${m.properties.join(', ') || 'n/a'}`);
   line(`- Reduced motion: ${ev.reducedMotion.movingWithoutInput} still move on their own, ${ev.reducedMotion.movingOnScroll} with the scroll${ev.reducedMotion.loadFailed ? ' (RUN FAILED TO LOAD: unknown)' : ''}`);
   line(`- Leaves the page by itself when idle: ${ev.idleNavigation ? `yes, after ${ev.idleNavigation.afterSeconds}s → ${ev.idleNavigation.navigatedTo}` : 'no'}`);
-  line('- Not measured: frame smoothness (stutter), transitions to other pages.');
+  if (ev.smoothness) {
+    const { page: sp, baseline: sb } = ev.smoothness;
+    line(`- Smoothness while scrolling (stutter): ${sp.fps} fps, p95 frame ${sp.p95Ms} ms, ${sp.longFrames} long frames >50 ms, ${sp.droppedShare}% dropped; a plain page on the same machine: ${sb.fps} fps, p95 ${sb.p95Ms} ms, ${sb.longFrames} long frames. Scripts blocked ${sp.scriptBlockedShare ?? '?'}% of the scroll.`);
+    if (/swiftshader|llvmpipe|software/i.test(sp.renderer || ''))
+      line('  Measured with software rendering (no GPU) on a slower CPU: this ranks pages by how heavy they are, it does not show what a laptop with a GPU shows. Run `smooth.mjs` on a real machine to judge stutter.');
+  } else line('- Not measured: frame smoothness (stutter).');
+  line('- Not measured: transitions to other pages.');
 }
 
 const inv = report.viewports.desktop && report.viewports.desktop.inventory;

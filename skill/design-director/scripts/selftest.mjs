@@ -146,6 +146,13 @@ const check = (name, ok, detail = '') => {
   check('evidence reports a page that did not load', /did not load/.test(r.stdout) && /loaded an error page/.test(r.stdout), r.stdout + r.stderr);
 }
 
+// smoothness: a page that blocks while scrolling stutters, a plain one does not
+{
+  const r = run('smooth.mjs', [path.join(fixtures, 'jank.html')]);
+  const m = r.stdout.match(/page: .*?(\d+) long frames[\s\S]*baseline: .*?(\d+) long frames/);
+  check('smoothness catches a page that stutters while scrolling', !!m && Number(m[1]) >= 10 && Number(m[2]) <= 2, r.stdout + r.stderr);
+}
+
 // capture
 {
   const list = path.join(tmp, 'empty.txt');

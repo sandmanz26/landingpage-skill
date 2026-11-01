@@ -878,5 +878,35 @@
     "movingOnScroll": 2,
     "idleNavigation": null
   },
-  "idleNavigation": null
+  "idleNavigation": null,
+  "smoothness": {
+    "url": "https://future.co/",
+    "time": "2026-11-01T15:52:57.513Z",
+    "page": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 6007,
+      "frames": 246,
+      "fps": 41,
+      "medianMs": 16.7,
+      "p95Ms": 50.1,
+      "maxMs": 117,
+      "longFrames": 14,
+      "droppedShare": 13
+    },
+    "baseline": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 1728,
+      "frames": 103,
+      "fps": 59.6,
+      "medianMs": 16.7,
+      "p95Ms": 16.8,
+      "maxMs": 17,
+      "longFrames": 0,
+      "droppedShare": 0
+    },
+    "longFramesOverBaseline": 14,
+    "p95OverBaseline": 33.3
+  }
 }

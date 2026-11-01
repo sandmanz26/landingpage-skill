@@ -1,13 +1,26 @@
 {
   "juror": "owner",
   "kind": "human",
-  "date": "2026-10-31",
+  "date": "2026-11-01",
   "refs": {
-    "ref-0007": { "note": "Scores not given yet; asked for visual and ship (1-10)." },
-    "ref-0008": { "note": "Scores not given yet; asked for visual and ship (1-10)." }
+    "ref-0007": {
+      "visual": 9.5,
+      "ship": 9.5,
+      "note": "Owner: \"semuanya 9.5\" (read as visual and ship, both sites)."
+    },
+    "ref-0008": {
+      "visual": 9.5,
+      "ship": 9.5,
+      "note": "Owner: \"semuanya 9.5\" (read as visual and ship, both sites)."
+    }
   },
   "notes_verbatim": {
     "swehl (ref-0007)": "kategori bisnis, menurut saya cukup bagus u ntuk sebuah landing page, beberapa point nya adalah 1. permainan color sederhana 2. permainan text size sangat balance 3. konsep scrolling yang unik 4. CTA di awal dengan posisi di fixed bottom dan ada circular radius nya",
     "resolute (ref-0008)": "permainan scrolling nya sangat bagus sekali, setiap section dikemas dengan scrolling yang baik. Kemudian transisi antar halaman juga smooth, setiap section dibuat dengan design yang unik."
+  },
+  "answers": {
+    "swehl_cta": "The arched-top element they meant is the newsletter pop-up (bottom sheet), not the hero pill buttons (\"beratap lengkung\").",
+    "resolute_transitions": "Section transitions while scrolling, not transitions between pages (\"antar section saat scroll\").",
+    "smooth_means": "No stutter (\"tidak patah patah\"): frame smoothness, not the eased Lenis feel."
   }
 }

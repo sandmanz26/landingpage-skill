@@ -267,5 +267,35 @@
   "idleNavigation": {
     "navigatedTo": "https://maximatherapy.com/programs/18-to-65",
     "afterSeconds": 15
+  },
+  "smoothness": {
+    "url": "https://maximatherapy.com/programs/3-to-18",
+    "time": "2026-11-01T15:52:26.589Z",
+    "page": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 11392,
+      "frames": 416,
+      "fps": 36.5,
+      "medianMs": 16.7,
+      "p95Ms": 50.1,
+      "maxMs": 167,
+      "longFrames": 21,
+      "droppedShare": 13
+    },
+    "baseline": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 1760,
+      "frames": 102,
+      "fps": 58,
+      "medianMs": 16.7,
+      "p95Ms": 16.8,
+      "maxMs": 67,
+      "longFrames": 1,
+      "droppedShare": 1
+    },
+    "longFramesOverBaseline": 20,
+    "p95OverBaseline": 33.3
   }
 }

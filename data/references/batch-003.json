@@ -2,7 +2,7 @@
  "batch": "batch-003",
  "received": "2026-10-31",
  "from": "owner (chat)",
- "status": "captured with capture.mjs, judged by 5 AI jurors from evidence packs; owner scores pending",
+ "status": "captured, judged by 5 AI jurors from evidence packs and the owner (2026-11-01)",
  "jury": {
   "folder": "data/references/jury/batch-003",
   "jurors": [
@@ -12,7 +12,7 @@
    "story-strategist",
    "motion-accessibility"
   ],
-  "human_votes": 0,
+  "human_votes": 1,
   "brief": "data/references/jury/batch-003/_brief.md"
  },
  "measured_cost": {
@@ -55,9 +55,8 @@
     "confidence": "high; market (US) inferred"
    },
    "owner": {
-    "visual": null,
-    "ship": null,
-    "note": "scores pending"
+    "visual": 9.5,
+    "ship": 9.5
    },
    "jury_scores": {
     "clarity": 6,
@@ -88,7 +87,8 @@
     {
      "claim": "CTA early, fixed at the bottom, with a circular radius",
      "verdict": "partly right; two different elements merged",
-     "evidence": "The early CTAs (SHOP KITS, GET EDUCATED) are pill buttons (radius 9999px) in the middle of the hero, not fixed. The arched element fixed at the bottom is a newsletter pop-up (bottom sheet with an arched top) asking for email + due date about 1 s after load; it covers the H1 and the shop button. It is lead capture, not the action that pays."
+     "evidence": "The early CTAs (SHOP KITS, GET EDUCATED) are pill buttons (radius 9999px) in the middle of the hero, not fixed. The arched element fixed at the bottom is a newsletter pop-up (bottom sheet with an arched top) asking for email + due date about 1 s after load; it covers the H1 and the shop button. It is lead capture, not the action that pays.",
+     "owner_clarified": "The owner meant the arched-top pop-up: what they like is the shape (an arched bottom sheet). Library candidate: arched bottom sheet for lead capture, shown after scroll depth or exit intent, never over the hero in the first seconds."
     }
    ],
    "library_candidates": [
@@ -98,13 +98,20 @@
     "Price inside the product title and the buy button",
     "Optional due-date field on the lead form to time follow-ups (life-stage products)",
     "Customer-voice copy: frank, warm titles ('Partners are People, Too.', 'Because Options.')",
-    "Marquee as table of contents right after the hero"
+    "Marquee as table of contents right after the hero",
+    "Arched-top bottom sheet for lead capture (shape liked by the owner); trigger after scroll depth or exit intent, never over the hero"
    ],
    "avoid": [
     "Pop-up over the hero and the paying CTA one second after load",
     "Selling sold-out products with no restock date or waitlist",
     "Proof that praises a different pillar than the one the hero sells"
-   ]
+   ],
+   "combined": {
+    "ai_weighted_with_owner_visual": 6.2,
+    "owner_ship": 9.5,
+    "final": 7.9,
+    "gap": 3.3
+   }
   },
   {
    "id": "ref-0008",
@@ -118,9 +125,8 @@
     "confidence": "medium; country inferred"
    },
    "owner": {
-    "visual": null,
-    "ship": null,
-    "note": "scores pending"
+    "visual": 9.5,
+    "ship": 9.5
    },
    "jury_scores": {
     "clarity": 5,
@@ -164,8 +170,19 @@
     "Unsourced health outcomes and compliance badges",
     "A promo bar for another product that outranks the main action",
     "Coined jargon carrying the explanation (Centaur Team, Human 360 Body Data Stack)"
-   ]
+   ],
+   "combined": {
+    "ai_weighted_with_owner_visual": 5.6,
+    "owner_ship": 9.5,
+    "final": 7.5,
+    "gap": 3.9
+   }
   }
  ],
- "owner_taste_signal": "Third batch in a row where the owner's motion claims need correction (Maxima 'modern scrolling', Future 'animation in every section', Resolute 'page transitions'): the owner judges motion by feel, which the jury cannot measure from stills; the jury in turn missed a CSS scroll device until a measurement settled it. Both sides need a measurement of smoothness."
+ "owner_taste_signal": "Third batch in a row where the owner's motion claims need correction (Maxima 'modern scrolling', Future 'animation in every section', Resolute 'page transitions'): the owner judges motion by feel, which the jury cannot measure from stills; the jury in turn missed a CSS scroll device until a measurement settled it. Both sides need a measurement of smoothness. Owner scores 2026-11-01: 9.5 visual and 9.5 ship for both sites, so the two-score format did not yet separate taste from client-readiness; across 11 references the owner has scored only 8-9.5.",
+ "owner_answers": {
+  "swehl_cta": "meant the arched-top newsletter pop-up (bottom sheet)",
+  "resolute_transitions": "section transitions while scrolling",
+  "smooth_means": "no stutter"
+ }
 }

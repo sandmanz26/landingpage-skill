@@ -1,0 +1,30 @@
+{
+  "url": "https://scotchpos.com/",
+  "time": "2026-11-01T15:51:39.094Z",
+  "page": {
+    "loadFailed": false,
+    "cpuSlowdown": 1,
+    "scrolledMs": 7101,
+    "frames": 387,
+    "fps": 54.5,
+    "medianMs": 16.7,
+    "p95Ms": 33.3,
+    "maxMs": 50,
+    "longFrames": 0,
+    "droppedShare": 1
+  },
+  "baseline": {
+    "loadFailed": false,
+    "cpuSlowdown": 1,
+    "scrolledMs": 1730,
+    "frames": 103,
+    "fps": 59.5,
+    "medianMs": 16.7,
+    "p95Ms": 16.7,
+    "maxMs": 17,
+    "longFrames": 0,
+    "droppedShare": 0
+  },
+  "longFramesOverBaseline": 0,
+  "p95OverBaseline": 16.6
+}

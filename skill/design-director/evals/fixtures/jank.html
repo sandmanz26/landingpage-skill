@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jank fixture</title>
+<!-- A scroll handler that blocks the main thread for 70 ms: the page stutters while scrolling. -->
+<style>body { margin: 0; font: 18px/1.5 system-ui, sans-serif; } section { min-height: 100vh; padding: 64px; }</style>
+</head>
+<body>
+  <section><h1>Heavy scroll handler</h1></section><section><h2>Two</h2></section><section><h2>Three</h2></section>
+  <section><h2>Four</h2></section><section><h2>Five</h2></section><section><h2>Six</h2></section>
+  <script>
+    addEventListener('scroll', () => { const end = performance.now() + 70; while (performance.now() < end); }, { passive: true });
+  </script>
+</body>
+</html>

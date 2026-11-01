@@ -1,0 +1,30 @@
+{
+  "url": "https://playfolly.com",
+  "time": "2026-11-01T15:50:52.001Z",
+  "page": {
+    "loadFailed": false,
+    "cpuSlowdown": 1,
+    "scrolledMs": 5829,
+    "frames": 327,
+    "fps": 56.1,
+    "medianMs": 16.7,
+    "p95Ms": 16.8,
+    "maxMs": 83,
+    "longFrames": 3,
+    "droppedShare": 2
+  },
+  "baseline": {
+    "loadFailed": false,
+    "cpuSlowdown": 1,
+    "scrolledMs": 1732,
+    "frames": 103,
+    "fps": 59.5,
+    "medianMs": 16.7,
+    "p95Ms": 16.8,
+    "maxMs": 17,
+    "longFrames": 0,
+    "droppedShare": 0
+  },
+  "longFramesOverBaseline": 3,
+  "p95OverBaseline": 0
+}
