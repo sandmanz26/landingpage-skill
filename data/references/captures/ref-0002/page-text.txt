@@ -1,0 +1,241 @@
+AI buyers
+Data privacy
+Referrals
+Careers
+Value my data
+Fund growth by licensing the data you already have.
+
+Frontier AI labs need training data on how real companies run. You're sitting on years of it. We value your data, strip out every name and identifier, and get you paid.
+
+Value my data
+EMAIL
+ATTACHMENTS
+CSV
+CUSTOMER ORDERS
+EMAIL
+PLANNING THREAD
+SLACK
+MESSAGE
+EMAIL
+INBOX
+SCAN
+BILLING STATEMENT
+EMAIL
+PLANNING THREAD
+EMAIL
+MESSAGE LIST
+SLACK
+THREAD
+JIRA
+ISSUE LIST
+
+PROCESS
+
+IDENTIFIED
+STRUCTURED
+VERIFIED
+LICENSED
+
+RL-2026-001 // VERSION 1.0
+
+CLASSIFICATION
+PROPRIETARY DATA / LICENSING
+
+Millions
+
+Paid to businesses like yours
+
+Billions
+
+Personal identifiers removed
+
+You already own your
+next revenue stream.
+
+Raising a round costs equity. Debt has to be paid back. Getting more revenue might take quarters you don't have.
+
+But there's one more thing you own. It costs you none of that, and it wasn't worth anything until now. It's the record of how your company actually operates. Historically, there was never anywhere to sell it. Now there is.
+
+CODE AND COMMITS
+
+INTERNAL DOCS
+
+DECISION THREADS
+
+CRM DATA
+
+FINANCIAL RECORDS
+
+SALES CONVERSATIONS
+
+SUPPORT HISTORY
+
+PRESENTATIONS
+
+PRODUCT LOGS
+
+ANALYTICS
+
+HISTORICAL OPERATING DATA
+
+WHO IT'S FOR
+
+What companies
+your size get paid.
+
+$10K - $100K
+
+20 - 50 EMPLOYEES
+
+$100K - $1M
+
+50 - 250 EMPLOYEES
+
+$1,000,000+
+
+250+ EMPLOYEES
+
+How data is valued
+
+Headcount is a proxy. How long you've been operating, what industry you're in, which apps you run on and how much data sits in each all factor into the final price.
+
+How it's structured
+
+You're paid up front, plus a revenue share of every license. And because your company keeps producing data, the revenue can recur.
+
+HOW IT WORKS
+
+Four steps.
+120 minutes of your time.
+VALUE
+
+Get a valuation
+
+Replay reviews your industry, the systems you run on, how much data sits in each, and how your team worked, to understand what it's worth.
+
+TERMS
+
+Receive an offer
+
+Replay presents an offer to license your data. These are typically structured as an upfront cash payment plus a perpetual revenue share.
+
+PROTECT
+
+De-identify your data
+
+We securely export your data and remove every category of identifying information, from names and emails to customer records and account numbers.
+
+PAYOUT
+
+Get paid
+
+You're paid for your historical data first. New data you produce follows the same path, and continues to pay you.
+
+THE PROCESS
+
+Data De-Identification
+PII COVERAGE
+Your data leaves cleaner than a medical record.
+
+The federal standard for de-identifying medical records (HIPAA) lists eighteen categories that have to be stripped out. We cover all eighteen, and many more. Names, emails, API keys, access tokens, customer records. Our methods cover 60+ categories, across every file type and application your business works in.
+
+OUR PIPELINE
+We built the pipeline and trained the model.
+
+General-purpose models aren't trained to find PII in Slack threads, support tickets or commit messages. So we trained one that is. On the same benchmark, our model identifies 99% of PII where NVIDIA's GLINER model found 36%. The model is only the first layer. An ensemble of processing stages runs behind it, so nothing depends on a single pass.
+
+DATA POLICY
+Set the scope and only license what you grant access to.
+
+Every engagement runs in its own isolated environment. No shared storage, processing, or paths between one client's data and another's. And most importantly, only de-identified data is ever licensed. Raw data is never sold or shared, and never leaves the pipeline.
+
+PII Coverage
+Our Pipeline
+Data Policy
+
+WHO BUYS IT
+
+Where your data gets sold
+
+Your data is only sold to frontier AI and data labs.
+
+Your data is never sold to foreign adversaries or resold through brokers.
+
+WHO IT'S FOR
+
+Any industry.
+One requirement.
+
+We work with companies in every industry. What matters isn't what you do, it's whether there's a record of how you did it: the communications, the tickets, the dispatch logs, the project histories, the back-and-forth that produced the outcome.
+
+Tech
+
+B2C
+
+E-commerce
+
+Services
+
+Legal
+
+Hardware
+
+CPG
+
+Finance
+
+Find out what your data is worth
+
+Value my data
+
+PROCESS
+
+IDENTIFIED
+STRUCTURED
+VERIFIED
+LICENSED
+
+RL-2026-001 // VERSION 1.0
+
+CLASSIFICATION
+PROPRIETARY DATA / LICENSING
+
+DEF LOAD_DATASET(SOURCE):
+RECORDS = SOURCE.READ()
+RETURN NORMALIZE(RECORDS)
+
+DEF LOAD_DATASET(SOURCE):
+RECORDS = SOURCE.READ()
+RETURN NORMALIZE(RECORDS)
+
+01 Product
+
+OVERVIEW
+HOW IT WORKS
+VALUATION
+DATA CLEANING
+
+02 Company
+
+ABOUT
+CAREERS
+
+03 Partners
+
+AI BUYERS
+DATA PRIVACY
+REFERRALS
+
+04 Legal
+
+PRIVACY POLICY
+TERMS OF USE
+COOKIE SETTINGS
+
+© 2026 REPLAY. ALL RIGHTS RESERVED
+SUNSETS HQ CORP.
+
+Optional measurement helps us understand how you found us and measure website performance. Change your choice in Cookie settings. Details
+
+Reject
+Accept

@@ -1,0 +1,752 @@
+{
+  "url": "https://www.replay.ai/",
+  "time": "2026-11-01T16:13:22.376Z",
+  "sheets": {
+    "desktop": "data/references/captures/ref-0002/sheet-desktop.png",
+    "mobile": "data/references/captures/ref-0002/sheet-mobile.png",
+    "motion": "data/references/captures/ref-0002/motion-sheet.png"
+  },
+  "load": {
+    "status": 200,
+    "retries": 0,
+    "failed": false
+  },
+  "overlaysDismissed": [],
+  "outline": {
+    "title": "Replay | Data as Growth Capital",
+    "description": "Replay values your company's operating data, strips every name and identifier, and pays you to license it to frontier AI labs.",
+    "headings": [
+      "H1 2% Fund growth by licensing the data you already have.",
+      "H2 19% You already own your next revenue stream.",
+      "H2 34% What companies your size get paid.",
+      "H2 46% Four steps. 120 minutes of your time.",
+      "H2 56% Data De-Identification",
+      "H3 59% Your data leaves cleaner than a medical record.",
+      "H3 59% We built the pipeline and trained the model.",
+      "H3 59% Set the scope and only license what you grant access to.",
+      "H2 66% Where your data gets sold",
+      "H2 76% Any industry. One requirement."
+    ],
+    "actions": [
+      {
+        "label": "Value my data",
+        "count": 3,
+        "firstAt": 0,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Details",
+        "count": 1,
+        "firstAt": 11,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Reject",
+        "count": 1,
+        "firstAt": 11,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Accept",
+        "count": 1,
+        "firstAt": 11,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "VALUE",
+        "count": 1,
+        "firstAt": 47,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "TERMS",
+        "count": 1,
+        "firstAt": 50,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "PROTECT",
+        "count": 1,
+        "firstAt": 51,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "PAYOUT",
+        "count": 1,
+        "firstAt": 52,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "PII Coverage",
+        "count": 1,
+        "firstAt": 63,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Our Pipeline",
+        "count": 1,
+        "firstAt": 63,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Data Policy",
+        "count": 1,
+        "firstAt": 63,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "OVERVIEW",
+        "count": 1,
+        "firstAt": 92,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "ABOUT",
+        "count": 1,
+        "firstAt": 92,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "AI BUYERS",
+        "count": 1,
+        "firstAt": 92,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "PRIVACY POLICY",
+        "count": 1,
+        "firstAt": 92,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "HOW IT WORKS",
+        "count": 1,
+        "firstAt": 93,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "VALUATION",
+        "count": 1,
+        "firstAt": 93,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "CAREERS",
+        "count": 1,
+        "firstAt": 93,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "DATA PRIVACY",
+        "count": 1,
+        "firstAt": 93,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "REFERRALS",
+        "count": 1,
+        "firstAt": 93,
+        "firstScreen": false,
+        "sticky": false
+      }
+    ],
+    "prices": [
+      "$10K",
+      "$100K",
+      "$1M",
+      "$1,000,000"
+    ],
+    "proofMentions": {
+      "review": 1,
+      "rating": 2
+    },
+    "logoImages": 1,
+    "forms": 0,
+    "pageHeight": 8022
+  },
+  "motion": {
+    "libraries": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "splitText": false,
+      "lenis": false,
+      "locomotive": false,
+      "swiper": false,
+      "lottie": false,
+      "framerMotion": false,
+      "viewTransitions": true
+    },
+    "stickyPanels": [],
+    "maxRunning": 58,
+    "durationsMs": {
+      "min": 200,
+      "max": 15000
+    },
+    "easings": [
+      "cubic-bezier(0.65, 0, 0.35, 1)",
+      "cubic-bezier(0.4, 0, 0.2, 1)",
+      "cubic-bezier(0.32, 0.72, 0, 1)",
+      "cubic-bezier(0, 0, 0.2, 1)",
+      "linear"
+    ],
+    "properties": [
+      "borderBottomColor",
+      "borderLeftColor",
+      "borderRightColor",
+      "borderTopColor",
+      "translate",
+      "opacity",
+      "clipPath",
+      "strokeDashoffset",
+      "borderLeftWidth",
+      "transform"
+    ],
+    "movingWithoutInput": 722,
+    "movingWithoutInputFurtherDown": [
+      {
+        "y": 900,
+        "moving": 164
+      },
+      {
+        "y": 1800,
+        "moving": 30
+      },
+      {
+        "y": 2700,
+        "moving": 4
+      }
+    ],
+    "scriptDrivenOnScroll": 176,
+    "infiniteLoops": 0,
+    "infiniteLoopsWithText": 0,
+    "pauseControl": false,
+    "steps": [
+      {
+        "y": 450,
+        "running": 21,
+        "scriptDriven": 176,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "header.fixed",
+            "hasText": true,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.65, 0, 0.35, 1)",
+            "props": [
+              "borderBottomColor"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "header.fixed",
+            "hasText": true,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.65, 0, 0.35, 1)",
+            "props": [
+              "borderLeftColor"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "header.fixed",
+            "hasText": true,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.65, 0, 0.35, 1)",
+            "props": [
+              "borderRightColor"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "header.fixed",
+            "hasText": true,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.65, 0, 0.35, 1)",
+            "props": [
+              "borderTopColor"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "header.fixed",
+            "hasText": true,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.65, 0, 0.35, 1)",
+            "props": [
+              "translate"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.pointer-events-none",
+            "hasText": false,
+            "duration": 500,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      },
+      {
+        "y": 900,
+        "running": 3,
+        "scriptDriven": 173,
+        "idleMoving": 164,
+        "sample": [
+          {
+            "target": "div.ps",
+            "hasText": false,
+            "duration": 270,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.32, 0.72, 0, 1)",
+            "props": [
+              "clipPath"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.ps",
+            "hasText": false,
+            "duration": 270,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.32, 0.72, 0, 1)",
+            "props": [
+              "clipPath"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.stp",
+            "hasText": false,
+            "duration": 310,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.32, 0.72, 0, 1)",
+            "props": [
+              "clipPath"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      },
+      {
+        "y": 1350,
+        "running": 7,
+        "scriptDriven": 164,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.stp",
+            "hasText": false,
+            "duration": 380,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.32, 0.72, 0, 1)",
+            "props": [
+              "clipPath"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.ps",
+            "hasText": false,
+            "duration": 270,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.32, 0.72, 0, 1)",
+            "props": [
+              "clipPath"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.ps",
+            "hasText": false,
+            "duration": 270,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.32, 0.72, 0, 1)",
+            "props": [
+              "clipPath"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.ps",
+            "hasText": false,
+            "duration": 270,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.32, 0.72, 0, 1)",
+            "props": [
+              "clipPath"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "path",
+            "hasText": false,
+            "duration": 650,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.32, 0.72, 0, 1)",
+            "props": [
+              "strokeDashoffset"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "g",
+            "hasText": true,
+            "duration": 420,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.32, 0.72, 0, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      },
+      {
+        "y": 1800,
+        "running": 58,
+        "scriptDriven": 12,
+        "idleMoving": 30,
+        "sample": [
+          {
+            "target": "div.pointer-events-none",
+            "hasText": false,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "cubic-bezier(0, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.pointer-events-none",
+            "hasText": false,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "cubic-bezier(0, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.pointer-events-none",
+            "hasText": false,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "cubic-bezier(0, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.pointer-events-none",
+            "hasText": false,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "cubic-bezier(0, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.pointer-events-none",
+            "hasText": false,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "cubic-bezier(0, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.absolute",
+            "hasText": true,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "cubic-bezier(0, 0, 0.2, 1)",
+            "props": [
+              "borderLeftWidth"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      },
+      {
+        "y": 2250,
+        "running": 46,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "p.font-serif",
+            "hasText": true,
+            "duration": 500,
+            "iterations": 1,
+            "easing": "cubic-bezier(0, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "p.font-serif",
+            "hasText": true,
+            "duration": 500,
+            "iterations": 1,
+            "easing": "cubic-bezier(0, 0, 0.2, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.relative",
+            "hasText": false,
+            "duration": 500,
+            "iterations": 1,
+            "easing": "cubic-bezier(0, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.relative",
+            "hasText": false,
+            "duration": 500,
+            "iterations": 1,
+            "easing": "cubic-bezier(0, 0, 0.2, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.relative",
+            "hasText": false,
+            "duration": 500,
+            "iterations": 1,
+            "easing": "cubic-bezier(0, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.relative",
+            "hasText": false,
+            "duration": 500,
+            "iterations": 1,
+            "easing": "cubic-bezier(0, 0, 0.2, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      },
+      {
+        "y": 2700,
+        "running": 26,
+        "scriptDriven": 20,
+        "idleMoving": 4,
+        "sample": [
+          {
+            "target": "div.relative",
+            "hasText": false,
+            "duration": 500,
+            "iterations": 1,
+            "easing": "cubic-bezier(0, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.relative",
+            "hasText": false,
+            "duration": 500,
+            "iterations": 1,
+            "easing": "cubic-bezier(0, 0, 0.2, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.relative",
+            "hasText": false,
+            "duration": 500,
+            "iterations": 1,
+            "easing": "cubic-bezier(0, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.relative",
+            "hasText": false,
+            "duration": 500,
+            "iterations": 1,
+            "easing": "cubic-bezier(0, 0, 0.2, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.relative",
+            "hasText": false,
+            "duration": 500,
+            "iterations": 1,
+            "easing": "cubic-bezier(0, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.relative",
+            "hasText": false,
+            "duration": 500,
+            "iterations": 1,
+            "easing": "cubic-bezier(0, 0, 0.2, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      },
+      {
+        "y": 3150,
+        "running": 0,
+        "scriptDriven": 12,
+        "idleMoving": null,
+        "sample": []
+      },
+      {
+        "y": 3600,
+        "running": 0,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": []
+      },
+      {
+        "y": 4050,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "span.pointer-events-none",
+            "hasText": false,
+            "duration": 15000,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "clipPath"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 4500,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "span.pointer-events-none",
+            "hasText": false,
+            "duration": 15000,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "clipPath"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      }
+    ]
+  },
+  "smoothness": {
+    "page": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 15504,
+      "frames": 248,
+      "fps": 16,
+      "medianMs": 33.3,
+      "p95Ms": 283.3,
+      "maxMs": 733,
+      "longFrames": 56,
+      "droppedShare": 44,
+      "longTasks": 7,
+      "longTaskMs": 697,
+      "scriptBlockedShare": 4,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "baseline": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 1709,
+      "frames": 103,
+      "fps": 60.3,
+      "medianMs": 16.7,
+      "p95Ms": 16.7,
+      "maxMs": 17,
+      "longFrames": 0,
+      "droppedShare": 0,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "longFramesOverBaseline": 56,
+    "p95OverBaseline": 266.6
+  },
+  "reducedMotion": {
+    "movingWithoutInput": 0,
+    "movingOnScroll": 47,
+    "idleNavigation": null,
+    "loadFailed": false
+  },
+  "idleRunLoadFailed": false,
+  "idleNavigation": null
+}

@@ -1,12 +1,14 @@
 {
   "url": "https://scotchpos.com/",
-  "readAt": "2026-11-01T16:08:48.064Z",
+  "readAt": "2026-11-01T16:14:50.791Z",
   "tags": [
     "gradient-heavy",
     "shadowed",
     "restrained-colour",
     "dark",
-    "pill-shapes"
+    "pill-shapes",
+    "endless-motion",
+    "ignores-reduced-motion"
   ],
   "palette": {
     "chromatic": 1,
@@ -83,7 +85,29 @@
     "distinct": 44,
     "offScale": 20
   },
-  "motion": null,
+  "motion": {
+    "libraries": [
+      "swiper",
+      "framerMotion"
+    ],
+    "stickyPanels": 0,
+    "durationsMs": {
+      "min": 200,
+      "max": 10000
+    },
+    "easings": [
+      "cubic-bezier(0.4, 0, 0.2, 1)",
+      "linear",
+      "cubic-bezier(0, 0, 0.2, 1)"
+    ],
+    "reducedMotionRespected": false,
+    "smoothness": {
+      "fps": 56.6,
+      "longFrames": 0,
+      "baselineLongFrames": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    }
+  },
   "layout": {
     "pageHeight": 8083,
     "screens": 9
@@ -94,6 +118,7 @@
     "img-broken: 1 images failed to load",
     "contrast: 3 text colour pairs below WCAG AA",
     "img-alt: 1 images without an alt attribute",
-    "tap-target: 12 controls smaller than 24x24px on a phone"
+    "tap-target: 12 controls smaller than 24x24px on a phone",
+    "motion without a reduced-motion path"
   ]
 }
