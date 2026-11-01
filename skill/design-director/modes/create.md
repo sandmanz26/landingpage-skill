@@ -109,8 +109,11 @@ references with the role each one plays (see `rules/copyright.md`), and read the
 5. Never carry over anything in `doNotCopy`, under a veto, or from an entry marked `patternOnly`
    (those are used through their tags only).
 
-Show the direction gate (SKILL.md). Recommend the direction whose device carries something only
-this client has, not the most familiar one. After the user chooses: write the choice (or the mix)
+Show the direction gate (SKILL.md) with the visual dials (`rules/visual-dials.md`). Recommend the
+direction whose device carries something only this client has, not the most familiar one, and set
+the dials from the team's taste (`team/visual-defaults.json`) unless the brief or the brand says
+otherwise; a recommendation that turns a dial away from the team's taste says why. After the user
+chooses: write `.design/targets.json` (the dials with the user's words), the choice (or the mix)
 with `progress.mjs log`, `approve direction --note "..."`, `done direction`.
 
 Redraw (`draw.mjs` again with `--exclude <ids>`) only for a reason you can state: it needs an asset
@@ -182,8 +185,10 @@ violet or indigo accents unless the brand owns them.
 
 Imagery, in this order: the client's own → generated, if an image tool is available → real pictures
 of the subject's world from open collections with a licence that allows commercial use, credited →
-drawn in code from the subject itself → type and colour alone. Never present a found or generated
-picture as the client's own product, room, dish or team.
+drawn in code from the subject itself (`rules/illustration.md`) → type and colour alone, only when
+the `imagery` dial says `type`. Never present a found or generated picture as the client's own
+product, room, dish or team. Write an **imagery plan** in the spec: every picture on the page, what
+it shows, where it comes from, and the shot list for the client.
 
 ## 8. copy
 
@@ -237,6 +242,11 @@ folder. Combine with `jury.mjs score .design/jury/<round>` and write the combine
 `.design/critique.md`: the scores, the flagged disagreements, any veto, and the top three problems
 across all jurors. At quick effort one critic (`rubric/critic.md`) is enough.
 
+Before the jurors, run `fit.mjs .design/inspect --targets .design/targets.json` and give its result
+to the jurors with the evidence pack. Every missed target is fixed, or `.design/critique.md` gets a
+**Fit** section with the reason it stays (the user's later instruction, a brand rule, a measured
+problem the target would cause).
+
 Fix the top three problems (every veto first), inspect again, look again. At most three rounds
 (one at quick effort).
 
@@ -258,7 +268,9 @@ Show the package:
 - the hypotheses to test after launch, with the metric for each;
 - every `[SAMPLE]` item to replace, every found picture with its credit, every picture that stands
   in for photography;
-- WARNs kept, each with its one-sentence defence.
+- WARNs kept, each with its one-sentence defence;
+- the fit against the dials (`fit.mjs`), and **Supaya lebih bagus**: at most five things the user
+  can supply or decide to lift the result, each with what it would change (SKILL.md, final gate).
 
 Copy the final screenshots to `.design/snapshots/<date>-v<n>/`. After the user approves:
 `approve final`, `done deliver`.

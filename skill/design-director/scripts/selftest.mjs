@@ -169,6 +169,43 @@ const check = (name, ok, detail = '') => {
   check('style reads a style card with tags and a do-not-copy list', !!card && Array.isArray(card.tags) && card.doNotCopy.some((d) => /contrast/.test(d)) && card.type.body > 0, st.stdout + st.stderr);
 }
 
+// fit: the built page against the visual dials
+{
+  const dir = path.join(tmp, 'slop');
+  const t1 = path.join(tmp, 'targets-hard.json');
+  const t2 = path.join(tmp, 'targets-easy.json');
+  fs.writeFileSync(t1, JSON.stringify({ typeRatio: 50, priceNearAction: false }));
+  fs.writeFileSync(t2, JSON.stringify({ typeRatio: 1, priceNearAction: false }));
+  const miss = run('fit.mjs', [dir, '--targets', t1]);
+  const ok = run('fit.mjs', [dir, '--targets', t2]);
+  check('fit reports a missed visual target', miss.status === 1 && /MISS type/.test(miss.stdout), miss.stdout + miss.stderr);
+  check('fit passes a met visual target', ok.status === 0 && /All targets met/.test(ok.stdout), ok.stdout + ok.stderr);
+}
+
+// progress: the direction gate needs the dials
+{
+  const proj = path.join(tmp, 'dials');
+  fs.mkdirSync(proj);
+  const p = (...a) => run('progress.mjs', a, proj);
+  p('init', '--mode', 'create', '--effort', 'quick', '--gates', 'autopilot');
+  const d = path.join(proj, '.design');
+  fs.writeFileSync(path.join(d, 'brief.md'), '# Brief');
+  p('approve', 'brief'); p('done', 'brief');
+  fs.writeFileSync(path.join(d, 'research.md'), '# Research\n## Sources\n- x');
+  p('done', 'research');
+  fs.writeFileSync(path.join(d, 'strategy.md'), '# Strategy');
+  p('done', 'strategy');
+  fs.writeFileSync(path.join(d, 'roast.md'), '# Roast\n## Response\n| 1 | Accepted |');
+  p('approve', 'strategy'); p('done', 'roast');
+  fs.mkdirSync(path.join(d, 'directions'));
+  p('approve', 'direction');
+  const without = p('done', 'direction');
+  fs.writeFileSync(path.join(d, 'targets.json'), JSON.stringify({ colour: 'bold', typeRatio: 6 }));
+  const withDials = p('done', 'direction');
+  check('progress refuses a direction without the visual dials', without.status !== 0 && /targets\.json/.test(without.stdout + without.stderr), without.stdout + without.stderr);
+  check('progress accepts a direction with the visual dials', withDials.status === 0, withDials.stdout + withDials.stderr);
+}
+
 // library: build from judged batches with style cards, then find by business words
 {
   const data = path.join(tmp, 'refs');

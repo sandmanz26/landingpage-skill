@@ -75,7 +75,8 @@ weights"); without them use these:
 Caps: a failed five-second test caps Clarity at 4. A page a competitor could use caps
 Distinctiveness at 5. Any broken thing visible in a screenshot caps Craft at 5. Fewer than four of
 the five customer questions answered caps Customer at 5. No visible action on the first screen caps
-Business at 4.
+Business at 4. Two or more missed visual targets (`fit.mjs`) without a reason in the Fit section cap
+Distinctiveness at 6.
 
 ### The five-questions test
 

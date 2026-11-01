@@ -65,6 +65,12 @@ if (motion) {
   tag(motion.infiniteLoopsWithText > 0 || (motion.movingWithoutInputFurtherDown || []).length > 0, 'endless-motion');
   tag(!motion.libraries.gsap && !motion.libraries.scrollTrigger && motion.scriptDrivenOnScroll <= 3 && !(motion.stickyPanels || []).length, 'calm-motion');
 }
+const imagery = ev && ev.outline.imagery ? ev.outline.imagery : null;
+if (imagery) {
+  tag(imagery.photos + imagery.videos >= 2, 'photography');
+  tag(imagery.illustrations >= 2, 'illustration');
+  tag(imagery.photos + imagery.videos + imagery.illustrations === 0, 'type-only');
+}
 tag(reduced && reduced.movingWithoutInput + reduced.movingOnScroll > 3, 'ignores-reduced-motion');
 tag(ev && ev.overlaysDismissed && ev.overlaysDismissed.length > 0, 'pop-up-on-load');
 tag(desk.cls > 0.25, 'layout-shift');
@@ -107,6 +113,7 @@ const style = {
         smoothness: ev.smoothness ? { fps: ev.smoothness.page.fps, longFrames: ev.smoothness.page.longFrames, baselineLongFrames: ev.smoothness.baseline.longFrames, renderer: ev.smoothness.page.renderer } : null,
       }
     : null,
+  imagery,
   layout: { pageHeight: desk.cls !== undefined ? (report.viewports.desktop.pageHeight || null) : null, screens: report.viewports.desktop.pageHeight ? Math.round(report.viewports.desktop.pageHeight / 900) : null },
   doNotCopy,
 };

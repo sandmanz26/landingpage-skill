@@ -161,6 +161,15 @@ switch (cmd) {
       if (!/##\s*(Sources|Sumber)/i.test(r)) fail('research.md needs a "## Sources" section listing what was read, with dates.');
     }
     if (step === 'direction' && !fs.existsSync(path.join(DIR, 'directions'))) fail('"direction" needs the dealt directions in .design/directions/.');
+    if (step === 'direction' && !fs.existsSync(path.join(DIR, 'targets.json')))
+      fail('"direction" needs .design/targets.json: the visual dials the user chose (rules/visual-dials.md), or team/visual-defaults.json copied with the reason.');
+    if (step === 'look' && fs.existsSync(path.join(DIR, 'targets.json'))) {
+      const fp = path.join(DIR, 'inspect/fit.json');
+      if (!fs.existsSync(fp)) fail('Run fit.mjs .design/inspect --targets .design/targets.json before the look.');
+      const fit = JSON.parse(fs.readFileSync(fp, 'utf8'));
+      const c = fs.readFileSync(path.join(DIR, 'critique.md'), 'utf8');
+      if (fit.missed > 0 && !/##\s*Fit/i.test(c)) fail(`${fit.missed} visual target(s) missed (fit.json): fix them, or add a "## Fit" section to critique.md with the reason each stays.`);
+    }
     if (step === 'gate') {
       const rp = path.join(DIR, 'inspect/report.json');
       if (!fs.existsSync(rp)) fail('Run inspect.mjs on the page first.');

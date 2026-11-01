@@ -182,6 +182,19 @@ const outline = await page.evaluate(() => {
     proofMentions: Object.fromEntries(proofWords.map((w) => [w, lower.split(w).length - 1]).filter(([, n]) => n > 0)),
     logoImages: [...document.querySelectorAll('img')].filter((i) => /logo/i.test((i.alt || '') + (i.src || ''))).length,
     forms: document.querySelectorAll('form').length,
+    // Pictures that carry the page, not icons: at least 160px on both sides.
+    imagery: (() => {
+      const big = (e) => {
+        const r = e.getBoundingClientRect();
+        return r.width >= 160 && r.height >= 160 && getComputedStyle(e).visibility !== 'hidden';
+      };
+      const bgPhotos = [...document.querySelectorAll('body *')].filter((e) => /url\(/.test(getComputedStyle(e).backgroundImage) && big(e)).length;
+      return {
+        photos: [...document.querySelectorAll('img, picture')].filter((i) => big(i) && !/\.svg(\?|$)/i.test(i.currentSrc || i.src || '')).length + bgPhotos,
+        illustrations: [...document.querySelectorAll('svg, img[src$=".svg"], canvas')].filter((e) => big(e) && (e.tagName !== 'svg' || e.querySelectorAll('path, circle, rect, ellipse, polygon').length >= 6)).length,
+        videos: [...document.querySelectorAll('video')].filter(big).length,
+      };
+    })(),
     pageHeight: H,
   };
 });

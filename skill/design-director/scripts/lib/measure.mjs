@@ -348,9 +348,11 @@ export function measure({ rules, viewport }) {
     if (cs.borderTopLeftRadius !== '0px') radii.add(cs.borderTopLeftRadius);
     const dropShadow = cs.boxShadow !== 'none' && cs.boxShadow.split(/,(?![^(]*\))/).some((x) => !/inset/.test(x));
     if (dropShadow) shadows++;
-    if (cs.backgroundImage.includes('gradient')) {
+    const gradCols = cs.backgroundImage.includes('gradient') ? cs.backgroundImage.match(/(rgba?|oklch|oklab|hsla?|color)\([^)]*\)|#[0-9a-f]{3,8}/gi) || [] : [];
+    // A one-colour "gradient" is a fill trick (a highlighter mark, a stripe), not a gradient.
+    if (cs.backgroundImage.includes('gradient') && new Set(gradCols.map((c) => c.replace(/\s/g, ''))).size > 1) {
       gradients++;
-      const cols = cs.backgroundImage.match(/(rgba?|oklch|oklab|hsla?|color)\([^)]*\)|#[0-9a-f]{3,8}/gi) || [];
+      const cols = gradCols;
       if (cols.some((s) => {
         const h = hsl(rgba(s));
         return h.s > 0.3 && h.h >= 235 && h.h <= 300;

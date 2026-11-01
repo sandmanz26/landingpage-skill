@@ -109,6 +109,10 @@ research. Show, in this order:
 - *Guided:* three cards from `draw.mjs`, each with the idea sentence, composition in one line, type
   and colour approach, and why it fits this subject. Say which you recommend and why. The user may
   pick one or mix ("type from A, layout from B"); write the mix into the spec.
+  Under the cards, the **visual dials** (`rules/visual-dials.md`), each set to your recommendation
+  with one reason and what it needs from the client: colour energy, type expression, imagery,
+  motion, price. Name team references as presets ("warna seperti Swehl"). Translate vague words
+  into dial values and show the translation back. The answer goes to `.design/targets.json`.
 - *Quick:* the recommended card only, plus "the other two are in `.design/directions/` if you want
   them". Continue on "ok", "lanjut" or similar.
 
@@ -116,7 +120,10 @@ If the user answers "terserah" or takes the recommendation three times in a row,
 them to quick gates and, if they agree, write that to `designers/<name>.md`.
 
 **Final gate** (`approve final`). The package from the mode file: what was built, screenshots at
-desktop and phone, what is sample content, open issues.
+desktop and phone, what is sample content, open issues, and **"Supaya lebih bagus"**: at most five
+concrete things the user can do or decide to lift the result (pictures to supply, with the shot
+list; real proof to collect; a dial worth turning; a higher effort level), each with what it would
+change.
 
 ## When the user changes their mind
 
@@ -165,6 +172,8 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 | `rubric/critic.md` | Briefing the critic subagent; the critique format every juror uses |
 | `rubric/jury.md` | The look step and best-of-N at standard effort and above; judging references |
 | `library/intake.md` | When the team sends references with their notes |
+| `rules/visual-dials.md` | The direction gate: the dials, presets from the library, how to guide the user |
+| `rules/illustration.md` | Writing the spec when the client has no pictures: drawing flat illustration, the shot list |
 | `library/index.json` (via `library.mjs find`) | The direction step: the team's judged references with their style cards; adapt each to the client or ask (`modes/create.md`) |
 | `team/taste.md`, `brands/`, `designers/` | At the start, if present |
 
@@ -179,6 +188,7 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 | `evidence.mjs <url or file> --dir <dir>` | Evidence pack for the jury: contact sheets, motion frames, outline, motion, reduced-motion and idle results |
 | `digest.mjs <dir>` | `digest.md`: the one short file a juror reads first (outline, motion, inventory, findings, page text) |
 | `capture.mjs <list.txt> [--jobs 3]` | Runs inspect, evidence, digest and style for a whole batch in parallel |
+| `fit.mjs <inspect dir> [--targets .design/targets.json]` | The built page against the chosen dials and the team's taste; misses need a fix or a reason |
 | `style.mjs <dir>` | Style card of a captured reference: palette, type, shape, motion, tags, do-not-copy |
 | `library.mjs build` / `find <words> --tags a,b` | Builds `library/index.json` from judged batches; finds the closest references with their style |
 | `smooth.mjs <url> [--dir d] [--cpu 4]` | Scroll stutter against a plain page on the same machine |
