@@ -1,0 +1,408 @@
+{
+  "target": "index.html",
+  "time": "2026-11-01T18:06:01.258Z",
+  "rules": {
+    "purple-gradient": "warn",
+    "gradient": "info",
+    "glass": "info",
+    "system-font-only": "warn",
+    "too-many-font-sizes": "warn",
+    "too-many-colours": "warn",
+    "shadow-on-everything": "warn",
+    "icon-card-row": "warn",
+    "centred-hero-two-ctas": "warn",
+    "emoji": "warn"
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "pageHeight": 9534,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "too-many-font-sizes",
+          "message": "13 different font sizes on the page (aim for 5 or fewer doing the visible work)"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Figtree",
+            "share": 86
+          },
+          {
+            "family": "DM Mono",
+            "share": 8
+          },
+          {
+            "family": "Bricolage Grotesque",
+            "share": 6
+          }
+        ],
+        "fontSizes": [
+          107,
+          92,
+          80,
+          58,
+          42,
+          35,
+          25,
+          22,
+          20,
+          18,
+          17,
+          16,
+          13
+        ],
+        "textColours": [
+          "#0f4c4a",
+          "#4c5a57",
+          "#172321",
+          "#b8cdc8",
+          "#f7f6f1",
+          "#d6e4e0",
+          "#9fbdb7",
+          "#c4d8d3",
+          "#f2c14e"
+        ],
+        "backgroundColours": [
+          "#f7f6f1",
+          "#e8613c",
+          "#0f4c4a",
+          "#eaf1ee"
+        ],
+        "chromaticColours": 6,
+        "colourFamilies": 3,
+        "spacing": {
+          "distinct": 28,
+          "offScale": 15,
+          "values": [
+            3,
+            4,
+            6,
+            7,
+            8,
+            9,
+            10,
+            12,
+            13.5,
+            14,
+            16,
+            17,
+            18,
+            18.5,
+            20,
+            22,
+            22.5,
+            24,
+            26,
+            30,
+            32,
+            34,
+            36,
+            40,
+            44,
+            56,
+            72,
+            96
+          ]
+        },
+        "radii": [
+          "14px",
+          "22px",
+          "6px"
+        ],
+        "shadows": 0,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 1,
+        "animatedElements": 8,
+        "cls": 0.001
+      },
+      "screenshots": [
+        ".design/inspect/desktop-fold.png",
+        ".design/inspect/desktop-page-01.png",
+        ".design/inspect/desktop-page-02.png",
+        ".design/inspect/desktop-page-03.png",
+        ".design/inspect/desktop-page-04.png",
+        ".design/inspect/desktop-page-05.png",
+        ".design/inspect/desktop-page-06.png",
+        ".design/inspect/desktop-page-07.png",
+        ".design/inspect/desktop-page-08.png",
+        ".design/inspect/desktop-page-09.png",
+        ".design/inspect/desktop-page-10.png",
+        ".design/inspect/desktop-page-11.png"
+      ]
+    },
+    "tablet": {
+      "width": 768,
+      "pageHeight": 10618,
+      "findings": [],
+      "inventory": {
+        "families": [
+          {
+            "family": "Figtree",
+            "share": 87
+          },
+          {
+            "family": "DM Mono",
+            "share": 7
+          },
+          {
+            "family": "Bricolage Grotesque",
+            "share": 6
+          }
+        ],
+        "fontSizes": [
+          57,
+          54,
+          46,
+          42,
+          35,
+          34,
+          25,
+          22,
+          20,
+          18,
+          17,
+          16,
+          13
+        ],
+        "textColours": [
+          "#0f4c4a",
+          "#172321",
+          "#4c5a57",
+          "#b8cdc8",
+          "#f7f6f1",
+          "#d6e4e0",
+          "#9fbdb7",
+          "#c4d8d3",
+          "#f2c14e"
+        ],
+        "backgroundColours": [
+          "#f7f6f1",
+          "#e8613c",
+          "#0f4c4a",
+          "#eaf1ee"
+        ],
+        "chromaticColours": 6,
+        "colourFamilies": 3,
+        "spacing": {
+          "distinct": 29,
+          "offScale": 16,
+          "values": [
+            3,
+            4,
+            6,
+            7,
+            8,
+            9,
+            10,
+            12,
+            13.5,
+            14,
+            16,
+            17,
+            18,
+            18.5,
+            20,
+            22,
+            22.5,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38.5,
+            40,
+            44,
+            56,
+            72
+          ]
+        },
+        "radii": [
+          "14px",
+          "22px",
+          "6px"
+        ],
+        "shadows": 0,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 1,
+        "animatedElements": 8,
+        "cls": 0.001
+      },
+      "screenshots": [
+        ".design/inspect/tablet-fold.png",
+        ".design/inspect/tablet-page-01.png",
+        ".design/inspect/tablet-page-02.png",
+        ".design/inspect/tablet-page-03.png",
+        ".design/inspect/tablet-page-04.png",
+        ".design/inspect/tablet-page-05.png",
+        ".design/inspect/tablet-page-06.png",
+        ".design/inspect/tablet-page-07.png",
+        ".design/inspect/tablet-page-08.png",
+        ".design/inspect/tablet-page-09.png",
+        ".design/inspect/tablet-page-10.png",
+        ".design/inspect/tablet-page-11.png"
+      ]
+    },
+    "mobile": {
+      "width": 390,
+      "pageHeight": 11860,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "screenshots-capped",
+          "message": "Page is 11860px tall; only the first 14 screens were captured"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Figtree",
+            "share": 88
+          },
+          {
+            "family": "DM Mono",
+            "share": 7
+          },
+          {
+            "family": "Bricolage Grotesque",
+            "share": 6
+          }
+        ],
+        "fontSizes": [
+          54,
+          48,
+          42,
+          35,
+          34,
+          25,
+          22,
+          20,
+          18,
+          17,
+          16,
+          13
+        ],
+        "textColours": [
+          "#0f4c4a",
+          "#4c5a57",
+          "#172321",
+          "#b8cdc8",
+          "#f7f6f1",
+          "#d6e4e0",
+          "#9fbdb7",
+          "#c4d8d3",
+          "#f2c14e"
+        ],
+        "backgroundColours": [
+          "#f7f6f1",
+          "#e8613c",
+          "#0f4c4a",
+          "#eaf1ee"
+        ],
+        "chromaticColours": 6,
+        "colourFamilies": 3,
+        "spacing": {
+          "distinct": 27,
+          "offScale": 14,
+          "values": [
+            3,
+            4,
+            6,
+            7,
+            8,
+            9,
+            10,
+            12,
+            13.5,
+            14,
+            16,
+            18,
+            18.5,
+            20,
+            22,
+            22.5,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            40,
+            44,
+            56,
+            72
+          ]
+        },
+        "radii": [
+          "14px",
+          "22px",
+          "6px"
+        ],
+        "shadows": 0,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 2,
+        "animatedElements": 9,
+        "cls": 0.03
+      },
+      "screenshots": [
+        ".design/inspect/mobile-fold.png",
+        ".design/inspect/mobile-page-01.png",
+        ".design/inspect/mobile-page-02.png",
+        ".design/inspect/mobile-page-03.png",
+        ".design/inspect/mobile-page-04.png",
+        ".design/inspect/mobile-page-05.png",
+        ".design/inspect/mobile-page-06.png",
+        ".design/inspect/mobile-page-07.png",
+        ".design/inspect/mobile-page-08.png",
+        ".design/inspect/mobile-page-09.png",
+        ".design/inspect/mobile-page-10.png",
+        ".design/inspect/mobile-page-11.png",
+        ".design/inspect/mobile-page-12.png",
+        ".design/inspect/mobile-page-13.png",
+        ".design/inspect/mobile-page-14.png"
+      ]
+    }
+  },
+  "checks": {
+    "reducedMotion": {
+      "findings": [],
+      "screenshot": ".design/inspect/reduced-motion-fold.png"
+    },
+    "noJavaScript": {
+      "findings": [],
+      "withJs": 5599,
+      "withoutJs": 5580
+    }
+  },
+  "summary": {
+    "fail": 0,
+    "warn": 2
+  },
+  "url": "http://127.0.0.1:45003/index.html",
+  "findings": [
+    {
+      "severity": "WARN",
+      "rule": "too-many-font-sizes",
+      "message": "13 different font sizes on the page (aim for 5 or fewer doing the visible work)",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "screenshots-capped",
+      "message": "Page is 11860px tall; only the first 14 screens were captured",
+      "where": [
+        "mobile"
+      ]
+    }
+  ]
+}

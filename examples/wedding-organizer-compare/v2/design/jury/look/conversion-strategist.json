@@ -1,0 +1,21 @@
+{
+  "juror": "conversion-strategist",
+  "kind": "ai",
+  "scores": { "business": 8 },
+  "reasons": {
+    "business": "Everything leads to one action, a WhatsApp date check: the hero button and the nav 'Cek tanggal' (desktop-fold), the button below pricing (desktop-page-03), the closing block (desktop-page-11) and a sticky bottom bar on every mobile screen (sheet-mobile). The only other options are 'Lihat harga' and 'Cek kami dulu', both shown as text links, so nothing competes with the button. The price sits next to the action: 'Koordinasi hari H mulai Rp 9,5 juta' is directly under the hero button on desktop and mobile (desktop-fold, mobile-fold). The pricing section answers 'where does my money go' better than most WO pages. It shows three fee-only tiers, a 30/40/30 schedule with the final payment at H+1, and the money flow 'Kalian → vendor / Kalian → Jalinan' (desktop-page-02, -03). The trust section offers things a couple can check themselves (office address and hours, the original NIB, vendor phone numbers, the last three couples' numbers, a sample contract), which fits a fraud-wary couple (sheet-desktop page-03/04). It keeps the score from 9: there is no proof the team is any good (digest: 'proof words: none', no photos of real weddings, no count of weddings or years), the price depends on guest count without saying so, and the cancellation terms are vague."
+  },
+  "problems": [
+    "The offer contradicts itself. The pricing cards fix the crew per package ('6 kru' Hari H, '8 kru' Pendampingan, '10 kru' Penuh; desktop-page-02), but the day-of section says crew follows guest count ('6 orang untuk sampai 300 tamu, 8 untuk 600, 10 untuk 1.000'). The page also promises 'Biaya tambahan: tidak ada', and the hero says 'mulai' while the cards do not. A couple with 600 guests cannot tell what they will pay. Smallest fix: add one line under the cards, e.g. 'Harga untuk sampai 300 tamu; 301–600 tamu +Rp X jt', and use the 'mulai' wording in the cards too, or remove crew counts from the cards.",
+    "The page shows the business is real but not that it is good. It has no testimonial, no count of weddings run, no years in business and no photo of a real event; only an offer to call three couples. Parents who decide with the couple need to see proof on the page before they message. Smallest fix: add one row to 'Cek kami dulu' with a hard number ('120 pernikahan sejak 2019') and a short quote from one of the three couples, with first names and the venue.",
+    "The cancellation answer ('tahap yang sudah dibayar menutup pekerjaan yang sudah dikerjakan', desktop-page-03 and the FAQ) does not say whether the 30% deposit comes back. 'What if we cancel' is the customer's last question. Smallest fix: state it in money terms, e.g. 'Batal sebelum H-30: 30% pertama tidak kembali, tahap 2 dan 3 tidak ditagih. Batal setelah H-30: 70% tidak kembali.' Minor: the pricing button (24%) asks for contact before the trust section (27%). Moving that button below the trust section, or adding one trust line beside it, would put the evidence first."
+  ],
+  "keep": [
+    "The single WhatsApp date-check action, the mobile sticky bar and the button wording 'Cek tanggal kosong'. It is a low-commitment ask that fits couples 6-12 months out.",
+    "The starting price stated next to the hero button.",
+    "The fee-only pricing, the 'Kalian → vendor / Kalian → Jalinan' money flow, and the 30/40/30 schedule with the final payment at H+1. These are the page's strongest answer to the fraud fear.",
+    "The 'Cek kami dulu' list of things a couple can verify themselves, and its hero link.",
+    "The closing block that says what happens after they message (answer within one working day, a free 45-minute consultation, contract before deciding)."
+  ],
+  "veto": "none. Nothing reaches the veto bar. The 'Kenapa begini' story (a couple paid in full, then the venue had only received the deposit at H-10) is told as fact without a source. It is industry context, not a claim about Jalinan, and the brief confirms such cases exist, so add a source or the word 'kasus' with the month. 'Biaya tambahan: tidak ada' becomes a promise the business cannot keep if crew size, and so cost, follows guest count. Fix problem 1 and that risk goes away."
+}

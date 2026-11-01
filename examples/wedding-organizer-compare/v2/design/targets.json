@@ -1,0 +1,11 @@
+{
+  "colour": "calm",
+  "typeRatio": 6,
+  "imagery": "illustration",
+  "motion": "story",
+  "priceNearAction": true,
+  "said": {
+    "all": "Setuju brief dan strategi. Arah A. Dial: warna kalem, huruf tegas ×6, gambar ilustrasi, gerak cerita, harga dekat tombol ya."
+  },
+  "differsFromTeam": { "colour": "team default is bold; the user chose calm for this project (user instruction outranks team taste, rules/precedence.md)" }
+}

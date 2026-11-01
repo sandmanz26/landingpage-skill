@@ -1,0 +1,418 @@
+{
+  "url": "http://127.0.0.1:37097/index.html",
+  "time": "2026-11-01T18:07:37.109Z",
+  "sheets": {
+    "desktop": ".design/inspect/sheet-desktop.png",
+    "mobile": ".design/inspect/sheet-mobile.png",
+    "motion": ".design/inspect/motion-sheet.png"
+  },
+  "load": {
+    "status": 200,
+    "retries": 0,
+    "failed": false
+  },
+  "overlaysDismissed": [],
+  "outline": {
+    "title": "Jalinan Wedding Organizer · Jakarta",
+    "description": "Wedding organizer di Jakarta. Hari H berjalan, kalian tinggal hadir. Vendor dibayar langsung, fee bertahap, pelunasan setelah acara.",
+    "headings": [
+      "H1 2% Hari H berjalan. Kalian tinggal hadir.",
+      "H2 12% Harga, dan ke mana uang kalian pergi",
+      "H3 14% Hari H",
+      "H3 14% Pendampingan",
+      "H3 14% Penuh",
+      "H2 30% Takut ketemu WO bodong? Wajar. Cek kami dulu.",
+      "H2 37% Dari H-365 sampai H+1",
+      "H2 46% Satu hari, jam demi jam",
+      "H2 85% Tanyakan ini ke WO mana pun",
+      "H2 94% Kirim tanggal dan perkiraan jumlah tamu"
+    ],
+    "actions": [
+      {
+        "label": "Cek tanggal",
+        "count": 1,
+        "firstAt": 0,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Cek tanggal kosong via WhatsApp",
+        "count": 1,
+        "firstAt": 6,
+        "firstScreen": true,
+        "sticky": false
+      },
+      {
+        "label": "Tanya tanggal dan paket via WhatsApp",
+        "count": 1,
+        "firstAt": 27,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Cek tanggal via WhatsApp",
+        "count": 1,
+        "firstAt": 97,
+        "firstScreen": false,
+        "sticky": false
+      }
+    ],
+    "prices": [
+      "Rp 9,5",
+      "Rp 24",
+      "Rp 45",
+      "Rp 2",
+      "Rp 4"
+    ],
+    "proofMentions": {},
+    "logoImages": 0,
+    "forms": 0,
+    "imagery": {
+      "photos": 0,
+      "illustrations": 7,
+      "videos": 0
+    },
+    "pageHeight": 9534
+  },
+  "motion": {
+    "libraries": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "splitText": false,
+      "lenis": false,
+      "locomotive": false,
+      "swiper": false,
+      "lottie": false,
+      "framerMotion": false,
+      "viewTransitions": false
+    },
+    "stickyPanels": [
+      {
+        "tag": "div",
+        "edge": "top",
+        "zIndex": "auto"
+      }
+    ],
+    "maxRunning": 5,
+    "durationsMs": {
+      "min": 500,
+      "max": 900
+    },
+    "easings": [
+      "linear",
+      "ease-out"
+    ],
+    "properties": [
+      "transform",
+      "opacity"
+    ],
+    "movingWithoutInput": 0,
+    "movingWithoutInputFurtherDown": [],
+    "scriptDrivenOnScroll": 2,
+    "infiniteLoops": 0,
+    "infiniteLoopsWithText": 0,
+    "pauseControl": false,
+    "steps": [
+      {
+        "y": 450,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "circle",
+            "hasText": false,
+            "duration": 900,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 900,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "circle",
+            "hasText": false,
+            "duration": 900,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1350,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "circle",
+            "hasText": false,
+            "duration": 900,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1800,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "circle",
+            "hasText": false,
+            "duration": 900,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 2250,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "circle",
+            "hasText": false,
+            "duration": 900,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 2700,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "circle",
+            "hasText": false,
+            "duration": 900,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 3150,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "circle",
+            "hasText": false,
+            "duration": 900,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 3600,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "circle",
+            "hasText": false,
+            "duration": 900,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 4050,
+        "running": 3,
+        "scriptDriven": 1,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 500,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 500,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "circle",
+            "hasText": false,
+            "duration": 900,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 4500,
+        "running": 5,
+        "scriptDriven": 2,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 500,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 500,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 500,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 500,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "circle",
+            "hasText": false,
+            "duration": 900,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      }
+    ]
+  },
+  "smoothness": {
+    "page": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 5852,
+      "frames": 351,
+      "fps": 60,
+      "medianMs": 16.7,
+      "p95Ms": 16.7,
+      "maxMs": 17,
+      "longFrames": 0,
+      "droppedShare": 0,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "baseline": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 1739,
+      "frames": 104,
+      "fps": 59.8,
+      "medianMs": 16.7,
+      "p95Ms": 16.7,
+      "maxMs": 17,
+      "longFrames": 0,
+      "droppedShare": 0,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "longFramesOverBaseline": 0,
+    "p95OverBaseline": 0
+  },
+  "reducedMotion": {
+    "movingWithoutInput": 0,
+    "movingOnScroll": 0,
+    "idleNavigation": null,
+    "loadFailed": false
+  },
+  "idleRunLoadFailed": false,
+  "idleNavigation": null
+}

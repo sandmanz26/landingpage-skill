@@ -88,6 +88,7 @@ const style = {
   tags,
   palette: {
     chromatic: desk.chromaticColours,
+    families: desk.colourFamilies ?? null,
     text: desk.textColours.slice(0, 6),
     backgrounds: desk.backgroundColours.slice(0, 8),
     gradients: desk.gradients,

@@ -1,0 +1,23 @@
+{
+  "juror": "story-strategist",
+  "kind": "ai",
+  "scores": { "story": 8 },
+  "reasons": {
+    "story": "One message, held from the H1 ('Hari H berjalan. Kalian tinggal hadir.', desktop-fold) to the closing payoff ('Kalian? Tinggal hadir.', desktop-page-09 / mobile-page-11). The section order in the digest outline matches the customer's questions one for one: what it is (hero) -> cost and where the money goes (H2 12%, with the 30/40/30 split, 'Kalian -> vendor / Kalian -> Jalinan' flow, and the H-10 venue-only-paid-DP story in 'Kenapa begini') -> are you real ('Takut ketemu WO bodong? Wajar. Cek kami dulu.' with office, NIB, vendor phone list, sample contract) -> what happens when (H-365 to H+1, desktop-page-04) -> will the day run (pinned clock, desktop-page-05..08) -> what if we cancel (answered in the price block and again in the FAQ). Each section hands to the next, and the hero already gives a short version of the next three answers (price line, 'Cek kami dulu' link, the 05.30 card), so a skimmer gets the whole argument in the first screen. The copy is in the couple's voice and register ('kalian', 'WO bodong', 'Kalian masih bisa tidur sebentar', 'Bagikan ke orang tua dan keluarga'). The visual idea serves the promise: the big clock stays put while the crew's backstage work scrolls past (08.00 catering counted against the contract, 13.30 rain and plan B tent up since 12.00), which shows 'the day will run' instead of claiming it. Not a 9: the page proves the company is real but barely proves it is good (digest: proof words none, no past weddings shown), one hero line works against the transparency message, and the strongest beat (rain at 13.30) gets the same weight as routine hours."
+  },
+  "problems": [
+    "'Real' is proven, 'good' is not: there is no evidence of quality anywhere (digest: proof words none; no past weddings, no count of weddings run, no couple's words). The fraud-wary couple and their parents get verification steps but no reason to believe the day will actually go well beyond the sample rundown. Smallest fix: under 'Tiga pasangan terakhir kami' (or after 'Kalian? Tinggal hadir.') add one short line from a past couple plus a plain count, e.g. 'Pernikahan ke-140 kami sejak 2019' (sample figures), with no new section.",
+    "Hero sub-line 'Kalau ada masalah di balik layar, itu urusan kami. Kalian tidak perlu tahu.' (desktop-fold, mobile-fold) conflicts with a page whose whole case is openness about money and contracts; to a couple scared of a WO that hid unpaid venues, 'you don't need to know' reads as a red flag. Smallest fix: keep the calm, drop the secrecy, e.g. 'Kalau ada masalah di balik layar, kami yang menyelesaikan. Kalian tetap tahu semuanya.'",
+    "The scroll story has no peak: 13.30 'Hujan turun. Rencana B ... tenda samping sudah berdiri sejak 12.00' is the moment that proves 'the day will run', but it gets the same card, size and weight as 08.00 or 15.00 (desktop-page-07/08, mobile-page-10). Smallest fix: give the 13.30 step one visual difference (accent colour on the clock or a one-word label such as 'Rencana B') so the story has a turn before 'Kalian? Tinggal hadir.'"
+  ],
+  "keep": [
+    "The promise as H1 and its closing echo 'Kalian? Tinggal hadir.'",
+    "Section order that follows the customer's questions exactly, with hero previews of price, trust and the 05.30 clock",
+    "'Takut ketemu WO bodong? Wajar. Cek kami dulu.' and the concrete checklist (office address with hours, NIB shown in original, vendor phone list, sample contract, last three couples' numbers)",
+    "The money-flow story: vendors paid directly, fee in three stages, pelunasan H+1, and the 'Kenapa begini' H-10 example",
+    "The pinned clock with backstage scenes in plain, specific copy (named crew, 400 tamu plus 10%, plan B tent)",
+    "'Bagikan ke orang tua dan keluarga' on the timeline, which speaks to the parents in the decision",
+    "FAQ framing 'Tanyakan ini ke WO mana pun'"
+  ],
+  "veto": ""
+}

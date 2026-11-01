@@ -1,0 +1,11 @@
+{
+  "juror": "motion-accessibility",
+  "kind": "ai",
+  "ranking": ["C", "A", "B"],
+  "why": {
+    "A": "Two-column layout stacks cleanly on mobile with full-width tap targets and the next section peeks on desktop, but the static arch illustration carries no time cue, so the pinned-clock scroll story starts from nothing.",
+    "B": "Full-width headline and illustration push the next section entirely below the desktop fold and stretch the subhead to roughly 90 characters per line, and like A it gives no clock hook for the scroll story.",
+    "C": "The 05.30 card is high-contrast white text on dark green, reads as real text, peeks above the mobile fold as a scroll invitation and is the natural seed for the pinned clock, though its muted chairs and small mono label on dark green are low-contrast."
+  },
+  "fix": "Raise the small light-grey monospace price-terms line ('Vendor kalian bayar langsung; pelunasan fee kami setelah acara') to body size and at least 4.5:1 contrast, because it is the anti-fraud reassurance and is currently the least legible text in the hero on both viewports."
+}

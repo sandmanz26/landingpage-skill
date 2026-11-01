@@ -1,0 +1,199 @@
+<title>Uji Buta WO Tiga Versi</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+  /* Utility shell around three framed pages: quiet neutrals so the pages under test carry the colour. */
+  :root {
+    --bg: #f5f5f3; --panel: #ffffff; --fg: #1d1f24; --muted: #5d6170; --line: #dcdcd8;
+    --accent: #2b59c3; --accent-fg: #ffffff; --good: #1d7a46; --bad: #b3261e; --sel: #e7edfb;
+    --ui: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --bg: #16171a; --panel: #1f2125; --fg: #ececea; --muted: #a3a6b0; --line: #34363c; --accent: #8fb0ff; --accent-fg: #0f1730; --good: #6cc796; --bad: #ff8a80; --sel: #26324f; color-scheme: dark; }
+  }
+  :root[data-theme="dark"] { --bg: #16171a; --panel: #1f2125; --fg: #ececea; --muted: #a3a6b0; --line: #34363c; --accent: #8fb0ff; --accent-fg: #0f1730; --good: #6cc796; --bad: #ff8a80; --sel: #26324f; color-scheme: dark; }
+  body { background: var(--bg); color: var(--fg); font: 15px/1.55 var(--ui); }
+  .page { max-width: 1440px; margin: 0 auto; padding-inline: max(16px, env(safe-area-inset-left, 0px)) max(16px, env(safe-area-inset-right, 0px)); padding-block: 28px 64px; display: grid; gap: 22px; }
+  h1 { font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.15; margin: 0; text-wrap: balance; }
+  h2 { font-size: 1.15rem; margin: 0; }
+  p { margin: 0; max-width: 76ch; }
+  .muted { color: var(--muted); }
+  .prompt { font-family: var(--mono); background: var(--panel); border: 1px solid var(--line); padding: 10px 14px; border-radius: 6px; display: inline-block; }
+  .bar { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; justify-content: space-between; }
+  .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--panel); }
+  .seg button { font: 600 0.92rem/1 var(--ui); padding: 10px 14px; border: 0; background: transparent; color: var(--fg); cursor: pointer; min-height: 40px; }
+  .seg button + button { border-left: 1px solid var(--line); }
+  .seg button[aria-pressed="true"] { background: var(--accent); color: var(--accent-fg); }
+  .seg button:focus-visible, .btn:focus-visible, select:focus-visible, .pick input:focus-visible + span { outline: 3px solid var(--accent); outline-offset: 2px; }
+  .opens { display: flex; gap: 14px; flex-wrap: wrap; }
+  .opens a { color: var(--accent); font-weight: 600; }
+  .stage { display: grid; gap: 14px; grid-template-columns: minmax(0, 1fr); }
+  .stage.all { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  @media (max-width: 900px) { .stage.all { grid-template-columns: minmax(0, 1fr); } }
+  .frame { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; display: grid; grid-template-rows: auto 1fr; min-width: 0; }
+  .frame-head { display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; border-bottom: 1px solid var(--line); font-weight: 700; }
+  .frame-head span { font: 400 0.8rem/1 var(--mono); color: var(--muted); }
+  .viewport { position: relative; overflow: hidden; margin: 0 auto; }
+  .viewport iframe { border: 0; position: absolute; top: 0; left: 0; transform-origin: 0 0; background: #fff; }
+  .judge { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 20px; display: grid; gap: 16px; }
+  .scores { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+  @media (max-width: 760px) { .scores { grid-template-columns: minmax(0, 1fr); } }
+  .score { display: grid; gap: 10px; border: 1px solid var(--line); border-radius: 8px; padding: 14px; }
+  .score label { display: flex; justify-content: space-between; gap: 10px; align-items: center; }
+  select { font: inherit; padding: 6px 8px; border-radius: 6px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); min-height: 36px; }
+  .picks { display: flex; gap: 12px; flex-wrap: wrap; }
+  .pick { position: relative; }
+  .pick input { position: absolute; opacity: 0; inset: 0; }
+  .pick span { display: inline-block; padding: 10px 16px; border: 1px solid var(--line); border-radius: 8px; font-weight: 600; cursor: pointer; min-height: 40px; }
+  .pick input:checked + span { background: var(--sel); border-color: var(--accent); }
+  .btn { font: 700 0.95rem/1 var(--ui); padding: 12px 18px; border-radius: 8px; border: 0; background: var(--accent); color: var(--accent-fg); cursor: pointer; min-height: 44px; justify-self: start; }
+  .btn[disabled] { opacity: 0.45; cursor: not-allowed; }
+  .reveal { display: grid; gap: 18px; }
+  .answer { font-size: 1.1rem; }
+  .answer b { color: var(--accent); }
+  .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; }
+  table { border-collapse: collapse; width: 100%; min-width: 860px; font-size: 0.92rem; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+  thead th { background: var(--bg); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); }
+  td:first-child { font-weight: 600; width: 15%; }
+  td.bad { color: var(--bad); }
+  td.good { color: var(--good); }
+  .limits { border-left: 3px solid var(--line); padding-left: 14px; display: grid; gap: 6px; }
+  .limits ul { margin: 0; padding-left: 1.1em; display: grid; gap: 4px; }
+</style>
+
+<div class="page">
+  <header style="display:grid;gap:12px">
+    <h1>Uji buta: tiga landing page wedding organizer</h1>
+    <p>Tiga halaman, satu tanpa skill dan dua dengan skill design-director dalam proses yang berbeda. Urutan A, B, C diacak ulang, tidak sama dengan uji pertama. Nilai dulu, lalu buka jawabannya.</p>
+    <p><span class="prompt">"Buatkan sebuah landing page untuk wedding organizer."</span></p>
+  </header>
+
+  <div class="bar">
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <div class="seg" role="group" aria-label="Tampilan">
+        <button type="button" data-view="a" aria-pressed="true">A</button>
+        <button type="button" data-view="b" aria-pressed="false">B</button>
+        <button type="button" data-view="c" aria-pressed="false">C</button>
+        <button type="button" data-view="all" aria-pressed="false">Ketiganya</button>
+      </div>
+      <div class="seg" role="group" aria-label="Perangkat">
+        <button type="button" data-device="desktop" aria-pressed="true">Desktop</button>
+        <button type="button" data-device="phone" aria-pressed="false">Ponsel</button>
+      </div>
+    </div>
+    <div class="opens"><a href="versi-a.html" target="_blank" rel="noopener">Buka A ↗</a><a href="versi-b.html" target="_blank" rel="noopener">Buka B ↗</a><a href="versi-c.html" target="_blank" rel="noopener">Buka C ↗</a></div>
+  </div>
+  <p class="muted">Untuk merasakan scroll, buka tiap versi penuh di tab baru.</p>
+
+  <div class="stage" id="stage">
+    <div class="frame" data-frame="a"><div class="frame-head">Versi A <span id="size-a"></span></div><div class="viewport"><iframe src="versi-a.html" title="Versi A" loading="lazy"></iframe></div></div>
+    <div class="frame" data-frame="b" hidden><div class="frame-head">Versi B <span id="size-b"></span></div><div class="viewport"><iframe src="versi-b.html" title="Versi B" loading="lazy"></iframe></div></div>
+    <div class="frame" data-frame="c" hidden><div class="frame-head">Versi C <span id="size-c"></span></div><div class="viewport"><iframe src="versi-c.html" title="Versi C" loading="lazy"></iframe></div></div>
+  </div>
+
+  <section class="judge" aria-labelledby="judge-title">
+    <h2 id="judge-title">Nilai dulu</h2>
+    <div class="scores">
+      <div class="score"><b>Versi A</b><label for="a-visual">Visual (1–10) <select id="a-visual"></select></label><label for="a-ship">Layak kirim (1–10) <select id="a-ship"></select></label></div>
+      <div class="score"><b>Versi B</b><label for="b-visual">Visual (1–10) <select id="b-visual"></select></label><label for="b-ship">Layak kirim (1–10) <select id="b-ship"></select></label></div>
+      <div class="score"><b>Versi C</b><label for="c-visual">Visual (1–10) <select id="c-visual"></select></label><label for="c-ship">Layak kirim (1–10) <select id="c-ship"></select></label></div>
+    </div>
+    <div style="display:grid;gap:10px">
+      <span>Kalau hanya boleh mengirim satu ke klien, yang mana?</span>
+      <div class="picks" role="radiogroup" aria-label="Pilihan">
+        <label class="pick"><input type="radio" name="pick" id="pick-a" value="A"><span>Versi A</span></label>
+        <label class="pick"><input type="radio" name="pick" id="pick-b" value="B"><span>Versi B</span></label>
+        <label class="pick"><input type="radio" name="pick" id="pick-c" value="C"><span>Versi C</span></label>
+      </div>
+    </div>
+    <button class="btn" id="reveal-btn" type="button" disabled>Buka jawaban</button>
+    <p class="muted" id="reveal-hint">Pilih salah satu dulu.</p>
+
+    <div class="reveal" id="reveal" hidden>
+      <p class="answer" id="answer"></p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Diukur</th><th>A · skill, run 2 (standard)</th><th>B · tanpa skill</th><th>C · skill, run 1 (quick)</th></tr></thead>
+          <tbody>
+            <tr><td>Proses</td><td>Riset 7 sumber, roast, Anda memilih di gerbang brief, strategi dan arah, dial visual, skeleton, 3 hero dinilai 5 juri, look oleh 5 juri, perbaikan, cek fit</td><td>Prompt langsung jadi kode, 1 agen</td><td>Riset 3 sumber, roast, gerbang autopilot (saya yang memilih), 1 kritikus</td></tr>
+            <tr><td>Inspector (FAIL)</td><td class="good">0</td><td class="bad">4: teks 9,9px, kontras rendah, tombol kecil di ponsel</td><td class="good">0</td></tr>
+            <tr><td>Fit terhadap dial Anda (kalem, huruf ×6, ilustrasi, cerita scroll, harga dekat tombol)</td><td class="good">5 dari 5</td><td>4 dari 5 (huruf ×4,9)</td><td class="bad">2 dari 5 (tanpa gambar, tanpa cerita, huruf ×4,6)</td></tr>
+            <tr><td>Bukti karangan</td><td class="good">Tidak ada</td><td class="bad">"320+ pernikahan", "rating 4,9/5", testimoni bernama</td><td class="good">Tidak ada</td></tr>
+            <tr><td>Nilai juri</td><td>7,7 (5 juri)</td><td>Tidak dinilai</td><td>7,4 (1 kritikus; panel berbeda, tidak bisa dibandingkan langsung)</td></tr>
+            <tr><td>Scroll (fps, frame patah)</td><td>60 · 0</td><td>59,5 · 0</td><td>60 · 0</td></tr>
+            <tr><td>Biaya</td><td>Subagen sekitar 630 ribu token (peringkat hero + look), ditambah sesi utama; sekitar 90 menit termasuk menunggu jawaban Anda</td><td>83 ribu token, sekitar 5 menit</td><td>Subagen 148 ribu token, ditambah sesi utama; sekitar 40 menit</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="limits">
+        <b>Batas uji ini</b>
+        <ul>
+          <li>Satu brief, satu kali jalan per versi: contoh, bukan bukti statistik.</li>
+          <li>Ketiganya memakai data bisnis contoh. Hanya B yang menampilkan bukti karangan seolah fakta.</li>
+          <li>Dial dipilih Anda setelah run 1, jadi B dan C tidak dibuat untuk dial itu. Baris "fit" menunjukkan kecocokan dengan selera Anda, bukan kualitas mutlak.</li>
+          <li>Anda tahu prosesnya, jadi ini belum sepenuhnya buta. Uji sebenarnya: bagikan ke desainer yang tidak tahu prosesnya.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+  (function () {
+    var view = 'a', device = 'desktop';
+    var DESK = { w: 1280, h: 800 }, PHONE = { w: 390, h: 780 };
+    var stage = document.getElementById('stage');
+    function layout() {
+      stage.classList.toggle('all', view === 'all');
+      document.querySelectorAll('[data-frame]').forEach(function (f) {
+        var key = f.getAttribute('data-frame');
+        f.hidden = !(view === 'all' || view === key);
+        if (f.hidden) return;
+        var dims = device === 'desktop' ? DESK : PHONE;
+        var vp = f.querySelector('.viewport'), fr = f.querySelector('iframe');
+        var scale = Math.min(1, (f.clientWidth - 2) / dims.w);
+        fr.style.width = dims.w + 'px';
+        fr.style.height = dims.h + 'px';
+        fr.style.transform = 'scale(' + scale + ')';
+        vp.style.width = Math.round(dims.w * scale) + 'px';
+        vp.style.height = Math.round(dims.h * scale) + 'px';
+        document.getElementById('size-' + key).textContent = dims.w + 'px' + (scale < 1 ? ' · ' + Math.round(scale * 100) + '%' : '');
+      });
+    }
+    function wire(attr, set) {
+      document.querySelectorAll('[' + attr + ']').forEach(function (b) {
+        b.addEventListener('click', function () {
+          set(b.getAttribute(attr));
+          document.querySelectorAll('[' + attr + ']').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+          layout();
+        });
+      });
+    }
+    wire('data-view', function (v) { view = v; });
+    wire('data-device', function (v) { device = v; });
+    window.addEventListener('resize', layout);
+    layout();
+    ['a', 'b', 'c'].forEach(function (k) {
+      ['visual', 'ship'].forEach(function (d) {
+        var s = document.getElementById(k + '-' + d);
+        s.add(new Option('–', ''));
+        for (var i = 1; i <= 10; i++) s.add(new Option(String(i), String(i)));
+      });
+    });
+    var btn = document.getElementById('reveal-btn');
+    document.querySelectorAll('input[name="pick"]').forEach(function (r) {
+      r.addEventListener('change', function () { btn.disabled = false; document.getElementById('reveal-hint').hidden = true; });
+    });
+    var NAMES = { A: 'skill run 2 (standard)', B: 'tanpa skill', C: 'skill run 1 (quick)' };
+    btn.addEventListener('click', function () {
+      var pick = (document.querySelector('input[name="pick"]:checked') || {}).value;
+      var v = function (id) { return document.getElementById(id).value || '–'; };
+      document.getElementById('answer').innerHTML =
+        '<b>A</b> = skill run 2 (standard) · <b>B</b> = tanpa skill · <b>C</b> = skill run 1 (quick). Anda memilih <b>' + pick + '</b>, yaitu ' + NAMES[pick] +
+        '. Skor Anda: A ' + v('a-visual') + '/' + v('a-ship') + ' · B ' + v('b-visual') + '/' + v('b-ship') + ' · C ' + v('c-visual') + '/' + v('c-ship') + ' (visual/layak kirim).';
+      document.getElementById('reveal').hidden = false;
+      btn.hidden = true;
+    });
+  })();
+</script>

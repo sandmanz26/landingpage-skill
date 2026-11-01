@@ -1,0 +1,8 @@
+{ "juror": "conversion-strategist", "kind": "ai", "ranking": ["C", "A", "B"],
+  "why": {
+    "A": "The orange WhatsApp CTA is the clearest high-contrast element and the price plus pay-after terms sit right under it, and the peeking 'Harga' section on desktop signals price transparency, but the illustration adds no proof for a couple wary of WO fraud.",
+    "B": "Same CTA and price block, but the full-width headline pushes them toward the middle and the lower half of the desktop fold is a wide illustration that carries no offer or trust information, so the screen spends space without helping the decision.",
+    "C": "Keeps the same CTA and price in reading order and adds the only concrete operational promise above the fold ('05.30 - tim kami sudah di venue'), which builds credibility before the ask and peeks on mobile right after the price; the risk is that the large white-on-dark 05.30 competes with the CTA for first glance on desktop."
+  },
+  "fix": "Put a verifiable trust signal directly under the CTA and price line (e.g. registered company/NIB, number of weddings handled, link to reviews or the 'Cek kami' section), because 'pay the fee after the event' is the only trust cue before the ask and fraud-wary couples and their parents need proof, not just a promise; use real data only, leave a slot if none exists."
+}

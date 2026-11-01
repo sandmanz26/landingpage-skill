@@ -1,0 +1,11 @@
+{
+  "juror": "customer-researcher",
+  "kind": "ai",
+  "ranking": ["C", "A", "B"],
+  "why": {
+    "A": "On the phone the text block (what, Jakarta WO, WhatsApp CTA, Rp 9,5 juta) is identical to the others, but the item peeking at the fold is only an empty arch and a sun, which says 'wedding' without adding anything about what this organizer does for the couple; on desktop, the staffer with a clipboard and walkie-talkie does make 'organizer' readable at a glance.",
+    "B": "The same phone text passes the five-second test, but the full-width illustration on desktop drops below the fold and stretches the subhead to a long line, so the right half of the first screen is wasted; on mobile, the peek is an arch with half a figure cut off, the weakest cue of the three.",
+    "C": "Same answers to 'what / for us / what to do', plus the only fold peek that gives concrete proof: '05.30, our team is already at the venue, you can still sleep' turns the abstract promise into a scene a worried couple or parent understands at once, and it gives a reason to scroll into the clock story."
+  },
+  "fix": "On the phone, the 05.30 card gets cut off mid-sentence at the fold: tighten the vertical spacing above it (for example, make 'Lihat harga' an inline text link instead of a full second button) so the number, the 'CONTOH RUNDOWN' label, and the 'Tim kami sudah di venue' line all fit on the first screen as one complete thought. Otherwise a bare '05.30' can be misread as a price or a countdown."
+}

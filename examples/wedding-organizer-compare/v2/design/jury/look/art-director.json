@@ -1,0 +1,24 @@
+{
+  "juror": "art-director",
+  "kind": "ai",
+  "scores": { "clarity": 8, "distinctiveness": 7, "craft": 7 },
+  "reasons": {
+    "clarity": "desktop-fold: the H1 in heavy Bricolage (107px, about 6x body) states the promise before anything else, the eyebrow says what it is, there is one coral CTA, and the price plus the money flow ('Rp 9,5 juta... pelunasan setelah acara') sits right under it. desktop-page-02 has a clean three-card price grid with the middle card filled teal. The hierarchy holds all the way down (sheet-desktop). The one real misread is on the same page: the 30/40/30 row sits on the card grid (see problem 1).",
+    "distinctiveness": "The ownable device is the large pale-mint clock pinned left (desktop-page-06, '08.00') while flat backstage illustrations with yellow mono timestamps scroll by on teal. Together with the 'Kalian? Tinggal hadir.' payoff (desktop-page-09) it is a real idea, not a template. Outside that chapter the page falls back to stock SaaS blocks: price cards, a checklist grid (desktop-page-04), an accordion FAQ and a numbered 3-step close (desktop-page-10/11). The hero clock card is a static teaser whose illustration is small and cut off at the fold, so the idea is weaker on the first screen than it is further down.",
+    "craft": "The palette is coherent: cream #f7f6f1, deep teal, coral used only for actions, and yellow only as a small accent. The illustrations share one flat style and colour set (desktop-page-06/07/08). Radii are consistent and there are no shadows or gradients, which keeps it calm. Against that: the hero left column has loose, uneven vertical gaps of about 100px between the CTA, the price line and the trust link (desktop-fold). The mobile H1 leaves 'Kalian' alone on a line (mobile-fold). The page uses 17 font sizes. 'Lihat harga' on mobile is indented off the left edge (mobile-fold). In the clock chapter the illustration cards do not fill the right column, leaving a ragged right gap (desktop-page-06)."
+  },
+  "problems": [
+    "The payment split (30% / 40% / 30%) sits on the same three-column grid directly under the three package cards (desktop-page-02), so it reads as one number per package (Hari H 30%, Pendampingan 40%, Penuh 30%). Smallest fix: give it a label like 'Fee dibayar dalam 3 tahap, semua paket' and draw it as one full-width bar split proportionally 30/40/30, visibly off the card columns.",
+    "The hero composition is loose and the main idea is undersold on the first screen (desktop-fold). The left column floats with uneven gaps of about 100px, and the clock card's crew illustration is tiny and clipped at 900px. Smallest fix: tighten the left stack to one 24-32px rhythm (price line directly under the CTA, trust link after it), and shorten the card or enlarge the illustration so its bottom edge is fully visible above the fold.",
+    "Typography is undisciplined at the edges: there are 17 font sizes, and the mobile H1 orphans 'Kalian' ('Hari H berjalan. / Kalian / tinggal hadir.', mobile-fold). Smallest fix: apply text-wrap: balance or a forced break after 'berjalan.' and size the mobile H1 so 'Kalian tinggal hadir.' fits on one line (about 36-38px at 350px width), then collapse the scale to about 6 steps (display, h2, h3, body, small, mono label)."
+  ],
+  "keep": [
+    "Heavy Bricolage display H1 in deep teal at about 6x body, set tight; it carries the promise by itself",
+    "The pinned pale-mint clock with yellow DM Mono timestamps scrolling through flat backstage scenes (desktop-page-06 to 08), plus the 'Kalian? Tinggal hadir.' payoff",
+    "One flat illustration style in a 4-colour palette (teal, cream, coral, yellow), used as story, not decoration",
+    "Coral reserved only for actions; calm cream/teal section alternation with no shadows or gradients",
+    "Middle price card filled teal as the quiet recommended option; 'fee' set small next to each price",
+    "Mobile sticky WhatsApp bar and the sticky clock that survives on mobile (mobile-page-08 to 11)"
+  ],
+  "veto": ""
+}

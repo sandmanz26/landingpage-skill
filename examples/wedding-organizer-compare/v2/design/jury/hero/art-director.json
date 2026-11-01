@@ -1,0 +1,8 @@
+{ "juror": "art-director", "kind": "ai", "ranking": ["C", "B", "A"],
+  "why": {
+    "A": "A competent but generic split hero: the arch illustration is the best-composed drawing of the three, yet it is just decoration that says 'wedding' rather than 'the hours of the day', and the headline rag leaves 'Kalian' stranded on its own line, which breaks the rhythm.",
+    "B": "Best typography: the full-width two-line headline reaches the ~6x scale with an even rag, but the illustration banner gets cut off at the fold, its figures shrink to specks, and the stacked layout reads as a template rather than a signature.",
+    "C": "The most distinctive and on-concept: the dark rundown card with a huge 05.30 introduces the clock motif that the page later pins, and its dark value block anchors the right column. The cost is that two display-scale type elements compete, while the illustration sits cramped in the card's corner and the 'Kalian' orphan remains."
+  },
+  "fix": "Settle the hierarchy in C: scale the 05.30 numeral down to roughly 60-70% of the headline's cap height (or lighten its weight) so that the promise 'Hari H berjalan. Kalian tinggal hadir.' gets read first, and set the headline break to 'Hari H berjalan. / Kalian tinggal hadir.' so 'Kalian' is not left alone on a line."
+}

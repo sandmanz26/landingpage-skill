@@ -1,0 +1,23 @@
+{
+  "juror": "customer-researcher",
+  "kind": "ai",
+  "scores": { "customer": 8 },
+  "reasons": {
+    "customer": "Five-questions test on the phone (sheet-mobile.png, mobile-fold.png): all six of the customer's questions are answered, in the order they ask them. (1) What is it, for me: the mobile fold shows 'WEDDING ORGANIZER · JAKARTA', the promise, a plain sub-line and the WhatsApp CTA, all inside 844px. (2) Cost and where the money goes: 'Koordinasi hari H mulai Rp 9,5 juta' plus 'Vendor kalian bayar langsung; pelunasan fee kami setelah acara' are already on the fold. The price section (mobile-page-02..05) shows three tiers, a 30/40/30 split with H+1 settlement, 'Biaya tambahan: tidak ada' and Kalian→vendor / Kalian→Jalinan, then names the fraud case ('Kenapa begini'). For this anxious audience this is the strongest part of the page. (3) Real: the 'Takut ketemu WO bodong? Wajar. Cek kami dulu.' checklist (mobile-page-05/06) gives office hours, NIB, vendor phone list, sample contract and the last three couples. These are things they can verify offline, which fits the wariness well. (4) When: the H-365..H+1 table (mobile-page-07) is short, scannable, ties payment stages to milestones and can be shared with parents. (5) Will the day run: the hour-by-hour section keeps the pinned clock strip on mobile (mobile-page-09) and includes a rain plan B at 13.30. (6) Cancel: answered twice, in the price block and in the FAQ. A sticky 'Cek tanggal via WhatsApp' bar is always within thumb reach. It falls short of 9 because the 'good' half of question 3 has no on-page evidence (digest: proof words none, logo images 0, no past weddings), and because the price-by-guest-count question stays ambiguous."
+  },
+  "problems": [
+    "Question 3 is half answered: the page shows you can CHECK they are real, but nothing shows they are GOOD. There are no past weddings, no couple's words and no count or years (digest: 'proof words: none'). A couple deciding with parents wants to see work before they visit an office. Smallest fix: in 'Cek kami', add a 3-item strip of recent weddings (initials, venue, guest count, month) with one short line from each couple, plus one number (e.g. 'X pernikahan sejak 20XX').",
+    "Price versus guest count contradicts itself. The package cards fix the crew size (Hari H '6 kru', Pendampingan '8 kru', Penuh '10 kru'), but the day section says 'Kru menyesuaikan tamu: 6 orang untuk sampai 300 tamu, 8 untuk 600, 10 untuk 1.000'. A couple with 600 guests cannot tell whether Rp 9,5 jt still applies. Smallest fix: on each card, replace 'N kru' with 'kru sesuai jumlah tamu' and add one line under the tiers stating whether the fee changes with guest count (and by how much).",
+    "On the phone the promise breaks badly: 'Hari H berjalan. / Kalian / tinggal hadir.' (mobile-fold.png). 'Kalian' sits orphaned on its own line and splits the second sentence of the headline. Smallest fix: put a non-breaking space in 'Kalian tinggal' or use text-wrap: balance on the H1 so it reads 'Hari H berjalan. / Kalian tinggal hadir.' Secondary: the Kalian→vendor / Kalian→Jalinan cards are cramped at 390px (mobile-page-04), so stack the label above the text."
+  ],
+  "keep": [
+    "Price and the payment rule on the first screen ('mulai Rp 9,5 juta', vendor paid directly, settlement after the event)",
+    "30/40/30 with settlement at H+1 and the direct vendor-payment diagram, plus the plain 'Kenapa begini' fraud story",
+    "The 'Cek kami dulu' checklist of things they can verify offline (office, NIB, vendor phones, contract, past couples)",
+    "H-365..H+1 table with payment stages tagged, shareable to parents",
+    "Hour-by-hour day with the rain plan B; the pinned clock strip on mobile",
+    "Sticky WhatsApp CTA on mobile and the 'one wedding per day, max six per month' line",
+    "Cancellation answered in both the price block and the FAQ"
+  ],
+  "veto": ""
+}

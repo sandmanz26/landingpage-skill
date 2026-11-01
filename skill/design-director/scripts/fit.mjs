@@ -41,8 +41,11 @@ const row = (dial, want, got, ok, why) => rows.push({ dial, want, got, ok, why }
 
 if (targets.colour) {
   const flat = style.palette.gradients <= 3 && style.palette.shadows <= 3;
-  if (targets.colour === 'bold') row('colour', 'bold: 4+ flat colours with roles', `${style.palette.chromatic} colours, ${style.palette.gradients} gradients`, style.palette.chromatic >= 4 && flat, 'team Prefer: bold flat colour');
-  else row('colour', 'calm: 3 colours or fewer', `${style.palette.chromatic} colours`, style.palette.chromatic <= 3);
+  // Colour families (hues), not hex values: tints of one teal are one colour.
+  const fam = style.palette.families ?? style.palette.chromatic;
+  const got = `${fam} colour families (${style.palette.chromatic} values), ${style.palette.gradients} gradients`;
+  if (targets.colour === 'bold') row('colour', 'bold: 4+ flat colour families with roles', got, fam >= 4 && flat, 'team Prefer: bold flat colour');
+  else row('colour', 'calm: 3 colour families or fewer', got, fam <= 3);
 }
 if (targets.typeRatio) row('type', `display ÷ body ≥ ${targets.typeRatio}`, `${style.type.display}/${style.type.body}px = ×${style.type.ratio}`, style.type.ratio >= targets.typeRatio);
 if (targets.imagery) {

@@ -323,6 +323,7 @@ export function measure({ rules, viewport }) {
   const textColours = new Set();
   const backgroundColours = new Set();
   const chromatic = new Set();
+  const hueFamilies = new Set();
   const spacing = new Map();
   const radii = new Set();
   let shadows = 0;
@@ -339,7 +340,11 @@ export function measure({ rules, viewport }) {
     for (const c of [fg, bg]) {
       if (c.a < 0.05) continue;
       const h = hsl(c);
-      if (h.s > 0.2 && h.l > 0.08 && h.l < 0.92) chromatic.add(hex(c));
+      if (h.s > 0.2 && h.l > 0.08 && h.l < 0.92) {
+        chromatic.add(hex(c));
+        // Tints and shades of one hue are one colour family (clustered below).
+        hueFamilies.add(Math.round(h.h));
+      }
     }
     for (const prop of ['marginTop', 'marginBottom', 'paddingTop', 'paddingBottom', 'paddingLeft', 'paddingRight', 'rowGap', 'columnGap']) {
       const v = parseFloat(cs[prop]);
@@ -419,6 +424,15 @@ export function measure({ rules, viewport }) {
       textColours: [...textColours],
       backgroundColours: [...backgroundColours],
       chromaticColours: chromatic.size,
+      // A new family starts where the next hue is more than 24° away (around the wheel).
+      colourFamilies: (() => {
+        const hs = [...hueFamilies].sort((a, b) => a - b);
+        if (!hs.length) return 0;
+        let n = 1;
+        for (let i = 1; i < hs.length; i++) if (hs[i] - hs[i - 1] > 24) n++;
+        if (n > 1 && hs[0] + 360 - hs[hs.length - 1] <= 24) n--;
+        return n;
+      })(),
       spacing: { distinct: spacingValues.length, offScale, values: spacingValues.sort((a, b) => a - b).slice(0, 40) },
       radii: [...radii].slice(0, 12),
       shadows,

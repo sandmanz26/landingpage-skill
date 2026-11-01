@@ -1,7 +1,7 @@
 # Handoff
 
 Read this first if you are a new session, a different model or a different AI tool picking up
-this project. It is kept up to date at every milestone. Last updated: **2026-11-01** (visual dials + fit check built; second wedding run waiting at the direction gate).
+this project. It is kept up to date at every milestone. Last updated: **2026-11-01** (second wedding run delivered; three-way blind test published).
 
 ## 1. Goal
 
@@ -144,16 +144,25 @@ requires `targets.json` at direction and a Fit section for misses at the look, c
 WO page at standard effort with them choosing); the critic-weight question was not answered, so
 weights are unchanged.
 
-Second wedding run (standard effort, guided gates): `examples/wedding-organizer-compare/v2/`
-(working copy in the session scratchpad). Research extended to 7 opened sources (second fraud case,
-WO Marwah May 2026; Bridestory reviews as customer voice; competitor payment norm 20%/80% before
-the day). Strategy v3. Directions redrawn (A photo-led and B used in run 1 excluded): A "Hari H
-yang menempel" (pinned clock, the day's backstage work scrolls beneath; recommended), B colour
-chapters, C type only. Board with brief, research, strategy, cards, dials and a reply builder:
-https://claude.ai/artifact/Gmxe6XBbVSrR3rd29Gp5Fw. Waiting for the owner's reply; then approve brief
-and strategy, write targets.json from the dials, approve direction, and continue (skeleton, spec,
-copy, build, hero best-of-3 with the jury, gate, fit, look with the jury, deliver), then add it to
-the blind comparison as version C.
+Second wedding run (standard effort, guided gates), delivered 2026-11-01:
+`examples/wedding-organizer-compare/v2/` (design/ holds brief, research v3 with 7 sources, strategy
+v3, roast + response, directions, targets.json, skeleton notes, spec, copy, hero jury, look jury,
+critique, deliver.md; build/ holds the generator: parts.py drawings + tokens, heroes.py, page.py).
+Owner's answers at the gates: "Setuju brief dan strategi. Arah A. Dial: warna kalem, huruf tegas
+x6, gambar ilustrasi, gerak cerita, harga dekat tombol ya." (calm colour differs from the team
+default; logged as the user's instruction). Skeleton caught three structure problems (price too
+late, clock before its heading, wrong clock without JS). Hero best-of-3: C (clock card) chosen 5/5
+by the jury (about 59k tokens per juror). Look: 7.7 (clarity 8, distinctiveness 7, craft 7,
+business 8, customer 8, story 8), no veto (about 66k tokens per juror with the digest brief, down
+from 105-164k). Fixes: crew-by-guests table under the price cards, stages bar, phone sticky bars
+no longer stack, font sizes 17 → 13. Not fixed by rule: proof of quality (never invented) → first
+item of "Supaya lebih bagus". Fit 5/5, inspector 0 FAIL, 60 fps.
+Measurement fixes found in this run: colour families now counted by clustering hues (tints of
+one hue are one colour; 30° buckets split a teal family), pinned clock computed on every scroll.
+Three-way blind test (A = run 2, B = no skill, C = run 1, random):
+https://claude.ai/artifact/B4UxMgyAhNq2AroTQVGr3G (copy in `examples/wedding-organizer-compare/three-way/`).
+Fit against the owner's dials: run 2 5/5, no skill 4/5, run 1 2/5. Waiting for the owner's scores
+and the final-gate approval of run 2.
 
 Capture fixes from batch-003: `lib/browser.mjs` `gotoStable` retries server error pages (a 502
 "upstream request failed" had been captured as Swehl's desktop) and every failed load is reported

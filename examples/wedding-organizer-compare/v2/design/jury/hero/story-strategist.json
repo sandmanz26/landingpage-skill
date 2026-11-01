@@ -1,0 +1,11 @@
+{
+  "juror": "story-strategist",
+  "kind": "ai",
+  "ranking": ["C", "A", "B"],
+  "why": {
+    "A": "The promise lands and the lone coordinator with clipboard and walkie hints at backstage work, but nothing in the fold introduces the hours of the day, so the page's central idea arrives later with no setup; the visible 'Harga' heading below does at least pull the reader on.",
+    "B": "Same promise and a wider scene with two crew members, but the illustration is cropped at the fold, adds no time cue, and pushes the next-section heading out of view, so it neither seeds the clock idea nor creates a pull to scroll.",
+    "C": "The only variant whose hero states the promise and dramatises it at once: '05.30 - Tim kami sudah di venue. Kalian masih bisa tidur sebentar.' turns 'Kalian tinggal hadir' into a concrete backstage moment and plants the hour-by-hour clock the page later pays off."
+  },
+  "fix": "Make the 05.30 card explicitly open a sequence the reader wants to finish: add a small cue on the card such as 'Lihat hari H jam demi jam' (linking to the Hari H section) or a faint next hour ('07.00 ...'), and on mobile pull the card's time and line up so the 05.30 moment shows within the first screen; right now the next section is Harga, so the clock idea is planted and then dropped until much later."
+}

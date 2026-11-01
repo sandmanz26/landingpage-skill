@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jalinan Wedding Organizer · Jakarta</title>
+<meta name="description" content="Wedding organizer di Jakarta. Hari H berjalan, kalian tinggal hadir. Vendor dibayar langsung, fee bertahap, pelunasan setelah acara.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=DM+Mono:wght@500&family=Figtree:wght@400;600&display=swap">
+<style>
+  :root {
+    --teal: #0F4C4A; --coral: #E8613C; --butter: #F2C14E;
+    --paper: #F7F6F1; --ink: #172321; --sage: #EAF1EE; --line: #C9D3CF; --muted: #4c5a57;
+    --display: "Bricolage Grotesque", "Arial Rounded MT Bold", Arial, sans-serif;
+    --text: "Figtree", "Segoe UI", Arial, sans-serif;
+    --mono: "DM Mono", ui-monospace, Menlo, Consolas, monospace;
+    --gutter: max(20px, 5vw); --max: 1160px; --r: 14px;
+    color-scheme: light;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 400 17px/1.6 var(--text); }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding-inline: var(--gutter); }
+  h1, h2, h3 { font-family: var(--display); font-weight: 800; line-height: 1; letter-spacing: -0.02em; margin: 0; text-wrap: balance; color: var(--teal); }
+  h1 { font-size: clamp(3rem, 7vw, 6.4rem); }
+  h2 { font-size: clamp(2.1rem, 4.4vw, 3.6rem); }
+  h3 { font-size: 1.4rem; font-weight: 600; letter-spacing: -0.01em; }
+  p { margin: 0; max-width: 60ch; }
+  .label { font: 500 0.8rem/1.3 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.55em; min-height: 52px; padding: 0.85em 1.4em; border-radius: var(--r); font: 600 1rem/1.2 var(--text); text-decoration: none; border: 2px solid transparent; }
+  .btn-main { background: var(--coral); color: var(--ink); }
+  .btn-main:hover { background: #ee7a59; }
+  .btn-ghost { border-color: var(--teal); color: var(--teal); }
+  .btn svg { width: 1.2em; height: 1.2em; flex: none; }
+  .top { background: var(--paper); position: sticky; top: env(safe-area-inset-top, 0px); z-index: 30; border-bottom: 1px solid var(--line); }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 66px; }
+  .logo { font: 800 1.55rem/1 var(--display); color: var(--teal); text-decoration: none; letter-spacing: -0.02em; }
+  .nav { display: flex; gap: 24px; align-items: center; }
+  .nav a { text-decoration: none; color: var(--muted); font-size: 1rem; }
+  .nav a:hover { color: var(--teal); }
+  .nav .btn { min-height: 42px; padding: 0.55em 1.05em; font-size: 1rem; color: var(--ink); }
+  @media (max-width: 860px) { .nav a:not(.btn) { display: none; } }
+  @media (max-width: 720px) { .nav .btn { display: none; } .top .wrap { min-height: 58px; } }
+  .price-line { font: 400 1rem/1.55 var(--text); color: var(--ink); max-width: 46ch; }
+  .price-line b { font-weight: 600; }
+  .check-line a { display: inline-block; padding-block: 10px; font-weight: 600; color: var(--teal); text-underline-offset: 3px; }
+  .text-link { align-self: center; font-weight: 600; color: var(--teal); text-underline-offset: 3px; padding: 12px 4px; }
+  h1 .line { display: block; }
+  @media (prefers-reduced-motion: no-preference) {
+    .sun { animation: rise 0.9s ease-out both; }
+    @keyframes rise { from { transform: translateY(12px); } to { transform: none; } }
+  }
+.hero .sub { font-size: 1.125rem; color: var(--muted); }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.hero-text { display: grid; gap: 22px; align-content: center; min-width: 0; }
+.art { width: 100%; height: auto; display: block; }
+.hero { padding-block: 44px 72px; }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); column-gap: 56px; row-gap: 22px; align-items: start; }
+.hero .hero-text { display: contents; }
+.hero .label, .hero h1 { grid-column: 1 / -1; }
+.hero h1 { font-size: clamp(3rem, 7.4vw, 6.7rem); margin-bottom: 14px; }
+.hero .sub, .hero .actions, .hero .price-line, .hero .check-line { grid-column: 1; }
+.hero .clock-card { grid-column: 2; grid-row: 3 / span 4; }
+.clock-card { background: var(--teal); color: var(--paper); border-radius: 22px; padding: 32px 32px 0; display: grid; gap: 10px; overflow: hidden; min-width: 0; }
+.clock-card .t { font: 600 clamp(3.4rem, 6.4vw, 6rem)/0.9 var(--display); letter-spacing: -0.03em; color: var(--paper); }
+.clock-card .next { font: 500 0.8rem/1.4 var(--mono); color: #9fbdb7; }
+.clock-card .go { color: var(--paper); font-weight: 600; text-underline-offset: 3px; }
+@media (max-width: 860px) { .hero { padding-block: 28px 56px; } .hero-text { gap: 18px; } }
+.clock-card p { font-size: 1.125rem; color: #d6e4e0; }
+.clock-card .label { color: #b8cdc8; }
+.clock-card svg { width: 100%; height: auto; display: block; margin-top: 8px; }
+@media (max-width: 860px) { .hero .wrap { grid-template-columns: 1fr; } .hero .clock-card { grid-column: 1; grid-row: auto; margin-top: 10px; } }
+  section { padding-block: 96px; }
+  .head { display: grid; gap: 14px; margin-bottom: 44px; }
+  .lead { font-size: 1.125rem; color: var(--muted); }
+
+  /* Price */
+  .slips { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+  .slip { border: 2px solid var(--line); border-radius: var(--r); padding: 26px 24px; display: grid; gap: 12px; align-content: start; background: var(--paper); }
+  .slip .when { font: 500 0.8rem/1 var(--mono); letter-spacing: 0.06em; color: var(--muted); }
+  .slip .amount { font: 800 2.6rem/1 var(--display); letter-spacing: -0.03em; color: var(--teal); }
+  .slip .amount small { font: 400 1rem/1 var(--text); color: var(--muted); letter-spacing: 0; }
+  .slip ul { margin: 0; padding-left: 1.1em; display: grid; gap: 6px; }
+  .slip.featured { background: var(--teal); border-color: var(--teal); color: var(--paper); }
+  .slip.featured h3, .slip.featured .amount { color: var(--paper); }
+  .slip.featured .when, .slip.featured .amount small { color: #c4d8d3; }
+  .guests { margin-top: 26px; width: 100%; max-width: 620px; border-collapse: collapse; }
+  .guests caption { text-align: left; padding-bottom: 10px; color: var(--muted); }
+  .guests th, .guests td { text-align: left; padding: 10px 12px 10px 0; border-bottom: 1px solid var(--line); }
+  .guests th { font: 500 0.8rem/1.2 var(--mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+  .guests td { font-variant-numeric: tabular-nums; }
+  .stages-title { margin-top: 40px; font-weight: 600; color: var(--teal); }
+  .stages { margin-top: 12px; display: grid; grid-template-columns: 3fr 4fr 3fr; gap: 4px; }
+  .stage { background: var(--sage); border-top: 6px solid var(--teal); border-radius: 0 0 var(--r) var(--r); padding: 14px 16px; display: grid; gap: 4px; }
+  .stage b { font: 800 2.2rem/1 var(--display); color: var(--teal); }
+  .stage span { color: var(--muted); }
+  .norm { margin-top: 26px; font: 600 1.25rem/1.4 var(--text); color: var(--teal); max-width: 46ch; }
+  .small-print { margin-top: 12px; display: grid; gap: 6px; color: var(--muted); }
+  .flow { margin-top: 44px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 36px; align-items: start; }
+  .flow-lines { display: grid; gap: 12px; }
+  .flow-line { display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: center; padding: 16px 18px; border-radius: var(--r); background: var(--sage); }
+  .flow-line .arrow { font: 500 1rem/1.3 var(--mono); white-space: nowrap; color: var(--teal); }
+  .why { background: var(--sage); border-radius: var(--r); padding: 20px 22px; display: grid; gap: 10px; }
+  .why b { color: var(--teal); }
+  .after { margin-top: 36px; }
+
+  /* Checks */
+  .checks { background: var(--sage); }
+  .checklist { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 44px; }
+  .checklist li { display: grid; grid-template-columns: 28px 1fr; gap: 14px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+  .tick { width: 26px; height: 26px; margin-top: 1px; }
+  .checklist b { display: block; font-weight: 600; }
+  .checklist span { color: var(--muted); }
+
+  /* Preparation */
+  .prep { list-style: none; margin: 0; padding: 0; display: grid; }
+  .prep li { display: grid; grid-template-columns: 8.5em 1fr auto; gap: 18px; padding: 16px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+  .prep .h { font: 500 1rem/1.4 var(--mono); color: var(--teal); }
+  .prep .who { font: 500 0.8rem/1.4 var(--mono); color: var(--muted); text-align: right; }
+  .prep .pay { font: 500 0.8rem/1 var(--mono); border: 1.5px solid var(--teal); color: var(--teal); padding: 3px 7px; border-radius: 6px; margin-left: 8px; white-space: nowrap; }
+  .prep .theday { background: var(--teal); color: var(--paper); border-radius: var(--r); padding-inline: 16px; border-bottom: 0; }
+  .prep .theday .h, .prep .theday .who { color: var(--paper); }
+  .family { margin-top: 22px; color: var(--muted); }
+
+  /* The day: the pinned clock */
+  .day { background: var(--teal); color: var(--paper); }
+  .day h2 { color: var(--paper); }
+  .day .label { color: #b8cdc8; }
+  .day .lead { color: #d6e4e0; }
+  .day-grid { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 56px; }
+  .clock-col { display: none; }
+  .js .clock-col { display: block; }
+  .clock-pin { position: sticky; top: 140px; min-height: 62vh; display: grid; align-content: start; gap: 14px; }
+  .clock { font: 800 clamp(5rem, 12vw, 10.5rem)/0.85 var(--display); letter-spacing: -0.045em; color: var(--paper); font-variant-numeric: tabular-nums; }
+  .clock-note { font: 500 0.8rem/1.4 var(--mono); color: #b8cdc8; }
+  .panels { display: grid; gap: 0; }
+  .panel { min-height: 46vh; display: grid; gap: 16px; align-content: center; padding-block: 36px; border-top: 1px solid #2e6966; }
+  .panel .time { font: 500 1rem/1 var(--mono); color: var(--butter); }
+  .panel .art { width: 100%; max-width: 440px; height: auto; display: block; }
+  .panel .what { font-size: 1.25rem; color: var(--paper); max-width: 34ch; }
+  @media (prefers-reduced-motion: no-preference) {
+    .clock { transition: opacity 0.2s; }
+    .clock.flip { opacity: 0.2; }
+    .js .panel .art { transform: translateY(24px); opacity: 0; transition: transform 0.5s ease-out, opacity 0.5s ease-out; }
+    .js .panel.seen .art { transform: none; opacity: 1; }
+  }
+  .close-line { margin-top: 56px; font: 800 clamp(2.6rem, 6vw, 5rem)/1 var(--display); letter-spacing: -0.03em; color: var(--paper); }
+  .day-facts { margin-top: 26px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 40px; color: #d6e4e0; }
+  .day-facts b { color: var(--paper); font-weight: 600; }
+
+  /* FAQ */
+  .faq { max-width: 820px; }
+  .faq details { border-bottom: 1px solid var(--line); }
+  .faq summary { cursor: pointer; padding: 20px 40px 20px 0; font: 600 1.125rem/1.4 var(--text); list-style: none; position: relative; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; position: absolute; right: 6px; top: 16px; font: 500 1.5rem/1 var(--mono); color: var(--teal); }
+  .faq details[open] summary::after { content: "–"; }
+  .faq details p { padding: 0 0 20px; color: var(--muted); }
+
+  /* Closing */
+  .final { background: var(--sage); }
+  .steps { list-style: none; margin: 30px 0 34px; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; counter-reset: s; }
+  .steps li { counter-increment: s; display: grid; gap: 8px; border-top: 3px solid var(--teal); padding-top: 14px; }
+  .steps li::before { content: counter(s); font: 800 2.2rem/1 var(--display); color: var(--teal); }
+  .wa-text { margin-top: 14px; font: 500 1rem/1.5 var(--mono); color: var(--muted); }
+  footer { background: var(--teal); color: #d6e4e0; padding-block: 34px; font-size: 1rem; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 30px; }
+  footer b { color: var(--paper); }
+
+  .sticky-wa { display: none; }
+  @media (max-width: 720px) {
+    html { scroll-padding-bottom: 96px; scroll-padding-top: 140px; }
+    body { padding-bottom: 80px; }
+    .sticky-wa { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; padding: 12px max(16px, env(safe-area-inset-left, 0px)) calc(12px + env(safe-area-inset-bottom, 0px)); background: var(--paper); border-top: 1px solid var(--line); transition: transform 0.25s ease-out; }
+    .sticky-wa .btn { width: 100%; }
+    .sticky-wa.away { transform: translateY(110%); }
+  }
+  @media (max-width: 860px) {
+    section { padding-block: 72px; }
+    .slips, .stages, .steps, .day-facts { grid-template-columns: 1fr; }
+    .flow, .checklist { grid-template-columns: 1fr; }
+    .day-grid { grid-template-columns: 1fr; gap: 0; }
+    .js .clock-col { position: sticky; top: 58px; z-index: 10; background: var(--teal); margin-inline: calc(-1 * var(--gutter)); padding: 10px var(--gutter); border-bottom: 1px solid #2e6966; }
+    .clock-pin { position: static; min-height: 0; display: flex; align-items: baseline; gap: 14px; }
+    .clock { font-size: 3rem; }
+    .panel { min-height: 0; }
+    .prep li { grid-template-columns: 6.5em 1fr; }
+    .prep .who { display: none; }
+  }
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="#">Jalinan</a>
+  <nav class="nav" aria-label="Utama"><a href="#harga">Harga</a><a href="#cek">Cek kami</a><a href="#persiapan">Persiapan</a><a href="#hari-h">Hari H</a><a href="#tanya">Tanya jawab</a>
+  <a class="btn btn-main" href="https://wa.me/6281200000000?text=Halo%20Jalinan%2C%20kami%20mau%20cek%20tanggal" target="_blank" rel="noopener">Cek tanggal</a></nav>
+</div></header>
+<main>
+<section class="hero"><div class="wrap"><div class="hero-text"><p class="label">Wedding organizer · Jakarta</p>
+<h1><span class="line">Hari H berjalan.</span> <span class="line">Kalian&nbsp;tinggal hadir.</span></h1>
+<p class="sub">Kami pegang rundown, vendor, dan jam di hari H. Kalau ada masalah di balik layar, itu urusan kami. Kalian tidak perlu tahu.</p>
+<div class="actions"><a class="btn btn-main" href="https://wa.me/6281200000000?text=Halo%20Jalinan%2C%20kami%20mau%20cek%20tanggal" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>Cek tanggal kosong via WhatsApp</a><a class="text-link" href="#harga">Lihat harga</a></div>
+<p class="price-line"><b>Koordinasi hari H mulai Rp 9,5 juta.</b> Vendor kalian bayar langsung; pelunasan fee kami setelah acara.</p>
+<p class="check-line"><a href="#cek">Cek kami dulu: kantor, NIB, contoh kontrak →</a></p></div>
+<div class="clock-card"><span class="label">Hari H · contoh rundown</span><span class="t">05.30</span><p>Tim kami sudah di venue. Kalian masih bisa tidur sebentar.</p><p class="next">berikutnya 08.00 · 09.00 · 11.00 · 13.30 · 15.00</p><a class="go" href="#hari-h">Lihat hari H jam demi jam ↓</a>
+<svg viewBox="0 0 400 230" role="img" aria-label="Ilustrasi: koordinator Jalinan di venue pagi hari dengan HT dan clipboard"><rect y="196" width="400" height="34" fill="#145c59"/><rect x="24" y="178" width="22" height="30" rx="5" fill="#1d6b67"/><rect x="21" y="204" width="28" height="8" rx="3" fill="#1d6b67"/><rect x="24" y="212" width="4" height="14" fill="#1d6b67"/><rect x="42" y="212" width="4" height="14" fill="#1d6b67"/><rect x="66" y="178" width="22" height="30" rx="5" fill="#1d6b67"/><rect x="63" y="204" width="28" height="8" rx="3" fill="#1d6b67"/><rect x="66" y="212" width="4" height="14" fill="#1d6b67"/><rect x="84" y="212" width="4" height="14" fill="#1d6b67"/><rect x="108" y="178" width="22" height="30" rx="5" fill="#1d6b67"/><rect x="105" y="204" width="28" height="8" rx="3" fill="#1d6b67"/><rect x="108" y="212" width="4" height="14" fill="#1d6b67"/><rect x="126" y="212" width="4" height="14" fill="#1d6b67"/><rect x="150" y="178" width="22" height="30" rx="5" fill="#1d6b67"/><rect x="147" y="204" width="28" height="8" rx="3" fill="#1d6b67"/><rect x="150" y="212" width="4" height="14" fill="#1d6b67"/><rect x="168" y="212" width="4" height="14" fill="#1d6b67"/><circle cx="352" cy="52" r="30" fill="#F2C14E" class="sun"/><g transform="translate(270 226) scale(1.2)">
+  <rect x="-13" y="-62" width="10" height="62" rx="4" fill="#172321"/><rect x="3" y="-62" width="10" height="62" rx="4" fill="#172321"/>
+  <path d="M-22 -58 Q-24 -112 0 -116 Q24 -112 22 -58 Z" fill="#0F4C4A"/>
+  <circle cx="0" cy="-132" r="17" fill="#7A4B32"/>
+  <path d="M-17 -136 Q-15 -154 0 -153 Q17 -154 17 -136 Q8 -146 -17 -136 Z" fill="#172321"/>
+  <rect x="20" y="-104" width="11" height="24" rx="3" fill="#172321"/><rect x="27" y="-118" width="3" height="16" fill="#172321"/><rect x="-40" y="-100" width="26" height="34" rx="3" fill="#F7F6F1" stroke="#172321" stroke-width="2"/><rect x="-32" y="-104" width="10" height="6" rx="2" fill="#E8613C"/><path d="M-35 -88h16M-35 -81h16M-35 -74h10" stroke="#172321" stroke-width="2"/><rect x="-6" y="-96" width="12" height="15" rx="2" fill="#F2C14E"/>
+</g></svg></div>
+</div></section>
+
+<section id="harga"><div class="wrap">
+  <div class="head"><p class="label">Harga</p><h2>Harga, dan ke mana uang kalian pergi</h2>
+  <p class="lead">Harga di bawah adalah fee kerja kami. Vendor kalian bayar sendiri, langsung ke mereka.</p></div>
+  <div class="slips">
+    <article class="slip"><span class="when">MULAI H-30</span><h3>Hari H</h3><p class="amount"><small>mulai</small> Rp 9,5 jt</p><ul><li>Rundown dan technical meeting</li><li>Gladi resik di venue</li><li>Koordinasi penuh di hari H</li></ul></article>
+    <article class="slip featured"><span class="when">MULAI H-180</span><h3>Pendampingan</h3><p class="amount"><small>mulai</small> Rp 24 jt</p><ul><li>Semua di paket Hari H</li><li>Rencana anggaran</li><li>Pilih vendor; kami cek setiap kontrak sebelum ditandatangani</li></ul></article>
+    <article class="slip"><span class="when">MULAI H-365</span><h3>Penuh</h3><p class="amount"><small>mulai</small> Rp 45 jt</p><ul><li>Semua di Pendampingan</li><li>Cari dan survei venue</li><li>Susun upacara dan adat</li></ul></article>
+  </div>
+  <table class="guests"><caption>Harga di atas untuk sampai 300 tamu. Kru dan fee mengikuti jumlah tamu:</caption>
+    <thead><tr><th scope="col">Jumlah tamu</th><th scope="col">Kru di hari H</th><th scope="col">Tambahan fee</th></tr></thead>
+    <tbody><tr><td>sampai 300</td><td>6 orang</td><td>–</td></tr><tr><td>301–600</td><td>8 orang</td><td>+ Rp 2 jt</td></tr><tr><td>601–1.000</td><td>10 orang</td><td>+ Rp 4 jt</td></tr></tbody></table>
+  <p class="stages-title">Fee dibayar dalam 3 tahap, sama untuk semua paket</p>
+  <div class="stages" aria-label="Tahap pembayaran fee">
+    <div class="stage"><b>30%</b><span>saat tanda tangan kontrak</span></div>
+    <div class="stage"><b>40%</b><span>di technical meeting, H-30</span></div>
+    <div class="stage"><b>30%</b><span>pelunasan H+1, setelah acara selesai</span></div>
+  </div>
+  <p class="norm">Biasanya WO minta lunas sebelum hari H. Kami minta pelunasan sehari setelahnya.</p>
+  <div class="small-print"><p>Tidak ada biaya lain di luar tabel ini. Makan, parkir, dan transport kru sudah termasuk.</p><p>Kalau batal, tahap yang sudah dibayar menutup pekerjaan yang sudah dikerjakan. Tahap berikutnya tidak ditagih.</p></div>
+  <div class="flow">
+    <div class="flow-lines">
+      <div class="flow-line"><span class="arrow">Kalian → vendor</span><p>Langsung, dengan kontrak atas nama kalian.</p></div>
+      <div class="flow-line"><span class="arrow">Kalian → Jalinan</span><p>Hanya fee kerja kami, dalam tiga tahap.</p></div>
+      <p>Kalian tidak mengurus vendor sendirian. Kami cek setiap invoice vendor terhadap kontraknya, mengingatkan jatuh tempo, dan menemani pelunasan kalau kalian mau.</p>
+    </div>
+    <div class="why"><b>Kenapa begini</b><p>Tahun ini ada pasangan yang sudah lunas ke WO, lalu tahu dari pihak gedung di H-10 bahwa gedungnya baru dibayar DP. Kalau kalian membayar vendor sendiri, itu tidak bisa terjadi.</p></div>
+  </div>
+  <div class="after"><a class="btn btn-main" href="https://wa.me/6281200000000?text=Halo%20Jalinan%2C%20kami%20mau%20cek%20tanggal" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>Tanya tanggal dan paket via WhatsApp</a></div>
+</div></section>
+
+<section id="cek" class="checks"><div class="wrap">
+  <div class="head"><p class="label">Sebelum membayar apa pun</p><h2>Takut ketemu WO bodong? Wajar. Cek kami dulu.</h2></div>
+  <ul class="checklist"><li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#0F4C4A"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#F7F6F1" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Kantor yang bisa didatangi</b><span>Jl. Wijaya I no. 12, Kebayoran Baru. Datang saja Senin–Sabtu, 10.00–18.00.</span></div></li><li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#0F4C4A"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#F7F6F1" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>NIB dan akta usaha</b><span>Kami tunjukkan aslinya saat konsultasi. Silakan difoto.</span></div></li><li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#0F4C4A"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#F7F6F1" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Daftar vendor beserta nomor teleponnya</b><span>Hubungi mereka sendiri dan tanyakan pengalaman bekerja dengan kami.</span></div></li><li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#0F4C4A"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#F7F6F1" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Contoh kontrak</b><span>Untuk dibaca sebelum kalian memutuskan, termasuk aturan kalau batal.</span></div></li><li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#0F4C4A"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#F7F6F1" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Tiga pasangan terakhir kami</b><span>Nomor mereka kami berikan dengan izin. Tanyakan apa saja.</span></div></li><li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#0F4C4A"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#F7F6F1" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Technical meeting minimal 2 jam</b><span>Semua vendor hadir, dan rundown kalian tanda tangani sendiri.</span></div></li></ul>
+</div></section>
+
+<section id="persiapan"><div class="wrap">
+  <div class="head"><p class="label">Persiapan</p><h2>Dari H-365 sampai H+1</h2></div>
+  <ol class="prep">
+    <li><span class="h">H-365</span><span>Cari dan survei venue, susun anggaran awal</span><span class="who">Penuh</span></li>
+    <li><span class="h">H-180</span><span>Pilih vendor; kami cek setiap kontrak sebelum kalian tanda tangan</span><span class="who">Pendampingan</span></li>
+    <li><span class="h">H-90</span><span>Draf rundown sesuai upacara dan adat kalian</span><span class="who">Semua paket</span></li>
+    <li><span class="h">H-30</span><span>Technical meeting dengan semua vendor <span class="pay">Tahap 2</span></span><span class="who">Semua paket</span></li>
+    <li><span class="h">H-7</span><span>Gladi resik di venue</span><span class="who">Semua paket</span></li>
+    <li class="theday"><span class="h">Hari H</span><span>Kalian tinggal hadir. Jam demi jamnya ada di bawah.</span><span class="who">Semua paket</span></li>
+    <li><span class="h">H+1</span><span>Barang titipan dikembalikan, pelunasan <span class="pay">Tahap 3</span></span><span class="who">Semua paket</span></li>
+  </ol>
+  <p class="family">Jadwal ini kami kirim sebagai satu tautan. Bagikan ke orang tua dan keluarga, supaya semua melihat jadwal yang sama.</p>
+</div></section>
+
+<section id="hari-h" class="day"><div class="wrap">
+  <div class="head"><p class="label">Hari H, di balik layar</p><h2>Satu hari, jam demi jam</h2>
+  <p class="lead">Ini yang kami kerjakan sementara kalian bersiap. Contoh rundown untuk akad dan resepsi 400 tamu.</p></div>
+  <div class="day-grid">
+    <div class="clock-col" aria-hidden="true"><div class="clock-pin"><span class="clock" id="clock">05.30</span><span class="clock-note">waktu di venue</span></div></div>
+    <div class="panels"><article class="panel" data-time="05.30"><p class="time">05.30</p><svg class="art" viewBox="0 0 320 220" role="img" aria-label="Ilustrasi: kru Jalinan di pintu venue sebelum subuh, memegang HT"><defs><clipPath id="p0530"><rect width="320" height="220" rx="18"/></clipPath></defs><g clip-path="url(#p0530)"><rect width="320" height="220" fill="#EAF1EE"/><rect x="40" y="40" width="110" height="180" rx="6" fill="none" stroke="#0F4C4A" stroke-width="10"/><rect x="50" y="50" width="90" height="170" fill="#F7F6F1"/><circle cx="95" cy="24" r="12" fill="#F2C14E"/><rect y="200" width="320" height="20" fill="#C9D3CF"/><g transform="translate(215 205) scale(0.95)">
+  <rect x="-13" y="-62" width="10" height="62" rx="4" fill="#172321"/><rect x="3" y="-62" width="10" height="62" rx="4" fill="#172321"/>
+  <path d="M-22 -58 Q-24 -112 0 -116 Q24 -112 22 -58 Z" fill="#0F4C4A"/>
+  <circle cx="0" cy="-132" r="17" fill="#7A4B32"/>
+  <path d="M-17 -136 Q-15 -154 0 -153 Q17 -154 17 -136 Q8 -146 -17 -136 Z" fill="#172321"/>
+  <rect x="20" y="-104" width="11" height="24" rx="3" fill="#172321"/><rect x="27" y="-118" width="3" height="16" fill="#172321"/><rect x="-40" y="-100" width="26" height="34" rx="3" fill="#F7F6F1" stroke="#172321" stroke-width="2"/><rect x="-32" y="-104" width="10" height="6" rx="2" fill="#E8613C"/><path d="M-35 -88h16M-35 -81h16M-35 -74h10" stroke="#172321" stroke-width="2"/><rect x="-6" y="-96" width="12" height="15" rx="2" fill="#F2C14E"/>
+</g></g></svg><p class="what">Tia sudah di venue. MUA datang 05.45, rias dimulai 06.00.</p></article><article class="panel" data-time="08.00"><p class="time">08.00</p><svg class="art" viewBox="0 0 320 220" role="img" aria-label="Ilustrasi: clipboard daftar periksa di samping nampan katering yang tertutup"><defs><clipPath id="p0800"><rect width="320" height="220" rx="18"/></clipPath></defs><g clip-path="url(#p0800)"><rect width="320" height="220" fill="#EAF1EE"/><rect x="20" y="150" width="200" height="14" rx="4" fill="#0F4C4A"/><rect x="36" y="164" width="8" height="56" fill="#0F4C4A"/><rect x="196" y="164" width="8" height="56" fill="#0F4C4A"/><path d="M32 150 a38 30 0 0 1 76 0 Z" fill="#F7F6F1" stroke="#172321" stroke-width="2.5"/><circle cx="70" cy="118" r="5" fill="#172321"/><path d="M126 150 a38 30 0 0 1 76 0 Z" fill="#F7F6F1" stroke="#172321" stroke-width="2.5"/><circle cx="164" cy="118" r="5" fill="#172321"/><g transform="rotate(6 262 120)"><rect x="226" y="62" width="74" height="100" rx="6" fill="#F7F6F1" stroke="#172321" stroke-width="2.5"/><rect x="250" y="54" width="26" height="14" rx="3" fill="#E8613C"/><path d="M238 86l6 6 10-12M238 110l6 6 10-12M238 134l6 6 10-12" stroke="#0F4C4A" stroke-width="3.5" fill="none" stroke-linecap="round"/><path d="M262 90h26M262 114h26M262 138h18" stroke="#172321" stroke-width="2.5"/></g></g></svg><p class="what">Katering datang. Dimas menghitung porsi terhadap kontrak: 400 tamu plus cadangan 10%.</p></article><article class="panel" data-time="09.00"><p class="time">09.00</p><svg class="art" viewBox="0 0 320 220" role="img" aria-label="Ilustrasi: meja upacara berkain putih dengan rangkaian bunga dan dua kursi"><defs><clipPath id="p0900"><rect width="320" height="220" rx="18"/></clipPath></defs><g clip-path="url(#p0900)"><rect width="320" height="220" fill="#EAF1EE"/><rect y="196" width="320" height="24" fill="#C9D3CF"/><rect x="100" y="120" width="120" height="16" rx="4" fill="#F7F6F1"/><path d="M100 136 h120 l10 64 h-140 z" fill="#F7F6F1" stroke="#C9D3CF" stroke-width="2"/><rect x="152" y="96" width="16" height="26" rx="4" fill="#0F4C4A"/><circle cx="148" cy="88" r="9" fill="#E8613C"/><circle cx="166" cy="80" r="9" fill="#F2C14E"/><circle cx="174" cy="94" r="8" fill="#E8613C"/><rect x="44" y="164" width="22" height="30" rx="5" fill="#0F4C4A"/><rect x="41" y="190" width="28" height="8" rx="3" fill="#0F4C4A"/><rect x="44" y="198" width="4" height="14" fill="#0F4C4A"/><rect x="62" y="198" width="4" height="14" fill="#0F4C4A"/><rect x="254" y="164" width="22" height="30" rx="5" fill="#0F4C4A"/><rect x="251" y="190" width="28" height="8" rx="3" fill="#0F4C4A"/><rect x="254" y="198" width="4" height="14" fill="#0F4C4A"/><rect x="272" y="198" width="4" height="14" fill="#0F4C4A"/></g></svg><p class="what">Akad. MC sudah gladi kemarin; satu kode di HT dan musik berhenti tepat waktu.</p></article><article class="panel" data-time="11.00"><p class="time">11.00</p><svg class="art" viewBox="0 0 320 220" role="img" aria-label="Ilustrasi: pengantin di pelaminan dan antrean tamu yang pendek"><defs><clipPath id="p1100"><rect width="320" height="220" rx="18"/></clipPath></defs><g clip-path="url(#p1100)"><rect width="320" height="220" fill="#EAF1EE"/><rect y="196" width="320" height="24" fill="#C9D3CF"/><rect x="150" y="150" width="160" height="22" rx="4" fill="#0F4C4A"/><path d="M170 150 V90 a60 50 0 0 1 120 0 V150" fill="none" stroke="#0F4C4A" stroke-width="8"/><g transform="translate(208 150) scale(0.62)">
+  <rect x="-13" y="-62" width="10" height="62" rx="4" fill="#172321"/><rect x="3" y="-62" width="10" height="62" rx="4" fill="#172321"/>
+  <path d="M-22 -58 Q-24 -112 0 -116 Q24 -112 22 -58 Z" fill="#F7F6F1"/>
+  <circle cx="0" cy="-132" r="17" fill="#B97A57"/>
+  <path d="M-17 -136 Q-15 -154 0 -153 Q17 -154 17 -136 Q8 -146 -17 -136 Z" fill="#172321"/>
+  
+</g><g transform="translate(250 150) scale(0.62)">
+  <rect x="-13" y="-62" width="10" height="62" rx="4" fill="#172321"/><rect x="3" y="-62" width="10" height="62" rx="4" fill="#172321"/>
+  <path d="M-22 -58 Q-24 -112 0 -116 Q24 -112 22 -58 Z" fill="#E8613C"/>
+  <circle cx="0" cy="-132" r="17" fill="#7A4B32"/>
+  <path d="M-17 -136 Q-15 -154 0 -153 Q17 -154 17 -136 Q8 -146 -17 -136 Z" fill="#172321"/>
+  
+</g><g transform="translate(40 214) scale(0.55)">
+  <rect x="-13" y="-62" width="10" height="62" rx="4" fill="#172321"/><rect x="3" y="-62" width="10" height="62" rx="4" fill="#172321"/>
+  <path d="M-22 -58 Q-24 -112 0 -116 Q24 -112 22 -58 Z" fill="#0F4C4A"/>
+  <circle cx="0" cy="-132" r="17" fill="#D9A07A"/>
+  <path d="M-17 -136 Q-15 -154 0 -153 Q17 -154 17 -136 Q8 -146 -17 -136 Z" fill="#172321"/>
+  
+</g><g transform="translate(78 214) scale(0.55)">
+  <rect x="-13" y="-62" width="10" height="62" rx="4" fill="#172321"/><rect x="3" y="-62" width="10" height="62" rx="4" fill="#172321"/>
+  <path d="M-22 -58 Q-24 -112 0 -116 Q24 -112 22 -58 Z" fill="#F2C14E"/>
+  <circle cx="0" cy="-132" r="17" fill="#7A4B32"/>
+  <path d="M-17 -136 Q-15 -154 0 -153 Q17 -154 17 -136 Q8 -146 -17 -136 Z" fill="#172321"/>
+  
+</g><g transform="translate(116 214) scale(0.55)">
+  <rect x="-13" y="-62" width="10" height="62" rx="4" fill="#172321"/><rect x="3" y="-62" width="10" height="62" rx="4" fill="#172321"/>
+  <path d="M-22 -58 Q-24 -112 0 -116 Q24 -112 22 -58 Z" fill="#172321"/>
+  <circle cx="0" cy="-132" r="17" fill="#B97A57"/>
+  <path d="M-17 -136 Q-15 -154 0 -153 Q17 -154 17 -136 Q8 -146 -17 -136 Z" fill="#172321"/>
+  
+</g></g></svg><p class="what">Resepsi dibuka. Antrean salam kami atur per 20 menit, supaya keluarga besar tidak menunggu lama.</p></article><article class="panel" data-time="13.30"><p class="time">13.30</p><svg class="art" viewBox="0 0 320 220" role="img" aria-label="Ilustrasi: tenda samping sudah berdiri saat hujan turun, kursi tamu aman di dalamnya"><defs><clipPath id="p1330"><rect width="320" height="220" rx="18"/></clipPath></defs><g clip-path="url(#p1330)"><rect width="320" height="220" fill="#EAF1EE"/><path d="M30 20 l-8 18" stroke="#0F4C4A" stroke-width="3" stroke-linecap="round" opacity=".55"/><path d="M70 46 l-8 18" stroke="#0F4C4A" stroke-width="3" stroke-linecap="round" opacity=".55"/><path d="M110 14 l-8 18" stroke="#0F4C4A" stroke-width="3" stroke-linecap="round" opacity=".55"/><path d="M150 40 l-8 18" stroke="#0F4C4A" stroke-width="3" stroke-linecap="round" opacity=".55"/><path d="M196 18 l-8 18" stroke="#0F4C4A" stroke-width="3" stroke-linecap="round" opacity=".55"/><path d="M236 44 l-8 18" stroke="#0F4C4A" stroke-width="3" stroke-linecap="round" opacity=".55"/><path d="M280 22 l-8 18" stroke="#0F4C4A" stroke-width="3" stroke-linecap="round" opacity=".55"/><path d="M52 90 l-8 18" stroke="#0F4C4A" stroke-width="3" stroke-linecap="round" opacity=".55"/><path d="M256 92 l-8 18" stroke="#0F4C4A" stroke-width="3" stroke-linecap="round" opacity=".55"/><rect y="196" width="320" height="24" fill="#C9D3CF"/><path d="M60 110 L160 60 L260 110 Z" fill="#F7F6F1" stroke="#0F4C4A" stroke-width="4"/><path d="M110 85 L160 60 L210 85" fill="none" stroke="#E8613C" stroke-width="6"/><rect x="70" y="110" width="180" height="86" fill="#F7F6F1"/><path d="M100 110v86M130 110v86M160 110v86M190 110v86M220 110v86" stroke="#C9D3CF" stroke-width="3"/><rect x="118" y="160" width="22" height="30" rx="5" fill="#0F4C4A"/><rect x="115" y="186" width="28" height="8" rx="3" fill="#0F4C4A"/><rect x="118" y="194" width="4" height="14" fill="#0F4C4A"/><rect x="136" y="194" width="4" height="14" fill="#0F4C4A"/><rect x="154" y="160" width="22" height="30" rx="5" fill="#0F4C4A"/><rect x="151" y="186" width="28" height="8" rx="3" fill="#0F4C4A"/><rect x="154" y="194" width="4" height="14" fill="#0F4C4A"/><rect x="172" y="194" width="4" height="14" fill="#0F4C4A"/><rect x="190" y="160" width="22" height="30" rx="5" fill="#0F4C4A"/><rect x="187" y="186" width="28" height="8" rx="3" fill="#0F4C4A"/><rect x="190" y="194" width="4" height="14" fill="#0F4C4A"/><rect x="208" y="194" width="4" height="14" fill="#0F4C4A"/></g></svg><p class="what">Hujan turun. Rencana B dari technical meeting berjalan: tenda samping sudah berdiri sejak 12.00.</p></article><article class="panel" data-time="15.00"><p class="time">15.00</p><svg class="art" viewBox="0 0 320 220" role="img" aria-label="Ilustrasi: kru memasukkan kotak barang titipan ke bagasi mobil keluarga"><defs><clipPath id="p1500"><rect width="320" height="220" rx="18"/></clipPath></defs><g clip-path="url(#p1500)"><rect width="320" height="220" fill="#EAF1EE"/><rect y="196" width="320" height="24" fill="#C9D3CF"/><path d="M150 196 V120 Q150 100 170 100 H300 V196 Z" fill="#0F4C4A"/><rect x="164" y="114" width="120" height="70" rx="6" fill="#172321"/><circle cx="196" cy="198" r="18" fill="#172321"/><circle cx="196" cy="198" r="7" fill="#C9D3CF"/><rect x="176" y="148" width="46" height="36" rx="3" fill="#F2C14E"/><rect x="194" y="148" width="10" height="36" fill="#E8613C" opacity=".75"/><rect x="226" y="148" width="46" height="36" rx="3" fill="#F7F6F1"/><rect x="244" y="148" width="10" height="36" fill="#E8613C" opacity=".75"/><rect x="200" y="118" width="46" height="36" rx="3" fill="#F7F6F1"/><rect x="218" y="118" width="10" height="36" fill="#E8613C" opacity=".75"/><g transform="translate(92 205) scale(0.8)">
+  <rect x="-13" y="-62" width="10" height="62" rx="4" fill="#172321"/><rect x="3" y="-62" width="10" height="62" rx="4" fill="#172321"/>
+  <path d="M-22 -58 Q-24 -112 0 -116 Q24 -112 22 -58 Z" fill="#0F4C4A"/>
+  <circle cx="0" cy="-132" r="17" fill="#B97A57"/>
+  <path d="M-17 -136 Q-15 -154 0 -153 Q17 -154 17 -136 Q8 -146 -17 -136 Z" fill="#172321"/>
+  <rect x="-23" y="-118" width="46" height="36" rx="3" fill="#F2C14E"/><rect x="-5" y="-118" width="10" height="36" fill="#E8613C" opacity=".75"/>
+</g></g></svg><p class="what">Acara selesai. Barang titipan kami kemas, cek satu per satu, dan antar sampai ke mobil keluarga.</p></article></div>
+  </div>
+  <p class="close-line">Kalian? Tinggal hadir.</p>
+  <div class="day-facts">
+    <p><b>Satu hari, satu pernikahan.</b> Maksimal enam pernikahan per bulan, jadi koordinator kalian tidak datang dari acara lain.</p>
+    <p><b>Kru menyesuaikan tamu:</b> 6 orang untuk sampai 300 tamu, 8 untuk 600, 10 untuk 1.000.</p>
+    <p>Rundown kami susun sesuai upacara kalian: akad, pemberkatan, sangjit, tea pai, adat Jawa, Sunda, Batak, Minang, atau Betawi.</p>
+  </div>
+</div></section>
+
+<section id="tanya"><div class="wrap">
+  <div class="head"><p class="label">Tanya jawab</p><h2>Tanyakan ini ke WO mana pun</h2></div>
+  <div class="faq">
+    <details><summary>Hanya koordinasi, atau juga dekorasi?</summary><p>Kami mengatur dan mengoordinasi. Dekorasi, katering, rias, dan dokumentasi berasal dari vendor yang kalian pilih, dan kami bantu memilihnya.</p></details>
+    <details><summary>Apakah sudah kenal venue kami?</summary><p>Kalau belum, survei venue termasuk di semua paket.</p></details>
+    <details><summary>Bisa menjaga anggaran kami?</summary><p>Di Pendampingan dan Penuh kami susun rencana anggaran, lalu cek setiap invoice vendor terhadap rencana itu.</p></details>
+    <details><summary>Berapa pernikahan yang kalian tangani sebulan?</summary><p>Maksimal enam, satu per hari.</p></details>
+    <details open><summary>Kenapa pelunasan setelah acara?</summary><p>Karena pekerjaan kami baru selesai setelah acara kalian selesai.</p></details>
+    <details><summary>Bisa di luar Jakarta?</summary><p>Jabodetabek tanpa biaya transport. Untuk luar kota, biayanya kami hitung terbuka sebelum kontrak.</p></details>
+    <details open><summary>Bagaimana kalau kami batal?</summary><p>Tahap yang sudah dibayar menutup pekerjaan yang sudah dikerjakan. Aturan lengkapnya ada di contoh kontrak, yang bisa kalian baca sebelum memutuskan.</p></details>
+  </div>
+</div></section>
+
+<section class="final"><div class="wrap">
+  <h2>Kirim tanggal dan perkiraan jumlah tamu</h2>
+  <ol class="steps"><li>Kami jawab ketersediaan tanggal dalam satu hari kerja.</li><li>Konsultasi 45 menit, online atau di kantor, gratis.</li><li>Contoh kontrak dan rincian biaya kami kirim sebelum kalian memutuskan.</li></ol>
+  <a class="btn btn-main" href="https://wa.me/6281200000000?text=Halo%20Jalinan%2C%20kami%20mau%20cek%20tanggal" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>Cek tanggal via WhatsApp</a>
+  <p class="wa-text">WhatsApp 0812-0000-0000</p>
+</div></section>
+</main>
+<footer><div class="wrap"><span><b>Jalinan Wedding Organizer</b> · Jl. Wijaya I no. 12, Kebayoran Baru, Jakarta Selatan</span><span>Senin–Sabtu, 10.00–18.00</span></div></footer>
+<div class="sticky-wa"><a class="btn btn-main" href="https://wa.me/6281200000000?text=Halo%20Jalinan%2C%20kami%20mau%20cek%20tanggal" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>Cek tanggal via WhatsApp</a></div>
+<script>
+  document.documentElement.classList.add('js');
+  (function () {
+    if (!('IntersectionObserver' in window)) { document.documentElement.classList.remove('js'); return; }
+    var clock = document.getElementById('clock');
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // The clock shows the hour of the last panel whose top has passed the middle of the screen,
+    // worked out on every scroll so jumps (menu links, back button) never leave it stale.
+    var panelsEls = [].slice.call(document.querySelectorAll('.panel'));
+    var shown = clock.textContent, ticking = false;
+    function setTime(t) {
+      if (t === shown) return;
+      shown = t;
+      if (reduce) { clock.textContent = t; return; }
+      clock.classList.add('flip');
+      setTimeout(function () { clock.textContent = shown; clock.classList.remove('flip'); }, 160);
+    }
+    function update() {
+      ticking = false;
+      var t = panelsEls[0].getAttribute('data-time');
+      panelsEls.forEach(function (p) { if (p.getBoundingClientRect().top < innerHeight * 0.55) t = p.getAttribute('data-time'); });
+      setTime(t);
+    }
+    addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+    update();
+    // Drawings rise in once as their hour arrives.
+    var seen = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('seen'); seen.unobserve(e.target); } });
+    }, { threshold: 0.25 });
+    panelsEls.forEach(function (p) { seen.observe(p); });
+    // The phone's sticky button waits until the hero's own button has scrolled away.
+    // ... and steps aside while the day section is on screen, so three sticky bars never stack.
+    var bar = document.querySelector('.sticky-wa'), heroCta = document.querySelector('.hero .btn-main'), day = document.getElementById('hari-h');
+    var heroIn = true, dayIn = false;
+    function place() { if (bar) bar.classList.toggle('away', heroIn || dayIn); }
+    if (bar && heroCta) new IntersectionObserver(function (e) { heroIn = e[0].isIntersecting; place(); }).observe(heroCta);
+    if (bar && day) new IntersectionObserver(function (e) { dayIn = e[0].isIntersecting; place(); }, { rootMargin: '0px 0px -40% 0px' }).observe(day);
+  })();
+</script>
+</body>
+</html>

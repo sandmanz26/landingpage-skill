@@ -1,0 +1,68 @@
+{
+  "cmd": "score",
+  "jurors": 5,
+  "ai": 5,
+  "humans": 0,
+  "humanWeight": 0,
+  "rows": [
+    {
+      "criterion": "clarity",
+      "ai": 8,
+      "human": null,
+      "final": 8,
+      "spread": 0,
+      "flag": false
+    },
+    {
+      "criterion": "distinctiveness",
+      "ai": 7,
+      "human": null,
+      "final": 7,
+      "spread": 0,
+      "flag": false
+    },
+    {
+      "criterion": "craft",
+      "ai": 7,
+      "human": null,
+      "final": 7,
+      "spread": 0,
+      "flag": false
+    },
+    {
+      "criterion": "business",
+      "ai": 8,
+      "human": null,
+      "final": 8,
+      "spread": 0,
+      "flag": false
+    },
+    {
+      "criterion": "customer",
+      "ai": 8,
+      "human": null,
+      "final": 8,
+      "spread": 0,
+      "flag": false
+    },
+    {
+      "criterion": "story",
+      "ai": 8,
+      "human": null,
+      "final": 8,
+      "spread": 0,
+      "flag": false
+    }
+  ],
+  "weighted": 7.7,
+  "humanOverall": null,
+  "final": 7.7,
+  "gap": null,
+  "humanVisual": null,
+  "humanShip": null,
+  "visualVsShip": null,
+  "vetoes": [
+    "conversion-strategist: none. Nothing reaches the veto bar. The 'Kenapa begini' story (a couple paid in full, then the venue had only received the deposit at H-10) is told as fact without a source. It is industry context, not a claim about Jalinan, and the brief confirms such cases exist, so add a source or the word 'kasus' with the month. 'Biaya tambahan: tidak ada' becomes a promise the business cannot keep if crew size, and so cost, follows guest count. Fix problem 1 and that risk goes away.",
+    "motion-accessibility: none: no blocking accessibility failure is evidenced in the pack (keyboard and screen-reader behaviour not verifiable from screenshots)"
+  ]
+}

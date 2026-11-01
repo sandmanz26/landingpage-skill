@@ -1,0 +1,51 @@
+{
+  "cmd": "rank",
+  "jurors": 5,
+  "ai": 5,
+  "humans": 0,
+  "ranking": [
+    {
+      "variant": "C",
+      "ai": 2,
+      "human": null,
+      "final": 2
+    },
+    {
+      "variant": "A",
+      "ai": 0.8,
+      "human": null,
+      "final": 0.8
+    },
+    {
+      "variant": "B",
+      "ai": 0.2,
+      "human": null,
+      "final": 0.2
+    }
+  ],
+  "winner": "C",
+  "humanTop": null,
+  "agreement": [
+    {
+      "juror": "art-director",
+      "agreesWithHumans": null
+    },
+    {
+      "juror": "conversion-strategist",
+      "agreesWithHumans": null
+    },
+    {
+      "juror": "customer-researcher",
+      "agreesWithHumans": null
+    },
+    {
+      "juror": "motion-accessibility",
+      "agreesWithHumans": null
+    },
+    {
+      "juror": "story-strategist",
+      "agreesWithHumans": null
+    }
+  ],
+  "vetoes": []
+}

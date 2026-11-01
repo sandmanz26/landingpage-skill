@@ -1,0 +1,182 @@
+{
+  "url": "http://127.0.0.1:45301/.design/skeleton.html",
+  "time": "2026-11-01T17:45:38.235Z",
+  "sheets": {
+    "desktop": ".design/skeleton/sheet-desktop.png",
+    "mobile": ".design/skeleton/sheet-mobile.png",
+    "motion": ".design/skeleton/motion-sheet.png"
+  },
+  "load": {
+    "status": 200,
+    "retries": 0,
+    "failed": false
+  },
+  "overlaysDismissed": [],
+  "outline": {
+    "title": "Skeleton",
+    "description": "",
+    "headings": [
+      "H1 2% Hari H berjalan. Kalian tinggal hadir.",
+      "H2 13% Satu hari, jam demi jam",
+      "H2 61% Kalian? Tinggal hadir.",
+      "H2 64% Harga, dan ke mana uang kalian pergi",
+      "H2 73% Takut ketemu WO bodong? Wajar. Cek kami dulu.",
+      "H2 81% Dari H-365 sampai H+1",
+      "H2 89% Tanya jawab",
+      "H2 96% Kirim tanggal dan perkiraan jumlah tamu"
+    ],
+    "actions": [],
+    "prices": [
+      "Rp 9,5"
+    ],
+    "proofMentions": {},
+    "logoImages": 0,
+    "forms": 0,
+    "imagery": {
+      "photos": 0,
+      "illustrations": 0,
+      "videos": 0
+    },
+    "pageHeight": 6975
+  },
+  "motion": {
+    "libraries": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "splitText": false,
+      "lenis": false,
+      "locomotive": false,
+      "swiper": false,
+      "lottie": false,
+      "framerMotion": false,
+      "viewTransitions": false
+    },
+    "stickyPanels": [],
+    "maxRunning": 0,
+    "durationsMs": null,
+    "easings": [],
+    "properties": [],
+    "movingWithoutInput": 0,
+    "movingWithoutInputFurtherDown": [],
+    "scriptDrivenOnScroll": 0,
+    "infiniteLoops": 0,
+    "infiniteLoopsWithText": 0,
+    "pauseControl": false,
+    "steps": [
+      {
+        "y": 450,
+        "running": 0,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": []
+      },
+      {
+        "y": 900,
+        "running": 0,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": []
+      },
+      {
+        "y": 1350,
+        "running": 0,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": []
+      },
+      {
+        "y": 1800,
+        "running": 0,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": []
+      },
+      {
+        "y": 2250,
+        "running": 0,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": []
+      },
+      {
+        "y": 2700,
+        "running": 0,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": []
+      },
+      {
+        "y": 3150,
+        "running": 0,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": []
+      },
+      {
+        "y": 3600,
+        "running": 0,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": []
+      },
+      {
+        "y": 4050,
+        "running": 0,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": []
+      },
+      {
+        "y": 4500,
+        "running": 0,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": []
+      }
+    ]
+  },
+  "smoothness": {
+    "page": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 5086,
+      "frames": 303,
+      "fps": 59.6,
+      "medianMs": 16.7,
+      "p95Ms": 16.8,
+      "maxMs": 50,
+      "longFrames": 0,
+      "droppedShare": 0,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "baseline": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 1720,
+      "frames": 104,
+      "fps": 60.5,
+      "medianMs": 16.7,
+      "p95Ms": 16.7,
+      "maxMs": 17,
+      "longFrames": 0,
+      "droppedShare": 0,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "longFramesOverBaseline": 0,
+    "p95OverBaseline": 0.1
+  },
+  "reducedMotion": {
+    "movingWithoutInput": 0,
+    "movingOnScroll": 0,
+    "idleNavigation": null,
+    "loadFailed": false
+  },
+  "idleRunLoadFailed": false,
+  "idleNavigation": null
+}

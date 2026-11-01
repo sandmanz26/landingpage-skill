@@ -1,0 +1,270 @@
+{
+  "target": ".design/skeleton.html",
+  "time": "2026-11-01T17:44:18.748Z",
+  "rules": {
+    "purple-gradient": "warn",
+    "gradient": "info",
+    "glass": "info",
+    "system-font-only": "warn",
+    "too-many-font-sizes": "warn",
+    "too-many-colours": "warn",
+    "shadow-on-everything": "warn",
+    "icon-card-row": "warn",
+    "centred-hero-two-ctas": "warn",
+    "emoji": "warn"
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "pageHeight": 6975,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "system-font-only",
+          "message": "Only a default typeface carries the page (system-ui)"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "headline-lines",
+          "message": "h1 runs to 4 lines",
+          "sample": [
+            "<h1> \"Hari H berjalan. Kalian tinggal hadir.\""
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "system-ui",
+            "share": 100
+          }
+        ],
+        "fontSizes": [
+          160,
+          89,
+          51,
+          17,
+          14
+        ],
+        "textColours": [
+          "#222222"
+        ],
+        "backgroundColours": [
+          "#eeeeee",
+          "#d9d9d9"
+        ],
+        "chromaticColours": 0,
+        "spacing": {
+          "distinct": 6,
+          "offScale": 1,
+          "values": [
+            16,
+            17,
+            20,
+            24,
+            48,
+            72
+          ]
+        },
+        "radii": [
+          "4px"
+        ],
+        "shadows": 0,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 0,
+        "animatedElements": 0,
+        "cls": 0
+      },
+      "screenshots": [
+        ".design/skeleton/desktop-fold.png",
+        ".design/skeleton/desktop-page-01.png",
+        ".design/skeleton/desktop-page-02.png",
+        ".design/skeleton/desktop-page-03.png",
+        ".design/skeleton/desktop-page-04.png",
+        ".design/skeleton/desktop-page-05.png",
+        ".design/skeleton/desktop-page-06.png",
+        ".design/skeleton/desktop-page-07.png",
+        ".design/skeleton/desktop-page-08.png"
+      ]
+    },
+    "tablet": {
+      "width": 768,
+      "pageHeight": 7097,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "system-font-only",
+          "message": "Only a default typeface carries the page (system-ui)"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "system-ui",
+            "share": 100
+          }
+        ],
+        "fontSizes": [
+          54,
+          48,
+          32,
+          17,
+          14
+        ],
+        "textColours": [
+          "#222222"
+        ],
+        "backgroundColours": [
+          "#eeeeee",
+          "#d9d9d9",
+          "#ffffff"
+        ],
+        "chromaticColours": 0,
+        "spacing": {
+          "distinct": 9,
+          "offScale": 2,
+          "values": [
+            8,
+            16,
+            17,
+            20,
+            24,
+            28,
+            38.5,
+            48,
+            72
+          ]
+        },
+        "radii": [
+          "4px"
+        ],
+        "shadows": 0,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 0,
+        "animatedElements": 0,
+        "cls": 0
+      },
+      "screenshots": [
+        ".design/skeleton/tablet-fold.png",
+        ".design/skeleton/tablet-page-01.png",
+        ".design/skeleton/tablet-page-02.png",
+        ".design/skeleton/tablet-page-03.png",
+        ".design/skeleton/tablet-page-04.png",
+        ".design/skeleton/tablet-page-05.png",
+        ".design/skeleton/tablet-page-06.png",
+        ".design/skeleton/tablet-page-07.png"
+      ]
+    },
+    "mobile": {
+      "width": 390,
+      "pageHeight": 7112,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "system-font-only",
+          "message": "Only a default typeface carries the page (system-ui)"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "system-ui",
+            "share": 100
+          }
+        ],
+        "fontSizes": [
+          54,
+          42,
+          32,
+          17,
+          14
+        ],
+        "textColours": [
+          "#222222"
+        ],
+        "backgroundColours": [
+          "#eeeeee",
+          "#d9d9d9",
+          "#ffffff"
+        ],
+        "chromaticColours": 0,
+        "spacing": {
+          "distinct": 8,
+          "offScale": 1,
+          "values": [
+            8,
+            16,
+            17,
+            20,
+            24,
+            28,
+            48,
+            72
+          ]
+        },
+        "radii": [
+          "4px"
+        ],
+        "shadows": 0,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 0,
+        "animatedElements": 0,
+        "cls": 0
+      },
+      "screenshots": [
+        ".design/skeleton/mobile-fold.png",
+        ".design/skeleton/mobile-page-01.png",
+        ".design/skeleton/mobile-page-02.png",
+        ".design/skeleton/mobile-page-03.png",
+        ".design/skeleton/mobile-page-04.png",
+        ".design/skeleton/mobile-page-05.png",
+        ".design/skeleton/mobile-page-06.png",
+        ".design/skeleton/mobile-page-07.png",
+        ".design/skeleton/mobile-page-08.png",
+        ".design/skeleton/mobile-page-09.png"
+      ]
+    }
+  },
+  "checks": {
+    "reducedMotion": {
+      "findings": [],
+      "screenshot": ".design/skeleton/reduced-motion-fold.png"
+    },
+    "noJavaScript": {
+      "findings": [],
+      "withJs": 968,
+      "withoutJs": 968
+    }
+  },
+  "summary": {
+    "fail": 1,
+    "warn": 1
+  },
+  "url": "http://127.0.0.1:39757/.design/skeleton.html",
+  "findings": [
+    {
+      "severity": "FAIL",
+      "rule": "headline-lines",
+      "message": "h1 runs to 4 lines",
+      "sample": [
+        "<h1> \"Hari H berjalan. Kalian tinggal hadir.\""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "system-font-only",
+      "message": "Only a default typeface carries the page (system-ui)",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    }
+  ]
+}

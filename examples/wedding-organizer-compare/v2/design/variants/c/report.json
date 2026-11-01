@@ -1,0 +1,277 @@
+{
+  "target": ".design/variants/hero-c.html",
+  "time": "2026-11-01T17:51:05.304Z",
+  "rules": {
+    "purple-gradient": "warn",
+    "gradient": "info",
+    "glass": "info",
+    "system-font-only": "warn",
+    "too-many-font-sizes": "warn",
+    "too-many-colours": "warn",
+    "shadow-on-everything": "warn",
+    "icon-card-row": "warn",
+    "centred-hero-two-ctas": "warn",
+    "emoji": "warn"
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "pageHeight": 900,
+      "findings": [],
+      "inventory": {
+        "families": [
+          {
+            "family": "Figtree",
+            "share": 54
+          },
+          {
+            "family": "DM Mono",
+            "share": 29
+          },
+          {
+            "family": "Bricolage Grotesque",
+            "share": 17
+          }
+        ],
+        "fontSizes": [
+          158,
+          78,
+          58,
+          25,
+          18,
+          16,
+          15,
+          13
+        ],
+        "textColours": [
+          "#0f4c4a",
+          "#4c5a57",
+          "#172321",
+          "#b8cdc8",
+          "#f7f6f1",
+          "#d6e4e0"
+        ],
+        "backgroundColours": [
+          "#f7f6f1",
+          "#e8613c",
+          "#0f4c4a",
+          "#eaf1ee"
+        ],
+        "chromaticColours": 4,
+        "spacing": {
+          "distinct": 14,
+          "offScale": 6,
+          "values": [
+            8.5,
+            9,
+            10,
+            12,
+            14,
+            16,
+            22,
+            23,
+            24,
+            32,
+            44,
+            48,
+            72,
+            80
+          ]
+        },
+        "radii": [
+          "14px",
+          "22px"
+        ],
+        "shadows": 0,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 0,
+        "animatedElements": 1,
+        "cls": 0.043
+      },
+      "screenshots": [
+        ".design/variants/c/desktop-fold.png",
+        ".design/variants/c/desktop-page-01.png"
+      ]
+    },
+    "tablet": {
+      "width": 768,
+      "pageHeight": 1323,
+      "findings": [],
+      "inventory": {
+        "families": [
+          {
+            "family": "Figtree",
+            "share": 50
+          },
+          {
+            "family": "DM Mono",
+            "share": 32
+          },
+          {
+            "family": "Bricolage Grotesque",
+            "share": 18
+          }
+        ],
+        "fontSizes": [
+          84,
+          45,
+          34,
+          25,
+          18,
+          16,
+          15,
+          13
+        ],
+        "textColours": [
+          "#0f4c4a",
+          "#172321",
+          "#4c5a57",
+          "#b8cdc8",
+          "#f7f6f1",
+          "#d6e4e0"
+        ],
+        "backgroundColours": [
+          "#f7f6f1",
+          "#e8613c",
+          "#0f4c4a",
+          "#eaf1ee"
+        ],
+        "chromaticColours": 4,
+        "spacing": {
+          "distinct": 15,
+          "offScale": 7,
+          "values": [
+            8.5,
+            9,
+            10,
+            12,
+            14,
+            16,
+            22,
+            23,
+            24,
+            32,
+            38.5,
+            44,
+            48,
+            72,
+            80
+          ]
+        },
+        "radii": [
+          "14px",
+          "22px"
+        ],
+        "shadows": 0,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 0,
+        "animatedElements": 1,
+        "cls": 0.001
+      },
+      "screenshots": [
+        ".design/variants/c/tablet-fold.png",
+        ".design/variants/c/tablet-page-01.png",
+        ".design/variants/c/tablet-page-02.png"
+      ]
+    },
+    "mobile": {
+      "width": 390,
+      "pageHeight": 1337,
+      "findings": [],
+      "inventory": {
+        "families": [
+          {
+            "family": "Figtree",
+            "share": 49
+          },
+          {
+            "family": "DM Mono",
+            "share": 33
+          },
+          {
+            "family": "Bricolage Grotesque",
+            "share": 19
+          }
+        ],
+        "fontSizes": [
+          80,
+          45,
+          34,
+          25,
+          18,
+          16,
+          15,
+          13
+        ],
+        "textColours": [
+          "#0f4c4a",
+          "#4c5a57",
+          "#172321",
+          "#b8cdc8",
+          "#f7f6f1",
+          "#d6e4e0"
+        ],
+        "backgroundColours": [
+          "#f7f6f1",
+          "#e8613c",
+          "#0f4c4a",
+          "#eaf1ee"
+        ],
+        "chromaticColours": 4,
+        "spacing": {
+          "distinct": 13,
+          "offScale": 5,
+          "values": [
+            9,
+            10,
+            12,
+            14,
+            16,
+            20,
+            22,
+            23,
+            32,
+            44,
+            48,
+            72,
+            80
+          ]
+        },
+        "radii": [
+          "14px",
+          "22px"
+        ],
+        "shadows": 0,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 0,
+        "animatedElements": 1,
+        "cls": 0.016
+      },
+      "screenshots": [
+        ".design/variants/c/mobile-fold.png",
+        ".design/variants/c/mobile-page-01.png",
+        ".design/variants/c/mobile-page-02.png"
+      ]
+    }
+  },
+  "checks": {
+    "reducedMotion": {
+      "findings": [],
+      "screenshot": ".design/variants/c/reduced-motion-fold.png"
+    },
+    "noJavaScript": {
+      "findings": [],
+      "withJs": 508,
+      "withoutJs": 508
+    }
+  },
+  "summary": {
+    "fail": 0,
+    "warn": 0
+  },
+  "url": "http://127.0.0.1:46621/.design/variants/hero-c.html",
+  "findings": []
+}

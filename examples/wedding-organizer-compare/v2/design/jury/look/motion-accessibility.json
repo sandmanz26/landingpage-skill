@@ -1,0 +1,21 @@
+{
+  "juror": "motion-accessibility",
+  "kind": "ai",
+  "scores": { "craft": 7 },
+  "reasons": {
+    "craft": "Motion is restrained and serves the idea. The digest shows a single CSS sticky device: the clock in desktop-page-06 stays pinned while the crew entries scroll, and on mobile it collapses into a slim bar under the header (mobile-page-09, '08.00 waktu di venue'). That is a real responsive adaptation, not a shrunk desktop. Nothing moves without input (0 elements, 0 loops), reduced motion leaves 0 elements moving, durations are 200-900 ms, only transform and opacity are animated, scrolling runs at 60 fps with a p95 frame of 16.8 ms against a plain-page baseline of 16.7 ms, and CLS is 0.002. Contrast looks sound by eye: the light clock numeral on deep teal, the cream body text on teal and the orange CTA with dark text. Why not 8+: the inspector WARN about 17 font sizes is visible as uneven type across sheet-desktop. The desktop sticky column is a large empty left half under a top-pinned clock (desktop-page-06). The fold crops the hero rundown card mid-illustration, and '15.00' is orphaned on its own line (desktop-fold). The mobile chrome (header, clock bar, bottom WhatsApp bar) takes roughly a quarter of an 844 px viewport during the Hari H section (mobile-page-09). Not verified (only screenshots and the digest were available): keyboard focus styles, focus order, FAQ accordion semantics, alt text on the illustrations, whether the clock change is announced or kept silent for screen readers, and whether the bottom bar covers focused elements. Contrast was not measured with a tool."
+  },
+  "problems": [
+    "Mobile chrome stacks during the Hari H story: header + sticky clock bar + bottom CTA bar take about 23% of the viewport, and the bottom bar can sit over the last line of an entry or a focused link (mobile-page-09, mobile-page-11). Smallest fix: hide the bottom WhatsApp bar while the Hari H section is pinned, or drop the header during that section, and add scroll-padding-bottom equal to the bar height so focused elements are never covered.",
+    "Type scale is fragmented: 17 font sizes (inspector WARN), visible as near-duplicate sizes across sheet-desktop. Smallest fix: collapse to 5-6 tokens (display, H2, H3/lead, body, small, mono-label) and map 13/14/15 and 17/18/19/20 onto the nearest token.",
+    "On desktop the sticky clock pins at top-left with an empty column under it for the whole section (desktop-page-06), and the hero card is cropped at the fold with '15.00' orphaned (desktop-fold). Smallest fix: center the pinned clock vertically (top: 50%-ish via sticky offset) and pair it with the current entry's one-line caption, and keep the 'berikutnya' times on one line (smaller tracking or drop one time) so the hero card shows complete above the fold."
+  ],
+  "keep": [
+    "The single CSS sticky clock as the only scroll device; it carries the promise without any autoplay or loops.",
+    "The clean reduced-motion handling (0 elements still move) and transform/opacity-only animation, which gives 60 fps and CLS 0.002.",
+    "The mobile adaptation of the clock into a compact bar under the header, with the yellow per-entry timestamps.",
+    "The high-contrast palette: deep teal panels with cream text, and the orange CTA with dark text.",
+    "Persistent 'Cek tanggal' access: a nav button on desktop and a bottom WhatsApp bar on mobile."
+  ],
+  "veto": "none: no blocking accessibility failure is evidenced in the pack (keyboard and screen-reader behaviour not verifiable from screenshots)"
+}

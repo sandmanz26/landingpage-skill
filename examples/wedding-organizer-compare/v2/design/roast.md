@@ -63,3 +63,6 @@ change. Demanded:
 | 14 | Accepted | Inventory widened: akad, pemberkatan, sangjit/tea pai, adat Jawa, Sunda, Batak, Minang, Betawi; the rundown adapts to the ceremony |
 | 15 | Accepted | Timeline: Penuh starts at H-365, Pendampingan at H-180, Hari H at H-30. Stage 1 is paid at signing and called that (it is an upfront payment) |
 | 16 | Accepted, differently | Address the couple as "kalian" (warm, plural, fits a couple); avoids both stiff "Anda" and singular "kamu" |
+
+## Note for the standard run
+The roast above attacked strategy v2. Strategy v3 only adds research #7-#10 (a second fraud case, customer voice, the competitor payment norm) in the direction the roast demanded (points 1-4, 8); no new claim was introduced, so the roast was not repeated.

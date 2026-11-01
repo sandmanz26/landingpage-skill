@@ -1,0 +1,37 @@
+{
+  "targets": "../../../tmp/claude-0/-home-user-landingpage-skill/be851e85-a9b9-5adc-92e7-97e49b050483/scratchpad/compare/v2/.design/targets.json",
+  "rows": [
+    {
+      "dial": "colour",
+      "want": "calm: 3 colour families or fewer",
+      "got": "3 colour families (6 values), 0 gradients",
+      "ok": true
+    },
+    {
+      "dial": "type",
+      "want": "display ÷ body ≥ 6",
+      "got": "107/16px = ×6.7",
+      "ok": true
+    },
+    {
+      "dial": "imagery",
+      "want": "illustration",
+      "got": "0 photos, 7 illustrations, 0 videos",
+      "ok": true
+    },
+    {
+      "dial": "motion",
+      "want": "story",
+      "got": "no library, 1 sticky panels, up to 2 moving on scroll",
+      "ok": true
+    },
+    {
+      "dial": "always",
+      "want": "a price near the main action",
+      "got": "Rp 9,5, Rp 24, Rp 45",
+      "ok": true,
+      "why": "team Always rule"
+    }
+  ],
+  "missed": 0
+}
