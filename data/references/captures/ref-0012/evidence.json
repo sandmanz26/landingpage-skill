@@ -1,0 +1,1019 @@
+{
+  "url": "https://sunnywithin.com/",
+  "time": "2026-11-02T05:07:17.593Z",
+  "sheets": {
+    "desktop": "data/references/captures/ref-0012/sheet-desktop.png",
+    "mobile": "data/references/captures/ref-0012/sheet-mobile.png",
+    "motion": "data/references/captures/ref-0012/motion-sheet.png"
+  },
+  "load": {
+    "status": 200,
+    "retries": 0,
+    "failed": false
+  },
+  "overlaysDismissed": [
+    "Accept",
+    "Close"
+  ],
+  "outline": {
+    "title": "Sunny Within | Supremely absorbable supplements",
+    "description": "Clean, super absorbable liposomal formulas to support longevity, aging, brain & heart health, immunity, sleep, energy, and beyond.* No sugar or seed oils.",
+    "headings": [
+      "H1 4% Strong immunity starts within",
+      "H2 15% Clean liposomal supplements",
+      "H2 34% Better, on a cellular level.",
+      "H3 53% Longevity",
+      "H2 58% Recommended by Top Longevity Experts",
+      "H2 67% Help your cells age brilliantly",
+      "H2 78% Brighten up your inbox"
+    ],
+    "actions": [
+      {
+        "label": "SKIP TO CONTENT",
+        "count": 1,
+        "firstAt": 0,
+        "firstScreen": true,
+        "sticky": false
+      },
+      {
+        "label": "Cart",
+        "count": 1,
+        "firstAt": 1,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Clear",
+        "count": 1,
+        "firstAt": 3,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "SHOP NOW",
+        "count": 2,
+        "firstAt": 9,
+        "firstScreen": true,
+        "sticky": false
+      },
+      {
+        "label": "SHOP ALL SUPPLEMENTS",
+        "count": 1,
+        "firstAt": 15,
+        "firstScreen": true,
+        "sticky": false
+      },
+      {
+        "label": "ADD TO CART",
+        "count": 6,
+        "firstAt": 21,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Liposomal Science",
+        "count": 1,
+        "firstAt": 30,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Avocado Oil",
+        "count": 1,
+        "firstAt": 30,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Cellular Bioavailability",
+        "count": 1,
+        "firstAt": 30,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "LEARN MORE",
+        "count": 1,
+        "firstAt": 38,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "ADD TO CART $109",
+        "count": 1,
+        "firstAt": 54,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "SUBSCRIBE",
+        "count": 1,
+        "firstAt": 80,
+        "firstScreen": false,
+        "sticky": false
+      }
+    ],
+    "prices": [
+      "$79",
+      "$63",
+      "$69",
+      "$55",
+      "$109",
+      "$87",
+      "$74",
+      "$59",
+      "$99"
+    ],
+    "proofMentions": {
+      "review": 8,
+      "rating": 6,
+      "stars": 6
+    },
+    "logoImages": 4,
+    "forms": 11,
+    "imagery": {
+      "photos": 21,
+      "illustrations": 0,
+      "videos": 0
+    },
+    "pageHeight": 5457
+  },
+  "motion": {
+    "libraries": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "splitText": false,
+      "lenis": false,
+      "locomotive": false,
+      "swiper": false,
+      "lottie": false,
+      "framerMotion": false,
+      "viewTransitions": false
+    },
+    "stickyPanels": [],
+    "maxRunning": 19,
+    "durationsMs": {
+      "min": 200,
+      "max": 22400
+    },
+    "easings": [
+      "ease",
+      "linear"
+    ],
+    "properties": [
+      "backgroundColor",
+      "boxShadow",
+      "transform",
+      "opacity",
+      "strokeDashoffset",
+      "visibility"
+    ],
+    "movingWithoutInput": 2,
+    "movingWithoutInputFurtherDown": [
+      {
+        "y": 900,
+        "moving": 13
+      },
+      {
+        "y": 1800,
+        "moving": 2
+      },
+      {
+        "y": 2700,
+        "moving": 2
+      },
+      {
+        "y": 3600,
+        "moving": 2
+      },
+      {
+        "y": 4089,
+        "moving": 2
+      }
+    ],
+    "scriptDrivenOnScroll": 13,
+    "infiniteLoops": 53,
+    "infiniteLoopsWithText": 25,
+    "pauseControl": false,
+    "steps": [
+      {
+        "y": 450,
+        "running": 19,
+        "scriptDriven": 5,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.sw-header__bars",
+            "hasText": true,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "backgroundColor"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.sw-header__bars",
+            "hasText": true,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "boxShadow"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.sw-header__bars",
+            "hasText": true,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "img.sw-header__logo-img",
+            "hasText": false,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "img.sw-header__logo-img",
+            "hasText": false,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "span.loading-bar",
+            "hasText": false,
+            "duration": 1500,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 900,
+        "running": 14,
+        "scriptDriven": 13,
+        "idleMoving": 13,
+        "sample": [
+          {
+            "target": "span.loading-bar",
+            "hasText": false,
+            "duration": 1500,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 1400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "circle",
+            "hasText": false,
+            "duration": 1400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "strokeDashoffset",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.promotion",
+            "hasText": true,
+            "duration": 22400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform",
+              "visibility"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.promotion",
+            "hasText": true,
+            "duration": 22400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform",
+              "visibility"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.promotion",
+            "hasText": true,
+            "duration": 22400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform",
+              "visibility"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1350,
+        "running": 14,
+        "scriptDriven": 13,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "span.loading-bar",
+            "hasText": false,
+            "duration": 1500,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 1400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "circle",
+            "hasText": false,
+            "duration": 1400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "strokeDashoffset",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.promotion",
+            "hasText": true,
+            "duration": 22400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform",
+              "visibility"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.promotion",
+            "hasText": true,
+            "duration": 22400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform",
+              "visibility"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.promotion",
+            "hasText": true,
+            "duration": 22400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform",
+              "visibility"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1800,
+        "running": 15,
+        "scriptDriven": 3,
+        "idleMoving": 2,
+        "sample": [
+          {
+            "target": "a.sw-science__cta",
+            "hasText": true,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "span.loading-bar",
+            "hasText": false,
+            "duration": 1500,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 1400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "circle",
+            "hasText": false,
+            "duration": 1400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "strokeDashoffset",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.promotion",
+            "hasText": true,
+            "duration": 22400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform",
+              "visibility"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.promotion",
+            "hasText": true,
+            "duration": 22400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform",
+              "visibility"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 2250,
+        "running": 15,
+        "scriptDriven": 3,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "a.sw-science__cta",
+            "hasText": true,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "span.loading-bar",
+            "hasText": false,
+            "duration": 1500,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 1400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "circle",
+            "hasText": false,
+            "duration": 1400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "strokeDashoffset",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.promotion",
+            "hasText": true,
+            "duration": 22400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform",
+              "visibility"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.promotion",
+            "hasText": true,
+            "duration": 22400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform",
+              "visibility"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 2700,
+        "running": 14,
+        "scriptDriven": 2,
+        "idleMoving": 2,
+        "sample": [
+          {
+            "target": "span.loading-bar",
+            "hasText": false,
+            "duration": 1500,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 1400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "circle",
+            "hasText": false,
+            "duration": 1400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "strokeDashoffset",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.promotion",
+            "hasText": true,
+            "duration": 22400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform",
+              "visibility"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.promotion",
+            "hasText": true,
+            "duration": 22400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform",
+              "visibility"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.promotion",
+            "hasText": true,
+            "duration": 22400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform",
+              "visibility"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 3150,
+        "running": 14,
+        "scriptDriven": 2,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "span.loading-bar",
+            "hasText": false,
+            "duration": 1500,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 1400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "circle",
+            "hasText": false,
+            "duration": 1400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "strokeDashoffset",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.promotion",
+            "hasText": true,
+            "duration": 22400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform",
+              "visibility"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.promotion",
+            "hasText": true,
+            "duration": 22400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform",
+              "visibility"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.promotion",
+            "hasText": true,
+            "duration": 22400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform",
+              "visibility"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 3600,
+        "running": 14,
+        "scriptDriven": 2,
+        "idleMoving": 2,
+        "sample": [
+          {
+            "target": "span.loading-bar",
+            "hasText": false,
+            "duration": 1500,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 1400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "circle",
+            "hasText": false,
+            "duration": 1400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "strokeDashoffset",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.promotion",
+            "hasText": true,
+            "duration": 22400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform",
+              "visibility"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.promotion",
+            "hasText": true,
+            "duration": 22400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform",
+              "visibility"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.promotion",
+            "hasText": true,
+            "duration": 22400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform",
+              "visibility"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 4050,
+        "running": 14,
+        "scriptDriven": 2,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "span.loading-bar",
+            "hasText": false,
+            "duration": 1500,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 1400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "circle",
+            "hasText": false,
+            "duration": 1400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "strokeDashoffset",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.promotion",
+            "hasText": true,
+            "duration": 22400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform",
+              "visibility"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.promotion",
+            "hasText": true,
+            "duration": 22400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform",
+              "visibility"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.promotion",
+            "hasText": true,
+            "duration": 22400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform",
+              "visibility"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 4089,
+        "running": 14,
+        "scriptDriven": 2,
+        "idleMoving": 2,
+        "sample": [
+          {
+            "target": "span.loading-bar",
+            "hasText": false,
+            "duration": 1500,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 1400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "circle",
+            "hasText": false,
+            "duration": 1400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "strokeDashoffset",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.promotion",
+            "hasText": true,
+            "duration": 22400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform",
+              "visibility"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.promotion",
+            "hasText": true,
+            "duration": 22400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform",
+              "visibility"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.promotion",
+            "hasText": true,
+            "duration": 22400,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform",
+              "visibility"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      }
+    ]
+  },
+  "smoothness": {
+    "page": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 4141,
+      "frames": 244,
+      "fps": 58.9,
+      "medianMs": 16.7,
+      "p95Ms": 16.7,
+      "maxMs": 50,
+      "longFrames": 0,
+      "droppedShare": 0,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "baseline": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 1735,
+      "frames": 103,
+      "fps": 59.4,
+      "medianMs": 16.7,
+      "p95Ms": 16.7,
+      "maxMs": 17,
+      "longFrames": 0,
+      "droppedShare": 0,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "longFramesOverBaseline": 0,
+    "p95OverBaseline": 0
+  },
+  "reducedMotion": {
+    "movingWithoutInput": 2,
+    "movingOnScroll": 16,
+    "idleNavigation": null,
+    "loadFailed": false
+  },
+  "idleRunLoadFailed": false,
+  "idleNavigation": null
+}

@@ -1,0 +1,805 @@
+{
+  "target": "https://itserly.com/",
+  "time": "2026-11-02T04:58:52.919Z",
+  "rules": {
+    "purple-gradient": "warn",
+    "gradient": "info",
+    "glass": "info",
+    "system-font-only": "warn",
+    "too-many-font-sizes": "warn",
+    "too-many-colours": "warn",
+    "shadow-on-everything": "warn",
+    "icon-card-row": "warn",
+    "centred-hero-two-ctas": "warn",
+    "emoji": "warn"
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "pageHeight": 5486,
+      "findings": [
+        {
+          "severity": "FAIL",
+          "rule": "font-not-loaded",
+          "message": "\"TimesNewRoman\" is named in the CSS but never loaded; the browser shows a fallback font (6% of the text)"
+        },
+        {
+          "severity": "WARN",
+          "rule": "font-count",
+          "message": "4 typefaces carry the text: Build, Signifier, TimesNewRoman, Helvetica"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "no-h1",
+          "message": "No visible h1: the page has no title"
+        },
+        {
+          "severity": "WARN",
+          "rule": "fixed-cover",
+          "message": "3 fixed or sticky element(s) that are not a bar cover part of every screen; make it a slim bar or let it scroll away",
+          "sample": [
+            "480x283 (31% of the screen height) <div> \"Complete with ERLY Claw Clip $16 Add The Mixer App\"",
+            "1280x148 (16% of the screen height) <div> \"Allure Best of Beauty Winner, Daily Splash Daily S\"",
+            "1440x900 (100% of the screen height) <div> \"Close dialogEnjoy 10% OffA new era of skincare has\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "4 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#000000 on screen = 4.37:1 median, 4.37:1 in the worst tenth (needs 4.5) <a> \"ERLY Claw Clip\"",
+            "#000000 on screen = 1.67:1 median, 1.40:1 in the worst tenth (needs 4.5) <p> \"$16\"",
+            "#000000 on screen = 3.60:1 median, 3.40:1 in the worst tenth (needs 4.5) <a> \"Daily Splash\"",
+            "#ffffff on screen = 1.58:1 median, 1.50:1 in the worst tenth (needs 3) <p> \"OUR FALL EDITORIAL\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "hidden-content",
+          "message": "8 text elements were never visible during a full scroll (a reveal that never fires?)",
+          "sample": [
+            "Complete with",
+            "ERLY Claw Clip",
+            "$16",
+            "Add",
+            "The Mixer Applicator Brush"
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "11 console or page errors",
+          "sample": [
+            "Framing 'https://shop.app/' violates the following Content Security Policy directive: \"frame-ancestors 'self' https://shop.app https://admin.shopify.com\". The request has been blocked.\n",
+            "Failed to load resource: the server responded with a status of 403 ()",
+            "Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'https://itserly.com/web-pixels/strict/app/web-pixel-1465155805@23b97d18e2aa74363140dc29c9284e87.js' failed to load.",
+            "Access to XMLHttpRequest at 'https://a.klaviyo.com/onsite/track-analytics?company_id=UJmFRd' from origin 'https://itserly.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+            "Failed to load resource: net::ERR_FAILED"
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Build",
+            "share": 61
+          },
+          {
+            "family": "Signifier",
+            "share": 31
+          },
+          {
+            "family": "TimesNewRoman",
+            "share": 6
+          },
+          {
+            "family": "Helvetica",
+            "share": 2
+          }
+        ],
+        "fontSizes": [
+          30,
+          28,
+          20,
+          16,
+          14,
+          12
+        ],
+        "textColours": [
+          "#000000",
+          "#f6f6f6",
+          "#ffffff",
+          "#f6f2f2"
+        ],
+        "backgroundColours": [
+          "#47c3ca",
+          "#ffffff",
+          "#efeeea",
+          "#fadb95",
+          "#1acc5d",
+          "#ffa5a7",
+          "#141414",
+          "#000000"
+        ],
+        "chromaticColours": 4,
+        "colourFamilies": 4,
+        "spacing": {
+          "distinct": 19,
+          "offScale": 7,
+          "values": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            15,
+            16,
+            20,
+            24,
+            40,
+            44,
+            60,
+            64,
+            70,
+            80,
+            90,
+            160,
+            492.5
+          ]
+        },
+        "radii": [
+          "9999px",
+          "12px",
+          "26px",
+          "24px",
+          "50%"
+        ],
+        "shadows": 1,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 25,
+        "animatedElements": 3,
+        "cls": 0
+      },
+      "screenshots": [
+        "data/references/captures/ref-0011/desktop-fold.png",
+        "data/references/captures/ref-0011/desktop-page-01.png",
+        "data/references/captures/ref-0011/desktop-page-02.png",
+        "data/references/captures/ref-0011/desktop-page-03.png",
+        "data/references/captures/ref-0011/desktop-page-04.png",
+        "data/references/captures/ref-0011/desktop-page-05.png",
+        "data/references/captures/ref-0011/desktop-page-06.png",
+        "data/references/captures/ref-0011/desktop-page-07.png"
+      ]
+    },
+    "tablet": {
+      "width": 768,
+      "pageHeight": 6103,
+      "findings": [
+        {
+          "severity": "FAIL",
+          "rule": "font-not-loaded",
+          "message": "\"TimesNewRoman\" is named in the CSS but never loaded; the browser shows a fallback font (7% of the text)"
+        },
+        {
+          "severity": "WARN",
+          "rule": "font-count",
+          "message": "4 typefaces carry the text: Build, Signifier, TimesNewRoman, Helvetica"
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10px",
+          "sample": [
+            "<p> \"© Halliday Emerson LLC. All rights reserved. 2026\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "no-h1",
+          "message": "No visible h1: the page has no title"
+        },
+        {
+          "severity": "WARN",
+          "rule": "fixed-cover",
+          "message": "2 fixed or sticky element(s) that are not a bar cover part of every screen; make it a slim bar or let it scroll away",
+          "sample": [
+            "768x236 (23% of the screen height) <div> \"Complete with ERLY Claw Clip $16 Add The Mixer App\"",
+            "768x1024 (100% of the screen height) <div> \"Close dialogEnjoy 10% OffA new era of skincare has\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "5 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#000000 on screen = 4.06:1 median, 3.88:1 in the worst tenth (needs 4.5) <p> \"Complete with\"",
+            "#000000 on screen = 1.53:1 median, 1.38:1 in the worst tenth (needs 4.5) <a> \"ERLY Claw Clip\"",
+            "#000000 on screen = 1.85:1 median, 1.76:1 in the worst tenth (needs 4.5) <p> \"$16\"",
+            "#000000 on screen = 4.37:1 median, 2.71:1 in the worst tenth (needs 4.5) <a> \"Continue Shopping\"",
+            "#ffffff on screen = 1.58:1 median, 1.48:1 in the worst tenth (needs 4.5) <p> \"OUR FALL EDITORIAL\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "contrast-unverified",
+          "message": "6 suspected contrast problems could not be re-measured on screen"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "hidden-content",
+          "message": "8 text elements were never visible during a full scroll (a reveal that never fires?)",
+          "sample": [
+            "Complete with",
+            "ERLY Claw Clip",
+            "$16",
+            "Add",
+            "The Mixer Applicator Brush"
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "10 console or page errors",
+          "sample": [
+            "Framing 'https://shop.app/' violates the following Content Security Policy directive: \"frame-ancestors 'self' https://shop.app https://admin.shopify.com\". The request has been blocked.\n",
+            "Failed to load resource: the server responded with a status of 403 ()",
+            "Access to XMLHttpRequest at 'https://a.klaviyo.com/onsite/track-analytics?company_id=UJmFRd' from origin 'https://itserly.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+            "Failed to load resource: net::ERR_FAILED",
+            "Access to XMLHttpRequest at 'https://a.klaviyo.com/onsite/track-analytics?company_id=UJmFRd' from origin 'https://itserly.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Build",
+            "share": 55
+          },
+          {
+            "family": "Signifier",
+            "share": 36
+          },
+          {
+            "family": "TimesNewRoman",
+            "share": 7
+          },
+          {
+            "family": "Helvetica",
+            "share": 2
+          }
+        ],
+        "fontSizes": [
+          28,
+          22,
+          16,
+          15,
+          14,
+          12,
+          10
+        ],
+        "textColours": [
+          "#000000",
+          "#ffffff",
+          "#f6f6f6",
+          "#f6f2f2"
+        ],
+        "backgroundColours": [
+          "#47c3ca",
+          "#ffffff",
+          "#efeeea",
+          "#fadb95",
+          "#1acc5d",
+          "#ffa5a7",
+          "#141414",
+          "#000000"
+        ],
+        "chromaticColours": 4,
+        "colourFamilies": 4,
+        "spacing": {
+          "distinct": 22,
+          "offScale": 11,
+          "values": [
+            2,
+            6,
+            8,
+            10,
+            12,
+            14,
+            15,
+            16,
+            20,
+            24,
+            25,
+            28,
+            30,
+            32,
+            35,
+            40,
+            44,
+            45,
+            56,
+            60,
+            70,
+            863.5
+          ]
+        },
+        "radii": [
+          "9999px",
+          "12px",
+          "15px",
+          "26px",
+          "24px",
+          "50%"
+        ],
+        "shadows": 1,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 18,
+        "animatedElements": 7,
+        "cls": 0
+      },
+      "screenshots": [
+        "data/references/captures/ref-0011/tablet-fold.png",
+        "data/references/captures/ref-0011/tablet-page-01.png",
+        "data/references/captures/ref-0011/tablet-page-02.png",
+        "data/references/captures/ref-0011/tablet-page-03.png",
+        "data/references/captures/ref-0011/tablet-page-04.png",
+        "data/references/captures/ref-0011/tablet-page-05.png",
+        "data/references/captures/ref-0011/tablet-page-06.png"
+      ]
+    },
+    "mobile": {
+      "width": 390,
+      "pageHeight": 4391,
+      "findings": [
+        {
+          "severity": "FAIL",
+          "rule": "font-not-loaded",
+          "message": "\"TimesNewRoman\" is named in the CSS but never loaded; the browser shows a fallback font (7% of the text)"
+        },
+        {
+          "severity": "WARN",
+          "rule": "font-count",
+          "message": "4 typefaces carry the text: Build, Signifier, TimesNewRoman, Helvetica"
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10px",
+          "sample": [
+            "<p> \"© Halliday Emerson LLC. All rights reserved. 2026\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "no-h1",
+          "message": "No visible h1: the page has no title"
+        },
+        {
+          "severity": "WARN",
+          "rule": "fixed-cover",
+          "message": "3 fixed or sticky element(s) that are not a bar cover part of every screen; make it a slim bar or let it scroll away",
+          "sample": [
+            "390x236 (28% of the screen height) <div> \"Complete with ERLY Claw Clip $16 Add The Mixer App\"",
+            "320x126 (15% of the screen height) <div> \"Allure Best of Beauty Winner, Daily Splash Daily S\"",
+            "390x844 (100% of the screen height) <div> \"Close dialogEnjoy 10% OffA new era of skincare has\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tap-target",
+          "message": "27 controls smaller than 24x24px on a phone",
+          "sample": [
+            "1x1 <a> \"Skip to main content\"",
+            "16x16 <button> \"\"",
+            "20x20 <button> \"Cart 0\"",
+            "320x16 <a> \"Moisturizers\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "text-at-edge",
+          "message": "9 text elements within 12px of the screen edge",
+          "sample": [
+            "<a> \"Skip to main content\"",
+            "<p> \"Complete with\"",
+            "<a> \"ERLY Claw Clip\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "2 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#f6f6f6 on screen = 1.94:1 median, 1.36:1 in the worst tenth (needs 4.5) <p> \"Allure Best of Beauty Winner, Daily Splash\"",
+            "#f6f2f2 on screen = 2.15:1 median, 1.36:1 in the worst tenth (needs 4.5) <em> \"Inspired by the texture of the landscape and the b\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "contrast-unverified",
+          "message": "2 suspected contrast problems could not be re-measured on screen"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "hidden-content",
+          "message": "8 text elements were never visible during a full scroll (a reveal that never fires?)",
+          "sample": [
+            "Complete with",
+            "ERLY Claw Clip",
+            "$16",
+            "Add",
+            "The Mixer Applicator Brush"
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "10 console or page errors",
+          "sample": [
+            "Framing 'https://shop.app/' violates the following Content Security Policy directive: \"frame-ancestors 'self' https://shop.app https://admin.shopify.com\". The request has been blocked.\n",
+            "Failed to load resource: the server responded with a status of 403 ()",
+            "Access to XMLHttpRequest at 'https://a.klaviyo.com/onsite/track-analytics?company_id=UJmFRd' from origin 'https://itserly.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+            "Failed to load resource: net::ERR_FAILED",
+            "Access to XMLHttpRequest at 'https://a.klaviyo.com/onsite/track-analytics?company_id=UJmFRd' from origin 'https://itserly.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Build",
+            "share": 55
+          },
+          {
+            "family": "Signifier",
+            "share": 36
+          },
+          {
+            "family": "TimesNewRoman",
+            "share": 7
+          },
+          {
+            "family": "Helvetica",
+            "share": 2
+          }
+        ],
+        "fontSizes": [
+          28,
+          22,
+          16,
+          15,
+          14,
+          12,
+          10
+        ],
+        "textColours": [
+          "#000000",
+          "#ffffff",
+          "#f6f6f6",
+          "#f6f2f2"
+        ],
+        "backgroundColours": [
+          "#47c3ca",
+          "#fdfdfd",
+          "#efeeea",
+          "#ffffff",
+          "#fadb95",
+          "#1acc5d",
+          "#ffa5a7",
+          "#141414",
+          "#000000"
+        ],
+        "chromaticColours": 4,
+        "colourFamilies": 4,
+        "spacing": {
+          "distinct": 22,
+          "offScale": 11,
+          "values": [
+            2,
+            6,
+            8,
+            10,
+            12,
+            14,
+            15,
+            16,
+            20,
+            24,
+            25,
+            28,
+            30,
+            32,
+            35,
+            40,
+            44,
+            45,
+            56,
+            60,
+            70,
+            289.5
+          ]
+        },
+        "radii": [
+          "9999px",
+          "12px",
+          "15px",
+          "26px",
+          "24px",
+          "50%"
+        ],
+        "shadows": 1,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 18,
+        "animatedElements": 8,
+        "cls": 0
+      },
+      "screenshots": [
+        "data/references/captures/ref-0011/mobile-fold.png",
+        "data/references/captures/ref-0011/mobile-page-01.png",
+        "data/references/captures/ref-0011/mobile-page-02.png",
+        "data/references/captures/ref-0011/mobile-page-03.png",
+        "data/references/captures/ref-0011/mobile-page-04.png",
+        "data/references/captures/ref-0011/mobile-page-05.png",
+        "data/references/captures/ref-0011/mobile-page-06.png"
+      ]
+    }
+  },
+  "checks": {
+    "reducedMotion": {
+      "findings": [
+        {
+          "severity": "FAIL",
+          "rule": "reduced-motion",
+          "message": "8 text elements stay hidden when the visitor asks for reduced motion",
+          "sample": [
+            "Complete with",
+            "ERLY Claw Clip",
+            "$16",
+            "Add",
+            "The Mixer Applicator Brush"
+          ]
+        }
+      ],
+      "screenshot": "data/references/captures/ref-0011/reduced-motion-fold.png"
+    },
+    "noJavaScript": {
+      "findings": [],
+      "withJs": 1568,
+      "withoutJs": 2224
+    }
+  },
+  "summary": {
+    "fail": 9,
+    "warn": 7
+  },
+  "url": "https://itserly.com/",
+  "findings": [
+    {
+      "severity": "FAIL",
+      "rule": "font-not-loaded",
+      "message": "\"TimesNewRoman\" is named in the CSS but never loaded; the browser shows a fallback font (6% of the text)",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "no-h1",
+      "message": "No visible h1: the page has no title",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "4 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#000000 on screen = 4.37:1 median, 4.37:1 in the worst tenth (needs 4.5) <a> \"ERLY Claw Clip\"",
+        "#000000 on screen = 1.67:1 median, 1.40:1 in the worst tenth (needs 4.5) <p> \"$16\"",
+        "#000000 on screen = 3.60:1 median, 3.40:1 in the worst tenth (needs 4.5) <a> \"Daily Splash\"",
+        "#ffffff on screen = 1.58:1 median, 1.50:1 in the worst tenth (needs 3) <p> \"OUR FALL EDITORIAL\""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "hidden-content",
+      "message": "8 text elements were never visible during a full scroll (a reveal that never fires?)",
+      "sample": [
+        "Complete with",
+        "ERLY Claw Clip",
+        "$16",
+        "Add",
+        "The Mixer Applicator Brush"
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "font-not-loaded",
+      "message": "\"TimesNewRoman\" is named in the CSS but never loaded; the browser shows a fallback font (7% of the text)",
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "5 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#000000 on screen = 4.06:1 median, 3.88:1 in the worst tenth (needs 4.5) <p> \"Complete with\"",
+        "#000000 on screen = 1.53:1 median, 1.38:1 in the worst tenth (needs 4.5) <a> \"ERLY Claw Clip\"",
+        "#000000 on screen = 1.85:1 median, 1.76:1 in the worst tenth (needs 4.5) <p> \"$16\"",
+        "#000000 on screen = 4.37:1 median, 2.71:1 in the worst tenth (needs 4.5) <a> \"Continue Shopping\"",
+        "#ffffff on screen = 1.58:1 median, 1.48:1 in the worst tenth (needs 4.5) <p> \"OUR FALL EDITORIAL\""
+      ],
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tap-target",
+      "message": "27 controls smaller than 24x24px on a phone",
+      "sample": [
+        "1x1 <a> \"Skip to main content\"",
+        "16x16 <button> \"\"",
+        "20x20 <button> \"Cart 0\"",
+        "320x16 <a> \"Moisturizers\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "2 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#f6f6f6 on screen = 1.94:1 median, 1.36:1 in the worst tenth (needs 4.5) <p> \"Allure Best of Beauty Winner, Daily Splash\"",
+        "#f6f2f2 on screen = 2.15:1 median, 1.36:1 in the worst tenth (needs 4.5) <em> \"Inspired by the texture of the landscape and the b\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "reduced-motion",
+      "message": "8 text elements stay hidden when the visitor asks for reduced motion",
+      "sample": [
+        "Complete with",
+        "ERLY Claw Clip",
+        "$16",
+        "Add",
+        "The Mixer Applicator Brush"
+      ],
+      "where": [
+        "reducedMotion"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "font-count",
+      "message": "4 typefaces carry the text: Build, Signifier, TimesNewRoman, Helvetica",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "fixed-cover",
+      "message": "3 fixed or sticky element(s) that are not a bar cover part of every screen; make it a slim bar or let it scroll away",
+      "sample": [
+        "480x283 (31% of the screen height) <div> \"Complete with ERLY Claw Clip $16 Add The Mixer App\"",
+        "1280x148 (16% of the screen height) <div> \"Allure Best of Beauty Winner, Daily Splash Daily S\"",
+        "1440x900 (100% of the screen height) <div> \"Close dialogEnjoy 10% OffA new era of skincare has\""
+      ],
+      "where": [
+        "desktop",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "console-errors",
+      "message": "11 console or page errors",
+      "sample": [
+        "Framing 'https://shop.app/' violates the following Content Security Policy directive: \"frame-ancestors 'self' https://shop.app https://admin.shopify.com\". The request has been blocked.\n",
+        "Failed to load resource: the server responded with a status of 403 ()",
+        "Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'https://itserly.com/web-pixels/strict/app/web-pixel-1465155805@23b97d18e2aa74363140dc29c9284e87.js' failed to load.",
+        "Access to XMLHttpRequest at 'https://a.klaviyo.com/onsite/track-analytics?company_id=UJmFRd' from origin 'https://itserly.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "small-text",
+      "message": "Text at 10px",
+      "sample": [
+        "<p> \"© Halliday Emerson LLC. All rights reserved. 2026\""
+      ],
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "fixed-cover",
+      "message": "2 fixed or sticky element(s) that are not a bar cover part of every screen; make it a slim bar or let it scroll away",
+      "sample": [
+        "768x236 (23% of the screen height) <div> \"Complete with ERLY Claw Clip $16 Add The Mixer App\"",
+        "768x1024 (100% of the screen height) <div> \"Close dialogEnjoy 10% OffA new era of skincare has\""
+      ],
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "contrast-unverified",
+      "message": "6 suspected contrast problems could not be re-measured on screen",
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "console-errors",
+      "message": "10 console or page errors",
+      "sample": [
+        "Framing 'https://shop.app/' violates the following Content Security Policy directive: \"frame-ancestors 'self' https://shop.app https://admin.shopify.com\". The request has been blocked.\n",
+        "Failed to load resource: the server responded with a status of 403 ()",
+        "Access to XMLHttpRequest at 'https://a.klaviyo.com/onsite/track-analytics?company_id=UJmFRd' from origin 'https://itserly.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+        "Failed to load resource: net::ERR_FAILED",
+        "Access to XMLHttpRequest at 'https://a.klaviyo.com/onsite/track-analytics?company_id=UJmFRd' from origin 'https://itserly.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+      ],
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "text-at-edge",
+      "message": "9 text elements within 12px of the screen edge",
+      "sample": [
+        "<a> \"Skip to main content\"",
+        "<p> \"Complete with\"",
+        "<a> \"ERLY Claw Clip\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "contrast-unverified",
+      "message": "2 suspected contrast problems could not be re-measured on screen",
+      "where": [
+        "mobile"
+      ]
+    }
+  ]
+}

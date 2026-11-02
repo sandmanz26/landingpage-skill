@@ -1,6 +1,6 @@
 {
   "url": "https://summersmashtennis.ca/coaches/",
-  "readAt": "2026-11-02T04:03:07.089Z",
+  "readAt": "2026-11-02T05:09:17.938Z",
   "tags": [
     "shadowed",
     "expressive-type",
@@ -30,6 +30,16 @@
   },
   "type": {
     "families": [
+      {
+        "family": "founders grotesk",
+        "share": 52
+      },
+      {
+        "family": "obviously",
+        "share": 48
+      }
+    ],
+    "cuts": [
       {
         "family": "founders-grotesk",
         "share": 52

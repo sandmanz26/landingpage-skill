@@ -1,0 +1,67 @@
+{
+  "cmd": "score",
+  "jurors": 3,
+  "ai": 2,
+  "humans": 1,
+  "humanWeight": 0.5,
+  "rows": [
+    {
+      "criterion": "business",
+      "ai": 7,
+      "human": null,
+      "final": 7,
+      "spread": 0,
+      "flag": false
+    },
+    {
+      "criterion": "customer",
+      "ai": 6,
+      "human": null,
+      "final": 6,
+      "spread": 0,
+      "flag": false
+    },
+    {
+      "criterion": "story",
+      "ai": 6,
+      "human": null,
+      "final": 6,
+      "spread": 0,
+      "flag": false
+    },
+    {
+      "criterion": "distinctiveness",
+      "ai": 6,
+      "human": 6,
+      "final": 6,
+      "spread": 0,
+      "flag": false
+    },
+    {
+      "criterion": "craft",
+      "ai": 4,
+      "human": 6,
+      "final": 5,
+      "spread": 2,
+      "flag": false
+    },
+    {
+      "criterion": "clarity",
+      "ai": 7,
+      "human": null,
+      "final": 7,
+      "spread": 0,
+      "flag": false
+    }
+  ],
+  "weighted": 6.2,
+  "humanOverall": 8,
+  "final": 7.1,
+  "gap": 1.8,
+  "humanVisual": 6,
+  "humanShip": 8,
+  "visualVsShip": -2,
+  "vetoes": [
+    "business-customer-story: Unsourced health claims presented as fact in the copy, not the design: the hero frames an immunity supplement as defence for 'sick season' (implied illness prevention, contradicted by the site's own 'not intended to prevent any disease' disclaimer), and 'Liposomal delivery gets nutrients directly to your cells' carries no asterisk or source. Keep the layout patterns; do not copy the claims."
+  ]
+}

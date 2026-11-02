@@ -1,10 +1,11 @@
 {
   "url": "https://academy.a-rete.com/",
-  "readAt": "2026-11-02T04:34:45.382Z",
+  "readAt": "2026-11-02T05:09:18.423Z",
   "tags": [
     "sharp-corners",
     "expressive-type",
     "many-type-sizes",
+    "one-typeface",
     "calm-motion",
     "photography"
   ],
@@ -34,6 +35,16 @@
   },
   "type": {
     "families": [
+      {
+        "family": "din",
+        "share": 100
+      },
+      {
+        "family": "arapey",
+        "share": 1
+      }
+    ],
+    "cuts": [
       {
         "family": "Din-Light",
         "share": 57

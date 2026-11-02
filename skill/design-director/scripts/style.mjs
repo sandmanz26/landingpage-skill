@@ -25,6 +25,20 @@ if (!desk) {
   process.exit(1);
 }
 
+// Cuts of one family (RegolaMedium, Din-Condensed-Regular) are one typeface; old reports lack
+// the inspector's own grouping, so group here too.
+const familyRoot = (name) => {
+  let n = String(name).replace(/["']/g, '').trim();
+  const cut = /[-_ ]?(thin|hairline|ultralight|extralight|light|book|regular|normal|medium|semibold|demibold|bold|extrabold|ultrabold|black|heavy|italic|oblique|condensed|narrow|compressed|wide|extended|variable|vf|\d{3})$/i;
+  for (let i = 0; i < 4 && cut.test(n); i++) n = n.replace(cut, '');
+  return (n || name).toLowerCase().replace(/[-_ ]+/g, ' ').trim();
+};
+if (!desk.typefaces) {
+  const m = new Map();
+  for (const f of desk.families) m.set(familyRoot(f.family), (m.get(familyRoot(f.family)) || 0) + f.share);
+  desk.typefaces = [...m.entries()].map(([family, share]) => ({ family, share })).sort((a, b) => b.share - a.share);
+}
+
 const lum = (hex) => {
   const n = parseInt(hex.slice(1), 16);
   const c = [(n >> 16) & 255, (n >> 8) & 255, n & 255].map((v) => {
@@ -55,7 +69,7 @@ tag(radiiPx.length && Math.max(...radiiPx.filter((r) => r < 999), 0) <= 4, 'shar
 tag(display / body >= 5, 'expressive-type');
 tag(display / body < 3, 'quiet-type');
 tag(sizes.length > 8, 'many-type-sizes');
-tag(desk.families.length === 1, 'one-typeface');
+tag(desk.typefaces.filter((f) => f.share >= 3).length === 1, 'one-typeface');
 tag(desk.families.some((f) => /rounded/i.test(f.family)), 'rounded-type');
 tag(desk.families.some((f) => /serif|caslon|garamond|times|georgia|playfair|tiempos|canela/i.test(f.family) && !/sans/i.test(f.family)), 'serif');
 if (motion) {
@@ -96,7 +110,8 @@ const style = {
     blur: desk.backdropBlur,
   },
   type: {
-    families: desk.families,
+    families: desk.typefaces || desk.families,
+    cuts: desk.families,
     sizes: { desktop: sizes, mobile: mob ? mob.fontSizes : null },
     display,
     body,
@@ -121,4 +136,4 @@ const style = {
 fs.writeFileSync(path.join(dir, 'style.json'), JSON.stringify(style, null, 2));
 console.log(`style: ${path.join(dir, 'style.json')}`);
 console.log(`  ${tags.join(', ') || 'no tags'}`);
-console.log(`  type ${desk.families.map((f) => f.family).join(' + ')}, ${display}/${body}px (×${style.type.ratio}); ${desk.chromaticColours} colours; radii ${desk.radii.slice(0, 3).join(' ')}`);
+console.log(`  type ${desk.typefaces.map((f) => f.family).join(' + ')}, ${display}/${body}px (×${style.type.ratio}); ${desk.chromaticColours} colours; radii ${desk.radii.slice(0, 3).join(' ')}`);

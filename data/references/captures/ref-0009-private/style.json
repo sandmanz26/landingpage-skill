@@ -1,6 +1,6 @@
 {
   "url": "https://summersmashtennis.ca/private-lessons/",
-  "readAt": "2026-11-02T04:02:48.728Z",
+  "readAt": "2026-11-02T05:09:18.190Z",
   "tags": [
     "shadowed",
     "expressive-type",
@@ -30,6 +30,16 @@
   },
   "type": {
     "families": [
+      {
+        "family": "founders grotesk",
+        "share": 63
+      },
+      {
+        "family": "obviously",
+        "share": 37
+      }
+    ],
+    "cuts": [
       {
         "family": "founders-grotesk",
         "share": 63

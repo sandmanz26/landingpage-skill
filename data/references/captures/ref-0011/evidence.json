@@ -1,0 +1,415 @@
+{
+  "url": "https://itserly.com/",
+  "time": "2026-11-02T05:08:32.783Z",
+  "sheets": {
+    "desktop": "data/references/captures/ref-0011/sheet-desktop.png",
+    "mobile": "data/references/captures/ref-0011/sheet-mobile.png",
+    "motion": "data/references/captures/ref-0011/motion-sheet.png"
+  },
+  "load": {
+    "status": 200,
+    "retries": 0,
+    "failed": false
+  },
+  "overlaysDismissed": [
+    "Close dialog",
+    "Close teaser"
+  ],
+  "outline": {
+    "title": "ERLY Skincare | Dermatologist-Founded Essentials for Everyday Skincare",
+    "description": "ERLY is dermatologist-founded, clinically tested skincare made simple. Discover effective, fragrance-free essentials for all ages and skin types.",
+    "headings": [
+      "H3 32% Step 1",
+      "H3 32% Step 2",
+      "H3 32% Step 3",
+      "H2 47% Inspired by the texture of the landscape and the beauty of things that have lived a little",
+      "H2 77% For your Morning Routine",
+      "H2 77% For your All Day Glow",
+      "H3 96% CONNECT",
+      "H3 92% SUBSCRIBE"
+    ],
+    "actions": [
+      {
+        "label": "CART 0",
+        "count": 1,
+        "firstAt": 1,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Close dialog",
+        "count": 1,
+        "firstAt": 3,
+        "firstScreen": true,
+        "sticky": false
+      },
+      {
+        "label": "GET IN ERLY!",
+        "count": 1,
+        "firstAt": 10,
+        "firstScreen": true,
+        "sticky": false
+      },
+      {
+        "label": "ADD",
+        "count": 2,
+        "firstAt": 14,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "CONTINUE SHOPPING",
+        "count": 1,
+        "firstAt": 16,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "DAILY SPLASH",
+        "count": 1,
+        "firstAt": 16,
+        "firstScreen": false,
+        "sticky": true
+      },
+      {
+        "label": "DISCOVER ERLY",
+        "count": 1,
+        "firstAt": 30,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "DISCOVER FACE FOAM",
+        "count": 1,
+        "firstAt": 43,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "EXPLORE SERUMS",
+        "count": 1,
+        "firstAt": 43,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "EXPLORE MOISTURIZERS",
+        "count": 1,
+        "firstAt": 43,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "DISCOVER YOUR ROUTINE",
+        "count": 1,
+        "firstAt": 57,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "ERLY START",
+        "count": 1,
+        "firstAt": 87,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "DAILY DEW",
+        "count": 1,
+        "firstAt": 87,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "ABOUT",
+        "count": 1,
+        "firstAt": 92,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "LEGAL",
+        "count": 1,
+        "firstAt": 92,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Enter",
+        "count": 1,
+        "firstAt": 94,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "SUPPORT",
+        "count": 1,
+        "firstAt": 96,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "YOUR PRIVACY CHOICES",
+        "count": 1,
+        "firstAt": 96,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Site Credits",
+        "count": 1,
+        "firstAt": 99,
+        "firstScreen": false,
+        "sticky": false
+      }
+    ],
+    "prices": [
+      "$16",
+      "$22"
+    ],
+    "proofMentions": {},
+    "logoImages": 3,
+    "forms": 4,
+    "imagery": {
+      "photos": 9,
+      "illustrations": 0,
+      "videos": 2
+    },
+    "pageHeight": 5486
+  },
+  "motion": {
+    "libraries": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "splitText": false,
+      "lenis": false,
+      "locomotive": false,
+      "swiper": false,
+      "lottie": false,
+      "framerMotion": false,
+      "viewTransitions": false
+    },
+    "stickyPanels": [
+      {
+        "tag": "menu",
+        "edge": "top",
+        "zIndex": "auto"
+      },
+      {
+        "tag": "button",
+        "edge": "top",
+        "zIndex": "auto"
+      },
+      {
+        "tag": "div",
+        "edge": "top",
+        "zIndex": "1"
+      }
+    ],
+    "maxRunning": 6,
+    "durationsMs": {
+      "min": 300,
+      "max": 300
+    },
+    "easings": [
+      "cubic-bezier(0.4, 0, 0.2, 1)"
+    ],
+    "properties": [
+      "backgroundColor",
+      "borderBottomColor",
+      "borderLeftColor",
+      "borderRightColor",
+      "borderTopColor",
+      "color"
+    ],
+    "movingWithoutInput": 0,
+    "movingWithoutInputFurtherDown": [],
+    "scriptDrivenOnScroll": 0,
+    "infiniteLoops": 0,
+    "infiniteLoopsWithText": 0,
+    "pauseControl": false,
+    "steps": [
+      {
+        "y": 450,
+        "running": 0,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": []
+      },
+      {
+        "y": 900,
+        "running": 0,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": []
+      },
+      {
+        "y": 1350,
+        "running": 0,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": []
+      },
+      {
+        "y": 1800,
+        "running": 0,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": []
+      },
+      {
+        "y": 2250,
+        "running": 0,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": []
+      },
+      {
+        "y": 2700,
+        "running": 0,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": []
+      },
+      {
+        "y": 3150,
+        "running": 0,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": []
+      },
+      {
+        "y": 3600,
+        "running": 0,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": []
+      },
+      {
+        "y": 4050,
+        "running": 0,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": []
+      },
+      {
+        "y": 4500,
+        "running": 6,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "a.button",
+            "hasText": true,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "backgroundColor"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "a.button",
+            "hasText": true,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "borderBottomColor"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "a.button",
+            "hasText": true,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "borderLeftColor"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "a.button",
+            "hasText": true,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "borderRightColor"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "a.button",
+            "hasText": true,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "borderTopColor"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "a.button",
+            "hasText": true,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "color"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      }
+    ]
+  },
+  "smoothness": {
+    "page": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 4168,
+      "frames": 241,
+      "fps": 57.8,
+      "medianMs": 16.7,
+      "p95Ms": 16.8,
+      "maxMs": 33,
+      "longFrames": 0,
+      "droppedShare": 0,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "baseline": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 1727,
+      "frames": 104,
+      "fps": 60.2,
+      "medianMs": 16.7,
+      "p95Ms": 16.7,
+      "maxMs": 17,
+      "longFrames": 0,
+      "droppedShare": 0,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "longFramesOverBaseline": 0,
+    "p95OverBaseline": 0.1
+  },
+  "reducedMotion": {
+    "movingWithoutInput": 0,
+    "movingOnScroll": 0,
+    "idleNavigation": null,
+    "loadFailed": false
+  },
+  "idleRunLoadFailed": false,
+  "idleNavigation": null
+}

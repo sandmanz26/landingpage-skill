@@ -1,0 +1,147 @@
+{
+  "url": "https://itserly.com/",
+  "readAt": "2026-11-02T05:09:18.701Z",
+  "tags": [
+    "pill-shapes",
+    "quiet-type",
+    "serif",
+    "css-scroll-device",
+    "photography",
+    "pop-up-on-load"
+  ],
+  "palette": {
+    "chromatic": 4,
+    "families": 4,
+    "text": [
+      "#000000",
+      "#f6f6f6",
+      "#ffffff",
+      "#f6f2f2"
+    ],
+    "backgrounds": [
+      "#47c3ca",
+      "#ffffff",
+      "#efeeea",
+      "#fadb95",
+      "#1acc5d",
+      "#ffa5a7",
+      "#141414",
+      "#000000"
+    ],
+    "gradients": 0,
+    "shadows": 1,
+    "blur": 0
+  },
+  "type": {
+    "families": [
+      {
+        "family": "build",
+        "share": 61
+      },
+      {
+        "family": "signifier",
+        "share": 31
+      },
+      {
+        "family": "timesnewroman",
+        "share": 6
+      },
+      {
+        "family": "helvetica",
+        "share": 2
+      }
+    ],
+    "cuts": [
+      {
+        "family": "Build",
+        "share": 61
+      },
+      {
+        "family": "Signifier",
+        "share": 31
+      },
+      {
+        "family": "TimesNewRoman",
+        "share": 6
+      },
+      {
+        "family": "Helvetica",
+        "share": 2
+      }
+    ],
+    "sizes": {
+      "desktop": [
+        30,
+        28,
+        20,
+        16,
+        14,
+        12
+      ],
+      "mobile": [
+        28,
+        22,
+        16,
+        15,
+        14,
+        12,
+        10
+      ]
+    },
+    "display": 30,
+    "body": 16,
+    "ratio": 1.9
+  },
+  "shape": {
+    "radii": [
+      "9999px",
+      "12px",
+      "26px",
+      "24px",
+      "50%"
+    ]
+  },
+  "spacing": {
+    "distinct": 19,
+    "offScale": 7
+  },
+  "motion": {
+    "libraries": [],
+    "stickyPanels": 3,
+    "durationsMs": {
+      "min": 300,
+      "max": 300
+    },
+    "easings": [
+      "cubic-bezier(0.4, 0, 0.2, 1)"
+    ],
+    "reducedMotionRespected": true,
+    "smoothness": {
+      "fps": 57.8,
+      "longFrames": 0,
+      "baselineLongFrames": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    }
+  },
+  "imagery": {
+    "photos": 9,
+    "illustrations": 0,
+    "videos": 2
+  },
+  "layout": {
+    "pageHeight": 5486,
+    "screens": 6
+  },
+  "doNotCopy": [
+    "font-not-loaded: \"TimesNewRoman\" is named in the CSS but never loaded; the browser shows a fallback font (6% of the text)",
+    "no-h1: No visible h1: the page has no title",
+    "contrast: 4 text elements below WCAG AA (measured on screen pixels)",
+    "hidden-content: 8 text elements were never visible during a full scroll (a reveal that never fires?)",
+    "font-not-loaded: \"TimesNewRoman\" is named in the CSS but never loaded; the browser shows a fallback font (7% of the text)",
+    "contrast: 5 text elements below WCAG AA (measured on screen pixels)",
+    "tap-target: 27 controls smaller than 24x24px on a phone",
+    "contrast: 2 text elements below WCAG AA (measured on screen pixels)",
+    "reduced-motion: 8 text elements stay hidden when the visitor asks for reduced motion",
+    "pop-up over the first screen on load"
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "url": "https://playfolly.com",
-  "readAt": "2026-11-02T03:10:53.800Z",
+  "readAt": "2026-11-02T05:09:16.427Z",
   "tags": [
     "glass",
     "many-colours",
@@ -32,6 +32,12 @@
   },
   "type": {
     "families": [
+      {
+        "family": "geograph",
+        "share": 100
+      }
+    ],
+    "cuts": [
       {
         "family": "Geograph",
         "share": 100

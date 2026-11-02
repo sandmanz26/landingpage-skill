@@ -1,7 +1,7 @@
 {
-  "builtAt": "2026-11-02T04:41:21.273Z",
+  "builtAt": "2026-11-02T05:15:51.592Z",
   "source": "data/references (batch-*.json, captures/*/style.json)",
-  "count": 10,
+  "count": 12,
   "sectors": {
     "commerce": [
       "ref-0001"
@@ -17,7 +17,11 @@
       "ref-0007",
       "ref-0008",
       "ref-0009",
-      "ref-0010"
+      "ref-0010",
+      "ref-0012"
+    ],
+    "beauty": [
+      "ref-0011"
     ]
   },
   "groups": [
@@ -37,17 +41,17 @@
     },
     {
       "id": "style-2",
-      "name": "surface:gradient-shadow · colour:calm · colour:dark · type:quiet · motion:subtle",
+      "name": "surface:gradient-shadow · colour:calm · colour:dark · motion:subtle · shape:pill",
       "shared": [
         "surface:gradient-shadow",
         "colour:calm",
         "colour:dark",
-        "type:quiet",
         "motion:subtle",
         "shape:pill"
       ],
       "members": [
-        "ref-0003"
+        "ref-0003",
+        "ref-0012"
       ]
     },
     {
@@ -82,18 +86,17 @@
     },
     {
       "id": "style-5",
-      "name": "surface:flat · colour:bold · type:firm · type:serif · type:rounded",
+      "name": "surface:flat · colour:bold · type:serif · motion:story · shape:pill",
       "shared": [
         "surface:flat",
         "colour:bold",
-        "type:firm",
         "type:serif",
-        "type:rounded",
         "motion:story",
         "shape:pill"
       ],
       "members": [
-        "ref-0007"
+        "ref-0007",
+        "ref-0011"
       ]
     },
     {
@@ -191,7 +194,7 @@
         ],
         "type": {
           "families": [
-            "Geograph"
+            "geograph"
           ],
           "display": 234,
           "body": 16,
@@ -299,9 +302,9 @@
         ],
         "type": {
           "families": [
-            "Geist",
-            "Geist Mono",
-            "stkBureauSerif"
+            "geist",
+            "geist mono",
+            "stkbureauserif"
           ],
           "display": 72,
           "body": 16,
@@ -425,7 +428,7 @@
         ],
         "type": {
           "families": [
-            "Inter",
+            "inter",
             "mori"
           ],
           "display": 54,
@@ -540,9 +543,9 @@
         ],
         "type": {
           "families": [
-            "ABC Diatype Rounded Plus",
-            "Robuck Rounded",
-            "ABC Diatype Rounded"
+            "abc diatype rounded plus",
+            "robuck rounded",
+            "abc diatype rounded"
           ],
           "display": 575,
           "body": 24,
@@ -648,9 +651,9 @@
         ],
         "type": {
           "families": [
-            "ABC Diatype Rounded Plus",
-            "Robuck Rounded",
-            "ABC Diatype Rounded"
+            "abc diatype rounded plus",
+            "robuck rounded",
+            "abc diatype rounded"
           ],
           "display": 575,
           "body": 24,
@@ -764,10 +767,10 @@
         ],
         "type": {
           "families": [
-            "seasonSans",
-            "seasonMix",
-            "sfProDisplay",
-            "sfProText"
+            "seasonsans",
+            "seasonmix",
+            "sfprodisplay",
+            "sfprotext"
           ],
           "display": 100,
           "body": 16,
@@ -880,8 +883,8 @@
         ],
         "type": {
           "families": [
-            "Roobert",
-            "Caslon Rounded"
+            "roobert",
+            "caslon rounded"
           ],
           "display": 100,
           "body": 16,
@@ -992,8 +995,8 @@
         ],
         "type": {
           "families": [
-            "DMSans-Light",
-            "Pppangaia-Ultralight"
+            "dmsans",
+            "pppangaia"
           ],
           "display": 70,
           "body": 16,
@@ -1114,8 +1117,8 @@
         ],
         "type": {
           "families": [
-            "founders-grotesk",
-            "obviously-narrow"
+            "founders grotesk",
+            "obviously"
           ],
           "display": 90,
           "body": 16,
@@ -1220,17 +1223,14 @@
           "sharp-corners",
           "expressive-type",
           "many-type-sizes",
+          "one-typeface",
           "calm-motion",
           "photography"
         ],
         "type": {
           "families": [
-            "Din-Light",
-            "Din-Bold",
-            "Din-Condensed",
-            "Din-Regular",
-            "Din-Condensed-Regular",
-            "Arapey-Italic"
+            "din",
+            "arapey"
           ],
           "display": 150,
           "body": 16,
@@ -1279,6 +1279,228 @@
         ]
       },
       "styleGroup": "style-8"
+    },
+    {
+      "id": "ref-0011",
+      "site": "erly",
+      "url": "https://itserly.com/",
+      "batch": "batch-006",
+      "review": "data/references/batch-006-review.md",
+      "business": "Dermatologist-founded skincare (serums, moisturisers, cleansers, $16-$38), direct to consumer.",
+      "actionThatPays": "Shop / add to cart (product prices are on the shop page; the home page shows only cart upsells)",
+      "scores": {
+        "ai": 5.1,
+        "ownerOverall": null,
+        "ownerVisual": 6,
+        "ownerShip": 8,
+        "final": 6.5
+      },
+      "veto": null,
+      "patternOnly": false,
+      "patterns": [
+        "Product photography as the hero, small quiet type, wide space: lets photos carry a clean brand",
+        "The wordmark used as a graphic on the product itself",
+        "Award badge (Allure) as early trust"
+      ],
+      "avoid": [
+        "A home page with no product prices or reviews",
+        "A 10% pop-up as the strongest ask",
+        "Text over photos at 1.94:1; 27 tap targets under 24px"
+      ],
+      "sector": "beauty",
+      "style": {
+        "features": [
+          "surface:flat",
+          "colour:bold",
+          "type:quiet",
+          "type:serif",
+          "imagery:photo",
+          "motion:story",
+          "shape:pill"
+        ],
+        "tags": [
+          "pill-shapes",
+          "quiet-type",
+          "serif",
+          "css-scroll-device",
+          "photography",
+          "pop-up-on-load"
+        ],
+        "type": {
+          "families": [
+            "build",
+            "signifier",
+            "timesnewroman",
+            "helvetica"
+          ],
+          "display": 30,
+          "body": 16,
+          "ratio": 1.9,
+          "sizes": 6
+        },
+        "palette": {
+          "chromatic": 4,
+          "gradients": 0,
+          "shadows": 1,
+          "backgrounds": [
+            "#47c3ca",
+            "#ffffff",
+            "#efeeea",
+            "#fadb95",
+            "#1acc5d"
+          ]
+        },
+        "radii": [
+          "9999px",
+          "12px",
+          "26px",
+          "24px"
+        ],
+        "motion": {
+          "libraries": [],
+          "stickyPanels": 3,
+          "durationsMs": {
+            "min": 300,
+            "max": 300
+          },
+          "easings": [
+            "cubic-bezier(0.4, 0, 0.2, 1)"
+          ],
+          "reducedMotionRespected": true,
+          "smoothness": {
+            "fps": 57.8,
+            "longFrames": 0,
+            "baselineLongFrames": 0,
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+          }
+        },
+        "doNotCopy": [
+          "font-not-loaded: \"TimesNewRoman\" is named in the CSS but never loaded; the browser shows a fallback font (6% of the text)",
+          "no-h1: No visible h1: the page has no title",
+          "contrast: 4 text elements below WCAG AA (measured on screen pixels)",
+          "hidden-content: 8 text elements were never visible during a full scroll (a reveal that never fires?)",
+          "font-not-loaded: \"TimesNewRoman\" is named in the CSS but never loaded; the browser shows a fallback font (7% of the text)",
+          "contrast: 5 text elements below WCAG AA (measured on screen pixels)",
+          "tap-target: 27 controls smaller than 24x24px on a phone",
+          "contrast: 2 text elements below WCAG AA (measured on screen pixels)",
+          "reduced-motion: 8 text elements stay hidden when the visitor asks for reduced motion",
+          "pop-up over the first screen on load"
+        ]
+      },
+      "styleGroup": "style-5"
+    },
+    {
+      "id": "ref-0012",
+      "site": "sunnywithin",
+      "url": "https://sunnywithin.com/",
+      "batch": "batch-006",
+      "review": "data/references/batch-006-review.md",
+      "business": "Liposomal supplements (immunity, longevity), one-time and subscription prices ($55-$79), direct to consumer.",
+      "actionThatPays": "Add to cart / subscribe",
+      "scores": {
+        "ai": 6.2,
+        "ownerOverall": null,
+        "ownerVisual": 6,
+        "ownerShip": 8,
+        "final": 7.1
+      },
+      "veto": "Unsourced health claims presented as fact in the copy (implied illness prevention against the site's own disclaimer; 'directly to your cells' unsourced). Layout patterns may be kept; claims never copied.",
+      "patternOnly": false,
+      "patterns": [
+        "Large radius on cards and images (30-55px) for a soft, modern feel",
+        "Price, subscription price and review count next to add to cart",
+        "Doctor quote and third-party testing as proof near the offer"
+      ],
+      "avoid": [
+        "Unsourced health claims ('sick season' defence, 'directly to your cells')",
+        "CTA label at 2.32:1 on orange; text down to 8px",
+        "53 endless loops with no pause; cookie banner covering half the phone screen"
+      ],
+      "sector": "health",
+      "style": {
+        "features": [
+          "surface:gradient-shadow",
+          "colour:calm",
+          "colour:dark",
+          "type:firm",
+          "imagery:photo",
+          "motion:subtle",
+          "shape:pill"
+        ],
+        "tags": [
+          "gradient-heavy",
+          "many-colours",
+          "dark",
+          "pill-shapes",
+          "expressive-type",
+          "many-type-sizes",
+          "endless-motion",
+          "photography",
+          "ignores-reduced-motion",
+          "pop-up-on-load"
+        ],
+        "type": {
+          "families": [
+            "regola",
+            "herbik"
+          ],
+          "display": 80,
+          "body": 16,
+          "ratio": 5,
+          "sizes": 13
+        },
+        "palette": {
+          "chromatic": 6,
+          "gradients": 21,
+          "shadows": 3,
+          "backgrounds": [
+            "#373c00",
+            "#334400",
+            "#fffaf0",
+            "#ffffff",
+            "#63693d"
+          ]
+        },
+        "radii": [
+          "40px",
+          "10px",
+          "55px",
+          "44px"
+        ],
+        "motion": {
+          "libraries": [],
+          "stickyPanels": 0,
+          "durationsMs": {
+            "min": 200,
+            "max": 22400
+          },
+          "easings": [
+            "ease",
+            "linear"
+          ],
+          "reducedMotionRespected": false,
+          "smoothness": {
+            "fps": 58.9,
+            "longFrames": 0,
+            "baselineLongFrames": 0,
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+          }
+        },
+        "doNotCopy": [
+          "tiny-text: Text at 8px",
+          "contrast: 27 text elements below WCAG AA (measured on screen pixels)",
+          "tiny-text: Text at 8.10188px",
+          "tiny-text: Text at 9.03652px",
+          "contrast: 25 text elements below WCAG AA (measured on screen pixels)",
+          "tiny-text: Text at 9.3px",
+          "tiny-text: Text at 9px",
+          "tap-target: 40 controls smaller than 24x24px on a phone",
+          "contrast: 26 text elements below WCAG AA (measured on screen pixels)",
+          "motion without a reduced-motion path",
+          "pop-up over the first screen on load"
+        ]
+      },
+      "styleGroup": "style-2"
     }
   ]
 }

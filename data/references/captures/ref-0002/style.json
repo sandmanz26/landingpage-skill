@@ -1,6 +1,6 @@
 {
   "url": "https://www.replay.ai/",
-  "readAt": "2026-11-02T03:10:54.075Z",
+  "readAt": "2026-11-02T05:09:16.719Z",
   "tags": [
     "gradient-heavy",
     "glass",
@@ -39,6 +39,20 @@
   },
   "type": {
     "families": [
+      {
+        "family": "geist",
+        "share": 63
+      },
+      {
+        "family": "geist mono",
+        "share": 18
+      },
+      {
+        "family": "stkbureauserif",
+        "share": 18
+      }
+    ],
+    "cuts": [
       {
         "family": "Geist",
         "share": 63

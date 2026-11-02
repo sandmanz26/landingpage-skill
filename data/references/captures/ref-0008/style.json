@@ -1,6 +1,6 @@
 {
   "url": "https://www.theresolute.ai/",
-  "readAt": "2026-11-02T03:10:54.823Z",
+  "readAt": "2026-11-02T05:09:17.463Z",
   "tags": [
     "gradient-heavy",
     "glass",
@@ -41,6 +41,16 @@
   },
   "type": {
     "families": [
+      {
+        "family": "dmsans",
+        "share": 93
+      },
+      {
+        "family": "pppangaia",
+        "share": 7
+      }
+    ],
+    "cuts": [
       {
         "family": "DMSans-Light",
         "share": 93

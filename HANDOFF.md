@@ -1,7 +1,7 @@
 # Handoff
 
 Read this first if you are a new session, a different model or a different AI tool picking up
-this project. It is kept up to date at every milestone. Last updated: **2026-11-02** (batch-005: first negative example; display-sizes and fixed-cover checks).
+this project. It is kept up to date at every milestone. Last updated: **2026-11-02** (batch-006 ERLY and Sunny Within; font cuts grouped into typefaces).
 
 ## 1. Goal
 
@@ -262,6 +262,21 @@ role at 35/50/53px); five DIN cuts plus a serif italic; 32 contrast failures. Ne
 desktop) and `fixed-cover` (fixed/sticky element that is not a bar or a pinned panel, over 3% of
 the screen). Critic caps Craft at 6 for display sizes without a scale, a fixed cover, or no
 spacing rhythm. Four Never rules proposed in `data/references/batch-005-review.md`, pending.
+
+Batch-006 (2026-11-02): ERLY (ref-0011, skincare) and Sunny Within (ref-0012, supplements), home
+pages; owner visual 6 / ship 8 for both: first real use of the two scores (jury.mjs reported
+"would ship it although the look is not their taste"). Two combined jurors judged both sites in
+one pass (78.4k + 76.6k tokens). ERLY AI 5.1 (business 4: home shows no prices or reviews), blended
+6.5, gap 3, partly our capture's fault: the owner's screenshot was the shop page with prices;
+intake.md now says to capture the selling pages too. Sunny AI 6.2, blended 7.1, copy veto for
+unsourced health claims. Measured: ERLY images 63% of page area, text 5%, display x1.9 (owner's
+"big image, small text, big space" confirmed); Sunny radii 30/40/55px on cards, 8/10px on
+controls, about 10 values ("large" yes, "consistent" no). Proposed (pending): Prefer one or two
+radii (large for cards and images, small for controls).
+Measurement fix: font cuts (RegolaMedium, Din-Condensed-Regular, DMSans-Light) are grouped into
+one typeface in lib/measure.mjs (`typefaces`, used by font-count) and in style.mjs (also for old
+reports); all style cards refreshed. Pending owner decisions now: the four Never rules from
+batch-005 and the radius rule from batch-006.
 
 Capture fixes from batch-003: `lib/browser.mjs` `gotoStable` retries server error pages (a 502
 "upstream request failed" had been captured as Swehl's desktop) and every failed load is reported

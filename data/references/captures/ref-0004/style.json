@@ -1,6 +1,6 @@
 {
   "url": "https://maximatherapy.com",
-  "readAt": "2026-11-02T03:10:54.317Z",
+  "readAt": "2026-11-02T05:09:16.928Z",
   "tags": [
     "flat",
     "many-colours",
@@ -38,6 +38,20 @@
   },
   "type": {
     "families": [
+      {
+        "family": "abc diatype rounded plus",
+        "share": 88
+      },
+      {
+        "family": "robuck rounded",
+        "share": 12
+      },
+      {
+        "family": "abc diatype rounded",
+        "share": 0
+      }
+    ],
+    "cuts": [
       {
         "family": "ABC Diatype Rounded Plus",
         "share": 88

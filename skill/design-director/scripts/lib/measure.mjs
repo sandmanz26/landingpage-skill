@@ -226,7 +226,17 @@ export function measure({ rules, viewport }) {
       add('FAIL', 'font-not-loaded', `"${f.family}" is named in the CSS but never loaded; the browser shows a fallback font (${f.share}% of the text)`);
   }
   const mono = /mono|code|courier|consolas|menlo/i;
-  const textFamilies = families.filter((f) => f.share >= 2 && !mono.test(f.family));
+  // Cuts of one family (RegolaMedium, Din-Condensed-Regular, DMSans-Light) are one typeface.
+  const familyRoot = (name) => {
+    let n = name.replace(/["']/g, '').trim();
+    const cut = /[-_ ]?(thin|hairline|ultralight|extralight|light|book|regular|normal|medium|semibold|demibold|bold|extrabold|ultrabold|black|heavy|italic|oblique|condensed|narrow|compressed|wide|extended|variable|vf|\d{3})$/i;
+    for (let i = 0; i < 4 && cut.test(n); i++) n = n.replace(cut, '');
+    return (n || name).toLowerCase().replace(/[-_ ]+/g, ' ').trim();
+  };
+  const rootShare = new Map();
+  for (const f of families) rootShare.set(familyRoot(f.family), (rootShare.get(familyRoot(f.family)) || 0) + f.share);
+  const typefaces = [...rootShare.entries()].map(([family, share]) => ({ family, share })).sort((a, b) => b.share - a.share);
+  const textFamilies = typefaces.filter((f) => f.share >= 2 && !mono.test(f.family));
   if (textFamilies.length > 2) add('WARN', 'font-count', `${textFamilies.length} typefaces carry the text: ${textFamilies.map((f) => f.family).join(', ')}`);
   const systemOnly = families.filter((f) => f.share >= 5).every((f) => generic.test(f.family) || /^(inter|arial|helvetica|roboto|segoe ui|helvetica neue|open sans)$/i.test(f.family));
   if (families.length && systemOnly) style('system-font-only', `Only a default typeface carries the page (${families.slice(0, 2).map((f) => f.family).join(', ')})`);
@@ -437,6 +447,7 @@ export function measure({ rules, viewport }) {
     contrastCandidates,
     inventory: {
       families,
+      typefaces,
       fontSizes,
       textColours: [...textColours],
       backgroundColours: [...backgroundColours],

@@ -10,7 +10,10 @@ page itself and against the other jurors before it shapes the skill.
    says nothing yet about the business or the customer.
 3. **Find out the business** behind the site (research, short): what it sells, to whom, and the
    action the page wants. A visual choice can only be judged against that.
-4. **Capture** the whole batch at once: write `<id> <url>` lines to `data/references/batch-<n>.txt`
+4. **Capture** the pages that do the selling, not only the home page: for a shop, the catalogue or a
+   product page too; for a service, the page with prices or booking (batch-006: ERLY's home page
+   showed no prices, its shop page did). Give subpages ids like `ref-0009-classes`. Capture the
+   whole batch at once: write `<id> <url>` lines to `data/references/batch-<n>.txt`
    and run `capture.mjs data/references/batch-<n>.txt --jobs 3`. Each reference gets its evidence
    pack in `data/references/captures/<id>/`. Without network access the entry stays
    `pending-capture` and no visual claim is confirmed.

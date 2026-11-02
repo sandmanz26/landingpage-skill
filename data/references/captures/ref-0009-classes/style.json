@@ -1,6 +1,6 @@
 {
   "url": "https://summersmashtennis.ca/classes/",
-  "readAt": "2026-11-02T03:55:27.588Z",
+  "readAt": "2026-11-02T05:09:17.774Z",
   "tags": [
     "shadowed",
     "many-colours",
@@ -36,6 +36,16 @@
   },
   "type": {
     "families": [
+      {
+        "family": "founders grotesk",
+        "share": 74
+      },
+      {
+        "family": "obviously",
+        "share": 26
+      }
+    ],
+    "cuts": [
       {
         "family": "founders-grotesk",
         "share": 74

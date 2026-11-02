@@ -1,0 +1,65 @@
+{
+  "juror": "visual-motion",
+  "kind": "ai",
+  "method": "Read _brief.md, both digest.md files, desktop-fold.png, sheet-desktop.png, mobile-fold.png and sheet-mobile.png for ref-0011 and ref-0012 (9 tool calls). NOT viewed: motion-sheet.png, *-overlay.png. NOT verified: live behaviour in a browser, hover and focus states, keyboard navigation, screen-reader output, real-GPU smoothness, page transitions. Motion is judged only from the digest's measurements, not watched. ERLY: the 'Enjoy 10% Off' popup covers the centre of every desktop and mobile sheet frame after the fold, so its middle sections (3-step routine, editorial, product features) were judged from the frame edges plus the digest text. I could not tell whether the popup really comes back after being closed or whether the capture produced it. Correction to the brief: the ERLY digest lists Build (61%) and Signifier (31%) as present; only 'TimesNewRoman' (6-7% of the text) fell back. The many inspector contrast and hidden-content hits on ERLY ('Complete with', 'ERLY Claw Clip', '$16') come from the cart-drawer upsell, not from the main page, which I inferred from the page text.",
+  "refs": {
+    "ref-0011": {
+      "business": "DTC skincare (Shopify) for a derm-founded, fragrance-free basics line. Sells a simple routine of a few SKUs to a broad audience ('all ages and skin types'). The brand stance is 'keep it simple' with an outdoorsy, 'real skin' editorial voice.",
+      "scores": { "clarity": 5, "distinctiveness": 7, "craft": 5 },
+      "reasons": {
+        "clarity": "There is no h1 (inspector no-h1 on all viewports). The only text in the hero is 'Allure Best of Beauty Winner, Daily Splash': an award for one product, not what ERLY is. What the brand is comes from the 20px top bar 'Derm-Developed. Clinically Tested.' and from a paragraph below the fold. On the plus side, the Step 1/2/3 routine (Cleanse, Serums, Moisturizer) at 32% turns the catalogue into a decision path that suits the business. On the homepage, prices show only in the cart drawer ($16, $22).",
+        "distinctiveness": "The custom ERLY wordmark doubles as the graphic system: it is printed on the bottle, filled into the step cards, and set huge in the footer. The orange/teal/pink stripe in the top bar, the 'Open range. Golden light. Real skin.' western-editorial photography, and the serif body text with coloured-dot markers make it read as ownable, not as a stock template.",
+        "craft": "Visual craft is good: a 40px inset rounded hero, a restrained 6-size type scale (12-30px), and motion that is functional and quiet (300ms colour transitions, 3 CSS sticky panels, 0 autoplay loops, 0 movement under reduced motion, 57.8 fps). Several things lower the score: 27 tap targets under 24px on mobile; hero text in #f6f6f6 over the photo at 1.94:1 on mobile; the 'Inspired by...' line at 2.15:1; a fixed cart upsell covering 31% of the desktop screen; 8 elements that stay hidden under reduced motion; the missing h1; and a popup that is present in every sheet frame."
+      },
+      "claims": [
+        { "claim": "The layout is simple.", "verdict": "Partly true", "evidence": "The structure is simple: hero, intro, 3 steps, editorial, 2 product features, footer, over 5486px. The surface is not: 8 background colours (#47c3ca, #fadb95, #1acc5d, #ffa5a7 and others), 4 typefaces and 3 full-screen sticky panels. It is a simple order carried out with an editorial, layered look." },
+        { "claim": "It works because of good photo choices.", "verdict": "Partly true", "evidence": "The photography is strong and on-brief: a sunlit model holding the bottle at eye level, and a coherent fall editorial. But the identity holds just as much through the wordmark-as-graphic (bottle, step cards, giant footer ERLY) and the tricolour stripe. Remove the photos and it would still read as ERLY. Remove the wordmark and stripe and the photos become generic lifestyle stock." },
+        { "claim": "The typography is very minimal: big images, small text, big space.", "verdict": "Half true", "evidence": "'Small text' is true: the largest size is 30px, there are only 6 sizes, and there is no display headline. 'Minimal' is false: 4 faces (Build sans, Signifier serif, a TNR fallback, Helvetica), and the serif paragraph mixes in bold sans claims and inline coloured dots on purpose (mobile-fold). 'Big space' is not supported: the hero image fills the viewport with only about 40px side insets." },
+        { "claim": "The images carry it, so the eye moves to the photos.", "verdict": "True, with a cost", "evidence": "In desktop-fold the bottle next to the face is the focal point, and the Allure badge is the second. The text is small and white over the photo. The cost is that no h1 or value proposition competes for attention, so a first-time visitor sees a product and an award before learning what ERLY is." }
+      ],
+      "problems": [
+        "No h1 and no value proposition in the fold. The hero line is a product award in low-contrast white over the photo (1.94:1 median on mobile).",
+        "Interruptions cover the content: the email popup shows in every desktop and mobile sheet frame (whether it re-fires for real users is unverified), and a fixed cart upsell covers 31% of the desktop screen (fixed-cover).",
+        "Accessibility craft: 27 controls under 24x24px on mobile, contrast failures, 8 elements hidden under reduced motion, and a fallback font named in the CSS but never loaded."
+      ],
+      "keep": [
+        "Tricolour stripe top bar carrying the trust line ('Derm-Developed. Clinically Tested.'): brand colour and credibility in about 40px, above the nav.",
+        "Step 1/2/3 routine cards (Cleanse, Serums, Moisturizer), each with its own CTA: turns a catalogue into a decision path and reduces choice for skincare beginners.",
+        "Wordmark letterforms used as a graphic (on the bottle, filling the cards, a giant footer mark): one asset builds recognition across product, page and packaging.",
+        "Serif statement followed by a bold sans claim with coloured-dot markers taken from the palette: brand voice and the proof claim in one paragraph.",
+        "Product feature with ingredient chips in circles (Zinc Oxide, SPF 40, Niacinamide): makes the 'science-backed' promise scannable next to the photo.",
+        "Quiet, functional motion: colour-only 300ms transitions and CSS sticky panels, with no autoplay. It respects reduced motion, apart from the drawer bug."
+      ],
+      "veto": null
+    },
+    "ref-0012": {
+      "business": "DTC liposomal supplement brand (Shopify) selling squeeze-pouch formulas (longevity, NAD+, immunity, sleep and others) at $55-109, pushing subscriptions. It has to win on trust (science, expert, reviews) and on repeat purchase.",
+      "scores": { "clarity": 7, "distinctiveness": 6, "craft": 4 },
+      "reasons": {
+        "clarity": "There is a real h1, 'Strong immunity starts within', with a subhead and a SHOP NOW button, all in the fold on desktop and mobile. The next screen is a 6-card grid with need tags, review counts, and regular versus subscription price. 'Liposomal' is explained in a tabbed section, and an expert quote follows. The page matches how supplements are bought. Minus points: the h1 is a seasonal message for one SKU, the category line ('Clean liposomal supplements') sits in an h2 at 15%, and the cookie banner covers the lower half of the mobile fold.",
+        "distinctiveness": "The palette is ownable: olive #373c00, cream #fffaf0, lime #e6ef8e and orange #fc6125. With the sun-burst logo, the Herbik serif italic accents ('starts within', 'age brilliantly') and the giant lime footer wordmark, it reads as a brand. The section sequence is the stock DTC supplement template (badge marquee, tabbed science, bestseller carousel, expert card, glass benefit panel), and the purple/indigo category gradients are generic.",
+        "craft": "Photography and product renders are high quality: the pouch with a halved orange, the gel macro. The system and accessibility are weak. The primary CTA label #fff7f2 on the orange gradient measures 2.32:1 on mobile (SHOP NOW, SHOP ALL); there are 27 desktop contrast failures, text down to 8px ('96 Reviews'), 13 font sizes, 10 radius values, 21 gradients and 40 tap targets under 24px. Motion: 53 endless loops (25 with text) with no pause control, durations up to 22.4s, and under reduced motion 2 elements still move on their own and 16 still animate with scroll. That is decoration that ignores the user's setting."
+      },
+      "claims": [
+        { "claim": "The layout is better than ERLY's.", "verdict": "Not supported as stated (and out of scope)", "evidence": "The brief asks to judge each site against its own business. On its own terms the layout is more conventional and denser for commerce (prices, subscription price and reviews by about 21%), which suits supplements. 'Better' mixes up a conversion-dense template with a better layout. ERLY's sparser layout fits a few-SKU routine brand." },
+        { "claim": "It feels modern because of a large, consistent corner radius.", "verdict": "'Consistent' is false; 'large' is partly true", "evidence": "The digest measures 10 radius values: 40, 10, 55, 44, 8, 2.5, 87, 30px, 50% and 999px. Large radii do appear (hero bottom-right curve, cards, pill CTAs) and add softness. The modern feel comes at least as much from the serif-plus-italic and grotesk pairing (Herbik with Regola), the soft sunset gradients and the glass panels. Radius is one ingredient, not the cause." },
+        { "claim": "The images support it; without them it would look old.", "verdict": "Speculative, likely false", "evidence": "This cannot be tested from the captures. The type alone (80px Herbik serif with italic emphasis over Regola sans) and the olive/lime palette are current DTC conventions, not dated ones. Without the photos it would look generic rather than old. The images supply warmth and appetite appeal (fruit, gel), not modernity." },
+        { "claim": "Colour play is good, consistent, and makes a brand rather than just a website.", "verdict": "Brand: true. Consistent: partly false", "evidence": "Olive, cream, lime and orange recur from the top bar to the footer, and the giant lime footer wordmark is a strong brand moment. But there are 7 chromatic colours on mobile (too-many-colours), 21 gradients, off-palette purple/indigo gradient tags ('MUSCLE & BRAIN HEALTH', 'MEMORY & FOCUS'), sky-blue science and longevity panels, and an orange CTA whose white label fails contrast (2.3:1)." }
+      ],
+      "problems": [
+        "Primary CTA labels fail contrast: #fff7f2 on the orange gradient measures 2.32:1 median and 2.00:1 in the worst tenth on mobile ('SHOP NOW', 'SHOP ALL'). These are the most important controls on the page.",
+        "Motion ignores the user: 53 endless loops (25 with text), no pause control, and 2 elements still moving plus 16 still scroll-animating under prefers-reduced-motion. This fails WCAG 2.2.2 (Pause, Stop, Hide).",
+        "The system sprawls: 13 font sizes, text at 8-10px, 10 radii, 21 gradients including off-palette purple tags, and 40 sub-24px tap targets. The result reads as assembled, not designed as one system."
+      ],
+      "keep": [
+        "Product card showing regular and subscription price side by side, with a need tag and review count: anchors the subscription discount and answers 'what is it for' and 'is it trusted' in one card.",
+        "Serif display with an italic phrase used in every major heading ('starts within', 'a cellular level', 'age brilliantly'): one repeatable voice device that brands the page without imagery.",
+        "Tabbed science block (Liposomal Science / Avocado Oil / Cellular Bioavailability): fits a technical explanation into one screen, readable on demand.",
+        "Expert recommendation card (photo, name, credential, quote) on an olive band: authority proof that is visually separated from the product cards.",
+        "Giant wordmark footer on the lime brand colour: ends the page with a brand moment, not just a link dump.",
+        "Product hero that pairs the pack with its key ingredient (pouch with a halved orange): states the flavour and benefit visually before any text is read."
+      ],
+      "veto": null
+    }
+  }
+}

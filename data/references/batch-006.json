@@ -1,0 +1,144 @@
+{
+ "batch": "batch-006",
+ "received": "2026-11-02",
+ "from": "owner (chat, 1 screenshot of ERLY's shop page)",
+ "status": "captured (home pages), judged by 2 combined AI jurors and the owner",
+ "jury": {
+  "folder": "data/references/jury/batch-006",
+  "jurors": [
+   "visual-motion",
+   "business-customer-story"
+  ],
+  "human_votes": 1,
+  "note": "78.4k + 76.6k tokens for two sites"
+ },
+ "entries": [
+  {
+   "id": "ref-0011",
+   "url": "https://itserly.com/",
+   "site": "erly",
+   "sector": "beauty",
+   "business": {
+    "what": "Dermatologist-founded skincare (serums, moisturisers, cleansers, $16-$38), direct to consumer.",
+    "action_that_pays": "Shop / add to cart (product prices are on the shop page; the home page shows only cart upsells)",
+    "source": "captured home page + owner's screenshot of the shop page",
+    "confidence": "high"
+   },
+   "owner": {
+    "visual": 6,
+    "ship": 8
+   },
+   "jury_scores": {
+    "business": 4,
+    "customer": 4,
+    "story": 6,
+    "distinctiveness": 7,
+    "craft": 5,
+    "clarity": 5,
+    "weighted": 5.1
+   },
+   "combined": {
+    "final": 6.5,
+    "gap": 3,
+    "visualVsShip": -2
+   },
+   "veto": null,
+   "claims": [
+    {
+     "claim": "The layout is simple",
+     "verdict": "confirmed with correction",
+     "evidence": "Simple reading order; the system under it is not (4 faces incl. fallbacks, 8 background colours, 3 sticky panels)."
+    },
+    {
+     "claim": "It works because of good photo choices",
+     "verdict": "confirmed for brand, contested for selling",
+     "evidence": "Editorial product photography carries the identity; the home page has no product prices, no reviews and soft CTAs, the strongest ask is a 10% pop-up. The owner's screenshot shows prices on the shop page, one click away."
+    },
+    {
+     "claim": "Very minimal typography: big images, small text, big space",
+     "verdict": "confirmed (measured)",
+     "evidence": "Images cover 63% of the page area, text 5%; largest type 30px, display/body x1.9 (quiet-type). Jurors doubted 'big space'; the measurement supports it."
+    },
+    {
+     "claim": "Images carry it; the eye moves to the photos",
+     "verdict": "plausible, not measured",
+     "evidence": "Consistent with the 63% image share; eye movement itself was not measured. The wordmark used as a graphic and a three-colour rule also carry identity."
+    }
+   ],
+   "library_candidates": [
+    "Product photography as the hero, small quiet type, wide space: lets photos carry a clean brand",
+    "The wordmark used as a graphic on the product itself",
+    "Award badge (Allure) as early trust"
+   ],
+   "avoid": [
+    "A home page with no product prices or reviews",
+    "A 10% pop-up as the strongest ask",
+    "Text over photos at 1.94:1; 27 tap targets under 24px"
+   ]
+  },
+  {
+   "id": "ref-0012",
+   "url": "https://sunnywithin.com/",
+   "site": "sunnywithin",
+   "sector": "health",
+   "business": {
+    "what": "Liposomal supplements (immunity, longevity), one-time and subscription prices ($55-$79), direct to consumer.",
+    "action_that_pays": "Add to cart / subscribe",
+    "source": "captured home page",
+    "confidence": "high"
+   },
+   "owner": {
+    "visual": 6,
+    "ship": 8
+   },
+   "jury_scores": {
+    "business": 7,
+    "customer": 6,
+    "story": 6,
+    "distinctiveness": 6,
+    "craft": 4,
+    "clarity": 7,
+    "weighted": 6.2
+   },
+   "combined": {
+    "final": 7.1,
+    "gap": 1.8,
+    "visualVsShip": -2
+   },
+   "veto": "Unsourced health claims presented as fact in the copy (implied illness prevention against the site's own disclaimer; 'directly to your cells' unsourced). Layout patterns may be kept; claims never copied.",
+   "claims": [
+    {
+     "claim": "Layout better than ERLY's",
+     "verdict": "not ranked (jurors judge each site on its own); on its own scores business 7 vs ERLY 4",
+     "evidence": "Prices (regular and subscription), add to cart, review counts, a doctor quote and third-party testing are on the home page."
+    },
+    {
+     "claim": "Feels modern because of a large, consistent corner radius",
+     "verdict": "'large' confirmed, 'consistent' contested (measured)",
+     "evidence": "Large boxes use 40, 30 and 55px; controls 8 and 10px; about 10 distinct values in total."
+    },
+    {
+     "claim": "Images support it; without them it would look old",
+     "verdict": "unverifiable",
+     "evidence": "Cannot be tested from captures; photos are 21 on the page."
+    },
+    {
+     "claim": "Colour play is consistent and makes a brand",
+     "verdict": "mostly confirmed",
+     "evidence": "Two colour families carry it; a purple gradient outside the palette and an orange CTA at 2.32:1 contrast weaken it."
+    }
+   ],
+   "library_candidates": [
+    "Large radius on cards and images (30-55px) for a soft, modern feel",
+    "Price, subscription price and review count next to add to cart",
+    "Doctor quote and third-party testing as proof near the offer"
+   ],
+   "avoid": [
+    "Unsourced health claims ('sick season' defence, 'directly to your cells')",
+    "CTA label at 2.32:1 on orange; text down to 8px",
+    "53 endless loops with no pause; cookie banner covering half the phone screen"
+   ]
+  }
+ ],
+ "owner_taste_signal": "First real use of the two scores: visual 6, ship 8 on both. The owner would send product sites with strong photography and a consistent brand even when the layout is plain. The AI agrees on Sunny Within (business 7) and disagrees on ERLY's home (business 4: no prices, no reviews), partly because the AI saw the home page only while the owner also looked at the shop page."
+}

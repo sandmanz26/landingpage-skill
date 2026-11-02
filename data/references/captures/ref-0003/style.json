@@ -1,6 +1,6 @@
 {
   "url": "https://scotchpos.com/",
-  "readAt": "2026-11-02T03:10:54.176Z",
+  "readAt": "2026-11-02T05:09:16.813Z",
   "tags": [
     "gradient-heavy",
     "shadowed",
@@ -37,6 +37,16 @@
   },
   "type": {
     "families": [
+      {
+        "family": "inter",
+        "share": 73
+      },
+      {
+        "family": "mori",
+        "share": 27
+      }
+    ],
+    "cuts": [
       {
         "family": "Inter",
         "share": 73

@@ -1,0 +1,1640 @@
+{
+  "target": "https://sunnywithin.com/",
+  "time": "2026-11-02T04:58:52.919Z",
+  "rules": {
+    "purple-gradient": "warn",
+    "gradient": "info",
+    "glass": "info",
+    "system-font-only": "warn",
+    "too-many-font-sizes": "warn",
+    "too-many-colours": "warn",
+    "shadow-on-everything": "warn",
+    "icon-card-row": "warn",
+    "centred-hero-two-ctas": "warn",
+    "emoji": "warn"
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "pageHeight": 4989,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "font-count",
+          "message": "6 typefaces carry the text: RegolaMedium, RegolaRegular, RegolaSemibold, RegolaBold, HerbikRegular, HerbikItalic"
+        },
+        {
+          "severity": "WARN",
+          "rule": "too-many-font-sizes",
+          "message": "13 different font sizes on the page (aim for 5 or fewer doing the visible work)"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"96 Reviews\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"NEW: The first complete NAD+ pathway formula. Dire\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 11.6px",
+          "sample": [
+            "<span> \"MUSCLE & BRAIN HEALTH\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"38 Reviews\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"NEW: Waterless liposomal creatine designed for lon\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"1042 Reviews\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"Advanced liposomal supplement for cellular energy,\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 11.6px",
+          "sample": [
+            "<span> \"6-IN-1 IMMUNITY SUPPORT\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"106 Reviews\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"Give your immune system some love with Vitamins C,\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 11.6px",
+          "sample": [
+            "<span> \"MEMORY & FOCUS SUPPORT\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"120 Reviews\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"Feel like the sharpest you with Magnesium L‑Threon\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"109 Reviews\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"Drift off to dreamland with Magnesium Glycinate, L\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10px",
+          "sample": [
+            "<p> \"Leading Longevity Specialist, Body & Mind Optimiza\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"Your privacy is extremely important to us. We'll n\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"*The FDA only evaluates foods and drugs, not suppl\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"†Clinical reference: Yi L, et al. GeroScience. 202\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "purple-gradient",
+          "message": "3 purple or indigo gradients",
+          "sample": [
+            "<span> \"MUSCLE & BRAIN HEALTH\"",
+            "<span> \"MEMORY & FOCUS SUPPORT\"",
+            "<span> \"DEEP SLEEP SUPPORT\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "21 gradient backgrounds"
+        },
+        {
+          "severity": "INFO",
+          "rule": "overlays-dismissed",
+          "message": "Closed 2 pop-up or banner(s) before capturing the screens",
+          "sample": [
+            "Accept",
+            "Close"
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "27 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#373c00 on screen = 3.94:1 median, 2.76:1 in the worst tenth (needs 4.5) <a> \"Shop All\"",
+            "#373c00 on screen = 4.45:1 median, 3.18:1 in the worst tenth (needs 4.5) <a> \"Shop Bestsellers\"",
+            "#fff7f2 on screen = 2.35:1 median, 2.06:1 in the worst tenth (needs 4.5) <a> \"SHOP NOW\"",
+            "#fff7f2 on screen = 2.28:1 median, 1.53:1 in the worst tenth (needs 4.5) <span> \"SHOP ALL SUPPLEMENTS\"",
+            "#fffaf0 on screen = 1.94:1 median, 1.38:1 in the worst tenth (needs 4.5) <span> \"HEALTHY AGING\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "contrast-unverified",
+          "message": "4 suspected contrast problems could not be re-measured on screen"
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "40 console or page errors",
+          "sample": [
+            "Framing 'https://shop.app/' violates the following Content Security Policy directive: \"frame-ancestors 'self' https://shop.app https://admin.shopify.com\". The request has been blocked.\n",
+            "Failed to load resource: the server responded with a status of 403 ()",
+            "Access to fetch at 'https://backend.alia-prod.com/launcher/users?path=%2F&url=https%3A%2F%2Fsunnywithin.com%2F&is_mobile=false&timezone=UTC&country=US&market=us&language=en&release_tag=v4.0.32&new_session=true' from origin 'https://sunnywithin.com' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to fetch"
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "RegolaMedium",
+            "share": 40
+          },
+          {
+            "family": "RegolaRegular",
+            "share": 28
+          },
+          {
+            "family": "RegolaSemibold",
+            "share": 14
+          },
+          {
+            "family": "RegolaBold",
+            "share": 10
+          },
+          {
+            "family": "HerbikRegular",
+            "share": 5
+          },
+          {
+            "family": "HerbikItalic",
+            "share": 2
+          }
+        ],
+        "fontSizes": [
+          80,
+          52,
+          38,
+          30,
+          20,
+          16,
+          15,
+          14,
+          13,
+          12,
+          11,
+          10,
+          8
+        ],
+        "textColours": [
+          "#ffffff",
+          "#fffaf0",
+          "#373c00",
+          "#fff7f2",
+          "#000000",
+          "#fc6125",
+          "#e6ef8e"
+        ],
+        "backgroundColours": [
+          "#373c00",
+          "#334400",
+          "#fffaf0",
+          "#ffffff",
+          "#63693d",
+          "#383c00",
+          "#e6ef8e"
+        ],
+        "chromaticColours": 6,
+        "colourFamilies": 2,
+        "spacing": {
+          "distinct": 39,
+          "offScale": 24,
+          "values": [
+            3,
+            4,
+            5,
+            5.5,
+            6,
+            6.5,
+            8,
+            10,
+            10.5,
+            11,
+            12,
+            14,
+            15,
+            16,
+            17,
+            17.5,
+            18,
+            20,
+            22,
+            24,
+            25,
+            28,
+            29,
+            30,
+            32,
+            33,
+            38,
+            40,
+            42,
+            45,
+            48,
+            50,
+            52,
+            56,
+            60,
+            68,
+            80,
+            82,
+            102
+          ]
+        },
+        "radii": [
+          "40px",
+          "10px",
+          "55px",
+          "44px",
+          "8px",
+          "2.5px",
+          "87px",
+          "30px",
+          "50%",
+          "999px"
+        ],
+        "shadows": 3,
+        "gradients": 21,
+        "backdropBlur": 0,
+        "transitions": 26,
+        "animatedElements": 18,
+        "cls": 0
+      },
+      "screenshots": [
+        "data/references/captures/ref-0012/desktop-fold.png",
+        "data/references/captures/ref-0012/desktop-overlay.png",
+        "data/references/captures/ref-0012/desktop-page-01.png",
+        "data/references/captures/ref-0012/desktop-page-02.png",
+        "data/references/captures/ref-0012/desktop-page-03.png",
+        "data/references/captures/ref-0012/desktop-page-04.png",
+        "data/references/captures/ref-0012/desktop-page-05.png",
+        "data/references/captures/ref-0012/desktop-page-06.png"
+      ]
+    },
+    "tablet": {
+      "width": 768,
+      "pageHeight": 4968,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "font-count",
+          "message": "6 typefaces carry the text: RegolaRegular, RegolaMedium, RegolaBold, RegolaSemibold, HerbikRegular, HerbikItalic"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"96 Reviews\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"NEW: The first complete NAD+ pathway formula. Dire\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 11.6px",
+          "sample": [
+            "<span> \"MUSCLE & BRAIN HEALTH\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"38 Reviews\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"NEW: Waterless liposomal creatine designed for lon\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"1042 Reviews\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"Advanced liposomal supplement for cellular energy,\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 11.6px",
+          "sample": [
+            "<span> \"6-IN-1 IMMUNITY SUPPORT\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"106 Reviews\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"Give your immune system some love with Vitamins C,\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 11.6px",
+          "sample": [
+            "<span> \"MEMORY & FOCUS SUPPORT\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"120 Reviews\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"Feel like the sharpest you with Magnesium L‑Threon\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"109 Reviews\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"Drift off to dreamland with Magnesium Glycinate, L\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.0654px",
+          "sample": [
+            "<button> \"Cellular Bioavailability\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14px (16px or more reads better)",
+          "sample": [
+            "<p> \"Liposomal delivery gets nutrients directly to your\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8.10188px",
+          "sample": [
+            "<span> \"ADD TO CART\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.03652px",
+          "sample": [
+            "<p> \"Leading Longevity Specialist, Body & Mind Optimiza\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14px (16px or more reads better)",
+          "sample": [
+            "<blockquote> \"“Not many supplements live up to my standards. Sun\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14px (16px or more reads better)",
+          "sample": [
+            "<p> \"Longevity targets aging at the cellular level with\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10px",
+          "sample": [
+            "<p> \"Your privacy is extremely important to us. We'll n\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 10px (16px or more reads better)",
+          "sample": [
+            "<p> \"Your privacy is extremely important to us. We'll n\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "purple-gradient",
+          "message": "3 purple or indigo gradients",
+          "sample": [
+            "<span> \"MUSCLE & BRAIN HEALTH\"",
+            "<span> \"MEMORY & FOCUS SUPPORT\"",
+            "<span> \"DEEP SLEEP SUPPORT\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "21 gradient backgrounds"
+        },
+        {
+          "severity": "INFO",
+          "rule": "overlays-dismissed",
+          "message": "Closed 2 pop-up or banner(s) before capturing the screens",
+          "sample": [
+            "Accept",
+            "Close"
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "25 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#fff7f2 on screen = 2.32:1 median, 2.04:1 in the worst tenth (needs 4.5) <a> \"SHOP NOW\"",
+            "#fff7f2 on screen = 2.28:1 median, 1.53:1 in the worst tenth (needs 4.5) <span> \"SHOP ALL SUPPLEMENTS\"",
+            "#fffaf0 on screen = 1.96:1 median, 1.38:1 in the worst tenth (needs 4.5) <span> \"HEALTHY AGING\"",
+            "#9b9b78 on screen = 2.74:1 median, 1.66:1 in the worst tenth (needs 4.5) <s> \"Regular price$79\"",
+            "#fc6125 on screen = 2.94:1 median, 1.71:1 in the worst tenth (needs 4.5) <span> \"Subscription price$63\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "contrast-unverified",
+          "message": "4 suspected contrast problems could not be re-measured on screen"
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "39 console or page errors",
+          "sample": [
+            "Framing 'https://shop.app/' violates the following Content Security Policy directive: \"frame-ancestors 'self' https://shop.app https://admin.shopify.com\". The request has been blocked.\n",
+            "Failed to load resource: the server responded with a status of 403 ()",
+            "Access to fetch at 'https://backend.alia-prod.com/launcher/users?path=%2F&url=https%3A%2F%2Fsunnywithin.com%2F&is_mobile=true&timezone=UTC&country=US&market=us&language=en&release_tag=v4.0.32&new_session=true' from origin 'https://sunnywithin.com' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to fetch"
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "RegolaRegular",
+            "share": 37
+          },
+          {
+            "family": "RegolaMedium",
+            "share": 29
+          },
+          {
+            "family": "RegolaBold",
+            "share": 14
+          },
+          {
+            "family": "RegolaSemibold",
+            "share": 12
+          },
+          {
+            "family": "HerbikRegular",
+            "share": 6
+          },
+          {
+            "family": "HerbikItalic",
+            "share": 2
+          }
+        ],
+        "fontSizes": [
+          48,
+          38,
+          30,
+          29,
+          22,
+          16,
+          14,
+          13,
+          12,
+          11,
+          10,
+          9,
+          8
+        ],
+        "textColours": [
+          "#ffffff",
+          "#fffaf0",
+          "#373c00",
+          "#fff7f2",
+          "#000000",
+          "#fc6125",
+          "#e6ef8e"
+        ],
+        "backgroundColours": [
+          "#373c00",
+          "#334400",
+          "#fffaf0",
+          "#ffffff",
+          "#63693d",
+          "#383c00",
+          "#e6ef8e"
+        ],
+        "chromaticColours": 6,
+        "colourFamilies": 2,
+        "spacing": {
+          "distinct": 38,
+          "offScale": 29,
+          "values": [
+            3,
+            3.5,
+            4,
+            5,
+            5.5,
+            6,
+            6.5,
+            8,
+            8.5,
+            10,
+            10.5,
+            11.5,
+            12,
+            14,
+            15,
+            15.5,
+            16,
+            16.5,
+            17,
+            18,
+            19.5,
+            20,
+            20.5,
+            21,
+            24,
+            25,
+            25.5,
+            26,
+            28,
+            29,
+            30,
+            39,
+            39.5,
+            40,
+            41.5,
+            45,
+            60,
+            165.5
+          ]
+        },
+        "radii": [
+          "40px",
+          "10px",
+          "38px",
+          "44px",
+          "8px",
+          "2.5px",
+          "25.5084px",
+          "87px",
+          "30px",
+          "50%",
+          "20.6823px",
+          "8.69536px"
+        ],
+        "shadows": 3,
+        "gradients": 21,
+        "backdropBlur": 0,
+        "transitions": 26,
+        "animatedElements": 17,
+        "cls": 0
+      },
+      "screenshots": [
+        "data/references/captures/ref-0012/tablet-fold.png",
+        "data/references/captures/ref-0012/tablet-overlay.png",
+        "data/references/captures/ref-0012/tablet-page-01.png",
+        "data/references/captures/ref-0012/tablet-page-02.png",
+        "data/references/captures/ref-0012/tablet-page-03.png",
+        "data/references/captures/ref-0012/tablet-page-04.png",
+        "data/references/captures/ref-0012/tablet-page-05.png"
+      ]
+    },
+    "mobile": {
+      "width": 390,
+      "pageHeight": 4884,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "font-count",
+          "message": "6 typefaces carry the text: RegolaRegular, RegolaMedium, RegolaBold, RegolaSemibold, HerbikRegular, HerbikItalic"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.3px",
+          "sample": [
+            "<span> \"HEALTHY AGING\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"96 Reviews\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"Tastes like\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10px",
+          "sample": [
+            "<p> \"NEW: The first complete NAD+ pathway formula. Dire\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 10px (16px or more reads better)",
+          "sample": [
+            "<p> \"NEW: The first complete NAD+ pathway formula. Dire\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.3px",
+          "sample": [
+            "<span> \"MUSCLE & BRAIN HEALTH\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"38 Reviews\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"Tastes like\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10px",
+          "sample": [
+            "<p> \"NEW: Waterless liposomal creatine designed for lon\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 10px (16px or more reads better)",
+          "sample": [
+            "<p> \"NEW: Waterless liposomal creatine designed for lon\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.3px",
+          "sample": [
+            "<span> \"DETOX & ENERGY\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"1042 Reviews\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"Tastes like\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10px",
+          "sample": [
+            "<p> \"Advanced liposomal supplement for cellular energy,\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 10px (16px or more reads better)",
+          "sample": [
+            "<p> \"Advanced liposomal supplement for cellular energy,\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.3px",
+          "sample": [
+            "<span> \"6-IN-1 IMMUNITY SUPPORT\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"106 Reviews\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"Tastes like\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10px",
+          "sample": [
+            "<span> \"Pineapple Passion Fruit\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10px",
+          "sample": [
+            "<p> \"Give your immune system some love with Vitamins C,\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 10px (16px or more reads better)",
+          "sample": [
+            "<p> \"Give your immune system some love with Vitamins C,\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.3px",
+          "sample": [
+            "<span> \"MEMORY & FOCUS SUPPORT\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"120 Reviews\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"Tastes like\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10px",
+          "sample": [
+            "<p> \"Feel like the sharpest you with Magnesium L‑Threon\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 10px (16px or more reads better)",
+          "sample": [
+            "<p> \"Feel like the sharpest you with Magnesium L‑Threon\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.3px",
+          "sample": [
+            "<span> \"DEEP SLEEP SUPPORT\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"109 Reviews\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"Tastes like\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10px",
+          "sample": [
+            "<p> \"Drift off to dreamland with Magnesium Glycinate, L\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 10px (16px or more reads better)",
+          "sample": [
+            "<p> \"Drift off to dreamland with Magnesium Glycinate, L\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10px",
+          "sample": [
+            "<button> \"Cellular Bioavailability\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14px (16px or more reads better)",
+          "sample": [
+            "<p> \"Liposomal delivery gets nutrients directly to your\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8px",
+          "sample": [
+            "<span> \"ADD TO CART\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9px",
+          "sample": [
+            "<p> \"Leading Longevity Specialist, Body & Mind Optimiza\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14px (16px or more reads better)",
+          "sample": [
+            "<blockquote> \"“Not many supplements live up to my standards. Sun\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14px (16px or more reads better)",
+          "sample": [
+            "<p> \"Longevity targets aging at the cellular level with\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10px",
+          "sample": [
+            "<p> \"Your privacy is extremely important to us. We'll n\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 10px (16px or more reads better)",
+          "sample": [
+            "<p> \"Your privacy is extremely important to us. We'll n\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tap-target",
+          "message": "40 controls smaller than 24x24px on a phone",
+          "sample": [
+            "296x16 <a> \"FREE GIFT WITH YOUR FIRST SUBSCRIPTION FREE GIFT W\"",
+            "18x18 <a> \"\"",
+            "18x18 <button> \"Cart\"",
+            "18x18 <button> \"\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "text-at-edge",
+          "message": "104 text elements within 12px of the screen edge",
+          "sample": [
+            "<a> \"Skip to content\"",
+            "<span> \"Search our site\"",
+            "<span> \"Cart\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "purple-gradient",
+          "message": "3 purple or indigo gradients",
+          "sample": [
+            "<span> \"MUSCLE & BRAIN HEALTH\"",
+            "<span> \"MEMORY & FOCUS SUPPORT\"",
+            "<span> \"DEEP SLEEP SUPPORT\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "21 gradient backgrounds"
+        },
+        {
+          "severity": "WARN",
+          "rule": "too-many-colours",
+          "message": "7 distinct chromatic colours",
+          "sample": [
+            "#373c00",
+            "#334400",
+            "#faecd6",
+            "#fc6125",
+            "#63693d",
+            "#e6ef8e",
+            "#383c00"
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "overlays-dismissed",
+          "message": "Closed 2 pop-up or banner(s) before capturing the screens",
+          "sample": [
+            "Accept",
+            "Close"
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "26 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#fff7f2 on screen = 2.34:1 median, 2.00:1 in the worst tenth (needs 4.5) <a> \"SHOP NOW\"",
+            "#fff7f2 on screen = 2.32:1 median, 1.58:1 in the worst tenth (needs 4.5) <span> \"SHOP ALL\"",
+            "#fffaf0 on screen = 2.04:1 median, 1.41:1 in the worst tenth (needs 4.5) <span> \"HEALTHY AGING\"",
+            "#9b9b78 on screen = 2.74:1 median, 1.66:1 in the worst tenth (needs 4.5) <span> \"Tastes like\"",
+            "#fc6125 on screen = 2.76:1 median, 1.56:1 in the worst tenth (needs 4.5) <span> \"Subscription price$63\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "contrast-unverified",
+          "message": "4 suspected contrast problems could not be re-measured on screen"
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "39 console or page errors",
+          "sample": [
+            "Framing 'https://shop.app/' violates the following Content Security Policy directive: \"frame-ancestors 'self' https://shop.app https://admin.shopify.com\". The request has been blocked.\n",
+            "Failed to load resource: the server responded with a status of 403 ()",
+            "Access to fetch at 'https://backend.alia-prod.com/launcher/users?path=%2F&url=https%3A%2F%2Fsunnywithin.com%2F&is_mobile=true&timezone=UTC&country=US&market=us&language=en&release_tag=v4.0.32&new_session=true' from origin 'https://sunnywithin.com' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+            "Failed to load resource: net::ERR_FAILED",
+            "Failed to fetch"
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "RegolaRegular",
+            "share": 38
+          },
+          {
+            "family": "RegolaMedium",
+            "share": 28
+          },
+          {
+            "family": "RegolaBold",
+            "share": 15
+          },
+          {
+            "family": "RegolaSemibold",
+            "share": 12
+          },
+          {
+            "family": "HerbikRegular",
+            "share": 6
+          },
+          {
+            "family": "HerbikItalic",
+            "share": 2
+          }
+        ],
+        "fontSizes": [
+          48,
+          38,
+          29,
+          24,
+          22,
+          16,
+          15,
+          14,
+          13,
+          12,
+          11,
+          10,
+          9,
+          8
+        ],
+        "textColours": [
+          "#ffffff",
+          "#fffaf0",
+          "#373c00",
+          "#fff7f2",
+          "#000000",
+          "#fc6125",
+          "#e6ef8e"
+        ],
+        "backgroundColours": [
+          "#373c00",
+          "#334400",
+          "#fffaf0",
+          "#faecd6",
+          "#ffffff",
+          "#63693d",
+          "#383c00",
+          "#e6ef8e"
+        ],
+        "chromaticColours": 7,
+        "colourFamilies": 2,
+        "spacing": {
+          "distinct": 28,
+          "offScale": 20,
+          "values": [
+            1.5,
+            2,
+            3.5,
+            4,
+            4.5,
+            5,
+            6,
+            6.5,
+            8,
+            8.5,
+            10,
+            11,
+            12,
+            14,
+            15,
+            16,
+            18,
+            20,
+            21,
+            23,
+            24,
+            25,
+            28,
+            30,
+            39,
+            40,
+            109,
+            170
+          ]
+        },
+        "radii": [
+          "40px",
+          "10px",
+          "38px",
+          "8px",
+          "2px",
+          "4px",
+          "44px",
+          "25px",
+          "87px",
+          "30px",
+          "50%",
+          "20px"
+        ],
+        "shadows": 3,
+        "gradients": 21,
+        "backdropBlur": 0,
+        "transitions": 26,
+        "animatedElements": 18,
+        "cls": 0
+      },
+      "screenshots": [
+        "data/references/captures/ref-0012/mobile-fold.png",
+        "data/references/captures/ref-0012/mobile-overlay.png",
+        "data/references/captures/ref-0012/mobile-page-01.png",
+        "data/references/captures/ref-0012/mobile-page-02.png",
+        "data/references/captures/ref-0012/mobile-page-03.png",
+        "data/references/captures/ref-0012/mobile-page-04.png",
+        "data/references/captures/ref-0012/mobile-page-05.png",
+        "data/references/captures/ref-0012/mobile-page-06.png"
+      ]
+    }
+  },
+  "checks": {
+    "reducedMotion": {
+      "findings": [],
+      "screenshot": "data/references/captures/ref-0012/reduced-motion-fold.png"
+    },
+    "noJavaScript": {
+      "findings": [],
+      "withJs": 3955,
+      "withoutJs": 3527
+    }
+  },
+  "summary": {
+    "fail": 9,
+    "warn": 14
+  },
+  "url": "https://sunnywithin.com/",
+  "findings": [
+    {
+      "severity": "FAIL",
+      "rule": "tiny-text",
+      "message": "Text at 8px",
+      "sample": [
+        "<span> \"96 Reviews\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "27 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#373c00 on screen = 3.94:1 median, 2.76:1 in the worst tenth (needs 4.5) <a> \"Shop All\"",
+        "#373c00 on screen = 4.45:1 median, 3.18:1 in the worst tenth (needs 4.5) <a> \"Shop Bestsellers\"",
+        "#fff7f2 on screen = 2.35:1 median, 2.06:1 in the worst tenth (needs 4.5) <a> \"SHOP NOW\"",
+        "#fff7f2 on screen = 2.28:1 median, 1.53:1 in the worst tenth (needs 4.5) <span> \"SHOP ALL SUPPLEMENTS\"",
+        "#fffaf0 on screen = 1.94:1 median, 1.38:1 in the worst tenth (needs 4.5) <span> \"HEALTHY AGING\""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tiny-text",
+      "message": "Text at 8.10188px",
+      "sample": [
+        "<span> \"ADD TO CART\""
+      ],
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tiny-text",
+      "message": "Text at 9.03652px",
+      "sample": [
+        "<p> \"Leading Longevity Specialist, Body & Mind Optimiza\""
+      ],
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "25 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#fff7f2 on screen = 2.32:1 median, 2.04:1 in the worst tenth (needs 4.5) <a> \"SHOP NOW\"",
+        "#fff7f2 on screen = 2.28:1 median, 1.53:1 in the worst tenth (needs 4.5) <span> \"SHOP ALL SUPPLEMENTS\"",
+        "#fffaf0 on screen = 1.96:1 median, 1.38:1 in the worst tenth (needs 4.5) <span> \"HEALTHY AGING\"",
+        "#9b9b78 on screen = 2.74:1 median, 1.66:1 in the worst tenth (needs 4.5) <s> \"Regular price$79\"",
+        "#fc6125 on screen = 2.94:1 median, 1.71:1 in the worst tenth (needs 4.5) <span> \"Subscription price$63\""
+      ],
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tiny-text",
+      "message": "Text at 9.3px",
+      "sample": [
+        "<span> \"HEALTHY AGING\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tiny-text",
+      "message": "Text at 9px",
+      "sample": [
+        "<p> \"Leading Longevity Specialist, Body & Mind Optimiza\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tap-target",
+      "message": "40 controls smaller than 24x24px on a phone",
+      "sample": [
+        "296x16 <a> \"FREE GIFT WITH YOUR FIRST SUBSCRIPTION FREE GIFT W\"",
+        "18x18 <a> \"\"",
+        "18x18 <button> \"Cart\"",
+        "18x18 <button> \"\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "26 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#fff7f2 on screen = 2.34:1 median, 2.00:1 in the worst tenth (needs 4.5) <a> \"SHOP NOW\"",
+        "#fff7f2 on screen = 2.32:1 median, 1.58:1 in the worst tenth (needs 4.5) <span> \"SHOP ALL\"",
+        "#fffaf0 on screen = 2.04:1 median, 1.41:1 in the worst tenth (needs 4.5) <span> \"HEALTHY AGING\"",
+        "#9b9b78 on screen = 2.74:1 median, 1.66:1 in the worst tenth (needs 4.5) <span> \"Tastes like\"",
+        "#fc6125 on screen = 2.76:1 median, 1.56:1 in the worst tenth (needs 4.5) <span> \"Subscription price$63\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "font-count",
+      "message": "6 typefaces carry the text: RegolaMedium, RegolaRegular, RegolaSemibold, RegolaBold, HerbikRegular, HerbikItalic",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "too-many-font-sizes",
+      "message": "13 different font sizes on the page (aim for 5 or fewer doing the visible work)",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "body-size",
+      "message": "Running text at 12px (16px or more reads better)",
+      "sample": [
+        "<p> \"NEW: The first complete NAD+ pathway formula. Dire\""
+      ],
+      "where": [
+        "desktop",
+        "tablet"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "small-text",
+      "message": "Text at 11.6px",
+      "sample": [
+        "<span> \"MUSCLE & BRAIN HEALTH\""
+      ],
+      "where": [
+        "desktop",
+        "tablet"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "small-text",
+      "message": "Text at 10px",
+      "sample": [
+        "<p> \"Leading Longevity Specialist, Body & Mind Optimiza\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "purple-gradient",
+      "message": "3 purple or indigo gradients",
+      "sample": [
+        "<span> \"MUSCLE & BRAIN HEALTH\"",
+        "<span> \"MEMORY & FOCUS SUPPORT\"",
+        "<span> \"DEEP SLEEP SUPPORT\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "gradient",
+      "message": "21 gradient backgrounds",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "overlays-dismissed",
+      "message": "Closed 2 pop-up or banner(s) before capturing the screens",
+      "sample": [
+        "Accept",
+        "Close"
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "contrast-unverified",
+      "message": "4 suspected contrast problems could not be re-measured on screen",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "console-errors",
+      "message": "40 console or page errors",
+      "sample": [
+        "Framing 'https://shop.app/' violates the following Content Security Policy directive: \"frame-ancestors 'self' https://shop.app https://admin.shopify.com\". The request has been blocked.\n",
+        "Failed to load resource: the server responded with a status of 403 ()",
+        "Access to fetch at 'https://backend.alia-prod.com/launcher/users?path=%2F&url=https%3A%2F%2Fsunnywithin.com%2F&is_mobile=false&timezone=UTC&country=US&market=us&language=en&release_tag=v4.0.32&new_session=true' from origin 'https://sunnywithin.com' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to fetch"
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "font-count",
+      "message": "6 typefaces carry the text: RegolaRegular, RegolaMedium, RegolaBold, RegolaSemibold, HerbikRegular, HerbikItalic",
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "small-text",
+      "message": "Text at 10.0654px",
+      "sample": [
+        "<button> \"Cellular Bioavailability\""
+      ],
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "body-size",
+      "message": "Running text at 14px (16px or more reads better)",
+      "sample": [
+        "<p> \"Liposomal delivery gets nutrients directly to your\""
+      ],
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "body-size",
+      "message": "Running text at 10px (16px or more reads better)",
+      "sample": [
+        "<p> \"Your privacy is extremely important to us. We'll n\""
+      ],
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "console-errors",
+      "message": "39 console or page errors",
+      "sample": [
+        "Framing 'https://shop.app/' violates the following Content Security Policy directive: \"frame-ancestors 'self' https://shop.app https://admin.shopify.com\". The request has been blocked.\n",
+        "Failed to load resource: the server responded with a status of 403 ()",
+        "Access to fetch at 'https://backend.alia-prod.com/launcher/users?path=%2F&url=https%3A%2F%2Fsunnywithin.com%2F&is_mobile=true&timezone=UTC&country=US&market=us&language=en&release_tag=v4.0.32&new_session=true' from origin 'https://sunnywithin.com' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to fetch"
+      ],
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "text-at-edge",
+      "message": "104 text elements within 12px of the screen edge",
+      "sample": [
+        "<a> \"Skip to content\"",
+        "<span> \"Search our site\"",
+        "<span> \"Cart\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "too-many-colours",
+      "message": "7 distinct chromatic colours",
+      "sample": [
+        "#373c00",
+        "#334400",
+        "#faecd6",
+        "#fc6125",
+        "#63693d",
+        "#e6ef8e",
+        "#383c00"
+      ],
+      "where": [
+        "mobile"
+      ]
+    }
+  ]
+}

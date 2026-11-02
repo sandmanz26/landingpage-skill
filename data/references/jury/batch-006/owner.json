@@ -1,0 +1,19 @@
+{
+  "juror": "owner",
+  "kind": "human",
+  "date": "2026-11-02",
+  "refs": {
+    "ref-0011": {
+      "visual": 6,
+      "ship": 8
+    },
+    "ref-0012": {
+      "visual": 6,
+      "ship": 8
+    }
+  },
+  "notes_verbatim": {
+    "erly (ref-0011)": "website ini score nya 6 da 8. kenapa ? karena layoutnya sederhana, dia bagus karena pemilihan foto yang bagus, walaupun secara typografinya sangat minimalist dimana bermain dengan big image, small text, big space. tapi hal ini ditolong karena adanya permainan image, sehingga fokus orang beralih ke foto. kategori product bisa dibilang healthy dan cosmetic ya sepertinya",
+    "sunny within (ref-0012)": "website ini scoren ya 6 dan 8. secara layout lebih bagus daripada sebelumnya, ada kesan modern karena ada nya radius yang cukup besar dan konsisten, dan lagi score bagusnya karena adanya image image yang mendukung. tapi jika tidak ada iamge tersebut maka akan nampak old. Selain itu permainan warnanya juga bagus, terlihat lebih konsisten dan memiliki \"brand\" tidak sekedar website saja."
+  }
+}

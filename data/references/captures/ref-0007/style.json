@@ -1,6 +1,6 @@
 {
   "url": "https://swehl.com/",
-  "readAt": "2026-11-02T03:10:54.664Z",
+  "readAt": "2026-11-02T05:09:17.346Z",
   "tags": [
     "flat",
     "many-colours",
@@ -36,6 +36,16 @@
   },
   "type": {
     "families": [
+      {
+        "family": "roobert",
+        "share": 94
+      },
+      {
+        "family": "caslon rounded",
+        "share": 6
+      }
+    ],
+    "cuts": [
       {
         "family": "Roobert",
         "share": 94
