@@ -18,7 +18,7 @@ const args = parseArgs(process.argv.slice(2));
 
 // Sector from the business line, unless the entry names one. Indonesian and English words.
 const SECTORS = [
-  ['health', /clinic|klinik|health|kesehatan|therap|terapi|dental|gigi|medical|doctor|dokter|longevity|wellness|breastfeed|menyusui/i],
+  ['health', /clinic|klinik|health|kesehatan|therap|terapi|dental|gigi|medical|doctor|dokter|longevity|wellness|breastfeed|menyusui|sport|olahraga|tennis|tenis|fitness|gym|yoga|coach/i],
   ['event', /wedding|pernikahan|organizer|event|acara|conference|konferensi/i],
   ['fashion', /fashion|apparel|clothing|pakaian|busana|boutique|butik|streetwear|modest|hijab/i],
   ['food', /restaurant|restoran|cafe|kafe|coffee|kopi|food|makanan|bakery|catering|katering/i],
@@ -114,7 +114,7 @@ if (cmd === 'build') {
         patternOnly: !!e.pattern_only,
         patterns: e.library_candidates || [],
         avoid: e.avoid || [],
-        sector: null,
+        sector: e.sector || null,
         style: style
           ? {
               features: [...features(style)],

@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-11-02T04:08:05.928Z",
+  "builtAt": "2026-11-02T04:08:19.773Z",
   "source": "data/references (batch-*.json, captures/*/style.json)",
   "count": 9,
   "sectors": {
@@ -15,9 +15,7 @@
       "ref-0005",
       "ref-0006",
       "ref-0007",
-      "ref-0008"
-    ],
-    "finance": [
+      "ref-0008",
       "ref-0009"
     ]
   },
@@ -1079,7 +1077,7 @@
         "Hero trust built on 'Vancouver's best' and an unsourced '10,000 students' while checkable proof sits on About",
         "Testimonials hidden in a slider"
       ],
-      "sector": "finance",
+      "sector": "health",
       "style": {
         "features": [
           "surface:gradient-shadow",
