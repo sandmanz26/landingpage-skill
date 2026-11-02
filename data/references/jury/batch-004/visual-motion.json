@@ -1,0 +1,59 @@
+{
+  "juror": "visual-motion",
+  "kind": "ai",
+  "method": "Read ref-0009/digest.md, desktop-fold.png, mobile-fold.png, sheet-desktop.png, sheet-mobile.png, motion-sheet.png; the five subpage digest.md files; then ref-0009-method/sheet-desktop.png and ref-0009-classes/desktop-fold.png to check icons and the booking UI. Not verified: anything that moves between frames (wobble, rotation, hover/press states, map pin interaction), because I only saw stills and the digest's motion counts; real-GPU smoothness; screen-reader behaviour; whether the hidden testimonials are carousel slides (inferred, not seen in code).",
+  "refs": {
+    "ref-0009": {
+      "business": "Summer Smash Tennis, Vancouver: group tennis classes for kids (from age 2-3) and adults, plus private lessons, held at City of Vancouver community centres and Park Board courts, with camps and school programmes. Buyers are mostly parents and adult beginners or intermediates. The action that pays is REGISTER on a class card on /classes, which goes out to the city's ActiveNet system (the external-link icon on the button shows this), or 'Buy on ActiveNet' for private-lesson bundles at $43.50-$100 per person per lesson. Inference: revenue is shared with or runs through the city's community-centre registration, because all payment is on ActiveNet and not on this site.",
+      "scores": { "clarity": 8, "distinctiveness": 8, "craft": 7 },
+      "reasons": {
+        "clarity": "The H1 'Vancouver's best tennis lessons' sits over the two product paths, GROUP LESSONS and PRIVATE LESSONS. The same pair stays in the header on every page, so the split is clear on the first screen (desktop-fold.png, mobile-fold.png; digest Actions 'stays-visible'). /classes is a model booking surface: filters (Age, Lesson, Date, Location), cards with colour-coded level tags, venue, dates, weekday and time, sessions, and 'N spots left' in orange as honest scarcity, plus a full-width REGISTER button with an external-link icon (ref-0009-classes/desktop-fold.png). /private-lessons shows a price table by group size and bundle (digest Prices). Points lost: the home page carries no prices or schedule, so it hands off fast but answers nothing itself. The home H2s run to 4-7 lines on mobile (digest WARN headline-lines). And the 'Since 2012' H2 makes a statement where it should make an offer.",
+        "distinctiveness": "The palette is the sport itself: optic-yellow ball #e5fc09, court green #0c5235, clay-cream #fff6e7, and accents #00ce7d and #a4d8ff (digest Colours). Display type is condensed obviously-narrow over founders-grotesk text, with an arched wordmark. A sticker-style illustration layer (ATTENTION megaphone, peace-sign hand, racquets, 'Practice makes progress' ball can on method) gives the site a voice. Further layers: pill buttons with a hard, offset dark-green shadow (a neo-brutalist 'pressable' button); a wavy text ribbon reading 'The pathway is the progression'; tennis-ball map pins; and a footer that ends on a pile of tennis balls under 'PLAY BEAUTIFULLY' (sheet-desktop.png pages 03, 04, 07, 08). The structure underneath is still a common template: a centred hero with two buttons (digest WARN centred-hero-two-ctas). That keeps this at 8, not 9.",
+        "craft": "Strengths: one system holds across all six pages (same tokens, radii 20px/pill, the same button). Layout shift (CLS) is 0. The mobile hero restacks cleanly, with the buttons stacked full-width (mobile-fold.png). Motion has a job (balls and racquets add life; the ribbon draws a ball's flight path) and runs on transform. Faults, with evidence: (1) Reduced motion is mostly ignored: 6 elements still move on their own and 9 with the scroll, there are 58 endless loops, and there is no pause control (digest Motion). (2) Real contrast failures: reCAPTCHA/privacy text #9ebaae at 2.08:1 and #6d9786 at 2.82:1; on /classes, white on #00ce7d in the 'Youth Aces' tag at 2.07:1 and the orange 'N spots left' at 3.42:1 (subpage digest). (3) The home page is the heaviest: 48 fps with 9% dropped frames in software rendering, against 55-57 fps on the subpages (digest; it ranks weight and does not prove stutter). Corrections to the inspector: the 'Group Lessons' button label is bold condensed type at about 20px or larger, which WCAG counts as large text (3:1), so 4.45:1 likely passes. The 23px-tall 'Kids'/'Adult' tap targets are inline text links in the announcement bar, which WCAG 2.5.8 exempts. And 'shadow on everything' here is the deliberate offset-shadow button language, not stray soft drop shadows."
+      },
+      "claims": [
+        {
+          "claim": "Tennis balls that wobble; pictures cut through their frame and seem to come out of it",
+          "verdict": "confirmed with correction",
+          "evidence": "In desktop-fold.png the photos stay inside their rounded frames. What breaks the frame are drawn racquets and balls overlaid on the photo edge (left kid: the racquet pokes out to the right; right kid: the racquet hangs below the frame). The correct term is a frame-breaking or 'pop-out' illustration overlay, not the pictures cutting through. Wobble: the digest counts 7 elements moving with no input at the top, and motion-sheet.png frames 00-04 show the small balls at slightly different positions. I could not verify the exact motion (wobble, bob or spin) from stills."
+        },
+        {
+          "claim": "The icons look a little classic but are comfortable to read",
+          "verdict": "confirmed with correction",
+          "evidence": "The functional icons are simple, consistent glyphs: plus in a yellow circle on filters and accordions, map pin, external-link arrow on REGISTER, carousel arrows, numbered yellow discs 1-9 on method, and round social buttons (ref-0009-classes/desktop-fold.png, ref-0009-method/sheet-desktop.png, sheet-desktop.png page-05). They are readable and sit in large circular targets. 'Classic' fits the illustration layer better (retro sticker or cartoon: megaphone, peace hand, ball can) than the icons. Those illustrations are decorative and carry no meaning a user must read."
+        },
+        {
+          "claim": "Animated text running along a circular / wavy shape is unique",
+          "verdict": "contested (partly)",
+          "evidence": "It exists: a wavy yellow ribbon with 'The pathway is the progression. The progression is the pathway' (sheet-desktop.png page-03, sheet-mobile.png page-03). The text offset differs between motion-sheet.png 06/07 and the sheet, so it likely moves with scroll (inference). The digest says '0 with text' among the endless loops, so it is scroll-linked, not a free-running loop. The circular text is in the arched wordmark and the round 'Summer Smash Tennis, Est 2012' badge, and I cannot tell from stills whether that badge rotates. Term: text on an SVG path, or a kinetic-type marquee. It is not unique; this is a common pattern on agency and Webflow sites. What is good here is the meaning: the wave reads as a ball's trajectory, and the copy states the brand's method."
+        },
+        {
+          "claim": "The map uses custom objects (tennis-ball pins) and is fun",
+          "verdict": "confirmed with correction",
+          "evidence": "sheet-desktop.png page-04, motion-sheet.png 08 and sheet-mobile.png page-05 show a flat, illustrated blue map of Vancouver with optic-yellow tennis-ball pins, next to a list of 8 centres and a FIND A CLASS button. Correction: it is an illustrated, apparently static graphic, not an interactive map service (inference from the stills). The pins carry no labels in the capture, so a visitor cannot match a pin to a centre without interaction, which I could not verify. It works as a coverage signal ('we're near you'), not as wayfinding."
+        },
+        {
+          "claim": "The circular parts give micro-animation",
+          "verdict": "unverifiable (term corrected)",
+          "evidence": "Stills cannot show rotation. The digest confirms many loops (58 endless, durations up to 128 s, transform) and boxShadow animation, which likely means the offset-shadow buttons 'press down' on hover. That is the real micro-interaction. Term: a micro-interaction is feedback to user input (hover, press, toggle). Ambient loops on round badges or balls are decorative ambient motion, not micro-interactions, and these ones keep running under reduced motion with no pause control."
+        }
+      ],
+      "subpages": "classes: adds the strongest conversion UI (filters, colour-coded level tags, spots left, external REGISTER), but breaks contrast on white-on-green tags and the orange scarcity text, and has 31 small tap targets on mobile (likely filter chips; not seen) | method: adds a numbered 9-step 'Progression' grid on dark green and Kids/Adult pathway accordions, which turns the method into proof; the #00ce7d step numerals are low-contrast (1.80:1) | coaches: adds a large named roster (39+ coaches with roles), credible but a long, plain grid with no filter | private: adds the only clear price table on the site (per person per lesson, bundles, 'best value'), but long FAQ lines (98-106 characters) and the hand-off to ActiveNet and back is a clumsy two-step | about: adds founders, mission and First Nations partnerships, which give it substance; the H1 runs to 4 lines on mobile.",
+      "problems": [
+        "Motion ignores prefers-reduced-motion and has no pause: 6 self-moving and 9 scroll-driven elements remain on home, with 58 endless loops (digest Motion). This is a WCAG 2.2.2 / 2.3.3 risk for vestibular users. The elements are small and decorative, so I judge it a fault, not a blocker.",
+        "Contrast failures on functional text: the class-level tag 'Youth Aces' white on #00ce7d (2.07:1), 'N spots left' #fb4c01 (3.42:1), and footer legal and privacy links (2.08-2.82:1). The level tag is how parents scan cards, but the same age range is repeated in the card and filters, so it is not blocking.",
+        "Home is the heaviest page (48 fps, 9% dropped frames in software rendering, against 55-57 fps on subpages). The 12 testimonials are hidden behind a slider, so most social proof is never seen without clicking arrows (digest FAIL hidden-content; carousel cause inferred)."
+      ],
+      "keep": [
+        "Palette taken from the sport (optic-yellow ball, court green, cream): the brand is recognisable before the logo is read.",
+        "Pill button with a hard, offset dark shadow and a 'press' animation: makes the main actions look tappable and is consistent site-wide.",
+        "Frame-breaking illustration overlay (a drawn racquet or ball over the edge of a real photo): adds energy and brand voice to plain customer photos without needing a shoot.",
+        "Class card: level tag, venue with pin, dates, weekday and time, sessions, 'N spots left', full-width REGISTER with an external-link icon. Answers every pre-booking question and warns before the hand-off to another site.",
+        "Wavy text-on-path ribbon carrying the method's slogan: a section divider that also restates the value proposition.",
+        "Themed map pins (tennis balls on an illustrated city map) beside a list of centres: a coverage signal in brand language.",
+        "Footer sign-off: a pile of brand objects plus a short slogan ('PLAY BEAUTIFULLY'), a memorable ending."
+      ],
+      "veto": "none. The accessibility faults are real (reduced motion ignored, no pause, several sub-AA texts), but none blocks a task in the evidence. Booking, filters and REGISTER stay readable and operable, the failing tag text is duplicated elsewhere on the card, and the small mobile targets cited are exempt inline links."
+    }
+  }
+}
