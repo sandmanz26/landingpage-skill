@@ -69,10 +69,16 @@ means three things at once: it serves the business, it answers the customer, and
    one-line reason and "continue?", for people who do not want to choose, or who have said
    "terserah" / "up to you". `autopilot`: no human in the loop (batch runs, evals); every choice is
    logged with its reason. Check `designers/<name>.md` for a saved preference.
-4. Run `node <skill>/scripts/progress.mjs init --mode <mode> --effort <effort> --gates <style>`.
-5. Read `team/taste.md`, the brand file (`brands/<client>.md`, or `.design/brand.md` in the
+4. **Variants.** One page (default), or 2–3 full variants built from the same research, copy and
+   dials but different directions or compositions; thorough effort makes 3 by default. Ask once
+   when the user did not say: "Satu versi, atau 2–3 varian untuk dipilih?" Then who chooses:
+   `user` (the user picks on `compare.mjs`) or `jury` (two jurors rank them; the winner is
+   delivered, the others are shown as alternatives). Variants cost a build and an inspection
+   each; say so.
+5. Run `node <skill>/scripts/progress.mjs init --mode <mode> --effort <effort> --gates <style> [--variants N --choose user|jury]`.
+6. Read `team/taste.md`, the brand file (`brands/<client>.md`, or `.design/brand.md` in the
    project) if one exists, `designers/<name>.md` if the user is named, and `rules/precedence.md`.
-6. Open the mode file and follow it step by step.
+7. Open the mode file and follow it step by step.
 
 ## Rules for every step
 
@@ -188,8 +194,9 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 | `evidence.mjs <url or file> --dir <dir>` | Evidence pack for the jury: contact sheets, motion frames, outline, motion, reduced-motion and idle results |
 | `digest.mjs <dir>` | `digest.md`: the one short file a juror reads first (outline, motion, inventory, findings, page text) |
 | `capture.mjs <list.txt> [--jobs 3]` | Runs inspect, evidence, digest and style for a whole batch in parallel |
+| `compare.mjs <v1.html> <v2.html> … [--labels a,b] [--blind]` | A page for the user to compare variants side by side at desktop or phone width, score them and copy a reply |
 | `fit.mjs <inspect dir> [--targets .design/targets.json]` | The built page against the chosen dials and the team's taste; misses need a fix or a reason |
 | `style.mjs <dir>` | Style card of a captured reference: palette, type, shape, motion, tags, do-not-copy |
-| `library.mjs build` / `find <words> --tags a,b` | Builds `library/index.json` from judged batches; finds the closest references with their style |
+| `library.mjs build` / `groups` / `find <words> --tags a,b` | Builds `library/index.json` from judged batches, grouping every reference by sector and by style on its own; finds the closest references with their style |
 | `smooth.mjs <url> [--dir d] [--cpu 4]` | Scroll stutter against a plain page on the same machine |
 | `jury.mjs score / rank <dir>` | Combines AI and human jurors: blended scores, disagreements, vetoes, best-of-N winner |

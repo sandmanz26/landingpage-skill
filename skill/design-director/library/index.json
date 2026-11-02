@@ -1,10 +1,118 @@
 {
-  "builtAt": "2026-11-01T16:14:50.873Z",
+  "builtAt": "2026-11-02T03:15:26.214Z",
   "source": "data/references (batch-*.json, captures/*/style.json)",
   "count": 8,
+  "sectors": {
+    "commerce": [
+      "ref-0001"
+    ],
+    "software": [
+      "ref-0002",
+      "ref-0003"
+    ],
+    "health": [
+      "ref-0004",
+      "ref-0005",
+      "ref-0006",
+      "ref-0007",
+      "ref-0008"
+    ]
+  },
+  "groups": [
+    {
+      "id": "style-1",
+      "name": "surface:glass · colour:bold · motion:subtle · shape:pill",
+      "shared": [
+        "surface:glass",
+        "colour:bold",
+        "motion:subtle",
+        "shape:pill"
+      ],
+      "members": [
+        "ref-0001",
+        "ref-0002"
+      ]
+    },
+    {
+      "id": "style-2",
+      "name": "surface:gradient-shadow · colour:calm · colour:dark · type:quiet · motion:subtle",
+      "shared": [
+        "surface:gradient-shadow",
+        "colour:calm",
+        "colour:dark",
+        "type:quiet",
+        "motion:subtle",
+        "shape:pill"
+      ],
+      "members": [
+        "ref-0003"
+      ]
+    },
+    {
+      "id": "style-3",
+      "name": "surface:flat · colour:bold · type:expressive · type:rounded · motion:story",
+      "shared": [
+        "surface:flat",
+        "colour:bold",
+        "type:expressive",
+        "type:rounded",
+        "motion:story",
+        "shape:soft"
+      ],
+      "members": [
+        "ref-0004",
+        "ref-0005"
+      ]
+    },
+    {
+      "id": "style-4",
+      "name": "surface:glass · colour:calm · type:firm · motion:calm · shape:pill",
+      "shared": [
+        "surface:glass",
+        "colour:calm",
+        "type:firm",
+        "motion:calm",
+        "shape:pill"
+      ],
+      "members": [
+        "ref-0006"
+      ]
+    },
+    {
+      "id": "style-5",
+      "name": "surface:flat · colour:bold · type:firm · type:serif · type:rounded",
+      "shared": [
+        "surface:flat",
+        "colour:bold",
+        "type:firm",
+        "type:serif",
+        "type:rounded",
+        "motion:story",
+        "shape:pill"
+      ],
+      "members": [
+        "ref-0007"
+      ]
+    },
+    {
+      "id": "style-6",
+      "name": "surface:glass · colour:bold · type:quiet · motion:story · shape:pill",
+      "shared": [
+        "surface:glass",
+        "colour:bold",
+        "type:quiet",
+        "motion:story",
+        "shape:pill"
+      ],
+      "members": [
+        "ref-0008"
+      ]
+    }
+  ],
   "entries": [
     {
       "id": "ref-0001",
+      "site": "playfolly",
       "url": "https://playfolly.com",
       "batch": "batch-001",
       "review": "data/references/batch-001-review.md",
@@ -33,7 +141,15 @@
         "Promising a system (\"endless ways to play\") whose parts are all \"Coming soon\"",
         "Vague CTA (\"Get updates\") on a high-ticket pre-order"
       ],
+      "sector": "commerce",
       "style": {
+        "features": [
+          "surface:glass",
+          "colour:bold",
+          "type:expressive",
+          "motion:subtle",
+          "shape:pill"
+        ],
         "tags": [
           "glass",
           "many-colours",
@@ -93,10 +209,12 @@
           "contrast: 4 text colour pairs below WCAG AA",
           "tap-target: 7 controls smaller than 24x24px on a phone"
         ]
-      }
+      },
+      "styleGroup": "style-1"
     },
     {
       "id": "ref-0002",
+      "site": "replay",
       "url": "https://www.replay.ai/",
       "batch": "batch-001",
       "review": "data/references/batch-001-review.md",
@@ -126,7 +244,16 @@
         "No named proof on a high-risk ask",
         "A 15s auto-advancing carousel with no pause"
       ],
+      "sector": "software",
       "style": {
+        "features": [
+          "surface:glass",
+          "colour:bold",
+          "type:firm",
+          "type:serif",
+          "motion:subtle",
+          "shape:pill"
+        ],
         "tags": [
           "gradient-heavy",
           "glass",
@@ -211,10 +338,12 @@
           "reduced-motion: 9 text elements stay hidden when the visitor asks for reduced motion",
           "motion without a reduced-motion path"
         ]
-      }
+      },
+      "styleGroup": "style-1"
     },
     {
       "id": "ref-0003",
+      "site": "scotchpos",
       "url": "https://scotchpos.com/",
       "batch": "batch-001",
       "review": "data/references/batch-001-review.md",
@@ -243,7 +372,16 @@
         "Endless loops and big scroll motion with no reduced-motion fallback",
         "The generic dark-SaaS hero kit (pill eyebrow, centred headline, two CTAs)"
       ],
+      "sector": "software",
       "style": {
+        "features": [
+          "surface:gradient-shadow",
+          "colour:calm",
+          "colour:dark",
+          "type:quiet",
+          "motion:subtle",
+          "shape:pill"
+        ],
         "tags": [
           "gradient-heavy",
           "shadowed",
@@ -313,7 +451,8 @@
           "tap-target: 12 controls smaller than 24x24px on a phone",
           "motion without a reduced-motion path"
         ]
-      }
+      },
+      "styleGroup": "style-2"
     },
     {
       "id": "ref-0004",
@@ -347,7 +486,16 @@
         "Content that fades out after the visitor passes it",
         "No proof, no cost or eligibility answer for anxious parents"
       ],
+      "sector": "health",
       "style": {
+        "features": [
+          "surface:flat",
+          "colour:bold",
+          "type:expressive",
+          "type:rounded",
+          "motion:story",
+          "shape:soft"
+        ],
         "tags": [
           "flat",
           "many-colours",
@@ -420,7 +568,8 @@
           "reduced-motion: 2 text elements stay hidden when the visitor asks for reduced motion",
           "motion without a reduced-motion path"
         ]
-      }
+      },
+      "styleGroup": "style-3"
     },
     {
       "id": "ref-0005",
@@ -445,7 +594,16 @@
       "avoid": [
         "Reusing one page template so literally that the age band changes nothing but the colour"
       ],
+      "sector": "health",
       "style": {
+        "features": [
+          "surface:flat",
+          "colour:bold",
+          "type:expressive",
+          "type:rounded",
+          "motion:story",
+          "shape:soft"
+        ],
         "tags": [
           "flat",
           "many-colours",
@@ -518,7 +676,8 @@
           "reduced-motion: 1 text elements stay hidden when the visitor asks for reduced motion",
           "motion without a reduced-motion path"
         ]
-      }
+      },
+      "styleGroup": "style-3"
     },
     {
       "id": "ref-0006",
@@ -551,7 +710,15 @@
         "Unsourced statistics ('98% more consistent')",
         "Key benefit cards cut off at the carousel edge"
       ],
+      "sector": "health",
       "style": {
+        "features": [
+          "surface:glass",
+          "colour:calm",
+          "type:firm",
+          "motion:calm",
+          "shape:pill"
+        ],
         "tags": [
           "gradient-heavy",
           "glass",
@@ -621,7 +788,8 @@
           "tap-target: 16 controls smaller than 24x24px on a phone",
           "contrast: 4 text elements below WCAG AA (measured on screen pixels)"
         ]
-      }
+      },
+      "styleGroup": "style-4"
     },
     {
       "id": "ref-0007",
@@ -655,7 +823,17 @@
         "Selling sold-out products with no restock date or waitlist",
         "Proof that praises a different pillar than the one the hero sells"
       ],
+      "sector": "health",
       "style": {
+        "features": [
+          "surface:flat",
+          "colour:bold",
+          "type:firm",
+          "type:serif",
+          "type:rounded",
+          "motion:story",
+          "shape:pill"
+        ],
         "tags": [
           "flat",
           "many-colours",
@@ -722,7 +900,8 @@
           "tap-target: 25 controls smaller than 24x24px on a phone",
           "pop-up over the first screen on load"
         ]
-      }
+      },
+      "styleGroup": "style-5"
     },
     {
       "id": "ref-0008",
@@ -757,7 +936,15 @@
         "A promo bar for another product that outranks the main action",
         "Coined jargon carrying the explanation (Centaur Team, Human 360 Body Data Stack)"
       ],
+      "sector": "health",
       "style": {
+        "features": [
+          "surface:glass",
+          "colour:bold",
+          "type:quiet",
+          "motion:story",
+          "shape:pill"
+        ],
         "tags": [
           "gradient-heavy",
           "glass",
@@ -835,7 +1022,8 @@
           "motion without a reduced-motion path",
           "pop-up over the first screen on load"
         ]
-      }
+      },
+      "styleGroup": "style-6"
     }
   ]
 }

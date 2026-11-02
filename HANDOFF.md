@@ -1,7 +1,7 @@
 # Handoff
 
 Read this first if you are a new session, a different model or a different AI tool picking up
-this project. It is kept up to date at every milestone. Last updated: **2026-11-01** (taste-skill added: four-way blind test).
+this project. It is kept up to date at every milestone. Last updated: **2026-11-02** (variants with user or jury choice; references grouped by sector and style automatically).
 
 ## 1. Goal
 
@@ -178,6 +178,28 @@ either; our run 2 subagents were about 630k plus the main session.
 Four-way blind test (same URL as the three-way, version 2): https://claude.ai/artifact/B4UxMgyAhNq2AroTQVGr3G
 — A no skill, B run 1, C run 2, D taste-skill (reshuffled so no version keeps its old letter).
 Waiting for the owner's scores.
+
+Variants and auto-grouping (2026-11-02, owner asked for a forced option to make several variants and
+deliver the best or let the user pick, and for references to be grouped by the AI on its own):
+- `progress.mjs init ... --variants 1-3 --choose user|jury` (thorough defaults to 3). Build refuses
+  until `.design/variants/v1..vN/index.html` exist; the gate needs each variant's own inspection
+  with 0 FAIL; the look needs `.design/variants/choice.json`, and `approve variant` when the user
+  chooses. `scripts/compare.mjs` makes the side-by-side page (desktop/phone, scores, pick, reply to
+  copy; `--blind` hides names). Create mode documents it ("Variants"); SKILL.md asks once
+  "Satu versi, atau 2-3 varian untuk dipilih?".
+- `library.mjs build` now assigns each reference a sector (from its business line, or an explicit
+  `sector`) and a style group (six dimensions: surface, colour, type, imagery, motion, shape;
+  grouped by each group's core so groups cannot drift by chaining). `library.mjs groups` prints
+  them. With 8 references most groups have one member; groups become meaningful from about 5
+  references per sector. Imagery dimensions are missing for references captured before imagery
+  detection existed (re-run evidence.mjs to fill them).
+- Taste-skill study, read from its own references/research.md (told to the owner): a one-off
+  study (248 gallery sites, captured with headless Chrome, scored by 21 model reviewers with
+  Awwwards weights), frozen into rules and 20 directions; per project only a subject inventory.
+  Its own test table shows the baseline (no skill) usually scored higher with its single model
+  juror; its measured win was 0 inspector FAILs vs 8-13. Worth adopting (MIT, with attribution):
+  the "live thing" rule, assets.mjs (open-collection pictures with licences and credits), a
+  minimum motion count. Not done yet; owner not yet asked to decide.
 
 Capture fixes from batch-003: `lib/browser.mjs` `gotoStable` retries server error pages (a 502
 "upstream request failed" had been captured as Swehl's desktop) and every failed load is reported

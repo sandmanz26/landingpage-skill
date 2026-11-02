@@ -220,6 +220,22 @@ Order: tokens → hero → sections → pictures → states (hover, focus, error
   first screen.
 - Motion last, from the motion spec (`motion/functions.md`).
 
+## Variants (when the run makes 2–3)
+
+Each variant is a whole page in `.design/variants/v<n>/index.html`, built from the same research,
+strategy, copy and dials. They differ where the choice matters most: another direction from the
+deal, or another composition of the same direction (as the hero best-of-3, but for the whole page).
+Never make variants that differ only in colour. Inspect each (`inspect.mjs .design/variants/v<n>/index.html
+--out .design/variants/v<n>/inspect`) and run `fit.mjs` on each; every one passes the gate.
+
+- **User chooses:** `compare.mjs .design/variants/v1/index.html … --labels "<direction names>"`
+  (add `--blind` to hide the names), show it, wait for the answer, `approve variant --note "..."`.
+- **Jury chooses:** two jurors (art director and customer researcher) rank them from their evidence
+  packs (`jury.mjs rank`); the winner is delivered, the others are listed as alternatives.
+
+Write `.design/variants/choice.json` `{ "winner": "v2", "by": "user|jury", "why": "..." }`, copy
+the winner to the page's real location, and continue with the look on that one.
+
 ## 10. gate
 
 ```bash

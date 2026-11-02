@@ -5,6 +5,9 @@
 //
 //   node progress.mjs init --mode create|review|restyle|redesign|section|site
 //                          [--effort quick|standard|thorough] [--gates guided|quick|autopilot]
+//                          [--variants 1-3] [--choose jury|user]
+//   Several variants: build .design/variants/v1 … vN/index.html; the jury (choice.json) or the
+//   user (approve variant) picks the one to deliver.
 //   node progress.mjs status | next
 //   node progress.mjs check <step>              exit 1 if the step may not start yet
 //   node progress.mjs done <step> [--note "..."]
@@ -101,7 +104,8 @@ function summary(s) {
     })
     .join('\n  ');
   const next = flow.find((p) => s.steps[p].status === 'pending');
-  return `Mode ${s.mode} · effort ${s.effort} · gates ${s.gates}\n  ${line}\nNext: ${next || 'nothing; the run is complete'}`;
+  const v = (s.variants || 1) > 1 ? ` · ${s.variants} variants, chosen by the ${s.choose}` : '';
+  return `Mode ${s.mode} · effort ${s.effort} · gates ${s.gates}${v}\n  ${line}\nNext: ${next || 'nothing; the run is complete'}`;
 }
 
 switch (cmd) {
@@ -114,10 +118,15 @@ switch (cmd) {
     if (!SKIPPABLE[effort]) fail('--effort must be quick, standard or thorough');
     if (!['guided', 'quick', 'autopilot'].includes(gates)) fail('--gates must be guided, quick or autopilot');
     fs.mkdirSync(DIR, { recursive: true });
-    const s = { mode, effort, gates, created: now(), steps: {}, approvals: {}, history: [] };
+    const variants = Number(args.variants || (effort === 'thorough' ? 3 : 1));
+    if (!(variants >= 1 && variants <= 3)) fail('--variants must be 1, 2 or 3');
+    const choose = args.choose || (gates === 'autopilot' ? 'jury' : 'user');
+    if (!['jury', 'user'].includes(choose)) fail('--choose must be jury or user');
+    if (choose === 'user' && gates === 'autopilot') fail('An autopilot run has no user to choose: use --choose jury');
+    const s = { mode, effort, gates, variants, choose, created: now(), steps: {}, approvals: {}, history: [] };
     for (const p of stepsOf(mode)) s.steps[p] = { status: 'pending' };
     save(s);
-    log(`init mode=${mode} effort=${effort} gates=${gates}`);
+    log(`init mode=${mode} effort=${effort} gates=${gates} variants=${variants} choose=${choose}`);
     console.log(summary(s));
     break;
   }
@@ -135,7 +144,8 @@ switch (cmd) {
   case 'approve': {
     const s = load();
     const gate = arg;
-    if (!stepsOf(s.mode).some((p) => gateOf(s.mode, p) === gate)) fail(`Mode ${s.mode} has no gate "${gate}". Its gates: ${[...new Set(stepsOf(s.mode).map((p) => gateOf(s.mode, p)).filter(Boolean))].join(', ')}`);
+    const variantGate = gate === 'variant' && (s.variants || 1) > 1;
+    if (!variantGate && !stepsOf(s.mode).some((p) => gateOf(s.mode, p) === gate)) fail(`Mode ${s.mode} has no gate "${gate}". Its gates: ${[...new Set(stepsOf(s.mode).map((p) => gateOf(s.mode, p)).filter(Boolean))].join(', ')}`);
     const by = args.by || (s.gates === 'autopilot' ? 'claude' : 'user');
     if (by === 'claude' && s.gates !== 'autopilot') fail('Only the user approves a gate unless the run uses --gates autopilot.');
     s.approvals[gate] = { by, at: now(), note: args.note || '' };
@@ -170,13 +180,27 @@ switch (cmd) {
       const c = fs.readFileSync(path.join(DIR, 'critique.md'), 'utf8');
       if (fit.missed > 0 && !/##\s*Fit/i.test(c)) fail(`${fit.missed} visual target(s) missed (fit.json): fix them, or add a "## Fit" section to critique.md with the reason each stays.`);
     }
+    // Variants: every one is built before the gate, and one is chosen before the look is done.
+    const nv = s.variants || 1;
+    if (nv > 1 && ['build', 'fix'].includes(step)) {
+      const missing = Array.from({ length: nv }, (_, i) => `variants/v${i + 1}/index.html`).filter((f) => !fs.existsSync(path.join(DIR, f)));
+      if (missing.length) fail(`This run makes ${nv} variants: build .design/${missing.join(', .design/')} (same research, copy and dials; different direction or composition).`);
+    }
+    if (nv > 1 && step === 'look') {
+      const cp = path.join(DIR, 'variants/choice.json');
+      if (!fs.existsSync(cp)) fail(`Choose the variant to deliver first: ${s.choose === 'jury' ? 'rank them with the jury (jury.mjs rank) and write' : 'show compare.mjs to the user, then write'} .design/variants/choice.json { "winner": "v2", "by": "${s.choose}", "why": "..." }.`);
+      if (s.choose === 'user' && !s.approvals.variant) fail('The user chooses the variant: show the comparison, then run: approve variant --note "<their words>"');
+    }
     if (step === 'gate') {
-      const rp = path.join(DIR, 'inspect/report.json');
-      if (!fs.existsSync(rp)) fail('Run inspect.mjs on the page first.');
-      const r = JSON.parse(fs.readFileSync(rp, 'utf8'));
-      if (r.summary.fail > 0) fail(`The last inspection has ${r.summary.fail} FAIL. Fix them and inspect again.`);
-      const reportTime = Date.parse(r.time);
-      if (newestSourceMtime() > reportTime) fail('Source files changed after the last inspection. Inspect again.');
+      // With variants, each one passes its own inspection (.design/variants/vN/inspect/).
+      const reports = nv > 1 ? Array.from({ length: nv }, (_, i) => `variants/v${i + 1}/inspect/report.json`) : ['inspect/report.json'];
+      for (const rel of reports) {
+        const rp = path.join(DIR, rel);
+        if (!fs.existsSync(rp)) fail(`Run inspect.mjs first so that .design/${rel} exists.`);
+        const r = JSON.parse(fs.readFileSync(rp, 'utf8'));
+        if (r.summary.fail > 0) fail(`The last inspection (.design/${rel}) has ${r.summary.fail} FAIL. Fix them and inspect again.`);
+        if (nv === 1 && newestSourceMtime() > Date.parse(r.time)) fail('Source files changed after the last inspection. Inspect again.');
+      }
     }
     s.steps[step] = { status: 'done', at: now(), note: args.note || '' };
     save(s);

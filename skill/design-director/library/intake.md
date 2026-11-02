@@ -22,7 +22,11 @@ page itself and against the other jurors before it shapes the skill.
    Wrong terms are corrected in the parsed fields (for example "wireframe" for a real product UI),
    while the original note stays as written.
 7. **Questions back** to the contributor: anything unclear, unfinished or contested.
-8. **Read its style and store it.** `style.mjs <capture>` writes the style card (palette, type,
+8. **Group it and store it.** `library.mjs build` sorts every reference by sector (from the business
+   line, or an explicit `sector`) and by style group (surface, colour, type, imagery, motion, shape)
+   without the contributor having to: `library.mjs groups` shows the groups, and the batch review
+   lists where each new reference landed. Groups mean something from about 5 references per sector.
+9. **Read its style and store it.** `style.mjs <capture>` writes the style card (palette, type,
    shape, spacing, motion, plain-word tags, and what must not be copied); `capture.mjs` does this
    for the whole batch. Then `library.mjs build` puts the judged entries with their style cards into
    `library/index.json`, which the skill reads at the direction step to adapt each reference to

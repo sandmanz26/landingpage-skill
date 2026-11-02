@@ -222,6 +222,49 @@ const check = (name, ok, detail = '') => {
   check('library finds a reference with its style and do-not-copy list', /ref-9/.test(f.stdout) && /style: flat/.test(f.stdout) && /do not copy: contrast/.test(f.stdout), f.stdout + f.stderr);
 }
 
+// variants: the run builds each one and someone chooses before the look
+{
+  const proj = path.join(tmp, 'variants');
+  fs.mkdirSync(proj);
+  const p = (...a) => run('progress.mjs', a, proj);
+  const init = p('init', '--mode', 'section', '--effort', 'quick', '--gates', 'guided', '--variants', '2', '--choose', 'user');
+  check('progress starts a run with variants', init.status === 0 && /2 variants, chosen by the user/.test(init.stdout), init.stdout + init.stderr);
+  const d = path.join(proj, '.design');
+  fs.writeFileSync(path.join(d, 'brief.md'), '# Brief');
+  p('approve', 'brief'); p('done', 'brief');
+  fs.writeFileSync(path.join(d, 'research.md'), '# R\n## Sources\n- x'); p('done', 'research');
+  fs.writeFileSync(path.join(d, 'spec.md'), '# Spec'); p('done', 'spec');
+  fs.writeFileSync(path.join(d, 'roast.md'), '# Roast\n## Response\n- ok'); p('done', 'roast');
+  const noVariants = p('done', 'build');
+  for (const v of ['v1', 'v2']) {
+    fs.mkdirSync(path.join(d, 'variants', v), { recursive: true });
+    fs.copyFileSync(path.join(fixtures, 'clean.html'), path.join(d, 'variants', v, 'index.html'));
+  }
+  const built = p('done', 'build');
+  check('progress refuses the build until every variant exists', noVariants.status !== 0 && /variants\/v1\/index\.html/.test(noVariants.stderr) && built.status === 0, noVariants.stderr + built.stderr);
+  const cmp = run('compare.mjs', [path.join(d, 'variants/v1/index.html'), path.join(d, 'variants/v2/index.html'), '--out', path.join(d, 'variants/compare.html'), '--labels', 'Satu,Dua']);
+  const page = fs.existsSync(path.join(d, 'variants/compare.html')) ? fs.readFileSync(path.join(d, 'variants/compare.html'), 'utf8') : '';
+  check('compare builds a page to choose between variants', cmp.status === 0 && /Varian 2 · Dua/.test(page) && /v1\/index\.html/.test(page), cmp.stdout + cmp.stderr);
+}
+
+// library groups references by sector and style on its own
+{
+  const data = path.join(tmp, 'refs-groups');
+  const card = (tags, ratio, fam) => ({ tags, type: { families: [{ family: 'X', share: 100 }], display: ratio * 16, body: 16, ratio, sizes: { desktop: [ratio * 16, 16] } }, palette: { chromatic: fam, families: fam, gradients: 0, shadows: 0, backgrounds: [] }, shape: { radii: [] }, motion: null, doNotCopy: [] });
+  const entries = [['g1', 'dental clinic', card(['flat', 'expressive-type'], 9, 5)], ['g2', 'health clinic', card(['flat', 'expressive-type', 'rounded-type'], 10, 5)], ['g3', 'saas tool', card(['glass', 'gradient-heavy', 'pill-shapes'], 3, 2)]];
+  for (const [id, , st] of entries) {
+    fs.mkdirSync(path.join(data, 'captures', id), { recursive: true });
+    fs.writeFileSync(path.join(data, 'captures', id, 'style.json'), JSON.stringify(st));
+  }
+  fs.writeFileSync(path.join(data, 'batch-098.json'), JSON.stringify({ batch: 'batch-098', entries: entries.map(([id, what]) => ({ id, url: `https://${id}.example`, business: { what } })) }));
+  const index = path.join(skill, 'library', 'index.json');
+  const saved = fs.existsSync(index) ? fs.readFileSync(index) : null;
+  run('library.mjs', ['build', '--data', data]);
+  const g = run('library.mjs', ['groups']);
+  if (saved) fs.writeFileSync(index, saved);
+  check('library groups references by sector and by style', /health\s+g1, g2/.test(g.stdout) && /software\s+g3/.test(g.stdout) && /\(2\):.*\n\s+g1, g2/.test(g.stdout), g.stdout + g.stderr);
+}
+
 // draw
 {
   const a = run('draw.mjs', ['--sector', 'health', '--seed', '7']);

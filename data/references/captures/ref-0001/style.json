@@ -1,6 +1,6 @@
 {
   "url": "https://playfolly.com",
-  "readAt": "2026-11-01T16:11:32.772Z",
+  "readAt": "2026-11-02T03:10:53.800Z",
   "tags": [
     "glass",
     "many-colours",
@@ -10,6 +10,7 @@
   ],
   "palette": {
     "chromatic": 6,
+    "families": null,
     "text": [
       "#000000",
       "#ffffff",
@@ -90,6 +91,7 @@
       "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
     }
   },
+  "imagery": null,
   "layout": {
     "pageHeight": 7569,
     "screens": 8

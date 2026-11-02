@@ -1,6 +1,6 @@
 {
   "url": "https://maximatherapy.com/programs/3-to-18",
-  "readAt": "2026-11-01T16:08:48.403Z",
+  "readAt": "2026-11-02T03:10:54.471Z",
   "tags": [
     "flat",
     "many-colours",
@@ -13,6 +13,7 @@
   ],
   "palette": {
     "chromatic": 10,
+    "families": null,
     "text": [
       "#fd4401",
       "#ffffff",
@@ -115,6 +116,7 @@
       "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
     }
   },
+  "imagery": null,
   "layout": {
     "pageHeight": 11104,
     "screens": 12
