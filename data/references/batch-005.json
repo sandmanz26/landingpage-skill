@@ -1,0 +1,91 @@
+{
+ "batch": "batch-005",
+ "received": "2026-11-02",
+ "from": "owner (chat, 5 screenshots), sent as a weak example",
+ "status": "captured, judged by 2 combined AI jurors and the owner (2026-11-02)",
+ "jury": {
+  "folder": "data/references/jury/batch-005",
+  "jurors": [
+   "visual-motion",
+   "business-customer-story"
+  ],
+  "human_votes": 1,
+  "brief": "data/references/jury/batch-005/_brief.md",
+  "note": "72.7k + 74.1k tokens"
+ },
+ "entries": [
+  {
+   "id": "ref-0010",
+   "url": "https://academy.a-rete.com/",
+   "site": "arete",
+   "sector": "health",
+   "example": "negative",
+   "business": {
+    "what": "Residential full-time tennis academy near Lake Como, part of the A-Rete club; ITF juniors 14-18 and ATP players 18+, 8 spots a season; apply, then a mandatory trial of at least a month (inference: parents pay, trial likely paid).",
+    "action_that_pays": "Apply for your spot (first at about 31% of the page)",
+    "source": "captured page",
+    "confidence": "medium"
+   },
+   "owner": {
+    "visual": 4,
+    "ship": 4
+   },
+   "jury_scores": {
+    "business": 4,
+    "customer": 4,
+    "story": 6,
+    "distinctiveness": 5,
+    "craft": 3,
+    "clarity": 4,
+    "weighted": 4.3
+   },
+   "combined": {
+    "final": 4.2,
+    "gap": 0.3
+   },
+   "veto": "Accessibility: body text, eligibility criteria and the APPLY button label at about 2.1:1 (white on #8fc156, light green on white), 32 desktop and 26 mobile elements.",
+   "claims": [
+    {
+     "claim": "Logo too big, covers most of the navigation",
+     "verdict": "confirmed with correction",
+     "evidence": "Measured: the logo badge is fixed, 280x183 px (about 20% of the screen height), so it rides over the page on every screen; it overlaps the header band and body text while scrolling rather than the menu links themselves. New inspector check fixed-cover."
+    },
+    {
+     "claim": "Pictures stuck together yet leaving empty space; no spacing between sections",
+     "verdict": "confirmed with correction",
+     "evidence": "Photo rows touch the dark band with 0 px while about 320 px stays empty at each side; sections are separated by colour bands and inconsistent gaps, not by a spacing rhythm."
+    },
+    {
+     "claim": "Typography gets untidy and keeps getting smaller while scrolling",
+     "verdict": "confirmed with correction",
+     "evidence": "Not steadily smaller: display sizes jump without a scale (65, 53, 35, 150, 115, 35, 30, 50, 30, 50, 35, 50, 150 px down the page); long ALL-CAPS paragraphs at 15 px and 100+ characters per line. New inspector check display-sizes."
+    },
+    {
+     "claim": "Font inconsistency strains the eyes; size contrast is fine but needs consistency",
+     "verdict": "confirmed",
+     "evidence": "One family (DIN) in five cuts plus a serif italic (Arapey) in the footer; 16 font sizes; ten display sizes; the same heading role at 35, 50 and 53 px; no h1."
+    },
+    {
+     "claim": "Colours, text and backgrounds mix so text is hard to read",
+     "verdict": "confirmed",
+     "evidence": "32 text elements below WCAG AA on desktop, measured on screen pixels (white on lime green, light green on white, text over photos); the jury vetoed it."
+    }
+   ],
+   "library_candidates": [
+    "A concrete capacity line ('8 spots available: 6 for 14-18, 2 for 18+ ATP') as honest scarcity",
+    "The apply button right after the acceptance criteria",
+    "Hero video of the academy's own players"
+   ],
+   "avoid": [
+    "A fixed logo or badge that is not a slim bar",
+    "Display sizes without a scale (more than 4-5 steps, one role each)",
+    "Long passages in ALL CAPS, body text under 16 px, lines over 95 characters",
+    "Text on mid-tone colour fields or photos below contrast",
+    "Pictures touching a band while floating with wide side gaps; no spacing rhythm",
+    "Giant background words cutting through headings",
+    "A first screen that serves the parent club's navigation instead of the page's offer"
+   ]
+  }
+ ],
+ "owner_taste_signal": "First negative example (owner 4/4). AI weighted 4.3 against the owner's 4: the closest AI-human agreement so far, which suggests the owner's high scores elsewhere are taste for visual craft rather than leniency."
+}

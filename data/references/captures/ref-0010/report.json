@@ -1,0 +1,817 @@
+{
+  "target": "https://academy.a-rete.com/",
+  "time": "2026-11-02T04:28:47.082Z",
+  "rules": {
+    "purple-gradient": "warn",
+    "gradient": "info",
+    "glass": "info",
+    "system-font-only": "warn",
+    "too-many-font-sizes": "warn",
+    "too-many-colours": "warn",
+    "shadow-on-everything": "warn",
+    "icon-card-row": "warn",
+    "centred-hero-two-ctas": "warn",
+    "emoji": "warn"
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "pageHeight": 14922,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "font-count",
+          "message": "5 typefaces carry the text: Din-Light, Din-Bold, Din-Condensed, Din-Regular, Din-Condensed-Regular"
+        },
+        {
+          "severity": "WARN",
+          "rule": "too-many-font-sizes",
+          "message": "16 different font sizes on the page (aim for 5 or fewer doing the visible work)"
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15px (16px or more reads better)",
+          "sample": [
+            "<p> \"Reception +39 320 602 7586 - info@a-rete.com Luned\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "no-h1",
+          "message": "No visible h1: the page has no title"
+        },
+        {
+          "severity": "WARN",
+          "rule": "line-length",
+          "message": "About 106 characters per line (55-75 reads best)",
+          "sample": [
+            "<p> \"APARTMENTS ARE AVAILABLE FOR YOU DIRECTLY ON-SITE,\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "line-length",
+          "message": "About 101 characters per line (55-75 reads best)",
+          "sample": [
+            "<p> \"WHILE BEING SET IN THE MIDDLE OF THE COMO COUNTRYS\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "1 gradient backgrounds"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "32 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#ffffff on screen = 2.11:1 median, 2.11:1 in the worst tenth (needs 4.5) <a> \"IL CLUB\"",
+            "#8fc156 on screen = 2.11:1 median, 1.59:1 in the worst tenth (needs 4.5) <a> \"About us\"",
+            "#8fc156 on screen = 2.11:1 median, 2.11:1 in the worst tenth (needs 3) <span> \"ELITE TENNIS PLAYER\"",
+            "#ffffff on screen = 2.11:1 median, 1.48:1 in the worst tenth (needs 4.5) <a> \"What is needed\"",
+            "#ffffff on screen = 2.11:1 median, 1.64:1 in the worst tenth (needs 3) <span> \"ARE YOU THE RIGHT FIT FOR A-RETE HIGH PERFORMANCE \""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "screenshots-capped",
+          "message": "Page is 14922px tall; only the first 14 screens were captured"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Din-Light",
+            "share": 57
+          },
+          {
+            "family": "Din-Bold",
+            "share": 24
+          },
+          {
+            "family": "Din-Condensed",
+            "share": 13
+          },
+          {
+            "family": "Din-Regular",
+            "share": 4
+          },
+          {
+            "family": "Din-Condensed-Regular",
+            "share": 2
+          },
+          {
+            "family": "Arapey-Italic",
+            "share": 1
+          }
+        ],
+        "fontSizes": [
+          150,
+          115,
+          65,
+          53,
+          50,
+          40,
+          35,
+          30,
+          28,
+          22,
+          20,
+          19,
+          18,
+          16,
+          15,
+          13
+        ],
+        "textColours": [
+          "#ffffff",
+          "#212529",
+          "#0f0f0f",
+          "#8fc156",
+          "#efefef",
+          "#454545",
+          "#216611",
+          "#f0f0f0",
+          "#d52b1e",
+          "#4b4b4b",
+          "#d13627"
+        ],
+        "backgroundColours": [
+          "#8fc156",
+          "#000000",
+          "#e1e1e1",
+          "#2e2e2e",
+          "#e8e8e8",
+          "#ffffff",
+          "#d13627"
+        ],
+        "chromaticColours": 5,
+        "colourFamilies": 3,
+        "spacing": {
+          "distinct": 31,
+          "offScale": 19,
+          "values": [
+            2,
+            4,
+            5,
+            7.5,
+            8,
+            10,
+            12,
+            13.5,
+            15,
+            16,
+            20,
+            22,
+            22.5,
+            23,
+            25,
+            30,
+            32,
+            40,
+            44,
+            48,
+            50,
+            55,
+            60,
+            75,
+            86.5,
+            150,
+            207,
+            220,
+            277.5,
+            278,
+            300
+          ]
+        },
+        "radii": [
+          "3px"
+        ],
+        "shadows": 0,
+        "gradients": 1,
+        "backdropBlur": 0,
+        "transitions": 734,
+        "animatedElements": 3,
+        "cls": 0.001
+      },
+      "screenshots": [
+        "data/references/captures/ref-0010/desktop-fold.png",
+        "data/references/captures/ref-0010/desktop-page-01.png",
+        "data/references/captures/ref-0010/desktop-page-02.png",
+        "data/references/captures/ref-0010/desktop-page-03.png",
+        "data/references/captures/ref-0010/desktop-page-04.png",
+        "data/references/captures/ref-0010/desktop-page-05.png",
+        "data/references/captures/ref-0010/desktop-page-06.png",
+        "data/references/captures/ref-0010/desktop-page-07.png",
+        "data/references/captures/ref-0010/desktop-page-08.png",
+        "data/references/captures/ref-0010/desktop-page-09.png",
+        "data/references/captures/ref-0010/desktop-page-10.png",
+        "data/references/captures/ref-0010/desktop-page-11.png",
+        "data/references/captures/ref-0010/desktop-page-12.png",
+        "data/references/captures/ref-0010/desktop-page-13.png",
+        "data/references/captures/ref-0010/desktop-page-14.png"
+      ]
+    },
+    "tablet": {
+      "width": 768,
+      "pageHeight": 17306,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "font-count",
+          "message": "5 typefaces carry the text: Din-Light, Din-Bold, Din-Condensed, Din-Regular, Din-Condensed-Regular"
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15px (16px or more reads better)",
+          "sample": [
+            "<p> \"Reception +39 320 602 7586 - info@a-rete.com Luned\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "no-h1",
+          "message": "No visible h1: the page has no title"
+        },
+        {
+          "severity": "WARN",
+          "rule": "headline-lines",
+          "message": "h3 runs to 8 lines",
+          "sample": [
+            "<h3> \"There’s a pathway that leads to becoming a world-c\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "line-length",
+          "message": "About 97 characters per line (55-75 reads best)",
+          "sample": [
+            "<p> \"When you’re accepted at the Academy, you’ll be liv\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "1 gradient backgrounds"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "26 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#ffffff on screen = 2.11:1 median, 2.11:1 in the worst tenth (needs 4.5) <a> \"IL CLUB\"",
+            "#8fc156 on screen = 2.11:1 median, 1.46:1 in the worst tenth (needs 4.5) <a> \"About us\"",
+            "#8fc156 on screen = 2.11:1 median, 2.11:1 in the worst tenth (needs 3) <span> \"ELITE TENNIS PLAYER\"",
+            "#ffffff on screen = 2.11:1 median, 1.40:1 in the worst tenth (needs 4.5) <a> \"What is needed\"",
+            "#ffffff on screen = 2.11:1 median, 1.40:1 in the worst tenth (needs 3) <span> \"ARE YOU THE RIGHT FIT FOR A-RETE HIGH PERFORMANCE \""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "screenshots-capped",
+          "message": "Page is 17306px tall; only the first 14 screens were captured"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Din-Light",
+            "share": 57
+          },
+          {
+            "family": "Din-Bold",
+            "share": 24
+          },
+          {
+            "family": "Din-Condensed",
+            "share": 13
+          },
+          {
+            "family": "Din-Regular",
+            "share": 4
+          },
+          {
+            "family": "Din-Condensed-Regular",
+            "share": 2
+          },
+          {
+            "family": "Arapey-Italic",
+            "share": 1
+          }
+        ],
+        "fontSizes": [
+          80,
+          65,
+          50,
+          40,
+          35,
+          30,
+          26,
+          25,
+          24,
+          22,
+          20,
+          19,
+          18,
+          16,
+          15,
+          13
+        ],
+        "textColours": [
+          "#ffffff",
+          "#212529",
+          "#0f0f0f",
+          "#8fc156",
+          "#efefef",
+          "#454545",
+          "#216611",
+          "#f0f0f0",
+          "#d52b1e",
+          "#4b4b4b",
+          "#d13627"
+        ],
+        "backgroundColours": [
+          "#8fc156",
+          "#000000",
+          "#e1e1e1",
+          "#2e2e2e",
+          "#e8e8e8",
+          "#ffffff",
+          "#d13627"
+        ],
+        "chromaticColours": 5,
+        "colourFamilies": 3,
+        "spacing": {
+          "distinct": 26,
+          "offScale": 16,
+          "values": [
+            2,
+            4,
+            5,
+            7.5,
+            8,
+            10,
+            12,
+            15,
+            16,
+            20,
+            22,
+            22.5,
+            23,
+            25,
+            30,
+            32,
+            40,
+            44,
+            46,
+            48,
+            50,
+            55,
+            75,
+            106,
+            220,
+            245.5
+          ]
+        },
+        "radii": [
+          "3px"
+        ],
+        "shadows": 0,
+        "gradients": 1,
+        "backdropBlur": 0,
+        "transitions": 730,
+        "animatedElements": 5,
+        "cls": 0.006
+      },
+      "screenshots": [
+        "data/references/captures/ref-0010/tablet-fold.png",
+        "data/references/captures/ref-0010/tablet-page-01.png",
+        "data/references/captures/ref-0010/tablet-page-02.png",
+        "data/references/captures/ref-0010/tablet-page-03.png",
+        "data/references/captures/ref-0010/tablet-page-04.png",
+        "data/references/captures/ref-0010/tablet-page-05.png",
+        "data/references/captures/ref-0010/tablet-page-06.png",
+        "data/references/captures/ref-0010/tablet-page-07.png",
+        "data/references/captures/ref-0010/tablet-page-08.png",
+        "data/references/captures/ref-0010/tablet-page-09.png",
+        "data/references/captures/ref-0010/tablet-page-10.png",
+        "data/references/captures/ref-0010/tablet-page-11.png",
+        "data/references/captures/ref-0010/tablet-page-12.png",
+        "data/references/captures/ref-0010/tablet-page-13.png",
+        "data/references/captures/ref-0010/tablet-page-14.png"
+      ]
+    },
+    "mobile": {
+      "width": 390,
+      "pageHeight": 18639,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "font-count",
+          "message": "5 typefaces carry the text: Din-Light, Din-Bold, Din-Condensed, Din-Regular, Din-Condensed-Regular"
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15px (16px or more reads better)",
+          "sample": [
+            "<p> \"Reception +39 320 602 7586 - info@a-rete.com Luned\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "no-h1",
+          "message": "No visible h1: the page has no title"
+        },
+        {
+          "severity": "WARN",
+          "rule": "headline-lines",
+          "message": "h3 runs to 5 lines",
+          "sample": [
+            "<h3> \"There’s a pathway that leads to becoming a world-c\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tap-target",
+          "message": "21 controls smaller than 24x24px on a phone",
+          "sample": [
+            "55x14 <a> \"TENNIS\"",
+            "59x14 <a> \"FITNESS\"",
+            "74x14 <a> \"CRIOSAUNA\"",
+            "71x14 <a> \"WELLNESS\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "text-at-edge",
+          "message": "3 text elements within 12px of the screen edge",
+          "sample": [
+            "<a> \"IL CLUB\"",
+            "<a> \"BEAUTY SALON\"",
+            "<video> \"Il tuo browser non supporta il tag video.\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "1 gradient backgrounds"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "26 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#ffffff on screen = 2.11:1 median, 2.11:1 in the worst tenth (needs 4.5) <a> \"IL CLUB\"",
+            "#8fc156 on screen = 2.11:1 median, 1.46:1 in the worst tenth (needs 4.5) <a> \"About us\"",
+            "#8fc156 on screen = 2.11:1 median, 2.11:1 in the worst tenth (needs 3) <span> \"ELITE TENNIS PLAYER\"",
+            "#ffffff on screen = 2.11:1 median, 1.40:1 in the worst tenth (needs 4.5) <a> \"What is needed\"",
+            "#ffffff on screen = 2.11:1 median, 1.56:1 in the worst tenth (needs 3) <span> \"ARE YOU THE RIGHT FIT FOR A-RETE HIGH PERFORMANCE \""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "screenshots-capped",
+          "message": "Page is 18639px tall; only the first 14 screens were captured"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Din-Light",
+            "share": 57
+          },
+          {
+            "family": "Din-Bold",
+            "share": 24
+          },
+          {
+            "family": "Din-Condensed",
+            "share": 13
+          },
+          {
+            "family": "Din-Regular",
+            "share": 4
+          },
+          {
+            "family": "Din-Condensed-Regular",
+            "share": 2
+          },
+          {
+            "family": "Arapey-Italic",
+            "share": 1
+          }
+        ],
+        "fontSizes": [
+          80,
+          50,
+          46,
+          35,
+          30,
+          28,
+          26,
+          25,
+          24,
+          22,
+          20,
+          19,
+          18,
+          16,
+          15,
+          13,
+          10
+        ],
+        "textColours": [
+          "#ffffff",
+          "#212529",
+          "#0f0f0f",
+          "#8fc156",
+          "#efefef",
+          "#454545",
+          "#216611",
+          "#f0f0f0",
+          "#d52b1e",
+          "#4b4b4b",
+          "#d13627"
+        ],
+        "backgroundColours": [
+          "#8fc156",
+          "#000000",
+          "#e1e1e1",
+          "#2e2e2e",
+          "#e8e8e8",
+          "#ffffff",
+          "#d13627"
+        ],
+        "chromaticColours": 5,
+        "colourFamilies": 3,
+        "spacing": {
+          "distinct": 25,
+          "offScale": 16,
+          "values": [
+            2,
+            4,
+            5,
+            7.5,
+            8,
+            10,
+            12,
+            15,
+            16,
+            20,
+            22,
+            22.5,
+            23,
+            23.5,
+            25,
+            28,
+            30,
+            32,
+            44,
+            48,
+            49.5,
+            50,
+            55,
+            75,
+            379.5
+          ]
+        },
+        "radii": [
+          "3px"
+        ],
+        "shadows": 0,
+        "gradients": 1,
+        "backdropBlur": 0,
+        "transitions": 724,
+        "animatedElements": 10,
+        "cls": 0.005
+      },
+      "screenshots": [
+        "data/references/captures/ref-0010/mobile-fold.png",
+        "data/references/captures/ref-0010/mobile-page-01.png",
+        "data/references/captures/ref-0010/mobile-page-02.png",
+        "data/references/captures/ref-0010/mobile-page-03.png",
+        "data/references/captures/ref-0010/mobile-page-04.png",
+        "data/references/captures/ref-0010/mobile-page-05.png",
+        "data/references/captures/ref-0010/mobile-page-06.png",
+        "data/references/captures/ref-0010/mobile-page-07.png",
+        "data/references/captures/ref-0010/mobile-page-08.png",
+        "data/references/captures/ref-0010/mobile-page-09.png",
+        "data/references/captures/ref-0010/mobile-page-10.png",
+        "data/references/captures/ref-0010/mobile-page-11.png",
+        "data/references/captures/ref-0010/mobile-page-12.png",
+        "data/references/captures/ref-0010/mobile-page-13.png",
+        "data/references/captures/ref-0010/mobile-page-14.png"
+      ]
+    }
+  },
+  "checks": {
+    "reducedMotion": {
+      "findings": [],
+      "screenshot": "data/references/captures/ref-0010/reduced-motion-fold.png"
+    },
+    "noJavaScript": {
+      "findings": [],
+      "withJs": 8472,
+      "withoutJs": 8472
+    }
+  },
+  "summary": {
+    "fail": 4,
+    "warn": 12
+  },
+  "url": "https://academy.a-rete.com/",
+  "findings": [
+    {
+      "severity": "FAIL",
+      "rule": "no-h1",
+      "message": "No visible h1: the page has no title",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "32 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#ffffff on screen = 2.11:1 median, 2.11:1 in the worst tenth (needs 4.5) <a> \"IL CLUB\"",
+        "#8fc156 on screen = 2.11:1 median, 1.59:1 in the worst tenth (needs 4.5) <a> \"About us\"",
+        "#8fc156 on screen = 2.11:1 median, 2.11:1 in the worst tenth (needs 3) <span> \"ELITE TENNIS PLAYER\"",
+        "#ffffff on screen = 2.11:1 median, 1.48:1 in the worst tenth (needs 4.5) <a> \"What is needed\"",
+        "#ffffff on screen = 2.11:1 median, 1.64:1 in the worst tenth (needs 3) <span> \"ARE YOU THE RIGHT FIT FOR A-RETE HIGH PERFORMANCE \""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "26 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#ffffff on screen = 2.11:1 median, 2.11:1 in the worst tenth (needs 4.5) <a> \"IL CLUB\"",
+        "#8fc156 on screen = 2.11:1 median, 1.46:1 in the worst tenth (needs 4.5) <a> \"About us\"",
+        "#8fc156 on screen = 2.11:1 median, 2.11:1 in the worst tenth (needs 3) <span> \"ELITE TENNIS PLAYER\"",
+        "#ffffff on screen = 2.11:1 median, 1.40:1 in the worst tenth (needs 4.5) <a> \"What is needed\"",
+        "#ffffff on screen = 2.11:1 median, 1.40:1 in the worst tenth (needs 3) <span> \"ARE YOU THE RIGHT FIT FOR A-RETE HIGH PERFORMANCE \""
+      ],
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tap-target",
+      "message": "21 controls smaller than 24x24px on a phone",
+      "sample": [
+        "55x14 <a> \"TENNIS\"",
+        "59x14 <a> \"FITNESS\"",
+        "74x14 <a> \"CRIOSAUNA\"",
+        "71x14 <a> \"WELLNESS\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "font-count",
+      "message": "5 typefaces carry the text: Din-Light, Din-Bold, Din-Condensed, Din-Regular, Din-Condensed-Regular",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "too-many-font-sizes",
+      "message": "16 different font sizes on the page (aim for 5 or fewer doing the visible work)",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "body-size",
+      "message": "Running text at 15px (16px or more reads better)",
+      "sample": [
+        "<p> \"Reception +39 320 602 7586 - info@a-rete.com Luned\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "line-length",
+      "message": "About 106 characters per line (55-75 reads best)",
+      "sample": [
+        "<p> \"APARTMENTS ARE AVAILABLE FOR YOU DIRECTLY ON-SITE,\""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "line-length",
+      "message": "About 101 characters per line (55-75 reads best)",
+      "sample": [
+        "<p> \"WHILE BEING SET IN THE MIDDLE OF THE COMO COUNTRYS\""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "gradient",
+      "message": "1 gradient backgrounds",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "screenshots-capped",
+      "message": "Page is 14922px tall; only the first 14 screens were captured",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "headline-lines",
+      "message": "h3 runs to 8 lines",
+      "sample": [
+        "<h3> \"There’s a pathway that leads to becoming a world-c\""
+      ],
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "line-length",
+      "message": "About 97 characters per line (55-75 reads best)",
+      "sample": [
+        "<p> \"When you’re accepted at the Academy, you’ll be liv\""
+      ],
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "screenshots-capped",
+      "message": "Page is 17306px tall; only the first 14 screens were captured",
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "headline-lines",
+      "message": "h3 runs to 5 lines",
+      "sample": [
+        "<h3> \"There’s a pathway that leads to becoming a world-c\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "text-at-edge",
+      "message": "3 text elements within 12px of the screen edge",
+      "sample": [
+        "<a> \"IL CLUB\"",
+        "<a> \"BEAUTY SALON\"",
+        "<video> \"Il tuo browser non supporta il tag video.\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "screenshots-capped",
+      "message": "Page is 18639px tall; only the first 14 screens were captured",
+      "where": [
+        "mobile"
+      ]
+    }
+  ]
+}

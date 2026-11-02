@@ -1,0 +1,67 @@
+{
+  "cmd": "score",
+  "jurors": 3,
+  "ai": 2,
+  "humans": 1,
+  "humanWeight": 0.5,
+  "rows": [
+    {
+      "criterion": "business",
+      "ai": 4,
+      "human": null,
+      "final": 4,
+      "spread": 0,
+      "flag": false
+    },
+    {
+      "criterion": "customer",
+      "ai": 4,
+      "human": null,
+      "final": 4,
+      "spread": 0,
+      "flag": false
+    },
+    {
+      "criterion": "story",
+      "ai": 6,
+      "human": null,
+      "final": 6,
+      "spread": 0,
+      "flag": false
+    },
+    {
+      "criterion": "distinctiveness",
+      "ai": 5,
+      "human": 4,
+      "final": 4.5,
+      "spread": 1,
+      "flag": false
+    },
+    {
+      "criterion": "craft",
+      "ai": 3,
+      "human": 4,
+      "final": 3.5,
+      "spread": 1,
+      "flag": false
+    },
+    {
+      "criterion": "clarity",
+      "ai": 4,
+      "human": null,
+      "final": 4,
+      "spread": 0,
+      "flag": false
+    }
+  ],
+  "weighted": 4.3,
+  "humanOverall": 4,
+  "final": 4.2,
+  "gap": 0.3,
+  "humanVisual": 4,
+  "humanShip": 4,
+  "visualVsShip": 0,
+  "vetoes": [
+    "visual-motion: Accessibility veto: contrast that blocks low-vision readers on the content needed to convert. The eligibility section and the Apply button label use white text (Din-Light for the copy) on #8fc156 at about 2.1:1, and the criteria intro is #8fc156 on white at 1.46-1.59:1 in its worst tenth. Both are below the 3:1 floor even for large text, measured on screen pixels across 32 desktop and 26 mobile elements (digest Inspector findings; desktop-page-06, -07; mobile-page-07, -08). A low-vision visitor, or anyone on a phone in daylight, cannot reliably read the spot breakdown, the acceptance criteria or the CTA label. This blocks reading the content needed to decide, not the completion of the action itself: the button shape is still visible. Not verified: focus visibility and whether the form itself is accessible."
+  ]
+}

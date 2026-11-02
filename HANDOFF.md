@@ -1,7 +1,7 @@
 # Handoff
 
 Read this first if you are a new session, a different model or a different AI tool picking up
-this project. It is kept up to date at every milestone. Last updated: **2026-11-02** (owner approved five new taste rules; photos.mjs; fonts check).
+this project. It is kept up to date at every milestone. Last updated: **2026-11-02** (batch-005: first negative example; display-sizes and fixed-cover checks).
 
 ## 1. Goal
 
@@ -250,6 +250,18 @@ key; contact sheet to look before choosing; credits file; Unsplash download_loca
 hotlinking advised on live sites). Not verified live in this cloud session: Openverse 504 via the
 proxy, Commons 429, no Unsplash key. Run with NODE_USE_ENV_PROXY=1 behind a proxy.
 Also fixed: jury.mjs treated a veto field reading "none ..." as a veto.
+
+Batch-005 (2026-11-02): first negative example from the owner, A-Rete Academy (ref-0010, one
+page), owner 4/4 with five reasons. Two combined jurors (72.7k + 74.1k tokens): 4/5/3/4/4/6,
+weighted 4.3, accessibility veto (about 2.1:1 on content and the apply button). Blended 4.2,
+AI-owner gap 0.3: closest agreement so far. Measured the owner's reasons: fixed 280x183 logo
+(about 20% of screen height) riding over content; photo rows touching a band with about 320px
+empty at each side; display sizes jumping 65/53/35/150/115/35/30/50... (ten display sizes, same
+role at 35/50/53px); five DIN cuts plus a serif italic; 32 contrast failures. New inspector checks
+(lib/measure.mjs, tested on the slop fixture): `display-sizes` (more than 5 sizes of 24px+ on
+desktop) and `fixed-cover` (fixed/sticky element that is not a bar or a pinned panel, over 3% of
+the screen). Critic caps Craft at 6 for display sizes without a scale, a fixed cover, or no
+spacing rhythm. Four Never rules proposed in `data/references/batch-005-review.md`, pending.
 
 Capture fixes from batch-003: `lib/browser.mjs` `gotoStable` retries server error pages (a 502
 "upstream request failed" had been captured as Swehl's desktop) and every failed load is reported

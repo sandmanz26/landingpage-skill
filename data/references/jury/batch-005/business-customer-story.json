@@ -1,0 +1,60 @@
+{
+  "juror": "business-customer-story",
+  "kind": "ai",
+  "method": "Read digest.md (page text truncated at 6000 of 8701 characters), desktop-fold.png, mobile-fold.png, sheet-desktop.png, sheet-mobile.png, motion-sheet.png, plus single screenshots desktop-page-06.png and desktop-page-14.png. 10 tool calls in all, counting the write of this file (the brief asked for fewer than 10). Not verified: the last ~2700 characters of page text (they may hold prices, schooling for minors, contact or footer details), the apply form's fields and where it goes, what the Italian 'Sfoglia il nostro catalogo' link opens, whether the coach and facility claims are true, and anything below the 14 captured screens. Scores are judged from the evidence pack only, with no live browsing.",
+  "refs": {
+    "ref-0010": {
+      "business": "A residential, full-time, year-round high-performance tennis academy about six miles from Lake Como, Italy, run inside the A-Rete sports club (the top nav lists the club's other lines: tennis, fitness, cryosauna, wellness, beauty salon). It sells long-stay intensive training (Pro Team, ages 12+, 6 hrs/day Mon-Fri, desktop-page-14.png) with on-site apartments. It targets ranked ITF juniors aged 14-18 and 18+ ATP players: 8 places per season (digest.md, desktop-page-06.png). Inference: for juniors, the parents decide and pay. The action that pays is 'APPLY FOR YOUR SPOT' (the button appears twice, at 31%, and there is one form). That leads to a mandatory trial of at least a month and then enrolment in a full-time programme. Inference: the trial is probably paid, but the page does not say. No price appears anywhere on the page.",
+      "scores": {
+        "business": 4,
+        "customer": 4,
+        "story": 6
+      },
+      "reasons": {
+        "business": "Strong points: a single paying action ('Apply'), repeated after the argument that earns it. Scarcity is specific and believable: 8 spots split 6 for ages 14-18 (2 ITF girls, 4 ITF boys) and 2 for 18+ ATP (desktop-page-06.png). Published selection criteria pre-qualify a high-ticket lead. Weak points: there is no trust before the ask. The digest shows 0 logo images, and its 4 'review' words are internal ('performance reviews', 'reviewed by the high-performance team'), not testimonials. No coach or director is named and no alumni rankings or results are given; the trophy photo on desktop-page-14.png has no caption. The offer has no price, length, start date or trial terms, even though the page admits 'a big investment ... economically'. The top nav sends visitors to the club's beauty salon and cryosauna instead of the academy funnel (desktop-fold.png). An Italian catalogue link at 96% sits on an English page.",
+        "customer": "The first questions a parent of a ranked junior asks on a phone are: 1) what is this and is it for my child, 2) can they get in, 3) who coaches and with what results, 4) what does it cost and for how long, 5) where do they live and study, 6) what happens after applying. mobile-fold.png answers none of them. It shows a generic slogan ('Championing excellence one player at a time') with no audience, offer or CTA, and the nav row offers the club's services, with 21 tap targets under 24px (digest.md). Question 2 is answered well but late, at about 33% (criteria, 8 spots). Question 5 is half answered: there are apartments, but school for 14-18-year-olds is not in the visible text (unverifiable). Questions 3 and 4 are missing. Question 6 is answered only by the mandatory trial of at least a month. Readability on a phone is hurt by long ALL-CAPS criteria paragraphs (mobile-page-09/10/12), 15px body text and a sticky logo that covers text (mobile-page-07, -09, -11). The page also contradicts itself: 'athletes of all ages', 'Pro Team (Ages 12+)' and spots only for 14-18 and 18+; and 'immediate vicinity' of Lake Como against 'six miles from Lake Como'.",
+        "story": "The page carries one clear message: a selective, demanding pathway that is not for everyone, so prove you fit and apply. Sections mostly earn the next one: pathway, limited spots, what it is, 'not for everyone', CTA, are you the right fit (quota + criteria + trial), CTA, lifestyle, programmes, final apply. The bridge 'This is what it takes to earn your spot here. Think you're up for it?' (desktop-page-06.png, motion-sheet 09) is a good hand-off to the ask. It falls short of 7 for three reasons. The hero is a generic slogan that does not state the promise. Decorative display words ('CONSTANT IMPROVEMENT / AS A PROFESSIONAL / ELITE TENNIS PLAYER', desktop-page-04/05; ghost 'ACADEMY' and 'PERFORMANCE' behind text) take up screens without moving the argument. And the concrete offer (programme spec, 6 hrs/day) arrives only at 78-93%, after the reader has been asked to apply twice."
+      },
+      "claims": [
+        {
+          "claim": "1. The logo is too big and covers most of the navigation",
+          "verdict": "confirmed with correction",
+          "evidence": "The logo is large, about 280x190px on desktop, and hangs below the sticky dark header (desktop-fold.png). It does not cover the green top nav. What it covers is page content as you scroll: the programme headline on desktop-page-14.png, and body text on mobile-page-07, -09 and -11 (sheet-mobile.png). The academy's own section nav (about us ... sign up, at 7%) is not sticky, so the visitor loses it. Customer impact: reading on a phone is blocked."
+        },
+        {
+          "claim": "2. Pictures are stuck directly against each other but still leave empty space; no spacing between sections",
+          "verdict": "confirmed with correction (outside my main expertise)",
+          "evidence": "Images sit flush or with hairline gutters (desktop-page-02/03, the photo strip on desktop-page-12 in sheet-desktop.png). Large empty white areas also occur (desktop-page-05 right half, desktop-page-11). Sections are separated by background colour bands (grey CTA band, then green, on desktop-page-06.png), so spacing is inconsistent rather than absent."
+        },
+        {
+          "claim": "3. While scrolling, the typography gets untidy and keeps getting smaller",
+          "verdict": "confirmed with correction",
+          "evidence": "The type shrinks in the selection-criteria section, which uses long ALL-CAPS paragraphs in small type (desktop-page-07/08/09, mobile-page-09 to -12; digest page text), but it does not keep getting smaller. The programme section returns to large headings and 16px-plus body text (desktop-page-14.png). The real problem is that the type system changes from section to section."
+        },
+        {
+          "claim": "4. Font inconsistency: big and very small sizes without consistency strain the eyes",
+          "verdict": "confirmed",
+          "evidence": "digest.md: 16 font sizes (150 to 13px), 5 DIN cuts plus Arapey-Italic, running text at 15px, and lines of 101-106 characters. There is no visible type scale: a 150px decorative headline sits next to 13px labels."
+        },
+        {
+          "claim": "5. Colours, text and backgrounds mix so the text is hard to read",
+          "verdict": "confirmed",
+          "evidence": "digest.md inspector: 32 text elements fail WCAG AA on desktop and 26 on mobile. White on #8fc156 green measures about 2.11:1, and green text on light backgrounds drops to 1.46-1.59:1. White body text runs over a green-tinted photo (desktop-page-06.png), and ghost display words ('PERFORMANCE', 'ACADEMY') sit behind headings (desktop-page-06.png, desktop-page-03)."
+        }
+      ],
+      "problems": [
+        "No trust before the ask. There are no named coaches or director, no alumni rankings or results, no testimonials and no partner logos, so 'elite professional coaches', 'the best training implements' and 'internationally-staffed' rest on assertion alone. The request is for families to commit a year and a large sum (digest.md, desktop-page-14.png).",
+        "The offer leaves out what a paying parent must know: price, season dates, programme length, cost and terms of the mandatory trial of at least a month, schooling for minors, and what happens after 'Apply'. The visible text also contradicts itself on ages (all ages / 12+ / 14-18 and 18+) and on location ('immediate vicinity' versus 'six miles').",
+        "The phone's first screen and nav serve the club, not the academy. The hero has a generic slogan with no audience or CTA, the nav lists beauty salon and cryosauna with 21 undersized tap targets, the first CTA sits at 31% of the page, and the sticky logo covers text (mobile-fold.png, sheet-mobile.png)."
+      ],
+      "keep": [
+        "A specific quota block ('8 spots: 6 for 14-18, split 2 ITF girls / 4 ITF boys; 2 for 18+ ATP'). It makes scarcity believable and lets visitors self-qualify, instead of using a vague 'limited places' line.",
+        "A published selection-criteria list (discipline, competitive drive, ranking history, growth potential, coachability, mandatory trial). It pre-qualifies high-ticket applicants and shows rigour, which turns 'it's hard to get in' into a reason to want in.",
+        "A bridge line before each CTA ('This is what it takes to earn your spot here. Think you're up for it?' + 'Apply for your spot'). It places the ask right after the block that earns it and frames applying as a challenge, not a purchase.",
+        "A 'not a tennis school' disqualifier ('not where you come to learn to play ... a big investment'). It positions the academy against cheaper alternatives and sets cost expectations early, filtering out leads who will not convert.",
+        "A programme spec card (Objective / Key features with hours per day and days / Entry requirements, desktop-page-14.png). It gives a scannable offer definition that answers 'what exactly do I get'."
+      ],
+      "veto": null
+    }
+  }
+}

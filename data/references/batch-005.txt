@@ -1,0 +1,2 @@
+# batch-005 (2026-11-02) negative example from the owner: A-Rete Academy
+ref-0010 https://academy.a-rete.com/

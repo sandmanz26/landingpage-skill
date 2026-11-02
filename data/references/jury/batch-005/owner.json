@@ -1,0 +1,9 @@
+{
+  "juror": "owner",
+  "kind": "human",
+  "date": "2026-11-02",
+  "refs": { "ref-0010": { "visual": 4, "ship": 4, "note": "Sent as an example of a weak site." } },
+  "notes_verbatim": {
+    "a-rete academy (ref-0010)": "ini adalah contoh website yang kurang bagus, saya beri score 4 dan 4. kenapa kurang bagus 1. logo terlalu besar sehingga menurut sebagian besar navigasi 2. gambar bertempelan langsung tapi masih menyisakan ruang, tidak ada spasi antar section 3. ketika discroll tulisan tipografi tidak rapi semakin mengecil 4. terlihat inkonsistensi font disini sehingga membuat mata sedikit sakit dari besar kecil sekali tapi tidak konsisten, jadi perbedaan font size sebetulnya oke tapi harus disertai konsistensi 5. warna, text, background bercampur sehingga membuat tulisan susah terbaca"
+  }
+}

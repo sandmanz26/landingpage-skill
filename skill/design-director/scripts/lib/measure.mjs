@@ -233,6 +233,10 @@ export function measure({ rules, viewport }) {
   const fontSizes = [...sizes.keys()].sort((a, b) => b - a);
   if (viewport === 'desktop' && fontSizes.filter((s) => sizes.get(s) > 20).length > 7)
     style('too-many-font-sizes', `${fontSizes.length} different font sizes on the page (aim for 5 or fewer doing the visible work)`);
+  // Display sizes need a scale: a few steps used by role, not a new size per section (A-Rete, batch-005).
+  const displaySizes = fontSizes.filter((sz) => sz >= 24 && sizes.get(sz) > 6);
+  if (viewport === 'desktop' && displaySizes.length > 5)
+    add('WARN', 'display-sizes', `${displaySizes.length} display sizes (24px and up) with no clear scale: ${displaySizes.join(', ')} px; use 3-4 steps, each with one role`);
 
   // --- text size, contrast
   const seenPairs = new Set();
@@ -294,6 +298,19 @@ export function measure({ rules, viewport }) {
     const cpl = Math.round(text.length / lines);
     if (cpl > 95) add('WARN', 'line-length', `About ${cpl} characters per line (55-75 reads best)`, [snippet(p)]);
   }
+
+  // --- fixed things that are not a bar cover part of every screen (an oversized fixed logo, a floating badge)
+  const covers = [];
+  for (const el of vis) {
+    const cs = getComputedStyle(el);
+    if (cs.position !== 'fixed' && cs.position !== 'sticky') continue;
+    const r = el.getBoundingClientRect();
+    const bar = r.width >= innerWidth * 0.9 && r.height <= innerHeight * 0.15;
+    const panel = cs.position === 'sticky' && r.height >= innerHeight * 0.5; // a pinned section device
+    if (bar || panel || r.width * r.height < innerWidth * innerHeight * 0.03) continue;
+    covers.push(`${Math.round(r.width)}x${Math.round(r.height)} (${Math.round((r.height / innerHeight) * 100)}% of the screen height) ${snippet(el)}`);
+  }
+  if (covers.length) add('WARN', 'fixed-cover', `${covers.length} fixed or sticky element(s) that are not a bar cover part of every screen; make it a slim bar or let it scroll away`, covers.slice(0, 3));
 
   // --- phone: tap targets and text against the edge
   if (isPhone) {

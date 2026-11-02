@@ -1,0 +1,20 @@
+{
+  "list": "data/references/batch-005.txt",
+  "jobs": 1,
+  "seconds": 358,
+  "results": [
+    {
+      "id": "ref-0010",
+      "url": "https://academy.a-rete.com/",
+      "ok": true,
+      "inspectSeconds": 213,
+      "evidenceSeconds": 145,
+      "flags": [
+        "under reduced motion 0 elements still move on their own and 1 move with the scroll",
+        "no styled action in the first screen",
+        "no price on the page"
+      ],
+      "error": null
+    }
+  ]
+}

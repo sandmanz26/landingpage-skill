@@ -36,7 +36,7 @@ const check = (name, ok, detail = '') => {
   check('inspect runs and writes a report', !!report, r.stderr);
   if (report) {
     const rules = new Set(report.findings.map((f) => f.rule));
-    for (const rule of ['overflow', 'font-not-loaded', 'contrast', 'hidden-content', 'reduced-motion', 'img-alt', 'purple-gradient', 'icon-card-row', 'centred-hero-two-ctas'])
+    for (const rule of ['overflow', 'font-not-loaded', 'contrast', 'hidden-content', 'reduced-motion', 'img-alt', 'purple-gradient', 'icon-card-row', 'centred-hero-two-ctas', 'display-sizes', 'fixed-cover'])
       check(`inspect detects ${rule}`, rules.has(rule), [...rules].join(', '));
     check('inspect exits 1 when something fails', r.status === 1);
     check('inspect saves screenshots', fs.readdirSync(out).some((f) => f.endsWith('.png')));

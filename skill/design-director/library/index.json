@@ -1,7 +1,7 @@
 {
-  "builtAt": "2026-11-02T04:08:19.773Z",
+  "builtAt": "2026-11-02T04:41:21.273Z",
   "source": "data/references (batch-*.json, captures/*/style.json)",
-  "count": 9,
+  "count": 10,
   "sectors": {
     "commerce": [
       "ref-0001"
@@ -16,7 +16,8 @@
       "ref-0006",
       "ref-0007",
       "ref-0008",
-      "ref-0009"
+      "ref-0009",
+      "ref-0010"
     ]
   },
   "groups": [
@@ -122,6 +123,21 @@
       ],
       "members": [
         "ref-0009"
+      ]
+    },
+    {
+      "id": "style-8",
+      "name": "surface:flat · colour:calm · type:expressive · imagery:photo · motion:calm",
+      "shared": [
+        "surface:flat",
+        "colour:calm",
+        "type:expressive",
+        "imagery:photo",
+        "motion:calm",
+        "shape:sharp"
+      ],
+      "members": [
+        "ref-0010"
       ]
     }
   ],
@@ -1052,9 +1068,9 @@
       "scores": {
         "ai": 6.8,
         "ownerOverall": null,
-        "ownerVisual": null,
-        "ownerShip": null,
-        "final": null
+        "ownerVisual": 9,
+        "ownerShip": 9,
+        "final": 8
       },
       "veto": null,
       "patternOnly": false,
@@ -1158,6 +1174,111 @@
         ]
       },
       "styleGroup": "style-7"
+    },
+    {
+      "id": "ref-0010",
+      "site": "arete",
+      "url": "https://academy.a-rete.com/",
+      "batch": "batch-005",
+      "review": "data/references/batch-005-review.md",
+      "business": "Residential full-time tennis academy near Lake Como, part of the A-Rete club; ITF juniors 14-18 and ATP players 18+, 8 spots a season; apply, then a mandatory trial of at least a month (inference: parents pay, trial likely paid).",
+      "actionThatPays": "Apply for your spot (first at about 31% of the page)",
+      "scores": {
+        "ai": 4.3,
+        "ownerOverall": null,
+        "ownerVisual": 4,
+        "ownerShip": 4,
+        "final": 4.2
+      },
+      "veto": "Accessibility: body text, eligibility criteria and the APPLY button label at about 2.1:1 (white on #8fc156, light green on white), 32 desktop and 26 mobile elements.",
+      "patternOnly": false,
+      "patterns": [
+        "A concrete capacity line ('8 spots available: 6 for 14-18, 2 for 18+ ATP') as honest scarcity",
+        "The apply button right after the acceptance criteria",
+        "Hero video of the academy's own players"
+      ],
+      "avoid": [
+        "A fixed logo or badge that is not a slim bar",
+        "Display sizes without a scale (more than 4-5 steps, one role each)",
+        "Long passages in ALL CAPS, body text under 16 px, lines over 95 characters",
+        "Text on mid-tone colour fields or photos below contrast",
+        "Pictures touching a band while floating with wide side gaps; no spacing rhythm",
+        "Giant background words cutting through headings",
+        "A first screen that serves the parent club's navigation instead of the page's offer"
+      ],
+      "sector": "health",
+      "style": {
+        "features": [
+          "surface:flat",
+          "colour:calm",
+          "type:expressive",
+          "imagery:photo",
+          "motion:calm",
+          "shape:sharp"
+        ],
+        "tags": [
+          "sharp-corners",
+          "expressive-type",
+          "many-type-sizes",
+          "calm-motion",
+          "photography"
+        ],
+        "type": {
+          "families": [
+            "Din-Light",
+            "Din-Bold",
+            "Din-Condensed",
+            "Din-Regular",
+            "Din-Condensed-Regular",
+            "Arapey-Italic"
+          ],
+          "display": 150,
+          "body": 16,
+          "ratio": 9.4,
+          "sizes": 16
+        },
+        "palette": {
+          "chromatic": 5,
+          "gradients": 1,
+          "shadows": 0,
+          "backgrounds": [
+            "#8fc156",
+            "#000000",
+            "#e1e1e1",
+            "#2e2e2e",
+            "#e8e8e8"
+          ]
+        },
+        "radii": [
+          "3px"
+        ],
+        "motion": {
+          "libraries": [],
+          "stickyPanels": 0,
+          "durationsMs": {
+            "min": 300,
+            "max": 1000
+          },
+          "easings": [
+            "linear",
+            "ease"
+          ],
+          "reducedMotionRespected": true,
+          "smoothness": {
+            "fps": 57.2,
+            "longFrames": 0,
+            "baselineLongFrames": 0,
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+          }
+        },
+        "doNotCopy": [
+          "no-h1: No visible h1: the page has no title",
+          "contrast: 32 text elements below WCAG AA (measured on screen pixels)",
+          "contrast: 26 text elements below WCAG AA (measured on screen pixels)",
+          "tap-target: 21 controls smaller than 24x24px on a phone"
+        ]
+      },
+      "styleGroup": "style-8"
     }
   ]
 }

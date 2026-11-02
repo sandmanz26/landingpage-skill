@@ -1,0 +1,55 @@
+{
+  "juror": "visual-motion",
+  "kind": "ai",
+  "method": "Read captures/ref-0010/digest.md, desktop-fold.png, mobile-fold.png, sheet-desktop.png, sheet-mobile.png, motion-sheet.png, plus one single screen desktop-page-06.png to check the contrast and overlap doubts. Checked the inspector's white-on-#8fc156 figure by hand (relative luminance of #8fc156 is about 0.445, so white on it is about 2.12:1, which matches the measured 2.11:1). Not verified: hover, focus and keyboard states (no browser); the application form (not in any capture); everything below the 14 captured screens (page is 14922px desktop / 18639px mobile); the hero video beyond five load frames; motion on real GPU hardware; what the one reduced-motion scroll effect looks like; the font-size reading of the sheets beyond what the digest measured (sheet thumbnails are too small to read sizes).",
+  "refs": {
+    "ref-0010": {
+      "business": "Sells long-stay, full-time high-performance tennis training with on-site apartments near Lake Como, Italy (digest page text). Buyers: competitive junior players aged 14-18 on the ITF circuit and their parents, plus 18+ ATP players, recruited internationally ('8 spots available': 2 ITF girls, 4 ITF boys, 2 ATP). The action that pays: submit the application (the 'APPLY FOR YOUR SPOT' CTA appears twice at 31%, and the page has 1 form). Inferred: after the application comes a paid trial of at least one month, then enrolment in a year-round programme. Fees are not shown on the page. Also inferred from the top nav (IL CLUB, TENNIS, FITNESS, CRIOSAUNA, WELLNESS, BEAUTY SALON) and the Italian 'Sfoglia il nostro catalogo': this academy page sits inside a broader Italian sports and wellness club site, and the club's nav was carried over unchanged.",
+      "scores": { "clarity": 4, "distinctiveness": 5, "craft": 3 },
+      "reasons": {
+        "clarity": "The hero headline ('CHAMPIONING EXCELLENCE ONE PLAYER AT A TIME', desktop-fold.png) is a slogan. It never says 'tennis academy', 'Lake Como' or 'apply'. The video and the logo badge carry 'tennis'. There is no h1 (digest FAIL no-h1). The fold has no CTA: the first Apply button sits at 31% of the page. The content that does the selling is genuinely clear once you reach it: the concrete '8 spots' breakdown and the numbered acceptance criteria (desktop-page-06, page text). But the green section that holds it is the hardest part of the page to read (see craft). The cross-club nav is the first thing on screen and points away from the academy.",
+        "distinctiveness": "There is a real brand system: red/charcoal shield badge, lime #8fc156, DIN Condensed caps, and huge ghost words behind headings ('ACADEMY', 'PERFORMANCE', desktop-page-03/06). The hero uses the academy's own footage of real players on the clay dome court (motion-sheet 00-04), not stock. On the other hand, the layout is a generic sports-club template: a pinned header, alternating photo collages, a green band with a duotone athlete. At least one image looks like stock or AI (the tennis ball in dust, motion-sheet 07-scroll-2250px), which weakens the 'real academy' signal.",
+        "craft": "Contrast fails on the content that sells. The digest measures 32 desktop and 26 mobile text elements below AA. White Din-Light body text and the white Apply-button label on #8fc156 come out around 2.1:1 (desktop-page-06; my own check gives 2.12:1). That is under even the 3:1 large-text minimum. The light-green intro to the criteria sits on white (desktop-page-07). Mobile has 21 tap targets under 24px, e.g. 'TENNIS' at 55x14. The sticky stack (green nav, charcoal bar, overhanging badge) takes about 240 of 900px on desktop (desktop-fold) and about 180 of 844px on mobile, and the badge covers body text as you scroll (mobile-page-09, -12, desktop-page-05). The type has 16 sizes; long ALL-CAPS paragraphs run 101-106 characters per line; ghost words cut through headings ('PERFORMANCE' behind the h3 on desktop-page-06, 'ACADEMY' on desktop-page-03). Motion is restrained and smooth: 57 fps, CLS 0.001, durations 300-1000ms. It has gaps, though: 10 endless loops (the hero video) with no pause control, and one scroll effect still runs under reduced motion (digest Motion)."
+      },
+      "claims": [
+        {
+          "claim": "1. The logo is too big and covers most of the navigation",
+          "verdict": "contested (the part about covering the nav); confirmed with correction (the part about it being too big)",
+          "evidence": "The badge does not cover the navigation. The club nav sits in its own green bar above it, centred and fully visible (desktop-fold.png, mobile-fold.png), and the in-page section nav sits below the hero (motion-sheet 05-scroll-450px). The real problem: the badge is pinned and hangs about 130px below the charcoal bar. It covers page content, not the nav: headings and body text slide under it (mobile-page-09, mobile-page-12, desktop-page-05/06, where it sits over the grey CTA band). The whole sticky stack eats about 27% of the desktop viewport and about 21% on mobile. A second, unpinned copy of the logo also repeats inside the content (desktop-page-05, mobile-page-06)."
+        },
+        {
+          "claim": "2. Pictures are stuck directly against each other but still leave empty space; no spacing between sections",
+          "verdict": "confirmed with correction",
+          "evidence": "Gutter-less collages do exist (desktop-page-02, -12, mobile-page-03). Next to them are large dead areas: two images centred inside wide white margins (desktop-page-02), an empty right column (desktop-page-07). So the spacing has no consistent rhythm. Correction: sections are not unspaced. They are separated by full-width colour bands (grey CTA band, lime band, charcoal intro) rather than by whitespace (desktop-page-06, -10, -14). Edge-to-edge images are a valid collage technique in themselves; the fault is mixing them with arbitrary empty space."
+        },
+        {
+          "claim": "3. While scrolling, the typography gets untidy and keeps getting smaller",
+          "verdict": "confirmed with correction",
+          "evidence": "Text does not shrink steadily. Big display lines come back further down: 'CONSTANT IMPROVEMENT / AS A PROFESSIONAL' (desktop-page-04) and 'THE PLACE FOR YOU / TO START BUILDING / YOUR CAREER' (desktop-page-13). What is true: the long copy (the criteria, accommodation and logistics) switches to small ALL-CAPS paragraphs. The digest reports body text at 15px and 101-106 characters per line, e.g. 'APARTMENTS ARE AVAILABLE...' and 'WHILE BEING SET IN THE MIDDLE...', and these sit between oversized headings (desktop-page-07 to -12). So it reads as the text getting smaller and messier, because the densest sections are set in the hardest style to read."
+        },
+        {
+          "claim": "4. Font inconsistency: big and very small sizes without consistency strain the eyes",
+          "verdict": "confirmed with correction",
+          "evidence": "The digest measures 16 font sizes (150 down to 13px). It flags too-many-font-sizes and 5 DIN cuts carrying the text, plus Arapey-Italic. Correction: the typeface family is consistent, since everything is DIN. The inconsistency lies in the size scale, the casing (sentence-case intros next to ALL-CAPS paragraphs) and the weights (Light text with inline Bold phrases, desktop-page-06), not in the family. The extreme contrast is the 150px ghost words against 13-15px text."
+        },
+        {
+          "claim": "5. Colours, text and backgrounds mix so the text is hard to read",
+          "verdict": "confirmed",
+          "evidence": "The digest measures 32 desktop and 26 mobile elements below WCAG AA. White on #8fc156 comes to 2.11:1 (my calculation gives 2.12:1), and #8fc156 text on white falls as low as 1.46-1.59:1. On screen: white Din-Light body text on lime and the white Apply-button label (desktop-page-06); light-green criteria intro on white (desktop-page-07, mobile-page-08); light-green nav labels on lime (desktop-fold). Ghost words behind headings add clutter on top of this (desktop-page-06 'PERFORMANCE')."
+        }
+      ],
+      "problems": [
+        "Contrast around 2.1:1 on the content that converts: white Light body text and the white 'APPLY FOR YOUR SPOT' label on #8fc156, plus light-green text on white (digest 32/26 AA failures; desktop-page-06, -07). This is below even the 3:1 large-text minimum.",
+        "The pinned header stack (club nav, charcoal bar, overhanging badge) takes about 27% of desktop and about 21% of mobile height and covers body text while scrolling. Its first-position nav belongs to the parent club, has 14px-tall tap targets (21 under 24px) and leads away from the academy.",
+        "No type system: 16 sizes, no h1, ALL-CAPS paragraphs at 101-106 characters per line, and ghost display words colliding with headings. The decisive eligibility content is the hardest part of the page to read."
+      ],
+      "keep": [
+        "Concrete scarcity with a breakdown ('8 spots available: 6 for 14-18 split 2 ITF girls / 4 ITF boys, 2 for 18+ ATP'). Function: lets the right applicants qualify themselves, and makes the scarcity believable because the numbers are specific.",
+        "A CTA block placed right after the qualification content ('This is what it takes to earn your spot here. Think you're up for it?' followed by Apply). Function: asks for the action at the moment the reader has just checked whether they qualify. Copy the placement, not the colour.",
+        "Hero loop of the academy's own players training on its own courts (motion-sheet 00-04, no text in motion). Function: proof that the facility and coaching are real, carried by motion. The library version should add a pause control and a still frame under reduced motion.",
+        "In-page section nav for a very long page ('about us / high level coaching / what is needed / lifestyle / ... / sign up', motion-sheet 05). Function: lets readers jump to the part they need on a page about 15000px tall."
+      ],
+      "veto": "Accessibility veto: contrast that blocks low-vision readers on the content needed to convert. The eligibility section and the Apply button label use white text (Din-Light for the copy) on #8fc156 at about 2.1:1, and the criteria intro is #8fc156 on white at 1.46-1.59:1 in its worst tenth. Both are below the 3:1 floor even for large text, measured on screen pixels across 32 desktop and 26 mobile elements (digest Inspector findings; desktop-page-06, -07; mobile-page-07, -08). A low-vision visitor, or anyone on a phone in daylight, cannot reliably read the spot breakdown, the acceptance criteria or the CTA label. This blocks reading the content needed to decide, not the completion of the action itself: the button shape is still visible. Not verified: focus visibility and whether the form itself is accessible."
+    }
+  }
+}
