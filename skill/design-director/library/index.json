@@ -1,7 +1,7 @@
 {
-  "builtAt": "2026-11-02T03:15:26.214Z",
+  "builtAt": "2026-11-02T04:08:05.928Z",
   "source": "data/references (batch-*.json, captures/*/style.json)",
-  "count": 8,
+  "count": 9,
   "sectors": {
     "commerce": [
       "ref-0001"
@@ -16,6 +16,9 @@
       "ref-0006",
       "ref-0007",
       "ref-0008"
+    ],
+    "finance": [
+      "ref-0009"
     ]
   },
   "groups": [
@@ -106,6 +109,21 @@
       ],
       "members": [
         "ref-0008"
+      ]
+    },
+    {
+      "id": "style-7",
+      "name": "surface:gradient-shadow · colour:calm · type:firm · imagery:photo · motion:story",
+      "shared": [
+        "surface:gradient-shadow",
+        "colour:calm",
+        "type:firm",
+        "imagery:photo",
+        "motion:story",
+        "shape:soft"
+      ],
+      "members": [
+        "ref-0009"
       ]
     }
   ],
@@ -1024,6 +1042,124 @@
         ]
       },
       "styleGroup": "style-6"
+    },
+    {
+      "id": "ref-0009",
+      "site": "summersmash",
+      "url": "https://summersmashtennis.ca/",
+      "batch": "batch-004",
+      "review": "data/references/batch-004-review.md",
+      "business": "Group tennis classes for kids (from age 2-3) and adults plus private lessons, at City of Vancouver community centres and Park Board courts; registration and payment hand off to the city's ActiveNet system (inference).",
+      "actionThatPays": "REGISTER per class on /classes; 'Buy on ActiveNet' for private lessons ($28.50-$100 per person per lesson)",
+      "scores": {
+        "ai": 6.8,
+        "ownerOverall": null,
+        "ownerVisual": null,
+        "ownerShip": null,
+        "final": null
+      },
+      "veto": null,
+      "patternOnly": false,
+      "patterns": [
+        "Palette from the sport: optic yellow, court green, cream",
+        "Frame-breaking drawn objects over real photos: brand voice without a new shoot",
+        "Pill buttons with a hard offset shadow that 'press' on hover, site-wide",
+        "Text-on-path ribbon that carries the method's slogan as a divider",
+        "Themed map markers (tennis balls) beside a list of locations",
+        "Sticker-style illustrations (megaphone, peace hand, badge) as pauses between sections",
+        "Class cards with level, venue, day/time, sessions, 'N spots left', REGISTER with an external-link icon, plus filters",
+        "Waitlist form ('notify me when registration opens') when a class is full",
+        "Price grid by group size x number of lessons with a 'best value' column",
+        "Level ladders with entry criteria so people place themselves"
+      ],
+      "avoid": [
+        "Motion that ignores reduced motion and 58 endless loops with no pause",
+        "White text on #00ce7d level tags (2.07:1) and orange scarcity text (3.42:1)",
+        "No price for group classes anywhere; payment split across two systems",
+        "Hero trust built on 'Vancouver's best' and an unsourced '10,000 students' while checkable proof sits on About",
+        "Testimonials hidden in a slider"
+      ],
+      "sector": "finance",
+      "style": {
+        "features": [
+          "surface:gradient-shadow",
+          "colour:calm",
+          "type:firm",
+          "imagery:photo",
+          "motion:story",
+          "shape:soft"
+        ],
+        "tags": [
+          "shadowed",
+          "many-colours",
+          "expressive-type",
+          "scroll-choreography",
+          "endless-motion",
+          "photography",
+          "ignores-reduced-motion"
+        ],
+        "type": {
+          "families": [
+            "founders-grotesk",
+            "obviously-narrow"
+          ],
+          "display": 90,
+          "body": 16,
+          "ratio": 5.6,
+          "sizes": 7
+        },
+        "palette": {
+          "chromatic": 6,
+          "gradients": 1,
+          "shadows": 18,
+          "backgrounds": [
+            "#0c5235",
+            "#e5fc09",
+            "#fff6e7",
+            "#00ce7d",
+            "#ffdb21"
+          ]
+        },
+        "radii": [
+          "100%",
+          "200px",
+          "20px"
+        ],
+        "motion": {
+          "libraries": [
+            "gsap",
+            "scrollTrigger",
+            "swiper",
+            "lottie"
+          ],
+          "stickyPanels": 0,
+          "durationsMs": {
+            "min": 250,
+            "max": 128000
+          },
+          "easings": [
+            "linear",
+            "ease-out"
+          ],
+          "reducedMotionRespected": false,
+          "smoothness": {
+            "fps": 48.1,
+            "longFrames": 2,
+            "baselineLongFrames": 0,
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+          }
+        },
+        "doNotCopy": [
+          "contrast: 3 text elements below WCAG AA (measured on screen pixels)",
+          "hidden-content: 12 text elements were never visible during a full scroll (a reveal that never fires?)",
+          "contrast: 4 text elements below WCAG AA (measured on screen pixels)",
+          "tap-target: 3 controls smaller than 24x24px on a phone",
+          "contrast: 2 text elements below WCAG AA (measured on screen pixels)",
+          "reduced-motion: 12 text elements stay hidden when the visitor asks for reduced motion",
+          "motion without a reduced-motion path"
+        ]
+      },
+      "styleGroup": "style-7"
     }
   ]
 }

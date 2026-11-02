@@ -1,0 +1,99 @@
+{
+ "batch": "batch-004",
+ "received": "2026-11-02",
+ "from": "owner (chat, with 5 screenshots)",
+ "status": "captured (home + 5 subpages), judged by 2 combined AI jurors from evidence packs; owner scores pending",
+ "jury": {
+  "folder": "data/references/jury/batch-004",
+  "jurors": [
+   "visual-motion",
+   "business-customer-story"
+  ],
+  "human_votes": 0,
+  "brief": "data/references/jury/batch-004/_brief.md",
+  "note": "two combined jurors instead of five (cost test): 87k + 94k tokens"
+ },
+ "entries": [
+  {
+   "id": "ref-0009",
+   "url": "https://summersmashtennis.ca/",
+   "site": "summersmash",
+   "sector": "health",
+   "subpages": [
+    "classes",
+    "method",
+    "coaches",
+    "private-lessons",
+    "about"
+   ],
+   "business": {
+    "what": "Group tennis classes for kids (from age 2-3) and adults plus private lessons, at City of Vancouver community centres and Park Board courts; registration and payment hand off to the city's ActiveNet system (inference).",
+    "action_that_pays": "REGISTER per class on /classes; 'Buy on ActiveNet' for private lessons ($28.50-$100 per person per lesson)",
+    "source": "captured pages",
+    "confidence": "high; payment flow partly inferred"
+   },
+   "owner": {
+    "visual": null,
+    "ship": null,
+    "note": "scores pending"
+   },
+   "jury_scores": {
+    "business": 6,
+    "customer": 6,
+    "story": 6,
+    "clarity": 8,
+    "distinctiveness": 8,
+    "craft": 7,
+    "weighted": 6.8
+   },
+   "veto": null,
+   "claims": [
+    {
+     "claim": "Tennis balls that wobble; pictures cut the frame and come out of it",
+     "verdict": "confirmed with correction",
+     "evidence": "Frame-break: drawn racquets and balls overlap the photo frames; the photos themselves stay inside. Measured live: the hero ball bounces (translateY about -21 to -27px) and three round icons spin continuously."
+    },
+    {
+     "claim": "Icons a little classic but comfortable to read",
+     "verdict": "confirmed with correction",
+     "evidence": "Functional icons are simple consistent glyphs (plus in a yellow circle, pin, external-link arrow, numbered discs); the 'classic' feel belongs to the sticker-style illustrations (megaphone ATTENTION, peace hand, badge)."
+    },
+    {
+     "claim": "Animated text on a circular / wavy shape is unique",
+     "verdict": "device confirmed; 'unique' contested",
+     "evidence": "Text-on-path ribbon with the method slogan ('The pathway is the progression...') and a round EST 2012 badge. A common pattern; its value is that it repeats the message."
+    },
+    {
+     "claim": "Map with custom objects is fun",
+     "verdict": "confirmed with correction",
+     "evidence": "Custom map markers (smiling tennis balls) on a stylised, likely static map next to a list of 8 centres; pins are unlabelled and not shown to be interactive."
+    },
+    {
+     "claim": "The circular parts give micro-animation",
+     "verdict": "confirmed with correction (term)",
+     "evidence": "The spinning circles are decorative loops, not micro-interactions. The real micro-interaction, measured: buttons lose their offset shadow on hover, a 'press' effect."
+    }
+   ],
+   "library_candidates": [
+    "Palette from the sport: optic yellow, court green, cream",
+    "Frame-breaking drawn objects over real photos: brand voice without a new shoot",
+    "Pill buttons with a hard offset shadow that 'press' on hover, site-wide",
+    "Text-on-path ribbon that carries the method's slogan as a divider",
+    "Themed map markers (tennis balls) beside a list of locations",
+    "Sticker-style illustrations (megaphone, peace hand, badge) as pauses between sections",
+    "Class cards with level, venue, day/time, sessions, 'N spots left', REGISTER with an external-link icon, plus filters",
+    "Waitlist form ('notify me when registration opens') when a class is full",
+    "Price grid by group size x number of lessons with a 'best value' column",
+    "Level ladders with entry criteria so people place themselves"
+   ],
+   "avoid": [
+    "Motion that ignores reduced motion and 58 endless loops with no pause",
+    "White text on #00ce7d level tags (2.07:1) and orange scarcity text (3.42:1)",
+    "No price for group classes anywhere; payment split across two systems",
+    "Hero trust built on 'Vancouver's best' and an unsourced '10,000 students' while checkable proof sits on About",
+    "Testimonials hidden in a slider"
+   ]
+  }
+ ],
+ "owner_taste_signal": "Fifth batch: the owner again likes expressive, playful, subject-made visuals (balls, stickers, wavy text) and motion; again the strongest site for craft is weaker on business (no group price). The owner proposed five standards; evaluated in the review."
+}

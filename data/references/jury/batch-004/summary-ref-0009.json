@@ -1,0 +1,68 @@
+{
+  "cmd": "score",
+  "jurors": 3,
+  "ai": 2,
+  "humans": 1,
+  "humanWeight": 0.5,
+  "rows": [
+    {
+      "criterion": "business",
+      "ai": 6,
+      "human": null,
+      "final": 6,
+      "spread": 0,
+      "flag": false
+    },
+    {
+      "criterion": "customer",
+      "ai": 6,
+      "human": null,
+      "final": 6,
+      "spread": 0,
+      "flag": false
+    },
+    {
+      "criterion": "story",
+      "ai": 6,
+      "human": null,
+      "final": 6,
+      "spread": 0,
+      "flag": false
+    },
+    {
+      "criterion": "clarity",
+      "ai": 8,
+      "human": null,
+      "final": 8,
+      "spread": 0,
+      "flag": false
+    },
+    {
+      "criterion": "distinctiveness",
+      "ai": 8,
+      "human": null,
+      "final": 8,
+      "spread": 0,
+      "flag": false
+    },
+    {
+      "criterion": "craft",
+      "ai": 7,
+      "human": null,
+      "final": 7,
+      "spread": 0,
+      "flag": false
+    }
+  ],
+  "weighted": 6.8,
+  "humanOverall": null,
+  "final": 6.8,
+  "gap": null,
+  "humanVisual": null,
+  "humanShip": null,
+  "visualVsShip": null,
+  "vetoes": [
+    "business-customer-story: None. 'Vancouver's best' is puffery rather than a checkable fact, and 'over 10,000 students' is unsourced but consistent with the About page (since 2012, 2000+ students a year now; inference). Neither is a promise the business cannot keep. Flag: back the hero with the checkable facts, or drop the superlative.",
+    "visual-motion: none. The accessibility faults are real (reduced motion ignored, no pause, several sub-AA texts), but none blocks a task in the evidence. Booking, filters and REGISTER stay readable and operable, the failing tag text is duplicated elsewhere on the card, and the small mobile targets cited are exempt inline links."
+  ]
+}

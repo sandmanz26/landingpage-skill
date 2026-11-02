@@ -1,0 +1,10 @@
+{
+  "juror": "owner",
+  "kind": "human",
+  "date": "2026-11-02",
+  "refs": { "ref-0009": { "note": "No scores given yet; asked for visual and ship (1-10)." } },
+  "notes_verbatim": {
+    "summer smash tennis (ref-0009)": "ini adalah website sport, bisa masuk ke health. kemudian dari segi desain yang saya suka adalah konsep yang tidak ai slop. 1. permainan bola tenis yang bergoyang, bagaimana image di memotong frame dan terlihat keluar dari frame 2. konsep icon yang nampak sedikit classic tapi nyaman dibaca ini juga bagus 3. konsep animated text dengan circular shape ini juga unik 4. pemetaan dengan menggunakan custom object juga lucu 5. bagian circular itu juga memberikan micro animation",
+    "proposed standards": "1. konsistensi font itu juga perlu, permainan tipografi setiap website yang saya berikan biasanya memiliki pola 2. kemudian adanya micro interaction dan animation itu membuat website lebih hidup 3. kemudian adanya element yang unik, entah radius, awan, atau apapun yang cocok itu juga memberikan kesan website tidak monoton 4. kemudian memberikan element dengan human interaction ini membuat secara experience ada jeda sehingga user bisa lebih sadar akan content 5. foto jika tidak ada gunakan unsplash atau placeholder karena foto adalah key visual dalam website, layout boleh sederhana dengan good foto akan jadi lebih baik"
+  }
+}

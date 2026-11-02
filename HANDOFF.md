@@ -1,7 +1,7 @@
 # Handoff
 
 Read this first if you are a new session, a different model or a different AI tool picking up
-this project. It is kept up to date at every milestone. Last updated: **2026-11-02** (guiding the user up front; sketch choice at the direction gate).
+this project. It is kept up to date at every milestone. Last updated: **2026-11-02** (batch-004 Summer Smash Tennis judged; owner's five proposed standards evaluated).
 
 ## 1. Goal
 
@@ -218,6 +218,21 @@ which should cut process; guide the user to what they want so results scope down
   to about 130-200k (no hero jury; 2 look jurors) plus sketch building in the main session;
   not yet measured.
 - Full-page variants remain for thorough effort or on request; user chooses unless autopilot.
+
+Batch-004 (2026-11-02): Summer Smash Tennis (ref-0009, home + classes, method, coaches,
+private-lessons, about; ids ref-0009-<page>), sector health (sport). Captured with capture.mjs in
+16 minutes. Jury: first use of two combined jurors (visual-motion; business-customer-story),
+87k + 94k tokens. Scores 8/8/7/6/6/6, weighted 6.8, no veto. Owner's five notes: frame-break and
+bounce/spin confirmed with corrected terms (measured live: ball bounce, three spinning icons, buttons
+lose their offset shadow on hover = the real micro-interaction); text-on-path "unique" contested;
+map markers confirmed. Owner also proposed five standards; evaluated with library data: fonts
+(9/9 sites: one text face 80-95% + one display face) agreed and quantified; motion agreed with the
+reduced-motion condition (all three heavy-motion favourites ignore it); unique element agreed if
+drawn from the subject; "human interaction" ambiguous, asked; photos as key visual agreed with
+corrections (Unsplash never presented as the client's own, no generic stock, placeholders only in
+drafts). Four taste rules proposed in `data/references/batch-004-review.md`, pending approval.
+Photo sources from this cloud session: Unsplash images downloadable but search needs an API key,
+Openverse blocked, Wikimedia rate-limited. Owner asked whether to build a photo finder.
 
 Capture fixes from batch-003: `lib/browser.mjs` `gotoStable` retries server error pages (a 502
 "upstream request failed" had been captured as Swehl's desktop) and every failed load is reported
