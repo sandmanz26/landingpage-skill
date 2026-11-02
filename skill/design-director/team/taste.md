@@ -17,6 +17,11 @@ Format: `- <rule> — <why> (source: <project>, <date>, <who>)`
 <!-- e.g. - Centred hero with two buttons — reads as a template to our clients (source: review session, 2026-11-05, team) -->
 - Content that only appears through animation, motion without a reduced-motion path, or a page that navigates by itself — excludes people and hides the offer (source: batch-001 Replay, batch-002 Maxima, 2026-10-30, owner + jury)
 
+- A fixed or sticky logo or badge that is not a slim bar: a large logo belongs to the first screen and scrolls away — it covers content on every screen (source: batch-005 A-Rete 280x183px fixed badge; inspector `fixed-cover`; decided by Claude on the owner's delegation 2026-11-02, owner to review)
+- Display sizes without a scale: use 3-4 display steps, each with one role, the same role always the same size — sizes that jump without a pattern strain the eyes (source: batch-005 A-Rete 10 display sizes, same role at 35/50/53px; owner's note; inspector `display-sizes`; decided by Claude on the owner's delegation 2026-11-02, owner to review)
+- Long paragraphs in ALL CAPS, or running text under 16px — they are hard to read (source: batch-005 A-Rete 15px all-caps paragraphs at 100+ characters a line; decided by Claude on the owner's delegation 2026-11-02, owner to review)
+- A picture that touches a band edge while wide empty gaps stay at its sides; sections follow one spacing rhythm (full-bleed colour fields that meet on purpose are fine) (source: batch-005 A-Rete, owner's note 2; decided by Claude on the owner's delegation 2026-11-02, owner to review)
+
 ## Prefer
 <!-- e.g. - Square corners on pictures; one radius for controls -->
 - Bold flat colour with clear roles, one colour reserved for the main action (source: batch-001/002 Maxima, Scotch, Playfolly, 2026-10-30, owner)
@@ -27,6 +32,8 @@ Format: `- <rule> — <why> (source: <project>, <date>, <who>)`
 - One signature element drawn from the subject's world, used across the page (objects breaking a photo's frame, map markers, section dividers), never decoration without meaning such as random clouds — it keeps the page from feeling monotonous (source: batch-004 Tennis balls and racquets, batch-003 Swehl arches, batch-002 Maxima tilt, 2026-11-02, owner)
 - At least one element the visitor operates, built from the subject's real content: a before/after slider, a clickable map, hover to reveal, play to see detail — it makes people pause and notice the content (source: owner 2026-11-02; taste-skill study: every winning page had one)
 - Photographs as the key visual: the client's own first; otherwise licensed photographs of the subject's world (Unsplash, open collections) found with photos.mjs, credited, never presented as the client's own people, place or product; placeholders only in drafts, with a shot list (source: batch-004 Tennis real student photos, batch-002 Future, 2026-11-02, owner)
+
+- One or two corner radii used everywhere: a large one for cards and pictures (about 24-40px), a small one for controls — a soft, consistent shape reads as modern (source: batch-006 Sunny Within, owner's note; measured there at about 10 values, so the consistency is the lesson, not the copy; decided by Claude on the owner's delegation 2026-11-02, owner to review)
 
 ## Anchors
 Designs the team approved or rejected, with one line on why. Screenshots go in `team/approved/` and

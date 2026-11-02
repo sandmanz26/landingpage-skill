@@ -44,3 +44,8 @@ Kritikus juga mendapat cek craft baru: **ritme jarak antar-section yang konsiste
 | "8 spots available: 6 untuk 14–18, 2 untuk 18+ ATP" | Kelangkaan yang jujur dan spesifik |
 | Tombol daftar tepat setelah kriteria penerimaan | Ajakan di titik keputusan |
 | Video hero berisi pemain akademi sendiri | Bukti nyata, bukan foto stok |
+
+
+## Keputusan (2026-11-02)
+
+Owner mendelegasikan keputusan kepada Claude ("saya percayakan ke kamu dulu"). Semua usulan aturan di review ini **diterapkan** ke `team/taste.md`, masing-masing ditandai "decided by Claude on the owner's delegation" untuk ditinjau owner. Untuk aturan ritme jarak, foto atau blok selebar penuh yang sengaja bertemu tetap dibolehkan; aturan radius dijadikan *Prefer*, bukan *Always*.

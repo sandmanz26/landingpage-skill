@@ -1,7 +1,7 @@
 # Handoff
 
 Read this first if you are a new session, a different model or a different AI tool picking up
-this project. It is kept up to date at every milestone. Last updated: **2026-11-02** (batch-006 ERLY and Sunny Within; font cuts grouped into typefaces).
+this project. It is kept up to date at every milestone. Last updated: **2026-11-02** (pending rules decided by Claude on the owner's delegation).
 
 ## 1. Goal
 
@@ -275,8 +275,13 @@ controls, about 10 values ("large" yes, "consistent" no). Proposed (pending): Pr
 radii (large for cards and images, small for controls).
 Measurement fix: font cuts (RegolaMedium, Din-Condensed-Regular, DMSans-Light) are grouped into
 one typeface in lib/measure.mjs (`typefaces`, used by font-count) and in style.mjs (also for old
-reports); all style cards refreshed. Pending owner decisions now: the four Never rules from
-batch-005 and the radius rule from batch-006.
+reports); all style cards refreshed. The owner then delegated the pending decisions ("saya
+percayakan ke kamu dulu", 2026-11-02): Claude adopted the four batch-005 Never rules (fixed logo or
+badge that is not a bar; display sizes without a 3-4 step scale; all-caps paragraphs or text under
+16px; pictures touching a band with wide side gaps / no spacing rhythm, full-bleed fields allowed)
+and the batch-006 radius rule as Prefer (one or two radii). Each is marked in team/taste.md as
+"decided by Claude on the owner's delegation, owner to review": tell the owner at the next chance
+and revert any they reject.
 
 Capture fixes from batch-003: `lib/browser.mjs` `gotoStable` retries server error pages (a 502
 "upstream request failed" had been captured as Swehl's desktop) and every failed load is reported

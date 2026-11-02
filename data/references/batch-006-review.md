@@ -42,3 +42,8 @@ AI memberi bisnis 4, sedangkan Anda memberi layak kirim 8. Penyebabnya sebagian 
 | Sunny | Radius besar (30–55 px) pada kartu dan gambar | Kesan lembut dan modern |
 | Sunny | Harga, harga langganan dan jumlah ulasan tepat di samping tombol keranjang | Keputusan beli di satu tempat |
 | Sunny | Kutipan dokter dan uji pihak ketiga dekat penawaran | Bukti di titik keputusan |
+
+
+## Keputusan (2026-11-02)
+
+Owner mendelegasikan keputusan kepada Claude ("saya percayakan ke kamu dulu"). Semua usulan aturan di review ini **diterapkan** ke `team/taste.md`, masing-masing ditandai "decided by Claude on the owner's delegation" untuk ditinjau owner. Untuk aturan ritme jarak, foto atau blok selebar penuh yang sengaja bertemu tetap dibolehkan; aturan radius dijadikan *Prefer*, bukan *Always*.
