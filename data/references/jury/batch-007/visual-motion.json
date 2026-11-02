@@ -1,0 +1,77 @@
+{
+  "juror": "visual-motion",
+  "kind": "ai",
+  "method": "Read ref-0013/digest.md, desktop-fold.png, ref-0013-product/digest.md. sheet-desktop.png, sheet-mobile.png, motion-sheet.png and ref-0013-product/sheet-desktop.png do not exist in the packs, so I built my own contact sheets from desktop-page-02..10, mobile-page-01..12, motion-frames 00-09 and product desktop-fold + page-02..06 (scratchpad images) and read those. Not verified: hover and click states (no capture of them; I rely on the coordinator's live notes), drawer content, the timing and feel of the scroll animation (only still frames), real-GPU smoothness (fps was measured with software rendering), tablet, and the Our Science page (not read). Brief asked for under 10 tool calls; I used 12 because of the missing sheets.",
+  "refs": {
+    "ref-0013": {
+      "business": "Quite Nice, prebiotic oatmeal (resistant-starch fibre, low-FODMAP), direct to consumer via Shopify; currently running a 'Farewell Sale, 70% off everything, all sales final', so likely winding down.",
+      "scores": { "distinctiveness": 8, "craft": 7, "clarity": 6 },
+      "reasons": {
+        "distinctiveness": "Real art direction, not a template: a custom display serif (Nib Pro) with a bespoke ligature logotype, real overhead food photography in an arch-topped frame, illustrated vine/leaf/oat cut-outs breaking out of the frame, inline illustrated glyphs inside the headline sentence ('fiber-rich [oat] protein-fortified [leaf] ... gut health [flower]'), and illustrated packaging. Palette is ownable: forest green #195908, cream #fefaef, mustard #ffce70, lime #b2d99a, dark moss #2d402d. The skeleton itself is standard (centred headline, one pill CTA, image below, then alternating colour-field sections), which is why it is 8 and not 9.",
+        "craft": "Home page is disciplined: 2 typefaces, 5 chromatic colours, no shadows or gradients, CLS 0, consistent 24/32px radii and pill buttons. Deductions: 'Favorite Flavor' label at 2.40:1 contrast; 10 images without alt including all four hover bowl photos; 6 endless marquee loops with no pause control; reduced-motion ignored by 13 scroll-driven elements; 9 long frames and 49 fps under software rendering (heavier than a plain page, not proof of stutter on real hardware); mobile tap targets and text at the edge. The product page drifts to 17 font sizes and 12 colours, so the system is not held across the funnel.",
+        "clarity": "The H1 'The Easy Breakfast for Gut Health' plus the hero photo tell what it is within a second, and the dark-green sentence panel explains the product well. But the home page shows no price, no rating and no review count (digest: prices none, proof words none) even though the product page has 4.8 stars / 54 reviews and a $9 price; every CTA is a generic 'Get Started'. The sale bar is the only commercial signal on the first screen and it is a thin 12-14px strip. Mechanism and citations are behind drawers (good layering), but the visitor must click to get any evidence."
+      },
+      "claims": [
+        {
+          "claim": "The hero mixes a photo with vector brand elements, so it is not AI slop; the colour play differs from what AI generators make.",
+          "verdict": "Mostly true, one factual correction.",
+          "evidence": "The leaves and oats are raster cut-outs (leaf-1-front.png etc.), not vectors, but they are drawn brand illustration, so the point stands: photo plus illustration breaking the frame plus custom serif is not generic. The colour play is distinctive (forest green / mustard / lime, no gradients, no purple-blue). What is generic is the layout: centred headline over one pill CTA over a wide image (inspector flags the centred-hero pattern). The distinctiveness lives in art direction, not structure; the team should credit the right thing."
+        },
+        {
+          "claim": "The scroll animation gives a different, not monotonous experience.",
+          "verdict": "Partly true; varied, but not all of it is purposeful and it ignores reduced motion.",
+          "evidence": "Motion frames show distinct moves: the hero image grows from the arch frame to full-bleed while the headline fades (sticky panel), then a dark-green sentence panel, then section backgrounds shift colour (salmon to mustard), plus a claims marquee. That is real variety. But: 6 endless loops with text and no pause; 13 elements still animate with reduced motion on; 18 s durations; heavier than a plain page (49 vs 60 fps, software rendering). The hero expansion earns its place (it moves you from brand to food); the marquees repeat the same six claims three times and are decoration."
+        },
+        {
+          "claim": "It looks simple, but colour and images make the message much more alive.",
+          "verdict": "True.",
+          "evidence": "Each section is one flat colour field with one image and one short headline; the life comes from photography, illustration and the colour sequence (cream, moss, cream, mustard, cream, lime, cream, moss). Note 'simple' is achieved partly by leaving out proof and price on the home page, which costs clarity."
+        },
+        {
+          "claim": "Hover states that change colour make the site feel alive.",
+          "verdict": "Overstated; hover here is affordance, not liveliness, and it does not exist on touch.",
+          "evidence": "Coordinator: 'We're Picky' items change background on hover and open on click; 'Quite Nice can' rows go italic and the arrow pill fills. These are good because they signal 'this opens' before the click, i.e. they have a function. Colour change for its own sake would not pass the team's own rule. On phones (likely most DTC traffic) none of this is seen, so the plus icons and arrow pills must carry the affordance alone, which they do."
+        },
+        {
+          "claim": "Flipping cards are common, but here the interaction has a purpose: the visitor sees its meaning.",
+          "verdict": "Correct about purpose, wrong about the mechanism, and it fails on touch.",
+          "evidence": "The cards do not flip; on hover the packet image is replaced by a photo of the cooked bowl of that flavour. That has a real purpose: it answers 'what will this actually look like when I eat it?' and connects packaging to food. But it is hover-only, so phone visitors never see it (the mobile capture shows a mix of packet and bowl images; I could not verify which state touch users get), the hover photos have no alt text, and the cards carry no flavour description or price, so the reveal informs appetite but not choice."
+        },
+        {
+          "claim": "Overall: neutral colour, minimalist, modern, friendly.",
+          "verdict": "Friendly and modern: yes. Neutral colour: no. Minimalist: only in layout.",
+          "evidence": "Only the cream base is neutral; the brand runs on saturated forest green, mustard, lime and salmon, and the illustration is ornamental (vines, flowers, oats, curved badge text). It is restrained in layout and type, rich in decoration. Calling it 'neutral minimalist' would teach the wrong lesson to anyone copying it."
+        },
+        {
+          "claim": "Score 9 visual, 9 ship.",
+          "verdict": "Visual 9 is about one point high; ship 9 is too high.",
+          "evidence": "Visual is genuinely good (8 distinctiveness), but craft has accessibility gaps and system drift on the product page. As a selling page the home lacks price, ratings and a specific CTA, and the motion fails reduced-motion; I would put it at 7."
+        }
+      ],
+      "interactions": [
+        { "what": "Hero image grows from arch frame to full-bleed on scroll while the headline fades (sticky panel)", "purpose": "Moves the eye from brand promise to the food; makes the photo the subject", "verdict": "earns its place" },
+        { "what": "Illustrated leaves and oats around the hero, moving with scroll", "purpose": "Brand world / ingredient cue (oats, plant-based)", "verdict": "decoration, but on-brand and cheap; acceptable" },
+        { "what": "Endless claims marquee (Low-FODMAP, Gluten-Free, Glyphosate-Free...) repeated three times, no pause", "purpose": "none beyond restating claims a static row would show better", "verdict": "decoration" },
+        { "what": "'Quite Nice can' rows: hover italic + filled arrow pill, click opens side drawer with mechanism and journal citations", "purpose": "Lets the sceptic get evidence (resistant starch, named bacteria, citations) without cluttering the page", "verdict": "earns its place" },
+        { "what": "Section background colour change on scroll (e.g. salmon to mustard)", "purpose": "Marks chapter changes; weak functional value", "verdict": "decoration, mild" },
+        { "what": "Flavour cards: packet image replaced by cooked-bowl photo on hover", "purpose": "Shows the finished meal for each flavour (what you will actually eat)", "verdict": "earns its place on desktop; absent on touch" },
+        { "what": "'We're Picky' list: colour change on hover, opens on click", "purpose": "Expands each dietary claim with detail; hover signals it opens", "verdict": "earns its place" },
+        { "what": "Testimonial carousel with arrow buttons (16 slides off-screen)", "purpose": "Social proof by real-looking customers with favourite flavour", "verdict": "earns its place; the off-screen slides are normal carousel behaviour, but there are no stars or counts and reduced-motion leaves them hidden" }
+      ],
+      "problems": [
+        "The home page does not sell: no price, no rating or review count, no flavour descriptions, and every button says 'Get Started'. The 4.8 stars / 54 reviews and $9 (70% off) exist only on the product page. The farewell bar is the only commercial signal on the first screen and it is a thin strip that reads as fine print; it also tells visitors the brand is closing without saying why or what that means for them.",
+        "Motion does not respect the visitor: 6 endless marquees with no pause, 13 elements still animate under reduced motion, and the most meaningful interactions (flavour bowl reveal, hover affordances) are hover-only and invisible on phones.",
+        "Craft gaps under the polish: 'Favorite Flavor' at 2.40:1 contrast, 10 images without alt (all hover bowls), small tap targets on mobile, and the product page loses the system (17 font sizes, 12 colours, 6 display sizes with no clear scale)."
+      ],
+      "keep": [
+        "Food photo in an arch frame with illustrated ingredients breaking out of it: puts both the product result and the brand world in the first screen.",
+        "Inline illustrated glyphs inside the headline sentence: makes the product description memorable and scannable without a separate icon row.",
+        "Benefit rows that open a drawer with mechanism and citations: progressive disclosure of evidence for a health claim.",
+        "Packet-to-bowl swap on flavour cards: connects packaging to the eating experience (add a tap/visible alternative for touch).",
+        "One flat colour field per section from a 5-colour palette: rhythm and chapter marking without gradients or shadows.",
+        "Product page reassurance list beside checkout ('One-time purchase, nothing recurring', 'All sales final'): removes subscription anxiety at the decision point."
+      ],
+      "veto": null
+    }
+  }
+}

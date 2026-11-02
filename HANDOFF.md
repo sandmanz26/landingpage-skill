@@ -1,7 +1,7 @@
 # Handoff
 
 Read this first if you are a new session, a different model or a different AI tool picking up
-this project. It is kept up to date at every milestone. Last updated: **2026-11-02** (pending rules decided by Claude on the owner's delegation).
+this project. It is kept up to date at every milestone. Last updated: **2026-11-02** (batch-007 Quite Nice; purposeful-interaction rule).
 
 ## 1. Goal
 
@@ -282,6 +282,28 @@ badge that is not a bar; display sizes without a 3-4 step scale; all-caps paragr
 and the batch-006 radius rule as Prefer (one or two radii). Each is marked in team/taste.md as
 "decided by Claude on the owner's delegation, owner to review": tell the owner at the next chance
 and revert any they reject.
+
+Batch-007 (2026-11-02): Quite Nice (ref-0013, prebiotic oatmeal, sector food), home + product
+(ref-0013-product) + science (ref-0013-science) pages captured; owner visual 9 / ship 9. Two
+combined jurors (84.8k + 78.4k tokens): AI 6.6 (distinctiveness 8, craft 7, clarity 6, business 5,
+customer 6, story 7), blended 7.8, gap 2.4, almost all business (home has no price, rating or
+fibre/protein facts; a "Farewell Sale 70% off" in a 36px bar; site likely winding down). Measured
+live: flavour cards swap the packet for a finished-bowl photo on hover (not a flip; hover-only, so
+no phone path), benefit rows open a drawer with mechanism + journal citations, "We're Picky" rows
+change colour and open on click; hero leaves are raster cut-outs (inspector counts them as photos:
+a known gap). Owner's "neutral colour" corrected: 2 colour families but saturated full-bleed
+fields; second owner-9 with a calm hue count, so the colour default "bold" is one path, not the
+only one (default unchanged; watch it). On the owner's explicit request the skill now records that
+every interaction needs a meaning and a purpose: team/taste.md Always rule (also works by tap and
+keyboard, as both jurors added); modes/create.md spec template has "## Interactions" (element,
+visitor does, they get, customer question, phone/keyboard) and progress.mjs refuses `done spec`
+without it (selftest); motion/functions.md "Interactions: meaning before movement"; critic pass 14
+and a Craft cap of 6 for interactions that reveal nothing or hover-only decision content.
+Inspector fix: `fixed-cover` skips full-screen fixed wrappers with pointer-events none that paint
+nothing (closed drawers) and counts only the on-screen area (fixture in clean.html, selftest fails
+without the fix). Process lesson: inspect.mjs deletes every PNG in its folder, including evidence
+sheets; after re-running inspect, re-run evidence.mjs too (or capture.mjs). capture.mjs resolves
+`--out` against the working directory: run it from the repo root.
 
 Capture fixes from batch-003: `lib/browser.mjs` `gotoStable` retries server error pages (a 502
 "upstream request failed" had been captured as Swehl's desktop) and every failed load is reported

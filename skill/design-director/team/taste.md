@@ -12,6 +12,7 @@ Format: `- <rule> — <why> (source: <project>, <date>, <who>)`
 
 - Two type families: one text face carrying 80-95% of the text, one display face used sparingly, one size scale — every reference so far follows it (source: 9 of 9 library sites incl. batch-004 Summer Smash Tennis, 2026-11-02, owner + data)
 - Every control gives feedback on hover, press and focus — micro-interaction is what makes a page feel alive (source: batch-004 Summer Smash Tennis buttons that press down, 2026-11-02, owner)
+- Every interaction has a meaning and a purpose, written in the spec before it is built: it shows the visitor something they need (what the product becomes, the evidence behind a claim, the place on a map), helps them decide, or answers their action; an interaction that only moves is decoration and is cut. It works on a phone and a keyboard too (tap or focus does what hover does) — a common pattern earns its place through what it reveals, not through novelty (source: batch-007 Quite Nice: a flavour card turns from the packet into the finished bowl, a benefit opens the mechanism with journal citations; owner asked for this rule explicitly, 2026-11-02)
 
 ## Never
 <!-- e.g. - Centred hero with two buttons — reads as a template to our clients (source: review session, 2026-11-05, team) -->
@@ -30,7 +31,7 @@ Format: `- <rule> — <why> (source: <project>, <date>, <who>)`
 - Smooth, choreographed scroll storytelling with objects from the subject's world (old way vs new, cards that turn, letters that drop in), always with a static reduced-motion version (source: batch-001 Scotch, batch-002 Maxima, 2026-10-30, owner)
 
 - One signature element drawn from the subject's world, used across the page (objects breaking a photo's frame, map markers, section dividers), never decoration without meaning such as random clouds — it keeps the page from feeling monotonous (source: batch-004 Tennis balls and racquets, batch-003 Swehl arches, batch-002 Maxima tilt, 2026-11-02, owner)
-- At least one element the visitor operates, built from the subject's real content: a before/after slider, a clickable map, hover to reveal, play to see detail — it makes people pause and notice the content (source: owner 2026-11-02; taste-skill study: every winning page had one)
+- At least one element the visitor operates, built from the subject's real content: a before/after slider, a clickable map, hover to reveal, play to see detail — it makes people pause and notice the content; its purpose follows the Always rule above (source: owner 2026-11-02; taste-skill study: every winning page had one)
 - Photographs as the key visual: the client's own first; otherwise licensed photographs of the subject's world (Unsplash, open collections) found with photos.mjs, credited, never presented as the client's own people, place or product; placeholders only in drafts, with a shot list (source: batch-004 Tennis real student photos, batch-002 Future, 2026-11-02, owner)
 
 - One or two corner radii used everywhere: a large one for cards and pictures (about 24-40px), a small one for controls — a soft, consistent shape reads as modern (source: batch-006 Sunny Within, owner's note; measured there at about 10 values, so the consistency is the lesson, not the copy; decided by Claude on the owner's delegation 2026-11-02, owner to review)

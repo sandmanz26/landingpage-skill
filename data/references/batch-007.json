@@ -1,0 +1,131 @@
+{
+ "batch": "batch-007",
+ "received": "2026-11-02",
+ "from": "owner (chat, 6 notes)",
+ "status": "captured (home, product, science pages), judged by 2 combined AI jurors and the owner; interactions measured live",
+ "jury": {
+  "folder": "data/references/jury/batch-007",
+  "jurors": [
+   "visual-motion",
+   "business-customer-story"
+  ],
+  "human_votes": 1,
+  "note": "84.8k + 78.4k tokens for one site with three pages. The jurors read self-made contact sheets: the coordinator's inspector re-run had deleted the evidence sheets (rebuilt afterwards)."
+ },
+ "entries": [
+  {
+   "id": "ref-0013",
+   "url": "https://quitenice.com/",
+   "site": "quite nice",
+   "sector": "food",
+   "pages": {
+    "product": "ref-0013-product (https://quitenice.com/products/prebiotic-oatmeal-2-plan)",
+    "science": "ref-0013-science (https://quitenice.com/pages/our-science)"
+   },
+   "business": {
+    "what": "Prebiotic oatmeal (resistant starch, low-FODMAP, 8g fibre, 10g protein, 4 flavours), direct to consumer on Shopify, boxes of 6.",
+    "action_that_pays": "Get Started → product page box builder. Captured during a 'Farewell Sale, 70% off everything': $9 a box instead of $30, minimum 4 boxes, all sales final.",
+    "source": "captured home, product and science pages",
+    "confidence": "high"
+   },
+   "owner": {
+    "visual": 9,
+    "ship": 9
+   },
+   "jury_scores": {
+    "business": 5,
+    "customer": 6,
+    "story": 7,
+    "distinctiveness": 8,
+    "craft": 7,
+    "clarity": 6,
+    "weighted": 6.6
+   },
+   "combined": {
+    "final": 7.8,
+    "gap": 2.4,
+    "visualVsShip": 0
+   },
+   "veto": null,
+   "claims": [
+    {
+     "claim": "The hero mixes a photo with vector brand elements, so it is not AI slop; the colour play differs from AI generators",
+     "verdict": "confirmed, one correction",
+     "evidence": "Food photograph in an arch frame with drawn leaves and oats breaking out of it (measured: leaf-1-front.png, leaf-1-back.png, leaf-2.png). They are raster cut-outs, not vectors, and the inspector counts them as photos (illustrations: 0), a measurement gap. Both jurors agree the hero is distinctive."
+    },
+    {
+     "claim": "Scroll animation gives a different, not monotonous experience",
+     "verdict": "confirmed for variety, with two costs",
+     "evidence": "2 full-screen sticky panels (hero photo grows to full width), section colours change, illustrations move. Costs: 6 endless marquees with no pause; 11-13 elements still move with reduced motion; 49 fps with 9-11 long frames under software rendering (relative only)."
+    },
+    {
+     "claim": "Looks simple, but colour and images make the message alive",
+     "verdict": "confirmed for mood, weaker for the message",
+     "evidence": "One flat colour field per section, 2 typefaces (Nib Pro 58% + Basis Grotesque 42%), 0 gradients, 0 shadows, CLS 0. The home page leaves out the facts that sell: no price, rating or fibre/protein numbers (all on the product page)."
+    },
+    {
+     "claim": "Hover states that change colour make the site feel alive",
+     "verdict": "partly: the useful ones signal that something opens",
+     "evidence": "Measured: 'Quite Nice can' rows turn italic and fill the arrow pill, then open a drawer; 'We're Picky' rows change background (lime/white) and open on click. The colour change is feedback; the meaning is in what opens. None of it exists on touch."
+    },
+    {
+     "claim": "Flipping cards are common, but the interaction has a purpose the visitor sees",
+     "verdict": "purpose confirmed; mechanism corrected; fails on phones",
+     "evidence": "The cards do not flip: on hover the packet image is replaced by a photo of the finished bowl of that flavour (quitenice-cinnamon-hover.jpg). That answers 'what will I actually eat?'. Hover-only, so phone visitors never see the bowls; the 10 images without alt include these."
+    },
+    {
+     "claim": "Overall neutral colour, minimalist, modern, friendly",
+     "verdict": "modern and friendly confirmed; 'neutral' corrected",
+     "evidence": "Few hues: 2 colour families (green, yellow) on cream, 5 values. But they are saturated full-bleed fields (forest green, mustard, lime), not neutral. Calm by hue count, bold by saturation."
+    }
+   ],
+   "interactions": [
+    {
+     "what": "Flavour card: packet → finished-bowl photo on hover",
+     "purpose": "what will I eat?",
+     "verdict": "earns its place; needs a tap path"
+    },
+    {
+     "what": "Benefit row → drawer with mechanism and journal citations",
+     "purpose": "is this claim real?",
+     "verdict": "earns its place"
+    },
+    {
+     "what": "'We're Picky' row opens on click (colour change on hover)",
+     "purpose": "what exactly is it free from?",
+     "verdict": "click earns it; colour swap is feedback only"
+    },
+    {
+     "what": "Hero photo grows from arch frame to full width on scroll",
+     "purpose": "moves the eye from promise to food",
+     "verdict": "earns its place (both jurors split: pacing vs mood)"
+    },
+    {
+     "what": "Free-from marquee, endless, no pause",
+     "purpose": "none beyond repeating the 'We're Picky' list",
+     "verdict": "decoration"
+    },
+    {
+     "what": "Section background colour changes on scroll",
+     "purpose": "marks chapters, weakly",
+     "verdict": "decoration, mild"
+    }
+   ],
+   "library_candidates": [
+    "Food photograph in an arch frame with drawn ingredients breaking out of it: product result and brand world in one first screen",
+    "Small drawn glyphs inside the headline sentence (oat, leaf, flower): memorable without an icon row",
+    "Benefit rows that open a drawer with the mechanism and citations: promise first, evidence on demand for a health claim",
+    "Packet-to-result swap on product cards: shows what the customer gets, not the package (with a tap path)",
+    "One flat colour field per story chapter from a small palette",
+    "Reassurance beside checkout: 'One-time purchase, nothing recurring', 'All sales final'"
+   ],
+   "avoid": [
+    "A home page with no price, rating or decision facts while the product page has them (4.85 from 54 reviews, $9)",
+    "Content that helps decide shown only on hover",
+    "Endless marquees with no pause; motion that ignores reduced motion",
+    "The product page loses the system: 17 font sizes, 12 colours, 6 display sizes with no scale, 32 small tap targets"
+   ]
+  }
+ ],
+ "owner_taste_signal": "Visual 9 and ship 9: the owner values art direction (photo plus drawn brand elements, a custom serif, colour fields) and interactions that reveal meaning. The AI agrees on visual (distinctiveness 8, craft 7) and scores selling lower (business 5: no price or proof on the home page, a closing-down sale in a thin bar). The 2.4 gap is mostly business, not visual. Second 9 with a calm hue count (2 families), next to bold Maxima: the colour dial default 'bold' is one path, not the only one."
+}

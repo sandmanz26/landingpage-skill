@@ -1,0 +1,592 @@
+{
+  "url": "https://quitenice.com/products/prebiotic-oatmeal-2-plan",
+  "time": "2026-11-02T16:10:01.327Z",
+  "sheets": {
+    "desktop": "data/references/captures/ref-0013-product/sheet-desktop.png",
+    "mobile": "data/references/captures/ref-0013-product/sheet-mobile.png",
+    "motion": "data/references/captures/ref-0013-product/motion-sheet.png"
+  },
+  "load": {
+    "status": 200,
+    "retries": 0,
+    "failed": false
+  },
+  "overlaysDismissed": [],
+  "outline": {
+    "title": "Prebiotic Oatmeal",
+    "description": "A delicious daily fiber routine for gut health, crafted from real plant-based ingredients. Easy to make at home or on the go as either overnight oats or hot oatmeal.",
+    "headings": [
+      "H1 2% Prebiotic Oatmeal",
+      "H2 17% Pure quality, no compromises",
+      "H2 22% The real food routine to support gut health",
+      "H2 28% Gut Feelings",
+      "H3 33% Vic V.",
+      "H3 33% Jess H",
+      "H3 33% Ashney V",
+      "H3 33% Priyanka S",
+      "H3 33% Max B",
+      "H3 33% Shelbi J.",
+      "H3 33% Jess H",
+      "H3 33% Ashney V",
+      "H3 33% Priyanka S",
+      "H3 33% Max B",
+      "H3 33% Shelbi J.",
+      "H3 33% Vic V.",
+      "H2 36% Powered by resistant starch",
+      "H2 42% Four bold, delicious flavors",
+      "H2 49% Ingredients Overview",
+      "H3 53% Organic Rolled Oats",
+      "H3 53% Organic Hemp Protein",
+      "H3 53% Organic Cinnamon",
+      "H3 60% Nancee Jaffe, RDN",
+      "H2 64% We're Picky",
+      "H2 74% Customer Reviews"
+    ],
+    "actions": [
+      {
+        "label": "Farewell Sale – 70% Off Everything",
+        "count": 1,
+        "firstAt": 0,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Try Now",
+        "count": 1,
+        "firstAt": 0,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Our Science",
+        "count": 1,
+        "firstAt": 0,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Account",
+        "count": 1,
+        "firstAt": 0,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Cart (0)",
+        "count": 1,
+        "firstAt": 0,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Ingredients & Nutrition Facts",
+        "count": 1,
+        "firstAt": 5,
+        "firstScreen": true,
+        "sticky": false
+      },
+      {
+        "label": "−",
+        "count": 5,
+        "firstAt": 7,
+        "firstScreen": true,
+        "sticky": false
+      },
+      {
+        "label": "+",
+        "count": 5,
+        "firstAt": 7,
+        "firstScreen": true,
+        "sticky": false
+      },
+      {
+        "label": "Checkout Checkout",
+        "count": 1,
+        "firstAt": 12,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Get Started Get Started",
+        "count": 2,
+        "firstAt": 51,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Low-FODMAP",
+        "count": 1,
+        "firstAt": 67,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Gluten-Free",
+        "count": 1,
+        "firstAt": 68,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Nut-Free",
+        "count": 1,
+        "firstAt": 68,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "No Fake or Alternative Sweeteners",
+        "count": 1,
+        "firstAt": 69,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Glyphosate-Free Oats",
+        "count": 1,
+        "firstAt": 70,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "WRITE A REVIEW",
+        "count": 1,
+        "firstAt": 73,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "SEE MORE REVIEWS",
+        "count": 1,
+        "firstAt": 89,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Enter",
+        "count": 1,
+        "firstAt": 96,
+        "firstScreen": false,
+        "sticky": false
+      }
+    ],
+    "prices": [
+      "$9",
+      "$30",
+      "$0",
+      "$21"
+    ],
+    "proofMentions": {
+      "review": 15,
+      "rating": 1,
+      "stars": 5
+    },
+    "logoImages": 0,
+    "forms": 1,
+    "imagery": {
+      "photos": 36,
+      "illustrations": 0,
+      "videos": 1
+    },
+    "pageHeight": 10636
+  },
+  "motion": {
+    "libraries": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "splitText": false,
+      "lenis": false,
+      "locomotive": false,
+      "swiper": true,
+      "lottie": false,
+      "framerMotion": false,
+      "viewTransitions": false
+    },
+    "stickyPanels": [
+      {
+        "tag": "div",
+        "edge": "top",
+        "zIndex": "auto"
+      }
+    ],
+    "maxRunning": 5,
+    "durationsMs": {
+      "min": 300,
+      "max": 18000
+    },
+    "easings": [
+      "linear",
+      "ease-out",
+      "cubic-bezier(0.55, 0.055, 0.675, 0.19)"
+    ],
+    "properties": [
+      "transform",
+      "opacity"
+    ],
+    "movingWithoutInput": 0,
+    "movingWithoutInputFurtherDown": [
+      {
+        "y": 900,
+        "moving": 1
+      },
+      {
+        "y": 1800,
+        "moving": 1
+      },
+      {
+        "y": 2700,
+        "moving": 4
+      }
+    ],
+    "scriptDrivenOnScroll": 5,
+    "infiniteLoops": 10,
+    "infiniteLoopsWithText": 10,
+    "pauseControl": false,
+    "steps": [
+      {
+        "y": 450,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.marquee",
+            "hasText": true,
+            "duration": 18000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 900,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": 1,
+        "sample": [
+          {
+            "target": "div.marquee",
+            "hasText": true,
+            "duration": 18000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1350,
+        "running": 1,
+        "scriptDriven": 1,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.marquee",
+            "hasText": true,
+            "duration": 18000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1800,
+        "running": 1,
+        "scriptDriven": 1,
+        "idleMoving": 1,
+        "sample": [
+          {
+            "target": "div.marquee",
+            "hasText": true,
+            "duration": 18000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 2250,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.marquee",
+            "hasText": true,
+            "duration": 18000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 2700,
+        "running": 5,
+        "scriptDriven": 4,
+        "idleMoving": 4,
+        "sample": [
+          {
+            "target": "div.image",
+            "hasText": true,
+            "duration": 600,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.image",
+            "hasText": true,
+            "duration": 600,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.image",
+            "hasText": true,
+            "duration": 600,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.image",
+            "hasText": true,
+            "duration": 600,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.marquee",
+            "hasText": true,
+            "duration": 18000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 3150,
+        "running": 2,
+        "scriptDriven": 1,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "video.w-full",
+            "hasText": true,
+            "duration": 600,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.marquee",
+            "hasText": true,
+            "duration": 18000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 3600,
+        "running": 1,
+        "scriptDriven": 1,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "div.marquee",
+            "hasText": true,
+            "duration": 18000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 4050,
+        "running": 5,
+        "scriptDriven": 4,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.py-64",
+            "hasText": false,
+            "duration": 600,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.py-64",
+            "hasText": false,
+            "duration": 600,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.py-64",
+            "hasText": false,
+            "duration": 600,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.py-64",
+            "hasText": false,
+            "duration": 600,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.marquee",
+            "hasText": true,
+            "duration": 18000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 4500,
+        "running": 2,
+        "scriptDriven": 5,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "div.image",
+            "hasText": false,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.55, 0.055, 0.675, 0.19)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.marquee",
+            "hasText": true,
+            "duration": 18000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      }
+    ]
+  },
+  "smoothness": {
+    "page": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 7230,
+      "frames": 327,
+      "fps": 45.2,
+      "medianMs": 16.7,
+      "p95Ms": 50,
+      "maxMs": 217,
+      "longFrames": 14,
+      "droppedShare": 9,
+      "longTasks": 2,
+      "longTaskMs": 179,
+      "scriptBlockedShare": 2,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "baseline": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 1805,
+      "frames": 107,
+      "fps": 59.3,
+      "medianMs": 16.7,
+      "p95Ms": 16.7,
+      "maxMs": 17,
+      "longFrames": 0,
+      "droppedShare": 0,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "longFramesOverBaseline": 14,
+    "p95OverBaseline": 33.3
+  },
+  "reducedMotion": {
+    "movingWithoutInput": 1,
+    "movingOnScroll": 8,
+    "idleNavigation": null,
+    "loadFailed": false
+  },
+  "idleRunLoadFailed": false,
+  "idleNavigation": null
+}

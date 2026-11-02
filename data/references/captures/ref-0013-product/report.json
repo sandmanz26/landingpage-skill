@@ -1,0 +1,962 @@
+{
+  "target": "https://quitenice.com/products/prebiotic-oatmeal-2-plan",
+  "time": "2026-11-02T15:57:23.736Z",
+  "rules": {
+    "purple-gradient": "warn",
+    "gradient": "info",
+    "glass": "info",
+    "system-font-only": "warn",
+    "too-many-font-sizes": "warn",
+    "too-many-colours": "warn",
+    "shadow-on-everything": "warn",
+    "icon-card-row": "warn",
+    "centred-hero-two-ctas": "warn",
+    "emoji": "warn"
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "pageHeight": 10636,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "too-many-font-sizes",
+          "message": "17 different font sizes on the page (aim for 5 or fewer doing the visible work)"
+        },
+        {
+          "severity": "WARN",
+          "rule": "display-sizes",
+          "message": "6 display sizes (24px and up) with no clear scale: 80, 64, 48, 34, 32, 24 px; use 3-4 steps, each with one role"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "img-alt",
+          "message": "26 images without an alt attribute",
+          "sample": [
+            "//quitenice.com/cdn/shop/files/NFPs2-04.png?v=1727202410",
+            "//quitenice.com/cdn/shop/files/Copy_of_Matcha.jpg?v=1726788226",
+            "//quitenice.com/cdn/shop/files/NFPs2-02.png?v=1727306312"
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "too-many-colours",
+          "message": "12 distinct chromatic colours",
+          "sample": [
+            "#195908",
+            "#182015",
+            "#e5ddc5",
+            "#ffce70",
+            "#d7e8d2",
+            "#1a5a08",
+            "#b2d99a",
+            "#f0e7ce"
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "4 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#87a575 on screen = 2.40:1 median, 1.89:1 in the worst tenth (needs 3) <span> \"$30\"",
+            "#8cac83 on screen = 2.52:1 median, 2.06:1 in the worst tenth (needs 4.5) <p> \"Nostalgic and classic\"",
+            "#69935e on screen = 3.54:1 median, 1.93:1 in the worst tenth (needs 4.5) <span> \"Estimated ground shipping\"",
+            "#87a575 on screen = 2.40:1 median, 2.40:1 in the worst tenth (needs 4.5) <p> \"Favorite Flavor\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "contrast-unverified",
+          "message": "1 suspected contrast problems could not be re-measured on screen"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "hidden-content",
+          "message": "16 text elements were never visible during a full scroll (a reveal that never fires?)",
+          "sample": [
+            "Priyanka S",
+            "Max B",
+            "Shelbi J.",
+            "I love that all I need to do is add hot water, and I have a ",
+            "Unique flavors that don’t even need a drizzle of honey to sh"
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "4 console or page errors",
+          "sample": [
+            "Framing 'https://shop.app/' violates the following Content Security Policy directive: \"frame-ancestors 'self' https://shop.app https://admin.shopify.com\". The request has been blocked.\n",
+            "Failed to load resource: the server responded with a status of 403 ()",
+            "Failed to load resource: the server responded with a status of 404 (Not Found)",
+            "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Basis Grotesque Pro",
+            "share": 71
+          },
+          {
+            "family": "Nib Pro",
+            "share": 29
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "basis grotesque pro",
+            "share": 71
+          },
+          {
+            "family": "nib pro",
+            "share": 29
+          }
+        ],
+        "fontSizes": [
+          80,
+          64,
+          56,
+          48,
+          34,
+          32,
+          26,
+          24,
+          20,
+          18,
+          17,
+          16,
+          15,
+          14,
+          13,
+          12,
+          11
+        ],
+        "textColours": [
+          "#195908",
+          "#fefaef",
+          "#182015",
+          "#1a5a08",
+          "#ffce70",
+          "#ffffff",
+          "#b2d99a"
+        ],
+        "backgroundColours": [
+          "#195908",
+          "#fefaef",
+          "#ffffff",
+          "#e5ddc5",
+          "#c6d6c2",
+          "#f5f0e1",
+          "#ffce70",
+          "#d7e8d2",
+          "#b2d99a",
+          "#f0e7ce",
+          "#2d402d",
+          "#91c085",
+          "#000000",
+          "#7f8c8d",
+          "#1abc9c",
+          "#27ae60",
+          "#f1c40f"
+        ],
+        "chromaticColours": 12,
+        "colourFamilies": 3,
+        "spacing": {
+          "distinct": 45,
+          "offScale": 20,
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            10,
+            11,
+            12,
+            14,
+            16,
+            18,
+            19,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            35,
+            40,
+            44,
+            45,
+            48,
+            56,
+            60,
+            68,
+            70,
+            72,
+            76,
+            80,
+            88,
+            90,
+            96,
+            100,
+            112
+          ]
+        },
+        "radii": [
+          "32px",
+          "9999px",
+          "100%",
+          "24px",
+          "999px",
+          "16px",
+          "8px",
+          "50%",
+          "12px",
+          "4px",
+          "20px"
+        ],
+        "shadows": 0,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 131,
+        "animatedElements": 32,
+        "cls": 0
+      },
+      "screenshots": [
+        "data/references/captures/ref-0013-product/desktop-fold.png",
+        "data/references/captures/ref-0013-product/desktop-page-01.png",
+        "data/references/captures/ref-0013-product/desktop-page-02.png",
+        "data/references/captures/ref-0013-product/desktop-page-03.png",
+        "data/references/captures/ref-0013-product/desktop-page-04.png",
+        "data/references/captures/ref-0013-product/desktop-page-05.png",
+        "data/references/captures/ref-0013-product/desktop-page-06.png",
+        "data/references/captures/ref-0013-product/desktop-page-07.png",
+        "data/references/captures/ref-0013-product/desktop-page-08.png",
+        "data/references/captures/ref-0013-product/desktop-page-09.png",
+        "data/references/captures/ref-0013-product/desktop-page-10.png",
+        "data/references/captures/ref-0013-product/desktop-page-11.png",
+        "data/references/captures/ref-0013-product/desktop-page-12.png"
+      ]
+    },
+    "tablet": {
+      "width": 768,
+      "pageHeight": 16104,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14px (16px or more reads better)",
+          "sample": [
+            "<p> \"A delicious daily fiber routine for gut health, cr\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14px (16px or more reads better)",
+          "sample": [
+            "<p> \"Gut gentle protein source that enhances gut barrie\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14px (16px or more reads better)",
+          "sample": [
+            "<p> \"Contains antioxidants that reduce gut inflammation\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "img-alt",
+          "message": "26 images without an alt attribute",
+          "sample": [
+            "//quitenice.com/cdn/shop/files/NFPs2-04.png?v=1727202410",
+            "//quitenice.com/cdn/shop/files/Copy_of_Matcha.jpg?v=1726788226",
+            "//quitenice.com/cdn/shop/files/NFPs2-02.png?v=1727306312"
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "too-many-colours",
+          "message": "12 distinct chromatic colours",
+          "sample": [
+            "#195908",
+            "#182015",
+            "#e5ddc5",
+            "#ffce70",
+            "#d7e8d2",
+            "#1a5a08",
+            "#b2d99a",
+            "#f0e7ce"
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "4 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#87a575 on screen = 2.40:1 median, 1.89:1 in the worst tenth (needs 3) <span> \"$30\"",
+            "#8cac83 on screen = 2.52:1 median, 2.47:1 in the worst tenth (needs 4.5) <p> \"Nostalgic and classic\"",
+            "#69935e on screen = 3.54:1 median, 1.93:1 in the worst tenth (needs 4.5) <span> \"Estimated ground shipping\"",
+            "#195908 on screen = 4.08:1 median, 4.08:1 in the worst tenth (needs 4.5) <div> \"Low-FODMAP\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "contrast-unverified",
+          "message": "1 suspected contrast problems could not be re-measured on screen"
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "4 console or page errors",
+          "sample": [
+            "Framing 'https://shop.app/' violates the following Content Security Policy directive: \"frame-ancestors 'self' https://shop.app https://admin.shopify.com\". The request has been blocked.\n",
+            "Failed to load resource: the server responded with a status of 403 ()",
+            "Failed to load resource: the server responded with a status of 404 (Not Found)",
+            "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "screenshots-capped",
+          "message": "Page is 16104px tall; only the first 14 screens were captured"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Basis Grotesque Pro",
+            "share": 78
+          },
+          {
+            "family": "Nib Pro",
+            "share": 22
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "basis grotesque pro",
+            "share": 78
+          },
+          {
+            "family": "nib pro",
+            "share": 22
+          }
+        ],
+        "fontSizes": [
+          56,
+          48,
+          40,
+          26,
+          24,
+          20,
+          18,
+          17,
+          16,
+          15,
+          14,
+          13,
+          12,
+          11
+        ],
+        "textColours": [
+          "#195908",
+          "#fefaef",
+          "#182015",
+          "#1a5a08",
+          "#ffce70",
+          "#ffffff",
+          "#b2d99a"
+        ],
+        "backgroundColours": [
+          "#195908",
+          "#fefaef",
+          "#f5f0e1",
+          "#ffffff",
+          "#e5ddc5",
+          "#c6d6c2",
+          "#ffce70",
+          "#d7e8d2",
+          "#b2d99a",
+          "#f0e7ce",
+          "#2d402d",
+          "#91c085",
+          "#000000",
+          "#7f8c8d",
+          "#1abc9c",
+          "#27ae60",
+          "#f1c40f"
+        ],
+        "chromaticColours": 12,
+        "colourFamilies": 3,
+        "spacing": {
+          "distinct": 35,
+          "offScale": 14,
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            10,
+            11,
+            12,
+            14,
+            16,
+            18,
+            19,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            35,
+            40,
+            44,
+            48,
+            52,
+            56,
+            60,
+            64,
+            72,
+            80,
+            88,
+            96,
+            100,
+            128
+          ]
+        },
+        "radii": [
+          "24px",
+          "32px",
+          "100%",
+          "9999px",
+          "999px",
+          "16px",
+          "8px",
+          "50%",
+          "12px",
+          "4px",
+          "20px"
+        ],
+        "shadows": 0,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 101,
+        "animatedElements": 31,
+        "cls": 0
+      },
+      "screenshots": [
+        "data/references/captures/ref-0013-product/tablet-fold.png",
+        "data/references/captures/ref-0013-product/tablet-page-01.png",
+        "data/references/captures/ref-0013-product/tablet-page-02.png",
+        "data/references/captures/ref-0013-product/tablet-page-03.png",
+        "data/references/captures/ref-0013-product/tablet-page-04.png",
+        "data/references/captures/ref-0013-product/tablet-page-05.png",
+        "data/references/captures/ref-0013-product/tablet-page-06.png",
+        "data/references/captures/ref-0013-product/tablet-page-07.png",
+        "data/references/captures/ref-0013-product/tablet-page-08.png",
+        "data/references/captures/ref-0013-product/tablet-page-09.png",
+        "data/references/captures/ref-0013-product/tablet-page-10.png",
+        "data/references/captures/ref-0013-product/tablet-page-11.png",
+        "data/references/captures/ref-0013-product/tablet-page-12.png",
+        "data/references/captures/ref-0013-product/tablet-page-13.png",
+        "data/references/captures/ref-0013-product/tablet-page-14.png"
+      ]
+    },
+    "mobile": {
+      "width": 390,
+      "pageHeight": 14037,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14px (16px or more reads better)",
+          "sample": [
+            "<p> \"A delicious daily fiber routine for gut health, cr\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14px (16px or more reads better)",
+          "sample": [
+            "<p> \"Gut gentle protein source that enhances gut barrie\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14px (16px or more reads better)",
+          "sample": [
+            "<p> \"Contains antioxidants that reduce gut inflammation\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "headline-lines",
+          "message": "h2 runs to 4 lines",
+          "sample": [
+            "<h2> \"The real food routine to support gut health\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tap-target",
+          "message": "32 controls smaller than 24x24px on a phone",
+          "sample": [
+            "1x1 <a> \"Skip to main content\"",
+            "153x20 <a> \"\"",
+            "7x7 <span> \"\"",
+            "7x7 <span> \"\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "text-at-edge",
+          "message": "22 text elements within 12px of the screen edge",
+          "sample": [
+            "<a> \"Skip to main content\"",
+            "<a> \"Farewell Sale – 70% Off Everything\"",
+            "<div> \"Low-FODMAP\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "img-alt",
+          "message": "26 images without an alt attribute",
+          "sample": [
+            "//quitenice.com/cdn/shop/files/NFPs2-04.png?v=1727202410",
+            "//quitenice.com/cdn/shop/files/Copy_of_Matcha.jpg?v=1726788226",
+            "//quitenice.com/cdn/shop/files/NFPs2-02.png?v=1727306312"
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "too-many-colours",
+          "message": "12 distinct chromatic colours",
+          "sample": [
+            "#195908",
+            "#182015",
+            "#e5ddc5",
+            "#ffce70",
+            "#d7e8d2",
+            "#1a5a08",
+            "#b2d99a",
+            "#f0e7ce"
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "4 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#87a575 on screen = 2.40:1 median, 1.89:1 in the worst tenth (needs 3) <span> \"$30\"",
+            "#8cac83 on screen = 2.52:1 median, 1.73:1 in the worst tenth (needs 4.5) <p> \"Nostalgic and classic\"",
+            "#69935e on screen = 3.54:1 median, 1.93:1 in the worst tenth (needs 4.5) <span> \"Estimated ground shipping\"",
+            "#195908 on screen = 4.08:1 median, 4.08:1 in the worst tenth (needs 4.5) <div> \"Low-FODMAP\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "contrast-unverified",
+          "message": "1 suspected contrast problems could not be re-measured on screen"
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "4 console or page errors",
+          "sample": [
+            "Framing 'https://shop.app/' violates the following Content Security Policy directive: \"frame-ancestors 'self' https://shop.app https://admin.shopify.com\". The request has been blocked.\n",
+            "Failed to load resource: the server responded with a status of 403 ()",
+            "Failed to load resource: the server responded with a status of 404 (Not Found)",
+            "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "screenshots-capped",
+          "message": "Page is 14037px tall; only the first 14 screens were captured"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Basis Grotesque Pro",
+            "share": 78
+          },
+          {
+            "family": "Nib Pro",
+            "share": 22
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "basis grotesque pro",
+            "share": 78
+          },
+          {
+            "family": "nib pro",
+            "share": 22
+          }
+        ],
+        "fontSizes": [
+          56,
+          48,
+          40,
+          26,
+          24,
+          20,
+          18,
+          17,
+          16,
+          15,
+          14,
+          13,
+          12,
+          11
+        ],
+        "textColours": [
+          "#195908",
+          "#fefaef",
+          "#182015",
+          "#1a5a08",
+          "#ffce70",
+          "#ffffff",
+          "#b2d99a"
+        ],
+        "backgroundColours": [
+          "#195908",
+          "#fefaef",
+          "#f5f0e1",
+          "#ffffff",
+          "#e5ddc5",
+          "#c6d6c2",
+          "#ffce70",
+          "#d7e8d2",
+          "#b2d99a",
+          "#f0e7ce",
+          "#2d402d",
+          "#91c085",
+          "#000000",
+          "#7f8c8d",
+          "#1abc9c",
+          "#27ae60",
+          "#f1c40f"
+        ],
+        "chromaticColours": 12,
+        "colourFamilies": 3,
+        "spacing": {
+          "distinct": 35,
+          "offScale": 14,
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            10,
+            11,
+            12,
+            14,
+            16,
+            18,
+            19,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            35,
+            40,
+            44,
+            48,
+            52,
+            56,
+            60,
+            64,
+            72,
+            80,
+            88,
+            96,
+            100,
+            128
+          ]
+        },
+        "radii": [
+          "24px",
+          "32px",
+          "100%",
+          "9999px",
+          "999px",
+          "16px",
+          "8px",
+          "50%",
+          "12px",
+          "4px",
+          "20px"
+        ],
+        "shadows": 0,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 105,
+        "animatedElements": 34,
+        "cls": 0
+      },
+      "screenshots": [
+        "data/references/captures/ref-0013-product/mobile-fold.png",
+        "data/references/captures/ref-0013-product/mobile-page-01.png",
+        "data/references/captures/ref-0013-product/mobile-page-02.png",
+        "data/references/captures/ref-0013-product/mobile-page-03.png",
+        "data/references/captures/ref-0013-product/mobile-page-04.png",
+        "data/references/captures/ref-0013-product/mobile-page-05.png",
+        "data/references/captures/ref-0013-product/mobile-page-06.png",
+        "data/references/captures/ref-0013-product/mobile-page-07.png",
+        "data/references/captures/ref-0013-product/mobile-page-08.png",
+        "data/references/captures/ref-0013-product/mobile-page-09.png",
+        "data/references/captures/ref-0013-product/mobile-page-10.png",
+        "data/references/captures/ref-0013-product/mobile-page-11.png",
+        "data/references/captures/ref-0013-product/mobile-page-12.png",
+        "data/references/captures/ref-0013-product/mobile-page-13.png",
+        "data/references/captures/ref-0013-product/mobile-page-14.png"
+      ]
+    }
+  },
+  "checks": {
+    "reducedMotion": {
+      "findings": [
+        {
+          "severity": "FAIL",
+          "rule": "reduced-motion",
+          "message": "16 text elements stay hidden when the visitor asks for reduced motion",
+          "sample": [
+            "Priyanka S",
+            "Max B",
+            "Shelbi J.",
+            "I love that all I need to do is add hot water, and I have a ",
+            "Unique flavors that don’t even need a drizzle of honey to sh"
+          ]
+        }
+      ],
+      "screenshot": "data/references/captures/ref-0013-product/reduced-motion-fold.png"
+    },
+    "noJavaScript": {
+      "findings": [],
+      "withJs": 6521,
+      "withoutJs": 3268
+    }
+  },
+  "summary": {
+    "fail": 5,
+    "warn": 9
+  },
+  "url": "https://quitenice.com/products/prebiotic-oatmeal-2-plan",
+  "findings": [
+    {
+      "severity": "FAIL",
+      "rule": "img-alt",
+      "message": "26 images without an alt attribute",
+      "sample": [
+        "//quitenice.com/cdn/shop/files/NFPs2-04.png?v=1727202410",
+        "//quitenice.com/cdn/shop/files/Copy_of_Matcha.jpg?v=1726788226",
+        "//quitenice.com/cdn/shop/files/NFPs2-02.png?v=1727306312"
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "4 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#87a575 on screen = 2.40:1 median, 1.89:1 in the worst tenth (needs 3) <span> \"$30\"",
+        "#8cac83 on screen = 2.52:1 median, 2.06:1 in the worst tenth (needs 4.5) <p> \"Nostalgic and classic\"",
+        "#69935e on screen = 3.54:1 median, 1.93:1 in the worst tenth (needs 4.5) <span> \"Estimated ground shipping\"",
+        "#87a575 on screen = 2.40:1 median, 2.40:1 in the worst tenth (needs 4.5) <p> \"Favorite Flavor\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "hidden-content",
+      "message": "16 text elements were never visible during a full scroll (a reveal that never fires?)",
+      "sample": [
+        "Priyanka S",
+        "Max B",
+        "Shelbi J.",
+        "I love that all I need to do is add hot water, and I have a ",
+        "Unique flavors that don’t even need a drizzle of honey to sh"
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tap-target",
+      "message": "32 controls smaller than 24x24px on a phone",
+      "sample": [
+        "1x1 <a> \"Skip to main content\"",
+        "153x20 <a> \"\"",
+        "7x7 <span> \"\"",
+        "7x7 <span> \"\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "reduced-motion",
+      "message": "16 text elements stay hidden when the visitor asks for reduced motion",
+      "sample": [
+        "Priyanka S",
+        "Max B",
+        "Shelbi J.",
+        "I love that all I need to do is add hot water, and I have a ",
+        "Unique flavors that don’t even need a drizzle of honey to sh"
+      ],
+      "where": [
+        "reducedMotion"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "too-many-font-sizes",
+      "message": "17 different font sizes on the page (aim for 5 or fewer doing the visible work)",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "display-sizes",
+      "message": "6 display sizes (24px and up) with no clear scale: 80, 64, 48, 34, 32, 24 px; use 3-4 steps, each with one role",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "too-many-colours",
+      "message": "12 distinct chromatic colours",
+      "sample": [
+        "#195908",
+        "#182015",
+        "#e5ddc5",
+        "#ffce70",
+        "#d7e8d2",
+        "#1a5a08",
+        "#b2d99a",
+        "#f0e7ce"
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "contrast-unverified",
+      "message": "1 suspected contrast problems could not be re-measured on screen",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "console-errors",
+      "message": "4 console or page errors",
+      "sample": [
+        "Framing 'https://shop.app/' violates the following Content Security Policy directive: \"frame-ancestors 'self' https://shop.app https://admin.shopify.com\". The request has been blocked.\n",
+        "Failed to load resource: the server responded with a status of 403 ()",
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "body-size",
+      "message": "Running text at 14px (16px or more reads better)",
+      "sample": [
+        "<p> \"A delicious daily fiber routine for gut health, cr\""
+      ],
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "screenshots-capped",
+      "message": "Page is 16104px tall; only the first 14 screens were captured",
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "headline-lines",
+      "message": "h2 runs to 4 lines",
+      "sample": [
+        "<h2> \"The real food routine to support gut health\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "text-at-edge",
+      "message": "22 text elements within 12px of the screen edge",
+      "sample": [
+        "<a> \"Skip to main content\"",
+        "<a> \"Farewell Sale – 70% Off Everything\"",
+        "<div> \"Low-FODMAP\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "screenshots-capped",
+      "message": "Page is 14037px tall; only the first 14 screens were captured",
+      "where": [
+        "mobile"
+      ]
+    }
+  ]
+}

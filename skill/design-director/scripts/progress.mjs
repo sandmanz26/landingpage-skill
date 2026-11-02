@@ -170,6 +170,10 @@ switch (cmd) {
       const r = fs.readFileSync(path.join(DIR, 'research.md'), 'utf8');
       if (!/##\s*(Sources|Sumber)/i.test(r)) fail('research.md needs a "## Sources" section listing what was read, with dates.');
     }
+    if (step === 'spec') {
+      const sp = fs.readFileSync(path.join(DIR, 'spec.md'), 'utf8');
+      if (!/##\s*(Interactions|Interaksi)/i.test(sp)) fail('spec.md needs an "## Interactions" section: every element the visitor operates, with what it reveals and the customer question it answers, or "none" (motion/functions.md → Interactions).');
+    }
     if (step === 'direction' && !fs.existsSync(path.join(DIR, 'directions'))) fail('"direction" needs the dealt directions in .design/directions/.');
     if (step === 'direction' && s.gates === 'guided') {
       const dd = path.join(DIR, 'directions');

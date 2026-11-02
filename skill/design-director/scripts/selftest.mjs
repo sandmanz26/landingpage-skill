@@ -43,6 +43,8 @@ const check = (name, ok, detail = '') => {
   }
   const c = run('inspect.mjs', [path.join(fixtures, 'clean.html'), '--out', path.join(tmp, 'clean'), '--quiet']);
   check('inspect passes the clean page', c.status === 0, c.stdout + c.stderr);
+  const cr = path.join(tmp, 'clean', 'report.json');
+  if (fs.existsSync(cr)) check('a closed drawer is not a fixed cover', !JSON.parse(fs.readFileSync(cr, 'utf8')).findings.some((f) => f.rule === 'fixed-cover'));
 }
 
 // progress
@@ -233,7 +235,9 @@ const check = (name, ok, detail = '') => {
   fs.writeFileSync(path.join(d, 'brief.md'), '# Brief');
   p('approve', 'brief'); p('done', 'brief');
   fs.writeFileSync(path.join(d, 'research.md'), '# R\n## Sources\n- x'); p('done', 'research');
-  fs.writeFileSync(path.join(d, 'spec.md'), '# Spec'); p('done', 'spec');
+  fs.writeFileSync(path.join(d, 'spec.md'), '# Spec');
+  check('progress refuses a spec without its Interactions section', p('done', 'spec').status !== 0);
+  fs.writeFileSync(path.join(d, 'spec.md'), '# Spec\n## Interactions\nnone'); p('done', 'spec');
   fs.writeFileSync(path.join(d, 'roast.md'), '# Roast\n## Response\n- ok'); p('done', 'roast');
   const noVariants = p('done', 'build');
   for (const v of ['v1', 'v2']) {

@@ -1,0 +1,15 @@
+{
+  "juror": "owner",
+  "kind": "human",
+  "date": "2026-11-02",
+  "refs": {
+    "ref-0013": {
+      "visual": 9,
+      "ship": 9
+    }
+  },
+  "notes_verbatim": {
+    "quite nice (ref-0013)": "Ini adalah website yang bagus. 1. hero menggabungkan foto dengan elemen vektor brand, sehingga tidak AI slop; permainan warnanya berbeda dari kebanyakan generator AI. 2. animasi scroll memberi pengalaman yang berbeda, tidak monoton. 3. terlihat sederhana, tapi warna dan gambar membuat pesannya jauh lebih hidup. 4. hover state yang berganti warna membuat situsnya terasa hidup. 5. experience flipping card memang sudah biasa, tapi tujuan dari sebuah interaksi memberikan hal yang berbeda, dimana user bisa melihat maknanya (hal ini juga perlu kita catat dalam skill interaksi tidak dibuat semata mata tapi ada makna dan tujuan dibaliknya). 6. secara keseluruhan warna netral, minimalis, modern, friendly. Kategori food atau healthy. Score 9 & 9.",
+    "_note": "Notes 1-4 and 6 are a close paraphrase from the chat summary; note 5's parenthesis is verbatim."
+  }
+}

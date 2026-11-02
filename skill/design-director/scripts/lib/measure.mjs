@@ -317,7 +317,12 @@ export function measure({ rules, viewport }) {
     const r = el.getBoundingClientRect();
     const bar = r.width >= innerWidth * 0.9 && r.height <= innerHeight * 0.15;
     const panel = cs.position === 'sticky' && r.height >= innerHeight * 0.5; // a pinned section device
-    if (bar || panel || r.width * r.height < innerWidth * innerHeight * 0.03) continue;
+    // A closed drawer or modal sits in a full-screen wrapper that lets clicks through and paints
+    // nothing (Quite Nice): not a cover. Only the part inside the screen counts.
+    const paints = cs.backgroundColor !== 'rgba(0, 0, 0, 0)' || cs.backgroundImage !== 'none' || parseFloat(cs.borderTopWidth) > 0;
+    if (cs.pointerEvents === 'none' && !paints) continue;
+    const onScreen = Math.max(0, Math.min(r.right, innerWidth) - Math.max(r.left, 0)) * Math.max(0, Math.min(r.bottom, innerHeight) - Math.max(r.top, 0));
+    if (bar || panel || onScreen < innerWidth * innerHeight * 0.03) continue;
     covers.push(`${Math.round(r.width)}x${Math.round(r.height)} (${Math.round((r.height / innerHeight) * 100)}% of the screen height) ${snippet(el)}`);
   }
   if (covers.length) add('WARN', 'fixed-cover', `${covers.length} fixed or sticky element(s) that are not a bar cover part of every screen; make it a slim bar or let it scroll away`, covers.slice(0, 3));

@@ -1,0 +1,4 @@
+# batch-007 (2026-11-02) owner: visual 9, ship 9 (home page); product and science pages captured for the selling path
+ref-0013 https://quitenice.com/
+ref-0013-product https://quitenice.com/products/prebiotic-oatmeal-2-plan
+ref-0013-science https://quitenice.com/pages/our-science

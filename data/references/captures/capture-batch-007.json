@@ -1,0 +1,52 @@
+{
+  "list": "../../data/references/batch-007.txt",
+  "jobs": 3,
+  "seconds": 470,
+  "results": [
+    {
+      "id": "ref-0013-science",
+      "url": "https://quitenice.com/pages/our-science",
+      "ok": true,
+      "inspectSeconds": 213,
+      "evidenceSeconds": 211,
+      "flags": [
+        "2 full-screen sticky panels: a CSS scroll device (stacking or curtain reveal) even with no scroll library",
+        "under reduced motion 0 elements still move on their own and 3 move with the scroll",
+        "elements keep moving with no input further down at 4500px (1); no pause control found",
+        "endless moving text with no pause control",
+        "no price on the page"
+      ],
+      "error": null
+    },
+    {
+      "id": "ref-0013",
+      "url": "https://quitenice.com/",
+      "ok": true,
+      "inspectSeconds": 241,
+      "evidenceSeconds": 213,
+      "flags": [
+        "2 full-screen sticky panels: a CSS scroll device (stacking or curtain reveal) even with no scroll library",
+        "stutters while scrolling: 9 long frames (>50 ms) vs 0 on a plain page, p95 33.4 ms",
+        "under reduced motion 0 elements still move on their own and 13 move with the scroll",
+        "elements keep moving with no input further down at 1800px (7), 2700px (4), 4500px (4); no pause control found",
+        "endless moving text with no pause control",
+        "no price on the page"
+      ],
+      "error": null
+    },
+    {
+      "id": "ref-0013-product",
+      "url": "https://quitenice.com/products/prebiotic-oatmeal-2-plan",
+      "ok": true,
+      "inspectSeconds": 258,
+      "evidenceSeconds": 212,
+      "flags": [
+        "stutters while scrolling: 7 long frames (>50 ms) vs 0 on a plain page, p95 33.3 ms",
+        "under reduced motion 0 elements still move on their own and 8 move with the scroll",
+        "elements keep moving with no input further down at 900px (1), 1800px (1), 2700px (4); no pause control found",
+        "endless moving text with no pause control"
+      ],
+      "error": null
+    }
+  ]
+}

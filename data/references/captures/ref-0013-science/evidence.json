@@ -1,0 +1,405 @@
+{
+  "url": "https://quitenice.com/pages/our-science",
+  "time": "2026-11-02T16:09:56.973Z",
+  "sheets": {
+    "desktop": "data/references/captures/ref-0013-science/sheet-desktop.png",
+    "mobile": "data/references/captures/ref-0013-science/sheet-mobile.png",
+    "motion": "data/references/captures/ref-0013-science/motion-sheet.png"
+  },
+  "load": {
+    "status": 200,
+    "retries": 0,
+    "failed": false
+  },
+  "overlaysDismissed": [],
+  "outline": {
+    "title": "Our Science",
+    "description": "Quite Nice",
+    "headings": [
+      "H1 3% Real Science, Real Results",
+      "H2 20% Our Approach is Simple, But Effective",
+      "H3 28% The Right Fiber: Resistant Starch",
+      "H3 58% Remove ingredients that harm the gut"
+    ],
+    "actions": [
+      {
+        "label": "Farewell Sale – 70% Off Everything",
+        "count": 1,
+        "firstAt": 0,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Try Now",
+        "count": 1,
+        "firstAt": 1,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Our Science",
+        "count": 1,
+        "firstAt": 1,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Account",
+        "count": 1,
+        "firstAt": 1,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Cart (0)",
+        "count": 1,
+        "firstAt": 1,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Shop oats Shop oats",
+        "count": 1,
+        "firstAt": 89,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Enter",
+        "count": 1,
+        "firstAt": 94,
+        "firstScreen": false,
+        "sticky": false
+      }
+    ],
+    "prices": [],
+    "proofMentions": {},
+    "logoImages": 0,
+    "forms": 1,
+    "imagery": {
+      "photos": 5,
+      "illustrations": 0,
+      "videos": 0
+    },
+    "pageHeight": 6619
+  },
+  "motion": {
+    "libraries": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "splitText": false,
+      "lenis": false,
+      "locomotive": false,
+      "swiper": true,
+      "lottie": false,
+      "framerMotion": false,
+      "viewTransitions": false
+    },
+    "stickyPanels": [
+      {
+        "tag": "div",
+        "edge": "top",
+        "zIndex": "auto"
+      },
+      {
+        "tag": "div",
+        "edge": "top",
+        "zIndex": "auto"
+      }
+    ],
+    "maxRunning": 3,
+    "durationsMs": {
+      "min": 300,
+      "max": 18000
+    },
+    "easings": [
+      "linear",
+      "cubic-bezier(0.4, 0, 0.2, 1)",
+      "ease"
+    ],
+    "properties": [
+      "transform",
+      "opacity"
+    ],
+    "movingWithoutInput": 0,
+    "movingWithoutInputFurtherDown": [
+      {
+        "y": 4500,
+        "moving": 1
+      }
+    ],
+    "scriptDrivenOnScroll": 0,
+    "infiniteLoops": 10,
+    "infiniteLoopsWithText": 10,
+    "pauseControl": false,
+    "steps": [
+      {
+        "y": 450,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.marquee",
+            "hasText": true,
+            "duration": 18000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 900,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "div.marquee",
+            "hasText": true,
+            "duration": 18000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1350,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.marquee",
+            "hasText": true,
+            "duration": 18000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1800,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "div.marquee",
+            "hasText": true,
+            "duration": 18000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 2250,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.marquee",
+            "hasText": true,
+            "duration": 18000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 2700,
+        "running": 2,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "img.w-full",
+            "hasText": false,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.marquee",
+            "hasText": true,
+            "duration": 18000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 3150,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.marquee",
+            "hasText": true,
+            "duration": 18000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 3600,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "div.marquee",
+            "hasText": true,
+            "duration": 18000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 4050,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.marquee",
+            "hasText": true,
+            "duration": 18000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 4500,
+        "running": 3,
+        "scriptDriven": 0,
+        "idleMoving": 1,
+        "sample": [
+          {
+            "target": "div.swiper-wrapper",
+            "hasText": true,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "img.w-full",
+            "hasText": false,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.marquee",
+            "hasText": true,
+            "duration": 18000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      }
+    ]
+  },
+  "smoothness": {
+    "page": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 5012,
+      "frames": 299,
+      "fps": 59.7,
+      "medianMs": 16.7,
+      "p95Ms": 16.7,
+      "maxMs": 33,
+      "longFrames": 0,
+      "droppedShare": 0,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "baseline": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 1731,
+      "frames": 104,
+      "fps": 60.1,
+      "medianMs": 16.7,
+      "p95Ms": 16.8,
+      "maxMs": 17,
+      "longFrames": 0,
+      "droppedShare": 0,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "longFramesOverBaseline": 0,
+    "p95OverBaseline": -0.1
+  },
+  "reducedMotion": {
+    "movingWithoutInput": 0,
+    "movingOnScroll": 2,
+    "idleNavigation": null,
+    "loadFailed": false
+  },
+  "idleRunLoadFailed": false,
+  "idleNavigation": null
+}

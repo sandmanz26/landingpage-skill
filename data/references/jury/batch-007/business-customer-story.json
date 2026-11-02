@@ -1,0 +1,106 @@
+{
+  "juror": "business-customer-story",
+  "kind": "ai",
+  "method": "Read ref-0013/digest.md, ref-0013/desktop-fold.png and ref-0013-product/digest.md. sheet-desktop.png, sheet-mobile.png and motion-sheet.png do not exist in the packs. In their place I built one contact sheet from ref-0013/desktop-page-02..10.png, ref-0013/mobile-fold.png and ref-0013-product/desktop-page-01..02.png, scaled to 480px wide, so small text was hard to read. Not verified by me: all hover, click and drawer behaviour (I relied on the coordinator's notes), the drawer content and citations, what scrolling feels like (no motion frames viewed), where 'Get Started' and the flavour cards link, the Our Science page, and any conversion data. The rubric file was not read.",
+  "refs": {
+    "ref-0013": {
+      "business": "Quite Nice: a DTC prebiotic oatmeal (resistant starch, low-FODMAP, 8g fiber, 10g protein, 4 flavours) sold in boxes of 6 meals. It is now in a farewell clearance: $9 a box instead of $30, minimum 4 boxes, $21 estimated shipping, one-time purchase, all sales final, while supplies last. The home page's job is to send a gut-sensitive visitor to the product page box builder.",
+      "scores": {
+        "business": 5,
+        "customer": 6,
+        "story": 7
+      },
+      "reasons": {
+        "business": "The home page does not show the commercial reality. The only sign of the sale is a 36px green bar reading 'Farewell Sale – 70% Off Everything'. The hero below it still sells a lasting routine ('The Easy Breakfast for Gut Health', one 'Get Started'). The digest finds no price, no proof words and no logos on the home page. Price, the 4-box minimum, shipping, 'All sales final' and the 4.85 / 54 reviews appear only on the product page. The page converts on curiosity, not on the offer, even though the offer (70% off, last chance) is the strongest reason to buy now. On the other side, the product page box builder is clear and honest: mix any flavours, a live subtotal, 'One-time purchase, nothing recurring'.",
+        "customer": "The visitor is someone with digestive trouble (IBS, low-FODMAP, motility). The page answers 'what is it' quickly: H1, then the 'fiber-rich, protein-fortified, prebiotic' statement. The free-from list (Low-FODMAP, Gluten-Free, Nut-Free, Glyphosate-Free) matches what this customer filters on. Four facts that decide the purchase are missing from the home page: the dose (8g fiber, 10g protein appear only on the product page), the preparation ('add hot water' appears only inside a testimonial), the price, and expert proof (the UCLA RDN quote is only on the product page). The mechanism and citations sit behind click-to-open drawers, and the finished-bowl photos behind hover, so a phone visitor never sees the bowls.",
+        "story": "The arc is clear and on-voice: promise (Easy Breakfast for Gut Health), then how (prebiotic oatmeal statement), then what it does for you (3 benefit rows), then why it works ('The fiber of our being', resistant starch, 10,000 years), then choice (Meet The Flavors), then reassurance (We're Picky), then proof (Gut Feelings), then close ('Go with your gut'). The colour blocks (dark green, cream, yellow, sage) mark each chapter. The proof chapter is the weakest link: six first-name quotes with a 'favourite flavour', no stars, no count, no photo context. The farewell bar also contradicts the 'daily routine' story without the page acknowledging it."
+      },
+      "claims": [
+        {
+          "claim": "The hero mixes a photo with vector brand elements, so it is not AI slop; the colour play differs from what most AI generators make.",
+          "verdict": "partly true",
+          "evidence": "The hero is distinctive because of an art-directed food photo (tiled table, four styled bowls, props) and the illustrated leaves and oats breaking out of the rounded frame. The illustrations are raster cut-outs (leaf-1-front.png etc.), not vector, but they are drawn brand elements, which is what matters. The layout itself is the generic pattern: centred two-line serif H1 over one centred pill CTA (the inspector warns centred-hero). The palette (deep green #195908, cream #fefaef, butter yellow #ffce70, sage) is the common wellness-DTC palette, not unusual. The distinction comes from photography and illustration, not from colour or layout."
+        },
+        {
+          "claim": "The scroll animation gives a different, not monotonous experience.",
+          "verdict": "not verified; partly contradicted",
+          "evidence": "I did not see the motion. Measured: 2 full-screen sticky panels, 6 endless loops with text and no pause control, durations up to 18 s, 49.4 fps with 9 long frames under software rendering. The free-from marquee repeats the same six claims three times in the DOM. The scroll motion adds pace but no new information for the purchase decision. Variety is a plausible description; 'serves the customer' is not shown."
+        },
+        {
+          "claim": "It looks simple, but colour and images make the message much more alive.",
+          "verdict": "true for mood, weaker for message",
+          "evidence": "The colour-blocked sections and real food photography carry appetite and warmth, and each block marks a story chapter. The message itself stays thin on the home page: no fiber or protein numbers, no price, no rating. The images make the product appealing; they do not make the claim more credible."
+        },
+        {
+          "claim": "Hover states that change colour make the site feel alive.",
+          "verdict": "true as feel; mostly decoration for the decision",
+          "evidence": "The benefit rows (headline turns italic, arrow pill fills) earn their place: the change signals that the row opens a drawer with evidence. The 'We're Picky' background swap (lime / white) only repeats what the + icon already says. None of this exists on touch screens, which are probably most of this DTC brand's traffic (no traffic data seen)."
+        },
+        {
+          "claim": "Flipping cards are common, but here the interaction has a purpose: the visitor sees its meaning.",
+          "verdict": "purpose real, description and delivery wrong",
+          "evidence": "These are not flipping cards. On hover the packet image is replaced by a photo of the finished bowl of that flavour. That is a real purpose: it answers 'what will I actually eat?'. But it is hover-only, so phone visitors never see the bowl, and the hover images have no alt text (img-alt fail names quitenice-cinnamon-hover.jpg). The team's proposed rule ('each interaction has a meaning and a purpose') is right, but it needs a second clause: content that helps the customer decide must not depend on hover."
+        },
+        {
+          "claim": "Overall: neutral colour, minimalist, modern, friendly.",
+          "verdict": "mostly true, except 'neutral'",
+          "evidence": "Minimalist layout, modern serif and grotesque pairing, friendly voice ('Gut Feelings', 'We're Picky'): true. 'Neutral' is wrong: the page uses 5 chromatic colours and runs full-bleed saturated green, yellow and sage sections. It is warm and food-coloured, not neutral."
+        }
+      ],
+      "interactions": [
+        {
+          "what": "Farewell Sale bar (stays visible at the top)",
+          "purpose": "Signals the 70% clearance. It is the only reason-to-buy-now on the home page, but it is tiny and the hero below ignores it.",
+          "verdict": "earns its place; under-used"
+        },
+        {
+          "what": "Hero 'Get Started' pill (repeated 4 times down the page)",
+          "purpose": "Single path to the product page box builder. Destination not verified.",
+          "verdict": "earns its place"
+        },
+        {
+          "what": "'Quite Nice can' benefit rows: italic headline and filled arrow on hover, side drawer on click",
+          "purpose": "Lets a sceptical customer check the mechanism (resistant starch, named bacteria) and journal citations without leaving the page.",
+          "verdict": "earns its place"
+        },
+        {
+          "what": "Flavour cards: packet image swaps to finished bowl on hover",
+          "purpose": "Shows what the flavour looks like when made, which helps choose a flavour. Absent on touch.",
+          "verdict": "earns its place on desktop; needs a touch equivalent"
+        },
+        {
+          "what": "'We're Picky' items: background colour change on hover, open on click",
+          "purpose": "The click reveals the detail of each free-from claim. The colour change only adds feedback.",
+          "verdict": "click earns its place; colour swap is decoration"
+        },
+        {
+          "what": "Free-from marquee (endless loop, no pause)",
+          "purpose": "none beyond repetition: the same six claims appear again in 'We're Picky'",
+          "verdict": "decoration"
+        },
+        {
+          "what": "Gut Feelings testimonial carousel (arrows; 16 off-screen slides never shown in the full-scroll capture)",
+          "purpose": "Social proof. The slides being off-screen is normal for a carousel, but only one or two quotes are visible at a time, and they carry no rating.",
+          "verdict": "earns its place weakly"
+        },
+        {
+          "what": "Scroll-driven sticky panels and reveals",
+          "purpose": "none for the decision; pacing and mood only",
+          "verdict": "decoration"
+        }
+      ],
+      "problems": [
+        "The first screen sells a lasting routine while the business is clearing stock. The home page never states the offer ($9 instead of $30 per box, 4-box minimum, $21 shipping, all sales final), so the strongest reason to buy now is a 36px bar. Visitors who would act on a clear price leave before reaching the product page.",
+        "Decision facts are missing from the home page: no fiber or protein numbers, no prep time, no price, no star rating. Expert proof (4.85 from 54 reviews, the UCLA RDN quote) exists, but only on the product page; the home page proof is six first-name quotes.",
+        "Content that helps decide depends on hover or click: the finished-bowl photos are hover-only (invisible on phones), the mechanism and citations sit inside drawers, and 16 texts stay hidden with reduced motion. A gut-sensitive customer who wants evidence has to dig."
+      ],
+      "keep": [
+        "Benefit rows that open a drawer with mechanism and citations: one-line promise first, evidence on demand. This respects both the skimmer and the sceptic.",
+        "Packet-to-bowl swap on flavour cards: shows the outcome, not the packaging. Keep it, but make the bowl visible on touch (tap or both images shown).",
+        "Colour-blocked chapters (dark green statement, yellow science, sage reassurance): each colour marks a story step, so the long page reads as a sequence.",
+        "Product page box builder: mix any flavours, live subtotal, explicit 'One-time purchase, nothing recurring' and 'All sales final'. Plain terms that lower purchase anxiety."
+      ],
+      "veto": null
+    }
+  }
+}

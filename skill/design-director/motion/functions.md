@@ -11,6 +11,30 @@ quota: every moving thing has one of these functions.
 | Story | A scroll sequence that reveals how something works | At most 1–2 per page, drawn from the page's idea |
 | Atmosphere | A muted video loop, a slow drift on a photograph | One, never in the way of reading |
 
+## Interactions: meaning before movement
+
+An interaction is something the visitor operates: hover to reveal, a card that turns, a
+before/after slider, a clickable map, play to see detail, a row that opens. The team rule
+(`team/taste.md`, Always) is that each has a meaning and a purpose. Before building one, write its
+row in the spec's Interactions table:
+
+- **What the visitor gets** is content from the subject, not an effect: the finished dish behind
+  the packet, the mechanism and citations behind a health claim, the result behind "before".
+- **The purpose** names the customer question it answers (from the storyline): "what will I
+  actually eat?", "is this claim real?". No question, no interaction.
+- **A familiar pattern is fine** (a flip card, an accordion): it earns its place through what it
+  reveals, not through novelty.
+- **Phone and keyboard:** hover does not exist on touch. Tap and focus do the same thing, or the
+  revealed content is also visible without hovering. Content needed to decide never lives only
+  behind hover.
+- **Feedback** on every control (hover, press, focus) is the Feedback function above; it needs no
+  row unless it reveals content.
+
+Example (Quite Nice, batch-007): hovering a flavour card turns the packet into a photograph of the
+finished bowl (answers "what will I eat?"); clicking "Support Your Microbiome" opens a drawer with
+the mechanism and journal citations (answers "is this real?"). Measured gap: on a phone there is
+no hover, so the bowl photographs never show there.
+
 ## Motion spec (in `.design/spec.md`)
 
 ```markdown

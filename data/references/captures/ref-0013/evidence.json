@@ -1,0 +1,823 @@
+{
+  "url": "https://quitenice.com/",
+  "time": "2026-11-02T16:09:57.913Z",
+  "sheets": {
+    "desktop": "data/references/captures/ref-0013/sheet-desktop.png",
+    "mobile": "data/references/captures/ref-0013/sheet-mobile.png",
+    "motion": "data/references/captures/ref-0013/motion-sheet.png"
+  },
+  "load": {
+    "status": 200,
+    "retries": 0,
+    "failed": false
+  },
+  "overlaysDismissed": [],
+  "outline": {
+    "title": "Quite Nice: Prebiotic Oatmeal with Protein and Fiber",
+    "description": "A delicious daily fiber routine for gut health, crafted from real food ingredients. Easy to make at home or on the go. Gluten-free, glyphosate-free, and high in protein and fiber.",
+    "headings": [
+      "H1 3% The Easy Breakfast for Gut Health",
+      "H2 34% QUITE NICE CAN",
+      "H3 35% Support Your Microbiome",
+      "H3 37% Improve Digestive Regularity",
+      "H3 39% Reduce Cravings Naturally",
+      "H2 45% The fiber of our being",
+      "H2 56% Meet The Flavors",
+      "H3 63% Cinnamon & Sugar",
+      "H3 63% Cacao & Sea Salt",
+      "H3 63% Matcha & Vanilla",
+      "H3 63% Turmeric & Cardamom",
+      "H2 67% We're Picky",
+      "H2 79% Gut Feelings",
+      "H3 86% Ashney V.",
+      "H3 86% Jess H.",
+      "H3 86% Priyanka S.",
+      "H3 86% Max B.",
+      "H3 86% Shelbi J.",
+      "H3 86% Vic V.",
+      "H3 86% Jess H.",
+      "H3 86% Priyanka S.",
+      "H3 86% Max B.",
+      "H3 86% Shelbi J.",
+      "H3 86% Vic V.",
+      "H3 86% Ashney V."
+    ],
+    "actions": [
+      {
+        "label": "Farewell Sale – 70% Off Everything",
+        "count": 1,
+        "firstAt": 0,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Try Now",
+        "count": 1,
+        "firstAt": 0,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Our Science",
+        "count": 1,
+        "firstAt": 0,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Account",
+        "count": 1,
+        "firstAt": 0,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Cart (0)",
+        "count": 1,
+        "firstAt": 0,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Get Started Get Started",
+        "count": 4,
+        "firstAt": 5,
+        "firstScreen": true,
+        "sticky": false
+      },
+      {
+        "label": "Support Your Microbiome",
+        "count": 1,
+        "firstAt": 34,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Improve Digestive Regularity",
+        "count": 1,
+        "firstAt": 37,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Reduce Cravings Naturally",
+        "count": 1,
+        "firstAt": 39,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Low-FODMAP",
+        "count": 1,
+        "firstAt": 70,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Gluten-Free",
+        "count": 1,
+        "firstAt": 71,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Nut Free",
+        "count": 1,
+        "firstAt": 72,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "No Fake or Alternative Sweetners",
+        "count": 1,
+        "firstAt": 73,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Glyphosate-Free Oats",
+        "count": 1,
+        "firstAt": 74,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Enter",
+        "count": 1,
+        "firstAt": 95,
+        "firstScreen": false,
+        "sticky": false
+      }
+    ],
+    "prices": [],
+    "proofMentions": {},
+    "logoImages": 0,
+    "forms": 1,
+    "imagery": {
+      "photos": 30,
+      "illustrations": 0,
+      "videos": 1
+    },
+    "pageHeight": 8430
+  },
+  "motion": {
+    "libraries": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "splitText": false,
+      "lenis": false,
+      "locomotive": false,
+      "swiper": true,
+      "lottie": false,
+      "framerMotion": false,
+      "viewTransitions": false
+    },
+    "stickyPanels": [
+      {
+        "tag": "div",
+        "edge": "top",
+        "zIndex": "auto"
+      },
+      {
+        "tag": "div",
+        "edge": "top",
+        "zIndex": "auto"
+      }
+    ],
+    "maxRunning": 11,
+    "durationsMs": {
+      "min": 300,
+      "max": 18000
+    },
+    "easings": [
+      "cubic-bezier(0.4, 0, 0.2, 1)",
+      "linear",
+      "cubic-bezier(0.87, 0, 0.13, 1)",
+      "ease-out",
+      "ease"
+    ],
+    "properties": [
+      "opacity",
+      "transform",
+      "backgroundColor"
+    ],
+    "movingWithoutInput": 0,
+    "movingWithoutInputFurtherDown": [
+      {
+        "y": 1800,
+        "moving": 6
+      },
+      {
+        "y": 2700,
+        "moving": 4
+      },
+      {
+        "y": 4500,
+        "moving": 4
+      }
+    ],
+    "scriptDrivenOnScroll": 8,
+    "infiniteLoops": 7,
+    "infiniteLoopsWithText": 7,
+    "pauseControl": false,
+    "steps": [
+      {
+        "y": 450,
+        "running": 4,
+        "scriptDriven": 5,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "img.w-98",
+            "hasText": false,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "img.absolute",
+            "hasText": false,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "img.absolute",
+            "hasText": false,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.marquee",
+            "hasText": true,
+            "duration": 18000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 900,
+        "running": 1,
+        "scriptDriven": 2,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "div.marquee",
+            "hasText": true,
+            "duration": 18000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1350,
+        "running": 9,
+        "scriptDriven": 1,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "span.text-lime",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "span.align-bottom",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "span.text-lime",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "span.align-bottom",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "span.text-lime",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "span.align-bottom",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      },
+      {
+        "y": 1800,
+        "running": 10,
+        "scriptDriven": 6,
+        "idleMoving": 6,
+        "sample": [
+          {
+            "target": "span.text-lime",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "span.align-bottom",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "span.text-lime",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "span.align-bottom",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "span.text-lime",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "span.align-bottom",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      },
+      {
+        "y": 2250,
+        "running": 2,
+        "scriptDriven": 2,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "img.absolute",
+            "hasText": false,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.marquee",
+            "hasText": true,
+            "duration": 18000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 2700,
+        "running": 5,
+        "scriptDriven": 5,
+        "idleMoving": 4,
+        "sample": [
+          {
+            "target": "h3.ml-auto",
+            "hasText": true,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.button-text",
+            "hasText": false,
+            "duration": 600,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.87, 0, 0.13, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.bg-grass",
+            "hasText": false,
+            "duration": 600,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.87, 0, 0.13, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.absolute",
+            "hasText": false,
+            "duration": 600,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.87, 0, 0.13, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.marquee",
+            "hasText": true,
+            "duration": 18000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 3150,
+        "running": 11,
+        "scriptDriven": 8,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.transition-colors",
+            "hasText": true,
+            "duration": 500,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "backgroundColor"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "h3.ml-auto",
+            "hasText": true,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.button-text",
+            "hasText": false,
+            "duration": 600,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.87, 0, 0.13, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.bg-grass",
+            "hasText": false,
+            "duration": 600,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.87, 0, 0.13, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.absolute",
+            "hasText": false,
+            "duration": 600,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.87, 0, 0.13, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "h3.ml-auto",
+            "hasText": true,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      },
+      {
+        "y": 3600,
+        "running": 6,
+        "scriptDriven": 2,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "div.transition-colors",
+            "hasText": true,
+            "duration": 500,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "backgroundColor"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "h3.ml-auto",
+            "hasText": true,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.button-text",
+            "hasText": false,
+            "duration": 600,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.87, 0, 0.13, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.bg-grass",
+            "hasText": false,
+            "duration": 600,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.87, 0, 0.13, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.absolute",
+            "hasText": false,
+            "duration": 600,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.87, 0, 0.13, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.marquee",
+            "hasText": true,
+            "duration": 18000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 4050,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.marquee",
+            "hasText": true,
+            "duration": 18000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 4500,
+        "running": 6,
+        "scriptDriven": 4,
+        "idleMoving": 4,
+        "sample": [
+          {
+            "target": "div.py-64",
+            "hasText": false,
+            "duration": 600,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.py-64",
+            "hasText": false,
+            "duration": 600,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.py-64",
+            "hasText": false,
+            "duration": 600,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.py-64",
+            "hasText": false,
+            "duration": 600,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.swiper-wrapper",
+            "hasText": true,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.marquee",
+            "hasText": true,
+            "duration": 18000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      }
+    ]
+  },
+  "smoothness": {
+    "page": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 7058,
+      "frames": 346,
+      "fps": 49,
+      "medianMs": 16.7,
+      "p95Ms": 33.4,
+      "maxMs": 117,
+      "longFrames": 11,
+      "droppedShare": 5,
+      "longTasks": 2,
+      "longTaskMs": 129,
+      "scriptBlockedShare": 2,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "baseline": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 1729,
+      "frames": 104,
+      "fps": 60.2,
+      "medianMs": 16.7,
+      "p95Ms": 16.7,
+      "maxMs": 17,
+      "longFrames": 0,
+      "droppedShare": 0,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "longFramesOverBaseline": 11,
+    "p95OverBaseline": 16.7
+  },
+  "reducedMotion": {
+    "movingWithoutInput": 0,
+    "movingOnScroll": 11,
+    "idleNavigation": null,
+    "loadFailed": false
+  },
+  "idleRunLoadFailed": false,
+  "idleNavigation": null
+}

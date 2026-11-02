@@ -181,6 +181,11 @@ Direction: <id> (+ mix notes)
 ## References and their roles
 | Decision | From | Their style (style card) | Mapped to this client / asked |
 
+## Interactions
+| Element | Visitor does | They see or get | Purpose: the customer question it answers | Phone and keyboard |
+(every hover, click-to-reveal, slider, flip, map or play on the page; "none" if the page has none.
+A row with no purpose is cut, not built. motion/functions.md → Interactions)
+
 ## Motion spec
 (motion/functions.md)
 

@@ -1,0 +1,159 @@
+{
+  "url": "https://quitenice.com/products/prebiotic-oatmeal-2-plan",
+  "readAt": "2026-11-02T16:10:01.569Z",
+  "tags": [
+    "flat",
+    "many-colours",
+    "pill-shapes",
+    "expressive-type",
+    "many-type-sizes",
+    "endless-motion",
+    "photography",
+    "ignores-reduced-motion"
+  ],
+  "palette": {
+    "chromatic": 12,
+    "families": 3,
+    "text": [
+      "#195908",
+      "#fefaef",
+      "#182015",
+      "#1a5a08",
+      "#ffce70",
+      "#ffffff"
+    ],
+    "backgrounds": [
+      "#195908",
+      "#fefaef",
+      "#ffffff",
+      "#e5ddc5",
+      "#c6d6c2",
+      "#f5f0e1",
+      "#ffce70",
+      "#d7e8d2"
+    ],
+    "gradients": 0,
+    "shadows": 0,
+    "blur": 0
+  },
+  "type": {
+    "families": [
+      {
+        "family": "basis grotesque pro",
+        "share": 71
+      },
+      {
+        "family": "nib pro",
+        "share": 29
+      }
+    ],
+    "cuts": [
+      {
+        "family": "Basis Grotesque Pro",
+        "share": 71
+      },
+      {
+        "family": "Nib Pro",
+        "share": 29
+      }
+    ],
+    "sizes": {
+      "desktop": [
+        80,
+        64,
+        56,
+        48,
+        34,
+        32,
+        26,
+        24,
+        20,
+        18,
+        17,
+        16,
+        15,
+        14,
+        13,
+        12,
+        11
+      ],
+      "mobile": [
+        56,
+        48,
+        40,
+        26,
+        24,
+        20,
+        18,
+        17,
+        16,
+        15,
+        14,
+        13,
+        12,
+        11
+      ]
+    },
+    "display": 80,
+    "body": 16,
+    "ratio": 5
+  },
+  "shape": {
+    "radii": [
+      "32px",
+      "9999px",
+      "100%",
+      "24px",
+      "999px",
+      "16px",
+      "8px",
+      "50%",
+      "12px",
+      "4px",
+      "20px"
+    ]
+  },
+  "spacing": {
+    "distinct": 45,
+    "offScale": 20
+  },
+  "motion": {
+    "libraries": [
+      "swiper"
+    ],
+    "stickyPanels": 1,
+    "durationsMs": {
+      "min": 300,
+      "max": 18000
+    },
+    "easings": [
+      "linear",
+      "ease-out",
+      "cubic-bezier(0.55, 0.055, 0.675, 0.19)"
+    ],
+    "reducedMotionRespected": false,
+    "smoothness": {
+      "fps": 45.2,
+      "longFrames": 14,
+      "baselineLongFrames": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    }
+  },
+  "imagery": {
+    "photos": 36,
+    "illustrations": 0,
+    "videos": 1
+  },
+  "layout": {
+    "pageHeight": 10636,
+    "screens": 12
+  },
+  "doNotCopy": [
+    "img-alt: 26 images without an alt attribute",
+    "contrast: 4 text elements below WCAG AA (measured on screen pixels)",
+    "hidden-content: 16 text elements were never visible during a full scroll (a reveal that never fires?)",
+    "tap-target: 32 controls smaller than 24x24px on a phone",
+    "reduced-motion: 16 text elements stay hidden when the visitor asks for reduced motion",
+    "motion without a reduced-motion path"
+  ]
+}

@@ -57,6 +57,9 @@ own.
 12. **Completeness.** Is everything the visitor came for there, at a readable size?
 13. **Fit.** Against the brief, the customer and the team anchors: is this the kind of page the team approves, or
     the kind it rejects? Say which anchor it is closest to.
+14. **Interactions.** Operate every hover, click-to-reveal, slider and flip (desktop and phone). For
+    each: what does it reveal, and which customer question does that answer? "Nothing" or "it looks
+    nice" makes it decoration. Is the same thing reachable by tap and keyboard?
 
 ## Score
 
@@ -78,7 +81,9 @@ the five customer questions answered caps Customer at 5. No visible action on th
 Business at 4. Two or more missed visual targets (`fit.mjs`) without a reason in the Fit section cap
 Distinctiveness at 6. Display sizes with no scale (the inspector's `display-sizes`), a fixed element
 that is not a bar covering part of every screen (`fixed-cover`), or no spacing rhythm between
-sections (pictures touching a band while wide gaps stay at the sides) each cap Craft at 6.
+sections (pictures touching a band while wide gaps stay at the sides) each cap Craft at 6. An
+interaction that reveals nothing from the subject, or content needed to decide that only appears on
+hover with no tap or focus path (`motion/functions.md` → Interactions), caps Craft at 6.
 
 ### The five-questions test
 
