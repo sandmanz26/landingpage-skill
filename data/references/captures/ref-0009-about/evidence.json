@@ -1,0 +1,424 @@
+{
+  "url": "https://summersmashtennis.ca/about/",
+  "time": "2026-11-02T04:03:09.833Z",
+  "sheets": {
+    "desktop": "data/references/captures/ref-0009-about/sheet-desktop.png",
+    "mobile": "data/references/captures/ref-0009-about/sheet-mobile.png",
+    "motion": "data/references/captures/ref-0009-about/motion-sheet.png"
+  },
+  "load": {
+    "status": 200,
+    "retries": 0,
+    "failed": false
+  },
+  "overlaysDismissed": [],
+  "outline": {
+    "title": "About - Summer Smash Tennis",
+    "description": "Since 2012, we have provided high quality public tennis lessons to youth and adults across Vancouver and the Lower Mainland.",
+    "headings": [
+      "H1 3% GROWING THE GAME OF TENNIS SINCE 2012",
+      "H2 15% OUR STORY",
+      "H2 24% OUR MISSION IS TO GROW PUBLIC TENNIS IN VANCOUVER WITH A COMMITMENT TO EXCELLENCE AND EQUI",
+      "H2 37% PARTNERSHIPS WITH FIRST NATIONS",
+      "H2 54% LOCATIONS ACROSS VANCOUVER",
+      "H2 65% OUR COACHES",
+      "H2 73% SPENCER MACKOFF",
+      "H2 73% MARSHALL MACKOFF",
+      "H2 73% GUILHERME TOMAZELLI",
+      "H2 73% YOHANN MORIZUR"
+    ],
+    "actions": [
+      {
+        "label": "GROUP LESSONS",
+        "count": 1,
+        "firstAt": 1,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "PRIVATE LESSONS",
+        "count": 1,
+        "firstAt": 1,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "FIND A CLASS",
+        "count": 1,
+        "firstAt": 61,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "SPENCER MACKOFF Director",
+        "count": 1,
+        "firstAt": 66,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "MARSHALL MACKOFF Director of Tennis",
+        "count": 1,
+        "firstAt": 66,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "GUILHERME TOMAZELLI Head Coach",
+        "count": 1,
+        "firstAt": 66,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "YOHANN MORIZUR Head Coach",
+        "count": 1,
+        "firstAt": 66,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "MEET THE FULL TEAM",
+        "count": 1,
+        "firstAt": 75,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "@SUMMER.SMASH.TENNIS",
+        "count": 1,
+        "firstAt": 79,
+        "firstScreen": false,
+        "sticky": false
+      }
+    ],
+    "prices": [],
+    "proofMentions": {},
+    "logoImages": 1,
+    "forms": 1,
+    "imagery": {
+      "photos": 20,
+      "illustrations": 1,
+      "videos": 0
+    },
+    "pageHeight": 6205
+  },
+  "motion": {
+    "libraries": {
+      "gsap": true,
+      "scrollTrigger": true,
+      "splitText": false,
+      "lenis": false,
+      "locomotive": false,
+      "swiper": true,
+      "lottie": true,
+      "framerMotion": false,
+      "viewTransitions": false
+    },
+    "stickyPanels": [],
+    "maxRunning": 2,
+    "durationsMs": {
+      "min": 250,
+      "max": 40000
+    },
+    "easings": [
+      "linear",
+      "ease-out"
+    ],
+    "properties": [
+      "transform",
+      "boxShadow"
+    ],
+    "movingWithoutInput": 0,
+    "movingWithoutInputFurtherDown": [
+      {
+        "y": 4500,
+        "moving": 1
+      }
+    ],
+    "scriptDrivenOnScroll": 1,
+    "infiniteLoops": 10,
+    "infiniteLoopsWithText": 0,
+    "pauseControl": false,
+    "steps": [
+      {
+        "y": 450,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 900,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1350,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1800,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 2250,
+        "running": 2,
+        "scriptDriven": 1,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "span.btn-circle",
+            "hasText": false,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "boxShadow"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 2700,
+        "running": 1,
+        "scriptDriven": 1,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 3150,
+        "running": 2,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "span.btn-circle",
+            "hasText": false,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "boxShadow"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 3600,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 4050,
+        "running": 2,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "img",
+            "hasText": false,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "boxShadow"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 4500,
+        "running": 2,
+        "scriptDriven": 1,
+        "idleMoving": 1,
+        "sample": [
+          {
+            "target": "img",
+            "hasText": false,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "boxShadow"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      }
+    ]
+  },
+  "smoothness": {
+    "page": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 5988,
+      "frames": 299,
+      "fps": 49.9,
+      "medianMs": 16.7,
+      "p95Ms": 33.4,
+      "maxMs": 67,
+      "longFrames": 2,
+      "droppedShare": 3,
+      "longTasks": 1,
+      "longTaskMs": 64,
+      "scriptBlockedShare": 1,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "baseline": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 1733,
+      "frames": 104,
+      "fps": 60,
+      "medianMs": 16.7,
+      "p95Ms": 16.7,
+      "maxMs": 17,
+      "longFrames": 0,
+      "droppedShare": 0,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "longFramesOverBaseline": 2,
+    "p95OverBaseline": 16.7
+  },
+  "reducedMotion": {
+    "movingWithoutInput": 1,
+    "movingOnScroll": 2,
+    "idleNavigation": null,
+    "loadFailed": false
+  },
+  "idleRunLoadFailed": false,
+  "idleNavigation": null
+}

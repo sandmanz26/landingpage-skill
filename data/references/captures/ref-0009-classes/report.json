@@ -1,0 +1,717 @@
+{
+  "target": "https://summersmashtennis.ca/classes/",
+  "time": "2026-11-02T03:47:00.801Z",
+  "rules": {
+    "purple-gradient": "warn",
+    "gradient": "info",
+    "glass": "info",
+    "system-font-only": "warn",
+    "too-many-font-sizes": "warn",
+    "too-many-colours": "warn",
+    "shadow-on-everything": "warn",
+    "icon-card-row": "warn",
+    "centred-hero-two-ctas": "warn",
+    "emoji": "warn"
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "pageHeight": 5640,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "line-length",
+          "message": "About 96 characters per line (55-75 reads best)",
+          "sample": [
+            "<p> \"By continuing, you agree to our Privacy Policy. Yo\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "too-many-colours",
+          "message": "17 distinct chromatic colours",
+          "sample": [
+            "#0c5235",
+            "#e5fc09",
+            "#00ce7d",
+            "#fb4c01",
+            "#d542b7",
+            "#a4d8ff",
+            "#0c5334",
+            "#ffef9b"
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "shadow-on-everything",
+          "message": "38 boxes carry a drop shadow"
+        },
+        {
+          "severity": "WARN",
+          "rule": "centred-hero-two-ctas",
+          "message": "Centred hero headline with two buttons, the most common generated layout"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "7 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#0c5235 on screen = 4.45:1 median, 2.55:1 in the worst tenth (needs 4.5) <span> \"Group Lessons\"",
+            "#ffffff on screen = 2.07:1 median, 1.36:1 in the worst tenth (needs 4.5) <span> \"Youth Aces (11-16 yrs)\"",
+            "#fb4c01 on screen = 3.42:1 median, 2.37:1 in the worst tenth (needs 4.5) <span> \"4 spots left\"",
+            "#ffffff on screen = 3.97:1 median, 1.82:1 in the worst tenth (needs 4.5) <span> \"Mini Aces (6-7.5 yrs)\"",
+            "#ffe816 on screen = 3.41:1 median, 1.58:1 in the worst tenth (needs 4.5) <span> \"Tennis Mobility & Movement\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "2 console or page errors",
+          "sample": [
+            "requestStorageAccess: Permission denied.",
+            "requestStorageAccess: Permission denied."
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "founders-grotesk",
+            "share": 74
+          },
+          {
+            "family": "obviously-narrow",
+            "share": 26
+          }
+        ],
+        "fontSizes": [
+          90,
+          48,
+          24,
+          20,
+          16,
+          12
+        ],
+        "textColours": [
+          "#ffffff",
+          "#0c5235",
+          "#e5fc09",
+          "#fb4c01",
+          "#0c5334",
+          "#ffe816",
+          "#0c5234"
+        ],
+        "backgroundColours": [
+          "#0c5235",
+          "#e5fc09",
+          "#fff6e7",
+          "#00ce7d",
+          "#ffffff",
+          "#d542b7",
+          "#a4d8ff",
+          "#ffef9b",
+          "#2b4fac",
+          "#cfc7fb",
+          "#008d52",
+          "#fac5ff",
+          "#bdffd4",
+          "#ffdb21",
+          "#7f0a9d"
+        ],
+        "chromaticColours": 17,
+        "colourFamilies": 6,
+        "spacing": {
+          "distinct": 25,
+          "offScale": 10,
+          "values": [
+            1,
+            2,
+            4,
+            6,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            16,
+            18,
+            20,
+            24,
+            26,
+            32,
+            36,
+            40,
+            48,
+            56,
+            64,
+            96,
+            184,
+            428
+          ]
+        },
+        "radii": [
+          "100%",
+          "200px",
+          "80px",
+          "20px",
+          "4px",
+          "40px",
+          "50%"
+        ],
+        "shadows": 38,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 63,
+        "animatedElements": 1,
+        "cls": 0
+      },
+      "screenshots": [
+        "data/references/captures/ref-0009-classes/desktop-fold.png",
+        "data/references/captures/ref-0009-classes/desktop-page-01.png",
+        "data/references/captures/ref-0009-classes/desktop-page-02.png",
+        "data/references/captures/ref-0009-classes/desktop-page-03.png",
+        "data/references/captures/ref-0009-classes/desktop-page-04.png",
+        "data/references/captures/ref-0009-classes/desktop-page-05.png",
+        "data/references/captures/ref-0009-classes/desktop-page-06.png",
+        "data/references/captures/ref-0009-classes/desktop-page-07.png"
+      ]
+    },
+    "tablet": {
+      "width": 768,
+      "pageHeight": 7522,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "line-length",
+          "message": "About 96 characters per line (55-75 reads best)",
+          "sample": [
+            "<p> \"By continuing, you agree to our Privacy Policy. Yo\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "too-many-colours",
+          "message": "17 distinct chromatic colours",
+          "sample": [
+            "#0c5235",
+            "#e5fc09",
+            "#00ce7d",
+            "#fb4c01",
+            "#d542b7",
+            "#a4d8ff",
+            "#0c5334",
+            "#ffef9b"
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "shadow-on-everything",
+          "message": "34 boxes carry a drop shadow"
+        },
+        {
+          "severity": "WARN",
+          "rule": "centred-hero-two-ctas",
+          "message": "Centred hero headline with two buttons, the most common generated layout"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "6 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#ffffff on screen = 2.07:1 median, 1.36:1 in the worst tenth (needs 4.5) <span> \"Youth Aces (11-16 yrs)\"",
+            "#fb4c01 on screen = 3.42:1 median, 2.37:1 in the worst tenth (needs 4.5) <span> \"4 spots left\"",
+            "#ffffff on screen = 3.97:1 median, 1.82:1 in the worst tenth (needs 4.5) <span> \"Mini Aces (6-7.5 yrs)\"",
+            "#ffe816 on screen = 3.41:1 median, 1.58:1 in the worst tenth (needs 4.5) <span> \"Tennis Mobility & Movement\"",
+            "#9ebaae on screen = 2.08:1 median, 2.08:1 in the worst tenth (needs 4.5) <p> \"This site is protected by reCAPTCHA and the Google\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "2 console or page errors",
+          "sample": [
+            "requestStorageAccess: Permission denied.",
+            "requestStorageAccess: Permission denied."
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "founders-grotesk",
+            "share": 74
+          },
+          {
+            "family": "obviously-narrow",
+            "share": 26
+          }
+        ],
+        "fontSizes": [
+          61,
+          32,
+          24,
+          20,
+          16,
+          12
+        ],
+        "textColours": [
+          "#ffffff",
+          "#0c5235",
+          "#e5fc09",
+          "#fb4c01",
+          "#0c5334",
+          "#ffe816",
+          "#0c5234"
+        ],
+        "backgroundColours": [
+          "#0c5235",
+          "#e5fc09",
+          "#fff6e7",
+          "#00ce7d",
+          "#ffffff",
+          "#d542b7",
+          "#a4d8ff",
+          "#ffef9b",
+          "#2b4fac",
+          "#cfc7fb",
+          "#008d52",
+          "#fac5ff",
+          "#bdffd4",
+          "#ffdb21",
+          "#7f0a9d"
+        ],
+        "chromaticColours": 17,
+        "colourFamilies": 6,
+        "spacing": {
+          "distinct": 25,
+          "offScale": 11,
+          "values": [
+            1,
+            2,
+            4,
+            6,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            16,
+            18,
+            20,
+            24,
+            26,
+            28,
+            32,
+            40,
+            48,
+            56,
+            64,
+            120,
+            333,
+            388
+          ]
+        },
+        "radii": [
+          "100%",
+          "200px",
+          "80px",
+          "20px",
+          "40px",
+          "50%",
+          "4px"
+        ],
+        "shadows": 38,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 62,
+        "animatedElements": 2,
+        "cls": 0
+      },
+      "screenshots": [
+        "data/references/captures/ref-0009-classes/tablet-fold.png",
+        "data/references/captures/ref-0009-classes/tablet-page-01.png",
+        "data/references/captures/ref-0009-classes/tablet-page-02.png",
+        "data/references/captures/ref-0009-classes/tablet-page-03.png",
+        "data/references/captures/ref-0009-classes/tablet-page-04.png",
+        "data/references/captures/ref-0009-classes/tablet-page-05.png",
+        "data/references/captures/ref-0009-classes/tablet-page-06.png",
+        "data/references/captures/ref-0009-classes/tablet-page-07.png",
+        "data/references/captures/ref-0009-classes/tablet-page-08.png"
+      ]
+    },
+    "mobile": {
+      "width": 390,
+      "pageHeight": 12444,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "headline-lines",
+          "message": "h2 runs to 4 lines",
+          "sample": [
+            "<h2> \"Notify me when registration opens\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tap-target",
+          "message": "31 controls smaller than 24x24px on a phone",
+          "sample": [
+            "36x23 <a> \"Kids\"",
+            "44x23 <a> \"Adult\"",
+            "79x15 <button> \"Clear All\"",
+            "16x16 <input> \"\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "text-at-edge",
+          "message": "2 text elements within 12px of the screen edge",
+          "sample": [
+            "<span> \"Prorated at Checkout\"",
+            "<span> \"Prorated at Checkout\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "too-many-colours",
+          "message": "17 distinct chromatic colours",
+          "sample": [
+            "#0c5235",
+            "#e5fc09",
+            "#00ce7d",
+            "#fb4c01",
+            "#d542b7",
+            "#a4d8ff",
+            "#0c5334",
+            "#ffef9b"
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "shadow-on-everything",
+          "message": "7 boxes carry a drop shadow"
+        },
+        {
+          "severity": "WARN",
+          "rule": "centred-hero-two-ctas",
+          "message": "Centred hero headline with two buttons, the most common generated layout"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "6 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#ffffff on screen = 2.07:1 median, 1.36:1 in the worst tenth (needs 4.5) <span> \"Youth Aces (11-16 yrs)\"",
+            "#fb4c01 on screen = 3.42:1 median, 2.37:1 in the worst tenth (needs 4.5) <span> \"4 spots left\"",
+            "#ffffff on screen = 3.97:1 median, 1.82:1 in the worst tenth (needs 4.5) <span> \"Mini Aces (6-7.5 yrs)\"",
+            "#ffe816 on screen = 3.41:1 median, 1.58:1 in the worst tenth (needs 4.5) <span> \"Tennis Mobility & Movement\"",
+            "#9ebaae on screen = 2.08:1 median, 2.05:1 in the worst tenth (needs 4.5) <p> \"This site is protected by reCAPTCHA and the Google\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "2 console or page errors",
+          "sample": [
+            "requestStorageAccess: Permission denied.",
+            "requestStorageAccess: Permission denied."
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "screenshots-capped",
+          "message": "Page is 12444px tall; only the first 14 screens were captured"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "founders-grotesk",
+            "share": 74
+          },
+          {
+            "family": "obviously-narrow",
+            "share": 26
+          }
+        ],
+        "fontSizes": [
+          61,
+          32,
+          24,
+          20,
+          16,
+          12
+        ],
+        "textColours": [
+          "#ffffff",
+          "#0c5235",
+          "#e5fc09",
+          "#fb4c01",
+          "#0c5334",
+          "#ffe816",
+          "#0c5234"
+        ],
+        "backgroundColours": [
+          "#0c5235",
+          "#e5fc09",
+          "#fff6e7",
+          "#00ce7d",
+          "#ffffff",
+          "#d542b7",
+          "#a4d8ff",
+          "#ffef9b",
+          "#2b4fac",
+          "#cfc7fb",
+          "#008d52",
+          "#fac5ff",
+          "#bdffd4",
+          "#ffdb21",
+          "#7f0a9d"
+        ],
+        "chromaticColours": 17,
+        "colourFamilies": 6,
+        "spacing": {
+          "distinct": 25,
+          "offScale": 11,
+          "values": [
+            1,
+            2,
+            4,
+            6,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            16,
+            18,
+            20,
+            24,
+            26,
+            28,
+            32,
+            40,
+            48,
+            56,
+            64,
+            89,
+            120,
+            388
+          ]
+        },
+        "radii": [
+          "100%",
+          "200px",
+          "80px",
+          "20px",
+          "40px",
+          "50%",
+          "4px"
+        ],
+        "shadows": 38,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 62,
+        "animatedElements": 17,
+        "cls": 0
+      },
+      "screenshots": [
+        "data/references/captures/ref-0009-classes/mobile-fold.png",
+        "data/references/captures/ref-0009-classes/mobile-page-01.png",
+        "data/references/captures/ref-0009-classes/mobile-page-02.png",
+        "data/references/captures/ref-0009-classes/mobile-page-03.png",
+        "data/references/captures/ref-0009-classes/mobile-page-04.png",
+        "data/references/captures/ref-0009-classes/mobile-page-05.png",
+        "data/references/captures/ref-0009-classes/mobile-page-06.png",
+        "data/references/captures/ref-0009-classes/mobile-page-07.png",
+        "data/references/captures/ref-0009-classes/mobile-page-08.png",
+        "data/references/captures/ref-0009-classes/mobile-page-09.png",
+        "data/references/captures/ref-0009-classes/mobile-page-10.png",
+        "data/references/captures/ref-0009-classes/mobile-page-11.png",
+        "data/references/captures/ref-0009-classes/mobile-page-12.png",
+        "data/references/captures/ref-0009-classes/mobile-page-13.png",
+        "data/references/captures/ref-0009-classes/mobile-page-14.png"
+      ]
+    }
+  },
+  "checks": {
+    "reducedMotion": {
+      "findings": [],
+      "screenshot": "data/references/captures/ref-0009-classes/reduced-motion-fold.png"
+    },
+    "noJavaScript": {
+      "findings": [],
+      "withJs": 6448,
+      "withoutJs": 12681
+    }
+  },
+  "summary": {
+    "fail": 3,
+    "warn": 10
+  },
+  "url": "https://summersmashtennis.ca/classes/",
+  "findings": [
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "7 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#0c5235 on screen = 4.45:1 median, 2.55:1 in the worst tenth (needs 4.5) <span> \"Group Lessons\"",
+        "#ffffff on screen = 2.07:1 median, 1.36:1 in the worst tenth (needs 4.5) <span> \"Youth Aces (11-16 yrs)\"",
+        "#fb4c01 on screen = 3.42:1 median, 2.37:1 in the worst tenth (needs 4.5) <span> \"4 spots left\"",
+        "#ffffff on screen = 3.97:1 median, 1.82:1 in the worst tenth (needs 4.5) <span> \"Mini Aces (6-7.5 yrs)\"",
+        "#ffe816 on screen = 3.41:1 median, 1.58:1 in the worst tenth (needs 4.5) <span> \"Tennis Mobility & Movement\""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "6 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#ffffff on screen = 2.07:1 median, 1.36:1 in the worst tenth (needs 4.5) <span> \"Youth Aces (11-16 yrs)\"",
+        "#fb4c01 on screen = 3.42:1 median, 2.37:1 in the worst tenth (needs 4.5) <span> \"4 spots left\"",
+        "#ffffff on screen = 3.97:1 median, 1.82:1 in the worst tenth (needs 4.5) <span> \"Mini Aces (6-7.5 yrs)\"",
+        "#ffe816 on screen = 3.41:1 median, 1.58:1 in the worst tenth (needs 4.5) <span> \"Tennis Mobility & Movement\"",
+        "#9ebaae on screen = 2.08:1 median, 2.08:1 in the worst tenth (needs 4.5) <p> \"This site is protected by reCAPTCHA and the Google\""
+      ],
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tap-target",
+      "message": "31 controls smaller than 24x24px on a phone",
+      "sample": [
+        "36x23 <a> \"Kids\"",
+        "44x23 <a> \"Adult\"",
+        "79x15 <button> \"Clear All\"",
+        "16x16 <input> \"\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "line-length",
+      "message": "About 96 characters per line (55-75 reads best)",
+      "sample": [
+        "<p> \"By continuing, you agree to our Privacy Policy. Yo\""
+      ],
+      "where": [
+        "desktop",
+        "tablet"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "too-many-colours",
+      "message": "17 distinct chromatic colours",
+      "sample": [
+        "#0c5235",
+        "#e5fc09",
+        "#00ce7d",
+        "#fb4c01",
+        "#d542b7",
+        "#a4d8ff",
+        "#0c5334",
+        "#ffef9b"
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "shadow-on-everything",
+      "message": "38 boxes carry a drop shadow",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "centred-hero-two-ctas",
+      "message": "Centred hero headline with two buttons, the most common generated layout",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "console-errors",
+      "message": "2 console or page errors",
+      "sample": [
+        "requestStorageAccess: Permission denied.",
+        "requestStorageAccess: Permission denied."
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "shadow-on-everything",
+      "message": "34 boxes carry a drop shadow",
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "headline-lines",
+      "message": "h2 runs to 4 lines",
+      "sample": [
+        "<h2> \"Notify me when registration opens\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "text-at-edge",
+      "message": "2 text elements within 12px of the screen edge",
+      "sample": [
+        "<span> \"Prorated at Checkout\"",
+        "<span> \"Prorated at Checkout\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "shadow-on-everything",
+      "message": "7 boxes carry a drop shadow",
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "screenshots-capped",
+      "message": "Page is 12444px tall; only the first 14 screens were captured",
+      "where": [
+        "mobile"
+      ]
+    }
+  ]
+}

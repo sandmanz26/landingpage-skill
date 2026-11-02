@@ -1,0 +1,476 @@
+{
+  "url": "https://summersmashtennis.ca/private-lessons/",
+  "time": "2026-11-02T04:02:48.439Z",
+  "sheets": {
+    "desktop": "data/references/captures/ref-0009-private/sheet-desktop.png",
+    "mobile": "data/references/captures/ref-0009-private/sheet-mobile.png",
+    "motion": "data/references/captures/ref-0009-private/motion-sheet.png"
+  },
+  "load": {
+    "status": 200,
+    "retries": 0,
+    "failed": false
+  },
+  "overlaysDismissed": [],
+  "outline": {
+    "title": "Private Tennis Lessons in Vancouver - Summer Smash Tennis",
+    "description": "Get personalized private lessons from certified Senior Coaches. 1-on-1 coaching tailored to all ages and levels for faster skill development.",
+    "headings": [
+      "H1 4% PRIVATE LESSONS",
+      "H2 11% CHOOSE YOUR LESSON & GROUP SIZE",
+      "H2 40% COMPLETE YOUR BOOKING",
+      "H2 50% FAQS"
+    ],
+    "actions": [
+      {
+        "label": "GROUP LESSONS",
+        "count": 1,
+        "firstAt": 2,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "PRIVATE LESSONS",
+        "count": 1,
+        "firstAt": 2,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "REGISTRATION DATES",
+        "count": 1,
+        "firstAt": 6,
+        "firstScreen": true,
+        "sticky": false
+      },
+      {
+        "label": "How to book a Private Lesson?",
+        "count": 1,
+        "firstAt": 7,
+        "firstScreen": true,
+        "sticky": false
+      },
+      {
+        "label": "Buy on ActiveNet",
+        "count": 24,
+        "firstAt": 21,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "LESSON",
+        "count": 1,
+        "firstAt": 47,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "DATE",
+        "count": 1,
+        "firstAt": 47,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "LOCATION",
+        "count": 1,
+        "firstAt": 47,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "COACH",
+        "count": 1,
+        "firstAt": 47,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "CLEAR ALL",
+        "count": 1,
+        "firstAt": 47,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "SORT",
+        "count": 1,
+        "firstAt": 47,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "WHO CAN TAKE PRIVATE LESSONS?",
+        "count": 1,
+        "firstAt": 52,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "DO I PAY ON THIS WEBSITE OR ACTIVENET?",
+        "count": 1,
+        "firstAt": 55,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "WHAT RECEIPT DO I NEED TO UPLOAD?",
+        "count": 1,
+        "firstAt": 57,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "WHAT HAPPENS IF IT RAINS?",
+        "count": 1,
+        "firstAt": 67,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "CAN I CANCEL OR RESCHEDULE A LESSON?",
+        "count": 1,
+        "firstAt": 69,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "WHAT IS THE BENEFIT OF PRIVATE LESSONS?",
+        "count": 1,
+        "firstAt": 71,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "@SUMMER.SMASH.TENNIS",
+        "count": 1,
+        "firstAt": 76,
+        "firstScreen": false,
+        "sticky": false
+      }
+    ],
+    "prices": [
+      "$100.00",
+      "$95.00",
+      "$92.50",
+      "$90.00",
+      "$62.50",
+      "$60.00",
+      "$58.13",
+      "$56.25",
+      "$48.33",
+      "$46.67",
+      "$45.00",
+      "$43.50"
+    ],
+    "proofMentions": {},
+    "logoImages": 0,
+    "forms": 2,
+    "imagery": {
+      "photos": 10,
+      "illustrations": 1,
+      "videos": 0
+    },
+    "pageHeight": 5435
+  },
+  "motion": {
+    "libraries": {
+      "gsap": true,
+      "scrollTrigger": true,
+      "splitText": false,
+      "lenis": false,
+      "locomotive": false,
+      "swiper": true,
+      "lottie": true,
+      "framerMotion": false,
+      "viewTransitions": false
+    },
+    "stickyPanels": [],
+    "maxRunning": 2,
+    "durationsMs": {
+      "min": 250,
+      "max": 40000
+    },
+    "easings": [
+      "linear",
+      "ease-out"
+    ],
+    "properties": [
+      "transform",
+      "boxShadow"
+    ],
+    "movingWithoutInput": 0,
+    "movingWithoutInputFurtherDown": [
+      {
+        "y": 3600,
+        "moving": 1
+      },
+      {
+        "y": 4500,
+        "moving": 1
+      }
+    ],
+    "scriptDrivenOnScroll": 1,
+    "infiniteLoops": 10,
+    "infiniteLoopsWithText": 0,
+    "pauseControl": false,
+    "steps": [
+      {
+        "y": 450,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 900,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1350,
+        "running": 2,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.matrix-price",
+            "hasText": true,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "boxShadow"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1800,
+        "running": 2,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "div.matrix-price",
+            "hasText": true,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "boxShadow"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 2250,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 2700,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 3150,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 3600,
+        "running": 1,
+        "scriptDriven": 1,
+        "idleMoving": 1,
+        "sample": [
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 4050,
+        "running": 1,
+        "scriptDriven": 1,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 4500,
+        "running": 1,
+        "scriptDriven": 1,
+        "idleMoving": 1,
+        "sample": [
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      }
+    ]
+  },
+  "smoothness": {
+    "page": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 5081,
+      "frames": 287,
+      "fps": 56.5,
+      "medianMs": 16.7,
+      "p95Ms": 33.3,
+      "maxMs": 50,
+      "longFrames": 0,
+      "droppedShare": 1,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "baseline": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 1734,
+      "frames": 104,
+      "fps": 60,
+      "medianMs": 16.7,
+      "p95Ms": 16.8,
+      "maxMs": 17,
+      "longFrames": 0,
+      "droppedShare": 0,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "longFramesOverBaseline": 0,
+    "p95OverBaseline": 16.5
+  },
+  "reducedMotion": {
+    "movingWithoutInput": 1,
+    "movingOnScroll": 1,
+    "idleNavigation": null,
+    "loadFailed": false
+  },
+  "idleRunLoadFailed": false,
+  "idleNavigation": null
+}

@@ -1,0 +1,84 @@
+{
+  "list": "data/references/batch-004.txt",
+  "jobs": 3,
+  "seconds": 969,
+  "results": [
+    {
+      "id": "ref-0009-method",
+      "url": "https://summersmashtennis.ca/method/",
+      "ok": true,
+      "inspectSeconds": 217,
+      "evidenceSeconds": 251,
+      "flags": [
+        "under reduced motion 1 elements still move on their own and 14 move with the scroll",
+        "elements keep moving with no input further down at 900px (3), 4500px (1); no pause control found",
+        "no price on the page"
+      ],
+      "error": null
+    },
+    {
+      "id": "ref-0009",
+      "url": "https://summersmashtennis.ca/",
+      "ok": true,
+      "inspectSeconds": 243,
+      "evidenceSeconds": 252,
+      "flags": [
+        "under reduced motion 6 elements still move on their own and 9 move with the scroll",
+        "7 elements move with no input at the top (loops, marquees, auto-play)",
+        "elements keep moving with no input further down at 900px (2), 2700px (1), 4500px (3); no pause control found",
+        "no price on the page"
+      ],
+      "error": null
+    },
+    {
+      "id": "ref-0009-classes",
+      "url": "https://summersmashtennis.ca/classes/",
+      "ok": true,
+      "inspectSeconds": 256,
+      "evidenceSeconds": 250,
+      "flags": [
+        "under reduced motion 1 elements still move on their own and 1 move with the scroll",
+        "elements keep moving with no input further down at 3600px (1), 4500px (1); no pause control found",
+        "no price on the page"
+      ],
+      "error": null
+    },
+    {
+      "id": "ref-0009-private",
+      "url": "https://summersmashtennis.ca/private-lessons/",
+      "ok": true,
+      "inspectSeconds": 203,
+      "evidenceSeconds": 250,
+      "flags": [
+        "under reduced motion 1 elements still move on their own and 1 move with the scroll",
+        "elements keep moving with no input further down at 3600px (1), 4500px (1); no pause control found"
+      ],
+      "error": null
+    },
+    {
+      "id": "ref-0009-coaches",
+      "url": "https://summersmashtennis.ca/coaches/",
+      "ok": true,
+      "inspectSeconds": 243,
+      "evidenceSeconds": 256,
+      "flags": [
+        "under reduced motion 1 elements still move on their own and 1 move with the scroll",
+        "no price on the page"
+      ],
+      "error": null
+    },
+    {
+      "id": "ref-0009-about",
+      "url": "https://summersmashtennis.ca/about/",
+      "ok": true,
+      "inspectSeconds": 212,
+      "evidenceSeconds": 251,
+      "flags": [
+        "under reduced motion 1 elements still move on their own and 2 move with the scroll",
+        "elements keep moving with no input further down at 4500px (1); no pause control found",
+        "no price on the page"
+      ],
+      "error": null
+    }
+  ]
+}

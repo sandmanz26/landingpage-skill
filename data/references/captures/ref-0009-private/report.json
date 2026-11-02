@@ -1,0 +1,573 @@
+{
+  "target": "https://summersmashtennis.ca/private-lessons/",
+  "time": "2026-11-02T03:55:16.051Z",
+  "rules": {
+    "purple-gradient": "warn",
+    "gradient": "info",
+    "glass": "info",
+    "system-font-only": "warn",
+    "too-many-font-sizes": "warn",
+    "too-many-colours": "warn",
+    "shadow-on-everything": "warn",
+    "icon-card-row": "warn",
+    "centred-hero-two-ctas": "warn",
+    "emoji": "warn"
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "pageHeight": 5435,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "line-length",
+          "message": "About 103 characters per line (55-75 reads best)",
+          "sample": [
+            "<p> \"Please upload the receipt you receive after comple\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "line-length",
+          "message": "About 98 characters per line (55-75 reads best)",
+          "sample": [
+            "<p> \"Yes, one person fills out the form as the primary \""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "line-length",
+          "message": "About 101 characters per line (55-75 reads best)",
+          "sample": [
+            "<p> \"Please email info@summersmashtennis.ca to add addi\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "line-length",
+          "message": "About 106 characters per line (55-75 reads best)",
+          "sample": [
+            "<p> \"Private lessons are designed for kids and adults o\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "shadow-on-everything",
+          "message": "9 boxes carry a drop shadow"
+        },
+        {
+          "severity": "WARN",
+          "rule": "centred-hero-two-ctas",
+          "message": "Centred hero headline with two buttons, the most common generated layout"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "3 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#0c5235 on screen = 4.45:1 median, 2.55:1 in the worst tenth (needs 4.5) <span> \"Group Lessons\"",
+            "#9ebaae on screen = 2.08:1 median, 2.08:1 in the worst tenth (needs 4.5) <p> \"This site is protected by reCAPTCHA and the Google\"",
+            "#6d9786 on screen = 2.82:1 median, 1.81:1 in the worst tenth (needs 4.5) <a> \"Privacy Policy\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "2 console or page errors",
+          "sample": [
+            "requestStorageAccess: Permission denied.",
+            "requestStorageAccess: Permission denied."
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "founders-grotesk",
+            "share": 63
+          },
+          {
+            "family": "obviously-narrow",
+            "share": 37
+          }
+        ],
+        "fontSizes": [
+          90,
+          61,
+          48,
+          32,
+          24,
+          20,
+          16,
+          12
+        ],
+        "textColours": [
+          "#ffffff",
+          "#0c5235",
+          "#e5fc09",
+          "#0c5234"
+        ],
+        "backgroundColours": [
+          "#0c5235",
+          "#e5fc09",
+          "#fff6e7",
+          "#00ce7d",
+          "#ffffff"
+        ],
+        "chromaticColours": 4,
+        "colourFamilies": 2,
+        "spacing": {
+          "distinct": 23,
+          "offScale": 10,
+          "values": [
+            1,
+            2,
+            6,
+            8,
+            9,
+            10,
+            11,
+            12,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            30,
+            32,
+            40,
+            48,
+            56,
+            64,
+            96,
+            184,
+            428
+          ]
+        },
+        "radii": [
+          "100%",
+          "200px",
+          "40px",
+          "20px",
+          "50%",
+          "80px",
+          "4px"
+        ],
+        "shadows": 11,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 101,
+        "animatedElements": 1,
+        "cls": 0
+      },
+      "screenshots": [
+        "data/references/captures/ref-0009-private/desktop-fold.png",
+        "data/references/captures/ref-0009-private/desktop-page-01.png",
+        "data/references/captures/ref-0009-private/desktop-page-02.png",
+        "data/references/captures/ref-0009-private/desktop-page-03.png",
+        "data/references/captures/ref-0009-private/desktop-page-04.png",
+        "data/references/captures/ref-0009-private/desktop-page-05.png",
+        "data/references/captures/ref-0009-private/desktop-page-06.png",
+        "data/references/captures/ref-0009-private/desktop-page-07.png"
+      ]
+    },
+    "tablet": {
+      "width": 768,
+      "pageHeight": 4929,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "shadow-on-everything",
+          "message": "7 boxes carry a drop shadow"
+        },
+        {
+          "severity": "WARN",
+          "rule": "centred-hero-two-ctas",
+          "message": "Centred hero headline with two buttons, the most common generated layout"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "2 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#9ebaae on screen = 2.08:1 median, 2.08:1 in the worst tenth (needs 4.5) <p> \"This site is protected by reCAPTCHA and the Google\"",
+            "#6d9786 on screen = 2.82:1 median, 1.81:1 in the worst tenth (needs 4.5) <a> \"Privacy Policy\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "2 console or page errors",
+          "sample": [
+            "requestStorageAccess: Permission denied.",
+            "requestStorageAccess: Permission denied."
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "founders-grotesk",
+            "share": 59
+          },
+          {
+            "family": "obviously-narrow",
+            "share": 41
+          }
+        ],
+        "fontSizes": [
+          61,
+          40,
+          32,
+          24,
+          20,
+          16,
+          12
+        ],
+        "textColours": [
+          "#ffffff",
+          "#0c5235",
+          "#e5fc09",
+          "#0c5234"
+        ],
+        "backgroundColours": [
+          "#0c5235",
+          "#e5fc09",
+          "#fff6e7",
+          "#00ce7d",
+          "#ffffff"
+        ],
+        "chromaticColours": 4,
+        "colourFamilies": 2,
+        "spacing": {
+          "distinct": 23,
+          "offScale": 9,
+          "values": [
+            1,
+            2,
+            4,
+            8,
+            9,
+            10,
+            11,
+            12,
+            14,
+            16,
+            18,
+            20,
+            24,
+            28,
+            30,
+            32,
+            40,
+            48,
+            56,
+            120,
+            152,
+            333,
+            388
+          ]
+        },
+        "radii": [
+          "100%",
+          "200px",
+          "36px",
+          "20px",
+          "80px"
+        ],
+        "shadows": 12,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 69,
+        "animatedElements": 1,
+        "cls": 0
+      },
+      "screenshots": [
+        "data/references/captures/ref-0009-private/tablet-fold.png",
+        "data/references/captures/ref-0009-private/tablet-page-01.png",
+        "data/references/captures/ref-0009-private/tablet-page-02.png",
+        "data/references/captures/ref-0009-private/tablet-page-03.png",
+        "data/references/captures/ref-0009-private/tablet-page-04.png",
+        "data/references/captures/ref-0009-private/tablet-page-05.png"
+      ]
+    },
+    "mobile": {
+      "width": 390,
+      "pageHeight": 6186,
+      "findings": [
+        {
+          "severity": "FAIL",
+          "rule": "tap-target",
+          "message": "6 controls smaller than 24x24px on a phone",
+          "sample": [
+            "36x23 <a> \"Kids\"",
+            "44x23 <a> \"Adult\"",
+            "79x15 <button> \"Clear All\"",
+            "81x23 <a> \"ActiveNet\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "shadow-on-everything",
+          "message": "7 boxes carry a drop shadow"
+        },
+        {
+          "severity": "WARN",
+          "rule": "centred-hero-two-ctas",
+          "message": "Centred hero headline with two buttons, the most common generated layout"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "2 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#9ebaae on screen = 2.08:1 median, 2.05:1 in the worst tenth (needs 4.5) <p> \"This site is protected by reCAPTCHA and the Google\"",
+            "#6d9786 on screen = 2.82:1 median, 1.81:1 in the worst tenth (needs 4.5) <a> \"Privacy Policy\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "2 console or page errors",
+          "sample": [
+            "requestStorageAccess: Permission denied.",
+            "requestStorageAccess: Permission denied."
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "founders-grotesk",
+            "share": 59
+          },
+          {
+            "family": "obviously-narrow",
+            "share": 41
+          }
+        ],
+        "fontSizes": [
+          61,
+          40,
+          32,
+          24,
+          20,
+          16,
+          12
+        ],
+        "textColours": [
+          "#ffffff",
+          "#0c5235",
+          "#e5fc09",
+          "#0c5234"
+        ],
+        "backgroundColours": [
+          "#0c5235",
+          "#e5fc09",
+          "#fff6e7",
+          "#00ce7d",
+          "#ffffff"
+        ],
+        "chromaticColours": 4,
+        "colourFamilies": 2,
+        "spacing": {
+          "distinct": 23,
+          "offScale": 9,
+          "values": [
+            1,
+            2,
+            4,
+            8,
+            9,
+            10,
+            11,
+            12,
+            14,
+            16,
+            18,
+            20,
+            24,
+            28,
+            30,
+            32,
+            40,
+            48,
+            56,
+            89,
+            120,
+            152,
+            388
+          ]
+        },
+        "radii": [
+          "100%",
+          "200px",
+          "36px",
+          "20px",
+          "80px"
+        ],
+        "shadows": 12,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 69,
+        "animatedElements": 4,
+        "cls": 0
+      },
+      "screenshots": [
+        "data/references/captures/ref-0009-private/mobile-fold.png",
+        "data/references/captures/ref-0009-private/mobile-page-01.png",
+        "data/references/captures/ref-0009-private/mobile-page-02.png",
+        "data/references/captures/ref-0009-private/mobile-page-03.png",
+        "data/references/captures/ref-0009-private/mobile-page-04.png",
+        "data/references/captures/ref-0009-private/mobile-page-05.png",
+        "data/references/captures/ref-0009-private/mobile-page-06.png",
+        "data/references/captures/ref-0009-private/mobile-page-07.png",
+        "data/references/captures/ref-0009-private/mobile-page-08.png"
+      ]
+    }
+  },
+  "checks": {
+    "reducedMotion": {
+      "findings": [],
+      "screenshot": "data/references/captures/ref-0009-private/reduced-motion-fold.png"
+    },
+    "noJavaScript": {
+      "findings": [],
+      "withJs": 7995,
+      "withoutJs": 7936
+    }
+  },
+  "summary": {
+    "fail": 3,
+    "warn": 8
+  },
+  "url": "https://summersmashtennis.ca/private-lessons/",
+  "findings": [
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "3 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#0c5235 on screen = 4.45:1 median, 2.55:1 in the worst tenth (needs 4.5) <span> \"Group Lessons\"",
+        "#9ebaae on screen = 2.08:1 median, 2.08:1 in the worst tenth (needs 4.5) <p> \"This site is protected by reCAPTCHA and the Google\"",
+        "#6d9786 on screen = 2.82:1 median, 1.81:1 in the worst tenth (needs 4.5) <a> \"Privacy Policy\""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "2 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#9ebaae on screen = 2.08:1 median, 2.08:1 in the worst tenth (needs 4.5) <p> \"This site is protected by reCAPTCHA and the Google\"",
+        "#6d9786 on screen = 2.82:1 median, 1.81:1 in the worst tenth (needs 4.5) <a> \"Privacy Policy\""
+      ],
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tap-target",
+      "message": "6 controls smaller than 24x24px on a phone",
+      "sample": [
+        "36x23 <a> \"Kids\"",
+        "44x23 <a> \"Adult\"",
+        "79x15 <button> \"Clear All\"",
+        "81x23 <a> \"ActiveNet\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "line-length",
+      "message": "About 103 characters per line (55-75 reads best)",
+      "sample": [
+        "<p> \"Please upload the receipt you receive after comple\""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "line-length",
+      "message": "About 98 characters per line (55-75 reads best)",
+      "sample": [
+        "<p> \"Yes, one person fills out the form as the primary \""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "line-length",
+      "message": "About 101 characters per line (55-75 reads best)",
+      "sample": [
+        "<p> \"Please email info@summersmashtennis.ca to add addi\""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "line-length",
+      "message": "About 106 characters per line (55-75 reads best)",
+      "sample": [
+        "<p> \"Private lessons are designed for kids and adults o\""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "shadow-on-everything",
+      "message": "9 boxes carry a drop shadow",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "centred-hero-two-ctas",
+      "message": "Centred hero headline with two buttons, the most common generated layout",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "console-errors",
+      "message": "2 console or page errors",
+      "sample": [
+        "requestStorageAccess: Permission denied.",
+        "requestStorageAccess: Permission denied."
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "shadow-on-everything",
+      "message": "7 boxes carry a drop shadow",
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    }
+  ]
+}

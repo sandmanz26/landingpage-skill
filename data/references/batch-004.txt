@@ -1,0 +1,7 @@
+# batch-004 (2026-11-02) Summer Smash Tennis, home + subpages
+ref-0009 https://summersmashtennis.ca/
+ref-0009-classes https://summersmashtennis.ca/classes/
+ref-0009-method https://summersmashtennis.ca/method/
+ref-0009-coaches https://summersmashtennis.ca/coaches/
+ref-0009-private https://summersmashtennis.ca/private-lessons/
+ref-0009-about https://summersmashtennis.ca/about/

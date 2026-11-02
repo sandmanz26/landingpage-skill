@@ -1,0 +1,934 @@
+{
+  "url": "https://summersmashtennis.ca/",
+  "time": "2026-11-02T03:55:15.788Z",
+  "sheets": {
+    "desktop": "data/references/captures/ref-0009/sheet-desktop.png",
+    "mobile": "data/references/captures/ref-0009/sheet-mobile.png",
+    "motion": "data/references/captures/ref-0009/motion-sheet.png"
+  },
+  "load": {
+    "status": 200,
+    "retries": 0,
+    "failed": false
+  },
+  "overlaysDismissed": [],
+  "outline": {
+    "title": "Tennis Lessons in Vancouver | Summer Smash Tennis",
+    "description": "Summer Smash Tennis is the leading provider of public tennis lessons in Vancouver. We offer group and private lessons for kids and adults.",
+    "headings": [
+      "H1 4% VANCOUVER’S BEST TENNIS LESSONS",
+      "H2 14% INDOOR GROUP CLASSES",
+      "H2 30% WE OFFER BEGINNER, INTERMEDIATE, AND ADVANCED TENNIS LESSONS FOR KIDS AND ADULTS.",
+      "H2 41% THE SUMMER SMASH PROGRESSION GIVES STUDENTS THE FOUNDATION TO EXCEL AS PLAYERS FOR LIFE.",
+      "H2 51% LOCATIONS ACROSS VANCOUVER",
+      "H2 71% SINCE 2012, OUR GOAL HAS BEEN TO PROVIDE VANCOUVER WITH A WELCOMING AND EFFECTIVE WAY OF L"
+    ],
+    "actions": [
+      {
+        "label": "GROUP LESSONS",
+        "count": 2,
+        "firstAt": 1,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "PRIVATE LESSONS",
+        "count": 2,
+        "firstAt": 1,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "VIEW INDOOR CLASSES",
+        "count": 1,
+        "firstAt": 17,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "KIDS LESSONS",
+        "count": 1,
+        "firstAt": 33,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "ADULT LESSONS",
+        "count": 1,
+        "firstAt": 33,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "OUR METHOD",
+        "count": 1,
+        "firstAt": 44,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "FIND A CLASS",
+        "count": 1,
+        "firstAt": 57,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "OUR STORY",
+        "count": 1,
+        "firstAt": 75,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "@SUMMER.SMASH.TENNIS",
+        "count": 1,
+        "firstAt": 79,
+        "firstScreen": false,
+        "sticky": false
+      }
+    ],
+    "prices": [],
+    "proofMentions": {},
+    "logoImages": 4,
+    "forms": 1,
+    "imagery": {
+      "photos": 21,
+      "illustrations": 1,
+      "videos": 0
+    },
+    "pageHeight": 6465
+  },
+  "motion": {
+    "libraries": {
+      "gsap": true,
+      "scrollTrigger": true,
+      "splitText": false,
+      "lenis": false,
+      "locomotive": false,
+      "swiper": true,
+      "lottie": true,
+      "framerMotion": false,
+      "viewTransitions": false
+    },
+    "stickyPanels": [],
+    "maxRunning": 7,
+    "durationsMs": {
+      "min": 250,
+      "max": 128000
+    },
+    "easings": [
+      "linear",
+      "ease-out"
+    ],
+    "properties": [
+      "transform",
+      "boxShadow"
+    ],
+    "movingWithoutInput": 7,
+    "movingWithoutInputFurtherDown": [
+      {
+        "y": 900,
+        "moving": 2
+      },
+      {
+        "y": 2700,
+        "moving": 1
+      },
+      {
+        "y": 4500,
+        "moving": 3
+      }
+    ],
+    "scriptDrivenOnScroll": 5,
+    "infiniteLoops": 58,
+    "infiniteLoopsWithText": 0,
+    "pauseControl": false,
+    "steps": [
+      {
+        "y": 450,
+        "running": 6,
+        "scriptDriven": 5,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.tennis-ball",
+            "hasText": false,
+            "duration": 800,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "ul.partner-component_list",
+            "hasText": false,
+            "duration": 128000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 900,
+        "running": 6,
+        "scriptDriven": 3,
+        "idleMoving": 2,
+        "sample": [
+          {
+            "target": "div.tennis-ball",
+            "hasText": false,
+            "duration": 800,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "ul.partner-component_list",
+            "hasText": false,
+            "duration": 128000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1350,
+        "running": 6,
+        "scriptDriven": 2,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.tennis-ball",
+            "hasText": false,
+            "duration": 800,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "ul.partner-component_list",
+            "hasText": false,
+            "duration": 128000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1800,
+        "running": 6,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "div.tennis-ball",
+            "hasText": false,
+            "duration": 800,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "ul.partner-component_list",
+            "hasText": false,
+            "duration": 128000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 2250,
+        "running": 6,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.tennis-ball",
+            "hasText": false,
+            "duration": 800,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "ul.partner-component_list",
+            "hasText": false,
+            "duration": 128000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 2700,
+        "running": 6,
+        "scriptDriven": 1,
+        "idleMoving": 1,
+        "sample": [
+          {
+            "target": "div.tennis-ball",
+            "hasText": false,
+            "duration": 800,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "ul.partner-component_list",
+            "hasText": false,
+            "duration": 128000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 3150,
+        "running": 6,
+        "scriptDriven": 1,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.tennis-ball",
+            "hasText": false,
+            "duration": 800,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "ul.partner-component_list",
+            "hasText": false,
+            "duration": 128000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 3600,
+        "running": 6,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "div.tennis-ball",
+            "hasText": false,
+            "duration": 800,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "ul.partner-component_list",
+            "hasText": false,
+            "duration": 128000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 4050,
+        "running": 7,
+        "scriptDriven": 1,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "span.btn-circle",
+            "hasText": false,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "boxShadow"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.tennis-ball",
+            "hasText": false,
+            "duration": 800,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "ul.partner-component_list",
+            "hasText": false,
+            "duration": 128000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 4500,
+        "running": 7,
+        "scriptDriven": 3,
+        "idleMoving": 3,
+        "sample": [
+          {
+            "target": "span.btn-circle",
+            "hasText": false,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "boxShadow"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.tennis-ball",
+            "hasText": false,
+            "duration": 800,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "svg",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "ul.partner-component_list",
+            "hasText": false,
+            "duration": 128000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      }
+    ]
+  },
+  "smoothness": {
+    "page": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 6190,
+      "frames": 298,
+      "fps": 48.1,
+      "medianMs": 16.7,
+      "p95Ms": 33.4,
+      "maxMs": 67,
+      "longFrames": 2,
+      "droppedShare": 9,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "baseline": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 1733,
+      "frames": 104,
+      "fps": 60,
+      "medianMs": 16.7,
+      "p95Ms": 16.8,
+      "maxMs": 17,
+      "longFrames": 0,
+      "droppedShare": 0,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "longFramesOverBaseline": 2,
+    "p95OverBaseline": 16.6
+  },
+  "reducedMotion": {
+    "movingWithoutInput": 6,
+    "movingOnScroll": 9,
+    "idleNavigation": null,
+    "loadFailed": false
+  },
+  "idleRunLoadFailed": false,
+  "idleNavigation": null
+}

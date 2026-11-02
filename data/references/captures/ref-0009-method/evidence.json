@@ -1,0 +1,445 @@
+{
+  "url": "https://summersmashtennis.ca/method/",
+  "time": "2026-11-02T03:54:48.173Z",
+  "sheets": {
+    "desktop": "data/references/captures/ref-0009-method/sheet-desktop.png",
+    "mobile": "data/references/captures/ref-0009-method/sheet-mobile.png",
+    "motion": "data/references/captures/ref-0009-method/motion-sheet.png"
+  },
+  "load": {
+    "status": 200,
+    "retries": 0,
+    "failed": false
+  },
+  "overlaysDismissed": [],
+  "outline": {
+    "title": "Method - Summer Smash Tennis",
+    "description": "The Summer Smash Progression gives students the foundation needed to excel as recreational or competitive tennis players.",
+    "headings": [
+      "H1 3% WHAT MAKES US DIFFERENT",
+      "H2 13% THE PROGRESSION",
+      "H2 47% KIDS PATHWAY",
+      "H2 60% ADULT PATHWAY",
+      "H2 73% REGISTER FOR PROGRAMS"
+    ],
+    "actions": [
+      {
+        "label": "GROUP LESSONS",
+        "count": 1,
+        "firstAt": 1,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "PRIVATE LESSONS",
+        "count": 1,
+        "firstAt": 1,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Kids Pathway",
+        "count": 1,
+        "firstAt": 9,
+        "firstScreen": true,
+        "sticky": false
+      },
+      {
+        "label": "Adult Pathway",
+        "count": 1,
+        "firstAt": 9,
+        "firstScreen": true,
+        "sticky": false
+      },
+      {
+        "label": "MINI (4-7.5 YRS)",
+        "count": 1,
+        "firstAt": 51,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "JUNIOR (7.5-10 YRS)",
+        "count": 1,
+        "firstAt": 52,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "YOUTH (11-16 YRS)",
+        "count": 1,
+        "firstAt": 54,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "TEEN (13-18 YRS)",
+        "count": 1,
+        "firstAt": 55,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "BEGINNER (1.0)",
+        "count": 1,
+        "firstAt": 64,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "BEGINNER+ (1.5)",
+        "count": 1,
+        "firstAt": 65,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "BEGINNER++ (2.0)",
+        "count": 1,
+        "firstAt": 66,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "INTERMEDIATE (2.5-3.0)",
+        "count": 1,
+        "firstAt": 68,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "INTERMEDIATE (3.0-3.5)",
+        "count": 1,
+        "firstAt": 69,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "VIEW ALL LESSONS",
+        "count": 1,
+        "firstAt": 76,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "@SUMMER.SMASH.TENNIS",
+        "count": 1,
+        "firstAt": 79,
+        "firstScreen": false,
+        "sticky": false
+      }
+    ],
+    "prices": [],
+    "proofMentions": {
+      "rating": 1
+    },
+    "logoImages": 0,
+    "forms": 1,
+    "imagery": {
+      "photos": 16,
+      "illustrations": 1,
+      "videos": 0
+    },
+    "pageHeight": 6483
+  },
+  "motion": {
+    "libraries": {
+      "gsap": true,
+      "scrollTrigger": true,
+      "splitText": false,
+      "lenis": false,
+      "locomotive": false,
+      "swiper": true,
+      "lottie": true,
+      "framerMotion": false,
+      "viewTransitions": false
+    },
+    "stickyPanels": [],
+    "maxRunning": 2,
+    "durationsMs": {
+      "min": 250,
+      "max": 40000
+    },
+    "easings": [
+      "linear",
+      "ease-out"
+    ],
+    "properties": [
+      "transform",
+      "boxShadow"
+    ],
+    "movingWithoutInput": 0,
+    "movingWithoutInputFurtherDown": [
+      {
+        "y": 900,
+        "moving": 3
+      },
+      {
+        "y": 4500,
+        "moving": 1
+      }
+    ],
+    "scriptDrivenOnScroll": 2,
+    "infiniteLoops": 10,
+    "infiniteLoopsWithText": 0,
+    "pauseControl": false,
+    "steps": [
+      {
+        "y": 450,
+        "running": 1,
+        "scriptDriven": 1,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 900,
+        "running": 1,
+        "scriptDriven": 2,
+        "idleMoving": 3,
+        "sample": [
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1350,
+        "running": 2,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "span.btn-circle",
+            "hasText": false,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "boxShadow"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1800,
+        "running": 2,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "span.btn-circle",
+            "hasText": false,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "boxShadow"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 2250,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 2700,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 3150,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 3600,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 4050,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 4500,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": 1,
+        "sample": [
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      }
+    ]
+  },
+  "smoothness": {
+    "page": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 6066,
+      "frames": 315,
+      "fps": 51.9,
+      "medianMs": 16.7,
+      "p95Ms": 33.4,
+      "maxMs": 50,
+      "longFrames": 0,
+      "droppedShare": 3,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "baseline": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 1727,
+      "frames": 104,
+      "fps": 60.2,
+      "medianMs": 16.7,
+      "p95Ms": 16.7,
+      "maxMs": 17,
+      "longFrames": 0,
+      "droppedShare": 0,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "longFramesOverBaseline": 0,
+    "p95OverBaseline": 16.7
+  },
+  "reducedMotion": {
+    "movingWithoutInput": 1,
+    "movingOnScroll": 14,
+    "idleNavigation": null,
+    "loadFailed": false
+  },
+  "idleRunLoadFailed": false,
+  "idleNavigation": null
+}

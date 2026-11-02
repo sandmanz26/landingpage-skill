@@ -1,0 +1,117 @@
+{
+  "url": "https://summersmashtennis.ca/about/",
+  "readAt": "2026-11-02T04:03:10.064Z",
+  "tags": [
+    "shadowed",
+    "expressive-type",
+    "scroll-choreography",
+    "endless-motion",
+    "photography"
+  ],
+  "palette": {
+    "chromatic": 5,
+    "families": 3,
+    "text": [
+      "#ffffff",
+      "#0c5235",
+      "#e5fc09",
+      "#0c5234"
+    ],
+    "backgrounds": [
+      "#0c5235",
+      "#e5fc09",
+      "#fff6e7",
+      "#00ce7d",
+      "#ffffff",
+      "#a4d8ff"
+    ],
+    "gradients": 0,
+    "shadows": 10,
+    "blur": 0
+  },
+  "type": {
+    "families": [
+      {
+        "family": "founders-grotesk",
+        "share": 82
+      },
+      {
+        "family": "obviously-narrow",
+        "share": 18
+      }
+    ],
+    "sizes": {
+      "desktop": [
+        90,
+        61,
+        48,
+        24,
+        20,
+        16,
+        12
+      ],
+      "mobile": [
+        61,
+        40,
+        32,
+        24,
+        20,
+        16,
+        12
+      ]
+    },
+    "display": 90,
+    "body": 16,
+    "ratio": 5.6
+  },
+  "shape": {
+    "radii": [
+      "100%",
+      "200px",
+      "20px"
+    ]
+  },
+  "spacing": {
+    "distinct": 17,
+    "offScale": 4
+  },
+  "motion": {
+    "libraries": [
+      "gsap",
+      "scrollTrigger",
+      "swiper",
+      "lottie"
+    ],
+    "stickyPanels": 0,
+    "durationsMs": {
+      "min": 250,
+      "max": 40000
+    },
+    "easings": [
+      "linear",
+      "ease-out"
+    ],
+    "reducedMotionRespected": true,
+    "smoothness": {
+      "fps": 49.9,
+      "longFrames": 2,
+      "baselineLongFrames": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    }
+  },
+  "imagery": {
+    "photos": 20,
+    "illustrations": 1,
+    "videos": 0
+  },
+  "layout": {
+    "pageHeight": 6205,
+    "screens": 7
+  },
+  "doNotCopy": [
+    "contrast: 3 text elements below WCAG AA (measured on screen pixels)",
+    "contrast: 4 text elements below WCAG AA (measured on screen pixels)",
+    "headline-lines: h1 runs to 4 lines",
+    "tap-target: 3 controls smaller than 24x24px on a phone"
+  ]
+}

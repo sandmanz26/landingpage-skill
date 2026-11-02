@@ -1,0 +1,412 @@
+{
+  "url": "https://summersmashtennis.ca/classes/",
+  "time": "2026-11-02T03:55:27.398Z",
+  "sheets": {
+    "desktop": "data/references/captures/ref-0009-classes/sheet-desktop.png",
+    "mobile": "data/references/captures/ref-0009-classes/sheet-mobile.png",
+    "motion": "data/references/captures/ref-0009-classes/motion-sheet.png"
+  },
+  "load": {
+    "status": 200,
+    "retries": 0,
+    "failed": false
+  },
+  "overlaysDismissed": [],
+  "outline": {
+    "title": "Find a Class | Summer Smash Tennis",
+    "description": "We offer year-round tennis lessons for children and adults in Vancouver through our community centre and Park Board partners. View them here.",
+    "headings": [
+      "H1 4% FIND A CLASS",
+      "H2 2% NOTIFY ME WHEN REGISTRATION OPENS"
+    ],
+    "actions": [
+      {
+        "label": "GROUP LESSONS",
+        "count": 1,
+        "firstAt": 1,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "PRIVATE LESSONS",
+        "count": 1,
+        "firstAt": 1,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "AGE",
+        "count": 1,
+        "firstAt": 6,
+        "firstScreen": true,
+        "sticky": false
+      },
+      {
+        "label": "LESSON",
+        "count": 1,
+        "firstAt": 6,
+        "firstScreen": true,
+        "sticky": false
+      },
+      {
+        "label": "DATE",
+        "count": 1,
+        "firstAt": 6,
+        "firstScreen": true,
+        "sticky": false
+      },
+      {
+        "label": "LOCATION",
+        "count": 1,
+        "firstAt": 6,
+        "firstScreen": true,
+        "sticky": false
+      },
+      {
+        "label": "CLEAR ALL",
+        "count": 1,
+        "firstAt": 6,
+        "firstScreen": true,
+        "sticky": false
+      },
+      {
+        "label": "SORT",
+        "count": 1,
+        "firstAt": 6,
+        "firstScreen": true,
+        "sticky": false
+      },
+      {
+        "label": "REGISTER",
+        "count": 27,
+        "firstAt": 13,
+        "firstScreen": true,
+        "sticky": false
+      },
+      {
+        "label": "SUBMIT",
+        "count": 1,
+        "firstAt": 21,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "@SUMMER.SMASH.TENNIS",
+        "count": 1,
+        "firstAt": 76,
+        "firstScreen": false,
+        "sticky": false
+      }
+    ],
+    "prices": [],
+    "proofMentions": {},
+    "logoImages": 0,
+    "forms": 3,
+    "imagery": {
+      "photos": 10,
+      "illustrations": 1,
+      "videos": 0
+    },
+    "pageHeight": 5640
+  },
+  "motion": {
+    "libraries": {
+      "gsap": true,
+      "scrollTrigger": true,
+      "splitText": false,
+      "lenis": false,
+      "locomotive": false,
+      "swiper": true,
+      "lottie": true,
+      "framerMotion": false,
+      "viewTransitions": false
+    },
+    "stickyPanels": [],
+    "maxRunning": 2,
+    "durationsMs": {
+      "min": 250,
+      "max": 40000
+    },
+    "easings": [
+      "ease-out",
+      "linear"
+    ],
+    "properties": [
+      "boxShadow",
+      "transform"
+    ],
+    "movingWithoutInput": 0,
+    "movingWithoutInputFurtherDown": [
+      {
+        "y": 3600,
+        "moving": 1
+      },
+      {
+        "y": 4500,
+        "moving": 1
+      }
+    ],
+    "scriptDrivenOnScroll": 1,
+    "infiniteLoops": 10,
+    "infiniteLoopsWithText": 0,
+    "pauseControl": false,
+    "steps": [
+      {
+        "y": 450,
+        "running": 2,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "a.btn-primary",
+            "hasText": true,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "boxShadow"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 900,
+        "running": 2,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "a.btn-primary",
+            "hasText": true,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "boxShadow"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1350,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1800,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 2250,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 2700,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 3150,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 3600,
+        "running": 1,
+        "scriptDriven": 0,
+        "idleMoving": 1,
+        "sample": [
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 4050,
+        "running": 1,
+        "scriptDriven": 1,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 4500,
+        "running": 1,
+        "scriptDriven": 1,
+        "idleMoving": 1,
+        "sample": [
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      }
+    ]
+  },
+  "smoothness": {
+    "page": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 5366,
+      "frames": 295,
+      "fps": 55,
+      "medianMs": 16.7,
+      "p95Ms": 33.3,
+      "maxMs": 33,
+      "longFrames": 0,
+      "droppedShare": 1,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "baseline": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 1726,
+      "frames": 104,
+      "fps": 60.3,
+      "medianMs": 16.7,
+      "p95Ms": 16.8,
+      "maxMs": 17,
+      "longFrames": 0,
+      "droppedShare": 0,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "longFramesOverBaseline": 0,
+    "p95OverBaseline": 16.5
+  },
+  "reducedMotion": {
+    "movingWithoutInput": 1,
+    "movingOnScroll": 1,
+    "idleNavigation": null,
+    "loadFailed": false
+  },
+  "idleRunLoadFailed": false,
+  "idleNavigation": null
+}

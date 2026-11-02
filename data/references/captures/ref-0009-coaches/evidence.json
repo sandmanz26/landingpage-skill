@@ -1,0 +1,669 @@
+{
+  "url": "https://summersmashtennis.ca/coaches/",
+  "time": "2026-11-02T04:03:06.875Z",
+  "sheets": {
+    "desktop": "data/references/captures/ref-0009-coaches/sheet-desktop.png",
+    "mobile": "data/references/captures/ref-0009-coaches/sheet-mobile.png",
+    "motion": "data/references/captures/ref-0009-coaches/motion-sheet.png"
+  },
+  "load": {
+    "status": 200,
+    "retries": 0,
+    "failed": false
+  },
+  "overlaysDismissed": [],
+  "outline": {
+    "title": "Coaches Archive - Summer Smash Tennis",
+    "description": "",
+    "headings": [
+      "H1 2% YOUR COACHES",
+      "H2 9% SPENCER MACKOFF",
+      "H2 9% MARSHALL MACKOFF",
+      "H2 9% GUILHERME TOMAZELLI",
+      "H2 9% YOHANN MORIZUR",
+      "H2 15% YAN PANG",
+      "H2 15% JEREMY TANG",
+      "H2 15% GENEVIEVE WRIGHT-SMITH",
+      "H2 15% NOAH BETTAUER",
+      "H2 21% KATERYNA FILYUS",
+      "H2 21% DEREK LAU",
+      "H2 21% MARTIN LORAYES",
+      "H2 21% YOSHI MATSUBARA",
+      "H2 26% GRAEME MCINTOSH",
+      "H2 26% ANDY NGUYEN",
+      "H2 26% REID PICKEN",
+      "H2 26% APRIL WAN",
+      "H2 32% KEATON CHAN",
+      "H2 32% ALEKSA CVETKOVIC",
+      "H2 32% CELINA DORAME",
+      "H2 32% JIAJIA FORSYTH",
+      "H2 38% DANIEL KIM",
+      "H2 38% ALAN MCLACHLAN",
+      "H2 38% ARNAV MODI",
+      "H2 38% LUKE ADRIAN",
+      "H2 44% BARBORA BULINOVA",
+      "H2 44% JOSH CADIZ-RAMCHARITAR",
+      "H2 44% KENNETH CAMPBELL",
+      "H2 44% ALLAN CHU",
+      "H2 49% GABI DUHAIME",
+      "H2 49% KATELYN HONG",
+      "H2 49% ADA HUANG",
+      "H2 49% BRIANNE JIM",
+      "H2 55% MARVIN KAO",
+      "H2 55% HYMN KARONSONTAWONG",
+      "H2 55% TALIA KO",
+      "H2 55% JOVANA KULJIC",
+      "H2 61% ASHLEY LAM",
+      "H2 61% LANA LETT",
+      "H2 61% ANTHONY MAJEDI"
+    ],
+    "actions": [
+      {
+        "label": "GROUP LESSONS",
+        "count": 1,
+        "firstAt": 1,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "PRIVATE LESSONS",
+        "count": 1,
+        "firstAt": 1,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "SPENCER MACKOFF Director",
+        "count": 1,
+        "firstAt": 5,
+        "firstScreen": true,
+        "sticky": false
+      },
+      {
+        "label": "MARSHALL MACKOFF Director of Tennis",
+        "count": 1,
+        "firstAt": 5,
+        "firstScreen": true,
+        "sticky": false
+      },
+      {
+        "label": "GUILHERME TOMAZELLI Head Coach",
+        "count": 1,
+        "firstAt": 5,
+        "firstScreen": true,
+        "sticky": false
+      },
+      {
+        "label": "YOHANN MORIZUR Head Coach",
+        "count": 1,
+        "firstAt": 5,
+        "firstScreen": true,
+        "sticky": false
+      },
+      {
+        "label": "YAN PANG Senior Coach",
+        "count": 1,
+        "firstAt": 11,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "JEREMY TANG Head Coach",
+        "count": 1,
+        "firstAt": 11,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "GENEVIEVE WRIGHT-SMITH Senior Coach",
+        "count": 1,
+        "firstAt": 11,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "NOAH BETTAUER Senior Coach",
+        "count": 1,
+        "firstAt": 11,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "KATERYNA FILYUS Senior Coach",
+        "count": 1,
+        "firstAt": 16,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "DEREK LAU Senior Coach",
+        "count": 1,
+        "firstAt": 16,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "MARTIN LORAYES Senior Coach",
+        "count": 1,
+        "firstAt": 16,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "YOSHI MATSUBARA Senior Coach",
+        "count": 1,
+        "firstAt": 16,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "GRAEME MCINTOSH Senior Coach",
+        "count": 1,
+        "firstAt": 22,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "ANDY NGUYEN Senior Coach",
+        "count": 1,
+        "firstAt": 22,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "REID PICKEN Senior Coach",
+        "count": 1,
+        "firstAt": 22,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "APRIL WAN Coach",
+        "count": 1,
+        "firstAt": 22,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "KEATON CHAN Coach",
+        "count": 1,
+        "firstAt": 28,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "ALEKSA CVETKOVIC Coach",
+        "count": 1,
+        "firstAt": 28,
+        "firstScreen": false,
+        "sticky": false
+      }
+    ],
+    "prices": [],
+    "proofMentions": {},
+    "logoImages": 0,
+    "forms": 1,
+    "imagery": {
+      "photos": 64,
+      "illustrations": 1,
+      "videos": 0
+    },
+    "pageHeight": 9025
+  },
+  "motion": {
+    "libraries": {
+      "gsap": true,
+      "scrollTrigger": true,
+      "splitText": false,
+      "lenis": false,
+      "locomotive": false,
+      "swiper": true,
+      "lottie": true,
+      "framerMotion": false,
+      "viewTransitions": false
+    },
+    "stickyPanels": [],
+    "maxRunning": 3,
+    "durationsMs": {
+      "min": 250,
+      "max": 40000
+    },
+    "easings": [
+      "ease-out",
+      "linear"
+    ],
+    "properties": [
+      "boxShadow",
+      "transform"
+    ],
+    "movingWithoutInput": 0,
+    "movingWithoutInputFurtherDown": [],
+    "scriptDrivenOnScroll": 0,
+    "infiniteLoops": 10,
+    "infiniteLoopsWithText": 0,
+    "pauseControl": false,
+    "steps": [
+      {
+        "y": 450,
+        "running": 2,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "img",
+            "hasText": false,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "boxShadow"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 900,
+        "running": 3,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "img",
+            "hasText": false,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "boxShadow"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "img",
+            "hasText": false,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "boxShadow"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1350,
+        "running": 3,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "img",
+            "hasText": false,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "boxShadow"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "img",
+            "hasText": false,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "boxShadow"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1800,
+        "running": 3,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "img",
+            "hasText": false,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "boxShadow"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "img",
+            "hasText": false,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "boxShadow"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 2250,
+        "running": 3,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "img",
+            "hasText": false,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "boxShadow"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "img",
+            "hasText": false,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "boxShadow"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 2700,
+        "running": 2,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "img",
+            "hasText": false,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "boxShadow"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 3150,
+        "running": 2,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "img",
+            "hasText": false,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "boxShadow"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 3600,
+        "running": 3,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "img",
+            "hasText": false,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "boxShadow"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "img",
+            "hasText": false,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "boxShadow"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 4050,
+        "running": 3,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "img",
+            "hasText": false,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "boxShadow"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "img",
+            "hasText": false,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "boxShadow"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 4500,
+        "running": 3,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "img",
+            "hasText": false,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "boxShadow"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "img",
+            "hasText": false,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease-out",
+            "props": [
+              "boxShadow"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "ul.instagram-callout_images",
+            "hasText": false,
+            "duration": 40000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      }
+    ]
+  },
+  "smoothness": {
+    "page": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 6480,
+      "frames": 369,
+      "fps": 56.9,
+      "medianMs": 16.7,
+      "p95Ms": 33.2,
+      "maxMs": 33,
+      "longFrames": 0,
+      "droppedShare": 1,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "baseline": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 1731,
+      "frames": 104,
+      "fps": 60.1,
+      "medianMs": 16.7,
+      "p95Ms": 16.8,
+      "maxMs": 17,
+      "longFrames": 0,
+      "droppedShare": 0,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "longFramesOverBaseline": 0,
+    "p95OverBaseline": 16.4
+  },
+  "reducedMotion": {
+    "movingWithoutInput": 1,
+    "movingOnScroll": 1,
+    "idleNavigation": null,
+    "loadFailed": false
+  },
+  "idleRunLoadFailed": false,
+  "idleNavigation": null
+}

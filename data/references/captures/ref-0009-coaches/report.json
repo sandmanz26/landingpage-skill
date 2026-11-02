@@ -1,0 +1,514 @@
+{
+  "target": "https://summersmashtennis.ca/coaches/",
+  "time": "2026-11-02T03:54:48.461Z",
+  "rules": {
+    "purple-gradient": "warn",
+    "gradient": "info",
+    "glass": "info",
+    "system-font-only": "warn",
+    "too-many-font-sizes": "warn",
+    "too-many-colours": "warn",
+    "shadow-on-everything": "warn",
+    "icon-card-row": "warn",
+    "centred-hero-two-ctas": "warn",
+    "emoji": "warn"
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "pageHeight": 9025,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "shadow-on-everything",
+          "message": "8 boxes carry a drop shadow"
+        },
+        {
+          "severity": "WARN",
+          "rule": "centred-hero-two-ctas",
+          "message": "Centred hero headline with two buttons, the most common generated layout"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "3 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#0c5235 on screen = 4.45:1 median, 2.55:1 in the worst tenth (needs 4.5) <span> \"Group Lessons\"",
+            "#9ebaae on screen = 2.08:1 median, 2.08:1 in the worst tenth (needs 4.5) <p> \"This site is protected by reCAPTCHA and the Google\"",
+            "#6d9786 on screen = 2.82:1 median, 1.81:1 in the worst tenth (needs 4.5) <a> \"Privacy Policy\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "2 console or page errors",
+          "sample": [
+            "requestStorageAccess: Permission denied.",
+            "requestStorageAccess: Permission denied."
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "founders-grotesk",
+            "share": 52
+          },
+          {
+            "family": "obviously-narrow",
+            "share": 48
+          }
+        ],
+        "fontSizes": [
+          90,
+          61,
+          48,
+          24,
+          20,
+          16,
+          12
+        ],
+        "textColours": [
+          "#ffffff",
+          "#0c5235",
+          "#e5fc09",
+          "#0c5234"
+        ],
+        "backgroundColours": [
+          "#0c5235",
+          "#e5fc09",
+          "#fff6e7",
+          "#00ce7d",
+          "#a4d8ff",
+          "#ffffff"
+        ],
+        "chromaticColours": 5,
+        "colourFamilies": 3,
+        "spacing": {
+          "distinct": 16,
+          "offScale": 4,
+          "values": [
+            1,
+            2,
+            8,
+            9,
+            11,
+            12,
+            16,
+            20,
+            32,
+            40,
+            48,
+            56,
+            64,
+            96,
+            184,
+            428
+          ]
+        },
+        "radii": [
+          "100%",
+          "200px",
+          "20px"
+        ],
+        "shadows": 8,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 130,
+        "animatedElements": 15,
+        "cls": 0
+      },
+      "screenshots": [
+        "data/references/captures/ref-0009-coaches/desktop-fold.png",
+        "data/references/captures/ref-0009-coaches/desktop-page-01.png",
+        "data/references/captures/ref-0009-coaches/desktop-page-02.png",
+        "data/references/captures/ref-0009-coaches/desktop-page-03.png",
+        "data/references/captures/ref-0009-coaches/desktop-page-04.png",
+        "data/references/captures/ref-0009-coaches/desktop-page-05.png",
+        "data/references/captures/ref-0009-coaches/desktop-page-06.png",
+        "data/references/captures/ref-0009-coaches/desktop-page-07.png",
+        "data/references/captures/ref-0009-coaches/desktop-page-08.png",
+        "data/references/captures/ref-0009-coaches/desktop-page-09.png",
+        "data/references/captures/ref-0009-coaches/desktop-page-10.png",
+        "data/references/captures/ref-0009-coaches/desktop-page-11.png"
+      ]
+    },
+    "tablet": {
+      "width": 768,
+      "pageHeight": 14977,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "shadow-on-everything",
+          "message": "6 boxes carry a drop shadow"
+        },
+        {
+          "severity": "WARN",
+          "rule": "centred-hero-two-ctas",
+          "message": "Centred hero headline with two buttons, the most common generated layout"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "2 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#9ebaae on screen = 2.08:1 median, 2.08:1 in the worst tenth (needs 4.5) <p> \"This site is protected by reCAPTCHA and the Google\"",
+            "#6d9786 on screen = 2.82:1 median, 1.81:1 in the worst tenth (needs 4.5) <a> \"Privacy Policy\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "2 console or page errors",
+          "sample": [
+            "requestStorageAccess: Permission denied.",
+            "requestStorageAccess: Permission denied."
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "screenshots-capped",
+          "message": "Page is 14977px tall; only the first 14 screens were captured"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "founders-grotesk",
+            "share": 52
+          },
+          {
+            "family": "obviously-narrow",
+            "share": 48
+          }
+        ],
+        "fontSizes": [
+          61,
+          40,
+          32,
+          24,
+          20,
+          16,
+          12
+        ],
+        "textColours": [
+          "#ffffff",
+          "#0c5235",
+          "#e5fc09",
+          "#0c5234"
+        ],
+        "backgroundColours": [
+          "#0c5235",
+          "#e5fc09",
+          "#fff6e7",
+          "#00ce7d",
+          "#a4d8ff",
+          "#ffffff"
+        ],
+        "chromaticColours": 5,
+        "colourFamilies": 3,
+        "spacing": {
+          "distinct": 16,
+          "offScale": 5,
+          "values": [
+            1,
+            2,
+            8,
+            9,
+            11,
+            12,
+            16,
+            20,
+            28,
+            32,
+            48,
+            56,
+            64,
+            120,
+            333,
+            388
+          ]
+        },
+        "radii": [
+          "100%",
+          "200px",
+          "20px"
+        ],
+        "shadows": 9,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 130,
+        "animatedElements": 26,
+        "cls": 0
+      },
+      "screenshots": [
+        "data/references/captures/ref-0009-coaches/tablet-fold.png",
+        "data/references/captures/ref-0009-coaches/tablet-page-01.png",
+        "data/references/captures/ref-0009-coaches/tablet-page-02.png",
+        "data/references/captures/ref-0009-coaches/tablet-page-03.png",
+        "data/references/captures/ref-0009-coaches/tablet-page-04.png",
+        "data/references/captures/ref-0009-coaches/tablet-page-05.png",
+        "data/references/captures/ref-0009-coaches/tablet-page-06.png",
+        "data/references/captures/ref-0009-coaches/tablet-page-07.png",
+        "data/references/captures/ref-0009-coaches/tablet-page-08.png",
+        "data/references/captures/ref-0009-coaches/tablet-page-09.png",
+        "data/references/captures/ref-0009-coaches/tablet-page-10.png",
+        "data/references/captures/ref-0009-coaches/tablet-page-11.png",
+        "data/references/captures/ref-0009-coaches/tablet-page-12.png",
+        "data/references/captures/ref-0009-coaches/tablet-page-13.png",
+        "data/references/captures/ref-0009-coaches/tablet-page-14.png"
+      ]
+    },
+    "mobile": {
+      "width": 390,
+      "pageHeight": 27749,
+      "findings": [
+        {
+          "severity": "FAIL",
+          "rule": "tap-target",
+          "message": "3 controls smaller than 24x24px on a phone",
+          "sample": [
+            "36x23 <a> \"Kids\"",
+            "44x23 <a> \"Adult\"",
+            "75x16 <a> \"Privacy Policy\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "shadow-on-everything",
+          "message": "6 boxes carry a drop shadow"
+        },
+        {
+          "severity": "WARN",
+          "rule": "centred-hero-two-ctas",
+          "message": "Centred hero headline with two buttons, the most common generated layout"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "3 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#0c5235 on screen = 2.44:1 median, 1.85:1 in the worst tenth (needs 4.5) <span> \"Group Lessons\"",
+            "#9ebaae on screen = 2.08:1 median, 2.05:1 in the worst tenth (needs 4.5) <p> \"This site is protected by reCAPTCHA and the Google\"",
+            "#6d9786 on screen = 2.82:1 median, 1.81:1 in the worst tenth (needs 4.5) <a> \"Privacy Policy\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "2 console or page errors",
+          "sample": [
+            "requestStorageAccess: Permission denied.",
+            "requestStorageAccess: Permission denied."
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "screenshots-capped",
+          "message": "Page is 27749px tall; only the first 14 screens were captured"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "founders-grotesk",
+            "share": 52
+          },
+          {
+            "family": "obviously-narrow",
+            "share": 48
+          }
+        ],
+        "fontSizes": [
+          61,
+          40,
+          32,
+          24,
+          20,
+          16,
+          12
+        ],
+        "textColours": [
+          "#ffffff",
+          "#0c5235",
+          "#e5fc09",
+          "#0c5234"
+        ],
+        "backgroundColours": [
+          "#0c5235",
+          "#e5fc09",
+          "#fff6e7",
+          "#00ce7d",
+          "#a4d8ff",
+          "#ffffff"
+        ],
+        "chromaticColours": 5,
+        "colourFamilies": 3,
+        "spacing": {
+          "distinct": 16,
+          "offScale": 5,
+          "values": [
+            1,
+            2,
+            8,
+            9,
+            11,
+            12,
+            16,
+            20,
+            28,
+            32,
+            48,
+            56,
+            64,
+            89,
+            120,
+            388
+          ]
+        },
+        "radii": [
+          "100%",
+          "200px",
+          "20px"
+        ],
+        "shadows": 9,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 130,
+        "animatedElements": 53,
+        "cls": 0
+      },
+      "screenshots": [
+        "data/references/captures/ref-0009-coaches/mobile-fold.png",
+        "data/references/captures/ref-0009-coaches/mobile-page-01.png",
+        "data/references/captures/ref-0009-coaches/mobile-page-02.png",
+        "data/references/captures/ref-0009-coaches/mobile-page-03.png",
+        "data/references/captures/ref-0009-coaches/mobile-page-04.png",
+        "data/references/captures/ref-0009-coaches/mobile-page-05.png",
+        "data/references/captures/ref-0009-coaches/mobile-page-06.png",
+        "data/references/captures/ref-0009-coaches/mobile-page-07.png",
+        "data/references/captures/ref-0009-coaches/mobile-page-08.png",
+        "data/references/captures/ref-0009-coaches/mobile-page-09.png",
+        "data/references/captures/ref-0009-coaches/mobile-page-10.png",
+        "data/references/captures/ref-0009-coaches/mobile-page-11.png",
+        "data/references/captures/ref-0009-coaches/mobile-page-12.png",
+        "data/references/captures/ref-0009-coaches/mobile-page-13.png",
+        "data/references/captures/ref-0009-coaches/mobile-page-14.png"
+      ]
+    }
+  },
+  "checks": {
+    "reducedMotion": {
+      "findings": [],
+      "screenshot": "data/references/captures/ref-0009-coaches/reduced-motion-fold.png"
+    },
+    "noJavaScript": {
+      "findings": [],
+      "withJs": 1833,
+      "withoutJs": 1774
+    }
+  },
+  "summary": {
+    "fail": 3,
+    "warn": 6
+  },
+  "url": "https://summersmashtennis.ca/coaches/",
+  "findings": [
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "3 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#0c5235 on screen = 4.45:1 median, 2.55:1 in the worst tenth (needs 4.5) <span> \"Group Lessons\"",
+        "#9ebaae on screen = 2.08:1 median, 2.08:1 in the worst tenth (needs 4.5) <p> \"This site is protected by reCAPTCHA and the Google\"",
+        "#6d9786 on screen = 2.82:1 median, 1.81:1 in the worst tenth (needs 4.5) <a> \"Privacy Policy\""
+      ],
+      "where": [
+        "desktop",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "2 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#9ebaae on screen = 2.08:1 median, 2.08:1 in the worst tenth (needs 4.5) <p> \"This site is protected by reCAPTCHA and the Google\"",
+        "#6d9786 on screen = 2.82:1 median, 1.81:1 in the worst tenth (needs 4.5) <a> \"Privacy Policy\""
+      ],
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tap-target",
+      "message": "3 controls smaller than 24x24px on a phone",
+      "sample": [
+        "36x23 <a> \"Kids\"",
+        "44x23 <a> \"Adult\"",
+        "75x16 <a> \"Privacy Policy\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "shadow-on-everything",
+      "message": "8 boxes carry a drop shadow",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "centred-hero-two-ctas",
+      "message": "Centred hero headline with two buttons, the most common generated layout",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "console-errors",
+      "message": "2 console or page errors",
+      "sample": [
+        "requestStorageAccess: Permission denied.",
+        "requestStorageAccess: Permission denied."
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "shadow-on-everything",
+      "message": "6 boxes carry a drop shadow",
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "screenshots-capped",
+      "message": "Page is 14977px tall; only the first 14 screens were captured",
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "screenshots-capped",
+      "message": "Page is 27749px tall; only the first 14 screens were captured",
+      "where": [
+        "mobile"
+      ]
+    }
+  ]
+}

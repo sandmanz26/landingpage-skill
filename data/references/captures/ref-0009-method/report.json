@@ -1,0 +1,500 @@
+{
+  "target": "https://summersmashtennis.ca/method/",
+  "time": "2026-11-02T03:47:00.805Z",
+  "rules": {
+    "purple-gradient": "warn",
+    "gradient": "info",
+    "glass": "info",
+    "system-font-only": "warn",
+    "too-many-font-sizes": "warn",
+    "too-many-colours": "warn",
+    "shadow-on-everything": "warn",
+    "icon-card-row": "warn",
+    "centred-hero-two-ctas": "warn",
+    "emoji": "warn"
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "pageHeight": 6483,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "shadow-on-everything",
+          "message": "9 boxes carry a drop shadow"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "4 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#0c5235 on screen = 4.45:1 median, 2.55:1 in the worst tenth (needs 4.5) <span> \"Group Lessons\"",
+            "#00ce7d on screen = 1.80:1 median, 1.48:1 in the worst tenth (needs 3) <span> \"1\"",
+            "#9ebaae on screen = 2.08:1 median, 2.08:1 in the worst tenth (needs 4.5) <p> \"This site is protected by reCAPTCHA and the Google\"",
+            "#6d9786 on screen = 2.82:1 median, 1.81:1 in the worst tenth (needs 4.5) <a> \"Privacy Policy\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "2 console or page errors",
+          "sample": [
+            "requestStorageAccess: Permission denied.",
+            "requestStorageAccess: Permission denied."
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "founders-grotesk",
+            "share": 85
+          },
+          {
+            "family": "obviously-narrow",
+            "share": 15
+          }
+        ],
+        "fontSizes": [
+          180,
+          90,
+          61,
+          48,
+          34,
+          32,
+          24,
+          20,
+          16,
+          12
+        ],
+        "textColours": [
+          "#ffffff",
+          "#0c5235",
+          "#00ce7d",
+          "#e5fc09",
+          "#0c5234"
+        ],
+        "backgroundColours": [
+          "#0c5235",
+          "#e5fc09",
+          "#fff6e7",
+          "#00ce7d",
+          "#ffffff",
+          "#000000",
+          "#a4d8ff"
+        ],
+        "chromaticColours": 5,
+        "colourFamilies": 3,
+        "spacing": {
+          "distinct": 20,
+          "offScale": 8,
+          "values": [
+            1,
+            2,
+            6,
+            8,
+            9,
+            10,
+            11,
+            12,
+            14,
+            16,
+            20,
+            30,
+            32,
+            40,
+            48,
+            56,
+            64,
+            96,
+            184,
+            428
+          ]
+        },
+        "radii": [
+          "100%",
+          "200px",
+          "20px",
+          "40px"
+        ],
+        "shadows": 9,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 41,
+        "animatedElements": 1,
+        "cls": 0
+      },
+      "screenshots": [
+        "data/references/captures/ref-0009-method/desktop-fold.png",
+        "data/references/captures/ref-0009-method/desktop-page-01.png",
+        "data/references/captures/ref-0009-method/desktop-page-02.png",
+        "data/references/captures/ref-0009-method/desktop-page-03.png",
+        "data/references/captures/ref-0009-method/desktop-page-04.png",
+        "data/references/captures/ref-0009-method/desktop-page-05.png",
+        "data/references/captures/ref-0009-method/desktop-page-06.png",
+        "data/references/captures/ref-0009-method/desktop-page-07.png",
+        "data/references/captures/ref-0009-method/desktop-page-08.png"
+      ]
+    },
+    "tablet": {
+      "width": 768,
+      "pageHeight": 7667,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "shadow-on-everything",
+          "message": "7 boxes carry a drop shadow"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "6 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#0c5235 on screen = 2.12:1 median, 1.95:1 in the worst tenth (needs 3) <a> \"School Programs\"",
+            "#0c5235 on screen = 4.08:1 median, 2.25:1 in the worst tenth (needs 4.5) <span> \"Group Lessons\"",
+            "#0c5235 on screen = 4.29:1 median, 2.15:1 in the worst tenth (needs 4.5) <span> \"Private Lessons\"",
+            "#00ce7d on screen = 1.80:1 median, 1.48:1 in the worst tenth (needs 3) <span> \"1\"",
+            "#9ebaae on screen = 2.08:1 median, 2.08:1 in the worst tenth (needs 4.5) <p> \"This site is protected by reCAPTCHA and the Google\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "2 console or page errors",
+          "sample": [
+            "requestStorageAccess: Permission denied.",
+            "requestStorageAccess: Permission denied."
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "founders-grotesk",
+            "share": 85
+          },
+          {
+            "family": "obviously-narrow",
+            "share": 15
+          }
+        ],
+        "fontSizes": [
+          61,
+          40,
+          34,
+          32,
+          24,
+          20,
+          16,
+          12
+        ],
+        "textColours": [
+          "#ffffff",
+          "#0c5235",
+          "#00ce7d",
+          "#e5fc09",
+          "#0c5234"
+        ],
+        "backgroundColours": [
+          "#0c5235",
+          "#e5fc09",
+          "#fff6e7",
+          "#00ce7d",
+          "#ffffff",
+          "#000000",
+          "#a4d8ff"
+        ],
+        "chromaticColours": 5,
+        "colourFamilies": 3,
+        "spacing": {
+          "distinct": 20,
+          "offScale": 9,
+          "values": [
+            1,
+            2,
+            6,
+            8,
+            9,
+            10,
+            11,
+            12,
+            14,
+            16,
+            20,
+            28,
+            30,
+            32,
+            48,
+            56,
+            64,
+            120,
+            333,
+            388
+          ]
+        },
+        "radii": [
+          "100%",
+          "200px",
+          "20px",
+          "36px"
+        ],
+        "shadows": 10,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 41,
+        "animatedElements": 2,
+        "cls": 0
+      },
+      "screenshots": [
+        "data/references/captures/ref-0009-method/tablet-fold.png",
+        "data/references/captures/ref-0009-method/tablet-page-01.png",
+        "data/references/captures/ref-0009-method/tablet-page-02.png",
+        "data/references/captures/ref-0009-method/tablet-page-03.png",
+        "data/references/captures/ref-0009-method/tablet-page-04.png",
+        "data/references/captures/ref-0009-method/tablet-page-05.png",
+        "data/references/captures/ref-0009-method/tablet-page-06.png",
+        "data/references/captures/ref-0009-method/tablet-page-07.png",
+        "data/references/captures/ref-0009-method/tablet-page-08.png"
+      ]
+    },
+    "mobile": {
+      "width": 390,
+      "pageHeight": 8271,
+      "findings": [
+        {
+          "severity": "FAIL",
+          "rule": "tap-target",
+          "message": "3 controls smaller than 24x24px on a phone",
+          "sample": [
+            "36x23 <a> \"Kids\"",
+            "44x23 <a> \"Adult\"",
+            "75x16 <a> \"Privacy Policy\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "shadow-on-everything",
+          "message": "7 boxes carry a drop shadow"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "5 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#0c5235 on screen = 3.69:1 median, 1.82:1 in the worst tenth (needs 4.5) <span> \"Group Lessons\"",
+            "#0c5235 on screen = 4.13:1 median, 2.04:1 in the worst tenth (needs 4.5) <span> \"Private Lessons\"",
+            "#00ce7d on screen = 1.80:1 median, 1.48:1 in the worst tenth (needs 3) <span> \"1\"",
+            "#9ebaae on screen = 2.08:1 median, 2.05:1 in the worst tenth (needs 4.5) <p> \"This site is protected by reCAPTCHA and the Google\"",
+            "#6d9786 on screen = 2.82:1 median, 1.81:1 in the worst tenth (needs 4.5) <a> \"Privacy Policy\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "2 console or page errors",
+          "sample": [
+            "requestStorageAccess: Permission denied.",
+            "requestStorageAccess: Permission denied."
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "founders-grotesk",
+            "share": 85
+          },
+          {
+            "family": "obviously-narrow",
+            "share": 15
+          }
+        ],
+        "fontSizes": [
+          61,
+          40,
+          34,
+          32,
+          24,
+          20,
+          16,
+          12
+        ],
+        "textColours": [
+          "#ffffff",
+          "#0c5235",
+          "#00ce7d",
+          "#e5fc09",
+          "#0c5234"
+        ],
+        "backgroundColours": [
+          "#0c5235",
+          "#e5fc09",
+          "#fff6e7",
+          "#00ce7d",
+          "#ffffff",
+          "#000000",
+          "#a4d8ff"
+        ],
+        "chromaticColours": 5,
+        "colourFamilies": 3,
+        "spacing": {
+          "distinct": 20,
+          "offScale": 9,
+          "values": [
+            1,
+            2,
+            6,
+            8,
+            9,
+            10,
+            11,
+            12,
+            14,
+            16,
+            20,
+            28,
+            30,
+            32,
+            48,
+            56,
+            64,
+            89,
+            120,
+            388
+          ]
+        },
+        "radii": [
+          "100%",
+          "200px",
+          "20px",
+          "36px"
+        ],
+        "shadows": 10,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 41,
+        "animatedElements": 2,
+        "cls": 0
+      },
+      "screenshots": [
+        "data/references/captures/ref-0009-method/mobile-fold.png",
+        "data/references/captures/ref-0009-method/mobile-page-01.png",
+        "data/references/captures/ref-0009-method/mobile-page-02.png",
+        "data/references/captures/ref-0009-method/mobile-page-03.png",
+        "data/references/captures/ref-0009-method/mobile-page-04.png",
+        "data/references/captures/ref-0009-method/mobile-page-05.png",
+        "data/references/captures/ref-0009-method/mobile-page-06.png",
+        "data/references/captures/ref-0009-method/mobile-page-07.png",
+        "data/references/captures/ref-0009-method/mobile-page-08.png",
+        "data/references/captures/ref-0009-method/mobile-page-09.png",
+        "data/references/captures/ref-0009-method/mobile-page-10.png"
+      ]
+    }
+  },
+  "checks": {
+    "reducedMotion": {
+      "findings": [],
+      "screenshot": "data/references/captures/ref-0009-method/reduced-motion-fold.png"
+    },
+    "noJavaScript": {
+      "findings": [],
+      "withJs": 9517,
+      "withoutJs": 11311
+    }
+  },
+  "summary": {
+    "fail": 4,
+    "warn": 3
+  },
+  "url": "https://summersmashtennis.ca/method/",
+  "findings": [
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "4 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#0c5235 on screen = 4.45:1 median, 2.55:1 in the worst tenth (needs 4.5) <span> \"Group Lessons\"",
+        "#00ce7d on screen = 1.80:1 median, 1.48:1 in the worst tenth (needs 3) <span> \"1\"",
+        "#9ebaae on screen = 2.08:1 median, 2.08:1 in the worst tenth (needs 4.5) <p> \"This site is protected by reCAPTCHA and the Google\"",
+        "#6d9786 on screen = 2.82:1 median, 1.81:1 in the worst tenth (needs 4.5) <a> \"Privacy Policy\""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "6 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#0c5235 on screen = 2.12:1 median, 1.95:1 in the worst tenth (needs 3) <a> \"School Programs\"",
+        "#0c5235 on screen = 4.08:1 median, 2.25:1 in the worst tenth (needs 4.5) <span> \"Group Lessons\"",
+        "#0c5235 on screen = 4.29:1 median, 2.15:1 in the worst tenth (needs 4.5) <span> \"Private Lessons\"",
+        "#00ce7d on screen = 1.80:1 median, 1.48:1 in the worst tenth (needs 3) <span> \"1\"",
+        "#9ebaae on screen = 2.08:1 median, 2.08:1 in the worst tenth (needs 4.5) <p> \"This site is protected by reCAPTCHA and the Google\""
+      ],
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tap-target",
+      "message": "3 controls smaller than 24x24px on a phone",
+      "sample": [
+        "36x23 <a> \"Kids\"",
+        "44x23 <a> \"Adult\"",
+        "75x16 <a> \"Privacy Policy\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "5 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#0c5235 on screen = 3.69:1 median, 1.82:1 in the worst tenth (needs 4.5) <span> \"Group Lessons\"",
+        "#0c5235 on screen = 4.13:1 median, 2.04:1 in the worst tenth (needs 4.5) <span> \"Private Lessons\"",
+        "#00ce7d on screen = 1.80:1 median, 1.48:1 in the worst tenth (needs 3) <span> \"1\"",
+        "#9ebaae on screen = 2.08:1 median, 2.05:1 in the worst tenth (needs 4.5) <p> \"This site is protected by reCAPTCHA and the Google\"",
+        "#6d9786 on screen = 2.82:1 median, 1.81:1 in the worst tenth (needs 4.5) <a> \"Privacy Policy\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "shadow-on-everything",
+      "message": "9 boxes carry a drop shadow",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "console-errors",
+      "message": "2 console or page errors",
+      "sample": [
+        "requestStorageAccess: Permission denied.",
+        "requestStorageAccess: Permission denied."
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "shadow-on-everything",
+      "message": "7 boxes carry a drop shadow",
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    }
+  ]
+}
