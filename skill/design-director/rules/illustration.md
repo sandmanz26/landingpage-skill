@@ -1,9 +1,19 @@
 # Pictures when the client has none
 
 A page without pictures looks unfinished next to the references the team admires; every one of
-them is carried by photographs or illustration. When the client has no images, do not ship type
-alone by default (unless the `imagery` dial says `type`): draw flat illustrations in code, and give
-the user a shot list so real photographs can replace or join them later.
+them is carried by photographs or illustration. Photographs are the key visual (team rule).
+
+1. **Find photographs first.** `node <skill>/scripts/photos.mjs search "<an item from the subject
+   inventory>" --sheet .design/photos/sheet.png`, look at the sheet, then `photos.mjs get <ref>`.
+   Search the subject's world, not the category: "tennis ball on clay court", "coach with
+   walkie-talkie at a wedding venue", not "happy people". Avoid posed stock smiles. Credits go to
+   the footer (`photos.mjs credits --html`). A found photograph shows the world around the client
+   and is never presented as their own people, place or product.
+2. **Draw** what no honest photograph exists of (below), in one consistent flat language; drawn
+   objects over a photograph's frame (the Summer Smash Tennis frame-break) add brand voice.
+3. **Placeholders** only in drafts, marked as such, with the shot list; never in a delivered page.
+
+Unless the `imagery` dial says `type`, do not ship type alone.
 
 ## Drawing flat illustration in SVG
 

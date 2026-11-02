@@ -12,7 +12,7 @@ the team's taste is the target: `team/visual-defaults.json`.
 | --- | --- | --- | --- |
 | Colour energy | **Kalem**: 2–3 warna, tenang · **Berani**: 4–6 warna datar, satu warna khusus untuk tombol utama | `"colour": "calm"` / `"bold"` | Brand colours, if any |
 | Type expression | **Tenang**: judul sekitar 4× teks · **Tegas**: sekitar 6× (Swehl, Future) · **Ekspresif**: 10× ke atas, huruf jadi gambar (Maxima) | `"typeRatio": 4` / `6` / `10` | A display-font licence if the brand has one |
-| Imagery | **Foto asli** · **Ilustrasi datar dari subjeknya** · **UI produk** · **Tipografi saja** | `"imagery": "photo"` / `"illustration"` / `"ui"` / `"type"` | Photos (with a shot list, below) or nothing: illustration is drawn in code (`rules/illustration.md`) |
+| Imagery | **Foto** (milik klien, atau foto berlisensi dari dunia subjeknya) · **Ilustrasi datar dari subjeknya** · **UI produk** · **Tipografi saja** | `"imagery": "photo"` / `"illustration"` / `"ui"` / `"type"` | The client's photos, or none: `photos.mjs` finds licensed ones (Unsplash needs a free key), illustration is drawn in code (`rules/illustration.md`) |
 | Motion | **Diam** · **Halus**: muncul dan transisi ringan · **Cerita lewat scroll**: objek bergerak mengikuti scroll, selalu dengan versi statis | `"motion": "none"` / `"subtle"` / `"story"` | Nothing; story motion costs build time and phone performance |
 | Price | Next to the main action, or not (only when the business cannot show one) | `"priceNearAction": true` / `false` | The real price |
 

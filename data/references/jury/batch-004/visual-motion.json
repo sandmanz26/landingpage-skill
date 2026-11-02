@@ -5,7 +5,11 @@
   "refs": {
     "ref-0009": {
       "business": "Summer Smash Tennis, Vancouver: group tennis classes for kids (from age 2-3) and adults, plus private lessons, held at City of Vancouver community centres and Park Board courts, with camps and school programmes. Buyers are mostly parents and adult beginners or intermediates. The action that pays is REGISTER on a class card on /classes, which goes out to the city's ActiveNet system (the external-link icon on the button shows this), or 'Buy on ActiveNet' for private-lesson bundles at $43.50-$100 per person per lesson. Inference: revenue is shared with or runs through the city's community-centre registration, because all payment is on ActiveNet and not on this site.",
-      "scores": { "clarity": 8, "distinctiveness": 8, "craft": 7 },
+      "scores": {
+        "clarity": 8,
+        "distinctiveness": 8,
+        "craft": 7
+      },
       "reasons": {
         "clarity": "The H1 'Vancouver's best tennis lessons' sits over the two product paths, GROUP LESSONS and PRIVATE LESSONS. The same pair stays in the header on every page, so the split is clear on the first screen (desktop-fold.png, mobile-fold.png; digest Actions 'stays-visible'). /classes is a model booking surface: filters (Age, Lesson, Date, Location), cards with colour-coded level tags, venue, dates, weekday and time, sessions, and 'N spots left' in orange as honest scarcity, plus a full-width REGISTER button with an external-link icon (ref-0009-classes/desktop-fold.png). /private-lessons shows a price table by group size and bundle (digest Prices). Points lost: the home page carries no prices or schedule, so it hands off fast but answers nothing itself. The home H2s run to 4-7 lines on mobile (digest WARN headline-lines). And the 'Since 2012' H2 makes a statement where it should make an offer.",
         "distinctiveness": "The palette is the sport itself: optic-yellow ball #e5fc09, court green #0c5235, clay-cream #fff6e7, and accents #00ce7d and #a4d8ff (digest Colours). Display type is condensed obviously-narrow over founders-grotesk text, with an arched wordmark. A sticker-style illustration layer (ATTENTION megaphone, peace-sign hand, racquets, 'Practice makes progress' ball can on method) gives the site a voice. Further layers: pill buttons with a hard, offset dark-green shadow (a neo-brutalist 'pressable' button); a wavy text ribbon reading 'The pathway is the progression'; tennis-ball map pins; and a footer that ends on a pile of tennis balls under 'PLAY BEAUTIFULLY' (sheet-desktop.png pages 03, 04, 07, 08). The structure underneath is still a common template: a centred hero with two buttons (digest WARN centred-hero-two-ctas). That keeps this at 8, not 9.",
@@ -53,7 +57,8 @@
         "Themed map pins (tennis balls on an illustrated city map) beside a list of centres: a coverage signal in brand language.",
         "Footer sign-off: a pile of brand objects plus a short slogan ('PLAY BEAUTIFULLY'), a memorable ending."
       ],
-      "veto": "none. The accessibility faults are real (reduced motion ignored, no pause, several sub-AA texts), but none blocks a task in the evidence. Booking, filters and REGISTER stay readable and operable, the failing tag text is duplicated elsewhere on the card, and the small mobile targets cited are exempt inline links."
+      "veto": null,
+      "veto_note": "none. The accessibility faults are real (reduced motion ignored, no pause, several sub-AA texts), but none blocks a task in the evidence. Booking, filters and REGISTER stay readable and operable, the failing tag text is duplicated elsewhere on the card, and the small mobile targets cited are exempt inline links."
     }
   }
 }

@@ -295,6 +295,15 @@ const check = (name, ok, detail = '') => {
   check('progress wants first-screen sketches before a guided direction', without.status !== 0 && /sketch/.test(without.stderr) && withSketches.status === 0, without.stderr + withSketches.stderr);
 }
 
+// photos: credits and a clear refusal without a search
+{
+  const proj = path.join(tmp, 'photos');
+  fs.mkdirSync(proj);
+  const none = run('photos.mjs', ['credits'], proj);
+  const get = run('photos.mjs', ['get', 'unsplash:abc'], proj);
+  check('photos keeps credits and refuses a download it has not searched', /No photographs recorded/.test(none.stdout) && get.status === 2 && /search first/.test(get.stderr), none.stdout + get.stderr);
+}
+
 // draw
 {
   const a = run('draw.mjs', ['--sector', 'health', '--seed', '7']);

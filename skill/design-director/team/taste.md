@@ -10,6 +10,9 @@ Format: `- <rule> — <why> (source: <project>, <date>, <who>)`
 <!-- e.g. - Real photographs of the client's place, never stock — clients notice stock instantly (source: Senyum Dental, 2026-11-02, Rina) -->
 - Put the price, or the answer to "what does it cost", near the main action when the business allows it — the strongest converter seen so far (source: batch-002 Future; missing on Playfolly and Maxima, 2026-10-30, owner + jury)
 
+- Two type families: one text face carrying 80-95% of the text, one display face used sparingly, one size scale — every reference so far follows it (source: 9 of 9 library sites incl. batch-004 Summer Smash Tennis, 2026-11-02, owner + data)
+- Every control gives feedback on hover, press and focus — micro-interaction is what makes a page feel alive (source: batch-004 Summer Smash Tennis buttons that press down, 2026-11-02, owner)
+
 ## Never
 <!-- e.g. - Centred hero with two buttons — reads as a template to our clients (source: review session, 2026-11-05, team) -->
 - Content that only appears through animation, motion without a reduced-motion path, or a page that navigates by itself — excludes people and hides the offer (source: batch-001 Replay, batch-002 Maxima, 2026-10-30, owner + jury)
@@ -17,9 +20,13 @@ Format: `- <rule> — <why> (source: <project>, <date>, <who>)`
 ## Prefer
 <!-- e.g. - Square corners on pictures; one radius for controls -->
 - Bold flat colour with clear roles, one colour reserved for the main action (source: batch-001/002 Maxima, Scotch, Playfolly, 2026-10-30, owner)
-- Flat illustration or graphics drawn from the subject itself, not generic 3D vectors (source: batch-002 Maxima, batch-001 Replay, 2026-10-30, owner)
+- Flat illustration or graphics drawn from the subject itself, not generic 3D vectors — layered over or beside photographs, or alone only when no honest photograph exists (source: batch-002 Maxima, batch-001 Replay, 2026-10-30, owner; reconciled with the photographs rule 2026-11-02)
 - Real product UI filled with the customer's own world, never empty mockups (source: batch-001 Scotch, batch-002 Future, 2026-10-30, owner + jury)
 - Smooth, choreographed scroll storytelling with objects from the subject's world (old way vs new, cards that turn, letters that drop in), always with a static reduced-motion version (source: batch-001 Scotch, batch-002 Maxima, 2026-10-30, owner)
+
+- One signature element drawn from the subject's world, used across the page (objects breaking a photo's frame, map markers, section dividers), never decoration without meaning such as random clouds — it keeps the page from feeling monotonous (source: batch-004 Tennis balls and racquets, batch-003 Swehl arches, batch-002 Maxima tilt, 2026-11-02, owner)
+- At least one element the visitor operates, built from the subject's real content: a before/after slider, a clickable map, hover to reveal, play to see detail — it makes people pause and notice the content (source: owner 2026-11-02; taste-skill study: every winning page had one)
+- Photographs as the key visual: the client's own first; otherwise licensed photographs of the subject's world (Unsplash, open collections) found with photos.mjs, credited, never presented as the client's own people, place or product; placeholders only in drafts, with a shot list (source: batch-004 Tennis real student photos, batch-002 Future, 2026-11-02, owner)
 
 ## Anchors
 Designs the team approved or rejected, with one line on why. Screenshots go in `team/approved/` and

@@ -60,6 +60,11 @@ if (targets.motion) {
   const ok = { none: !m || (!story && !has('endless-motion')), subtle: !has('endless-motion'), story }[targets.motion];
   row('motion', targets.motion, m ? `${m.libraries.join(', ') || 'no library'}, ${m.stickyPanels} sticky panels, up to ${ev ? ev.motion.scriptDrivenOnScroll : '?'} moving on scroll` : 'not measured', !!ok);
 }
+if (targets.fonts) {
+  // Families that carry real text (3% or more); a font used only inside a product mockup counts too, so read the reason.
+  const fams = style.type.families.filter((f) => f.share >= 3);
+  row('fonts', `${targets.fonts} type families or fewer`, fams.map((f) => `${f.family} ${f.share}%`).join(' + '), fams.length <= targets.fonts, 'team Always: one text face + one display face');
+}
 // Team rules that are measurable: they apply whatever the dials say.
 if (has('ignores-reduced-motion')) row('never', 'motion has a reduced-motion version', 'still moves under reduced motion', false, 'team Never rule');
 if (ev && targets.priceNearAction !== false) row('always', 'a price near the main action', ev.outline.prices.length ? ev.outline.prices.slice(0, 3).join(', ') : 'no price on the page', ev.outline.prices.length > 0, 'team Always rule');

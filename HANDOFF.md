@@ -1,7 +1,7 @@
 # Handoff
 
 Read this first if you are a new session, a different model or a different AI tool picking up
-this project. It is kept up to date at every milestone. Last updated: **2026-11-02** (batch-004 Summer Smash Tennis judged; owner's five proposed standards evaluated).
+this project. It is kept up to date at every milestone. Last updated: **2026-11-02** (owner approved five new taste rules; photos.mjs; fonts check).
 
 ## 1. Goal
 
@@ -233,6 +233,23 @@ corrections (Unsplash never presented as the client's own, no generic stock, pla
 drafts). Four taste rules proposed in `data/references/batch-004-review.md`, pending approval.
 Photo sources from this cloud session: Unsplash images downloadable but search needs an API key,
 Openverse blocked, Wikimedia rate-limited. Owner asked whether to build a photo finder.
+
+Owner's answers on batch-004 (2026-11-02): Tennis visual 9, ship 9 (blended final 8, AI 7, gap
+2). "Human interaction" = interactive elements the visitor operates (before/after slider,
+clickable map, hover reveal, play to see detail). Approved the four proposed rules; the fifth
+(interactive element) added from their explanation. `team/taste.md` now has Always: two type
+families (text 80-95% + display), control feedback on hover/press/focus; Prefer: one signature
+element from the subject, at least one element the visitor operates, photographs as the key visual.
+The older "flat illustration" Prefer was reconciled: illustration layered over or beside photos,
+alone only without an honest photo; `team/visual-defaults.json` imagery default is now `photo` and
+it has `fonts: 2` (fit.mjs checks families with 3% or more of the text).
+Owner said "Unsplash is free, put it in the skill": corrected — the photos are free under the
+Unsplash License, but API search needs a free access key. Built `scripts/photos.mjs`
+(search/get/credits; Unsplash with UNSPLASH_ACCESS_KEY, Openverse and Wikimedia Commons without a
+key; contact sheet to look before choosing; credits file; Unsplash download_location triggered and
+hotlinking advised on live sites). Not verified live in this cloud session: Openverse 504 via the
+proxy, Commons 429, no Unsplash key. Run with NODE_USE_ENV_PROXY=1 behind a proxy.
+Also fixed: jury.mjs treated a veto field reading "none ..." as a veto.
 
 Capture fixes from batch-003: `lib/browser.mjs` `gotoStable` retries server error pages (a 502
 "upstream request failed" had been captured as Swehl's desktop) and every failed load is reported

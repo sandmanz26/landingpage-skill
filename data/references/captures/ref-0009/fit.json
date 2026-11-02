@@ -1,0 +1,52 @@
+{
+  "targets": "skill/design-director/team/visual-defaults.json",
+  "rows": [
+    {
+      "dial": "colour",
+      "want": "bold: 4+ flat colour families with roles",
+      "got": "3 colour families (6 values), 1 gradients",
+      "ok": false,
+      "why": "team Prefer: bold flat colour"
+    },
+    {
+      "dial": "type",
+      "want": "display ÷ body ≥ 6",
+      "got": "90/16px = ×5.6",
+      "ok": false
+    },
+    {
+      "dial": "imagery",
+      "want": "photo",
+      "got": "21 photos, 1 illustrations, 0 videos",
+      "ok": true
+    },
+    {
+      "dial": "motion",
+      "want": "story",
+      "got": "gsap, scrollTrigger, swiper, lottie, 0 sticky panels, up to 5 moving on scroll",
+      "ok": true
+    },
+    {
+      "dial": "fonts",
+      "want": "2 type families or fewer",
+      "got": "founders-grotesk 82% + obviously-narrow 18%",
+      "ok": true,
+      "why": "team Always: one text face + one display face"
+    },
+    {
+      "dial": "never",
+      "want": "motion has a reduced-motion version",
+      "got": "still moves under reduced motion",
+      "ok": false,
+      "why": "team Never rule"
+    },
+    {
+      "dial": "always",
+      "want": "a price near the main action",
+      "got": "no price on the page",
+      "ok": false,
+      "why": "team Always rule"
+    }
+  ],
+  "missed": 4
+}

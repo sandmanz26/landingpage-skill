@@ -60,7 +60,8 @@ const humans = jurors.filter((j) => j.kind === 'human');
 const mean = (xs) => (xs.length ? xs.reduce((a, b) => a + b, 0) / xs.length : null);
 const blend = (a, h) => (a === null ? h : h === null ? a : a * (1 - hw) + h * hw);
 const r1 = (x) => (x === null ? null : Math.round(x * 10) / 10);
-const vetoes = jurors.filter((j) => j.veto).map((j) => `${j.juror}: ${j.veto}`);
+// A veto field that says "none" is no veto.
+const vetoes = jurors.filter((j) => j.veto && !/^\s*(none|no veto|tidak ada)\b/i.test(String(j.veto))).map((j) => `${j.juror}: ${j.veto}`);
 
 let summary;
 if (cmd === 'score') {

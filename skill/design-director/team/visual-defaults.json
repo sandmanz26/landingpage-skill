@@ -2,14 +2,16 @@
   "_comment": "The team's taste as visual dials: the target when the user does not choose at the direction gate. Each value cites the approved rule in team/taste.md it comes from. Change it only together with taste.md.",
   "colour": "bold",
   "typeRatio": 6,
-  "imagery": "illustration",
+  "imagery": "photo",
   "motion": "story",
   "priceNearAction": true,
   "sources": {
     "colour": "Prefer: bold flat colour with clear roles (Maxima, Scotch, Playfolly; owner 2026-10-30)",
     "typeRatio": "Owner's favourites: Swehl and Future x6.3, Maxima x24 (style cards, 2026-11-01)",
-    "imagery": "Prefer: flat illustration drawn from the subject (Maxima, Replay; owner 2026-10-30)",
+    "imagery": "Prefer (2026-11-02, supersedes the 2026-10-30 default): photographs as the key visual, flat drawings from the subject layered over or beside them, drawings alone only when no honest photograph exists (owner; batch-004 Tennis, batch-002 Future)",
     "motion": "Prefer: smooth choreographed scroll storytelling with a reduced-motion version (Scotch, Maxima; owner 2026-10-30)",
-    "priceNearAction": "Always: price near the main action (Future; owner + jury 2026-10-30)"
-  }
+    "priceNearAction": "Always: price near the main action (Future; owner + jury 2026-10-30)",
+    "fonts": "Always: two type families, one text face 80-95% + one display face (9 of 9 library sites; owner 2026-11-02)"
+  },
+  "fonts": 2
 }

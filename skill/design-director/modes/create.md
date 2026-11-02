@@ -192,10 +192,12 @@ Check `rules/defaults.md`: if a choice in the table is one of the AI defaults, e
 write the reason it is right here. Colours: avoid the cream-and-terracotta "assistant palette" and
 violet or indigo accents unless the brand owns them.
 
-Imagery, in this order: the client's own → generated, if an image tool is available → real pictures
-of the subject's world from open collections with a licence that allows commercial use, credited →
-drawn in code from the subject itself (`rules/illustration.md`) → type and colour alone, only when
-the `imagery` dial says `type`. Never present a found or generated picture as the client's own
+Imagery, in this order: the client's own → licensed photographs of the subject's world found with
+`photos.mjs` (Unsplash with `UNSPLASH_ACCESS_KEY`, Openverse, Wikimedia Commons; look at the
+`--sheet` before choosing, credits recorded) → generated, if an image tool is available → drawn in
+code from the subject itself (`rules/illustration.md`) → type and colour alone, only when the
+`imagery` dial says `type`. On a live site, Unsplash photographs are hotlinked from their Unsplash
+URL as the Unsplash API guidelines ask; copies are only for offline previews. Never present a found or generated picture as the client's own
 product, room, dish or team. Write an **imagery plan** in the spec: every picture on the page, what
 it shows, where it comes from, and the shot list for the client.
 

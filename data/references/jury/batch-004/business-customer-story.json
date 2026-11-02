@@ -5,7 +5,11 @@
   "refs": {
     "ref-0009": {
       "business": "Summer Smash Tennis sells public tennis lessons in Vancouver: indoor/outdoor group classes for kids (ages 2-18 in named levels) and adults (NTRP-style 1.0-3.0 levels, plus fitness classes), private lessons (1-6 students), and school programs (only in the nav, not captured). Classes run through community centres and the City of Vancouver Park Board (classes and about pages). The actions that pay: REGISTER on a class card on /classes (27 cards, each with spots left; price shown only as 'Prorated at Checkout', so the checkout is probably at the city/community-centre system: inference), and 'Buy on ActiveNet' on /private (24 buttons, $100 down to $28.50 per person per lesson), then a booking form with a receipt upload. Buyers: parents of children, more than adult learners (four of the seven home testimonials are from parents). Secondary capture: newsletter and 'notify me when registration opens'. Inference: revenue is shared with or collected by the city, which explains why the site cannot show one price and one checkout.",
-      "scores": { "business": 6, "customer": 6, "story": 6 },
+      "scores": {
+        "business": 6,
+        "customer": 6,
+        "story": 6
+      },
       "reasons": {
         "business": "Strong: the first screen splits the two paying routes (GROUP LESSONS / PRIVATE LESSONS, both in the header and the hero, and they stay visible: ref-0009/digest.md Actions, desktop-fold.png). /classes shows real stock per class ('1 spot left', '4 spots left'), a waitlist form for full or unopened terms, and filters by age, level, day and location. /private shows a full price grid with volume and group discounts ('BEST VALUE'). Weak: the home page has no price and no 'from $X' anchor ('Prices: none'). Group-class prices are not shown anywhere captured. The private flow is a 4-step chain across two systems (pay on ActiveNet, save the receipt, come back, upload the receipt again for every single lesson, see a $0 checkout: ref-0009-private/digest.md FAQ), which leaks buyers. The trust before the ask is mostly an unsourced superlative ('VANCOUVER'S BEST') and 'over 10,000 students' in the hero. Real trust assets (city partnership, 40+ named coaches, First Nations programmes, 'since 2012') sit on subpages or near the bottom of the home page.",
         "customer": "The phone visitor (often a parent) asks, in order: is there a class for my child's age/level near me, when, how much, is it good, how do I sign up. The home page answers 'what' and 'for whom' at once (mobile-fold.png: H1, kids-and-adults line, two full-width CTAs). The fall banner answers 'is it on now' with Kids/Adult links. Levels (33%) and locations with a map (51%) follow. It never answers 'when' or 'how much'; you must go to /classes, which does answer when and how many spots, but not price. Testimonials come at 57-70%, one at a time behind arrow buttons; 12 of their texts were never visible during a scroll and stay hidden with reduced motion (inspector FAIL hidden-content and reduced-motion). On a phone, /classes is 12444px tall with 31 tap targets under 24px (ref-0009-classes/digest.md). The banner's Kids/Adult links are 36x23 and 44x23 on every page. The home location list (8) does not match the /classes filter (10, adding Hillcrest, Thunderbird and North Delta, and North Delta is outside Vancouver).",
@@ -47,7 +51,8 @@
         "Level ladders with entry criteria ('Can rally 10 in a row...'): parents and adults can place themselves without a call.",
         "A method slogan repeated as a text-on-path band before the method section: brand motion that carries the main message instead of decoration."
       ],
-      "veto": "None. 'Vancouver's best' is puffery rather than a checkable fact, and 'over 10,000 students' is unsourced but consistent with the About page (since 2012, 2000+ students a year now; inference). Neither is a promise the business cannot keep. Flag: back the hero with the checkable facts, or drop the superlative."
+      "veto": null,
+      "veto_note": "None. 'Vancouver's best' is puffery rather than a checkable fact, and 'over 10,000 students' is unsourced but consistent with the About page (since 2012, 2000+ students a year now; inference). Neither is a promise the business cannot keep. Flag: back the hero with the checkable facts, or drop the superlative."
     }
   }
 }

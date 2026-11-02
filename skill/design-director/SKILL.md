@@ -198,6 +198,7 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 | `capture.mjs <list.txt> [--jobs 3]` | Runs inspect, evidence, digest and style for a whole batch in parallel |
 | `dials.mjs suggest <liked dirs> [--dislike dirs]` | Sites the user likes and dislikes → suggested dials, with where they agree and what to avoid |
 | `compare.mjs <v1.html> <v2.html> … [--labels a,b] [--blind]` | A page for the user to compare variants side by side at desktop or phone width, score them and copy a reply |
+| `photos.mjs search "<query>" [--sheet f.png]` / `get <ref>` / `credits` | Licensed photographs of the subject's world (Unsplash with `UNSPLASH_ACCESS_KEY`, Openverse, Wikimedia Commons), downloaded with their credits |
 | `fit.mjs <inspect dir> [--targets .design/targets.json]` | The built page against the chosen dials and the team's taste; misses need a fix or a reason |
 | `style.mjs <dir>` | Style card of a captured reference: palette, type, shape, motion, tags, do-not-copy |
 | `library.mjs build` / `groups` / `find <words> --tags a,b` | Builds `library/index.json` from judged batches, grouping every reference by sector and by style on its own; finds the closest references with their style |
