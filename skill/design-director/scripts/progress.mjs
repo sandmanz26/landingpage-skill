@@ -171,6 +171,11 @@ switch (cmd) {
       if (!/##\s*(Sources|Sumber)/i.test(r)) fail('research.md needs a "## Sources" section listing what was read, with dates.');
     }
     if (step === 'direction' && !fs.existsSync(path.join(DIR, 'directions'))) fail('"direction" needs the dealt directions in .design/directions/.');
+    if (step === 'direction' && s.gates === 'guided') {
+      const dd = path.join(DIR, 'directions');
+      const sketches = fs.existsSync(dd) ? fs.readdirSync(dd).filter((f) => /^sketch-.*\.html$/.test(f)) : [];
+      if (sketches.length < 2) fail('With guided gates the user chooses from pictures: build a first-screen sketch per direction (.design/directions/sketch-a.html, sketch-b.html …) and show them with compare.mjs (rules/brief-interview.md).');
+    }
     if (step === 'direction' && !fs.existsSync(path.join(DIR, 'targets.json')))
       fail('"direction" needs .design/targets.json: the visual dials the user chose (rules/visual-dials.md), or team/visual-defaults.json copied with the reason.');
     if (step === 'look' && fs.existsSync(path.join(DIR, 'targets.json'))) {

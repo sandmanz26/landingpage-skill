@@ -69,12 +69,13 @@ means three things at once: it serves the business, it answers the customer, and
    one-line reason and "continue?", for people who do not want to choose, or who have said
    "terserah" / "up to you". `autopilot`: no human in the loop (batch runs, evals); every choice is
    logged with its reason. Check `designers/<name>.md` for a saved preference.
-4. **Variants.** One page (default), or 2–3 full variants built from the same research, copy and
-   dials but different directions or compositions; thorough effort makes 3 by default. Ask once
-   when the user did not say: "Satu versi, atau 2–3 varian untuk dipilih?" Then who chooses:
-   `user` (the user picks on `compare.mjs`) or `jury` (two jurors rank them; the winner is
-   delivered, the others are shown as alternatives). Variants cost a build and an inspection
-   each; say so.
+4. **Guide, then let the user choose early.** Before research, help the user say what they want
+   in one short message (`rules/brief-interview.md`): who and what for, 1–3 sites they like and 1
+   they do not (turned into dials by `dials.mjs`), three feeling words, what exists, what is ruled
+   out. At the direction gate the user picks from first-screen sketches of each direction; that
+   choice replaces the hero best-of-3 and halves the look jury. Full-page variants (2–3 whole
+   pages, `--variants`) are for thorough effort or when the user asks; the user chooses on
+   `compare.mjs` (`--choose user`), the jury only in autopilot.
 5. Run `node <skill>/scripts/progress.mjs init --mode <mode> --effort <effort> --gates <style> [--variants N --choose user|jury]`.
 6. Read `team/taste.md`, the brand file (`brands/<client>.md`, or `.design/brand.md` in the
    project) if one exists, `designers/<name>.md` if the user is named, and `rules/precedence.md`.
@@ -178,6 +179,7 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 | `rubric/critic.md` | Briefing the critic subagent; the critique format every juror uses |
 | `rubric/jury.md` | The look step and best-of-N at standard effort and above; judging references |
 | `library/intake.md` | When the team sends references with their notes |
+| `rules/brief-interview.md` | The brief step: the one guiding message, liked sites into dials, sketches at the direction gate |
 | `rules/visual-dials.md` | The direction gate: the dials, presets from the library, how to guide the user |
 | `rules/illustration.md` | Writing the spec when the client has no pictures: drawing flat illustration, the shot list |
 | `library/index.json` (via `library.mjs find`) | The direction step: the team's judged references with their style cards; adapt each to the client or ask (`modes/create.md`) |
@@ -194,6 +196,7 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 | `evidence.mjs <url or file> --dir <dir>` | Evidence pack for the jury: contact sheets, motion frames, outline, motion, reduced-motion and idle results |
 | `digest.mjs <dir>` | `digest.md`: the one short file a juror reads first (outline, motion, inventory, findings, page text) |
 | `capture.mjs <list.txt> [--jobs 3]` | Runs inspect, evidence, digest and style for a whole batch in parallel |
+| `dials.mjs suggest <liked dirs> [--dislike dirs]` | Sites the user likes and dislikes → suggested dials, with where they agree and what to avoid |
 | `compare.mjs <v1.html> <v2.html> … [--labels a,b] [--blind]` | A page for the user to compare variants side by side at desktop or phone width, score them and copy a reply |
 | `fit.mjs <inspect dir> [--targets .design/targets.json]` | The built page against the chosen dials and the team's taste; misses need a fix or a reason |
 | `style.mjs <dir>` | Style card of a captured reference: palette, type, shape, motion, tags, do-not-copy |

@@ -265,6 +265,36 @@ const check = (name, ok, detail = '') => {
   check('library groups references by sector and by style', /health\s+g1, g2/.test(g.stdout) && /software\s+g3/.test(g.stdout) && /\(2\):.*\n\s+g1, g2/.test(g.stdout), g.stdout + g.stderr);
 }
 
+// dials: sites the user likes become suggested dials
+{
+  const out = path.join(tmp, 'targets.suggested.json');
+  const r = run('dials.mjs', ['suggest', path.join(tmp, 'slop'), '--out', out]);
+  const t = fs.existsSync(out) ? JSON.parse(fs.readFileSync(out, 'utf8')) : null;
+  check('dials suggests targets from a liked site', r.status === 0 && !!t && [4, 6, 10].includes(t.suggested.typeRatio) && ['calm', 'bold'].includes(t.suggested.colour), r.stdout + r.stderr);
+}
+
+// guided gates: the user chooses the direction from sketches
+{
+  const proj = path.join(tmp, 'sketches');
+  fs.mkdirSync(proj);
+  const p = (...a) => run('progress.mjs', a, proj);
+  p('init', '--mode', 'create', '--effort', 'standard', '--gates', 'guided');
+  const d = path.join(proj, '.design');
+  fs.writeFileSync(path.join(d, 'brief.md'), '# Brief');
+  p('approve', 'brief', '--note', 'ok'); p('done', 'brief');
+  fs.writeFileSync(path.join(d, 'research.md'), '# R\n## Sources\n- x'); p('done', 'research');
+  fs.writeFileSync(path.join(d, 'strategy.md'), '# S'); p('done', 'strategy');
+  fs.writeFileSync(path.join(d, 'roast.md'), '# Roast\n## Response\n- ok');
+  p('approve', 'strategy', '--note', 'ok'); p('done', 'roast');
+  fs.mkdirSync(path.join(d, 'directions'));
+  fs.writeFileSync(path.join(d, 'targets.json'), '{}');
+  p('approve', 'direction', '--note', 'A');
+  const without = p('done', 'direction');
+  for (const x of ['a', 'b']) fs.copyFileSync(path.join(fixtures, 'clean.html'), path.join(d, 'directions', `sketch-${x}.html`));
+  const withSketches = p('done', 'direction');
+  check('progress wants first-screen sketches before a guided direction', without.status !== 0 && /sketch/.test(without.stderr) && withSketches.status === 0, without.stderr + withSketches.stderr);
+}
+
 // draw
 {
   const a = run('draw.mjs', ['--sector', 'health', '--seed', '7']);

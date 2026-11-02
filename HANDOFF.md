@@ -1,7 +1,7 @@
 # Handoff
 
 Read this first if you are a new session, a different model or a different AI tool picking up
-this project. It is kept up to date at every milestone. Last updated: **2026-11-02** (variants with user or jury choice; references grouped by sector and style automatically).
+this project. It is kept up to date at every milestone. Last updated: **2026-11-02** (guiding the user up front; sketch choice at the direction gate).
 
 ## 1. Goal
 
@@ -200,6 +200,24 @@ deliver the best or let the user pick, and for references to be grouped by the A
   juror; its measured win was 0 inspector FAILs vs 8-13. Worth adopting (MIT, with attribution):
   the "live thing" rule, assets.mjs (open-collection pictures with licences and credits), a
   minimum motion count. Not done yet; owner not yet asked to decide.
+
+Guiding the user and choosing early (2026-11-02, owner: variants are for the user to choose,
+which should cut process; guide the user to what they want so results scope down, not random):
+- Told the owner: the saving comes from choosing early from cheap first-screen sketches, not from
+  building 2-3 full pages and choosing late.
+- `rules/brief-interview.md`: one guiding message before the brief gate, at most five questions
+  with choices and a recommendation (who and what for; 1-3 liked sites and 1 disliked; three
+  feeling words from a list; what exists; what is ruled out); "terserah" → team defaults.
+- `scripts/dials.mjs suggest <liked capture dirs> [--dislike dirs]`: liked sites → suggested dials
+  with agreement counts and "not a differentiator" notes when disliked sites share a value, plus
+  things to avoid; writes `.design/targets.suggested.json` for the direction gate.
+- Direction gate (guided): first-screen sketches per direction (`.design/directions/sketch-*.html`)
+  shown with `compare.mjs`; `progress.mjs` refuses `done direction` without at least two. When the
+  user chose from sketches: hero best-of-3 skipped, look at standard effort with two jurors (art
+  director, customer researcher). Estimated effect on run-2-style cost: subagents from about 630k
+  to about 130-200k (no hero jury; 2 look jurors) plus sketch building in the main session;
+  not yet measured.
+- Full-page variants remain for thorough effort or on request; user chooses unless autopilot.
 
 Capture fixes from batch-003: `lib/browser.mjs` `gotoStable` retries server error pages (a 502
 "upstream request failed" had been captured as Swehl's desktop) and every failed load is reported

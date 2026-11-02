@@ -34,6 +34,10 @@ Write `.design/brief.md`:
 - My reading: <one line on anything unclear>
 ```
 
+Before writing it, guide the user in one message (`rules/brief-interview.md`): who and what for,
+1–3 liked sites and 1 disliked (capture them and run `dials.mjs suggest`), three feeling words,
+what exists, what is ruled out; skip what the request already answers.
+
 Show it as the brief gate (SKILL.md). Ask only blocking questions, five at most. After the user
 answers: `approve brief --note "..."`, then `done brief`.
 
@@ -108,6 +112,11 @@ references with the role each one plays (see `rules/copyright.md`), and read the
    At quick effort and in autopilot, adapt to the brand without asking and log the choice.
 5. Never carry over anything in `doNotCopy`, under a veto, or from an entry marked `patternOnly`
    (those are used through their tags only).
+
+With guided gates, build each direction's first screen as a quick sketch
+(`.design/directions/sketch-a.html` …: real headline, action, dial values, the main picture idea)
+and show them side by side with `compare.mjs` so the user chooses from pictures, not descriptions.
+Start the dials from `.design/targets.suggested.json` when the user sent sites they like.
 
 Show the direction gate (SKILL.md) with the visual dials (`rules/visual-dials.md`). Recommend the
 direction whose device carries something only this client has, not the most familiar one, and set
@@ -208,7 +217,8 @@ Order: tokens → hero → sections → pictures → states (hover, focus, error
 
 - Tokens become CSS custom properties (or the Tailwind theme / component-library theme of the
   stack). Everything downstream uses tokens only.
-- **Hero best-of-3** (standard and thorough effort): build three hero variants that differ in
+- **Hero best-of-3** (standard and thorough effort; skipped when the user chose from sketches at the
+  direction gate, and say so in the log): build three hero variants that differ in
   composition, not just colour, as `.design/variants/hero-a.html`, `-b`, `-c`. Screenshot each
   (`inspect.mjs <file> --out .design/variants/<x> --quiet`), then put them before the jury
   (`rubric/jury.md`): each AI juror ranks them, designers may add their ranking, and
@@ -249,7 +259,9 @@ the source changed after the last inspection).
 
 ## 11. look
 
-At standard and thorough effort, the look is done by the **jury** (`rubric/jury.md`): each AI juror is
+At standard and thorough effort, the look is done by the **jury** (`rubric/jury.md`); at standard
+effort after the user chose from sketches, two jurors (art director and customer researcher) are
+enough unless the user asks for more: each AI juror is
 a separate subagent that gets the evidence pack (run `evidence.mjs <file> --dir .design/inspect`
 after the gate's inspection: folds, contact sheets, `evidence.json`, `report.json`), the brief card, the customer
 profile and the five most important customer questions from the strategy, and the team anchors,
