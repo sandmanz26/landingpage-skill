@@ -1,7 +1,7 @@
 # Mode: section
 
 One section or component inside an existing design. Steps: brief → research → spec → roast → build →
-gate → look → deliver. Default effort is `quick`.
+reason → gate → look → deliver. Default effort is `quick`.
 
 - **brief:** what the section must say or do, and where it sits. Show the card; one question at most.
 - **research:** light. Reuse `.design/research.md` and `.design/strategy.md` if the project has them;

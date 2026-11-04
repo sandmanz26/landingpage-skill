@@ -26,12 +26,12 @@ const LOG = path.join(DIR, 'decisions.log');
 // Steps per mode. "step:gate" means the step needs that approval before it can
 // be marked done. Research and roast run in every mode: they are not optional.
 const FLOWS = {
-  create: ['brief:brief', 'research', 'strategy', 'roast:strategy', 'direction:direction', 'skeleton', 'spec', 'copy', 'build', 'gate', 'look', 'deliver:final', 'learn'],
-  site: ['brief:brief', 'research', 'sitemap', 'strategy', 'roast:strategy', 'direction:direction', 'skeleton', 'system', 'spec', 'copy', 'build', 'gate', 'look', 'deliver:final', 'learn'],
-  section: ['brief:brief', 'research', 'spec', 'roast', 'build', 'gate', 'look', 'deliver:final'],
-  review: ['context', 'research', 'before', 'review', 'roast', 'deliver:final'],
-  restyle: ['context', 'research', 'before', 'review', 'roast', 'choose:choose', 'fix', 'after', 'gate', 'deliver:final', 'learn'],
-  redesign: ['context', 'research', 'before', 'review', 'strategy', 'roast:strategy', 'choose:choose', 'direction:direction', 'spec', 'fix', 'after', 'gate', 'deliver:final', 'learn'],
+  create: ['brief:brief', 'research', 'strategy', 'roast:strategy', 'direction:direction', 'skeleton', 'spec', 'copy', 'build', 'reason', 'gate', 'look', 'deliver:final', 'learn'],
+  site: ['brief:brief', 'research', 'sitemap', 'strategy', 'roast:strategy', 'direction:direction', 'skeleton', 'system', 'spec', 'copy', 'build', 'reason', 'gate', 'look', 'deliver:final', 'learn'],
+  section: ['brief:brief', 'research', 'spec', 'roast', 'build', 'reason', 'gate', 'look', 'deliver:final'],
+  review: ['context', 'research', 'before', 'reason', 'review', 'roast', 'deliver:final'],
+  restyle: ['context', 'research', 'before', 'review', 'roast', 'choose:choose', 'fix', 'reason', 'after', 'gate', 'deliver:final', 'learn'],
+  redesign: ['context', 'research', 'before', 'review', 'strategy', 'roast:strategy', 'choose:choose', 'direction:direction', 'spec', 'fix', 'reason', 'after', 'gate', 'deliver:final', 'learn'],
 };
 const stepsOf = (mode) => FLOWS[mode].map((x) => x.split(':')[0]);
 const gateOf = (mode, step) => (FLOWS[mode].find((x) => x.split(':')[0] === step) || '').split(':')[1];
@@ -51,6 +51,7 @@ const EVIDENCE = {
   sitemap: 'sitemap.md',
   spec: 'spec.md',
   copy: 'copy.md',
+  reason: 'reason.md',
   look: 'critique.md',
   review: 'critique.md',
   before: 'before/report.json',
@@ -169,6 +170,34 @@ switch (cmd) {
     if (step === 'research') {
       const r = fs.readFileSync(path.join(DIR, 'research.md'), 'utf8');
       if (!/##\s*(Sources|Sumber)/i.test(r)) fail('research.md needs a "## Sources" section listing what was read, with dates.');
+    }
+    if (step === 'reason') {
+      // Every numbered element of the built page has a verdict (rubric/reason.md).
+      const nvr = s.variants || 1;
+      const dirs = nvr > 1 && s.mode !== 'review' ? Array.from({ length: nvr }, (_, i) => `variants/v${i + 1}`) : ['.'];
+      for (const d of dirs) {
+        const ej = path.join(DIR, d, 'reason', 'elements.json');
+        const rm = path.join(DIR, d, 'reason.md');
+        const rel = (f) => path.relative(DIR, f);
+        if (!fs.existsSync(ej)) fail(`Photograph the page with numbered elements first: elements.mjs <page> --out .design/${rel(path.dirname(ej))}`);
+        if (!fs.existsSync(rm)) fail(`Write .design/${rel(rm)}: a verdict for every element (rubric/reason.md).`);
+        const ids = JSON.parse(fs.readFileSync(ej, 'utf8')).elements.map((e) => e.id);
+        const text = fs.readFileSync(rm, 'utf8');
+        const rows = new Map();
+        for (const line of text.split('\n')) {
+          const m = line.match(/^\|\s*(E\d+)\s*\|/);
+          if (!m) continue;
+          const cells = line.split('|').map((c) => c.trim()).filter(Boolean);
+          rows.set(m[1], cells[cells.length - 1]);
+        }
+        const VERDICT = /^(keep|fix|merge|cut|pertahankan|perbaiki|gabung(kan)?|buang)\b/i;
+        const missing = ids.filter((id) => !rows.has(id));
+        const noVerdict = ids.filter((id) => rows.has(id) && !VERDICT.test(rows.get(id)));
+        if (missing.length) fail(`.design/${rel(rm)} has no row for ${missing.slice(0, 10).join(', ')}${missing.length > 10 ? ` and ${missing.length - 10} more` : ''}: every element needs its job and a verdict.`);
+        if (noVerdict.length) fail(`.design/${rel(rm)}: ${noVerdict.slice(0, 10).join(', ')} end without a verdict (keep, fix, merge or cut).`);
+        const acted = [...rows.values()].some((v) => /^(fix|merge|cut|perbaiki|gabung|buang)/i.test(v));
+        if (acted && s.mode !== 'review' && !/##\s*(Response|Tanggapan)/i.test(text)) fail(`.design/${rel(rm)} has fix, merge or cut verdicts: add a "## Response" section saying what was done for each.`);
+      }
     }
     if (step === 'spec') {
       const sp = fs.readFileSync(path.join(DIR, 'spec.md'), 'utf8');

@@ -82,4 +82,4 @@ Di library, Quite Nice masuk grup gaya yang sama dengan Swehl dan ERLY (datar, g
 
 - Apakah di HP, tap pada kartu rasa menampilkan mangkuk. Yang diukur hanya bahwa efeknya memakai hover; perilaku tap di perangkat sungguhan belum diuji.
 - Kehalusan animasi di mesin dengan GPU. Angka 49 fps diukur dengan software rendering dan hanya berguna sebagai pembanding antar-halaman.
-- Kenapa situs ini mengadakan farewell sale.
+- ~~Kenapa situs ini mengadakan farewell sale.~~ Terjawab 2026-11-04: Quite Nice sudah tutup. Berandanya kini hanya "Thanks for all the memories. Quite Nice is now closed." Rekaman 2026-11-02 adalah satu-satunya catatan desain aslinya dan tidak bisa direkam ulang.

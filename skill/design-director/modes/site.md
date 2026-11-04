@@ -1,8 +1,8 @@
 # Mode: site
 
 Several pages, or a stepped flow (landing → pricing → sign-up → onboarding). Steps: brief → research
-→ sitemap → strategy → roast → direction → skeleton → system → spec → copy → build → gate → look →
-deliver → learn. Research and roast cover the whole site at once.
+→ sitemap → strategy → roast → direction → skeleton → system → spec → copy → build → reason → gate →
+look → deliver → learn. Research and roast cover the whole site at once.
 Everything not described here works as in `modes/create.md`.
 
 ## sitemap

@@ -135,8 +135,8 @@ change.
 ## When the user changes their mind
 
 Every step depends on the ones before it:
-brief → research → strategy → roast → direction → skeleton → spec → copy → build → gate → look →
-deliver.
+brief → research → strategy → roast → direction → skeleton → spec → copy → build → reason → gate →
+look → deliver.
 
 1. Find the earliest decision that changed ("go back to direction B" → `direction`; "the audience is
    students now" → `brief`; "the real problem is price, not fear" → `strategy`).
@@ -176,6 +176,7 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 | `rules/copyright.md` | Before using any reference |
 | `rules/copy-id.md` | Writing copy in Bahasa Indonesia |
 | `motion/functions.md` | Writing the motion spec and building motion |
+| `rubric/reason.md` | The reason step: every element of the built page names its job or goes |
 | `rubric/critic.md` | Briefing the critic subagent; the critique format every juror uses |
 | `rubric/jury.md` | The look step and best-of-N at standard effort and above; judging references |
 | `library/intake.md` | When the team sends references with their notes |
@@ -193,6 +194,7 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 | `draw.mjs --sector <s> [--tone <t>] [--have a,b] [--options 3]` | Deals directions into `.design/directions/` (`--list sectors`) |
 | `inspect.mjs <url or file> [--out dir] [--allow rule]` | Real-browser check at 1440/768/390, screenshots, design inventory |
 | `lint.mjs <files or folders>` | Stock copy, placeholders, default styling patterns in source |
+| `elements.mjs <url or file> [--out .design/reason]` | The built page with every element numbered, one picture per section and the phone pages, with hints (decorative, endless motion, repeated, unsourced number, stock copy, emoji, twin cards): the input of the reason roast |
 | `evidence.mjs <url or file> --dir <dir>` | Evidence pack for the jury: contact sheets, motion frames, outline, motion, reduced-motion and idle results |
 | `digest.mjs <dir>` | `digest.md`: the one short file a juror reads first (outline, motion, inventory, findings, page text) |
 | `capture.mjs <list.txt> [--jobs 3]` | Runs inspect, evidence, digest and style for a whole batch in parallel |

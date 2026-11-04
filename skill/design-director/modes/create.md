@@ -1,7 +1,7 @@
 # Mode: create
 
 A new page. Steps: brief → research → strategy → roast → direction → skeleton → spec → copy → build →
-gate → look → deliver → learn. Run `progress.mjs check <step>` before each and `done <step>` after.
+reason → gate → look → deliver → learn. Run `progress.mjs check <step>` before each and `done <step>` after.
 Research and roast always run; the user never has to ask for them.
 
 ## 1. brief (gate)
@@ -253,7 +253,26 @@ Never make variants that differ only in colour. Inspect each (`inspect.mjs .desi
 Write `.design/variants/choice.json` `{ "winner": "v2", "by": "user|jury", "why": "..." }`, copy
 the winner to the page's real location, and continue with the look on that one.
 
-## 10. gate
+## 10. reason
+
+The built page is photographed with every element numbered, and every element must say what it
+is for (`rubric/reason.md`). Models place UI because pages like this usually have it: icon cards,
+stat rows, badges, blobs, marquees, eyebrow labels. This step finds them before the gate and the
+jury.
+
+```bash
+node <skill>/scripts/elements.mjs <path/to/index.html> --out .design/reason
+```
+
+At standard and thorough effort a separate subagent roasts it from `elements.md`, the numbered
+pictures, the brief card, the customer's questions and the spec's Sections and Interactions tables
+(not the code). Each element gets its job (a customer question, the action that pays, proof, the
+product, the idea, orientation, or a requirement) and a verdict: keep, fix, merge or cut. "Looks
+nice" is not a job. Do every fix, merge and cut, write the **Response** in `.design/reason.md`, then
+`done reason` (it refuses while an element has no verdict). With variants, run it for each variant
+(`variants/vN/reason/`, `variants/vN/reason.md`).
+
+## 11. gate
 
 ```bash
 node <skill>/scripts/lint.mjs <source files or folder>
@@ -264,7 +283,7 @@ Fix every FAIL. Treat each WARN as wrong unless you can defend it to a designer 
 write that sentence in the report. Re-run until there is no FAIL, then `done gate` (it refuses if
 the source changed after the last inspection).
 
-## 11. look
+## 12. look
 
 At standard and thorough effort, the look is done by the **jury** (`rubric/jury.md`); at standard
 effort after the user chose from sketches, two jurors (art director and customer researcher) are
@@ -288,7 +307,7 @@ Fix the top three problems (every veto first), inspect again, look again. At mos
 If subagents are unavailable, do the look in a separate step that reads only the screenshots and
 the rubric, and say in the report that the critique was not independent.
 
-## 12. deliver (gate)
+## 13. deliver (gate)
 
 Show the package:
 
@@ -310,6 +329,6 @@ Show the package:
 Copy the final screenshots to `.design/snapshots/<date>-v<n>/`. After the user approves:
 `approve final`, `done deliver`.
 
-## 13. learn
+## 14. learn
 
 See SKILL.md. Standard effort may skip with a reason when the user gave no feedback.

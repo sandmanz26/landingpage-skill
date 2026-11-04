@@ -277,6 +277,35 @@ const check = (name, ok, detail = '') => {
   check('dials suggests targets from a liked site', r.status === 0 && !!t && [4, 6, 10].includes(t.suggested.typeRatio) && ['calm', 'bold'].includes(t.suggested.colour), r.stdout + r.stderr);
 }
 
+// reason roast: every element of the built page is numbered and needs a verdict
+{
+  const proj = path.join(tmp, 'reason');
+  fs.mkdirSync(proj);
+  const d = path.join(proj, '.design');
+  const e = run('elements.mjs', [path.join(fixtures, 'slop.html'), '--out', path.join(d, 'reason')], proj);
+  const ej = path.join(d, 'reason', 'elements.json');
+  const els = fs.existsSync(ej) ? JSON.parse(fs.readFileSync(ej, 'utf8')).elements : [];
+  const flags = new Set(els.flatMap((x) => x.flags));
+  check('elements numbers the page and photographs each section', e.status === 0 && els.length >= 10 && fs.existsSync(path.join(d, 'reason', 'desktop-S01.png')) && fs.existsSync(path.join(d, 'reason', 'mobile-01.png')), e.stdout + e.stderr);
+  check('elements flags template filler (emoji, twin cards, generic copy, unsourced numbers, eyebrows)', ['emoji', 'same-as-siblings', 'generic-copy', 'number-claim', 'eyebrow'].every((f) => flags.has(f)), [...flags].join(', '));
+  const p = (...a) => run('progress.mjs', a, proj);
+  p('init', '--mode', 'section', '--effort', 'quick', '--gates', 'quick');
+  fs.writeFileSync(path.join(d, 'brief.md'), '# Brief');
+  p('approve', 'brief'); p('done', 'brief');
+  fs.writeFileSync(path.join(d, 'research.md'), '# R\n## Sources\n- x'); p('done', 'research');
+  fs.writeFileSync(path.join(d, 'spec.md'), '# Spec\n## Interactions\nnone'); p('done', 'spec');
+  fs.writeFileSync(path.join(d, 'roast.md'), '# Roast\n## Response\n- ok'); p('done', 'roast');
+  p('done', 'build');
+  const rows = (verdict) => els.map((x) => `| ${x.id} | thing | job | lost | ${verdict(x)} |`).join('\n');
+  fs.writeFileSync(path.join(d, 'reason.md'), `# Reason\n${rows(() => 'keep')}`.replace(/\| E01 \|.*\n/, ''));
+  const partial = p('done', 'reason');
+  fs.writeFileSync(path.join(d, 'reason.md'), `# Reason\n${rows((x) => (x.flags.includes('emoji') ? 'cut' : 'keep'))}`);
+  const noResponse = p('done', 'reason');
+  fs.writeFileSync(path.join(d, 'reason.md'), `# Reason\n${rows((x) => (x.flags.includes('emoji') ? 'cut' : 'keep'))}\n## Response\n- emoji cards cut`);
+  const ok = p('done', 'reason');
+  check('progress wants a verdict for every element, and a response to every cut', partial.status !== 0 && /E01/.test(partial.stderr) && noResponse.status !== 0 && ok.status === 0, partial.stderr + noResponse.stderr + ok.stderr);
+}
+
 // guided gates: the user chooses the direction from sketches
 {
   const proj = path.join(tmp, 'sketches');

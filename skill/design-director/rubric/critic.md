@@ -60,6 +60,10 @@ own.
 14. **Interactions.** Operate every hover, click-to-reveal, slider and flip (desktop and phone). For
     each: what does it reveal, and which customer question does that answer? "Nothing" or "it looks
     nice" makes it decoration. Is the same thing reachable by tap and keyboard?
+15. **Reason.** Point at five elements at random in the screenshots and say each one's job (a
+    customer question, the action that pays, proof, the product, the idea, orientation, a
+    requirement). An element with no job is a top-three problem. If `.design/reason.md` exists,
+    check that every element it cut is gone.
 
 ## Score
 

@@ -16,6 +16,7 @@ Format: `- <rule> — <why> (source: <project>, <date>, <who>)`
 
 ## Never
 <!-- e.g. - Centred hero with two buttons — reads as a template to our clients (source: review session, 2026-11-05, team) -->
+- An element that cannot name its job: UI placed because pages like this usually have it (three icon cards, a stat row, a badge, a blob, an eyebrow label, a marquee), or chosen for looks alone without carrying the page's idea — the customer cannot use what the designer cannot explain; every element passes the reason roast (`rubric/reason.md`) (source: owner 2026-11-04, "banyak AI cuman sekedar menaruh UI tapi tidak paham apa yang dia taruh")
 - Content that only appears through animation, motion without a reduced-motion path, or a page that navigates by itself — excludes people and hides the offer (source: batch-001 Replay, batch-002 Maxima, 2026-10-30, owner + jury)
 
 - A fixed or sticky logo or badge that is not a slim bar: a large logo belongs to the first screen and scrolls away — it covers content on every screen (source: batch-005 A-Rete 280x183px fixed badge; inspector `fixed-cover`; decided by Claude on the owner's delegation 2026-11-02, owner to review)

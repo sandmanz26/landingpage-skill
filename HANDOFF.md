@@ -1,7 +1,7 @@
 # Handoff
 
 Read this first if you are a new session, a different model or a different AI tool picking up
-this project. It is kept up to date at every milestone. Last updated: **2026-11-02** (batch-007 Quite Nice; purposeful-interaction rule).
+this project. It is kept up to date at every milestone. Last updated: **2026-11-04** (reason roast step; Quite Nice closed).
 
 ## 1. Goal
 
@@ -304,6 +304,28 @@ nothing (closed drawers) and counts only the on-screen area (fixture in clean.ht
 without the fix). Process lesson: inspect.mjs deletes every PNG in its folder, including evidence
 sheets; after re-running inspect, re-run evidence.mjs too (or capture.mjs). capture.mjs resolves
 `--out` against the working directory: run it from the repo root.
+
+Reason roast (2026-11-04, owner: "banyak AI cuman sekedar menaruh UI tapi tidak paham apa yang dia
+taruh, terkadang hanya estetika atau elemen tidak berguna"): new step `reason` after build (create,
+site, section), after fix (restyle, redesign) and after before (review), not skippable at any
+effort. `scripts/elements.mjs <page> --out .design/reason` photographs the page with every element
+numbered (E01 …; headings, text, actions, images, icons, cards with their contents, lists,
+disclosures, forms, marquees, badges, shapes), one picture per section at 1440 and the phone pages
+at 390, and writes elements.json + elements.md with hints: decorative, moves-endlessly, repeated
+(duplicates in one section collapsed to ×N), number-claim, generic-copy (rules/lint-words.json),
+emoji, same-as-siblings, eyebrow, no-label, hidden-on-phone. `rubric/reason.md`: a separate
+subagent at standard/thorough (self at quick, marked not independent) answers four questions per
+element (what it is, its job and for whom, what is lost without it, true and specific to this
+client) with a verdict keep/fix/merge/cut; "looks nice" is not a job unless it carries the idea
+named in the spec. progress.mjs `done reason` refuses unless every element ID has a row ending in a
+verdict and, when anything is fixed/merged/cut (not in review mode), a "## Response" section;
+per variant with variants. Team Never rule added (owner's words as source); critic pass 15.
+Selftest: elements on slop.html (sections, phone pages, 5 flags) and the progress checks. Tried on
+the WO run-2 page (67 elements; flags its six all-caps eyebrow labels over headings, the nav hidden
+on phone), Sunny Within live (73 elements after collapsing its marquee duplicates) and Quite Nice
+live. Not measured: the roaster subagent's token cost and whether its verdicts match designers'.
+Quite Nice closed between 2026-11-02 and 2026-11-04 (home now "Quite Nice is now closed"): the
+batch-007 capture is the only record; recorded in batch-007.json `site_status`.
 
 Capture fixes from batch-003: `lib/browser.mjs` `gotoStable` retries server error pages (a 502
 "upstream request failed" had been captured as Swehl's desktop) and every failed load is reported

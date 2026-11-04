@@ -6,9 +6,9 @@ so the page ends up mixed. Work at the lowest layer that fixes the problem.
 
 | Mode | Steps |
 | --- | --- |
-| `review` | context → research → before → review → roast → deliver |
-| `restyle` | context → research → before → review → roast → choose → fix → after → gate → deliver → learn |
-| `redesign` | context → research → before → review → strategy → roast → choose → direction → spec → fix → after → gate → deliver → learn |
+| `review` | context → research → before → reason → review → roast → deliver |
+| `restyle` | context → research → before → review → roast → choose → fix → reason → after → gate → deliver → learn |
+| `redesign` | context → research → before → review → strategy → roast → choose → direction → spec → fix → reason → after → gate → deliver → learn |
 
 Research and roast always run. A review that judges only looks misses the reason most pages
 underperform: they do not answer the customer, or do not lead to the action that pays.
@@ -91,6 +91,13 @@ composition from the direction.
   dependency file before adding anything, and ask before adding a dependency.
 - **Consolidate.** Collapse near-duplicate values onto the scale (15px and 16px become 16px).
 - **Keep behaviour.** Routes, forms, handlers, data and analytics stay untouched.
+
+## reason
+
+As in `modes/create.md` step 10 (`rubric/reason.md`). In `review` it runs on the existing page
+after `before`: its cut and fix verdicts become findings in the review, with the element numbers
+and pictures, and no Response is needed. In `restyle` and `redesign` it runs on the changed page
+after `fix`.
 
 ## after
 
