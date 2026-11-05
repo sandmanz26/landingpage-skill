@@ -224,8 +224,8 @@ Order: tokens → hero → sections → pictures → states (hover, focus, error
 
 - Tokens become CSS custom properties (or the Tailwind theme / component-library theme of the
   stack). Everything downstream uses tokens only.
-- **Hero best-of-3** (standard and thorough effort; skipped when the user chose from sketches at the
-  direction gate, and say so in the log): build three hero variants that differ in
+- **Hero best-of-3** (thorough effort only; at standard the sketches at the direction gate already
+  chose the composition): build three hero variants that differ in
   composition, not just colour, as `.design/variants/hero-a.html`, `-b`, `-c`. Screenshot each
   (`inspect.mjs <file> --out .design/variants/<x> --quiet`), then put them before the jury
   (`rubric/jury.md`): each AI juror ranks them, designers may add their ranking, and
@@ -291,9 +291,9 @@ the source changed after the last inspection).
 
 ## 12. look
 
-At standard and thorough effort, the look is done by the **jury** (`rubric/jury.md`); at standard
-effort after the user chose from sketches, two jurors (art director and customer researcher) are
-enough unless the user asks for more: each AI juror is
+At standard and thorough effort, the look is done by the **jury** (`rubric/jury.md`), sized by effort
+(`rubric/jury.md` → Panel size): at standard two combined jurors in round 1 and one verifier in later
+rounds; the full panel only at thorough or when the user asks. Each AI juror is
 a separate subagent that gets the evidence pack (run `evidence.mjs <file> --dir .design/inspect`
 after the gate's inspection: folds, contact sheets, `evidence.json`, `report.json`), the brief card, the customer
 profile and the five most important customer questions from the strategy, and the team anchors,

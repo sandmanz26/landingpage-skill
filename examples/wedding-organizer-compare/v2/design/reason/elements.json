@@ -1,0 +1,1169 @@
+{
+  "url": "http://127.0.0.1:32865/index.html",
+  "time": "2026-11-05T00:47:14.142Z",
+  "title": "Jalinan Wedding Organizer · Jakarta",
+  "pageHeight": 9534,
+  "sections": [
+    {
+      "id": "S01",
+      "top": 0,
+      "height": 67,
+      "heading": "Jalinan Harga Cek kami Persiapan Hari H Tanya jaw…",
+      "tag": "header",
+      "shot": "desktop-S01.png"
+    },
+    {
+      "id": "S02",
+      "top": 67,
+      "height": 926,
+      "heading": "Hari H berjalan. Kalian tinggal hadir.",
+      "tag": "section",
+      "shot": "desktop-S02.png"
+    },
+    {
+      "id": "S03",
+      "top": 993,
+      "height": 1699,
+      "heading": "Harga, dan ke mana uang kalian pergi",
+      "tag": "section",
+      "shot": "desktop-S03.png"
+    },
+    {
+      "id": "S04",
+      "top": 2692,
+      "height": 738,
+      "heading": "Takut ketemu WO bodong? Wajar. Cek kami dulu.",
+      "tag": "section",
+      "shot": "desktop-S04.png"
+    },
+    {
+      "id": "S05",
+      "top": 3429,
+      "height": 821,
+      "heading": "Dari H-365 sampai H+1",
+      "tag": "section",
+      "shot": "desktop-S05.png"
+    },
+    {
+      "id": "S06",
+      "top": 4250,
+      "height": 3706,
+      "heading": "Satu hari, jam demi jam",
+      "tag": "section",
+      "shot": "desktop-S06.png"
+    },
+    {
+      "id": "S07",
+      "top": 7956,
+      "height": 909,
+      "heading": "Tanyakan ini ke WO mana pun",
+      "tag": "section",
+      "shot": "desktop-S07.png"
+    },
+    {
+      "id": "S08",
+      "top": 8865,
+      "height": 576,
+      "heading": "Kirim tanggal dan perkiraan jumlah tamu",
+      "tag": "section",
+      "shot": "desktop-S08.png"
+    },
+    {
+      "id": "S09",
+      "top": 9441,
+      "height": 94,
+      "heading": "Jalinan Wedding Organizer · Jl. Wijaya I no. 12, …",
+      "tag": "footer",
+      "shot": "desktop-S09.png"
+    }
+  ],
+  "elements": [
+    {
+      "kind": "action",
+      "section": "S01",
+      "label": "Jalinan",
+      "tag": "a",
+      "rect": {
+        "x": 212,
+        "y": 21,
+        "w": 80,
+        "h": 25
+      },
+      "href": "#",
+      "flags": [],
+      "id": "E01",
+      "phone": "visible"
+    },
+    {
+      "kind": "navigation",
+      "section": "S01",
+      "label": "Harga Cek kami Persiapan Hari H Tanya jawab Cek tanggal",
+      "tag": "nav",
+      "rect": {
+        "x": 673,
+        "y": 12,
+        "w": 555,
+        "h": 42
+      },
+      "inside": "Harga · Cek kami · Persiapan · Hari H · Tanya jawab · Cek tanggal",
+      "flags": [
+        "hidden-on-phone"
+      ],
+      "id": "E02",
+      "phone": "hidden"
+    },
+    {
+      "kind": "text",
+      "section": "S02",
+      "label": "WEDDING ORGANIZER · JAKARTA",
+      "tag": "p",
+      "rect": {
+        "x": 212,
+        "y": 111,
+        "w": 461,
+        "h": 17
+      },
+      "flags": [
+        "eyebrow"
+      ],
+      "id": "E03",
+      "phone": "visible"
+    },
+    {
+      "kind": "heading",
+      "section": "S02",
+      "label": "Hari H berjalan. Kalian tinggal hadir.",
+      "tag": "h1",
+      "rect": {
+        "x": 212,
+        "y": 150,
+        "w": 1016,
+        "h": 213
+      },
+      "flags": [],
+      "id": "E04",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S02",
+      "label": "Kami pegang rundown, vendor, dan jam di hari H. Kalau ada masalah di balik layar, itu uru…",
+      "tag": "p",
+      "rect": {
+        "x": 212,
+        "y": 399,
+        "w": 528,
+        "h": 58
+      },
+      "flags": [],
+      "id": "E05",
+      "phone": "visible"
+    },
+    {
+      "kind": "action",
+      "section": "S02",
+      "label": "Cek tanggal kosong via WhatsApp",
+      "tag": "a",
+      "rect": {
+        "x": 212,
+        "y": 541,
+        "w": 326,
+        "h": 52
+      },
+      "href": "https://wa.me/6281200000000?text=Halo%20Jalinan%2C%20kami%20mau%20cek%20tanggal",
+      "flags": [],
+      "id": "E06",
+      "phone": "visible"
+    },
+    {
+      "kind": "action",
+      "section": "S02",
+      "label": "Lihat harga",
+      "tag": "a",
+      "rect": {
+        "x": 550,
+        "y": 541,
+        "w": 94,
+        "h": 51
+      },
+      "href": "#harga",
+      "flags": [],
+      "id": "E07",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S02",
+      "label": "Koordinasi hari H mulai Rp 9,5 juta. Vendor kalian bayar langsung; pelunasan fee kami set…",
+      "tag": "p",
+      "rect": {
+        "x": 212,
+        "y": 677,
+        "w": 472,
+        "h": 50
+      },
+      "flags": [
+        "number-claim"
+      ],
+      "id": "E08",
+      "phone": "visible"
+    },
+    {
+      "kind": "action",
+      "section": "S02",
+      "label": "Cek kami dulu: kantor, NIB, contoh kontrak →",
+      "tag": "a",
+      "rect": {
+        "x": 212,
+        "y": 811,
+        "w": 349,
+        "h": 47
+      },
+      "href": "#cek",
+      "flags": [],
+      "id": "E09",
+      "phone": "visible"
+    },
+    {
+      "kind": "card",
+      "section": "S02",
+      "label": "HARI H · CONTOH RUNDOWN 05.30 Tim kami sudah di venue. Kalian masih bisa tidur sebentar. …",
+      "tag": "div",
+      "rect": {
+        "x": 796,
+        "y": 399,
+        "w": 432,
+        "h": 522
+      },
+      "inside": "p \"Tim kami sudah di venue. Kali…\", p \"berikutnya 08.00 · 09.00 · 11…\", a \"Lihat hari H jam demi jam ↓\", picture",
+      "flags": [],
+      "id": "E10",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S03",
+      "label": "HARGA",
+      "tag": "p",
+      "rect": {
+        "x": 212,
+        "y": 1089,
+        "w": 461,
+        "h": 17
+      },
+      "flags": [
+        "eyebrow"
+      ],
+      "id": "E11",
+      "phone": "visible"
+    },
+    {
+      "kind": "heading",
+      "section": "S03",
+      "label": "Harga, dan ke mana uang kalian pergi",
+      "tag": "h2",
+      "rect": {
+        "x": 212,
+        "y": 1119,
+        "w": 1016,
+        "h": 58
+      },
+      "flags": [],
+      "id": "E12",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S03",
+      "label": "Harga di bawah adalah fee kerja kami. Vendor kalian bayar sendiri, langsung ke mereka.",
+      "tag": "p",
+      "rect": {
+        "x": 212,
+        "y": 1191,
+        "w": 692,
+        "h": 29
+      },
+      "flags": [],
+      "id": "E13",
+      "phone": "visible"
+    },
+    {
+      "kind": "card",
+      "section": "S03",
+      "label": "MULAI H-30 Hari H mulai Rp 9,5 jt Rundown dan technical meeting Gladi resik di venue Koor…",
+      "tag": "article",
+      "rect": {
+        "x": 212,
+        "y": 1264,
+        "w": 327,
+        "h": 290
+      },
+      "inside": "h3 \"Hari H\", p \"mulai Rp 9,5 jt\", li \"Rundown dan technical meeting\", li \"Gladi resik di venue\", li \"Koordinasi penuh di hari H\"",
+      "flags": [
+        "same-as-siblings"
+      ],
+      "id": "E14",
+      "phone": "visible"
+    },
+    {
+      "kind": "card",
+      "section": "S03",
+      "label": "MULAI H-180 Pendampingan mulai Rp 24 jt Semua di paket Hari H Rencana anggaran Pilih vend…",
+      "tag": "article",
+      "rect": {
+        "x": 557,
+        "y": 1264,
+        "w": 327,
+        "h": 290
+      },
+      "inside": "h3 \"Pendampingan\", p \"mulai Rp 24 jt\", li \"Semua di paket Hari H\", li \"Rencana anggaran\", li \"Pilih vendor; kami cek setiap…\"",
+      "flags": [
+        "same-as-siblings"
+      ],
+      "id": "E15",
+      "phone": "visible"
+    },
+    {
+      "kind": "card",
+      "section": "S03",
+      "label": "MULAI H-365 Penuh mulai Rp 45 jt Semua di Pendampingan Cari dan survei venue Susun upacar…",
+      "tag": "article",
+      "rect": {
+        "x": 901,
+        "y": 1264,
+        "w": 327,
+        "h": 290
+      },
+      "inside": "h3 \"Penuh\", p \"mulai Rp 45 jt\", li \"Semua di Pendampingan\", li \"Cari dan survei venue\", li \"Susun upacara dan adat\"",
+      "flags": [
+        "same-as-siblings"
+      ],
+      "id": "E16",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S03",
+      "label": "Fee dibayar dalam 3 tahap, sama untuk semua paket",
+      "tag": "p",
+      "rect": {
+        "x": 212,
+        "y": 1837,
+        "w": 658,
+        "h": 27
+      },
+      "flags": [],
+      "id": "E17",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S03",
+      "label": "saat tanda tangan kontrak",
+      "tag": "span",
+      "rect": {
+        "x": 228,
+        "y": 1949,
+        "w": 270,
+        "h": 41
+      },
+      "flags": [],
+      "id": "E18",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S03",
+      "label": "di technical meeting, H-30",
+      "tag": "span",
+      "rect": {
+        "x": 534,
+        "y": 1949,
+        "w": 371,
+        "h": 41
+      },
+      "flags": [],
+      "id": "E19",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S03",
+      "label": "pelunasan H+1, setelah acara selesai",
+      "tag": "span",
+      "rect": {
+        "x": 942,
+        "y": 1936,
+        "w": 270,
+        "h": 54
+      },
+      "flags": [],
+      "id": "E20",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S03",
+      "label": "Biasanya WO minta lunas sebelum hari H. Kami minta pelunasan sehari setelahnya.",
+      "tag": "p",
+      "rect": {
+        "x": 212,
+        "y": 2030,
+        "w": 593,
+        "h": 56
+      },
+      "flags": [],
+      "id": "E21",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S03",
+      "label": "Tidak ada biaya lain di luar tabel ini. Makan, parkir, dan transport kru sudah termasuk.",
+      "tag": "p",
+      "rect": {
+        "x": 212,
+        "y": 2098,
+        "w": 654,
+        "h": 27
+      },
+      "flags": [],
+      "id": "E22",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S03",
+      "label": "Kalau batal, tahap yang sudah dibayar menutup pekerjaan yang sudah dikerjakan. Tahap beri…",
+      "tag": "p",
+      "rect": {
+        "x": 212,
+        "y": 2131,
+        "w": 654,
+        "h": 54
+      },
+      "flags": [],
+      "id": "E23",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S03",
+      "label": "Kalian → vendor",
+      "tag": "span",
+      "rect": {
+        "x": 230,
+        "y": 2262,
+        "w": 144,
+        "h": 21
+      },
+      "flags": [],
+      "id": "E24",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S03",
+      "label": "Langsung, dengan kontrak atas nama kalian.",
+      "tag": "p",
+      "rect": {
+        "x": 390,
+        "y": 2245,
+        "w": 294,
+        "h": 54
+      },
+      "flags": [],
+      "id": "E25",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S03",
+      "label": "Kalian → Jalinan",
+      "tag": "span",
+      "rect": {
+        "x": 230,
+        "y": 2361,
+        "w": 154,
+        "h": 21
+      },
+      "flags": [],
+      "id": "E26",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S03",
+      "label": "Hanya fee kerja kami, dalam tiga tahap.",
+      "tag": "p",
+      "rect": {
+        "x": 400,
+        "y": 2344,
+        "w": 284,
+        "h": 54
+      },
+      "flags": [],
+      "id": "E27",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S03",
+      "label": "Kalian tidak mengurus vendor sendirian. Kami cek setiap invoice vendor terhadap kontrakny…",
+      "tag": "p",
+      "rect": {
+        "x": 212,
+        "y": 2426,
+        "w": 490,
+        "h": 82
+      },
+      "flags": [],
+      "id": "E28",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S03",
+      "label": "Tahun ini ada pasangan yang sudah lunas ke WO, lalu tahu dari pihak gedung di H-10 bahwa …",
+      "tag": "p",
+      "rect": {
+        "x": 760,
+        "y": 2287,
+        "w": 446,
+        "h": 109
+      },
+      "flags": [],
+      "id": "E29",
+      "phone": "visible"
+    },
+    {
+      "kind": "action",
+      "section": "S03",
+      "label": "Tanya tanggal dan paket via WhatsApp",
+      "tag": "a",
+      "rect": {
+        "x": 212,
+        "y": 2544,
+        "w": 359,
+        "h": 52
+      },
+      "href": "https://wa.me/6281200000000?text=Halo%20Jalinan%2C%20kami%20mau%20cek%20tanggal",
+      "flags": [],
+      "id": "E30",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S04",
+      "label": "SEBELUM MEMBAYAR APA PUN",
+      "tag": "p",
+      "rect": {
+        "x": 212,
+        "y": 2788,
+        "w": 461,
+        "h": 17
+      },
+      "flags": [
+        "eyebrow"
+      ],
+      "id": "E31",
+      "phone": "visible"
+    },
+    {
+      "kind": "heading",
+      "section": "S04",
+      "label": "Takut ketemu WO bodong? Wajar. Cek kami dulu.",
+      "tag": "h2",
+      "rect": {
+        "x": 212,
+        "y": 2818,
+        "w": 1016,
+        "h": 115
+      },
+      "flags": [],
+      "id": "E32",
+      "phone": "visible"
+    },
+    {
+      "kind": "list",
+      "section": "S04",
+      "label": "Kantor yang bisa didatangi Jl. Wijaya I no. 12, Kebayoran Baru. Datang saja Senin–Sabtu, …",
+      "tag": "ul",
+      "rect": {
+        "x": 212,
+        "y": 2978,
+        "w": 1016,
+        "h": 356
+      },
+      "inside": "6 items",
+      "flags": [],
+      "id": "E33",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S05",
+      "label": "PERSIAPAN",
+      "tag": "p",
+      "rect": {
+        "x": 212,
+        "y": 3525,
+        "w": 461,
+        "h": 17
+      },
+      "flags": [
+        "eyebrow"
+      ],
+      "id": "E34",
+      "phone": "visible"
+    },
+    {
+      "kind": "heading",
+      "section": "S05",
+      "label": "Dari H-365 sampai H+1",
+      "tag": "h2",
+      "rect": {
+        "x": 212,
+        "y": 3556,
+        "w": 1016,
+        "h": 58
+      },
+      "flags": [],
+      "id": "E35",
+      "phone": "visible"
+    },
+    {
+      "kind": "list",
+      "section": "S05",
+      "label": "H-365 Cari dan survei venue, susun anggaran awal Penuh H-180 Pilih vendor; kami cek setia…",
+      "tag": "ol",
+      "rect": {
+        "x": 212,
+        "y": 3658,
+        "w": 1016,
+        "h": 420
+      },
+      "inside": "7 items",
+      "flags": [],
+      "id": "E36",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S05",
+      "label": "Jadwal ini kami kirim sebagai satu tautan. Bagikan ke orang tua dan keluarga, supaya semu…",
+      "tag": "p",
+      "rect": {
+        "x": 212,
+        "y": 4100,
+        "w": 654,
+        "h": 54
+      },
+      "flags": [],
+      "id": "E37",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S06",
+      "label": "HARI H, DI BALIK LAYAR",
+      "tag": "p",
+      "rect": {
+        "x": 212,
+        "y": 4346,
+        "w": 461,
+        "h": 17
+      },
+      "flags": [
+        "eyebrow"
+      ],
+      "id": "E38",
+      "phone": "visible"
+    },
+    {
+      "kind": "heading",
+      "section": "S06",
+      "label": "Satu hari, jam demi jam",
+      "tag": "h2",
+      "rect": {
+        "x": 212,
+        "y": 4377,
+        "w": 1016,
+        "h": 58
+      },
+      "flags": [],
+      "id": "E39",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S06",
+      "label": "Ini yang kami kerjakan sementara kalian bersiap. Contoh rundown untuk akad dan resepsi 40…",
+      "tag": "p",
+      "rect": {
+        "x": 212,
+        "y": 4448,
+        "w": 692,
+        "h": 58
+      },
+      "flags": [],
+      "id": "E40",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S06",
+      "label": "05.30",
+      "tag": "span",
+      "rect": {
+        "x": 212,
+        "y": 4550,
+        "w": 393,
+        "h": 143
+      },
+      "flags": [],
+      "id": "E41",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S06",
+      "label": "waktu di venue",
+      "tag": "span",
+      "rect": {
+        "x": 212,
+        "y": 4707,
+        "w": 393,
+        "h": 18
+      },
+      "flags": [],
+      "id": "E42",
+      "phone": "visible"
+    },
+    {
+      "kind": "card",
+      "section": "S06",
+      "label": "05.30 Tia sudah di venue. MUA datang 05.45, rias dimulai 06.00.",
+      "tag": "article",
+      "rect": {
+        "x": 652,
+        "y": 4550,
+        "w": 576,
+        "h": 488
+      },
+      "inside": "p \"05.30\", picture, p \"Tia sudah di venue. MUA datan…\"",
+      "flags": [
+        "same-as-siblings"
+      ],
+      "id": "E43",
+      "phone": "visible"
+    },
+    {
+      "kind": "card",
+      "section": "S06",
+      "label": "08.00 Katering datang. Dimas menghitung porsi terhadap kontrak: 400 tamu plus cadangan 10…",
+      "tag": "article",
+      "rect": {
+        "x": 652,
+        "y": 5038,
+        "w": 576,
+        "h": 488
+      },
+      "inside": "p \"08.00\", picture, p \"Katering datang. Dimas menghi…\"",
+      "flags": [
+        "same-as-siblings"
+      ],
+      "id": "E44",
+      "phone": "visible"
+    },
+    {
+      "kind": "card",
+      "section": "S06",
+      "label": "09.00 Akad. MC sudah gladi kemarin; satu kode di HT dan musik berhenti tepat waktu.",
+      "tag": "article",
+      "rect": {
+        "x": 652,
+        "y": 5525,
+        "w": 576,
+        "h": 488
+      },
+      "inside": "p \"09.00\", picture, p \"Akad. MC sudah gladi kemarin;…\"",
+      "flags": [
+        "same-as-siblings"
+      ],
+      "id": "E45",
+      "phone": "visible"
+    },
+    {
+      "kind": "card",
+      "section": "S06",
+      "label": "11.00 Resepsi dibuka. Antrean salam kami atur per 20 menit, supaya keluarga besar tidak m…",
+      "tag": "article",
+      "rect": {
+        "x": 652,
+        "y": 6013,
+        "w": 576,
+        "h": 520
+      },
+      "inside": "p \"11.00\", picture, p \"Resepsi dibuka. Antrean salam…\"",
+      "flags": [
+        "same-as-siblings"
+      ],
+      "id": "E46",
+      "phone": "visible"
+    },
+    {
+      "kind": "card",
+      "section": "S06",
+      "label": "13.30 Hujan turun. Rencana B dari technical meeting berjalan: tenda samping sudah berdiri…",
+      "tag": "article",
+      "rect": {
+        "x": 652,
+        "y": 6532,
+        "w": 576,
+        "h": 520
+      },
+      "inside": "p \"13.30\", picture, p \"Hujan turun. Rencana B dari t…\"",
+      "flags": [
+        "same-as-siblings"
+      ],
+      "id": "E47",
+      "phone": "visible"
+    },
+    {
+      "kind": "card",
+      "section": "S06",
+      "label": "15.00 Acara selesai. Barang titipan kami kemas, cek satu per satu, dan antar sampai ke mo…",
+      "tag": "article",
+      "rect": {
+        "x": 652,
+        "y": 7052,
+        "w": 576,
+        "h": 520
+      },
+      "inside": "p \"15.00\", picture, p \"Acara selesai. Barang titipan…\"",
+      "flags": [
+        "same-as-siblings"
+      ],
+      "id": "E48",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S06",
+      "label": "Kalian? Tinggal hadir.",
+      "tag": "p",
+      "rect": {
+        "x": 212,
+        "y": 7627,
+        "w": 1016,
+        "h": 80
+      },
+      "flags": [],
+      "id": "E49",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S06",
+      "label": "Satu hari, satu pernikahan. Maksimal enam pernikahan per bulan, jadi koordinator kalian t…",
+      "tag": "p",
+      "rect": {
+        "x": 212,
+        "y": 7733,
+        "w": 488,
+        "h": 54
+      },
+      "flags": [],
+      "id": "E50",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S06",
+      "label": "Kru menyesuaikan tamu: 6 orang untuk sampai 300 tamu, 8 untuk 600, 10 untuk 1.000.",
+      "tag": "p",
+      "rect": {
+        "x": 740,
+        "y": 7733,
+        "w": 488,
+        "h": 54
+      },
+      "flags": [],
+      "id": "E51",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S06",
+      "label": "Rundown kami susun sesuai upacara kalian: akad, pemberkatan, sangjit, tea pai, adat Jawa,…",
+      "tag": "p",
+      "rect": {
+        "x": 212,
+        "y": 7805,
+        "w": 488,
+        "h": 54
+      },
+      "flags": [],
+      "id": "E52",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S07",
+      "label": "TANYA JAWAB",
+      "tag": "p",
+      "rect": {
+        "x": 212,
+        "y": 8052,
+        "w": 461,
+        "h": 17
+      },
+      "flags": [
+        "eyebrow"
+      ],
+      "id": "E53",
+      "phone": "visible"
+    },
+    {
+      "kind": "heading",
+      "section": "S07",
+      "label": "Tanyakan ini ke WO mana pun",
+      "tag": "h2",
+      "rect": {
+        "x": 212,
+        "y": 8082,
+        "w": 1016,
+        "h": 58
+      },
+      "flags": [],
+      "id": "E54",
+      "phone": "visible"
+    },
+    {
+      "kind": "disclosure",
+      "section": "S07",
+      "label": "Hanya koordinasi, atau juga dekorasi?",
+      "tag": "details",
+      "rect": {
+        "x": 212,
+        "y": 8184,
+        "w": 820,
+        "h": 66
+      },
+      "inside": "closed",
+      "flags": [],
+      "id": "E55",
+      "phone": "visible"
+    },
+    {
+      "kind": "disclosure",
+      "section": "S07",
+      "label": "Apakah sudah kenal venue kami?",
+      "tag": "details",
+      "rect": {
+        "x": 212,
+        "y": 8250,
+        "w": 820,
+        "h": 66
+      },
+      "inside": "closed",
+      "flags": [],
+      "id": "E56",
+      "phone": "visible"
+    },
+    {
+      "kind": "disclosure",
+      "section": "S07",
+      "label": "Bisa menjaga anggaran kami?",
+      "tag": "details",
+      "rect": {
+        "x": 212,
+        "y": 8316,
+        "w": 820,
+        "h": 66
+      },
+      "inside": "closed",
+      "flags": [],
+      "id": "E57",
+      "phone": "visible"
+    },
+    {
+      "kind": "disclosure",
+      "section": "S07",
+      "label": "Berapa pernikahan yang kalian tangani sebulan?",
+      "tag": "details",
+      "rect": {
+        "x": 212,
+        "y": 8383,
+        "w": 820,
+        "h": 66
+      },
+      "inside": "closed",
+      "flags": [],
+      "id": "E58",
+      "phone": "visible"
+    },
+    {
+      "kind": "disclosure",
+      "section": "S07",
+      "label": "Kenapa pelunasan setelah acara?",
+      "tag": "details",
+      "rect": {
+        "x": 212,
+        "y": 8449,
+        "w": 820,
+        "h": 113
+      },
+      "inside": "open",
+      "flags": [],
+      "id": "E59",
+      "phone": "visible"
+    },
+    {
+      "kind": "disclosure",
+      "section": "S07",
+      "label": "Bisa di luar Jakarta?",
+      "tag": "details",
+      "rect": {
+        "x": 212,
+        "y": 8562,
+        "w": 820,
+        "h": 66
+      },
+      "inside": "closed",
+      "flags": [],
+      "id": "E60",
+      "phone": "visible"
+    },
+    {
+      "kind": "disclosure",
+      "section": "S07",
+      "label": "Bagaimana kalau kami batal?",
+      "tag": "details",
+      "rect": {
+        "x": 212,
+        "y": 8628,
+        "w": 820,
+        "h": 141
+      },
+      "inside": "open",
+      "flags": [],
+      "id": "E61",
+      "phone": "visible"
+    },
+    {
+      "kind": "heading",
+      "section": "S08",
+      "label": "Kirim tanggal dan perkiraan jumlah tamu",
+      "tag": "h2",
+      "rect": {
+        "x": 212,
+        "y": 8961,
+        "w": 1016,
+        "h": 115
+      },
+      "flags": [],
+      "id": "E62",
+      "phone": "visible"
+    },
+    {
+      "kind": "list",
+      "section": "S08",
+      "label": "Kami jawab ketersediaan tanggal dalam satu hari kerja. Konsultasi 45 menit, online atau d…",
+      "tag": "ol",
+      "rect": {
+        "x": 212,
+        "y": 9106,
+        "w": 1016,
+        "h": 115
+      },
+      "inside": "3 items",
+      "flags": [],
+      "id": "E63",
+      "phone": "visible"
+    },
+    {
+      "kind": "action",
+      "section": "S08",
+      "label": "Cek tanggal via WhatsApp",
+      "tag": "a",
+      "rect": {
+        "x": 212,
+        "y": 9255,
+        "w": 270,
+        "h": 52
+      },
+      "href": "https://wa.me/6281200000000?text=Halo%20Jalinan%2C%20kami%20mau%20cek%20tanggal",
+      "flags": [],
+      "id": "E64",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S08",
+      "label": "WhatsApp 0812-0000-0000",
+      "tag": "p",
+      "rect": {
+        "x": 212,
+        "y": 9321,
+        "w": 576,
+        "h": 24
+      },
+      "flags": [],
+      "id": "E65",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S09",
+      "label": "Jalinan Wedding Organizer · Jl. Wijaya I no. 12, Kebayoran Baru, Jakarta Selatan",
+      "tag": "span",
+      "rect": {
+        "x": 212,
+        "y": 9475,
+        "w": 564,
+        "h": 26
+      },
+      "flags": [],
+      "id": "E66",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S09",
+      "label": "Senin–Sabtu, 10.00–18.00",
+      "tag": "span",
+      "rect": {
+        "x": 1039,
+        "y": 9475,
+        "w": 189,
+        "h": 26
+      },
+      "flags": [],
+      "id": "E67",
+      "phone": "visible"
+    }
+  ],
+  "truncated": false,
+  "shots": {
+    "desktop": [
+      "desktop-S01.png",
+      "desktop-S02.png",
+      "desktop-S03.png",
+      "desktop-S04.png",
+      "desktop-S05.png",
+      "desktop-S06.png",
+      "desktop-S07.png",
+      "desktop-S08.png",
+      "desktop-S09.png"
+    ],
+    "phone": [
+      "mobile-01.png",
+      "mobile-02.png",
+      "mobile-03.png",
+      "mobile-04.png",
+      "mobile-05.png"
+    ]
+  }
+}

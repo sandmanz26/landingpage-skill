@@ -26,7 +26,7 @@ if (!target) {
 }
 const out = path.resolve(args.out || '.design/reason');
 fs.mkdirSync(out, { recursive: true });
-for (const f of fs.readdirSync(out)) if (/^(desktop-S\d+|mobile-\d+)\.png$/.test(f)) fs.unlinkSync(path.join(out, f));
+for (const f of fs.readdirSync(out)) if (/^(desktop-S\d+(-\d+)?|mobile-\d+)\.png$/.test(f)) fs.unlinkSync(path.join(out, f));
 
 const readJson = (p) => (fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, 'utf8')) : {});
 const words = [...(readJson(path.join(here, '..', 'rules/lint-words.json')).copy || []), ...(readJson(path.join(here, '..', 'team/lint-words.json')).copy || [])].map((w) => w.pattern);
@@ -126,6 +126,7 @@ const data = await page.evaluate((patterns) => {
       // A strip that moves by itself (marquee, ticker): one element, however many copies it holds.
       if (endless.has(el) && text(el) && rr.width >= 300) { add(el, 'marquee', sid, { label: clip(text(el)), inside: `${el.querySelectorAll('*').length} parts` }); continue; }
       if (tag === 'NAV') { add(el, 'navigation', sid, { inside: [...el.querySelectorAll('a, button')].filter(visible).map(text).filter(Boolean).slice(0, 8).join(' · ') }); continue; }
+      if (tag === 'TABLE') { add(el, 'table', sid, { label: clip(text(el.querySelector('caption, th, td') || el)), inside: `${el.querySelectorAll('tr').length} rows` }); continue; }
       if (tag === 'FORM') { add(el, 'form', sid, { inside: [...el.querySelectorAll('input, select, textarea')].map((i) => i.getAttribute('placeholder') || i.name || i.type).join(', ') }); continue; }
       if (tag === 'DETAILS') { const sm = el.querySelector('summary'); add(el, 'disclosure', sid, { label: clip(sm ? text(sm) : text(el)), inside: el.open ? 'open' : 'closed' }); continue; }
       if (/^H[1-6]$/.test(tag)) { add(el, 'heading', sid); continue; }
@@ -201,7 +202,7 @@ const data = await page.evaluate((patterns) => {
 const pad = (n) => String(n).padStart(2, '0');
 data.units.forEach((u, i) => (u.id = `E${pad(i + 1)}`));
 
-const COLOURS = { marquee: '#cf222e', disclosure: '#0969da', heading: '#1f6feb', text: '#8250df', action: '#d1242f', image: '#1a7f37', illustration: '#1a7f37', icon: '#bf8700', video: '#1a7f37', card: '#0969da', badge: '#bf3989', list: '#8250df', quote: '#8250df', navigation: '#57606a', form: '#d1242f', shape: '#cf222e' };
+const COLOURS = { table: '#0969da', 'phone-only': '#bf3989', marquee: '#cf222e', disclosure: '#0969da', heading: '#1f6feb', text: '#8250df', action: '#d1242f', image: '#1a7f37', illustration: '#1a7f37', icon: '#bf8700', video: '#1a7f37', card: '#0969da', badge: '#bf3989', list: '#8250df', quote: '#8250df', navigation: '#57606a', form: '#d1242f', shape: '#cf222e' };
 const drawLabels = () =>
   page.evaluate((colours) => {
     document.getElementById('dd-labels')?.remove();
@@ -229,11 +230,18 @@ await page.evaluate((kinds) => kinds.forEach((k, i) => document.querySelector(`[
 await drawLabels();
 const shots = [];
 for (const s of data.sections) {
-  const height = Math.min(Math.max(s.height, 40), 2400);
-  const file = path.join(out, `desktop-${s.id}.png`);
-  await page.screenshot({ path: file, fullPage: true, clip: { x: 0, y: s.top, width: 1440, height } });
-  shots.push(path.basename(file));
-  s.shot = path.basename(file);
+  // A tall section is photographed in parts (desktop-S06.png, desktop-S06-2.png …) so nothing is cut off.
+  const parts = Math.max(1, Math.ceil(s.height / 2000));
+  s.shots = [];
+  for (let k = 0; k < parts; k++) {
+    const y = s.top + k * 2000;
+    const height = Math.max(40, Math.min(2000, s.top + s.height - y));
+    const file = path.join(out, `desktop-${s.id}${k ? `-${k + 1}` : ''}.png`);
+    await page.screenshot({ path: file, fullPage: true, clip: { x: 0, y, width: 1440, height } });
+    shots.push(path.basename(file));
+    s.shots.push(path.basename(file));
+  }
+  s.shot = s.shots.join(', ');
 }
 
 // Phone: the same numbers at 390px; which elements disappear.
@@ -251,6 +259,36 @@ data.units.forEach((u, i) => {
   u.phone = onPhone[i] ? 'visible' : 'hidden';
   if (!onPhone[i]) u.flags.push('hidden-on-phone');
 });
+// What only the phone shows (a sticky bottom bar, a phone menu button): numbered after the rest.
+const phoneOnly = await page.evaluate((start) => {
+  const out = [];
+  const shown = (el) => {
+    const r = el.getBoundingClientRect();
+    const cs = getComputedStyle(el);
+    return r.width >= 2 && r.height >= 2 && cs.visibility !== 'hidden' && cs.display !== 'none' && parseFloat(cs.opacity) > 0.05;
+  };
+  for (const el of document.body.querySelectorAll('a, button, [role="button"], p, span, div')) {
+    if (el.closest('[data-dd-el]') || el.querySelector('[data-dd-el]') || el.closest('#dd-labels') || !shown(el)) continue;
+    const t = (el.innerText || el.getAttribute('aria-label') || '').replace(/\s+/g, ' ').trim();
+    if (!t || t.length < 2) continue;
+    const own = [...el.childNodes].some((n) => n.nodeType === 3 && n.textContent.trim().length > 1) || el.matches('a, button, [role="button"]');
+    if (!own || out.some((o) => o.el.contains(el))) continue;
+    let fixed = false;
+    for (let e = el; e && e !== document.body; e = e.parentElement) if (['fixed', 'sticky'].includes(getComputedStyle(e).position)) fixed = true;
+    out.push({ el, label: t.slice(0, 89), tag: el.tagName.toLowerCase(), fixed });
+    if (out.length >= 20) break;
+  }
+  return out.map((o, i) => {
+    o.el.setAttribute('data-dd-el', String(start + i + 1));
+    o.el.setAttribute('data-dd-kind', 'phone-only');
+    const r = o.el.getBoundingClientRect();
+    return { kind: 'phone-only', section: 'phone', label: o.label, tag: o.tag, rect: { x: Math.round(r.left + scrollX), y: Math.round(r.top + scrollY), w: Math.round(r.width), h: Math.round(r.height) }, flags: o.fixed ? ['fixed-on-phone'] : [], phone: 'only' };
+  });
+}, data.units.length);
+for (const u of phoneOnly) {
+  u.id = `E${pad(data.units.length + 1)}`;
+  data.units.push(u);
+}
 await drawLabels();
 const phoneHeight = await page.evaluate(() => document.documentElement.scrollHeight);
 const phoneShots = [];

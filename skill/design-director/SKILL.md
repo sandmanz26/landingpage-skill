@@ -64,7 +64,18 @@ means three things at once: it serves the business, it answers the customer, and
    inbox, editor) rather than read.
 
 2. **Effort.** `quick` for a section or a small fix, `standard` for a page (default), `thorough` for a
-   pitch, a flagship page or a whole site (best-of-3 on every key section).
+   pitch, a flagship page or a whole site (best-of-3 on every key section). Subagent budget per run
+   (measure and log the real number in the deliver report):
+
+   | Effort | Subagents | Budget |
+   | --- | --- | --- |
+   | quick | one critic | about 70k |
+   | standard | reason roaster + 2 combined jurors + 1 verifier per later round | about 250-320k |
+   | thorough | reason roaster + hero jury (2) + full look panel (5-6) + 2 per later round | about 600-800k |
+
+   Measured parts: reason roaster 93k (WO run-2 page, 67 elements, 9 calls); jurors 59-94k each.
+   The main session comes on top. Run 2 (standard, before these limits) spent about 630k on
+   subagents alone; most of it was two five-juror panels.
 3. **Gate style.** `guided` (default): three direction cards. `quick`: one recommendation with a
    one-line reason and "continue?", for people who do not want to choose, or who have said
    "terserah" / "up to you". `autopilot`: no human in the loop (batch runs, evals); every choice is
@@ -73,7 +84,7 @@ means three things at once: it serves the business, it answers the customer, and
    in one short message (`rules/brief-interview.md`): who and what for, 1–3 sites they like and 1
    they do not (turned into dials by `dials.mjs`), three feeling words, what exists, what is ruled
    out. At the direction gate the user picks from first-screen sketches of each direction; that
-   choice replaces the hero best-of-3 and halves the look jury. Full-page variants (2–3 whole
+   choice sets the composition, so standard effort needs no hero best-of-3. Full-page variants (2–3 whole
    pages, `--variants`) are for thorough effort or when the user asks; the user chooses on
    `compare.mjs` (`--choose user`), the jury only in autopilot.
 5. Run `node <skill>/scripts/progress.mjs init --mode <mode> --effort <effort> --gates <style> [--variants N --choose user|jury]`.

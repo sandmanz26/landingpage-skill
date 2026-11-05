@@ -1,7 +1,7 @@
 # Handoff
 
 Read this first if you are a new session, a different model or a different AI tool picking up
-this project. It is kept up to date at every milestone. Last updated: **2026-11-04** (reason roast step; Quite Nice closed).
+this project. It is kept up to date at every milestone. Last updated: **2026-11-05** (owner's roast items 2, 4, 6, 7: cost limits, kit, substantive checks, inspector fixes).
 
 ## 1. Goal
 
@@ -326,6 +326,39 @@ on phone), Sunny Within live (73 elements after collapsing its marquee duplicate
 live. Not measured: the roaster subagent's token cost and whether its verdicts match designers'.
 Quite Nice closed between 2026-11-02 and 2026-11-04 (home now "Quite Nice is now closed"): the
 batch-007 capture is the only record; recorded in batch-007.json `site_status`.
+
+Owner's roast of the skill (2026-11-05; owner agreed to items 2, 4, 6, 7 of Claude's list; item 1,
+the blind eval harness, comes next):
+- **6, substantive checks** (progress.mjs): roast needs 3+ numbered points each answered
+  Accepted/Rejected with the change; research 3+ sources; spec interactions each name a customer
+  question; reason Response names every fix/merge/cut ID and cut elements are checked gone on a
+  second photograph (`reason/after/elements.json`); look at standard needs 2 AI juror files
+  (thorough 5) or "not independent", an inspection newer than the page, and each missed dial named
+  in the Fit section. Selftest fixtures are realistic (no "## Response - ok").
+- **7, inspector false positives** (fixture `evals/fixtures/shop.html` + generated images):
+  carousel slides → INFO `carousel-slides` (not hidden-content/reduced-motion FAIL); centred hero
+  ignores announcement-bar links, controls far below the h1 and hover-roll doubled labels;
+  text-at-edge measures the text box (padded full-width bars were flagged; likely Quite Nice's 21);
+  evidence counts `<picture>`+`<img>` once (photo counts in older evidence.json files are doubled
+  where `<picture>` is used; re-run evidence to refresh) and classifies raster drawings
+  (transparent ground, top-16 colours ≥50% of opaque pixels) as illustrations. Not verified:
+  shaded raster illustrations may still count as photos.
+- **4, kit** (`kit/`): nine sections from tokens (hero-arch, price-action, evidence-rows,
+  reveal-cards with tap path, before-after, story-sticky, proof-quote, faq, closing-action), 0
+  inspector findings at three widths, content kept without JS and under reduced motion;
+  `kit/sections.json` (customer question each answers, content needed); `scripts/kit.mjs list|get`;
+  inspector rule `kit-sample` (fail) so sample content cannot ship; build step starts from it.
+  Not verified: whether pages built from the kit score higher (needs item 1).
+- **2, cost**: run 2's ~630k subagent tokens were two five-juror panels (hero 5×59k, look 5×66k).
+  Now: hero best-of-3 only at thorough; standard look = two combined jurors, later rounds one
+  verifier; full panel at thorough. Budgets in SKILL.md (quick ~70k, standard ~250-320k, thorough
+  ~600-800k subagents). Measured: reason roaster on the WO run-2 page 93k tokens, 9 calls, 3 min
+  (estimate was 45k); its roast is in `examples/wedding-organizer-compare/v2/design/reason.md`
+  (keep 43, fix 9, merge 14, cut 1: "vendor kalian bayar langsung" said four times, janur arch
+  from the spec missing, unsourced fraud story, five eyebrow labels). elements.mjs fixes from that
+  run: tall sections photographed in parts, tables numbered, phone-only elements (sticky bars)
+  numbered. **Not measured: a whole fresh-session standard run** (proposed to the owner).
+- Unsplash key: api.unsplash.com answers 401 (reachable, needs the key), images.unsplash.com 200.
 
 Capture fixes from batch-003: `lib/browser.mjs` `gotoStable` retries server error pages (a 502
 "upstream request failed" had been captured as Swehl's desktop) and every failed load is reported

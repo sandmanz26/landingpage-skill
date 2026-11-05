@@ -27,6 +27,19 @@ builder defends its choices, a fresh reader does not. At quick effort you do it 
 break from building (a new step that reads only those files), and say in the report that it was not
 independent.
 
+### Brief for the roaster (keep it lean: it sets the cost)
+
+```text
+You are the reason roaster (rubric/reason.md). Files: <.design>/reason/elements.md,
+<.design>/reason/desktop-S*.png, <.design>/reason/mobile-*.png, <.design>/brief.md,
+<.design>/spec.md (Sections and Interactions only), the customer questions Q1… from strategy.md.
+Turn 1, in parallel: elements.md, brief.md, spec.md, strategy.md and every desktop-S*.png.
+Turn 2: the mobile pictures. No browser, no code. At most 8 tool calls in total.
+Write <.design>/reason.md in the format of rubric/reason.md: one row per element ID, then the Page
+section. Leave Response empty: the builder writes it. Reply in five lines: counts of keep, fix,
+merge and cut, and the three cuts or fixes that matter most.
+```
+
 ## Four questions per element
 
 1. **What is it, plainly?** Name the thing, not the component: "three cards, each an emoji, one

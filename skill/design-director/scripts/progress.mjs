@@ -275,7 +275,8 @@ switch (cmd) {
               try { return JSON.parse(fs.readFileSync(path.join(jd, f), 'utf8')).kind === 'ai'; } catch { return false; }
             })
           : [];
-        if (jurors.length < 2) fail(`At ${s.effort} effort the look is done by at least two AI jurors (rubric/jury.md): put their files in .design/jury/<round>/. Without subagents, say "not independent" in critique.md.`);
+        const need = s.effort === 'thorough' ? 5 : 2;
+        if (jurors.length < need) fail(`At ${s.effort} effort the look is done by at least ${need === 2 ? 'two' : need} AI jurors (rubric/jury.md → Panel size): put their files in .design/jury/<round>/. Without subagents, say "not independent" in critique.md.`);
       }
       const ir = path.join(DIR, 'inspect/report.json');
       if ((s.variants || 1) === 1 && fs.existsSync(ir) && newestSourceMtime() > Date.parse(JSON.parse(fs.readFileSync(ir, 'utf8')).time))
