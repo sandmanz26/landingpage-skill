@@ -1,6 +1,6 @@
 {
  "id": "kotak-makan",
- "made": "2026-11-05T16:42:55.329Z",
+ "made": "2026-11-05T16:44:00.165Z",
  "px": 1100,
  "grounds": [
   "light"
@@ -186,6 +186,49 @@
     0,
     0,
     0
+   ],
+   "px": 1100
+  },
+  "detail-sayur": {
+   "view": "detail-sayur",
+   "scene": null,
+   "off": false,
+   "grounds": [
+    "light"
+   ],
+   "stills": {
+    "light": {
+     "nasi-merah": {
+      "file": "stills/kotak-makan-detail-sayur-nasi-merah.webp",
+      "half": "stills/kotak-makan-detail-sayur-nasi-merah-half.webp",
+      "w": 1862,
+      "h": 1574
+     },
+     "shirataki": {
+      "file": "stills/kotak-makan-detail-sayur-shirataki.webp",
+      "half": "stills/kotak-makan-detail-sayur-shirataki-half.webp",
+      "w": 1862,
+      "h": 1574
+     }
+    }
+   },
+   "box": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "focus": [
+    0.2728,
+    0.3013,
+    0.7272,
+    0.6987
+   ],
+   "cut": [
+    1,
+    1,
+    1,
+    1
    ],
    "px": 1100
   }
