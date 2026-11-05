@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dapur Seimbang — Katering Makan Siang Sehat ke Kantor, Jakarta Selatan</title>
+<meta name="description" content="Makan siang sehat diantar ke kantor di Jakarta Selatan, Senin–Jumat. Nasi merah atau shirataki, lauk, sayur, dan buah. Rp45.000 per porsi, langganan minimal 5 hari. Pesan lewat WhatsApp.">
+<meta property="og:title" content="Dapur Seimbang — Makan siang sehat, diantar ke kantor">
+<meta property="og:description" content="Rp45.000/porsi · Senin–Jumat · Jakarta Selatan · Pesan via WhatsApp 0812-3456-7890">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1f3d2b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f3d2b'/%3E%3Cpath d='M14 34h36a18 18 0 0 1-36 0z' fill='%23fbf7ef'/%3E%3Ccircle cx='26' cy='28' r='5' fill='%23e2603b'/%3E%3Cpath d='M34 30c2-8 10-10 14-9-1 5-6 10-14 9z' fill='%2389b96b'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ef;
+    --paper:#ffffff;
+    --sand:#f3ead9;
+    --ink:#1d2a22;
+    --muted:#5b6b60;
+    --green:#1f3d2b;
+    --green-2:#2f5a3f;
+    --leaf:#6ba368;
+    --leaf-soft:#e3efd9;
+    --tomato:#e2603b;
+    --tomato-dark:#c24a27;
+    --rice:#b5764a;
+    --sun:#f2c14e;
+    --line:#e7dcc8;
+    --wa:#1fa855;
+    --radius:20px;
+    --shadow:0 1px 2px rgba(29,42,34,.06),0 8px 24px rgba(29,42,34,.08);
+    --display:"Fraunces",Georgia,"Times New Roman",serif;
+    --body:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;overflow-x:hidden}
+  img,svg{display:block;max-width:100%}
+  a{color:inherit}
+  h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.12;letter-spacing:-.01em;margin:0 0 .5em;color:var(--green)}
+  h1{font-size:clamp(2.3rem,5.6vw,4rem)}
+  h2{font-size:clamp(1.8rem,3.6vw,2.6rem)}
+  h3{font-size:1.25rem}
+  p{margin:0 0 1em}
+  .wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px}
+  .eyebrow{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--tomato-dark);margin-bottom:.8em}
+  .lead{font-size:1.15rem;color:var(--muted);max-width:36em}
+  section{padding:88px 0}
+  section[id]{scroll-margin-top:68px}
+  .skip{position:absolute;left:-9999px;top:0;background:var(--green);color:#fff;padding:10px 14px;z-index:100}
+  .skip:focus{left:12px;top:12px}
+  :focus-visible{outline:3px solid var(--tomato);outline-offset:3px;border-radius:6px}
+
+  /* Buttons */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 24px;border-radius:999px;font-weight:700;font-size:1rem;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s ease,background-color .15s ease,box-shadow .15s ease;font-family:var(--body)}
+  .btn:hover{transform:translateY(-1px)}
+  .btn-wa{background:var(--wa);color:#fff;box-shadow:0 6px 18px rgba(31,168,85,.28)}
+  .btn-wa:hover{background:#178f47}
+  .btn-ghost{background:transparent;color:var(--green);border-color:var(--green)}
+  .btn-ghost:hover{background:var(--green);color:#fff}
+  .btn svg{width:22px;height:22px;flex:none}
+
+  /* Header */
+  .site-header{position:sticky;top:0;z-index:50;background:rgba(251,247,239,.92);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid transparent;transition:border-color .2s}
+  .site-header.scrolled{border-bottom-color:var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:700;font-size:1.3rem;color:var(--green)}
+  .brand svg{width:34px;height:34px}
+  .nav-links{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-weight:600;font-size:.95rem}
+  .nav-links a{text-decoration:none;color:var(--muted)}
+  .nav-links a:hover{color:var(--green)}
+  .nav .btn{min-height:44px;padding:10px 18px;font-size:.92rem}
+  @media (max-width:900px){.nav-links{display:none}}
+  @media (max-width:420px){.nav .btn span.long{display:none}}
+
+  /* Hero */
+  .hero{padding:56px 0 72px;position:relative}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+  .hero h1 em{font-style:italic;color:var(--tomato-dark)}
+  .hero .lead{margin-bottom:28px}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  .facts{display:grid;grid-template-columns:repeat(3,auto);gap:0;margin:34px 0 0;padding:0;list-style:none;border-top:1px solid var(--line);max-width:520px}
+  .facts li{padding:16px 18px 0 0}
+  .facts li + li{padding-left:18px;border-left:1px solid var(--line)}
+  .facts strong{display:block;font-family:var(--display);font-size:1.45rem;color:var(--green);line-height:1.2}
+  .facts span{font-size:.88rem;color:var(--muted)}
+  .hero-art{position:relative}
+  .hero-art .plate{background:var(--sand);border-radius:32px;padding:28px;position:relative}
+  .tag{position:absolute;background:var(--paper);border-radius:14px;padding:10px 14px;box-shadow:var(--shadow);font-size:.85rem;font-weight:600;display:flex;align-items:center;gap:8px;line-height:1.25}
+  .tag i{font-style:normal;display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;flex:none}
+  .tag-1{top:-14px;left:-10px}
+  .tag-2{bottom:-16px;right:-6px}
+  @media (max-width:900px){
+    .hero-grid{grid-template-columns:1fr;gap:40px}
+    .hero-art{max-width:520px;margin:0 auto;width:100%}
+  }
+  @media (max-width:480px){
+    .facts{grid-template-columns:1fr 1fr 1fr}
+    .facts li{padding-right:10px}
+    .facts li + li{padding-left:10px}
+    .facts strong{font-size:1.2rem}
+    .facts span{font-size:.8rem}
+    .cta-row .btn{width:100%}
+    .tag-1{left:4px}
+    .tag-2{right:4px}
+  }
+
+  /* Problem strip */
+  .strip{background:var(--green);color:#e9f0e6;padding:56px 0}
+  .strip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+  .strip h3{color:#fff;font-size:1.15rem;margin-bottom:.35em}
+  .strip p{margin:0;color:#c9d8c8;font-size:.98rem}
+  .strip .ico{width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,.08);display:grid;place-items:center;margin-bottom:14px}
+  .strip .ico svg{width:24px;height:24px}
+  @media (max-width:800px){.strip-grid{grid-template-columns:1fr;gap:26px}}
+
+  /* Isi kotak */
+  .box-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+  .part{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px}
+  .part .dot{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;margin-bottom:16px}
+  .part .dot svg{width:34px;height:34px}
+  .part h3{margin-bottom:.3em}
+  .part p{margin:0;color:var(--muted);font-size:.96rem}
+  .part .opt{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+  .chip{font-size:.8rem;font-weight:600;padding:5px 10px;border-radius:999px;background:var(--cream);border:1px solid var(--line);color:var(--ink)}
+  @media (max-width:900px){.box-grid{grid-template-columns:1fr 1fr}}
+  @media (max-width:520px){.box-grid{grid-template-columns:1fr;gap:12px}.part{display:grid;grid-template-columns:52px 1fr;column-gap:16px;padding:18px}.part .dot{width:52px;height:52px;margin:0;grid-row:span 3}.part .opt{margin-top:10px}}
+
+  /* Menu */
+  .menu{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .menu-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+  .menu-head .lead{margin:0}
+  .note{font-size:.88rem;color:var(--muted);background:var(--cream);border:1px dashed var(--line);border-radius:12px;padding:10px 14px;max-width:340px}
+  .week{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:36px}
+  .day{border:1px solid var(--line);border-radius:18px;padding:18px;background:var(--cream);display:flex;flex-direction:column}
+  .day h3{font-family:var(--body);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tomato-dark);margin-bottom:10px;font-weight:700}
+  .day .main{font-family:var(--display);font-size:1.12rem;font-weight:700;color:var(--green);line-height:1.25;margin-bottom:12px}
+  .day ul{list-style:none;margin:0;padding:0;font-size:.9rem;color:var(--muted)}
+  .day li{padding:6px 0;border-top:1px dashed var(--line);display:flex;gap:8px}
+  .day li b{color:var(--ink);font-weight:600;min-width:46px}
+  @media (max-width:1000px){
+    .week{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(230px,72%);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;margin-left:-20px;margin-right:-20px;padding-left:20px;padding-right:20px;scroll-padding-left:20px}
+    .day{scroll-snap-align:start}
+  }
+  .scroll-hint{display:none;font-size:.85rem;color:var(--muted);margin-top:6px}
+  @media (max-width:1000px){.scroll-hint{display:block}}
+
+  /* Steps */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px;counter-reset:s;list-style:none;padding:0}
+  .steps li{position:relative;padding:24px 20px 22px;border-radius:var(--radius);background:var(--paper);border:1px solid var(--line)}
+  .steps li::before{counter-increment:s;content:counter(s);font-family:var(--display);font-weight:700;font-size:1.1rem;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--sun);color:var(--green);margin-bottom:14px}
+  .steps h3{font-size:1.1rem;margin-bottom:.3em}
+  .steps p{margin:0;color:var(--muted);font-size:.95rem}
+  @media (max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+  @media (max-width:520px){.steps{grid-template-columns:1fr}}
+
+  /* Order / pricing */
+  .order{background:var(--sand)}
+  .order-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start}
+  .price-big{font-family:var(--display);font-weight:700;color:var(--green);font-size:clamp(3rem,7vw,4.4rem);line-height:1;margin:6px 0 4px}
+  .price-big small{font-family:var(--body);font-size:1rem;font-weight:600;color:var(--muted);margin-left:6px}
+  .incl{list-style:none;padding:0;margin:24px 0 0}
+  .incl li{display:flex;gap:12px;padding:10px 0;border-top:1px solid var(--line)}
+  .incl li:last-child{border-bottom:1px solid var(--line)}
+  .incl svg{width:22px;height:22px;flex:none;margin-top:3px}
+  .card{background:var(--paper);border-radius:24px;padding:28px;box-shadow:var(--shadow)}
+  .card h3{margin-bottom:.2em}
+  .card .sub{color:var(--muted);font-size:.95rem;margin-bottom:20px}
+  .field{margin-bottom:18px;border:0;padding:0}
+  .field > label,.field legend{display:block;font-weight:700;font-size:.92rem;margin-bottom:8px;padding:0}
+  .seg{display:flex;flex-wrap:wrap;gap:8px}
+  .seg input{position:absolute;opacity:0;width:1px;height:1px}
+  .seg label{cursor:pointer;padding:10px 16px;min-height:44px;display:inline-flex;align-items:center;border-radius:12px;border:1.5px solid var(--line);background:var(--cream);font-weight:600;font-size:.95rem;transition:all .15s}
+  .seg input:checked + label{background:var(--green);border-color:var(--green);color:#fff}
+  .seg input:focus-visible + label{outline:3px solid var(--tomato);outline-offset:2px}
+  .stepper{display:inline-flex;align-items:center;border:1.5px solid var(--line);border-radius:12px;overflow:hidden;background:var(--cream)}
+  .stepper button{width:46px;height:46px;border:0;background:transparent;font-size:1.4rem;font-weight:700;color:var(--green);cursor:pointer}
+  .stepper button:hover{background:var(--sand)}
+  .stepper output{min-width:48px;text-align:center;font-weight:700;font-size:1.1rem}
+  .text-in{width:100%;min-height:48px;padding:12px 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--cream);font:inherit;font-size:1rem;color:var(--ink)}
+  .text-in:focus{border-color:var(--green);outline:none;box-shadow:0 0 0 3px rgba(47,90,63,.18)}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media (max-width:520px){.row2{grid-template-columns:1fr}}
+  .total{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:16px 0;margin:6px 0 18px;border-top:1px dashed var(--line);border-bottom:1px dashed var(--line)}
+  .total span{color:var(--muted);font-size:.92rem}
+  .total strong{font-family:var(--display);font-size:1.7rem;color:var(--green);white-space:nowrap}
+  .card .btn{width:100%}
+  .fine{font-size:.82rem;color:var(--muted);margin:12px 0 0;text-align:center}
+  @media (max-width:900px){.order-grid{grid-template-columns:1fr}}
+  @media (max-width:480px){.card{padding:22px 18px}}
+
+  /* FAQ */
+  .faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px}
+  details{border-bottom:1px solid var(--line);padding:4px 0}
+  details:first-of-type{border-top:1px solid var(--line)}
+  summary{cursor:pointer;list-style:none;padding:18px 40px 18px 0;font-weight:700;font-size:1.05rem;position:relative}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"";position:absolute;right:6px;top:50%;width:12px;height:12px;border-right:2.5px solid var(--green);border-bottom:2.5px solid var(--green);transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+  details[open] summary::after{transform:translateY(-30%) rotate(225deg)}
+  details p{color:var(--muted);margin:0 0 18px;padding-right:20px}
+  @media (max-width:900px){.faq-grid{grid-template-columns:1fr;gap:20px}}
+
+  /* Final CTA */
+  .final{background:var(--green);color:#e9f0e6;border-radius:32px;padding:56px 48px;display:grid;grid-template-columns:1.3fr .7fr;gap:32px;align-items:center;position:relative;overflow:hidden}
+  .final h2{color:#fff}
+  .final p{color:#c9d8c8;margin:0}
+  .final .actions{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+  .final .num{font-family:var(--display);font-size:1.5rem;color:#fff;text-decoration:none;font-weight:700}
+  .final .num:hover{text-decoration:underline}
+  @media (max-width:800px){.final{grid-template-columns:1fr;padding:40px 24px;border-radius:24px}.final .actions .btn{width:100%}}
+
+  footer{padding:40px 0 110px;color:var(--muted);font-size:.9rem}
+  .foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;border-top:1px solid var(--line);padding-top:24px}
+  .foot-wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px}
+  .foot a{color:var(--green);font-weight:600}
+  @media (min-width:901px){footer{padding-bottom:40px}}
+
+  /* Sticky mobile CTA */
+  .sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;display:none;transform:translateY(140%);transition:transform .25s ease}
+  .sticky-cta.show{transform:none}
+  .sticky-cta .btn{width:100%;box-shadow:0 10px 30px rgba(29,42,34,.25)}
+  @media (max-width:900px){.sticky-cta{display:block}}
+
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+  @media (max-width:640px){section{padding:64px 0}body{font-size:16px}}
+</style>
+</head>
+<body>
+<a class="skip" href="#utama">Lewati ke konten</a>
+
+<!-- WhatsApp icon symbol, reused -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.44.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#e3efd9"/><path d="M7 12.5l3.2 3.2L17.5 8.5" fill="none" stroke="#2f5a3f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header class="site-header" id="top">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Dapur Seimbang, ke atas">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#1f3d2b"/><path d="M12 33h40a20 20 0 0 1-40 0z" fill="#fbf7ef"/><circle cx="25" cy="27" r="6" fill="#e2603b"/><path d="M33 30c2.5-9 11-11.5 16-10.5-1.3 5.6-7 11.3-16 10.5z" fill="#89b96b"/></svg>
+      Dapur Seimbang
+    </a>
+    <ul class="nav-links">
+      <li><a href="#isi">Isi kotak</a></li>
+      <li><a href="#menu">Contoh menu</a></li>
+      <li><a href="#cara">Cara langganan</a></li>
+      <li><a href="#harga">Harga</a></li>
+      <li><a href="#faq">Tanya jawab</a></li>
+    </ul>
+    <a class="btn btn-wa js-wa" href="https://wa.me/6281234567890" target="_blank" rel="noopener" data-msg="general">
+      <svg aria-hidden="true"><use href="#i-wa"/></svg><span>Pesan<span class="long"> via WhatsApp</span></span>
+    </a>
+  </div>
+</header>
+
+<main id="utama">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Katering sehat · Jakarta Selatan</span>
+      <h1>Makan siang sehat, <em>diantar ke kantor.</em> Kamu tinggal kerja.</h1>
+      <p class="lead">Nasi merah atau shirataki, lauk, sayur, dan buah — menunya ganti tiap hari, diantar Senin sampai Jumat. Nggak perlu masak, nggak perlu mikir mau makan apa.</p>
+      <div class="cta-row">
+        <a class="btn btn-wa js-wa" href="https://wa.me/6281234567890" target="_blank" rel="noopener" data-msg="general">
+          <svg aria-hidden="true"><use href="#i-wa"/></svg> Langganan via WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="#menu">Lihat contoh menu</a>
+      </div>
+      <ul class="facts" aria-label="Info singkat">
+        <li><strong>Rp45rb</strong><span>per porsi</span></li>
+        <li><strong>Sen–Jum</strong><span>diantar ke kantor</span></li>
+        <li><strong>5 hari</strong><span>minimal langganan</span></li>
+      </ul>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <div class="plate">
+        <!-- Illustrated lunch box, top view -->
+        <svg viewBox="0 0 480 380" role="img">
+          <defs>
+            <pattern id="grain" width="22" height="16" patternUnits="userSpaceOnUse">
+              <rect width="22" height="16" fill="#a8683f"/>
+              <ellipse cx="6" cy="5" rx="4.2" ry="2" fill="#c98b5c" transform="rotate(-20 6 5)"/>
+              <ellipse cx="16" cy="11" rx="4.2" ry="2" fill="#bd7c4e" transform="rotate(25 16 11)"/>
+              <ellipse cx="17" cy="3" rx="3" ry="1.6" fill="#d39b6d" transform="rotate(10 17 3)"/>
+              <ellipse cx="5" cy="13" rx="3" ry="1.5" fill="#96592f" transform="rotate(-35 5 13)"/>
+            </pattern>
+          </defs>
+          <!-- box -->
+          <rect x="14" y="18" width="452" height="348" rx="34" fill="#1f3d2b"/>
+          <rect x="26" y="28" width="428" height="326" rx="26" fill="#fbf7ef"/>
+          <!-- compartments -->
+          <rect x="40" y="42" width="214" height="298" rx="18" fill="#efe3cd"/>
+          <rect x="266" y="42" width="174" height="142" rx="18" fill="#efe3cd"/>
+          <rect x="266" y="196" width="174" height="144" rx="18" fill="#efe3cd"/>
+          <!-- brown rice -->
+          <path d="M58 200c0-70 34-140 89-140s89 70 89 140c0 66-38 122-89 122S58 266 58 200z" fill="url(#grain)"/>
+          <ellipse cx="120" cy="120" rx="22" ry="9" fill="#d9a77a" opacity=".55" transform="rotate(-25 120 120)"/>
+          <!-- sesame -->
+          <g fill="#fbf7ef"><ellipse cx="150" cy="170" rx="2.6" ry="1.4"/><ellipse cx="170" cy="210" rx="2.6" ry="1.4" transform="rotate(40 170 210)"/><ellipse cx="128" cy="236" rx="2.6" ry="1.4" transform="rotate(-30 128 236)"/><ellipse cx="190" cy="150" rx="2.6" ry="1.4"/></g>
+          <!-- grilled chicken -->
+          <g>
+            <rect x="282" y="62" width="70" height="46" rx="14" fill="#c9733d" transform="rotate(-10 317 85)"/>
+            <rect x="350" y="70" width="72" height="48" rx="14" fill="#d4844a" transform="rotate(8 386 94)"/>
+            <rect x="300" y="116" width="76" height="48" rx="14" fill="#bf6a35" transform="rotate(4 338 140)"/>
+            <g stroke="#8a4520" stroke-width="5" stroke-linecap="round" opacity=".7">
+              <path d="M296 80l36-8M298 96l36-8"/><path d="M364 84l38 6M362 100l38 6"/><path d="M314 134l46 3M314 150l46 3"/>
+            </g>
+            <circle cx="408" cy="146" r="9" fill="#e2603b"/><circle cx="420" cy="160" r="6" fill="#e2603b"/>
+          </g>
+          <!-- veggies -->
+          <g>
+            <circle cx="310" cy="244" r="28" fill="#4e8a4a"/><circle cx="296" cy="232" r="14" fill="#6ba368"/><circle cx="324" cy="236" r="13" fill="#5c9a57"/><circle cx="312" cy="258" r="14" fill="#77ad6d"/>
+            <rect x="306" y="262" width="10" height="30" rx="4" fill="#9cc58c"/>
+            <g fill="#f08a3c"><rect x="350" y="218" width="64" height="12" rx="6" transform="rotate(-18 382 224)"/><rect x="352" y="240" width="66" height="12" rx="6" transform="rotate(-10 385 246)"/><rect x="348" y="262" width="62" height="12" rx="6" transform="rotate(-24 379 268)"/></g>
+            <g fill="#89b96b"><ellipse cx="300" cy="312" rx="22" ry="10" transform="rotate(-15 300 312)"/><ellipse cx="342" cy="308" rx="20" ry="9" transform="rotate(12 342 308)"/></g>
+          </g>
+          <!-- fruit -->
+          <g>
+            <path d="M366 300a40 40 0 0 1 64 0z" fill="#f2c14e"/>
+            <path d="M372 300a34 34 0 0 1 52 0z" fill="#f7d77a"/>
+            <g fill="#3b2a1a"><circle cx="390" cy="294" r="1.8"/><circle cx="398" cy="290" r="1.8"/><circle cx="406" cy="294" r="1.8"/></g>
+            <circle cx="400" cy="318" r="13" fill="#e2603b"/><circle cx="396" cy="314" r="3.5" fill="#f08a6b"/>
+          </g>
+          <!-- spoon -->
+          <g transform="rotate(-8 240 360)"><rect x="150" y="352" width="190" height="10" rx="5" fill="#d6c6a6"/></g>
+        </svg>
+      </div>
+      <div class="tag tag-1"><i style="background:#e3efd9">🥗</i>Menu ganti<br>setiap hari</div>
+      <div class="tag tag-2"><i style="background:#fde7c6">🛵</i>Diantar ke<br>kantor kamu</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM / BENEFIT STRIP -->
+<div class="strip">
+  <div class="wrap strip-grid">
+    <div class="reveal">
+      <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#f2c14e" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+      <h3>Hemat waktu istirahat</h3>
+      <p>Nggak antre di kantin, nggak nunggu ojol. Makan siang sudah datang, jam istirahat bisa dipakai buat istirahat beneran.</p>
+    </div>
+    <div class="reveal">
+      <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#f2c14e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5v14"/><circle cx="12" cy="12" r="9"/></svg></div>
+      <h3>Komposisi seimbang</h3>
+      <p>Setiap kotak berisi karbohidrat kompleks, lauk berprotein, sayur, dan buah. Bukan cuma "sehat" di nama.</p>
+    </div>
+    <div class="reveal">
+      <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#f2c14e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 4v5M15 4v5"/></svg></div>
+      <h3>Nggak perlu mikir menu</h3>
+      <p>Menu ganti tiap hari dari Senin sampai Jumat, jadi nggak bosan dan nggak perlu ribet mutusin mau makan apa.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ISI KOTAK -->
+<section id="isi">
+  <div class="wrap">
+    <span class="eyebrow">Isi satu kotak</span>
+    <h2>Empat komponen, satu porsi lengkap.</h2>
+    <p class="lead">Polanya sederhana dan konsisten setiap hari: karbo pilihan, lauk berprotein, sayur, dan buah sebagai penutup.</p>
+
+    <div class="box-grid">
+      <article class="part reveal">
+        <div class="dot" style="background:#f3e2cf"><svg viewBox="0 0 40 40"><path d="M6 20a14 14 0 0 0 28 0z" fill="#b5764a"/><g fill="#d9a77a"><ellipse cx="14" cy="17" rx="3" ry="1.5"/><ellipse cx="21" cy="15" rx="3" ry="1.5" transform="rotate(20 21 15)"/><ellipse cx="27" cy="17" rx="3" ry="1.5"/></g></svg></div>
+        <h3>Karbohidrat</h3>
+        <p>Pilih nasi merah atau shirataki untuk yang ingin lebih rendah kalori.</p>
+        <div class="opt"><span class="chip">Nasi merah</span><span class="chip">Shirataki</span></div>
+      </article>
+      <article class="part reveal">
+        <div class="dot" style="background:#fbe0d5"><svg viewBox="0 0 40 40"><rect x="7" y="13" width="26" height="15" rx="6" fill="#c9733d"/><path d="M11 18l18-2M11 23l18-2" stroke="#8a4520" stroke-width="2.4" stroke-linecap="round"/></svg></div>
+        <h3>Lauk protein</h3>
+        <p>Bergantian setiap hari supaya tetap bervariasi.</p>
+        <div class="opt"><span class="chip">Ayam</span><span class="chip">Ikan</span><span class="chip">Tahu &amp; tempe</span></div>
+      </article>
+      <article class="part reveal">
+        <div class="dot" style="background:#e3efd9"><svg viewBox="0 0 40 40"><circle cx="16" cy="17" r="8" fill="#5c9a57"/><circle cx="24" cy="16" r="7" fill="#6ba368"/><circle cx="20" cy="22" r="7" fill="#77ad6d"/><rect x="18" y="24" width="4" height="10" rx="2" fill="#9cc58c"/></svg></div>
+        <h3>Sayur</h3>
+        <p>Porsi sayur di setiap kotak, dimasak dengan cara yang berbeda tiap hari.</p>
+        <div class="opt"><span class="chip">Tiap hari</span></div>
+      </article>
+      <article class="part reveal">
+        <div class="dot" style="background:#fdf0cf"><svg viewBox="0 0 40 40"><path d="M6 24a14 14 0 0 1 28 0z" fill="#f2c14e"/><path d="M9 24a11 11 0 0 1 22 0z" fill="#f7d77a"/><circle cx="26" cy="29" r="5" fill="#e2603b"/></svg></div>
+        <h3>Buah</h3>
+        <p>Penutup segar supaya makan siang terasa lengkap tanpa cari camilan manis.</p>
+        <div class="opt"><span class="chip">Tiap hari</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="menu-head">
+      <div>
+        <span class="eyebrow">Contoh menu satu minggu</span>
+        <h2>Ganti tiap hari, Senin sampai Jumat.</h2>
+        <p class="lead">Gambaran rotasi menu kami. Karbo bisa nasi merah atau shirataki di semua hari.</p>
+      </div>
+      <p class="note"><strong>Catatan:</strong> ini contoh. Menu yang berlaku dikirim lewat WhatsApp setiap minggu.</p>
+    </div>
+
+    <div class="week" role="list">
+      <article class="day" role="listitem">
+        <h3>Senin</h3>
+        <p class="main">Ayam bakar bumbu kecap</p>
+        <ul><li><b>Sayur</b> Tumis buncis wortel</li><li><b>Buah</b> Semangka</li></ul>
+      </article>
+      <article class="day" role="listitem">
+        <h3>Selasa</h3>
+        <p class="main">Ikan dori panggang lemon</p>
+        <ul><li><b>Sayur</b> Brokoli kukus</li><li><b>Buah</b> Pepaya</li></ul>
+      </article>
+      <article class="day" role="listitem">
+        <h3>Rabu</h3>
+        <p class="main">Tahu &amp; tempe bacem</p>
+        <ul><li><b>Sayur</b> Sayur asem</li><li><b>Buah</b> Melon</li></ul>
+      </article>
+      <article class="day" role="listitem">
+        <h3>Kamis</h3>
+        <p class="main">Ayam suwir sambal matah</p>
+        <ul><li><b>Sayur</b> Capcay</li><li><b>Buah</b> Jeruk</li></ul>
+      </article>
+      <article class="day" role="listitem">
+        <h3>Jumat</h3>
+        <p class="main">Pepes ikan kemangi</p>
+        <ul><li><b>Sayur</b> Urap sayuran</li><li><b>Buah</b> Nanas</li></ul>
+      </article>
+    </div>
+    <p class="scroll-hint">Geser ke samping untuk lihat hari lainnya →</p>
+  </div>
+</section>
+
+<!-- CARA LANGGANAN -->
+<section id="cara">
+  <div class="wrap">
+    <span class="eyebrow">Cara langganan</span>
+    <h2>Mulai langganan dalam satu chat.</h2>
+    <ol class="steps">
+      <li class="reveal"><h3>Chat WhatsApp</h3><p>Kirim pesan ke <span style="white-space:nowrap">0812-3456-7890</span>, atau isi form di bawah supaya pesannya otomatis tersusun.</p></li>
+      <li class="reveal"><h3>Pilih paket</h3><p>Tentukan jumlah hari (minimal 5), jumlah porsi, dan karbo: nasi merah atau shirataki.</p></li>
+      <li class="reveal"><h3>Kirim alamat kantor</h3><p>Kasih tahu alamat kantor di Jakarta Selatan dan tanggal mulai. Admin akan konfirmasi detailnya.</p></li>
+      <li class="reveal"><h3>Makan siang datang</h3><p>Setiap hari kerja, makan siang diantar ke kantor. Kamu tinggal makan.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- HARGA + ORDER FORM -->
+<section class="order" id="harga">
+  <div class="wrap order-grid">
+    <div>
+      <span class="eyebrow">Harga</span>
+      <h2>Satu harga, tanpa ribet.</h2>
+      <p class="price-big">Rp45.000<small>/ porsi</small></p>
+      <p class="lead" style="margin-top:10px">Langganan minimal 5 hari (satu minggu kerja).</p>
+      <ul class="incl">
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Nasi merah <em>atau</em> shirataki</span></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Lauk protein: ayam, ikan, atau tahu tempe</span></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Sayur dan buah setiap hari</span></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Diantar ke kantor di Jakarta Selatan, Senin–Jumat</span></li>
+      </ul>
+    </div>
+
+    <form class="card" id="order-form" novalidate>
+      <h3>Hitung &amp; pesan</h3>
+      <p class="sub">Isi sebentar, lalu kami buka WhatsApp dengan pesan yang sudah tersusun. Belum ada yang dibayar di sini.</p>
+
+      <fieldset class="field">
+        <legend>Berapa hari?</legend>
+        <div class="seg">
+          <input type="radio" name="days" id="d5" value="5" checked><label for="d5">5 hari</label>
+          <input type="radio" name="days" id="d10" value="10"><label for="d10">10 hari</label>
+          <input type="radio" name="days" id="d20" value="20"><label for="d20">20 hari</label>
+        </div>
+      </fieldset>
+
+      <div class="row2">
+        <div class="field">
+          <label id="lbl-qty">Porsi per hari</label>
+          <div class="stepper" role="group" aria-labelledby="lbl-qty">
+            <button type="button" id="qty-minus" aria-label="Kurangi porsi">−</button>
+            <output id="qty" aria-live="polite">1</output>
+            <button type="button" id="qty-plus" aria-label="Tambah porsi">+</button>
+          </div>
+        </div>
+        <fieldset class="field">
+          <legend>Karbo</legend>
+          <div class="seg">
+            <input type="radio" name="carb" id="c1" value="Nasi merah" checked><label for="c1">Nasi merah</label>
+            <input type="radio" name="carb" id="c2" value="Shirataki"><label for="c2">Shirataki</label>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="row2">
+        <div class="field">
+          <label for="nama">Nama</label>
+          <input class="text-in" id="nama" name="nama" autocomplete="name" placeholder="cth. Rina">
+        </div>
+        <div class="field">
+          <label for="kantor">Kantor / area</label>
+          <input class="text-in" id="kantor" name="kantor" placeholder="cth. Kuningan, Setiabudi">
+        </div>
+      </div>
+
+      <div class="total" aria-live="polite">
+        <span id="total-desc">5 hari × 1 porsi × Rp45.000</span>
+        <strong id="total">Rp225.000</strong>
+      </div>
+
+      <button class="btn btn-wa" type="submit">
+        <svg aria-hidden="true"><use href="#i-wa"/></svg> Kirim pesanan via WhatsApp
+      </button>
+      <p class="fine">Admin akan membalas untuk konfirmasi alamat, tanggal mulai, dan pembayaran.</p>
+    </form>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap faq-grid">
+    <div>
+      <span class="eyebrow">Tanya jawab</span>
+      <h2>Yang sering ditanyakan.</h2>
+      <p class="lead">Pertanyaan lain? Langsung chat saja, admin kami yang jawab.</p>
+      <a class="btn btn-ghost js-wa" href="https://wa.me/6281234567890" target="_blank" rel="noopener" data-msg="question">Tanya via WhatsApp</a>
+    </div>
+    <div>
+      <details>
+        <summary>Area mana saja yang bisa diantar?</summary>
+        <p>Kami mengantar ke kantor-kantor di Jakarta Selatan. Kirim alamat kantormu lewat WhatsApp, admin akan memastikan alamatnya terjangkau.</p>
+      </details>
+      <details>
+        <summary>Apakah ada pengantaran di hari Sabtu dan Minggu?</summary>
+        <p>Belum. Pengantaran hanya Senin sampai Jumat, karena kami fokus melayani makan siang di hari kerja.</p>
+      </details>
+      <details>
+        <summary>Kenapa minimal 5 hari?</summary>
+        <p>Langganan minimal 5 hari, setara satu minggu kerja. Untuk satu orang totalnya Rp225.000 (5 × Rp45.000).</p>
+      </details>
+      <details>
+        <summary>Boleh pilih nasi merah atau shirataki?</summary>
+        <p>Boleh. Sebutkan pilihanmu saat memesan. Kalau ingin ganti di tengah langganan, kabari admin lewat WhatsApp.</p>
+      </details>
+      <details>
+        <summary>Saya punya alergi atau pantangan makanan, bagaimana?</summary>
+        <p>Ceritakan ke admin sebelum mulai langganan. Kami akan cek apakah menunya bisa disesuaikan, dan menyampaikan dengan jujur kalau belum bisa.</p>
+      </details>
+      <details>
+        <summary>Bisa pesan untuk beberapa orang sekaligus di satu kantor?</summary>
+        <p>Bisa. Atur jumlah porsi per hari di form pemesanan, atau chat admin untuk pesanan tim.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="final">
+      <div>
+        <h2>Makan siang sehat, tanpa harus masak.</h2>
+        <p>Mulai dari 5 hari, Rp225.000. Chat kami sekarang untuk cek menu minggu ini dan jadwal mulai.</p>
+      </div>
+      <div class="actions">
+        <a class="btn btn-wa js-wa" href="https://wa.me/6281234567890" target="_blank" rel="noopener" data-msg="general">
+          <svg aria-hidden="true"><use href="#i-wa"/></svg> Langganan via WhatsApp
+        </a>
+        <a class="num js-wa" href="https://wa.me/6281234567890" target="_blank" rel="noopener" data-msg="general">0812-3456-7890</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="foot-wrap"><div class="foot">
+    <div><strong style="color:var(--green)">Dapur Seimbang</strong> · Katering makan siang sehat untuk kantor di Jakarta Selatan</div>
+    <div>WhatsApp: <a class="js-wa" href="https://wa.me/6281234567890" target="_blank" rel="noopener" data-msg="general">0812-3456-7890</a></div>
+  </div></div>
+</footer>
+
+<div class="sticky-cta" id="sticky-cta">
+  <a class="btn btn-wa js-wa" href="https://wa.me/6281234567890" target="_blank" rel="noopener" data-msg="general">
+    <svg aria-hidden="true"><use href="#i-wa"/></svg> Langganan via WhatsApp
+  </a>
+</div>
+
+<script>
+(function(){
+  var WA = "6281234567890";
+  var PRICE = 45000;
+  var MSG = {
+    general: "Halo Dapur Seimbang, saya mau langganan makan siang sehat. Boleh info menu minggu ini dan cara mulainya?",
+    question: "Halo Dapur Seimbang, saya mau tanya dulu soal langganan makan siang."
+  };
+  function waUrl(text){ return "https://wa.me/" + WA + "?text=" + encodeURIComponent(text); }
+  function rupiah(n){ return "Rp" + n.toLocaleString("id-ID"); }
+
+  document.querySelectorAll(".js-wa").forEach(function(a){
+    var key = a.getAttribute("data-msg") || "general";
+    a.href = waUrl(MSG[key] || MSG.general);
+  });
+
+  // Order calculator
+  var form = document.getElementById("order-form");
+  var qtyEl = document.getElementById("qty");
+  var qty = 1;
+  function days(){ return parseInt(form.querySelector('input[name="days"]:checked').value, 10); }
+  function carb(){ return form.querySelector('input[name="carb"]:checked').value; }
+  function update(){
+    qtyEl.textContent = qty;
+    var d = days();
+    document.getElementById("total-desc").textContent = d + " hari × " + qty + " porsi × " + rupiah(PRICE);
+    document.getElementById("total").textContent = rupiah(d * qty * PRICE);
+  }
+  document.getElementById("qty-minus").addEventListener("click", function(){ if(qty>1){qty--;update();} });
+  document.getElementById("qty-plus").addEventListener("click", function(){ if(qty<50){qty++;update();} });
+  form.addEventListener("change", update);
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    var d = days();
+    var nama = form.nama.value.trim();
+    var kantor = form.kantor.value.trim();
+    var lines = [
+      "Halo Dapur Seimbang, saya mau langganan makan siang sehat.",
+      "",
+      "• Paket: " + d + " hari",
+      "• Porsi per hari: " + qty,
+      "• Karbo: " + carb(),
+      "• Perkiraan total: " + rupiah(d * qty * PRICE)
+    ];
+    if(nama) lines.push("• Nama: " + nama);
+    if(kantor) lines.push("• Kantor/area: " + kantor);
+    lines.push("", "Mohon info menu, tanggal mulai, dan cara pembayarannya. Terima kasih!");
+    window.open(waUrl(lines.join("\n")), "_blank", "noopener");
+  });
+  update();
+
+  // Header border + sticky CTA
+  var header = document.querySelector(".site-header");
+  var sticky = document.getElementById("sticky-cta");
+  var hero = document.querySelector(".hero");
+  var order = document.getElementById("harga");
+  function onScroll(){
+    var y = window.scrollY;
+    header.classList.toggle("scrolled", y > 8);
+    var heroBottom = hero.offsetTop + hero.offsetHeight - 80;
+    var o = order.getBoundingClientRect();
+    var formVisible = o.top < window.innerHeight && o.bottom > 0;
+    sticky.classList.toggle("show", y > heroBottom && !formVisible);
+  }
+  window.addEventListener("scroll", onScroll, {passive:true});
+  onScroll();
+
+  // Reveal on scroll
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); } });
+    }, {rootMargin:"0px 0px -40px 0px"});
+    document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll(".reveal").forEach(function(el){ el.classList.add("in"); });
+  }
+})();
+</script>
+</body>
+</html>

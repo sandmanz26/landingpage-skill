@@ -1,0 +1,155 @@
+{
+  "url": "http://127.0.0.1:43793/no-skill/index.html",
+  "readAt": "2026-11-05T16:37:05.928Z",
+  "tags": [
+    "shadowed",
+    "many-colours",
+    "dark",
+    "pill-shapes",
+    "many-type-sizes",
+    "endless-motion"
+  ],
+  "palette": {
+    "chromatic": 9,
+    "families": 3,
+    "text": [
+      "#ffffff",
+      "#1f3d2b",
+      "#5b6b60",
+      "#c24a27",
+      "#1d2a22",
+      "#c9d8c8"
+    ],
+    "backgrounds": [
+      "#1f3d2b",
+      "#fbf7ef",
+      "#1fa855",
+      "#f3ead9",
+      "#ffffff",
+      "#e3efd9",
+      "#fde7c6",
+      "#f3e2cf"
+    ],
+    "gradients": 0,
+    "shadows": 7,
+    "blur": 1
+  },
+  "type": {
+    "families": [
+      {
+        "family": "plus jakarta sans",
+        "share": 86
+      },
+      {
+        "family": "fraunces",
+        "share": 14
+      },
+      {
+        "family": "arial",
+        "share": 0
+      }
+    ],
+    "cuts": [
+      {
+        "family": "Plus Jakarta Sans",
+        "share": 86
+      },
+      {
+        "family": "Fraunces",
+        "share": 14
+      },
+      {
+        "family": "Arial",
+        "share": 0
+      }
+    ],
+    "sizes": {
+      "desktop": [
+        70,
+        64,
+        42,
+        27,
+        24,
+        23,
+        22,
+        21,
+        20,
+        18,
+        17,
+        16,
+        15,
+        14,
+        13
+      ],
+      "mobile": [
+        48,
+        37,
+        29,
+        27,
+        24,
+        22,
+        21,
+        20,
+        19,
+        18,
+        17,
+        16,
+        15,
+        14,
+        13
+      ]
+    },
+    "display": 70,
+    "body": 16,
+    "ratio": 4.4
+  },
+  "shape": {
+    "radii": [
+      "999px",
+      "32px",
+      "14px",
+      "50%",
+      "12px",
+      "20px",
+      "16px",
+      "18px",
+      "24px"
+    ]
+  },
+  "spacing": {
+    "distinct": 28,
+    "offScale": 14
+  },
+  "motion": {
+    "libraries": [],
+    "stickyPanels": 0,
+    "durationsMs": {
+      "min": 200,
+      "max": 600
+    },
+    "easings": [
+      "ease"
+    ],
+    "reducedMotionRespected": true,
+    "smoothness": {
+      "fps": 59.3,
+      "longFrames": 0,
+      "baselineLongFrames": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    }
+  },
+  "imagery": {
+    "photos": 0,
+    "illustrations": 1,
+    "videos": 0
+  },
+  "layout": {
+    "pageHeight": 4916,
+    "screens": 5
+  },
+  "doNotCopy": [
+    "headline-lines: h1 runs to 4 lines",
+    "contrast: 2 text elements below WCAG AA (measured on screen pixels)",
+    "tap-target: 1 controls smaller than 24x24px on a phone"
+  ]
+}

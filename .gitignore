@@ -5,3 +5,9 @@ node_modules/
 data/references/captures/**/*.png
 !data/references/captures/**/desktop-fold.png
 !data/references/captures/**/mobile-fold.png
+# Test-run measurements are reproducible; keep the reports, first screens and contact sheets.
+examples/**/measure-*/**/*.png
+!examples/**/measure-*/desktop-fold.png
+!examples/**/measure-*/mobile-fold.png
+!examples/**/measure-*/sheet-desktop.png
+!examples/**/measure-*/sheet-mobile.png

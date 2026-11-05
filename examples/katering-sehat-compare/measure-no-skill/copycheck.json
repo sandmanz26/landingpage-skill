@@ -1,0 +1,61 @@
+{
+  "target": "no-skill/index.html",
+  "voice": null,
+  "time": "2026-11-05T16:37:07.834Z",
+  "stats": {
+    "headings": 24,
+    "paragraphs": 55,
+    "sentences": 72,
+    "words": 458,
+    "averageSentence": 6.4,
+    "longWordShare": 0
+  },
+  "skim": [
+    "  [Dapur Seimbang]",
+    "  [Pesan via WhatsApp]",
+    "Makan siang sehat, diantar ke kantor. Kamu tinggal kerja.",
+    "  [Langganan via WhatsApp]",
+    "  [Lihat contoh menu]",
+    "Hemat waktu istirahat",
+    "Komposisi seimbang",
+    "Nggak perlu mikir menu",
+    "Empat komponen, satu porsi lengkap.",
+    "Karbohidrat",
+    "Lauk protein",
+    "Sayur",
+    "Buah",
+    "Ganti tiap hari, Senin sampai Jumat.",
+    "SENIN",
+    "SELASA",
+    "RABU",
+    "KAMIS",
+    "JUMAT",
+    "Mulai langganan dalam satu chat.",
+    "Chat WhatsApp",
+    "Pilih paket",
+    "Kirim alamat kantor",
+    "Makan siang datang",
+    "Satu harga, tanpa ribet.",
+    "Hitung & pesan",
+    "  [−]",
+    "  [+]",
+    "  [Kirim pesanan via WhatsApp]",
+    "Yang sering ditanyakan.",
+    "  [Tanya via WhatsApp]",
+    "Makan siang sehat, tanpa harus masak.",
+    "  [Langganan via WhatsApp]",
+    "  [0812-3456-7890]",
+    "  [Langganan via WhatsApp]"
+  ],
+  "findings": [
+    {
+      "severity": "WARN",
+      "rule": "no-voice",
+      "message": "No voice.md: the reader and the glossary are not written down (copy/method.md)"
+    }
+  ],
+  "summary": {
+    "fail": 0,
+    "warn": 1
+  }
+}

@@ -1,0 +1,856 @@
+{
+  "id": "kotak-makan",
+  "name": "Kotak makan siang",
+  "label": "Kotak makan siang berisi nasi merah, ayam bakar, tempe, tahu, brokoli, wortel, pepaya dan melon",
+  "poster": "kotak-makan",
+  "units": "cm",
+  "angle": -30,
+  "camera": {
+    "elev": 32
+  },
+  "turn": {
+    "mode": "still"
+  },
+  "colors": [
+    {
+      "id": "nasi-merah",
+      "name": "Nasi merah",
+      "accent": "#5e2c22"
+    },
+    {
+      "id": "shirataki",
+      "name": "Nasi shirataki",
+      "accent": "#e6e0cf"
+    }
+  ],
+  "materials": {
+    "kotak": {
+      "kind": "plastic",
+      "color": "#2c3f27",
+      "finish": "satin"
+    },
+    "nasi": {
+      "kind": "paint",
+      "color": "accent",
+      "finish": "matte"
+    },
+    "ayam": {
+      "kind": "paint",
+      "color": "#5b2a12",
+      "finish": "satin"
+    },
+    "tempe": {
+      "kind": "fabric",
+      "color": "#9c7038",
+      "weave": 220
+    },
+    "tahu": {
+      "kind": "paint",
+      "color": "#b8732c",
+      "finish": "satin"
+    },
+    "brokoli": {
+      "kind": "fabric",
+      "color": "#2c561f",
+      "weave": 300
+    },
+    "wortel": {
+      "kind": "paint",
+      "color": "#e0702a",
+      "finish": "satin"
+    },
+    "pepaya": {
+      "kind": "paint",
+      "color": "#f08a3a",
+      "finish": "gloss"
+    },
+    "melon": {
+      "kind": "paint",
+      "color": "#b9cf6e",
+      "finish": "gloss"
+    }
+  },
+  "views": {
+    "lebar": {
+      "angle": -10,
+      "elev": 30
+    },
+    "detail-nasi": {
+      "part": [
+        "nasi*"
+      ],
+      "angle": -40,
+      "elev": 30,
+      "margin": 1.25
+    },
+    "detail-lauk": {
+      "part": [
+        "lauk*"
+      ],
+      "angle": -20,
+      "elev": 34,
+      "margin": 1.25
+    },
+    "detail-sayur": {
+      "part": [
+        "sayur*"
+      ],
+      "angle": -30,
+      "elev": 36,
+      "margin": 1.3
+    },
+    "detail-buah": {
+      "part": [
+        "buah*"
+      ],
+      "angle": -30,
+      "elev": 36,
+      "margin": 1.3
+    }
+  },
+  "scenes": {
+    "meja": {
+      "label": "Kotak makan siang di meja kerja, di samping kertas, dua buku dan segelas kopi",
+      "props": [
+        {
+          "prop": "desk",
+          "at": [
+            0,
+            -3.2,
+            0
+          ],
+          "size": [
+            1.1,
+            0.032,
+            0.6
+          ],
+          "scale": 100
+        },
+        {
+          "prop": "sheet",
+          "at": [
+            24,
+            0,
+            10
+          ],
+          "yaw": 12,
+          "scale": 100
+        },
+        {
+          "prop": "book",
+          "at": [
+            -25,
+            0,
+            -12
+          ],
+          "yaw": -10,
+          "count": 2,
+          "scale": 100
+        },
+        {
+          "prop": "mug",
+          "at": [
+            -24,
+            0,
+            14
+          ],
+          "scale": 100
+        }
+      ]
+    }
+  },
+  "supports": [
+    "three-quarter",
+    "lebar",
+    "top",
+    "detail-nasi",
+    "detail-lauk",
+    "detail-sayur",
+    "detail-buah"
+  ],
+  "make": {
+    "variants": [
+      "lebar",
+      "three-quarter",
+      "top",
+      "detail-nasi",
+      "detail-lauk",
+      "detail-sayur",
+      "detail-buah",
+      "three-quarter+meja"
+    ],
+    "grounds": [
+      "light"
+    ]
+  },
+  "parts": [
+    {
+      "name": "kotak",
+      "type": "basket",
+      "at": [
+        0,
+        2.6,
+        0
+      ],
+      "size": [
+        24,
+        5.2,
+        17
+      ],
+      "style": "solid",
+      "t": 0.35,
+      "round": 1.1,
+      "mat": "kotak",
+      "rimMat": "kotak"
+    },
+    {
+      "name": "sekat nasi",
+      "type": "box",
+      "at": [
+        -1,
+        2.45,
+        0
+      ],
+      "size": [
+        0.35,
+        4.5,
+        16.4
+      ],
+      "round": 0.15,
+      "mat": "kotak",
+      "blend": 0.15
+    },
+    {
+      "name": "sekat lauk",
+      "type": "box",
+      "at": [
+        5.35,
+        2.45,
+        0
+      ],
+      "size": [
+        12.4,
+        4.5,
+        0.35
+      ],
+      "round": 0.15,
+      "mat": "kotak",
+      "blend": 0.15
+    },
+    {
+      "name": "sekat sayur",
+      "type": "box",
+      "at": [
+        5.4,
+        2.45,
+        4.15
+      ],
+      "size": [
+        0.35,
+        4.5,
+        8
+      ],
+      "round": 0.15,
+      "mat": "kotak",
+      "blend": 0.15
+    },
+    {
+      "name": "nasi",
+      "type": "ellipsoid",
+      "at": [
+        -6.4,
+        2.6,
+        0
+      ],
+      "size": [
+        10.4,
+        4.6,
+        15.8
+      ],
+      "mat": "nasi"
+    },
+    {
+      "name": "nasi gumpal 1",
+      "type": "sphere",
+      "at": [
+        -8.6,
+        3.6,
+        -4.8
+      ],
+      "r": 1.55,
+      "mat": "nasi",
+      "blend": 0.9
+    },
+    {
+      "name": "nasi gumpal 2",
+      "type": "sphere",
+      "at": [
+        -5,
+        3.85,
+        -5.4
+      ],
+      "r": 1.8,
+      "mat": "nasi",
+      "blend": 0.9
+    },
+    {
+      "name": "nasi gumpal 3",
+      "type": "sphere",
+      "at": [
+        -8.9,
+        4.1,
+        -0.6
+      ],
+      "r": 1.55,
+      "mat": "nasi",
+      "blend": 0.9
+    },
+    {
+      "name": "nasi gumpal 4",
+      "type": "sphere",
+      "at": [
+        -5.6,
+        3.6,
+        -1.2
+      ],
+      "r": 1.8,
+      "mat": "nasi",
+      "blend": 0.9
+    },
+    {
+      "name": "nasi gumpal 5",
+      "type": "sphere",
+      "at": [
+        -7.2,
+        3.85,
+        2.8
+      ],
+      "r": 1.55,
+      "mat": "nasi",
+      "blend": 0.9
+    },
+    {
+      "name": "nasi gumpal 6",
+      "type": "sphere",
+      "at": [
+        -4.4,
+        4.1,
+        3.6
+      ],
+      "r": 1.8,
+      "mat": "nasi",
+      "blend": 0.9
+    },
+    {
+      "name": "nasi gumpal 7",
+      "type": "sphere",
+      "at": [
+        -8.3,
+        3.6,
+        5.4
+      ],
+      "r": 1.55,
+      "mat": "nasi",
+      "blend": 0.9
+    },
+    {
+      "name": "nasi gumpal 8",
+      "type": "sphere",
+      "at": [
+        -6,
+        3.85,
+        6.2
+      ],
+      "r": 1.8,
+      "mat": "nasi",
+      "blend": 0.9
+    },
+    {
+      "name": "nasi gumpal 9",
+      "type": "sphere",
+      "at": [
+        -3.6,
+        4.1,
+        -2.4
+      ],
+      "r": 1.55,
+      "mat": "nasi",
+      "blend": 0.9
+    },
+    {
+      "name": "lauk ayam 1",
+      "type": "ellipsoid",
+      "at": [
+        1.9,
+        3.9,
+        -4.6
+      ],
+      "size": [
+        5.6,
+        2,
+        4
+      ],
+      "rot": [
+        0,
+        25,
+        6
+      ],
+      "mat": "ayam"
+    },
+    {
+      "name": "lauk ayam 2",
+      "type": "ellipsoid",
+      "at": [
+        3.9,
+        4.3,
+        -2.2
+      ],
+      "size": [
+        5,
+        1.9,
+        3.4
+      ],
+      "rot": [
+        0,
+        -30,
+        -8
+      ],
+      "mat": "ayam"
+    },
+    {
+      "name": "lauk tempe 1",
+      "type": "box",
+      "at": [
+        7.4,
+        3.3,
+        -5.9
+      ],
+      "size": [
+        3.4,
+        1,
+        2.3
+      ],
+      "round": 0.25,
+      "rot": [
+        0,
+        10,
+        12
+      ],
+      "mat": "tempe"
+    },
+    {
+      "name": "lauk tempe 2",
+      "type": "box",
+      "at": [
+        7.7,
+        3.8,
+        -3.5
+      ],
+      "size": [
+        3.4,
+        1,
+        2.3
+      ],
+      "round": 0.25,
+      "rot": [
+        0,
+        -6,
+        14
+      ],
+      "mat": "tempe"
+    },
+    {
+      "name": "lauk tahu 1",
+      "type": "box",
+      "at": [
+        10.3,
+        3.6,
+        -5.4
+      ],
+      "size": [
+        2.3,
+        2.3,
+        2.3
+      ],
+      "round": 0.35,
+      "rot": [
+        0,
+        18,
+        0
+      ],
+      "mat": "tahu"
+    },
+    {
+      "name": "lauk tahu 2",
+      "type": "box",
+      "at": [
+        10.2,
+        3.6,
+        -2.4
+      ],
+      "size": [
+        2.2,
+        2.2,
+        2.2
+      ],
+      "round": 0.35,
+      "rot": [
+        0,
+        -12,
+        0
+      ],
+      "mat": "tahu"
+    },
+    {
+      "name": "sayur brokoli 1",
+      "type": "sphere",
+      "at": [
+        0.9,
+        4.3,
+        2.2
+      ],
+      "r": 1.15,
+      "mat": "brokoli"
+    },
+    {
+      "name": "sayur brokoli 1b",
+      "type": "sphere",
+      "at": [
+        1.6,
+        4,
+        2.7
+      ],
+      "r": 0.85,
+      "mat": "brokoli",
+      "blend": 0.3
+    },
+    {
+      "name": "sayur brokoli 2",
+      "type": "sphere",
+      "at": [
+        3.3,
+        4.6,
+        2
+      ],
+      "r": 1.15,
+      "mat": "brokoli"
+    },
+    {
+      "name": "sayur brokoli 2b",
+      "type": "sphere",
+      "at": [
+        4,
+        4,
+        2.5
+      ],
+      "r": 0.85,
+      "mat": "brokoli",
+      "blend": 0.3
+    },
+    {
+      "name": "sayur brokoli 3",
+      "type": "sphere",
+      "at": [
+        1.4,
+        4.3,
+        5.9
+      ],
+      "r": 1.15,
+      "mat": "brokoli"
+    },
+    {
+      "name": "sayur brokoli 3b",
+      "type": "sphere",
+      "at": [
+        2.0999999999999996,
+        4,
+        6.4
+      ],
+      "r": 0.85,
+      "mat": "brokoli",
+      "blend": 0.3
+    },
+    {
+      "name": "sayur brokoli 4",
+      "type": "sphere",
+      "at": [
+        3.9,
+        4.6,
+        5.4
+      ],
+      "r": 1.15,
+      "mat": "brokoli"
+    },
+    {
+      "name": "sayur brokoli 4b",
+      "type": "sphere",
+      "at": [
+        4.6,
+        4,
+        5.9
+      ],
+      "r": 0.85,
+      "mat": "brokoli",
+      "blend": 0.3
+    },
+    {
+      "name": "sayur brokoli 5",
+      "type": "sphere",
+      "at": [
+        2.4,
+        4.3,
+        3.9
+      ],
+      "r": 1.15,
+      "mat": "brokoli"
+    },
+    {
+      "name": "sayur brokoli 5b",
+      "type": "sphere",
+      "at": [
+        3.0999999999999996,
+        4,
+        4.4
+      ],
+      "r": 0.85,
+      "mat": "brokoli",
+      "blend": 0.3
+    },
+    {
+      "name": "sayur wortel 1",
+      "type": "cylinder",
+      "at": [
+        1,
+        4.5,
+        7.4
+      ],
+      "r": 0.75,
+      "h": 0.35,
+      "rot": [
+        12,
+        0,
+        10
+      ],
+      "mat": "wortel"
+    },
+    {
+      "name": "sayur wortel 2",
+      "type": "cylinder",
+      "at": [
+        2.6,
+        4.5,
+        7.6
+      ],
+      "r": 0.75,
+      "h": 0.35,
+      "rot": [
+        5,
+        0,
+        10
+      ],
+      "mat": "wortel"
+    },
+    {
+      "name": "sayur wortel 3",
+      "type": "cylinder",
+      "at": [
+        4.4,
+        4.5,
+        7.3
+      ],
+      "r": 0.75,
+      "h": 0.35,
+      "rot": [
+        -2,
+        0,
+        10
+      ],
+      "mat": "wortel"
+    },
+    {
+      "name": "sayur wortel 4",
+      "type": "cylinder",
+      "at": [
+        4.6,
+        4.5,
+        2.9
+      ],
+      "r": 0.75,
+      "h": 0.35,
+      "rot": [
+        -9,
+        0,
+        10
+      ],
+      "mat": "wortel"
+    },
+    {
+      "name": "buah pepaya 1",
+      "type": "box",
+      "at": [
+        7,
+        3.6,
+        2
+      ],
+      "size": [
+        1.9,
+        1.9,
+        1.9
+      ],
+      "round": 0.3,
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "mat": "pepaya"
+    },
+    {
+      "name": "buah melon 2",
+      "type": "box",
+      "at": [
+        9.3,
+        3.85,
+        1.9
+      ],
+      "size": [
+        1.9,
+        1.9,
+        1.9
+      ],
+      "round": 0.3,
+      "rot": [
+        7,
+        23,
+        5
+      ],
+      "mat": "melon"
+    },
+    {
+      "name": "buah pepaya 3",
+      "type": "box",
+      "at": [
+        11,
+        4.1,
+        2.4
+      ],
+      "size": [
+        1.9,
+        1.9,
+        1.9
+      ],
+      "round": 0.3,
+      "rot": [
+        14,
+        46,
+        10
+      ],
+      "mat": "pepaya"
+    },
+    {
+      "name": "buah melon 4",
+      "type": "box",
+      "at": [
+        7.4,
+        3.6,
+        4.4
+      ],
+      "size": [
+        1.9,
+        1.9,
+        1.9
+      ],
+      "round": 0.3,
+      "rot": [
+        21,
+        69,
+        15
+      ],
+      "mat": "melon"
+    },
+    {
+      "name": "buah pepaya 5",
+      "type": "box",
+      "at": [
+        9.7,
+        3.85,
+        4.3
+      ],
+      "size": [
+        1.9,
+        1.9,
+        1.9
+      ],
+      "round": 0.3,
+      "rot": [
+        28,
+        92,
+        20
+      ],
+      "mat": "pepaya"
+    },
+    {
+      "name": "buah pepaya 6",
+      "type": "box",
+      "at": [
+        7.2,
+        4.1,
+        6.8
+      ],
+      "size": [
+        1.9,
+        1.9,
+        1.9
+      ],
+      "round": 0.3,
+      "rot": [
+        35,
+        115,
+        25
+      ],
+      "mat": "pepaya"
+    },
+    {
+      "name": "buah melon 7",
+      "type": "box",
+      "at": [
+        9.6,
+        3.6,
+        6.7
+      ],
+      "size": [
+        1.9,
+        1.9,
+        1.9
+      ],
+      "round": 0.3,
+      "rot": [
+        42,
+        138,
+        30
+      ],
+      "mat": "melon"
+    },
+    {
+      "name": "buah melon 8",
+      "type": "box",
+      "at": [
+        11,
+        3.85,
+        5.6
+      ],
+      "size": [
+        1.9,
+        1.9,
+        1.9
+      ],
+      "round": 0.3,
+      "rot": [
+        49,
+        161,
+        35
+      ],
+      "mat": "melon"
+    }
+  ]
+}

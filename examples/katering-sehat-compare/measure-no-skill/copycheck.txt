@@ -1,0 +1,39 @@
+copycheck: 458 words, 72 sentences, average 6.4 words → measure-no-skill/copycheck.json
+  WARN no-voice: No voice.md: the reader and the glossary are not written down (copy/method.md)
+
+Skim test (headings and buttons only):
+    [Dapur Seimbang]
+    [Pesan via WhatsApp]
+  Makan siang sehat, diantar ke kantor. Kamu tinggal kerja.
+    [Langganan via WhatsApp]
+    [Lihat contoh menu]
+  Hemat waktu istirahat
+  Komposisi seimbang
+  Nggak perlu mikir menu
+  Empat komponen, satu porsi lengkap.
+  Karbohidrat
+  Lauk protein
+  Sayur
+  Buah
+  Ganti tiap hari, Senin sampai Jumat.
+  SENIN
+  SELASA
+  RABU
+  KAMIS
+  JUMAT
+  Mulai langganan dalam satu chat.
+  Chat WhatsApp
+  Pilih paket
+  Kirim alamat kantor
+  Makan siang datang
+  Satu harga, tanpa ribet.
+  Hitung & pesan
+    [−]
+    [+]
+    [Kirim pesanan via WhatsApp]
+  Yang sering ditanyakan.
+    [Tanya via WhatsApp]
+  Makan siang sehat, tanpa harus masak.
+    [Langganan via WhatsApp]
+    [0812-3456-7890]
+    [Langganan via WhatsApp]
