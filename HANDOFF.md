@@ -1,7 +1,7 @@
 # Handoff
 
 Read this first if you are a new session, a different model or a different AI tool picking up
-this project. It is kept up to date at every milestone. Last updated: **2026-11-05** (owner's roast items 2, 4, 6, 7: cost limits, kit, substantive checks, inspector fixes).
+this project. It is kept up to date at every milestone. Last updated: **2026-11-05** (copy sub-skill; batch-008 Quilt).
 
 ## 1. Goal
 
@@ -359,6 +359,29 @@ the blind eval harness, comes next):
   run: tall sections photographed in parts, tables numbered, phone-only elements (sticky bars)
   numbered. **Not measured: a whole fresh-session standard run** (proposed to the owner).
 - Unsplash key: api.unsplash.com answers 401 (reachable, needs the key), images.unsplash.com 200.
+
+Copy sub-skill (2026-11-05, owner: copy gives "branding yang tidak terlihat tapi bisa dirasakan";
+their army site's copy read too high until the reader was framed; much content ignores reading
+experience): `copy/method.md` (reader profile from customer voice first, voice as "X, not Y",
+glossary, headline = answer, front-load, reading targets, skim and explain-back tests),
+`copy/words.json` (self-praise, corporate abstractions, generic buttons; team additions in
+`team/copy-words.json`), `scripts/copycheck.mjs` (copy.md or built page/URL → copycheck.json;
+FAIL: sentence >30 words, paragraph >80, headline >60 chars, self-praise, abstractions, glossary
+"Not" words). `done copy` needs voice.md (Reader/Voice/Glossary), a fresh copycheck with 0 FAIL and
+"## Reader tests". Critic: explain-back test, Customer cap 6. Team Always rule. Fixtures
+`evals/fixtures/copy/` (too-high vs plain). Tried on WO run-2 copy (passes after fixing a false
+"no. 12" hit), the kit page, and Quilt live (FAIL "industry-leading").
+
+Batch-008 (2026-11-05): Quilt (ref-0014 home, -how, -installer), owner visual 7 / ship 7.5, filed
+by the owner as health; it is home climate (HVAC via installers): sector "home". Two combined jurors
+(72.1k + 72.6k): 8/7/7 visual, 7/6/6 business-customer-story, weighted 6.7, final 7.1, gap 0.8 (the
+closest yet). Owner's claims: colour harmony (2 hue families) yes on home; isometric illustration in
+the page palette = strongest point (both jurors); masonry "why" clever but not uncommon; kinetic
+orange panel is a slogan video (atmosphere). Taste Prefer illustration rule sharpened: drawn in the
+page's own palette and line, showing what the section says. Signal: second owner-praised colour
+site with 2 hue families (Quite Nice, Quilt): proposal to measure colour harmony instead of hue
+count, not changed, waiting for the owner. Inspector counted 0 illustrations on Quilt's home
+(Lottie/late render?): open measurement gap.
 
 Capture fixes from batch-003: `lib/browser.mjs` `gotoStable` retries server error pages (a 502
 "upstream request failed" had been captured as Swehl's desktop) and every failed load is reported

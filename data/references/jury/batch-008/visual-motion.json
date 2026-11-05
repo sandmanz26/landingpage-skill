@@ -1,0 +1,66 @@
+{
+  "juror": "visual-motion",
+  "kind": "ai",
+  "method": "Read ref-0014/digest.md, desktop-fold.png, sheet-desktop.png, motion-sheet.png, mobile-fold.png, sheet-mobile.png; ref-0014-how/sheet-desktop.png; ref-0014-installer/digest.md (text only, no installer images). Not verified: the four videos themselves (I saw still frames only, so the content and pacing of the hero and of the orange 'BETTER CLIMATE BY DESIGN' kinetic-type panel are inferred, not watched); whether the home-page isometric is Lottie or SVG (the motion sheet frame at 1350px shows it half-drawn, consistent with the measured strokeDashoffset line-draw, but I cannot confirm the mechanism); smoothness on a real GPU machine (45.6 fps was measured with software rendering); hover and focus states; mobile motion (not measured); the ref-0014-how digest (not in the reading list).",
+  "refs": {
+    "ref-0014": {
+      "business": "Quilt: a ductless mini-split heat pump system (indoor unit, outdoor unit, Dial thermostat, app) for whole-home heating and cooling, sold and installed only through certified local HVAC partners who quote; the page generates homeowner leads to 'Find an installer' and recruits installers via 'Become a partner'. Home climate hardware, not a health product.",
+      "scores": {
+        "distinctiveness": 8,
+        "craft": 7,
+        "clarity": 7
+      },
+      "reasons": {
+        "distinctiveness": "In a category of white plastic boxes, the hero shows a wood-faced indoor unit in a lived-in room, shot like furniture, under a serif display headline; the Wirecutter line 'a mini-split you won't want to hide' in the teal top bar names exactly what the photo proves. The colour-framed testimonial grid (coral, teal, salmon, light-blue rounded borders), the black-line isometric house tinted salmon/light blue with room temperatures (68/70/72/73), and the coral/cyan/black benefit blocks interlocking with an outdoor-unit photo give the page its own signature. Not a 9: the page skeleton (full-bleed photo hero, centered H2 + big photo, stats tiles, closing photo + CTA, black footer) is the standard premium-DTC template.",
+        "craft": "Strong system: two type families (Quilt Serif for display, Quilt Sans for UI), consistent pill buttons (radius 9999) and 24px card radii, a disciplined palette of 4 chromatic values in 2 hue families on cream/white, CLS 0.003, a pause control on the videos. Isometric drawing uses the same black line weight as the black buttons and the same salmon/blue as the frames, so illustration and photography read as one brand. Pulled down by measured faults: no visible h1; white hero body text 4.31:1 (2.85:1 worst tenth) over the photo, teal link #2293a1 at 3.48:1; 11 font sizes; 15px body (14px mobile); 19 tap targets under 24px on mobile, including the slider thumbnails; scroll at 45.6 fps with 8% dropped frames and 20 long frames on the test machine; 10 scroll-driven animations still run under reduced motion.",
+        "clarity": "First screen says what it is ('The smartest way to heat and cool your home'), what it is (ductless heat pump), how you buy it (installed by partners) and gives one white primary CTA, with the black 'Find an installer' button persistent in the header. The isometric explains room-by-room control without reading. Weaker: 'Become a partner' sits beside the homeowner CTA at equal size in hero, installation and closing sections, speaking to a second audience; the four-part system is explained one part at a time through a slider with tiny thumbnails rather than shown together; the headline brand idea in the orange panel lives inside a video and is not text."
+      },
+      "claims": [
+        {
+          "claim": "Health theme.",
+          "verdict": "Wrong category.",
+          "evidence": "The product is HVAC hardware (ductless heat pump, SEER2 25+, 12-year warranty, installer network). Sleep and comfort appear in testimonials ('we are sleeping much better'), but nothing on the page frames it as health. Filing it under health would mislead anyone searching the library for home-hardware or installer-lead-gen references."
+        },
+        {
+          "claim": "1. The colour play across the whole site is good and harmonious, not monotonous.",
+          "verdict": "Mostly true for the home page; not true 'across the whole site'.",
+          "evidence": "Home: coral/salmon and teal/light-blue on cream and white, used as frames, flat blocks and illustration fills, alternating section to section, so it does not go flat. Harmonious because only two hue families are used and the photos are warm (wood, red flowers, skin) which the coral picks up. But the installer page, the page that pays, measures 0 chromatic colours, and How it works is mostly black line on white with a short salmon/blue moment. The colour is a home-page and illustration device, not a site-wide system. Cost: teal #2293a1 as link text fails contrast (3.48:1)."
+        },
+        {
+          "claim": "2. The product photo slider with a description underneath explains the product well; not outstanding, depends on choosing the right photos.",
+          "verdict": "Agree, with one structural correction.",
+          "evidence": "Under 'Comfort at your fingertips' a large photo (hand on phone app, hand turning the Dial showing 68) changes with four small thumbnails and a short grey caption ('Meet the Quilt Dial...'). Photos are well chosen: hands in use, close crops, product in context. The weakness is not only photo choice: the copy says 'a single system made of four parts' but the slider shows them one at a time, so the system is never seen together; thumbnails are tiny (tap-target fail on mobile) and the caption is 15px grey, so the description is easy to miss."
+        },
+        {
+          "claim": "3. The vector graphics (isometric rooms) are made in tune with the site: graphics must create harmony with the website, not just be present.",
+          "verdict": "True, and the strongest point in the notes.",
+          "evidence": "Black line weight matches the black buttons and nav pill; fills use the same salmon and light blue as the photo frames; the temperature badges are the same round shape as the Dial. On How it works the drawing is scroll-told: rooms draw in line, tint salmon/blue with different temperatures (70, 67, 68, 72), then fade and zoom to a single room, which explains room-by-room control without text. Caveat: the inspector counted 0 illustrations on the home page; the motion frame at 1350px shows a partly drawn house, consistent with a line-draw animation, but I could not confirm the technique."
+        },
+        {
+          "claim": "4. The 'Why homeowners love Quilt' section uses a Pinterest-like layout: clever and uncommon.",
+          "verdict": "Partly. Masonry is common on the web; it is uncommon in HVAC, and the clever part is the colour frames, not the grid.",
+          "evidence": "Three staggered columns of rounded cards with mixed heights: home photos with captions ('Mid-century office oasis', 'Comfort in a not-so-mobile home', houseboat), dark quote cards with a small play icon (video testimonials), outdoor-unit close-ups. Each photo sits in a thick coral, teal, salmon or light-blue border, which ties uneven real-customer photography to the brand palette. Weak spots: captions are tiny, quote cards are dark rectangles with 2-line quotes, and the play icons are small; on mobile it collapses to two columns and still reads."
+        },
+        {
+          "claim": "5. One section uses only a photo, with an animated panel on the right: interesting.",
+          "verdict": "Interesting visually; carries no information.",
+          "evidence": "Installation section: installer-and-homeowner photo on the left, flat coral panel on the right with a dotted halftone wave (the coordinator measured it as a kinetic-type video with 'BETTER CLIMATE BY DESIGN'). The coral answers the photo's warm tones and the wave suggests airflow, so it works as a pacing break. But the message is baked into a video: not selectable, not read by screen readers, not translatable, and in my stills the type is not legible at all. On mobile the panel stacks under the photo and loses the pairing."
+        }
+      ],
+      "copy": "Plain and short, roughly grade 9 to 11: calm, confident, premium-consumer voice, warm in the customer quotes ('delicious because I like to listen to birds') and leaning on unbacked superlatives in the brand copy ('most intuitive, advanced, and efficient', 'world's smartest home climate solution'); the only hard proof is SEER2 25+, the 12-year warranty and the Wirecutter quote. A homeowner would not understand: what 'ductless' and 'mini-split' mean or whether Quilt replaces a furnace or central AC; what SEER2 and '2- and 3-zone' mean; why the warranty is 'up to 12 years for partners' (whose warranty?); what it costs even as a range; and that 'Become a partner' is for HVAC pros, not for them.",
+      "problems": [
+        "Contrast and type discipline: no visible h1, white hero text over the photo at 4.31:1 (2.85:1 worst), teal links at 3.48:1, 11 font sizes, 14-15px body, 19 sub-24px tap targets on mobile (including the slider thumbnails).",
+        "Motion cost and access: four videos plus GSAP/ScrollTrigger/Lottie gave 45.6 fps, 8% dropped and 20 long frames on the test machine; 10 scroll animations ignore reduced motion; the brand line 'Better climate by design' exists only inside a video.",
+        "The homeowner path is diluted and the colour stops where money is made: 'Become a partner' repeats at equal weight beside every homeowner CTA, there is no price range or 'what happens next', and the installer page drops to 0 chromatic colours with an address field that needs JavaScript."
+      ],
+      "keep": [
+        "Product shot as furniture in a lived room, paired with a third-party quote that names the benefit ('won't want to hide'): the photo is the proof of the quote.",
+        "Isometric line house in the brand palette, scroll-told (draw, tint rooms by temperature, zoom to one room): explains room-by-room control with no reading.",
+        "Coloured rounded frames on customer photos in a staggered grid: makes uneven user photography look on-brand and mixes video quotes with home stories.",
+        "Benefit tiles as flat coral/cyan/black blocks interlocking with a product photo: turns a stats row into a composed image.",
+        "Serif display over sans UI with a persistent black pill CTA: premium tone without losing the one action."
+      ],
+      "veto": null
+    }
+  }
+}

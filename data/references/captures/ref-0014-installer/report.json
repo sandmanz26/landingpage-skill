@@ -1,0 +1,502 @@
+{
+  "target": "https://www.quilt.com/find-installer",
+  "time": "2026-11-05T15:11:55.910Z",
+  "rules": {
+    "purple-gradient": "warn",
+    "gradient": "info",
+    "glass": "info",
+    "system-font-only": "warn",
+    "too-many-font-sizes": "warn",
+    "too-many-colours": "warn",
+    "shadow-on-everything": "warn",
+    "icon-card-row": "warn",
+    "centred-hero-two-ctas": "warn",
+    "emoji": "warn",
+    "kit-sample": "fail"
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "pageHeight": 1577,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"By submitting your address, you acknowledge and ag\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "fixed-cover",
+          "message": "1 fixed or sticky element(s) that are not a bar cover part of every screen; make it a slim bar or let it scroll away",
+          "sample": [
+            "1440x900 (100% of the screen height) <div> \"\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "1 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#6a6a6a on screen = 3.88:1 median, 3.88:1 in the worst tenth (needs 4.5) <dt> \"Product\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "1 console or page errors",
+          "sample": [
+            "requestStorageAccess: Permission denied."
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Quilt Sans",
+            "share": 97
+          },
+          {
+            "family": "Quilt Serif",
+            "share": 3
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "quilt sans",
+            "share": 97
+          },
+          {
+            "family": "quilt serif",
+            "share": 3
+          }
+        ],
+        "fontSizes": [
+          30,
+          17,
+          16,
+          14,
+          13,
+          12
+        ],
+        "textColours": [
+          "#000000",
+          "#1d1b1b",
+          "#ffffff",
+          "#6a6a6a"
+        ],
+        "backgroundColours": [
+          "#ffffff",
+          "#fef9f3",
+          "#1d1b1b",
+          "#000000"
+        ],
+        "chromaticColours": 0,
+        "colourFamilies": 0,
+        "spacing": {
+          "distinct": 14,
+          "offScale": 3,
+          "values": [
+            4,
+            8,
+            12,
+            13,
+            14,
+            16,
+            24,
+            26,
+            32,
+            44,
+            48,
+            80,
+            136,
+            144
+          ]
+        },
+        "radii": [
+          "9999px",
+          "24px",
+          "8px"
+        ],
+        "shadows": 1,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 26,
+        "animatedElements": 2,
+        "cls": 0
+      },
+      "screenshots": [
+        "data/references/captures/ref-0014-installer/desktop-fold.png",
+        "data/references/captures/ref-0014-installer/desktop-page-01.png",
+        "data/references/captures/ref-0014-installer/desktop-page-02.png"
+      ]
+    },
+    "tablet": {
+      "width": 768,
+      "pageHeight": 1769,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"By submitting your address, you acknowledge and ag\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "fixed-cover",
+          "message": "1 fixed or sticky element(s) that are not a bar cover part of every screen; make it a slim bar or let it scroll away",
+          "sample": [
+            "768x1024 (100% of the screen height) <div> \"\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "1 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#6a6a6a on screen = 3.88:1 median, 3.88:1 in the worst tenth (needs 4.5) <dt> \"Product\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "1 console or page errors",
+          "sample": [
+            "requestStorageAccess: Permission denied."
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Quilt Sans",
+            "share": 97
+          },
+          {
+            "family": "Quilt Serif",
+            "share": 3
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "quilt sans",
+            "share": 97
+          },
+          {
+            "family": "quilt serif",
+            "share": 3
+          }
+        ],
+        "fontSizes": [
+          30,
+          16,
+          14,
+          12,
+          11
+        ],
+        "textColours": [
+          "#000000",
+          "#1d1b1b",
+          "#ffffff",
+          "#6a6a6a"
+        ],
+        "backgroundColours": [
+          "#ffffff",
+          "#fef9f3",
+          "#1d1b1b",
+          "#000000"
+        ],
+        "chromaticColours": 0,
+        "colourFamilies": 0,
+        "spacing": {
+          "distinct": 16,
+          "offScale": 7,
+          "values": [
+            4,
+            8,
+            10,
+            13.5,
+            14,
+            16,
+            18,
+            19,
+            24,
+            26,
+            32,
+            38.5,
+            44,
+            68,
+            100,
+            104
+          ]
+        },
+        "radii": [
+          "9999px",
+          "24px",
+          "8px"
+        ],
+        "shadows": 1,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 26,
+        "animatedElements": 2,
+        "cls": 0.003
+      },
+      "screenshots": [
+        "data/references/captures/ref-0014-installer/tablet-fold.png",
+        "data/references/captures/ref-0014-installer/tablet-page-01.png",
+        "data/references/captures/ref-0014-installer/tablet-page-02.png"
+      ]
+    },
+    "mobile": {
+      "width": 390,
+      "pageHeight": 1944,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"By submitting your address, you acknowledge and ag\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "fixed-cover",
+          "message": "1 fixed or sticky element(s) that are not a bar cover part of every screen; make it a slim bar or let it scroll away",
+          "sample": [
+            "390x844 (100% of the screen height) <div> \"\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tap-target",
+          "message": "20 controls smaller than 24x24px on a phone",
+          "sample": [
+            "1x24 <a> \"Skip to content\"",
+            "51x18 <a> \"\"",
+            "96x22 <a> \"How It Works\"",
+            "83x22 <a> \"Tech Specs\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "text-at-edge",
+          "message": "1 text elements within 12px of the screen edge",
+          "sample": [
+            "<a> \"Skip to content\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "1 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#6a6a6a on screen = 3.88:1 median, 3.88:1 in the worst tenth (needs 4.5) <dt> \"Product\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "1 console or page errors",
+          "sample": [
+            "requestStorageAccess: Permission denied."
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Quilt Sans",
+            "share": 97
+          },
+          {
+            "family": "Quilt Serif",
+            "share": 3
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "quilt sans",
+            "share": 97
+          },
+          {
+            "family": "quilt serif",
+            "share": 3
+          }
+        ],
+        "fontSizes": [
+          27,
+          16,
+          14,
+          12,
+          11
+        ],
+        "textColours": [
+          "#000000",
+          "#1d1b1b",
+          "#ffffff",
+          "#6a6a6a"
+        ],
+        "backgroundColours": [
+          "#ffffff",
+          "#fef9f3",
+          "#1d1b1b",
+          "#000000"
+        ],
+        "chromaticColours": 0,
+        "colourFamilies": 0,
+        "spacing": {
+          "distinct": 14,
+          "offScale": 9,
+          "values": [
+            4,
+            8,
+            10,
+            12.5,
+            14,
+            16,
+            16.5,
+            18,
+            24,
+            25.5,
+            26,
+            33,
+            61.5,
+            76
+          ]
+        },
+        "radii": [
+          "9999px",
+          "20px",
+          "8px"
+        ],
+        "shadows": 1,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 26,
+        "animatedElements": 1,
+        "cls": 0.055
+      },
+      "screenshots": [
+        "data/references/captures/ref-0014-installer/mobile-fold.png",
+        "data/references/captures/ref-0014-installer/mobile-page-01.png",
+        "data/references/captures/ref-0014-installer/mobile-page-02.png",
+        "data/references/captures/ref-0014-installer/mobile-page-03.png"
+      ]
+    }
+  },
+  "checks": {
+    "reducedMotion": {
+      "findings": [],
+      "screenshot": "data/references/captures/ref-0014-installer/reduced-motion-fold.png"
+    },
+    "noJavaScript": {
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "needs-javascript",
+          "message": "Without JavaScript only 277 of 890 characters of text are visible"
+        }
+      ],
+      "withJs": 890,
+      "withoutJs": 277
+    }
+  },
+  "summary": {
+    "fail": 2,
+    "warn": 5
+  },
+  "url": "https://www.quilt.com/find-installer",
+  "findings": [
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "1 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#6a6a6a on screen = 3.88:1 median, 3.88:1 in the worst tenth (needs 4.5) <dt> \"Product\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tap-target",
+      "message": "20 controls smaller than 24x24px on a phone",
+      "sample": [
+        "1x24 <a> \"Skip to content\"",
+        "51x18 <a> \"\"",
+        "96x22 <a> \"How It Works\"",
+        "83x22 <a> \"Tech Specs\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "body-size",
+      "message": "Running text at 12px (16px or more reads better)",
+      "sample": [
+        "<p> \"By submitting your address, you acknowledge and ag\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "fixed-cover",
+      "message": "1 fixed or sticky element(s) that are not a bar cover part of every screen; make it a slim bar or let it scroll away",
+      "sample": [
+        "1440x900 (100% of the screen height) <div> \"\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "console-errors",
+      "message": "1 console or page errors",
+      "sample": [
+        "requestStorageAccess: Permission denied."
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "text-at-edge",
+      "message": "1 text elements within 12px of the screen edge",
+      "sample": [
+        "<a> \"Skip to content\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "needs-javascript",
+      "message": "Without JavaScript only 277 of 890 characters of text are visible",
+      "where": [
+        "noJavaScript"
+      ]
+    }
+  ]
+}

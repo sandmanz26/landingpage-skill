@@ -83,7 +83,7 @@ if (/\.md$/i.test(target)) {
     let section = '(top)';
     const t = (e) => (e.innerText || e.textContent || '').replace(/\s+/g, ' ').trim();
     for (const el of document.body.querySelectorAll('h1, h2, h3, p, li, blockquote, figcaption, dd, a, button')) {
-      if (el.closest('nav, footer, [aria-hidden="true"]')) continue;
+      if (el.closest('nav, footer, [aria-hidden="true"]') || /^skip to|^lewati ke/i.test((el.innerText || '').trim())) continue;
       const text = t(el);
       if (!text) continue;
       if (/^H[1-3]$/.test(el.tagName)) {
@@ -121,7 +121,11 @@ if (avg > 18) add('WARN', 'sentence-average', `Sentences average ${avg.toFixed(1
 if (allWords.length && longWords.length / allWords.length >= 0.08) add('WARN', 'long-words', `${Math.round((longWords.length / allWords.length) * 100)}% of words have 13+ letters: is there a shorter word the reader uses?`, [...new Set(longWords)].slice(0, 8));
 
 const text = blocks.map((b) => b.text).join('\n');
-const hits = (arr) => arr.filter((w) => re(w).test(text));
+// A hit inside a longer hit ("leading" in "industry-leading") counts once.
+const hits = (arr) => {
+  const found = arr.filter((w) => re(w).test(text));
+  return found.filter((w) => !found.some((o) => o !== w && o.toLowerCase().includes(w.toLowerCase())));
+};
 const praise = hits(list('selfPraise'));
 if (praise.length) add('FAIL', 'self-praise', 'The brand describes itself instead of showing it: replace each with the fact behind it', praise);
 const abstract = hits(list('abstract'));

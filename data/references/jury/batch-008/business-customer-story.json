@@ -1,0 +1,66 @@
+{
+  "juror": "business-customer-story",
+  "kind": "ai",
+  "method": "Read ref-0014/digest.md (outline, actions, motion, inspector findings, full page text), desktop-fold.png, mobile-fold.png, sheet-desktop.png, sheet-mobile.png, motion-sheet.png; ref-0014-installer/digest.md (text and form only, no images opened); ref-0014-how/sheet-desktop.png (images only, its digest not read). Not verified: the content of the four videos (I rely on the coordinator for the kinetic-type panel), whether the product slider and the masonry quote cards play or open anything, the How it works copy (the sheet shows the isometric house across about nine screens with almost no visible text; text may appear on scroll and the capture may have missed it), the FAQ, Tech Specs and HVAC Professionals pages, what happens after the installer address field, and whether price or rebate information exists elsewhere on the site. Reading level is my estimate from the page text, not a computed score. I judged business, customer and story, plus copy; I did not score visual design.",
+  "refs": {
+    "ref-0014": {
+      "business": "Quilt designs and sells a premium smart ductless heat pump (mini-split) system: indoor units, outdoor unit, a wall Dial and an app. It does not sell direct; certified local HVAC contractors (Quilt Certified Partners) quote, install and service it, so the home page has two jobs: send homeowners to a free installer quote (Find an installer, address-only form) and recruit HVAC contractors (Become a partner). Category is home climate / home energy hardware, not health. Revenue comes from hardware moved through the partner channel; the price is set by the installer's quote, which is why no price appears.",
+      "scores": {
+        "business": 7,
+        "customer": 6,
+        "story": 6
+      },
+      "reasons": {
+        "business": "The paying action is clear and constant: 'Find an installer' appears 4 times, sits in the sticky header on desktop and mobile, and leads to a one-field page (home address) that promises 'a local installer who can answer your questions and provide you with a free quote'. That is a low-friction lead for a high-ticket product. Credibility is front-loaded with a Wirecutter / New York Times quote in the top bar. Weaknesses: 'Become a partner' is given equal-size buttons beside the homeowner action 3 times (hero, installation, get started), so the homeowner page also serves contractor recruitment; the warranty tile says 'Up to a 12-year warranty for partners', which a homeowner reads as 'not for me'; and nothing helps the homeowner qualify before asking for a quote (no cost range, no rebates or tax credits, no 'is my home a fit'). The installer page shows the quote as free only there, not on the home page.",
+        "customer": "The page speaks to a design-conscious homeowner who cares that the unit looks good ('a mini-split you won't want to hide', wood-faced unit in a styled room, 7 7/8 in tall) and wants per-room comfort, quiet and sleep (testimonials). It does not answer the buyer's practical questions: what it costs or what a typical install runs, which incentives apply, how many indoor units a home needs, whether it replaces the furnace or works in deep cold (only a card caption, 'Exceptional efficiency in extreme cold'), and what the installation disrupts beyond 'most homes upgraded in days'. Jargon (ductless, mini-split, SEER2, 2- and 3-zone, over-the-air updates, occupancy sensing) is never explained. The home-situation captions (houseboat, not-so-mobile home, bungalow, deck-by-deck) are the best customer signal: they let readers find their own home.",
+        "story": "Order is logical but reads as a feature tour: promise (smartest way) -> system of four parts -> room-by-room control -> homeowners love it -> installation is easy -> benefits -> specs -> get started. There is no problem stated (noisy window units, uneven rooms, high bills, ugly wall boxes); the 'before' is only implied by the photography and the Wirecutter line. The strongest story beat is the wall of real homes with short quotes ('quieter, which is delicious because I like to listen to birds', 'we are sleeping much better'), but quotes carry no name or place in the captures. The isometric house with temperature badges (72, 68, 73) tells room-by-room control in one picture. On How it works the drawing runs for about nine screens with little visible text, so the story there depends on motion I could not see."
+      },
+      "claims": [
+        {
+          "claim": "The colour play across the whole site is good and harmonious, not monotonous.",
+          "verdict": "Mostly true",
+          "evidence": "4 chromatic values in 2 hue families (teal/light blue, coral/salmon) on cream #fef9f3 and white; coral and light-blue blocks in the benefits tiles and coloured card borders in the homes wall break up the cream, so it is not monotonous. Limits: the teal link colour #2293a1 fails contrast (3.48:1, needs 4.5) and the white hero subline on the photo is 4.31:1; the installer page drops to 0 chromatic colours, so the play is a home-page feature, not site-wide. Card border colours carry no meaning (they do not code room, season or product), so the colour supports mood, not understanding."
+        },
+        {
+          "claim": "The product photo slider with a description underneath explains the product well; not outstanding, and it depends on choosing the right photos.",
+          "verdict": "Partly true",
+          "evidence": "Under 'Comfort at your fingertips' a large photo (phone app, then a hand turning the Dial at 68) has 4 thumbnails and a caption ('Meet the Quilt Dial, a compact next generation thermostat...'). It does introduce the four parts one at a time, which matches the copy 'a single system made of four parts'. But the captions state what the part is, not what the homeowner gains, and the outdoor unit (the part people worry about: noise, looks, space) only appears later in the homes wall. Agree it is competent rather than outstanding; I would add that it depends on captions as much as photos. Slider interaction not verified."
+        },
+        {
+          "claim": "The vector graphics (isometric rooms) are made in tune with the site: graphics must create harmony with the website, not just be present.",
+          "verdict": "True, with a caveat on the How page",
+          "evidence": "The isometric house uses the brand palette (salmon, coral, light blue, black line on cream) and the temperature badges make it do work: it shows different rooms at different temperatures, which is the product's main idea. On the How it works sheet the same drawing occupies about nine screens with almost no visible copy; harmony holds, but explanation may depend on scroll animation and text that the capture did not show (not verified). The inspector's count of 0 illustrations on the home page is a detection gap: the drawing is plainly visible in sheet-desktop page-03 and mobile pages 02-03."
+        },
+        {
+          "claim": "The 'Why homeowners love Quilt' section uses a Pinterest-like layout: clever and uncommon.",
+          "verdict": "Clever yes, uncommon no",
+          "evidence": "It is a masonry grid of mixed-height cards: photos with coloured borders, dark quote cards with a play icon, captions naming the home situation. Masonry testimonial walls are common on consumer-brand sites, so 'uncommon' does not hold. What is effective is the content: each card is a type of home (houseboat, mobile home, bungalow, extreme cold), so readers find their case. Weakness for trust: the quotes have no name, city or rating visible in the captures, and the digest counts only 1 rating word on the page."
+        },
+        {
+          "claim": "One section uses only a photo, with an animated panel on the right: interesting.",
+          "verdict": "Visually true, weak as information",
+          "evidence": "Installation section: photo of two installers at a wall unit on the left, coral panel with moving 'BETTER CLIMATE BY DESIGN' type on the right (a video, per the coordinator). It adds energy at the point where the page turns to installation, but the panel repeats a slogan; the useful facts (installed in days, certified partners) sit in the text below it. It is one of four videos on the page, and the page scrolls at 45.6 fps with 20 long frames on the test machine versus 0 on the installer page, so the effect has a weight cost (software rendering, not a real GPU)."
+        },
+        {
+          "claim": "It is a health theme.",
+          "verdict": "False",
+          "evidence": "This is home climate / HVAC hardware (ductless heat pumps) sold through installers. Comfort and sleep appear in testimonials, but there is no health claim, no air-quality or wellness positioning in the page text. Filing it under health would mislead the library; file it under home energy / home improvement hardware, installer-led."
+        }
+      ],
+      "copy": "Short sentences with plain structure, roughly a US grade 9-11 reading level by my estimate (not computed), which suits a homeowner in length but not in vocabulary. The voice is felt more than stated: calm, design-led, warm (serif headlines, wood-faced unit in lived-in rooms, 'which is delicious because I like to listen to birds'); stated, it leans on repeated superlatives ('smartest', 'most intuitive, advanced, and efficient', 'world's smartest home climate solution', 'most efficient heat pump on the market') that only SEER2 25+ and the Wirecutter quote back up, and the efficiency claim shifts between 'most efficient heat pump on the market', 'most efficient 2- and 3-zone system' and '20% more efficient than comparable ductless heat pumps' (meta description and installer page). A homeowner would not understand: ductless versus mini-split versus heat pump (used as if the reader knows), SEER2 and what 25+ means for the bill, '2- and 3-zone', 'Auto-Away', 'over-the-air updates', whether one outdoor unit serves several rooms, why the warranty is 'for partners', and what 'installed by partners' means for price and who to call for service.",
+      "problems": [
+        "No cost or incentive signal: no price range, typical install cost, rebates or tax credits on the home page or the installer page, so the homeowner must hand over an address before learning whether this is in budget; 'free quote' appears only on the installer page.",
+        "Two audiences share every decision point: 'Become a partner' sits as an equal button next to 'Find an installer' three times, and the warranty is worded 'for partners', which dilutes and confuses the homeowner path; contractor recruitment belongs in the nav (HVAC Professionals already exists) or a single section.",
+        "Claims outrun proof and vocabulary: stacked superlatives with three different efficiency claims, unexplained jargon (SEER2, zones, ductless/mini-split), and testimonials with no name, place or rating; the cold-climate question gets one caption."
+      ],
+      "keep": [
+        "Third-party quote bar above the nav (Wirecutter / NYT): borrowed credibility on the first screen that also answers the main objection to mini-splits, that they look ugly.",
+        "Sticky 'Find an installer' in the header plus an installer page with a single address field and a stated free quote: the paying action is always one tap away and asks for the minimum.",
+        "Homes wall captioned by situation (houseboat, mobile home, extreme cold, bungalow) with short quotes: lets each reader find a home like theirs; add names and places to make it proof.",
+        "Isometric house with per-room temperature badges in brand colours: explains the core benefit, room-by-room control, in one image without jargon.",
+        "One concrete number in plain units ('only 7 7/8 in tall') and big-number benefit tiles (25+, 12-year): scannable facts that a skimmer keeps."
+      ],
+      "veto": null
+    }
+  }
+}

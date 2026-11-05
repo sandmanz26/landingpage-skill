@@ -28,7 +28,7 @@ Format: `- <rule> — <why> (source: <project>, <date>, <who>)`
 ## Prefer
 <!-- e.g. - Square corners on pictures; one radius for controls -->
 - Bold flat colour with clear roles, one colour reserved for the main action (source: batch-001/002 Maxima, Scotch, Playfolly, 2026-10-30, owner)
-- Flat illustration or graphics drawn from the subject itself, not generic 3D vectors — layered over or beside photographs, or alone only when no honest photograph exists (source: batch-002 Maxima, batch-001 Replay, 2026-10-30, owner; reconciled with the photographs rule 2026-11-02)
+- Flat illustration or graphics drawn from the subject itself, not generic 3D vectors — layered over or beside photographs, or alone only when no honest photograph exists; drawn in the page's own palette and line so it belongs to the page, and showing something the section says (Quilt's rooms at different temperatures) rather than being merely present (source: batch-002 Maxima, batch-001 Replay, 2026-10-30, owner; reconciled with the photographs rule 2026-11-02; palette and purpose from batch-008 Quilt, owner's note 3, 2026-11-05)
 - Real product UI filled with the customer's own world, never empty mockups (source: batch-001 Scotch, batch-002 Future, 2026-10-30, owner + jury)
 - Smooth, choreographed scroll storytelling with objects from the subject's world (old way vs new, cards that turn, letters that drop in), always with a static reduced-motion version (source: batch-001 Scotch, batch-002 Maxima, 2026-10-30, owner)
 

@@ -1,0 +1,97 @@
+{
+ "batch": "batch-008",
+ "received": "2026-11-05",
+ "from": "owner (chat, 4 screenshots, 5 notes)",
+ "status": "captured (home, how-it-works, find-installer), judged by 2 combined AI jurors and the owner",
+ "jury": {
+  "folder": "data/references/jury/batch-008",
+  "jurors": [
+   "visual-motion",
+   "business-customer-story"
+  ],
+  "human_votes": 1,
+  "note": "72.1k + 72.6k tokens"
+ },
+ "entries": [
+  {
+   "id": "ref-0014",
+   "url": "https://www.quilt.com/",
+   "site": "quilt",
+   "sector": "home",
+   "sector_note": "The owner filed it under health; it is home climate hardware (ductless heat pumps) sold through installers. Filed as home.",
+   "pages": {
+    "how": "ref-0014-how (https://www.quilt.com/how-it-works)",
+    "installer": "ref-0014-installer (https://www.quilt.com/find-installer)"
+   },
+   "business": {
+    "what": "Premium ductless heat pump system (indoor unit, outdoor unit, dial, app), installed by certified HVAC partners across North America.",
+    "action_that_pays": "Find an installer (address form → local quote); no price on the site",
+    "source": "captured pages",
+    "confidence": "high"
+   },
+   "owner": {
+    "visual": 7,
+    "ship": 7.5
+   },
+   "jury_scores": {
+    "business": 7,
+    "customer": 6,
+    "story": 6,
+    "distinctiveness": 8,
+    "craft": 7,
+    "clarity": 7,
+    "weighted": 6.7
+   },
+   "combined": {
+    "final": 7.1,
+    "gap": 0.8,
+    "visualVsShip": -0.5
+   },
+   "veto": null,
+   "claims": [
+    {
+     "claim": "Colour play across the site is harmonious, not monotonous",
+     "verdict": "confirmed for the home page",
+     "evidence": "4 chromatic values in 2 hue families (teal/light blue, coral/salmon) on cream and white; coloured frames and blocks repeat them. The installer page uses no colour at all; teal links fail contrast (3.48:1)."
+    },
+    {
+     "claim": "Product photo slider with a description underneath explains the product; depends on the right photos",
+     "verdict": "partly",
+     "evidence": "Thumbnails switch photos of the four parts with one caption below. The caption names the part, not what the homeowner gains."
+    },
+    {
+     "claim": "The vector graphics are made in tune with the site, creating harmony, not just present",
+     "verdict": "confirmed (both jurors: the strongest point)",
+     "evidence": "Isometric rooms drawn in the site's own palette and black line, with a temperature badge per room: the drawing explains room-by-room control. The inspector counted 0 illustrations on the home page (likely Lottie or late rendering): a measurement gap."
+    },
+    {
+     "claim": "The 'Why homeowners love Quilt' section in a Pinterest layout is clever and uncommon",
+     "verdict": "clever yes, uncommon no",
+     "evidence": "Masonry of customer homes captioned by situation (office, houseboat, mobile home) in coloured frames. Masonry testimonial walls are common; the situation captions are what make it work. Quotes have no name or place."
+    },
+    {
+     "claim": "A section with only a photo and an animated panel on the right is interesting",
+     "verdict": "looks good, carries little",
+     "evidence": "The orange panel is a kinetic-type video repeating a slogan ('Better climate by design'): atmosphere, not information; adds page weight."
+    }
+   ],
+   "copy": {
+    "copycheck": "354 words, 34 sentences, average 10.4 words; FAIL self-praise ('industry-leading')",
+    "juror": "About grade 9-11 (estimate). Voice calm and design-led, but superlatives stacked and three efficiency claims that do not match ('most efficient', 'most efficient 2- and 3-zone', '20% more efficient'). Unexplained jargon: SEER2, zones, ductless/mini-split. No cost, rebate or tax-credit signal."
+   },
+   "library_candidates": [
+    "Illustration drawn in the page's own palette and line, explaining the mechanism (rooms at different temperatures)",
+    "Product photographed as furniture in a room, with a press quote (Wirecutter) on the first screen",
+    "Customer homes captioned by situation (houseboat, mobile home, office) in frames of the brand colours",
+    "One sticky action in the header for the whole page ('Find an installer'); the paying form asks only for an address"
+   ],
+   "avoid": [
+    "A second audience's button ('Become a partner') at equal weight beside the homeowner's action",
+    "Superlatives and efficiency claims that contradict each other; unexplained trade jargon",
+    "The brand line living only inside a video; no h1; teal links and white hero text below AA",
+    "Scroll animations that ignore reduced motion (10 on the home page, 305 on How it works)"
+   ]
+  }
+ ],
+ "owner_taste_signal": "Closest AI-owner agreement so far (6.7 vs 7.5). Second site the owner praises for colour with only 2 hue families (Quite Nice 9, Quilt 7): the owner reads 'colour play' as harmony across sections and illustration, not as the number of hues. The colour dial measures hue families; that may be the wrong measure (proposal, not changed)."
+}

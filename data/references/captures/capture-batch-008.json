@@ -1,0 +1,45 @@
+{
+  "list": "data/references/batch-008.txt",
+  "jobs": 3,
+  "seconds": 213,
+  "results": [
+    {
+      "id": "ref-0014-installer",
+      "url": "https://www.quilt.com/find-installer",
+      "ok": true,
+      "inspectSeconds": 59,
+      "evidenceSeconds": 76,
+      "flags": [
+        "no price on the page"
+      ],
+      "error": null
+    },
+    {
+      "id": "ref-0014",
+      "url": "https://www.quilt.com/",
+      "ok": true,
+      "inspectSeconds": 113,
+      "evidenceSeconds": 88,
+      "flags": [
+        "stutters while scrolling: 20 long frames (>50 ms) vs 0 on a plain page, p95 50.1 ms",
+        "under reduced motion 0 elements still move on their own and 10 move with the scroll",
+        "elements keep moving with no input further down at 900px (7), 2700px (3), 4500px (1)",
+        "no price on the page"
+      ],
+      "error": null
+    },
+    {
+      "id": "ref-0014-how",
+      "url": "https://www.quilt.com/how-it-works",
+      "ok": true,
+      "inspectSeconds": 119,
+      "evidenceSeconds": 94,
+      "flags": [
+        "stutters while scrolling: 17 long frames (>50 ms) vs 0 on a plain page, p95 50.1 ms",
+        "under reduced motion 0 elements still move on their own and 305 move with the scroll",
+        "no price on the page"
+      ],
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "url": "https://www.quilt.com/how-it-works",
+  "readAt": "2026-11-05T15:15:28.228Z",
+  "tags": [
+    "flat",
+    "restrained-colour",
+    "pill-shapes",
+    "many-type-sizes",
+    "serif",
+    "scroll-choreography",
+    "ignores-reduced-motion"
+  ],
+  "palette": {
+    "chromatic": 1,
+    "families": 1,
+    "text": [
+      "#000000",
+      "#ffffff",
+      "#c3c3c3",
+      "#6a6a6a"
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#000000",
+      "#ff7b5e",
+      "#2a2a2a"
+    ],
+    "gradients": 0,
+    "shadows": 0,
+    "blur": 0
+  },
+  "type": {
+    "families": [
+      {
+        "family": "quilt sans",
+        "share": 86
+      },
+      {
+        "family": "quilt serif",
+        "share": 14
+      }
+    ],
+    "cuts": [
+      {
+        "family": "Quilt Sans",
+        "share": 86
+      },
+      {
+        "family": "Quilt Serif",
+        "share": 14
+      }
+    ],
+    "sizes": {
+      "desktop": [
+        60,
+        42,
+        20,
+        17,
+        16,
+        15,
+        14,
+        13,
+        12
+      ],
+      "mobile": [
+        36,
+        29,
+        28,
+        20,
+        16,
+        14,
+        12,
+        11
+      ]
+    },
+    "display": 60,
+    "body": 16,
+    "ratio": 3.8
+  },
+  "shape": {
+    "radii": [
+      "9999px",
+      "8px"
+    ]
+  },
+  "spacing": {
+    "distinct": 13,
+    "offScale": 2
+  },
+  "motion": {
+    "libraries": [
+      "gsap",
+      "scrollTrigger",
+      "lottie"
+    ],
+    "stickyPanels": 0,
+    "durationsMs": {
+      "min": 300,
+      "max": 300
+    },
+    "easings": [
+      "cubic-bezier(0.4, 0, 0.2, 1)"
+    ],
+    "reducedMotionRespected": false,
+    "smoothness": {
+      "fps": 41.2,
+      "longFrames": 17,
+      "baselineLongFrames": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    }
+  },
+  "imagery": {
+    "photos": 1,
+    "illustrations": 1,
+    "videos": 0
+  },
+  "layout": {
+    "pageHeight": 10247,
+    "screens": 11
+  },
+  "doNotCopy": [
+    "no-h1: No visible h1: the page has no title",
+    "contrast: 1 text elements below WCAG AA (measured on screen pixels)",
+    "tap-target: 19 controls smaller than 24x24px on a phone",
+    "contrast: 2 text elements below WCAG AA (measured on screen pixels)",
+    "motion without a reduced-motion path"
+  ]
+}

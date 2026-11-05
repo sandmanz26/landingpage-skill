@@ -1,0 +1,703 @@
+{
+  "target": "https://www.quilt.com/",
+  "time": "2026-11-05T15:11:55.904Z",
+  "rules": {
+    "purple-gradient": "warn",
+    "gradient": "info",
+    "glass": "info",
+    "system-font-only": "warn",
+    "too-many-font-sizes": "warn",
+    "too-many-colours": "warn",
+    "shadow-on-everything": "warn",
+    "icon-card-row": "warn",
+    "centred-hero-two-ctas": "warn",
+    "emoji": "warn",
+    "kit-sample": "fail"
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "pageHeight": 8920,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "too-many-font-sizes",
+          "message": "11 different font sizes on the page (aim for 5 or fewer doing the visible work)"
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15px (16px or more reads better)",
+          "sample": [
+            "<p> \"Meet the Quilt Dial, a compact next generation the\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12.9936px (16px or more reads better)",
+          "sample": [
+            "<p> \"By submitting, you agree to future communications \""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "no-h1",
+          "message": "No visible h1: the page has no title"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "3 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#ffffff on screen = 4.31:1 median, 2.85:1 in the worst tenth (needs 4.5) <span> \"Quilt is the most intuitive, advanced, and efficie\"",
+            "#2293a1 on screen = 3.48:1 median, 2.34:1 in the worst tenth (needs 4.5) <a> \"Auto-Away\"",
+            "#6a6a6a on screen = 3.88:1 median, 3.12:1 in the worst tenth (needs 4.5) <p> \"By submitting, you agree to future communications \""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "carousel-slides",
+          "message": "1 text elements sit in carousel slides the visitor turns to; check the controls work by keyboard and touch"
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "1 console or page errors",
+          "sample": [
+            "requestStorageAccess: Permission denied."
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Quilt Sans",
+            "share": 76
+          },
+          {
+            "family": "Quilt Serif",
+            "share": 24
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "quilt sans",
+            "share": 76
+          },
+          {
+            "family": "quilt serif",
+            "share": 24
+          }
+        ],
+        "fontSizes": [
+          60,
+          42,
+          34,
+          27,
+          20,
+          17,
+          16,
+          15,
+          14,
+          13,
+          12
+        ],
+        "textColours": [
+          "#000000",
+          "#ffffff",
+          "#6a6a6a",
+          "#2293a1",
+          "#ff7b5e",
+          "#c3c3c3"
+        ],
+        "backgroundColours": [
+          "#ffffff",
+          "#186767",
+          "#000000",
+          "#fef9f3",
+          "#e5dfd9",
+          "#ff7b5e",
+          "#7febf9",
+          "#2a2a2a"
+        ],
+        "chromaticColours": 4,
+        "colourFamilies": 2,
+        "spacing": {
+          "distinct": 16,
+          "offScale": 5,
+          "values": [
+            2,
+            6,
+            8,
+            12,
+            14,
+            16,
+            24,
+            32,
+            36,
+            40,
+            44,
+            46,
+            48,
+            80,
+            96,
+            126
+          ]
+        },
+        "radii": [
+          "9999px",
+          "10px",
+          "24px",
+          "8px"
+        ],
+        "shadows": 4,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 80,
+        "animatedElements": 39,
+        "cls": 0.003
+      },
+      "screenshots": [
+        "data/references/captures/ref-0014/desktop-fold.png",
+        "data/references/captures/ref-0014/desktop-page-01.png",
+        "data/references/captures/ref-0014/desktop-page-02.png",
+        "data/references/captures/ref-0014/desktop-page-03.png",
+        "data/references/captures/ref-0014/desktop-page-04.png",
+        "data/references/captures/ref-0014/desktop-page-05.png",
+        "data/references/captures/ref-0014/desktop-page-06.png",
+        "data/references/captures/ref-0014/desktop-page-07.png",
+        "data/references/captures/ref-0014/desktop-page-08.png",
+        "data/references/captures/ref-0014/desktop-page-09.png",
+        "data/references/captures/ref-0014/desktop-page-10.png"
+      ]
+    },
+    "tablet": {
+      "width": 768,
+      "pageHeight": 8603,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15px (16px or more reads better)",
+          "sample": [
+            "<p> \"Meet the Quilt Dial, a compact next generation the\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12.3955px (16px or more reads better)",
+          "sample": [
+            "<p> \"By submitting, you agree to future communications \""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "no-h1",
+          "message": "No visible h1: the page has no title"
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "1 gradient backgrounds"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "2 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#2293a1 on screen = 3.48:1 median, 2.32:1 in the worst tenth (needs 4.5) <a> \"Auto-Away\"",
+            "#6a6a6a on screen = 3.88:1 median, 3.75:1 in the worst tenth (needs 4.5) <p> \"By submitting, you agree to future communications \""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "carousel-slides",
+          "message": "1 text elements sit in carousel slides the visitor turns to; check the controls work by keyboard and touch"
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "1 console or page errors",
+          "sample": [
+            "requestStorageAccess: Permission denied."
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Quilt Sans",
+            "share": 77
+          },
+          {
+            "family": "Quilt Serif",
+            "share": 23
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "quilt sans",
+            "share": 77
+          },
+          {
+            "family": "quilt serif",
+            "share": 23
+          }
+        ],
+        "fontSizes": [
+          44,
+          34,
+          31,
+          28,
+          20,
+          19,
+          16,
+          15,
+          14,
+          12,
+          11
+        ],
+        "textColours": [
+          "#000000",
+          "#ffffff",
+          "#6a6a6a",
+          "#2293a1",
+          "#ff7b5e",
+          "#c3c3c3"
+        ],
+        "backgroundColours": [
+          "#ffffff",
+          "#186767",
+          "#000000",
+          "#fef9f3",
+          "#e5dfd9",
+          "#ff7b5e",
+          "#7febf9",
+          "#2a2a2a"
+        ],
+        "chromaticColours": 4,
+        "colourFamilies": 2,
+        "spacing": {
+          "distinct": 17,
+          "offScale": 13,
+          "values": [
+            2,
+            6,
+            8,
+            9.5,
+            10,
+            13.5,
+            15.5,
+            16,
+            18,
+            19,
+            24,
+            29,
+            37,
+            37.5,
+            38.5,
+            68,
+            101
+          ]
+        },
+        "radii": [
+          "9999px",
+          "10px",
+          "24px",
+          "8px"
+        ],
+        "shadows": 4,
+        "gradients": 1,
+        "backdropBlur": 0,
+        "transitions": 79,
+        "animatedElements": 43,
+        "cls": 0.02
+      },
+      "screenshots": [
+        "data/references/captures/ref-0014/tablet-fold.png",
+        "data/references/captures/ref-0014/tablet-page-01.png",
+        "data/references/captures/ref-0014/tablet-page-02.png",
+        "data/references/captures/ref-0014/tablet-page-03.png",
+        "data/references/captures/ref-0014/tablet-page-04.png",
+        "data/references/captures/ref-0014/tablet-page-05.png",
+        "data/references/captures/ref-0014/tablet-page-06.png",
+        "data/references/captures/ref-0014/tablet-page-07.png",
+        "data/references/captures/ref-0014/tablet-page-08.png",
+        "data/references/captures/ref-0014/tablet-page-09.png"
+      ]
+    },
+    "mobile": {
+      "width": 390,
+      "pageHeight": 7962,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14px (16px or more reads better)",
+          "sample": [
+            "<p> \"Meet the Quilt Dial, a compact next generation the\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14.8159px (16px or more reads better)",
+          "sample": [
+            "<p> \"Smart occupancy sensing, remote diagnostics, and o\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12.0591px (16px or more reads better)",
+          "sample": [
+            "<p> \"By submitting, you agree to future communications \""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "no-h1",
+          "message": "No visible h1: the page has no title"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tap-target",
+          "message": "19 controls smaller than 24x24px on a phone",
+          "sample": [
+            "1x24 <a> \"Skip to content\"",
+            "96x22 <a> \"How It Works\"",
+            "83x22 <a> \"Tech Specs\"",
+            "143x22 <a> \"HVAC Professionals\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "text-at-edge",
+          "message": "2 text elements within 12px of the screen edge",
+          "sample": [
+            "<a> \"Skip to content\"",
+            "<p> \"By submitting, you agree to future communications \""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "1 gradient backgrounds"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "3 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#ffffff on screen = 4.17:1 median, 3.11:1 in the worst tenth (needs 4.5) <span> \"Quilt is the most intuitive, advanced, and efficie\"",
+            "#2293a1 on screen = 3.48:1 median, 2.26:1 in the worst tenth (needs 4.5) <a> \"Auto-Away\"",
+            "#6a6a6a on screen = 3.88:1 median, 3.52:1 in the worst tenth (needs 4.5) <p> \"By submitting, you agree to future communications \""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "carousel-slides",
+          "message": "1 text elements sit in carousel slides the visitor turns to; check the controls work by keyboard and touch"
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "1 console or page errors",
+          "sample": [
+            "requestStorageAccess: Permission denied."
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Quilt Sans",
+            "share": 77
+          },
+          {
+            "family": "Quilt Serif",
+            "share": 23
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "quilt sans",
+            "share": 77
+          },
+          {
+            "family": "quilt serif",
+            "share": 23
+          }
+        ],
+        "fontSizes": [
+          36,
+          29,
+          28,
+          25,
+          23,
+          20,
+          16,
+          15,
+          14,
+          12,
+          11
+        ],
+        "textColours": [
+          "#000000",
+          "#ffffff",
+          "#6a6a6a",
+          "#2293a1",
+          "#ff7b5e",
+          "#c3c3c3"
+        ],
+        "backgroundColours": [
+          "#ffffff",
+          "#186767",
+          "#000000",
+          "#fef9f3",
+          "#e5dfd9",
+          "#ff7b5e",
+          "#7febf9",
+          "#2a2a2a"
+        ],
+        "chromaticColours": 4,
+        "colourFamilies": 2,
+        "spacing": {
+          "distinct": 16,
+          "offScale": 14,
+          "values": [
+            2,
+            6,
+            8,
+            8.5,
+            10,
+            11,
+            12.5,
+            16,
+            16.5,
+            17.5,
+            18,
+            24.5,
+            32.5,
+            33,
+            61.5,
+            119
+          ]
+        },
+        "radii": [
+          "9999px",
+          "8px",
+          "24px"
+        ],
+        "shadows": 4,
+        "gradients": 1,
+        "backdropBlur": 0,
+        "transitions": 79,
+        "animatedElements": 36,
+        "cls": 0.097
+      },
+      "screenshots": [
+        "data/references/captures/ref-0014/mobile-fold.png",
+        "data/references/captures/ref-0014/mobile-page-01.png",
+        "data/references/captures/ref-0014/mobile-page-02.png",
+        "data/references/captures/ref-0014/mobile-page-03.png",
+        "data/references/captures/ref-0014/mobile-page-04.png",
+        "data/references/captures/ref-0014/mobile-page-05.png",
+        "data/references/captures/ref-0014/mobile-page-06.png",
+        "data/references/captures/ref-0014/mobile-page-07.png",
+        "data/references/captures/ref-0014/mobile-page-08.png",
+        "data/references/captures/ref-0014/mobile-page-09.png",
+        "data/references/captures/ref-0014/mobile-page-10.png"
+      ]
+    }
+  },
+  "checks": {
+    "reducedMotion": {
+      "findings": [],
+      "screenshot": "data/references/captures/ref-0014/reduced-motion-fold.png"
+    },
+    "noJavaScript": {
+      "findings": [],
+      "withJs": 3343,
+      "withoutJs": 2965
+    }
+  },
+  "summary": {
+    "fail": 4,
+    "warn": 9
+  },
+  "url": "https://www.quilt.com/",
+  "findings": [
+    {
+      "severity": "FAIL",
+      "rule": "no-h1",
+      "message": "No visible h1: the page has no title",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "3 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#ffffff on screen = 4.31:1 median, 2.85:1 in the worst tenth (needs 4.5) <span> \"Quilt is the most intuitive, advanced, and efficie\"",
+        "#2293a1 on screen = 3.48:1 median, 2.34:1 in the worst tenth (needs 4.5) <a> \"Auto-Away\"",
+        "#6a6a6a on screen = 3.88:1 median, 3.12:1 in the worst tenth (needs 4.5) <p> \"By submitting, you agree to future communications \""
+      ],
+      "where": [
+        "desktop",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "2 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#2293a1 on screen = 3.48:1 median, 2.32:1 in the worst tenth (needs 4.5) <a> \"Auto-Away\"",
+        "#6a6a6a on screen = 3.88:1 median, 3.75:1 in the worst tenth (needs 4.5) <p> \"By submitting, you agree to future communications \""
+      ],
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tap-target",
+      "message": "19 controls smaller than 24x24px on a phone",
+      "sample": [
+        "1x24 <a> \"Skip to content\"",
+        "96x22 <a> \"How It Works\"",
+        "83x22 <a> \"Tech Specs\"",
+        "143x22 <a> \"HVAC Professionals\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "too-many-font-sizes",
+      "message": "11 different font sizes on the page (aim for 5 or fewer doing the visible work)",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "body-size",
+      "message": "Running text at 15px (16px or more reads better)",
+      "sample": [
+        "<p> \"Meet the Quilt Dial, a compact next generation the\""
+      ],
+      "where": [
+        "desktop",
+        "tablet"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "body-size",
+      "message": "Running text at 12.9936px (16px or more reads better)",
+      "sample": [
+        "<p> \"By submitting, you agree to future communications \""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "carousel-slides",
+      "message": "1 text elements sit in carousel slides the visitor turns to; check the controls work by keyboard and touch",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "console-errors",
+      "message": "1 console or page errors",
+      "sample": [
+        "requestStorageAccess: Permission denied."
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "body-size",
+      "message": "Running text at 12.3955px (16px or more reads better)",
+      "sample": [
+        "<p> \"By submitting, you agree to future communications \""
+      ],
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "gradient",
+      "message": "1 gradient backgrounds",
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "body-size",
+      "message": "Running text at 14px (16px or more reads better)",
+      "sample": [
+        "<p> \"Meet the Quilt Dial, a compact next generation the\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "body-size",
+      "message": "Running text at 14.8159px (16px or more reads better)",
+      "sample": [
+        "<p> \"Smart occupancy sensing, remote diagnostics, and o\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "body-size",
+      "message": "Running text at 12.0591px (16px or more reads better)",
+      "sample": [
+        "<p> \"By submitting, you agree to future communications \""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "text-at-edge",
+      "message": "2 text elements within 12px of the screen edge",
+      "sample": [
+        "<a> \"Skip to content\"",
+        "<p> \"By submitting, you agree to future communications \""
+      ],
+      "where": [
+        "mobile"
+      ]
+    }
+  ]
+}

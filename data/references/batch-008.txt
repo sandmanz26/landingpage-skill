@@ -1,0 +1,4 @@
+# batch-008 (2026-11-05) owner: visual 7, ship 7.5 (home page); how-it-works and find-installer captured for the selling path
+ref-0014 https://www.quilt.com/
+ref-0014-how https://www.quilt.com/how-it-works
+ref-0014-installer https://www.quilt.com/find-installer
