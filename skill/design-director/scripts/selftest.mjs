@@ -304,6 +304,22 @@ const check = (name, ok, detail = '') => {
   check('a doubled hover label is one action', ev && ev.outline.actions.some((a) => a.label === 'Pesan 1 kotak'), ev && ev.outline.actions.map((a) => a.label).join(' | '));
 }
 
+// kit: the tested sections stay tested, and their sample content cannot ship
+{
+  const out = path.join(tmp, 'kit');
+  const r = run('inspect.mjs', [path.join(skill, 'kit', 'index.html'), '--out', out, '--quiet', '--allow', 'kit-sample,system-font-only']);
+  const rep = fs.existsSync(path.join(out, 'report.json')) ? JSON.parse(fs.readFileSync(path.join(out, 'report.json'), 'utf8')) : null;
+  const all = rep ? [...Object.values(rep.viewports).flatMap((v) => v.findings), ...rep.checks.reducedMotion.findings].filter((f) => f.severity !== 'INFO') : [{ rule: 'no report' }];
+  check('the kit demo passes the inspector with no findings at three widths and under reduced motion', r.status === 0 && all.length === 0, all.map((f) => f.rule).join(', '));
+  const strict = run('inspect.mjs', [path.join(skill, 'kit', 'index.html'), '--out', path.join(tmp, 'kit-strict'), '--quiet']);
+  check('the inspector fails a page that still carries kit sample content', strict.status === 1 && /kit-sample/.test(fs.readFileSync(path.join(tmp, 'kit-strict', 'report.json'), 'utf8')));
+  const names = JSON.parse(fs.readFileSync(path.join(skill, 'kit', 'sections.json'), 'utf8')).sections.map((x) => x.name);
+  const g = run('kit.mjs', ['get', ...names, '--out', path.join(tmp, 'kit-get')]);
+  const html = fs.existsSync(path.join(tmp, 'kit-get', 'section.html')) ? fs.readFileSync(path.join(tmp, 'kit-get', 'section.html'), 'utf8') : '';
+  const css = fs.existsSync(path.join(tmp, 'kit-get', 'kit.css')) ? fs.readFileSync(path.join(tmp, 'kit-get', 'kit.css'), 'utf8') : '';
+  check('kit.mjs gives every listed section with its HTML and CSS', g.status === 0 && names.every((n) => html.includes(`kit:${n}`) && css.includes(`kit:${n}`)) && css.includes('kit:tokens'), g.stderr);
+}
+
 // reason roast: every element of the built page is numbered and needs a verdict
 {
   const proj = path.join(tmp, 'reason');

@@ -230,6 +230,12 @@ Order: tokens → hero → sections → pictures → states (hover, focus, error
   (`inspect.mjs <file> --out .design/variants/<x> --quiet`), then put them before the jury
   (`rubric/jury.md`): each AI juror ranks them, designers may add their ranking, and
   `jury.mjs rank` picks the winner. Keep the winner, log why.
+- **Start from the kit** where a section of the spec answers the same customer question as a kit
+  section (`kit.mjs list`, then `kit.mjs get <names> --out .design/kit`): set the tokens from the
+  spec, replace every word and picture (the inspector fails leftover `data-kit-sample`), and change
+  the structure where the spec or the direction asks. The kit gives the tested floor (contrast, tap
+  targets, reduced motion, touch paths); the direction and the idea still have to come from this
+  client (`kit/README.md`).
 - Each section from its row in the spec. Carry the idea into every section, pricing, FAQ and footer
   included; the usual failure is a distinctive first screen followed by stock blocks.
 - Sticky and fixed elements: give each sticky panel its own wrapper (the part of the page it belongs

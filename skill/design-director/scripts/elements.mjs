@@ -142,7 +142,10 @@ const data = await page.evaluate((patterns) => {
       }
       // A card: a boxed container holding several things; listed as one element with its contents.
       const kids = [...el.querySelectorAll('h1, h2, h3, h4, h5, h6, p, img, svg, a, button, li')].filter(visible);
-      if (el !== b && boxed(el) && kids.length >= 2 && rr.width >= 120 && rr.height >= 80 && rr.width < innerWidth * 0.9) {
+      // A wrapper of several alike children (a list of claims, a row of cards) is a group: number its children.
+      const direct = [...el.children].filter(visible);
+      const group = direct.length >= 2 && direct.every((k) => k.tagName === direct[0].tagName && k.className === direct[0].className);
+      if (el !== b && !group && boxed(el) && kids.length >= 2 && rr.width >= 120 && rr.height >= 80 && rr.width < innerWidth * 0.9) {
         const inside = kids.filter((k) => !k.closest('svg') || k.tagName === 'svg').slice(0, 6).map((k) => (/^(IMG|svg)$/.test(k.tagName) ? (Math.max(k.getBoundingClientRect().width, k.getBoundingClientRect().height) < 64 ? 'icon' : 'picture') : `${k.tagName.toLowerCase()} "${clip(text(k), 30)}"`));
         add(el, 'card', sid, { inside: inside.join(', ') });
         continue;

@@ -9,5 +9,6 @@
   "shadow-on-everything": "warn",
   "icon-card-row": "warn",
   "centred-hero-two-ctas": "warn",
-  "emoji": "warn"
+  "emoji": "warn",
+  "kit-sample": "fail"
 }

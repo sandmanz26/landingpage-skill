@@ -176,6 +176,7 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 | `rules/copyright.md` | Before using any reference |
 | `rules/copy-id.md` | Writing copy in Bahasa Indonesia |
 | `motion/functions.md` | Writing the motion spec and building motion |
+| `kit/README.md`, `kit/sections.json` | The build step: which tested section answers which customer question, and the rules for using them |
 | `rubric/reason.md` | The reason step: every element of the built page names its job or goes |
 | `rubric/critic.md` | Briefing the critic subagent; the critique format every juror uses |
 | `rubric/jury.md` | The look step and best-of-N at standard effort and above; judging references |
@@ -194,6 +195,7 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 | `draw.mjs --sector <s> [--tone <t>] [--have a,b] [--options 3]` | Deals directions into `.design/directions/` (`--list sectors`) |
 | `inspect.mjs <url or file> [--out dir] [--allow rule]` | Real-browser check at 1440/768/390, screenshots, design inventory |
 | `lint.mjs <files or folders>` | Stock copy, placeholders, default styling patterns in source |
+| `kit.mjs list` / `get <names> [--out dir]` | Tested sections built from tokens (hero with arch photo, price near the action, evidence rows, reveal cards with a tap path, before/after, sticky story, proof quote, FAQ, closing action): the build's starting floor |
 | `elements.mjs <url or file> [--out .design/reason]` | The built page with every element numbered, one picture per section and the phone pages, with hints (decorative, endless motion, repeated, unsourced number, stock copy, emoji, twin cards): the input of the reason roast |
 | `evidence.mjs <url or file> --dir <dir>` | Evidence pack for the jury: contact sheets, motion frames, outline, motion, reduced-motion and idle results |
 | `digest.mjs <dir>` | `digest.md`: the one short file a juror reads first (outline, motion, inventory, findings, page text) |

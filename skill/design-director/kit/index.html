@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kit design-director: section teruji (contoh Senyum Dental)</title>
+<meta name="description" content="Demo of the tested sections in the design-director kit. Every word and picture here is sample content.">
+<link rel="stylesheet" href="kit.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<!-- Every section below is sample content (data-kit-sample): the inspector fails a delivered page
+     that still carries it. Take a section with scripts/kit.mjs get <name>, then write its content
+     from the spec and set the tokens. Each section's purpose is in kit/README.md. -->
+<main>
+
+<!-- kit:hero-arch -->
+<section class="k-hero" data-kit="hero-arch" data-kit-sample>
+  <div class="k-wrap k-hero__grid">
+    <div>
+      <h1>Gigi bersih dalam 30 menit</h1>
+      <p class="k-lead">Klinik gigi di Jl. Riau, Bandung. Rincian biaya kami tulis sebelum alat menyentuh gigi Anda, jadi tidak ada kejutan di kasir.</p>
+      <div class="k-hero__act">
+        <a class="k-btn" href="#harga">Pilih jam lewat WhatsApp</a>
+        <p class="k-hero__price">Pembersihan karang gigi <strong>Rp 350.000</strong></p>
+      </div>
+    </div>
+    <figure class="k-arch">
+      <img src="img/sample-room.jpg" alt="Ruang praktik Senyum Dental dengan satu kursi dan jendela besar" width="960" height="1200">
+      <!-- The signature slot: one drawing from the subject, named in the spec (a mint leaf here), breaking the frame. -->
+      <svg class="k-arch__mark k-arch__mark--a" viewBox="0 0 120 160" aria-hidden="true" data-signature><path d="M60 6C20 40 8 92 30 150c42-14 78-60 70-112C96 22 80 10 60 6Z" fill="var(--accent)"/><path d="M34 146C48 104 58 62 62 12" stroke="var(--ground)" stroke-width="4" fill="none"/></svg>
+    </figure>
+  </div>
+</section>
+<!-- /kit -->
+
+<!-- kit:price-action -->
+<section class="k-section" id="harga" data-kit="price-action" data-kit-sample>
+  <div class="k-wrap">
+    <h2>Harga, ditulis sebelum Anda duduk</h2>
+    <div class="k-offer">
+      <div>
+        <h3>Pemeriksaan dan pembersihan karang gigi</h3>
+        <p class="k-offer__price">Rp 350.000 <span>sekali datang</span></p>
+        <ul>
+          <li>Pemeriksaan seluruh gigi dan foto intraoral</li>
+          <li>Pembersihan karang dan pemolesan</li>
+          <li>Rencana perawatan tertulis, kalau ada yang perlu ditambal</li>
+        </ul>
+      </div>
+      <div class="k-offer__side">
+        <a class="k-btn" href="#jadwal">Pilih jam lewat WhatsApp</a>
+        <p class="k-offer__terms">Bayar setelah selesai. Tindakan tambahan hanya dengan persetujuan Anda, dengan harga tertulis.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /kit -->
+
+<!-- kit:evidence-rows -->
+<section class="k-section" data-kit="evidence-rows" data-kit-sample>
+  <div class="k-wrap">
+    <h2>Yang kami janjikan, dan buktinya</h2>
+    <p class="k-lead">Setiap janji di halaman ini bisa Anda periksa sebelum datang.</p>
+    <div class="k-claims">
+      <details class="k-claim">
+        <summary>Selesai dalam 30 menit <span>Lihat buktinya</span></summary>
+        <div class="k-claim__body">
+          <p>Rata-rata waktu di kursi untuk pembersihan karang adalah 27 menit, dihitung dari 412 kunjungan Januari sampai September 2026.</p>
+          <ol><li>Catatan jadwal klinik, diperiksa ulang Oktober 2026</li></ol>
+        </div>
+      </details>
+      <details class="k-claim">
+        <summary>Dokter gigi berizin <span>Lihat buktinya</span></summary>
+        <div class="k-claim__body">
+          <p>drg. Rina Hapsari, STR 1234567890123456, berlaku sampai 2029. Nomor ini bisa dicek di situs KKI.</p>
+          <ol><li>Konsil Kedokteran Indonesia, pencarian STR</li></ol>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+<!-- /kit -->
+
+<!-- kit:reveal-cards -->
+<section class="k-section" data-kit="reveal-cards" data-kit-sample>
+  <div class="k-wrap">
+    <h2>Lihat hasilnya sebelum memilih</h2>
+    <div class="k-reveals">
+      <article class="k-reveal">
+        <div class="k-reveal__media">
+          <img src="img/sample-tool.jpg" alt="Alat pembersih karang ultrasonik di nampan" width="640" height="640">
+          <img src="img/sample-result.jpg" alt="Gigi setelah pembersihan karang, permukaan bersih" width="640" height="640">
+        </div>
+        <h3>Pembersihan karang</h3>
+        <p>Rp 350.000 · 30 menit</p>
+        <button class="k-btn k-btn--quiet k-reveal__toggle" type="button" aria-pressed="false" data-back="Lihat alatnya">Lihat hasilnya</button>
+      </article>
+      <article class="k-reveal">
+        <div class="k-reveal__media">
+          <img src="img/sample-before.jpg" alt="Gigi berlubang sebelum ditambal" width="960" height="640">
+          <img src="img/sample-after.jpg" alt="Gigi yang sama setelah ditambal sewarna gigi" width="960" height="640">
+        </div>
+        <h3>Tambal sewarna gigi</h3>
+        <p>mulai Rp 400.000 · 45 menit</p>
+        <button class="k-btn k-btn--quiet k-reveal__toggle" type="button" aria-pressed="false" data-back="Lihat sebelumnya">Lihat hasilnya</button>
+      </article>
+      <article class="k-reveal">
+        <div class="k-reveal__media">
+          <img src="img/sample-room.jpg" alt="Ruang praktik dari pintu masuk" width="960" height="1200">
+          <img src="img/sample-team.jpg" alt="Perawat menyiapkan kursi untuk pasien berikutnya" width="960" height="720">
+        </div>
+        <h3>Kunjungan pertama</h3>
+        <p>Rp 150.000 · pemeriksaan saja</p>
+        <button class="k-btn k-btn--quiet k-reveal__toggle" type="button" aria-pressed="false" data-back="Lihat ruangannya">Lihat siapa yang menemani</button>
+      </article>
+    </div>
+  </div>
+</section>
+<!-- /kit -->
+
+<!-- kit:before-after -->
+<section class="k-section" data-kit="before-after" data-kit-sample>
+  <div class="k-wrap">
+    <h2>Sebelum dan sesudah pembersihan</h2>
+    <figure class="k-ba">
+      <div class="k-ba__frame">
+        <img src="img/sample-before.jpg" alt="Gigi dengan karang sebelum dibersihkan" width="960" height="640">
+        <div class="k-ba__after"><img src="img/sample-after.jpg" alt="Gigi yang sama setelah dibersihkan" width="960" height="640"></div>
+        <span class="k-ba__label k-ba__label--before">Sebelum</span>
+        <span class="k-ba__label k-ba__label--after">Sesudah</span>
+      </div>
+      <label class="k-ba__control">Geser untuk membandingkan <input type="range" min="0" max="100" value="50"></label>
+      <figcaption>Pasien kami, Oktober 2026, dengan izin tertulis. Foto tanpa filter.</figcaption>
+    </figure>
+  </div>
+</section>
+<!-- /kit -->
+
+<!-- kit:story-sticky -->
+<section class="k-section" data-kit="story-sticky" data-kit-sample>
+  <div class="k-wrap">
+    <h2>Dari pesan WhatsApp sampai pulang</h2>
+    <div class="k-story">
+      <div class="k-story__media"><img src="img/sample-team.jpg" alt="Perawat menyambut pasien di meja depan" width="960" height="720"></div>
+      <ol class="k-steps">
+        <li><h3>Pilih jam</h3><p>Kirim tanggal yang Anda mau. Kami balas dalam 10 menit pada jam buka.</p></li>
+        <li><h3>Datang lima menit lebih awal</h3><p>Ruang tunggu hanya untuk satu pasien, jadi Anda tidak menunggu bersama orang lain.</p></li>
+        <li><h3>Periksa, lalu sepakati</h3><p>Dokter menunjukkan foto gigi Anda dan menulis rencana serta harganya. Anda boleh berhenti di sini.</p></li>
+        <li><h3>Bersihkan dan bayar</h3><p>Pembersihan sekitar 30 menit. Anda membayar setelah selesai, sesuai yang tertulis.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+<!-- /kit -->
+
+<!-- kit:proof-quote -->
+<section class="k-section" data-kit="proof-quote" data-kit-sample>
+  <div class="k-wrap">
+    <figure class="k-quote">
+      <img src="img/sample-team.jpg" alt="Ibu Dewi di ruang tunggu klinik" width="960" height="720">
+      <div>
+        <blockquote>“Saya takut ke dokter gigi sejak kecil. Di sini harganya ditulis dulu, dan dokternya berhenti setiap kali saya angkat tangan.”</blockquote>
+        <figcaption><strong>Dewi Lestari</strong>, guru, Bandung · ulasan Google, Agustus 2026</figcaption>
+        <p class="k-rating">4,8 dari 212 ulasan Google (Oktober 2026)</p>
+      </div>
+    </figure>
+  </div>
+</section>
+<!-- /kit -->
+
+<!-- kit:faq -->
+<section class="k-section" data-kit="faq" data-kit-sample>
+  <div class="k-wrap">
+    <h2>Yang biasanya ditanyakan lewat WhatsApp</h2>
+    <div class="k-faq">
+      <details open><summary>Apakah pembersihan karang sakit?</summary><p>Sebagian besar pasien merasa ngilu ringan. Kalau gigi Anda sensitif, kami pakai gel pengurang ngilu tanpa biaya tambahan.</p></details>
+      <details><summary>Bisa pakai BPJS?</summary><p>Belum. Kami memberi kuitansi rinci untuk klaim asuransi swasta.</p></details>
+      <details><summary>Boleh membawa anak?</summary><p>Boleh, untuk anak mulai usia 6 tahun. Kunjungan pertama anak hanya untuk berkenalan dengan kursi dan alat.</p></details>
+    </div>
+  </div>
+</section>
+<!-- /kit -->
+
+<!-- kit:closing-action -->
+<section class="k-section" id="jadwal" data-kit="closing-action" data-kit-sample>
+  <div class="k-wrap">
+    <div class="k-close">
+      <div>
+        <h2>Pilih jam minggu ini</h2>
+        <p>Senin sampai Sabtu, 09.00 sampai 20.00. Balasan dalam 10 menit pada jam buka.</p>
+      </div>
+      <div>
+        <a class="k-btn" href="https://wa.me/6281234567890">Kirim pesan WhatsApp</a>
+        <p class="k-close__meta">+62 812-3456-7890 · Jl. Riau 12, Bandung</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /kit -->
+
+</main>
+<script src="kit.js"></script>
+</body>
+</html>
