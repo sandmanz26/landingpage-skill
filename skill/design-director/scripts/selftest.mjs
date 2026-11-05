@@ -304,6 +304,34 @@ const check = (name, ok, detail = '') => {
   check('a doubled hover label is one action', ev && ev.outline.actions.some((a) => a.label === 'Pesan 1 kotak'), ev && ev.outline.actions.map((a) => a.label).join(' | '));
 }
 
+// copy: written for the reader, measured (copy/method.md)
+{
+  const cdir = path.join(fixtures, 'copy');
+  const high = run('copycheck.mjs', [path.join(cdir, 'too-high.md'), '--voice', path.join(cdir, 'voice.md'), '--out', path.join(tmp, 'cc-high.json')]);
+  const rules = fs.existsSync(path.join(tmp, 'cc-high.json')) ? JSON.parse(fs.readFileSync(path.join(tmp, 'cc-high.json'), 'utf8')).findings.map((f) => f.rule) : [];
+  check('copycheck fails copy written above the reader', high.status === 1 && ['long-sentence', 'self-praise', 'abstract-words', 'glossary', 'long-headline'].every((r) => rules.includes(r)), rules.join(', '));
+  const plain = run('copycheck.mjs', [path.join(cdir, 'plain.md'), '--voice', path.join(cdir, 'voice.md'), '--out', path.join(tmp, 'cc-plain.json')]);
+  check('copycheck passes plain copy in the reader\'s words', plain.status === 0, plain.stdout);
+  const proj = path.join(tmp, 'copygate');
+  fs.mkdirSync(path.join(proj, '.design'), { recursive: true });
+  const d = path.join(proj, '.design');
+  const p = (...a) => run('progress.mjs', a, proj);
+  p('init', '--mode', 'create', '--effort', 'quick', '--gates', 'autopilot');
+  const st = JSON.parse(fs.readFileSync(path.join(d, 'progress.json'), 'utf8'));
+  for (const k of ['brief', 'research', 'strategy', 'roast', 'direction', 'skeleton', 'spec']) st.steps[k] = { status: 'done' };
+  fs.writeFileSync(path.join(d, 'progress.json'), JSON.stringify(st));
+  fs.copyFileSync(path.join(cdir, 'too-high.md'), path.join(d, 'copy.md'));
+  const noVoice = p('done', 'copy');
+  fs.copyFileSync(path.join(cdir, 'voice.md'), path.join(d, 'voice.md'));
+  run('copycheck.mjs', ['.design/copy.md', '--voice', '.design/voice.md'], proj);
+  const failing = p('done', 'copy');
+  fs.copyFileSync(path.join(cdir, 'plain.md'), path.join(d, 'copy.md'));
+  const stale = p('done', 'copy');
+  run('copycheck.mjs', ['.design/copy.md', '--voice', '.design/voice.md'], proj);
+  const ok = p('done', 'copy');
+  check('progress wants the voice file and a passing, fresh copycheck before the copy is done', noVoice.status !== 0 && /voice\.md/.test(noVoice.stderr) && failing.status !== 0 && /FAIL/.test(failing.stderr) && stale.status !== 0 && ok.status === 0, [noVoice.stderr, failing.stderr, stale.stderr, ok.stderr].join(' | '));
+}
+
 // kit: the tested sections stay tested, and their sample content cannot ship
 {
   const out = path.join(tmp, 'kit');

@@ -12,6 +12,7 @@ Format: `- <rule> — <why> (source: <project>, <date>, <who>)`
 
 - Two type families: one text face carrying 80-95% of the text, one display face used sparingly, one size scale — every reference so far follows it (source: 9 of 9 library sites incl. batch-004 Summer Smash Tennis, 2026-11-02, owner + data)
 - Every control gives feedback on hover, press and focus — micro-interaction is what makes a page feel alive (source: batch-004 Summer Smash Tennis buttons that press down, 2026-11-02, owner)
+- Copy is written for its reader, not above them: the reader is framed first (who, their level, their own words), the brand is felt in how things are said and never stated with self-praise, and every page passes the reading checks (`copy/method.md`, `copycheck.mjs`) — copy written "too high" lost the readers of the owner's army site until the reader was framed (source: owner 2026-11-05)
 - Every interaction has a meaning and a purpose, written in the spec before it is built: it shows the visitor something they need (what the product becomes, the evidence behind a claim, the place on a map), helps them decide, or answers their action; an interaction that only moves is decoration and is cut. It works on a phone and a keyboard too (tap or focus does what hover does) — a common pattern earns its place through what it reveals, not through novelty (source: batch-007 Quite Nice: a flavour card turns from the packet into the finished bowl, a benefit opens the mechanism with journal citations; owner asked for this rule explicitly, 2026-11-02)
 
 ## Never

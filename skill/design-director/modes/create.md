@@ -208,7 +208,11 @@ it shows, where it comes from, and the shot list for the client.
 
 ## 8. copy
 
-Write the whole page as text in `.design/copy.md` before markup:
+Follow `copy/method.md`: write `.design/voice.md` first (the reader, framed from the customer
+voice; the voice as "X, not Y"; the glossary), then `.design/copy.md`, then run
+`copycheck.mjs .design/copy.md --voice .design/voice.md` and the two reader tests. `done copy`
+refuses without the three voice sections, with a copycheck FAIL, or without "## Reader tests".
+The whole page is text before markup:
 
 - every headline fits two lines at every width (about 32 characters is safe at a confident size);
 - one supporting sentence right under the headline, saying plainly what this is;

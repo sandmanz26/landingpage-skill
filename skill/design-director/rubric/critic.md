@@ -95,6 +95,11 @@ Read the page as the customer described in the brief, on the phone screenshots. 
 five questions you were given: is it answered? In which section (screenshot file)? Before or after
 the customer is asked to act? In their words or in the company's?
 
+Then the **explain-back test** (`copy/method.md` §6): as that customer, at their reading level, say
+in one or two sentences what the page offers, what it costs and what to do next. Name every word
+you would have to look up and every sentence you read twice. Copy written above the reader, or a
+brand that praises itself instead of showing it, caps Customer at 6.
+
 | # | Customer question | Answered? | Where | Before the ask? | Their words? |
 
 ## Critique format

@@ -248,6 +248,20 @@ switch (cmd) {
         }
       }
     }
+    if (step === 'copy') {
+      // The reader and the voice are written down, and the copy passes the reading checks (copy/method.md).
+      const vp = path.join(DIR, 'voice.md');
+      if (!fs.existsSync(vp)) fail('Write .design/voice.md first: the reader, the voice and the glossary (copy/method.md).');
+      const v = fs.readFileSync(vp, 'utf8');
+      const missing = [['Reader', 'Pembaca'], ['Voice', 'Suara'], ['Glossary', 'Glosarium']].filter((h) => !new RegExp(`^##\\s*(${h.join('|')})\\b`, 'im').test(v)).map((h) => h[0]);
+      if (missing.length) fail(`.design/voice.md has no ${missing.join(', ')} section (copy/method.md).`);
+      const cp = path.join(DIR, 'copycheck.json');
+      if (!fs.existsSync(cp)) fail('Run copycheck.mjs .design/copy.md --voice .design/voice.md before marking the copy done.');
+      const cc = JSON.parse(fs.readFileSync(cp, 'utf8'));
+      if (Date.parse(cc.time) < fs.statSync(path.join(DIR, 'copy.md')).mtimeMs) fail('copy.md changed after the last copycheck: run it again.');
+      if (cc.summary.fail > 0) fail(`copycheck found ${cc.summary.fail} FAIL (${cc.findings.filter((f) => f.severity === 'FAIL').map((f) => f.rule).join(', ')}): rewrite, then run it again.`);
+      if (!/##\s*(Reader tests|Tes pembaca)/i.test(fs.readFileSync(path.join(DIR, 'copy.md'), 'utf8'))) fail('copy.md needs a "## Reader tests" section: the skim test and the explain-back test (copy/method.md §6).');
+    }
     if (step === 'spec') {
       const sp = fs.readFileSync(path.join(DIR, 'spec.md'), 'utf8');
       if (!/##\s*(Interactions|Interaksi)/i.test(sp)) fail('spec.md needs an "## Interactions" section: every element the visitor operates, with what it reveals and the customer question it answers, or "none" (motion/functions.md → Interactions).');
