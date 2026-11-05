@@ -220,6 +220,7 @@ for (const vp of VIEWPORTS) {
     add(findings, 'INFO', 'contrast-unverified', `${contrastCheck.unverified} suspected contrast problems could not be re-measured on screen`);
   if (hidden.count > 0)
     add(findings, 'FAIL', 'hidden-content', `${hidden.count} text elements were never visible during a full scroll (a reveal that never fires?)`, hidden.samples);
+  if (hidden.carousel > 0) add(findings, 'INFO', 'carousel-slides', `${hidden.carousel} text elements sit in carousel slides the visitor turns to; check the controls work by keyboard and touch`);
   if (cls > 0.25) add(findings, 'FAIL', 'layout-shift', `Layout shift ${cls.toFixed(3)} (over 0.25)`);
   else if (cls > 0.1) add(findings, 'WARN', 'layout-shift', `Layout shift ${cls.toFixed(3)} (over 0.1)`);
   if (errors.length) add(findings, 'WARN', 'console-errors', `${errors.length} console or page errors`, errors.slice(0, 5));

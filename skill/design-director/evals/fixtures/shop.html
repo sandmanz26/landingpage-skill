@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oat Rimpang: fixture for inspector false positives</title>
+<!-- Regression fixture: an announcement bar link plus one hero button (not "two CTAs"), a hover-roll
+     label doubled in the DOM, a <picture> photograph (counted once), a drawn PNG (an illustration),
+     a photographed cut-out PNG (a photo), and carousel slides hidden until turned to (not hidden content). -->
+<style>
+  body { margin: 0; font: 18px/1.5 Georgia, serif; color: #1d2b1a; background: #fbf6ea; }
+  .bar { display: block; background: #195908; color: #fff; text-align: center; padding: 8px 16px; font: 15px/1.4 sans-serif; }
+  header { display: flex; justify-content: space-between; padding: 16px 32px; }
+  header a { color: #1d2b1a; }
+  .hero { text-align: center; padding: 48px 24px; }
+  h1 { font-size: 64px; line-height: 1.05; margin: 0 0 24px; }
+  .btn { display: inline-block; background: #ffce70; color: #1d2b1a; padding: 14px 28px; border-radius: 999px; text-decoration: none; font: 18px sans-serif; }
+  .btn .roll { display: block; height: 1.4em; overflow: hidden; }
+  .btn .roll span { display: block; }
+  .pics { display: flex; gap: 24px; justify-content: center; padding: 24px; flex-wrap: wrap; }
+  .pics img { width: 240px; height: 240px; }
+  .slider { position: relative; overflow: hidden; max-width: 640px; margin: 40px auto; padding: 0 24px; }
+  .slide { opacity: 0; position: absolute; inset: 0 24px auto; }
+  .slide.on { opacity: 1; position: relative; }
+  .slider button { margin: 16px 8px 0 0; padding: 12px 20px; font: 16px sans-serif; background: #fff; color: #1d2b1a; border: 2px solid #1d2b1a; border-radius: 8px; }
+  footer { padding: 32px; text-align: center; }
+  @media (max-width: 500px) { h1 { font-size: 36px; } }
+</style>
+</head>
+<body>
+  <a class="bar" href="#harga">Harga khusus minggu ini: Rp 45.000 per kotak</a>
+  <header><strong>Oat Rimpang</strong><a href="#ulasan">Ulasan</a></header>
+  <main>
+    <section class="hero">
+      <h1>Sarapan hangat untuk perut yang sering kembung</h1>
+      <a class="btn" href="#harga"><span class="roll"><span>Pesan 1 kotak</span><span aria-hidden="true">Pesan 1 kotak</span></span></a>
+    </section>
+    <section class="pics" id="harga">
+      <picture><source srcset="img/photo.jpg" type="image/jpeg"><img src="img/photo.jpg" alt="Semangkuk oat dengan jahe di meja kayu" width="240" height="240"></picture>
+      <img src="img/drawn-leaf.png" alt="Gambar daun sereh" width="240" height="240">
+      <img src="img/product-cutout.png" alt="Kemasan Oat Rimpang" width="240" height="240">
+    </section>
+    <section class="slider" id="ulasan" aria-roledescription="carousel" aria-label="Ulasan pembeli">
+      <blockquote class="slide on">Perut saya tidak kembung lagi sejak sarapan ini. Rina, Bandung</blockquote>
+      <blockquote class="slide">Rasa jahenya pas, tidak terlalu pedas untuk anak saya. Dewi, Bogor</blockquote>
+      <blockquote class="slide">Praktis dibawa ke kantor, tinggal seduh air panas. Arif, Depok</blockquote>
+      <button type="button" onclick="turn(-1)">Ulasan sebelumnya</button><button type="button" onclick="turn(1)">Ulasan berikutnya</button>
+    </section>
+  </main>
+  <footer>Oat Rimpang · Jl. Riau 12, Bandung · +62 812-3456-7890</footer>
+  <script>
+    let at = 0;
+    function turn(d) {
+      const s = document.querySelectorAll('.slide');
+      s[at].classList.remove('on');
+      at = (at + d + s.length) % s.length;
+      s[at].classList.add('on');
+    }
+  </script>
+</body>
+</html>

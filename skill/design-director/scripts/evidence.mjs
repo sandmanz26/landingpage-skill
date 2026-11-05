@@ -162,7 +162,10 @@ const outline = await page.evaluate(() => {
   });
   const actions = {};
   for (const b of buttons) {
-    const k = t(b);
+    // A label doubled for a hover roll ("Get Started Get Started") is one label.
+    const full = t(b);
+    const half = full.slice(0, Math.floor(full.length / 2)).trim();
+    const k = half && full === `${half} ${half}` ? half : full;
     const top = b.getBoundingClientRect().top + scrollY;
     actions[k] = actions[k] || { label: k, count: 0, firstAt: at(b), firstScreen: top < innerHeight, sticky: false };
     actions[k].count++;
@@ -189,8 +192,12 @@ const outline = await page.evaluate(() => {
         return r.width >= 160 && r.height >= 160 && getComputedStyle(e).visibility !== 'hidden';
       };
       const bgPhotos = [...document.querySelectorAll('body *')].filter((e) => /url\(/.test(getComputedStyle(e).backgroundImage) && big(e)).length;
+      // <img> only: a <picture> always holds one, and counting both doubled every photograph.
+      const rasters = [...document.querySelectorAll('img')].filter((i) => big(i) && !/\.svg(\?|$)/i.test(i.currentSrc || i.src || ''));
       return {
-        photos: [...document.querySelectorAll('img, picture')].filter((i) => big(i) && !/\.svg(\?|$)/i.test(i.currentSrc || i.src || '')).length + bgPhotos,
+        photos: rasters.length + bgPhotos,
+        // Raster files that may be drawings (cut-outs with transparency); classified after the page run.
+        rasterSrcs: [...new Set(rasters.map((i) => i.currentSrc || i.src).filter((u) => /\.(png|webp|gif|avif)(\?|$)/i.test(u) || /format=(png|webp)/i.test(u)))].slice(0, 24),
         illustrations: [...document.querySelectorAll('svg, img[src$=".svg"], canvas')].filter((e) => big(e) && (e.tagName !== 'svg' || e.querySelectorAll('path, circle, rect, ellipse, polygon').length >= 6)).length,
         videos: [...document.querySelectorAll('video')].filter(big).length,
       };
@@ -198,6 +205,60 @@ const outline = await page.evaluate(() => {
     pageHeight: H,
   };
 });
+
+// Drawings saved as raster files (leaves and oats cut out around Quite Nice's hero photo) look like
+// photographs to the DOM. Read each candidate's pixels: a transparent background and few flat colours
+// make it a drawing.
+if (outline.imagery.rasterSrcs.length) {
+  const probe = await browser.newPage();
+  let drawn = 0;
+  const checked = [];
+  for (const src of outline.imagery.rasterSrcs) {
+    try {
+      const res = await page.request.get(src, { timeout: 15000 });
+      if (!res.ok()) continue;
+      const type = (res.headers()['content-type'] || 'image/png').split(';')[0];
+      const data = `data:${type};base64,${(await res.body()).toString('base64')}`;
+      const kind = await probe.evaluate(async (url) => {
+        const img = new Image();
+        img.src = url;
+        await img.decode();
+        const w = Math.min(img.naturalWidth, 200);
+        const h = Math.max(1, Math.round((img.naturalHeight * w) / img.naturalWidth));
+        const c = document.createElement('canvas');
+        c.width = w;
+        c.height = h;
+        const ctx = c.getContext('2d');
+        ctx.drawImage(img, 0, 0, w, h);
+        const px = ctx.getImageData(0, 0, w, h).data;
+        let clear = 0;
+        let opaque = 0;
+        const colours = new Map();
+        for (let i = 0; i < px.length; i += 4) {
+          if (px[i + 3] < 16) { clear++; continue; }
+          if (px[i + 3] < 240) continue;
+          opaque++;
+          const k = ((px[i] >> 3) << 10) | ((px[i + 1] >> 3) << 5) | (px[i + 2] >> 3);
+          colours.set(k, (colours.get(k) || 0) + 1);
+        }
+        const total = px.length / 4;
+        const top = [...colours.values()].sort((a, b) => b - a).slice(0, 16).reduce((a, b) => a + b, 0);
+        const flat = opaque ? top / opaque : 0;
+        return { cutout: clear / total >= 0.15, flat: Math.round(flat * 100) / 100 };
+      }, data);
+      const isDrawn = kind.cutout && kind.flat >= 0.5;
+      if (isDrawn) drawn++;
+      checked.push({ src: src.split('?')[0].split('/').pop(), ...kind, drawn: isDrawn });
+    } catch {
+      /* unreadable image: leave it counted as a photo */
+    }
+  }
+  await probe.close();
+  outline.imagery.photos -= drawn;
+  outline.imagery.illustrations += drawn;
+  outline.imagery.rasterChecked = checked;
+}
+delete outline.imagery.rasterSrcs;
 
 // Scroll devices built without a library: full-screen sticky panels that stack or uncover
 // each other (a "curtain" reveal) are pure CSS and never show up as a library.

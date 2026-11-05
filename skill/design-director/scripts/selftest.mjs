@@ -288,6 +288,22 @@ const check = (name, ok, detail = '') => {
   check('dials suggests targets from a liked site', r.status === 0 && !!t && [4, 6, 10].includes(t.suggested.typeRatio) && ['calm', 'bold'].includes(t.suggested.colour), r.stdout + r.stderr);
 }
 
+// false positives found on real references stay fixed (batch-007 Quite Nice and others)
+{
+  const out = path.join(tmp, 'shop');
+  const r = run('inspect.mjs', [path.join(fixtures, 'shop.html'), '--out', out, '--quiet']);
+  const rep = fs.existsSync(path.join(out, 'report.json')) ? JSON.parse(fs.readFileSync(path.join(out, 'report.json'), 'utf8')) : null;
+  const rules = rep ? new Set(Object.values(rep.viewports).flatMap((v) => v.findings.map((f) => f.rule))) : new Set();
+  check('carousel slides are not hidden content', r.status === 0 && !rules.has('hidden-content') && rules.has('carousel-slides'), [...rules].join(', '));
+  check('an announcement bar and a doubled hover label are not two hero buttons', !rules.has('centred-hero-two-ctas'), [...rules].join(', '));
+  check('padded full-width text is not text at the edge', !rules.has('text-at-edge'), [...rules].join(', '));
+  run('evidence.mjs', [path.join(fixtures, 'shop.html'), '--dir', out, '--idle', '2']);
+  const ev = fs.existsSync(path.join(out, 'evidence.json')) ? JSON.parse(fs.readFileSync(path.join(out, 'evidence.json'), 'utf8')) : null;
+  const im = ev ? ev.outline.imagery : {};
+  check('a drawn PNG counts as illustration, a cut-out photo and a <picture> as one photo each', im.photos === 2 && im.illustrations === 1, JSON.stringify(im));
+  check('a doubled hover label is one action', ev && ev.outline.actions.some((a) => a.label === 'Pesan 1 kotak'), ev && ev.outline.actions.map((a) => a.label).join(' | '));
+}
+
 // reason roast: every element of the built page is numbered and needs a verdict
 {
   const proj = path.join(tmp, 'reason');

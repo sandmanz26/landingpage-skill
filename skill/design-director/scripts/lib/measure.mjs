@@ -24,6 +24,19 @@ export function hiddenText() {
   const els = document.body ? [...document.body.querySelectorAll('*')] : [];
   const own = (el) => [...el.childNodes].filter((n) => n.nodeType === 3).map((n) => n.textContent).join(' ').replace(/\s+/g, ' ').trim();
   const seenText = new Set(els.filter((el) => el.__ddSeen).map(own));
+  // Slides of a carousel are hidden by design until the visitor turns to them: not a broken reveal.
+  const CAROUSEL = '[aria-roledescription="slide"], [aria-roledescription="carousel"], .swiper, .swiper-slide, .splide, .slick-slide, .glide, .embla, .flickity-slider, .keen-slider, [class*="carousel"], [class*="slider"], [class*="slideshow"]';
+  const clippedSideways = (el) => {
+    const r = el.getBoundingClientRect();
+    for (let e = el.parentElement; e && e !== document.body; e = e.parentElement) {
+      const cs = getComputedStyle(e);
+      if (!/(hidden|auto|scroll|clip)/.test(cs.overflowX)) continue;
+      const pr = e.getBoundingClientRect();
+      if (r.right <= pr.left + 1 || r.left >= pr.right - 1) return true;
+    }
+    return false;
+  };
+  let carousel = 0;
   for (const el of els) {
     if (['SCRIPT', 'STYLE', 'NOSCRIPT', 'TEMPLATE'].includes(el.tagName)) continue;
     if (el.__ddSeen) continue;
@@ -40,9 +53,13 @@ export function hiddenText() {
       if (cs.display === 'none' || cs.visibility === 'hidden') shown = false;
     }
     if (!shown) continue; // deliberately hidden (closed menus and the like)
+    if (el.closest(CAROUSEL) || clippedSideways(el)) {
+      carousel++;
+      continue;
+    }
     if (op < 0.05) out.push(text.slice(0, 60));
   }
-  return { count: out.length, samples: out.slice(0, 5) };
+  return { count: out.length, samples: out.slice(0, 5), carousel };
 }
 
 export function measure({ rules, viewport }) {
@@ -338,8 +355,24 @@ export function measure({ rules, viewport }) {
       if (r.width < 24 || r.height < 24) small.push(`${Math.round(r.width)}x${Math.round(r.height)} ${snippet(el)}`);
     }
     if (small.length) add('FAIL', 'tap-target', `${small.length} controls smaller than 24x24px on a phone`, small.slice(0, 4));
+    // The text's own box, not the element's: a full-width bar with padding keeps its words off the edge.
+    const textBox = (el) => {
+      let left = Infinity;
+      let right = -Infinity;
+      for (const n of el.childNodes) {
+        if (n.nodeType !== 3 || !n.textContent.trim()) continue;
+        const range = document.createRange();
+        range.selectNodeContents(n);
+        for (const q of range.getClientRects()) {
+          if (!q.width) continue;
+          left = Math.min(left, q.left);
+          right = Math.max(right, q.right);
+        }
+      }
+      return left === Infinity ? el.getBoundingClientRect() : { left, right };
+    };
     const edge = textEls.filter((el) => {
-      const r = el.getBoundingClientRect();
+      const r = textBox(el);
       return r.left < 12 || r.right > vw - 12;
     });
     if (edge.length) add('WARN', 'text-at-edge', `${edge.length} text elements within 12px of the screen edge`, edge.slice(0, 3).map(snippet));
@@ -435,12 +468,32 @@ export function measure({ rules, viewport }) {
   // Centred hero headline with two buttons side by side.
   if (h1s[0] && h1s[0].getBoundingClientRect().top < innerHeight) {
     const centred = getComputedStyle(h1s[0]).textAlign === 'center';
+    // A link in a slim full-width bar (announcement, header) is not a hero button.
+    const inBar = (el) => {
+      for (let e = el.parentElement; e && e !== document.body; e = e.parentElement) {
+        const r = e.getBoundingClientRect();
+        if (r.width >= innerWidth * 0.9 && r.height <= 64) return true;
+      }
+      return false;
+    };
+    // Buttons that repeat their label for a hover roll ("Get Started Get Started") count once.
+    const label = (el) => {
+      const t = (el.innerText || '').replace(/\s+/g, ' ').trim().toLowerCase();
+      const half = t.slice(0, Math.floor(t.length / 2)).trim();
+      return half && t === `${half} ${half}` ? half : t;
+    };
+    const seenLabels = new Set();
     const buttons = vis.filter((el) => {
-      if (!el.matches('a, button') || el.closest('nav')) return false;
+      if (!el.matches('a, button') || el.closest('nav') || inBar(el)) return false;
       const r = el.getBoundingClientRect();
       if (r.top > innerHeight || r.top < 0) return false;
+      // Hero buttons sit under the headline; controls further down the first screen (a carousel's arrows) are not.
+      if (r.top < h1s[0].getBoundingClientRect().top || r.top - h1s[0].getBoundingClientRect().bottom > 240) return false;
       const cs = getComputedStyle(el);
-      return rgba(cs.backgroundColor).a > 0.2 || parseFloat(cs.borderTopWidth) > 0;
+      if (!(rgba(cs.backgroundColor).a > 0.2 || parseFloat(cs.borderTopWidth) > 0)) return false;
+      if (seenLabels.has(label(el))) return false;
+      seenLabels.add(label(el));
+      return true;
     });
     if (centred && buttons.length >= 2) style('centred-hero-two-ctas', 'Centred hero headline with two buttons, the most common generated layout');
   }
