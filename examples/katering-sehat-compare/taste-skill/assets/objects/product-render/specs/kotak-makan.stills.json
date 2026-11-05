@@ -275,37 +275,6 @@
    ],
    "px": 1100
   },
-  "three-quarter-meja": {
-   "view": "three-quarter",
-   "scene": "meja",
-   "off": false,
-   "grounds": [
-    "light"
-   ],
-   "stills": {
-    "light": {
-     "nasi-merah": {
-      "file": "stills/kotak-makan-three-quarter-meja-nasi-merah.webp",
-      "half": "stills/kotak-makan-three-quarter-meja-nasi-merah-half.webp",
-      "w": 1128,
-      "h": 661
-     },
-     "shirataki": {
-      "file": "stills/kotak-makan-three-quarter-meja-shirataki.webp",
-      "half": "stills/kotak-makan-three-quarter-meja-shirataki-half.webp",
-      "w": 1128,
-      "h": 661
-     }
-    }
-   },
-   "box": [
-    0.0053,
-    0.0091,
-    0.9778,
-    0.9773
-   ],
-   "px": 1100
-  },
   "lebar-meja": {
    "view": "lebar",
    "scene": "meja",
