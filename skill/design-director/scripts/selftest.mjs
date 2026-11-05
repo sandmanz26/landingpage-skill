@@ -14,6 +14,9 @@ const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'design-director-'));
 let failed = 0;
 
 const run = (script, args, cwd = tmp) => spawnSync(process.execPath, [path.join(here, script), ...args], { cwd, encoding: 'utf8' });
+// A research report and a roast that pass the substantive checks (three sources; every point answered).
+const RESEARCH = '# Research\n## Sources\n| # | Source | What it gave | Date read |\n| --- | --- | --- | --- |\n| 1 | Brief from the owner | offer and price | 2026-11-04 |\n| 2 | Competitor site A | their pricing page | 2026-11-04 |\n| 3 | 40 Google reviews | the fear of pain | 2026-11-04 |\n';
+const ROAST = '# Roast\n## Points\n| # | Voice | Point | Evidence | Severity |\n| 1 | Customer | Price too late | R1 | high |\n| 2 | Competitor | Same hero as A | R2 | medium |\n| 3 | Owner | No proof | R3 | low |\n## Response\n| # | Decision | What changed |\n| 1 | Accepted | Price moved to the first screen |\n| 2 | Accepted | Hero built from the clinic photo |\n| 3 | Rejected | Proof waits for real reviews; marked as a gap |\n';
 const check = (name, ok, detail = '') => {
   console.log(`${ok ? 'pass' : 'FAIL'}  ${name}${ok ? '' : `\n      ${detail}`}`);
   if (!ok) failed++;
@@ -60,6 +63,8 @@ const check = (name, ok, detail = '') => {
   fs.writeFileSync(path.join(tmp, '.design/research.md'), '# research\nno sources section');
   check('progress refuses research without sources', p('done', 'research').status === 1);
   fs.appendFileSync(path.join(tmp, '.design/research.md'), '\n## Sources\n| 1 | brief | ... | today |');
+  check('progress refuses research with one source', p('done', 'research').status === 1);
+  fs.writeFileSync(path.join(tmp, '.design/research.md'), RESEARCH);
   check('progress accepts research with sources', p('done', 'research').status === 0);
   fs.writeFileSync(path.join(tmp, '.design/strategy.md'), '# strategy');
   p('done', 'strategy');
@@ -67,6 +72,10 @@ const check = (name, ok, detail = '') => {
   p('approve', 'strategy', '--note', 'ok');
   check('progress refuses a roast nobody answered', p('done', 'roast').status === 1);
   fs.appendFileSync(path.join(tmp, '.design/roast.md'), '\n## Response\n| 1 | Accepted | ... |');
+  check('progress refuses a roast of one point with an empty answer', p('done', 'roast').status === 1);
+  fs.writeFileSync(path.join(tmp, '.design/roast.md'), ROAST.replace('| 3 | Rejected | Proof waits for real reviews; marked as a gap |\n', ''));
+  check('progress refuses a roast with an unanswered point', p('done', 'roast').status === 1);
+  fs.writeFileSync(path.join(tmp, '.design/roast.md'), ROAST);
   check('progress accepts an answered roast', p('done', 'roast').status === 0);
   const back = p('back', 'brief', '--reason', 'audience changed');
   check('progress turns back and reopens later steps', back.status === 0 && /Reopened: brief, research, strategy, roast/.test(back.stdout), back.stdout + back.stderr);
@@ -193,11 +202,11 @@ const check = (name, ok, detail = '') => {
   const d = path.join(proj, '.design');
   fs.writeFileSync(path.join(d, 'brief.md'), '# Brief');
   p('approve', 'brief'); p('done', 'brief');
-  fs.writeFileSync(path.join(d, 'research.md'), '# Research\n## Sources\n- x');
+  fs.writeFileSync(path.join(d, 'research.md'), RESEARCH);
   p('done', 'research');
   fs.writeFileSync(path.join(d, 'strategy.md'), '# Strategy');
   p('done', 'strategy');
-  fs.writeFileSync(path.join(d, 'roast.md'), '# Roast\n## Response\n| 1 | Accepted |');
+  fs.writeFileSync(path.join(d, 'roast.md'), ROAST);
   p('approve', 'strategy'); p('done', 'roast');
   fs.mkdirSync(path.join(d, 'directions'));
   p('approve', 'direction');
@@ -234,11 +243,13 @@ const check = (name, ok, detail = '') => {
   const d = path.join(proj, '.design');
   fs.writeFileSync(path.join(d, 'brief.md'), '# Brief');
   p('approve', 'brief'); p('done', 'brief');
-  fs.writeFileSync(path.join(d, 'research.md'), '# R\n## Sources\n- x'); p('done', 'research');
+  fs.writeFileSync(path.join(d, 'research.md'), RESEARCH); p('done', 'research');
   fs.writeFileSync(path.join(d, 'spec.md'), '# Spec');
   check('progress refuses a spec without its Interactions section', p('done', 'spec').status !== 0);
+  fs.writeFileSync(path.join(d, 'spec.md'), '# Spec\n## Interactions\n| Element | Visitor does | They get | Purpose | Phone |\n| Flavour card | hover | the bowl |  | tap |');
+  check('progress refuses an interaction with no purpose', p('done', 'spec').status !== 0);
   fs.writeFileSync(path.join(d, 'spec.md'), '# Spec\n## Interactions\nnone'); p('done', 'spec');
-  fs.writeFileSync(path.join(d, 'roast.md'), '# Roast\n## Response\n- ok'); p('done', 'roast');
+  fs.writeFileSync(path.join(d, 'roast.md'), ROAST); p('done', 'roast');
   const noVariants = p('done', 'build');
   for (const v of ['v1', 'v2']) {
     fs.mkdirSync(path.join(d, 'variants', v), { recursive: true });
@@ -292,18 +303,50 @@ const check = (name, ok, detail = '') => {
   p('init', '--mode', 'section', '--effort', 'quick', '--gates', 'quick');
   fs.writeFileSync(path.join(d, 'brief.md'), '# Brief');
   p('approve', 'brief'); p('done', 'brief');
-  fs.writeFileSync(path.join(d, 'research.md'), '# R\n## Sources\n- x'); p('done', 'research');
+  fs.writeFileSync(path.join(d, 'research.md'), RESEARCH); p('done', 'research');
   fs.writeFileSync(path.join(d, 'spec.md'), '# Spec\n## Interactions\nnone'); p('done', 'spec');
-  fs.writeFileSync(path.join(d, 'roast.md'), '# Roast\n## Response\n- ok'); p('done', 'roast');
+  fs.writeFileSync(path.join(d, 'roast.md'), ROAST); p('done', 'roast');
   p('done', 'build');
   const rows = (verdict) => els.map((x) => `| ${x.id} | thing | job | lost | ${verdict(x)} |`).join('\n');
   fs.writeFileSync(path.join(d, 'reason.md'), `# Reason\n${rows(() => 'keep')}`.replace(/\| E01 \|.*\n/, ''));
   const partial = p('done', 'reason');
   fs.writeFileSync(path.join(d, 'reason.md'), `# Reason\n${rows((x) => (x.flags.includes('emoji') ? 'cut' : 'keep'))}`);
   const noResponse = p('done', 'reason');
+  const cutIds = els.filter((x) => x.flags.includes('emoji')).map((x) => x.id);
   fs.writeFileSync(path.join(d, 'reason.md'), `# Reason\n${rows((x) => (x.flags.includes('emoji') ? 'cut' : 'keep'))}\n## Response\n- emoji cards cut`);
+  const vague = p('done', 'reason');
+  fs.writeFileSync(path.join(d, 'reason.md'), `# Reason\n${rows((x) => (x.flags.includes('emoji') ? 'cut' : 'keep'))}\n## Response\n- ${cutIds.join(', ')} cut`);
+  const notPhotographed = p('done', 'reason');
+  fs.mkdirSync(path.join(d, 'reason', 'after'), { recursive: true });
+  fs.copyFileSync(ej, path.join(d, 'reason', 'after', 'elements.json'));
+  const stillThere = p('done', 'reason');
+  fs.writeFileSync(path.join(d, 'reason', 'after', 'elements.json'), JSON.stringify({ elements: els.filter((x) => !cutIds.includes(x.id)) }));
   const ok = p('done', 'reason');
-  check('progress wants a verdict for every element, and a response to every cut', partial.status !== 0 && /E01/.test(partial.stderr) && noResponse.status !== 0 && ok.status === 0, partial.stderr + noResponse.stderr + ok.stderr);
+  check('progress wants a verdict for every element, and a response to every cut', partial.status !== 0 && /E01/.test(partial.stderr) && noResponse.status !== 0 && vague.status !== 0 && ok.status === 0, partial.stderr + noResponse.stderr + vague.stderr + ok.stderr);
+  check('progress checks on a new photograph that cut elements are gone', notPhotographed.status !== 0 && stillThere.status !== 0 && /still on the page/.test(stillThere.stderr), notPhotographed.stderr + stillThere.stderr);
+  // look at standard effort: two AI jurors, and an inspection newer than the page
+  const st = JSON.parse(fs.readFileSync(path.join(d, 'progress.json'), 'utf8'));
+  st.effort = 'standard';
+  fs.writeFileSync(path.join(d, 'progress.json'), JSON.stringify(st));
+  fs.copyFileSync(path.join(fixtures, 'clean.html'), path.join(proj, 'index.html'));
+  run('inspect.mjs', [path.join(proj, 'index.html'), '--out', path.join(d, 'inspect'), '--quiet'], proj);
+  p('done', 'gate');
+  fs.writeFileSync(path.join(d, 'critique.md'), '# Critique');
+  const noJury = p('done', 'look');
+  fs.mkdirSync(path.join(d, 'jury', 'r1'), { recursive: true });
+  for (const j of ['art', 'customer']) fs.writeFileSync(path.join(d, 'jury', 'r1', `${j}.json`), JSON.stringify({ juror: j, kind: 'ai', refs: {} }));
+  const future = new Date(Date.now() + 60000);
+  fs.utimesSync(path.join(proj, 'index.html'), future, future);
+  const stale = p('done', 'look');
+  fs.utimesSync(path.join(proj, 'index.html'), new Date(Date.now() - 600000), new Date(Date.now() - 600000));
+  fs.writeFileSync(path.join(d, 'targets.json'), '{"colour":"bold"}');
+  fs.writeFileSync(path.join(d, 'inspect', 'fit.json'), JSON.stringify({ rows: [{ dial: 'colour', ok: false }, { dial: 'type', ok: true }], missed: 1 }));
+  fs.writeFileSync(path.join(d, 'critique.md'), '# Critique\n## Fit\nWe like it.');
+  const vagueFit = p('done', 'look');
+  fs.writeFileSync(path.join(d, 'critique.md'), '# Critique\n## Fit\n- colour: the brand book allows two colours only.');
+  const looked = p('done', 'look');
+  check('progress wants every missed dial explained by name', vagueFit.status !== 0 && /colour/.test(vagueFit.stderr), vagueFit.stderr);
+  check('progress wants two AI jurors and a fresh inspection before the look is done', noJury.status !== 0 && /two AI jurors/.test(noJury.stderr) && stale.status !== 0 && /inspect again/.test(stale.stderr) && looked.status === 0, noJury.stderr + stale.stderr + looked.stderr);
 }
 
 // guided gates: the user chooses the direction from sketches
@@ -315,9 +358,9 @@ const check = (name, ok, detail = '') => {
   const d = path.join(proj, '.design');
   fs.writeFileSync(path.join(d, 'brief.md'), '# Brief');
   p('approve', 'brief', '--note', 'ok'); p('done', 'brief');
-  fs.writeFileSync(path.join(d, 'research.md'), '# R\n## Sources\n- x'); p('done', 'research');
+  fs.writeFileSync(path.join(d, 'research.md'), RESEARCH); p('done', 'research');
   fs.writeFileSync(path.join(d, 'strategy.md'), '# S'); p('done', 'strategy');
-  fs.writeFileSync(path.join(d, 'roast.md'), '# Roast\n## Response\n- ok');
+  fs.writeFileSync(path.join(d, 'roast.md'), ROAST);
   p('approve', 'strategy', '--note', 'ok'); p('done', 'roast');
   fs.mkdirSync(path.join(d, 'directions'));
   fs.writeFileSync(path.join(d, 'targets.json'), '{}');

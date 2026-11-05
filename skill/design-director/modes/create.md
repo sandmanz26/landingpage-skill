@@ -294,7 +294,9 @@ profile and the five most important customer questions from the strategy, and th
 and nothing else (not the code, not your intentions). Designers may add their votes in the same
 folder. Combine with `jury.mjs score .design/jury/<round>` and write the combined critique to
 `.design/critique.md`: the scores, the flagged disagreements, any veto, and the top three problems
-across all jurors. At quick effort one critic (`rubric/critic.md`) is enough.
+across all jurors. At quick effort one critic (`rubric/critic.md`) is enough. `done look` refuses at
+standard and thorough effort without at least two AI juror files in `.design/jury/<round>/`, and
+whenever the page changed after the last inspection.
 
 Before the jurors, run `fit.mjs .design/inspect --targets .design/targets.json` and give its result
 to the jurors with the evidence pack. Every missed target is fixed, or `.design/critique.md` gets a

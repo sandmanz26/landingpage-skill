@@ -71,6 +71,24 @@ const load = () => {
 };
 const save = (s) => fs.writeFileSync(STATE, JSON.stringify(s, null, 2));
 const log = (line) => fs.appendFileSync(LOG, `${now()}\t${line}\n`);
+// Rows of a markdown table under a heading: [[cell, cell, …], …], header and divider rows dropped.
+const tableRows = (text, heading) => {
+  const at = text.search(new RegExp(`^##\\s*(${heading})\\b`, 'im'));
+  if (at < 0) return [];
+  const body = text.slice(at).split('\n').slice(1);
+  const end = body.findIndex((l) => /^##\s/.test(l));
+  return (end < 0 ? body : body.slice(0, end))
+    .filter((l) => /^\s*\|/.test(l) && !/^\s*\|[\s:|-]+\|\s*$/.test(l))
+    .map((l) => l.trim().replace(/^\||\|$/g, '').split('|').map((c) => c.trim()))
+    .filter((cells) => !/^(#|id|element|source|sumber|decision|keputusan)$/i.test(cells[0]) && !/^(#|id)$/i.test(cells[0]));
+};
+const section = (text, heading) => {
+  const at = text.search(new RegExp(`^##\\s*(${heading})\\b`, 'im'));
+  if (at < 0) return '';
+  const rest = text.slice(at).split('\n');
+  const end = rest.slice(1).findIndex((l) => /^##\s/.test(l));
+  return (end < 0 ? rest : rest.slice(0, end + 1)).join('\n');
+};
 
 function newestSourceMtime(root = process.cwd()) {
   let newest = 0;
@@ -164,12 +182,23 @@ switch (cmd) {
     if (gate && !s.approvals[gate]) fail(`"${step}" needs the ${gate} approval first. Show it to the user, then run: approve ${gate}`);
     if (EVIDENCE[step] && !fs.existsSync(path.join(DIR, EVIDENCE[step]))) fail(`"${step}" needs .design/${EVIDENCE[step]} to exist first.`);
     if (step === 'roast') {
+      // Every point gets its own answer: accepted with the change, or rejected with a reason.
       const r = fs.readFileSync(path.join(DIR, 'roast.md'), 'utf8');
       if (!/##\s*(Response|Tanggapan)/i.test(r)) fail('roast.md needs a "## Response" section answering every point (accepted and changed, or rejected with a reason).');
+      const points = tableRows(r, 'Points|Poin').map((c) => c[0]).filter((n) => /^\d+$/.test(n));
+      if (points.length < 3) fail('roast.md needs a "## Points" table with at least three numbered points (roast/method.md): a roast with fewer found nothing or was not done.');
+      const answers = new Map(tableRows(r, 'Response|Tanggapan').map((c) => [c[0], c]));
+      const unanswered = points.filter((n) => {
+        const a = answers.get(n);
+        return !a || !/^(accept|reject|diterima|ditolak|terima|tolak)/i.test(a[1] || '') || (a[2] || '').length < 8;
+      });
+      if (unanswered.length) fail(`roast.md: point(s) ${unanswered.join(', ')} have no answer in the Response table (| # | Accepted or Rejected | what changed, or why not |).`);
     }
     if (step === 'research') {
       const r = fs.readFileSync(path.join(DIR, 'research.md'), 'utf8');
       if (!/##\s*(Sources|Sumber)/i.test(r)) fail('research.md needs a "## Sources" section listing what was read, with dates.');
+      const srcs = tableRows(r, 'Sources|Sumber').filter((c) => (c[1] || '').length >= 4);
+      if (srcs.length < 3) fail(`research.md lists ${srcs.length} source(s): read at least three (the user's materials, competitors, customer voice) and list each in the Sources table.`);
     }
     if (step === 'reason') {
       // Every numbered element of the built page has a verdict (rubric/reason.md).
@@ -195,13 +224,38 @@ switch (cmd) {
         const noVerdict = ids.filter((id) => rows.has(id) && !VERDICT.test(rows.get(id)));
         if (missing.length) fail(`.design/${rel(rm)} has no row for ${missing.slice(0, 10).join(', ')}${missing.length > 10 ? ` and ${missing.length - 10} more` : ''}: every element needs its job and a verdict.`);
         if (noVerdict.length) fail(`.design/${rel(rm)}: ${noVerdict.slice(0, 10).join(', ')} end without a verdict (keep, fix, merge or cut).`);
-        const acted = [...rows.values()].some((v) => /^(fix|merge|cut|perbaiki|gabung|buang)/i.test(v));
-        if (acted && s.mode !== 'review' && !/##\s*(Response|Tanggapan)/i.test(text)) fail(`.design/${rel(rm)} has fix, merge or cut verdicts: add a "## Response" section saying what was done for each.`);
+        const acted = ids.filter((id) => /^(fix|merge|cut|perbaiki|gabung|buang)/i.test(rows.get(id)));
+        if (acted.length && s.mode !== 'review') {
+          const resp = section(text, 'Response|Tanggapan');
+          if (!resp) fail(`.design/${rel(rm)} has fix, merge or cut verdicts: add a "## Response" section saying what was done for each.`);
+          const silent = acted.filter((id) => !new RegExp(`\\b${id}\\b`).test(resp));
+          if (silent.length) fail(`.design/${rel(rm)} Response does not say what was done for ${silent.join(', ')}.`);
+          // A cut is checked on the page itself: photograph it again and the element must be gone.
+          const cut = ids.filter((id) => /^(cut|buang)/i.test(rows.get(id)));
+          if (cut.length) {
+            const after = path.join(DIR, d, 'reason', 'after', 'elements.json');
+            if (!fs.existsSync(after)) fail(`Elements were cut (${cut.join(', ')}): photograph the changed page again with elements.mjs <page> --out .design/${rel(path.dirname(after))} so the cuts can be checked.`);
+            const before = JSON.parse(fs.readFileSync(ej, 'utf8')).elements;
+            const now = JSON.parse(fs.readFileSync(after, 'utf8')).elements;
+            const key = (e) => `${e.kind}|${(e.label || e.src || e.inside || '').toLowerCase()}`;
+            const still = new Set(now.map(key));
+            const left = cut.filter((id) => {
+              const e = before.find((x) => x.id === id);
+              return e && (e.label || e.src) && still.has(key(e));
+            });
+            if (left.length) fail(`Cut but still on the page: ${left.map((id) => `${id} "${(before.find((x) => x.id === id).label || '').slice(0, 40)}"`).join(', ')}. Remove them, photograph again, or change the verdict with a reason.`);
+          }
+        }
       }
     }
     if (step === 'spec') {
       const sp = fs.readFileSync(path.join(DIR, 'spec.md'), 'utf8');
       if (!/##\s*(Interactions|Interaksi)/i.test(sp)) fail('spec.md needs an "## Interactions" section: every element the visitor operates, with what it reveals and the customer question it answers, or "none" (motion/functions.md → Interactions).');
+      const ix = section(sp, 'Interactions|Interaksi');
+      const rows = tableRows(sp, 'Interactions|Interaksi').filter((c) => c.length >= 4 && !/^element$/i.test(c[0]));
+      if (!rows.length && !/\b(none|tidak ada)\b/i.test(ix)) fail('spec.md "## Interactions" is empty: list each interaction in the table, or write "none".');
+      const noPurpose = rows.filter((c) => (c[3] || '').length < 4).map((c) => c[0]);
+      if (noPurpose.length) fail(`spec.md Interactions: ${noPurpose.join(', ')} name no customer question (fourth column). An interaction with no purpose is cut, not built.`);
     }
     if (step === 'direction' && !fs.existsSync(path.join(DIR, 'directions'))) fail('"direction" needs the dealt directions in .design/directions/.');
     if (step === 'direction' && s.gates === 'guided') {
@@ -211,12 +265,31 @@ switch (cmd) {
     }
     if (step === 'direction' && !fs.existsSync(path.join(DIR, 'targets.json')))
       fail('"direction" needs .design/targets.json: the visual dials the user chose (rules/visual-dials.md), or team/visual-defaults.json copied with the reason.');
+    if (step === 'look') {
+      // At standard and thorough the look is a jury: at least two independent juror files.
+      const c = fs.existsSync(path.join(DIR, 'critique.md')) ? fs.readFileSync(path.join(DIR, 'critique.md'), 'utf8') : '';
+      if (s.effort !== 'quick' && !/not independent|tidak independen/i.test(c)) {
+        const jd = path.join(DIR, 'jury');
+        const jurors = fs.existsSync(jd)
+          ? fs.readdirSync(jd, { recursive: true }).filter((f) => /\.json$/.test(f) && !/summary|owner|_/.test(path.basename(f))).filter((f) => {
+              try { return JSON.parse(fs.readFileSync(path.join(jd, f), 'utf8')).kind === 'ai'; } catch { return false; }
+            })
+          : [];
+        if (jurors.length < 2) fail(`At ${s.effort} effort the look is done by at least two AI jurors (rubric/jury.md): put their files in .design/jury/<round>/. Without subagents, say "not independent" in critique.md.`);
+      }
+      const ir = path.join(DIR, 'inspect/report.json');
+      if ((s.variants || 1) === 1 && fs.existsSync(ir) && newestSourceMtime() > Date.parse(JSON.parse(fs.readFileSync(ir, 'utf8')).time))
+        fail('The page changed after the last inspection (reason or look fixes): inspect again before the look is done.');
+    }
     if (step === 'look' && fs.existsSync(path.join(DIR, 'targets.json'))) {
       const fp = path.join(DIR, 'inspect/fit.json');
       if (!fs.existsSync(fp)) fail('Run fit.mjs .design/inspect --targets .design/targets.json before the look.');
       const fit = JSON.parse(fs.readFileSync(fp, 'utf8'));
       const c = fs.readFileSync(path.join(DIR, 'critique.md'), 'utf8');
       if (fit.missed > 0 && !/##\s*Fit/i.test(c)) fail(`${fit.missed} visual target(s) missed (fit.json): fix them, or add a "## Fit" section to critique.md with the reason each stays.`);
+      const fitText = section(c, 'Fit');
+      const unexplained = fit.rows.filter((r) => !r.ok && !new RegExp(`\\b${r.dial}\\b`, 'i').test(fitText)).map((r) => r.dial);
+      if (fit.missed > 0 && unexplained.length) fail(`critique.md "## Fit" does not explain the missed target(s): ${unexplained.join(', ')}. Name each one with its reason, or fix it.`);
     }
     // Variants: every one is built before the gate, and one is chosen before the look is done.
     const nv = s.variants || 1;

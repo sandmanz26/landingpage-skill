@@ -108,8 +108,10 @@ First screen: … Order: … Spec against page: … The same job twice: …
 ```
 
 Every element ID from `elements.md` has a row with a verdict; `progress.mjs done reason` refuses
-otherwise. When any verdict is fix, merge or cut, the **Response** says what was done for each, or
-why it stays after all. Then the gate inspects the changed page.
+otherwise. When any verdict is fix, merge or cut, the **Response** names each of those IDs with what
+was done, or why it stays after all. After cutting, photograph the page again
+(`elements.mjs <page> --out .design/reason/after`): `done reason` compares the two and refuses while
+a cut element is still on the page. Then the gate inspects the changed page.
 
 ## What this roast does not do
 

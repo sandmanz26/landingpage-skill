@@ -55,7 +55,8 @@ keep | change | redo, with the specific changes demanded.
 | 1 | Accepted | New section 2 "Kalau takut sakit"; moved above the price |
 ```
 
-The **Response** section is written by the builder, not by the roaster: every point is either
+At least three numbered points in the Points table, and one Response row per point number with
+"Accepted" or "Rejected" and what changed or why not: `progress.mjs` checks each number. The **Response** section is written by the builder, not by the roaster: every point is either
 accepted (and the change is made in the strategy, storyline or direction choice) or rejected with a
 reason. `progress.mjs` refuses to mark the roast done without it. Points of high severity cannot be
 rejected without a reason the user would accept; show them at the strategy gate.
