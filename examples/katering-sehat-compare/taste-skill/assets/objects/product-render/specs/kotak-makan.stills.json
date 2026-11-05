@@ -1,6 +1,6 @@
 {
  "id": "kotak-makan",
- "made": "2026-11-05T16:36:44.901Z",
+ "made": "2026-11-05T16:42:55.329Z",
  "px": 1100,
  "grounds": [
   "light"
@@ -22,22 +22,170 @@
      "nasi-merah": {
       "file": "stills/kotak-makan-lebar-nasi-merah.webp",
       "half": "stills/kotak-makan-lebar-nasi-merah-half.webp",
-      "w": 1166,
-      "h": 622
+      "w": 1120,
+      "h": 484
      },
      "shirataki": {
       "file": "stills/kotak-makan-lebar-shirataki.webp",
       "half": "stills/kotak-makan-lebar-shirataki-half.webp",
-      "w": 1166,
-      "h": 622
+      "w": 1120,
+      "h": 484
      }
     }
    },
    "box": [
-    0.0051,
-    0.0096,
-    0.9511,
-    0.9373
+    0.0054,
+    0.0124,
+    0.9893,
+    0.8988
+   ],
+   "px": 1100
+  },
+  "three-quarter": {
+   "view": "three-quarter",
+   "scene": null,
+   "off": false,
+   "grounds": [
+    "light"
+   ],
+   "stills": {
+    "light": {
+     "nasi-merah": {
+      "file": "stills/kotak-makan-three-quarter-nasi-merah.webp",
+      "half": "stills/kotak-makan-three-quarter-nasi-merah-half.webp",
+      "w": 1110,
+      "h": 614
+     },
+     "shirataki": {
+      "file": "stills/kotak-makan-three-quarter-shirataki.webp",
+      "half": "stills/kotak-makan-three-quarter-shirataki-half.webp",
+      "w": 1110,
+      "h": 614
+     }
+    }
+   },
+   "box": [
+    0.0054,
+    0.0098,
+    0.9901,
+    0.9756
+   ],
+   "px": 1100
+  },
+  "top": {
+   "view": "top",
+   "scene": null,
+   "off": false,
+   "grounds": [
+    "light"
+   ],
+   "stills": {
+    "light": {
+     "nasi-merah": {
+      "file": "stills/kotak-makan-top-nasi-merah.webp",
+      "half": "stills/kotak-makan-top-nasi-merah-half.webp",
+      "w": 1116,
+      "h": 841
+     },
+     "shirataki": {
+      "file": "stills/kotak-makan-top-shirataki.webp",
+      "half": "stills/kotak-makan-top-shirataki-half.webp",
+      "w": 1116,
+      "h": 841
+     }
+    }
+   },
+   "box": [
+    0.0054,
+    0.0131,
+    0.9892,
+    0.9001
+   ],
+   "px": 1100
+  },
+  "detail-nasi": {
+   "view": "detail-nasi",
+   "scene": null,
+   "off": false,
+   "grounds": [
+    "light"
+   ],
+   "stills": {
+    "light": {
+     "nasi-merah": {
+      "file": "stills/kotak-makan-detail-nasi-nasi-merah.webp",
+      "half": "stills/kotak-makan-detail-nasi-nasi-merah-half.webp",
+      "w": 1916,
+      "h": 1353
+     },
+     "shirataki": {
+      "file": "stills/kotak-makan-detail-nasi-shirataki.webp",
+      "half": "stills/kotak-makan-detail-nasi-shirataki-half.webp",
+      "w": 1916,
+      "h": 1353
+     }
+    }
+   },
+   "box": [
+    0.2448,
+    0.2602,
+    1,
+    0.9372
+   ],
+   "focus": [
+    0.2704,
+    0.2621,
+    0.7296,
+    0.7379
+   ],
+   "cut": [
+    0,
+    0,
+    1,
+    0
+   ],
+   "px": 1100
+  },
+  "detail-lauk": {
+   "view": "detail-lauk",
+   "scene": null,
+   "off": false,
+   "grounds": [
+    "light"
+   ],
+   "stills": {
+    "light": {
+     "nasi-merah": {
+      "file": "stills/kotak-makan-detail-lauk-nasi-merah.webp",
+      "half": "stills/kotak-makan-detail-lauk-nasi-merah-half.webp",
+      "w": 1375,
+      "h": 1637
+     },
+     "shirataki": {
+      "file": "stills/kotak-makan-detail-lauk-shirataki.webp",
+      "half": "stills/kotak-makan-detail-lauk-shirataki-half.webp",
+      "w": 1375,
+      "h": 1637
+     }
+    }
+   },
+   "box": [
+    0,
+    0.2505,
+    0.8996,
+    0.9805
+   ],
+   "focus": [
+    0.18,
+    0.3643,
+    0.82,
+    0.6357
+   ],
+   "cut": [
+    1,
+    0,
+    0,
+    0
    ],
    "px": 1100
   }
