@@ -1,0 +1,45 @@
+{
+  "targets": "../../skill/design-director/team/visual-defaults.json",
+  "rows": [
+    {
+      "dial": "colour",
+      "want": "bold: 4+ flat colour families with roles",
+      "got": "4 colour families (6 values), 0 gradients",
+      "ok": false,
+      "why": "team Prefer: bold flat colour"
+    },
+    {
+      "dial": "type",
+      "want": "display ÷ body ≥ 6",
+      "got": "107/16px = ×6.7",
+      "ok": true
+    },
+    {
+      "dial": "imagery",
+      "want": "photo",
+      "got": "0 photos, 3 illustrations, 0 videos",
+      "ok": false
+    },
+    {
+      "dial": "motion",
+      "want": "story",
+      "got": "no library, 0 sticky panels, up to 4 moving on scroll",
+      "ok": true
+    },
+    {
+      "dial": "fonts",
+      "want": "2 type families or fewer",
+      "got": "figtree 83% + bricolage grotesque 17%",
+      "ok": true,
+      "why": "team Always: one text face + one display face"
+    },
+    {
+      "dial": "always",
+      "want": "a price near the main action",
+      "got": "Rp 45.000, Rp 225.000",
+      "ok": true,
+      "why": "team Always rule"
+    }
+  ],
+  "missed": 2
+}

@@ -1,0 +1,15 @@
+{
+  "colour": "bold",
+  "typeRatio": 6,
+  "imagery": "illustration",
+  "motion": "story",
+  "priceNearAction": true,
+  "fonts": 2,
+  "said": {
+    "colour": "autopilot: team default (bold flat colour with roles); four food colours, one per box part",
+    "typeRatio": "autopilot: team default x6",
+    "imagery": "autopilot: illustration instead of team default photo because the client has no photos and photos.mjs could not reach Openverse/Commons (no Unsplash key); shot list delivered",
+    "motion": "autopilot: team default story, limited to the box filling part by part, static under reduced motion",
+    "priceNearAction": "team Always rule"
+  }
+}

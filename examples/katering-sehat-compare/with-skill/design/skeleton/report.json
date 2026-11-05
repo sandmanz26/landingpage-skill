@@ -1,0 +1,309 @@
+{
+  "target": ".design/skeleton.html",
+  "time": "2026-11-05T16:36:22.116Z",
+  "rules": {
+    "purple-gradient": "warn",
+    "gradient": "info",
+    "glass": "info",
+    "system-font-only": "warn",
+    "too-many-font-sizes": "warn",
+    "too-many-colours": "warn",
+    "shadow-on-everything": "warn",
+    "icon-card-row": "warn",
+    "centred-hero-two-ctas": "warn",
+    "emoji": "warn",
+    "kit-sample": "fail"
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "pageHeight": 5646,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "system-font-only",
+          "message": "Only a default typeface carries the page (system-ui)"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "system-ui",
+            "share": 100
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "system ui",
+            "share": 100
+          }
+        ],
+        "fontSizes": [
+          88,
+          52,
+          40,
+          21,
+          18
+        ],
+        "textColours": [
+          "#222222",
+          "#ffffff"
+        ],
+        "backgroundColours": [
+          "#555555",
+          "#cfcfcf",
+          "#dddddd"
+        ],
+        "chromaticColours": 0,
+        "colourFamilies": 0,
+        "spacing": {
+          "distinct": 13,
+          "offScale": 3,
+          "values": [
+            8,
+            10,
+            12,
+            16,
+            18,
+            20,
+            21,
+            24,
+            28,
+            40,
+            48,
+            64,
+            140
+          ]
+        },
+        "radii": [
+          "99px",
+          "28px"
+        ],
+        "shadows": 0,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 0,
+        "animatedElements": 0,
+        "cls": 0
+      },
+      "screenshots": [
+        ".design/skeleton/desktop-fold.png",
+        ".design/skeleton/desktop-page-01.png",
+        ".design/skeleton/desktop-page-02.png",
+        ".design/skeleton/desktop-page-03.png",
+        ".design/skeleton/desktop-page-04.png",
+        ".design/skeleton/desktop-page-05.png",
+        ".design/skeleton/desktop-page-06.png",
+        ".design/skeleton/desktop-page-07.png"
+      ]
+    },
+    "tablet": {
+      "width": 768,
+      "pageHeight": 4460,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "system-font-only",
+          "message": "Only a default typeface carries the page (system-ui)"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "system-ui",
+            "share": 100
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "system ui",
+            "share": 100
+          }
+        ],
+        "fontSizes": [
+          49,
+          40,
+          30,
+          21,
+          18
+        ],
+        "textColours": [
+          "#222222",
+          "#ffffff"
+        ],
+        "backgroundColours": [
+          "#555555",
+          "#cfcfcf",
+          "#dddddd"
+        ],
+        "chromaticColours": 0,
+        "colourFamilies": 0,
+        "spacing": {
+          "distinct": 13,
+          "offScale": 5,
+          "values": [
+            8,
+            10,
+            12,
+            16,
+            18,
+            20,
+            21,
+            24,
+            28,
+            38.5,
+            40,
+            48,
+            77
+          ]
+        },
+        "radii": [
+          "99px",
+          "28px"
+        ],
+        "shadows": 0,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 0,
+        "animatedElements": 0,
+        "cls": 0
+      },
+      "screenshots": [
+        ".design/skeleton/tablet-fold.png",
+        ".design/skeleton/tablet-page-01.png",
+        ".design/skeleton/tablet-page-02.png",
+        ".design/skeleton/tablet-page-03.png",
+        ".design/skeleton/tablet-page-04.png",
+        ".design/skeleton/tablet-page-05.png"
+      ]
+    },
+    "mobile": {
+      "width": 390,
+      "pageHeight": 5375,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "system-font-only",
+          "message": "Only a default typeface carries the page (system-ui)"
+        },
+        {
+          "severity": "WARN",
+          "rule": "text-at-edge",
+          "message": "1 text elements within 12px of the screen edge",
+          "sample": [
+            "<footer> \"Dapur Seimbang · Jakarta Selatan\""
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "system-ui",
+            "share": 100
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "system ui",
+            "share": 100
+          }
+        ],
+        "fontSizes": [
+          40,
+          30,
+          21,
+          18
+        ],
+        "textColours": [
+          "#222222",
+          "#ffffff"
+        ],
+        "backgroundColours": [
+          "#555555",
+          "#cfcfcf",
+          "#dddddd"
+        ],
+        "chromaticColours": 0,
+        "colourFamilies": 0,
+        "spacing": {
+          "distinct": 13,
+          "offScale": 4,
+          "values": [
+            8,
+            10,
+            12,
+            16,
+            18,
+            19.5,
+            20,
+            21,
+            24,
+            28,
+            40,
+            48,
+            72
+          ]
+        },
+        "radii": [
+          "99px",
+          "28px"
+        ],
+        "shadows": 0,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 0,
+        "animatedElements": 0,
+        "cls": 0
+      },
+      "screenshots": [
+        ".design/skeleton/mobile-fold.png",
+        ".design/skeleton/mobile-page-01.png",
+        ".design/skeleton/mobile-page-02.png",
+        ".design/skeleton/mobile-page-03.png",
+        ".design/skeleton/mobile-page-04.png",
+        ".design/skeleton/mobile-page-05.png",
+        ".design/skeleton/mobile-page-06.png",
+        ".design/skeleton/mobile-page-07.png"
+      ]
+    }
+  },
+  "checks": {
+    "reducedMotion": {
+      "findings": [],
+      "screenshot": ".design/skeleton/reduced-motion-fold.png"
+    },
+    "noJavaScript": {
+      "findings": [],
+      "withJs": 1165,
+      "withoutJs": 1165
+    }
+  },
+  "summary": {
+    "fail": 0,
+    "warn": 2
+  },
+  "url": "http://127.0.0.1:45653/.design/skeleton.html",
+  "findings": [
+    {
+      "severity": "WARN",
+      "rule": "system-font-only",
+      "message": "Only a default typeface carries the page (system-ui)",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "text-at-edge",
+      "message": "1 text elements within 12px of the screen edge",
+      "sample": [
+        "<footer> \"Dapur Seimbang · Jakarta Selatan\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    }
+  ]
+}

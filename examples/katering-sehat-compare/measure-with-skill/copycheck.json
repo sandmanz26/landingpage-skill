@@ -1,0 +1,51 @@
+{
+  "target": "with-skill/index.html",
+  "voice": null,
+  "time": "2026-11-05T17:03:22.871Z",
+  "stats": {
+    "headings": 14,
+    "paragraphs": 32,
+    "sentences": 42,
+    "words": 275,
+    "averageSentence": 6.5,
+    "longWordShare": 0.004
+  },
+  "skim": [
+    "  [Dapur Seimbang]",
+    "  [Chat WhatsApp]",
+    "Makan siang seimbang ke kantormu.",
+    "  [Pesan lewat WhatsApp]",
+    "Selalu empat bagian di setiap kotak.",
+    "Karbo: nasi merah atau shirataki",
+    "Lauk: ayam, ikan, atau tahu tempe",
+    "Sayur",
+    "Buah",
+    "Isinya ganti tiap hari. Bagiannya tetap.",
+    "  [Senin Ayam panggang bumbu kuning Tumis buncis wortel Pepaya]",
+    "  [Selasa Pepes ikan Sayur bening bayam Semangka]",
+    "  [Rabu Tahu tempe bacem Capcay Melon]",
+    "  [Kamis Ayam suwir kemangi Urap sayur Nanas]",
+    "  [Jumat Ikan bakar kecap Tumis kangkung Buah naga]",
+    "Rp 45.000 sekotak. Mulai dari satu minggu.",
+    "  [Pesan 5 hari lewat WhatsApp]",
+    "Mulai langganan lewat satu chat.",
+    "Buka WhatsApp",
+    "Lengkapi empat hal",
+    "Tunggu balasan",
+    "  [Kirim pesan ini lewat WhatsApp]",
+    "Soal jam antar, area, dan bayar.",
+    "Lima hari makan siang, satu chat.",
+    "  [Chat 0812-3456-7890]"
+  ],
+  "findings": [
+    {
+      "severity": "WARN",
+      "rule": "no-voice",
+      "message": "No voice.md: the reader and the glossary are not written down (copy/method.md)"
+    }
+  ],
+  "summary": {
+    "fail": 0,
+    "warn": 1
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "seed": 971124372,
+  "library": "directions-seed.json",
+  "sector": "restaurant",
+  "tone": "warm",
+  "have": [],
+  "brief": "Katering makan siang sehat berlangganan, diantar ke kantor Jakarta Selatan, Rp 45.000/porsi, pesan via WhatsApp, tanpa foto",
+  "dealt": [
+    "one-motif",
+    "uneven-photographs",
+    "page-is-the-object"
+  ]
+}

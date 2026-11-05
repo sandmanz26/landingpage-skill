@@ -82,12 +82,12 @@
     },
     "detail-nasi": {
       "part": [
-        "nasi*"
+        "nasi atas"
       ],
-      "angle": -55,
-      "elev": 40,
-      "margin": 1,
-      "cover": 1
+      "angle": -50,
+      "elev": 38,
+      "margin": 1.35,
+      "cover": 1.4
     },
     "detail-lauk": {
       "part": [

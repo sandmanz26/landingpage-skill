@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="id" data-type="product" data-radius="soft" data-buttons="pill" data-motion>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dapur Seimbang: katering makan siang sehat untuk kantor di Jakarta Selatan</title>
+<meta name="description" content="Katering makan siang sehat yang diantar ke kantor di Jakarta Selatan, Senin sampai Jumat. Rp&nbsp;45.000 per porsi, langganan minimal 5 hari, pesan lewat WhatsApp.">
+<meta name="site-kind" content="other">
+<meta name="page-type" content="product">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..700&family=Figtree:wght@400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/system.css">
+<link rel="stylesheet" href="assets/ui/cards.css">
+<link rel="stylesheet" href="assets/motion/motion.css">
+<link rel="stylesheet" href="assets/backgrounds/backgrounds.css">
+<link rel="stylesheet" href="assets/layout/layout.css">
+<link rel="stylesheet" href="assets/icons/icon.css">
+<style>
+:root {
+  --p-bg: #e5e1d8; --p-surface: #dad5ca; --p-ink: #2a1d17; --p-muted: #65564c;
+  --p-accent: #456f3a; --p-accent-ink: #ffffff; --p-action: #456f3a; --p-action-ink: #ffffff;
+  --p-inv-bg: #2a1d17; --p-inv-surface: #352822; --p-inv-ink: #e5e1d8; --p-inv-muted: #9e968e;
+  --p-inv-accent: #e5e1d8; --p-inv-accent-ink: #2a1d17; --p-inv-action: #e5e1d8; --p-inv-action-ink: #2a1d17;
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-text: "Figtree", system-ui, sans-serif;
+  --display-weight: 400;
+  --display-tracking: -0.03em;
+  --display-tracking-xl: -0.04em;
+  --display-stretch: 96%;
+}
+</style>
+<!-- page CSS: only inside a visual, the frames' sizes, the brand band darkened to 7:1 and the order card's controls -->
+<style>
+  /* the brand band: the accent darkened until white text passes 7:1 (backgrounds.md, The brand band) */
+  #antar.ground-brand { --p-accent: #2f5228; }
+  /* the use scene: a wide frame across the wrap, the desk filling it */
+  #antar .frame { --ratio: 34%; }
+  @media (min-width: 640px) and (max-width: 1023px) { #antar .frame { --ratio: 70%; } }
+  @media (max-width: 639px) { #antar .frame { --ratio: 100%; } }
+  /* the close-ups of the four parts: square frames */
+  #menu .frame { --ratio: 100%; }
+  @media (min-width: 640px) and (max-width: 1023px) { #menu .grid > .card { grid-column: span 6; } #menu .frame { --ratio: 66%; } }
+  @media (max-width: 639px) { #menu .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } #menu .grid > .card { grid-column: auto; } }
+  /* the name, the main button and the menu button on one line at 390 */
+  @media (max-width: 399px) { .nav__logo { font-size: 16px; } }
+  /* the order section: a lower frame on the tablet; on a phone two screens, the card then the box */
+  @media (min-width: 640px) and (max-width: 1023px) { #pesan .frame { --ratio: 42%; } }
+  @media (max-width: 639px) { #pesan .wrap > .grid { display: contents; } #pesan .frame { --ratio: 120%; } }
+  /* the order card's choices */
+  .choice-set { border: 0; margin: 0; padding: 0; display: grid; gap: var(--s-2); }
+  .choice-set legend { padding: 0; margin-bottom: var(--s-2); font-size: var(--t-small); font-weight: 500; }
+  .choices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-3); }
+  .choice { display: flex; align-items: center; gap: var(--s-3); height: var(--btn-h); padding: 0 var(--s-4); border: 1px solid var(--line-strong); border-radius: var(--r-sm); background: var(--bg); font-size: var(--t-body); font-weight: 400; cursor: pointer; }
+  .choice:has(input:checked) { border-color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); }
+  .choice input { accent-color: var(--action); margin: 0; }
+  .order { display: grid; gap: var(--s-5); align-content: start; }
+  .order__fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-4); }
+  .order__total { display: flex; justify-content: space-between; align-items: baseline; padding-top: var(--s-4); border-top: 1px solid var(--line); }
+  .order__total output { font: var(--display-weight) var(--t-stat)/1.1 var(--font-display); letter-spacing: var(--display-tracking); font-variant-numeric: tabular-nums; }
+  .order .btn { width: 100%; }
+</style>
+</head>
+<body>
+<!-- type: product (page type product, site-kind other: a lunch box sold by subscription and delivered; nothing happens at a door)
+     deal: hero product (deal.mjs --type product --has object), nav nav-split (no panel: no photographs),
+     close close-photo dealt, re-dealt to the head row of close-word without the name (no photograph to show),
+     footer footer-dark, rhythm brand-band (#antar, the use scene), buttons pill, mark ring,
+     palette green-mat-chocolate, pairing bricolage, radius soft; no grounds, effect, moment or scene (kind other)
+     pictures: one product-render spec (assets/objects/product-render/specs/kotak-makan.json), every view a still:
+     hero lebar (nasi merah), #kotak three-quarter (shirataki), #menu four close-ups (parts), #antar lebar+meja (use, brand band),
+     #pesan top (the swatch switches it) -->
+
+<header class="nav nav--split">
+  <div class="wrap nav__bar">
+    <a class="nav__logo" href="#top"><span class="mark" data-mark="ring" aria-hidden="true"></span>Dapur Seimbang</a>
+    <nav class="nav__links" aria-label="Utama">
+      <div class="nav__item"><a class="nav__link" href="#kotak">Isi</a></div>
+      <div class="nav__item"><a class="nav__link" href="#menu">Menu</a></div>
+      <div class="nav__item"><a class="nav__link" href="#antar">Antar</a></div>
+    </nav>
+    <div class="nav__actions">
+      <a class="btn btn--primary" href="#pesan">Berlangganan</a>
+    </div>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Menu">
+      <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero hero--product" aria-labelledby="hero-h">
+    <div class="wrap"><div class="hero-text hero__in">
+      <div class="hero__head">
+        <div>
+          <h1 id="hero-h">Katering makan siang sehat untuk kantor</h1>
+          <p class="hero__lead">Nasi merah atau shirataki, lauk, sayur, dan buah, menu ganti tiap hari. Diantar ke kantor di Jakarta Selatan, Senin sampai Jumat, Rp&nbsp;45.000 per porsi.</p>
+        </div>
+        <div class="btn-row"><a class="btn btn--primary" href="#pesan">Berlangganan<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a><a class="btn btn--secondary" href="#menu">Lihat menu</a></div>
+      </div>
+      <div class="hero__stage">
+        <div class="frame" id="hero-kotak" data-product="assets/objects/product-render/specs/kotak-makan.json" data-product-place="stage" data-product-view="lebar" data-product-color="nasi-merah" aria-label="Kotak makan siang Dapur Seimbang berisi nasi merah, ayam, tempe, tahu, sayur, dan buah, dengan sendok dan garpu kayu"></div>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="section" id="kotak" aria-labelledby="kotak-h">
+    <div class="wrap">
+      <div class="grid grid--top">
+        <div class="span-5 stack-6">
+          <h2 id="kotak-h">Satu kotak makan siang yang lengkap</h2>
+          <p class="t-lead">Makan siang untuk satu orang: nasi, lauk, sayur, dan buah dalam satu kotak bersekat.</p>
+          <dl class="stats">
+            <div><dt class="t-small muted">per porsi</dt><dd class="t-stat">Rp&nbsp;45.000</dd></div>
+            <div><dt class="t-small muted">langganan minimal</dt><dd class="t-stat">5&nbsp;hari</dd></div>
+            <div><dt class="t-small muted">hari antar</dt><dd class="t-stat">Senin–Jumat</dd></div>
+          </dl>
+          <p><a class="link" href="#menu">Lihat menu harian</a></p>
+        </div>
+        <div class="frame frame--split span-7 start-6" id="kotak-shirataki" data-product="assets/objects/product-render/specs/kotak-makan.json" data-product-place="stage" data-product-view="three-quarter" data-product-color="shirataki" aria-label="Kotak makan siang dengan nasi shirataki, ayam, tempe, tahu, sayur, dan buah"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="menu" aria-labelledby="menu-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="menu-h">Menu harian dalam empat bagian</h2>
+        <p>Keempat bagian ini selalu ada. Lauk, sayur, dan buahnya berganti dari hari ke hari.</p>
+      </div>
+      <div class="grid">
+        <article class="card card--open m-nolift span-3">
+          <div class="frame" data-product="assets/objects/product-render/specs/kotak-makan.json" data-product-place="tile" data-product-view="detail-nasi" data-product-color="nasi-merah" aria-label="Nasi merah di dalam kotak makan"></div>
+          <h3>Nasi</h3>
+          <p>Nasi merah atau shirataki, Anda pilih saat pesan.</p>
+        </article>
+        <article class="card card--open m-nolift span-3">
+          <div class="frame" data-product="assets/objects/product-render/specs/kotak-makan.json" data-product-place="tile" data-product-view="detail-lauk" data-product-color="nasi-merah" aria-label="Lauk ayam, tempe, dan tahu di dalam kotak makan"></div>
+          <h3>Lauk</h3>
+          <p>Ayam, ikan, atau tahu tempe, bergantian setiap hari.</p>
+        </article>
+        <article class="card card--open m-nolift span-3">
+          <div class="frame" data-product="assets/objects/product-render/specs/kotak-makan.json" data-product-place="tile" data-product-view="detail-sayur" data-product-color="nasi-merah" aria-label="Brokoli dan wortel di dalam kotak makan"></div>
+          <h3>Sayur</h3>
+          <p>Satu porsi sayur di setiap kotak.</p>
+        </article>
+        <article class="card card--open m-nolift span-3">
+          <div class="frame" data-product="assets/objects/product-render/specs/kotak-makan.json" data-product-place="tile" data-product-view="detail-buah" data-product-color="nasi-merah" aria-label="Potongan pepaya dan melon di dalam kotak makan"></div>
+          <h3>Buah</h3>
+          <p>Satu porsi buah di setiap kotak.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section ground-brand" id="antar" aria-labelledby="antar-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="antar-h">Diantar ke kantor di Jakarta Selatan</h2>
+        <p>Untuk karyawan yang ingin makan sehat tapi tidak sempat masak: makan siang datang ke meja kerja Anda.</p>
+      </div>
+      <div class="frame" id="antar-meja" data-product="assets/objects/product-render/specs/kotak-makan.json" data-product-place="stage" data-product-view="lebar" data-product-scene="meja" data-product-color="nasi-merah" aria-label="Kotak makan siang di meja kerja, di samping segelas kopi, dua buku, dan selembar kertas"></div>
+    </div>
+  </section>
+
+  <section class="section g2m" id="pesan" aria-labelledby="pesan-h">
+    <div class="wrap">
+      <div class="grid grid--top">
+        <div class="span-5 order">
+          <h2 id="pesan-h">Pesan langganan makan siang</h2>
+          <div class="card order m-nolift">
+            <fieldset class="choice-set">
+              <legend>Pilihan nasi</legend>
+              <div class="choices">
+                <label class="choice"><input type="radio" name="nasi" value="nasi-merah" data-product-swatch="#pesan-kotak" checked>Nasi merah</label>
+                <label class="choice"><input type="radio" name="nasi" value="shirataki" data-product-swatch="#pesan-kotak">Shirataki</label>
+              </div>
+            </fieldset>
+            <div class="order__fields">
+              <label class="field">Lama langganan
+                <select id="hari" name="hari">
+                  <option value="5" selected>5 hari</option>
+                  <option value="10">10 hari</option>
+                  <option value="15">15 hari</option>
+                  <option value="20">20 hari</option>
+                </select>
+              </label>
+              <label class="field">Porsi per hari
+                <select id="porsi" name="porsi">
+                  <option value="1" selected>1 porsi</option>
+                  <option value="2">2 porsi</option>
+                  <option value="3">3 porsi</option>
+                  <option value="4">4 porsi</option>
+                  <option value="5">5 porsi</option>
+                </select>
+              </label>
+            </div>
+            <div class="order__total"><span>Total</span><output id="total" for="hari porsi">Rp&nbsp;225.000</output></div>
+            <a class="btn btn--primary" id="kirim" href="https://wa.me/6281234567890?text=Halo%20Dapur%20Seimbang%2C%20saya%20mau%20pesan%20langganan%20makan%20siang%3A%20nasi%20merah%2C%205%20hari%2C%201%20porsi%20per%20hari%20(total%20Rp%20225.000).">Berlangganan</a>
+            <p class="t-small">Tombol ini membuka WhatsApp ke 0812-3456-7890 dengan pesanan Anda tertulis.</p>
+          </div>
+        </div>
+        <div class="frame frame--split span-7 start-6" id="pesan-kotak" data-product="assets/objects/product-render/specs/kotak-makan.json" data-product-place="stage" data-product-view="top" data-product-color="nasi-merah" aria-label="Kotak makan siang dilihat dari atas"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer closing footer--dark ground-inverse" id="contact" aria-labelledby="close-h">
+  <div class="wrap">
+    <div class="closing__cta close--word">
+      <div class="section-head--split">
+        <div><h2 id="close-h">Makan siang sehat setiap hari kerja</h2><p class="t-lead">Rp&nbsp;45.000 per porsi, langganan minimal 5&nbsp;hari.</p></div>
+        <a class="btn btn--primary" href="#pesan">Berlangganan<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+      </div>
+    </div>
+    <div class="closing__links">
+      <div class="grid">
+        <div class="span-4 stack-4">
+          <a class="nav__logo" href="#top"><span class="mark" data-mark="ring" aria-hidden="true"></span>Dapur Seimbang</a>
+          <p class="footer__lede">Katering makan siang sehat untuk kantor di Jakarta Selatan.</p>
+        </div>
+        <div class="span-2 start-7 footer__col"><h4>Halaman</h4><ul><li><a href="#kotak">Isi</a></li><li><a href="#menu">Menu</a></li><li><a href="#antar">Antar</a></li></ul></div>
+        <div class="span-3 start-10 footer__col"><h4>Kontak</h4><ul><li><a href="https://wa.me/6281234567890">WhatsApp 0812-3456-7890</a></li></ul></div>
+      </div>
+      <div class="footer__legal">
+        <span>&copy; 2026 Dapur Seimbang</span>
+        <div class="socials"></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="assets/system.js"></script>
+<script type="module" src="assets/motion/motion.js"></script>
+<script type="module" src="assets/layout/layout.js"></script>
+<script type="module" src="assets/objects/product-render/auto.js"></script>
+<script>
+  // the order card: the total and the WhatsApp message follow the choices (the swatch itself needs no script)
+  (function () {
+    var hari = document.getElementById('hari'), porsi = document.getElementById('porsi'), total = document.getElementById('total'), kirim = document.getElementById('kirim');
+    if (!hari || !porsi || !total || !kirim) return;
+    var rp = function (n) { return 'Rp ' + n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.'); };
+    function update() {
+      var nasiEl = document.querySelector('input[name="nasi"]:checked');
+      var nasi = nasiEl && nasiEl.value === 'shirataki' ? 'nasi shirataki' : 'nasi merah';
+      var h = +hari.value, p = +porsi.value, t = 45000 * h * p;
+      total.textContent = rp(t);
+      var msg = 'Halo Dapur Seimbang, saya mau pesan langganan makan siang: ' + nasi + ', ' + h + ' hari, ' + p + ' porsi per hari (total ' + rp(t) + ').';
+      kirim.href = 'https://wa.me/6281234567890?text=' + encodeURIComponent(msg);
+    }
+    document.querySelectorAll('#pesan input, #pesan select').forEach(function (el) { el.addEventListener('change', update); });
+  })();
+</script>
+</body>
+</html>

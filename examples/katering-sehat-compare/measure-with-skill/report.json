@@ -1,0 +1,324 @@
+{
+  "target": "with-skill/index.html",
+  "time": "2026-11-05T17:01:53.233Z",
+  "rules": {
+    "purple-gradient": "warn",
+    "gradient": "info",
+    "glass": "info",
+    "system-font-only": "warn",
+    "too-many-font-sizes": "warn",
+    "too-many-colours": "warn",
+    "shadow-on-everything": "warn",
+    "icon-card-row": "warn",
+    "centred-hero-two-ctas": "warn",
+    "emoji": "warn",
+    "kit-sample": "fail"
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "pageHeight": 6045,
+      "findings": [],
+      "inventory": {
+        "families": [
+          {
+            "family": "Figtree",
+            "share": 83
+          },
+          {
+            "family": "Bricolage Grotesque",
+            "share": 17
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "figtree",
+            "share": 83
+          },
+          {
+            "family": "bricolage grotesque",
+            "share": 17
+          }
+        ],
+        "fontSizes": [
+          107,
+          84,
+          60,
+          40,
+          24,
+          22,
+          20,
+          18,
+          16
+        ],
+        "textColours": [
+          "#17241c",
+          "#ffffff",
+          "#3e4a42",
+          "#f6e3e6"
+        ],
+        "backgroundColours": [
+          "#f3f4ef",
+          "#0f5132",
+          "#8e2f3c",
+          "#f2b829",
+          "#6fae45",
+          "#e04f7a",
+          "#ffffff"
+        ],
+        "chromaticColours": 6,
+        "colourFamilies": 4,
+        "spacing": {
+          "distinct": 14,
+          "offScale": 5,
+          "values": [
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18,
+            22,
+            24,
+            28,
+            40,
+            64,
+            136
+          ]
+        },
+        "radii": [
+          "999px",
+          "5px",
+          "32px"
+        ],
+        "shadows": 5,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 10,
+        "animatedElements": 8,
+        "cls": 0.009
+      },
+      "screenshots": [
+        "measure-with-skill/desktop-fold.png",
+        "measure-with-skill/desktop-page-01.png",
+        "measure-with-skill/desktop-page-02.png",
+        "measure-with-skill/desktop-page-03.png",
+        "measure-with-skill/desktop-page-04.png",
+        "measure-with-skill/desktop-page-05.png",
+        "measure-with-skill/desktop-page-06.png",
+        "measure-with-skill/desktop-page-07.png"
+      ]
+    },
+    "tablet": {
+      "width": 768,
+      "pageHeight": 6182,
+      "findings": [],
+      "inventory": {
+        "families": [
+          {
+            "family": "Figtree",
+            "share": 83
+          },
+          {
+            "family": "Bricolage Grotesque",
+            "share": 17
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "figtree",
+            "share": 83
+          },
+          {
+            "family": "bricolage grotesque",
+            "share": 17
+          }
+        ],
+        "fontSizes": [
+          57,
+          46,
+          34,
+          30,
+          22,
+          21,
+          20,
+          18,
+          17,
+          16
+        ],
+        "textColours": [
+          "#17241c",
+          "#ffffff",
+          "#3e4a42",
+          "#f6e3e6"
+        ],
+        "backgroundColours": [
+          "#f3f4ef",
+          "#0f5132",
+          "#8e2f3c",
+          "#f2b829",
+          "#6fae45",
+          "#e04f7a",
+          "#ffffff"
+        ],
+        "chromaticColours": 6,
+        "colourFamilies": 4,
+        "spacing": {
+          "distinct": 12,
+          "offScale": 4,
+          "values": [
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18,
+            24,
+            40,
+            64,
+            72
+          ]
+        },
+        "radii": [
+          "999px",
+          "5px",
+          "32px"
+        ],
+        "shadows": 5,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 10,
+        "animatedElements": 0,
+        "cls": 0.013
+      },
+      "screenshots": [
+        "measure-with-skill/tablet-fold.png",
+        "measure-with-skill/tablet-page-01.png",
+        "measure-with-skill/tablet-page-02.png",
+        "measure-with-skill/tablet-page-03.png",
+        "measure-with-skill/tablet-page-04.png",
+        "measure-with-skill/tablet-page-05.png",
+        "measure-with-skill/tablet-page-06.png",
+        "measure-with-skill/tablet-page-07.png"
+      ]
+    },
+    "mobile": {
+      "width": 390,
+      "pageHeight": 6925,
+      "findings": [],
+      "inventory": {
+        "families": [
+          {
+            "family": "Figtree",
+            "share": 82
+          },
+          {
+            "family": "Bricolage Grotesque",
+            "share": 18
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "figtree",
+            "share": 82
+          },
+          {
+            "family": "bricolage grotesque",
+            "share": 18
+          }
+        ],
+        "fontSizes": [
+          52,
+          44,
+          34,
+          30,
+          22,
+          21,
+          20,
+          18,
+          17,
+          16
+        ],
+        "textColours": [
+          "#17241c",
+          "#ffffff",
+          "#3e4a42",
+          "#f6e3e6"
+        ],
+        "backgroundColours": [
+          "#f3f4ef",
+          "#0f5132",
+          "#8e2f3c",
+          "#f2b829",
+          "#6fae45",
+          "#e04f7a",
+          "#ffffff"
+        ],
+        "chromaticColours": 6,
+        "colourFamilies": 4,
+        "spacing": {
+          "distinct": 12,
+          "offScale": 4,
+          "values": [
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18,
+            24,
+            40,
+            64,
+            72
+          ]
+        },
+        "radii": [
+          "999px",
+          "5px",
+          "32px"
+        ],
+        "shadows": 5,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 10,
+        "animatedElements": 0,
+        "cls": 0
+      },
+      "screenshots": [
+        "measure-with-skill/mobile-fold.png",
+        "measure-with-skill/mobile-page-01.png",
+        "measure-with-skill/mobile-page-02.png",
+        "measure-with-skill/mobile-page-03.png",
+        "measure-with-skill/mobile-page-04.png",
+        "measure-with-skill/mobile-page-05.png",
+        "measure-with-skill/mobile-page-06.png",
+        "measure-with-skill/mobile-page-07.png",
+        "measure-with-skill/mobile-page-08.png",
+        "measure-with-skill/mobile-page-09.png"
+      ]
+    }
+  },
+  "checks": {
+    "reducedMotion": {
+      "findings": [],
+      "screenshot": "measure-with-skill/reduced-motion-fold.png"
+    },
+    "noJavaScript": {
+      "findings": [],
+      "withJs": 2455,
+      "withoutJs": 2455
+    }
+  },
+  "summary": {
+    "fail": 0,
+    "warn": 0
+  },
+  "url": "http://127.0.0.1:40661/with-skill/index.html",
+  "findings": []
+}

@@ -1,0 +1,103 @@
+{
+  "mode": "create",
+  "effort": "standard",
+  "gates": "autopilot",
+  "variants": 1,
+  "choose": "jury",
+  "created": "2026-11-05T16:30:51.832Z",
+  "steps": {
+    "brief": {
+      "status": "done",
+      "at": "2026-11-05T16:31:11.739Z",
+      "note": ""
+    },
+    "research": {
+      "status": "done",
+      "at": "2026-11-05T16:32:46.539Z",
+      "note": ""
+    },
+    "strategy": {
+      "status": "done",
+      "at": "2026-11-05T16:33:22.848Z",
+      "note": ""
+    },
+    "roast": {
+      "status": "done",
+      "at": "2026-11-05T16:34:07.248Z",
+      "note": ""
+    },
+    "direction": {
+      "status": "done",
+      "at": "2026-11-05T16:34:53.124Z",
+      "note": ""
+    },
+    "skeleton": {
+      "status": "done",
+      "at": "2026-11-05T16:37:09.491Z",
+      "note": ""
+    },
+    "spec": {
+      "status": "done",
+      "at": "2026-11-05T16:38:45.079Z",
+      "note": ""
+    },
+    "copy": {
+      "status": "done",
+      "at": "2026-11-05T16:39:28.575Z",
+      "note": ""
+    },
+    "build": {
+      "status": "done",
+      "at": "2026-11-05T16:43:39.900Z",
+      "note": ""
+    },
+    "reason": {
+      "status": "done",
+      "at": "2026-11-05T16:48:42.929Z",
+      "note": ""
+    },
+    "gate": {
+      "status": "done",
+      "at": "2026-11-05T16:50:17.892Z",
+      "note": ""
+    },
+    "look": {
+      "status": "done",
+      "at": "2026-11-05T17:00:21.713Z",
+      "note": ""
+    },
+    "deliver": {
+      "status": "done",
+      "at": "2026-11-05T17:01:31.285Z",
+      "note": ""
+    },
+    "learn": {
+      "status": "skipped",
+      "at": "2026-11-05T17:01:31.465Z",
+      "note": "Autopilot run, no user feedback to learn from"
+    }
+  },
+  "approvals": {
+    "brief": {
+      "by": "claude",
+      "at": "2026-11-05T16:31:11.650Z",
+      "note": "Autopilot: brief taken as written by the owner; no liked sites given so team visual defaults apply; open facts (jam antar, area, ongkir, bayar) kept as client questions, not stated on the page"
+    },
+    "strategy": {
+      "by": "claude",
+      "at": "2026-11-05T16:34:07.148Z",
+      "note": "Autopilot: strategy v2 accepted with roast changes (no delivery-time promise, on-page sample label, week as signature). High points #1-3 all accepted. Roast not independent (no subagents)."
+    },
+    "direction": {
+      "by": "claude",
+      "at": "2026-11-05T16:34:53.050Z",
+      "note": "Autopilot: direction A (one motif: the four-part box) with dials bold / x6 / illustration / story-light / price near action; references Swehl (colour chapters), Quite Nice (swap interaction), Summer Smash (subject palette, press buttons) adapted without asking"
+    },
+    "final": {
+      "by": "claude",
+      "at": "2026-11-05T17:01:31.141Z",
+      "note": "Autopilot: delivered v3 after one look round (jury 6.7 before fixes, top three fixed, gate 0/0); open items need the client (jam antar, area/ongkir, photos, owner name)"
+    }
+  },
+  "history": []
+}

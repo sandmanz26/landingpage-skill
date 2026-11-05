@@ -1,0 +1,913 @@
+{
+  "url": "http://127.0.0.1:35955/index.html",
+  "time": "2026-11-05T16:43:52.337Z",
+  "title": "Dapur Seimbang · Katering makan siang sehat ke kantor, Jakarta Selatan",
+  "pageHeight": 6000,
+  "sections": [
+    {
+      "id": "S01",
+      "top": 0,
+      "height": 65,
+      "heading": "Dapur Seimbang Chat WhatsApp",
+      "tag": "header",
+      "shots": [
+        "desktop-S01.png"
+      ],
+      "shot": "desktop-S01.png"
+    },
+    {
+      "id": "S02",
+      "top": 65,
+      "height": 840,
+      "heading": "Makan siang seimbang.",
+      "tag": "section",
+      "shots": [
+        "desktop-S02.png"
+      ],
+      "shot": "desktop-S02.png"
+    },
+    {
+      "id": "S03",
+      "top": 905,
+      "height": 1074,
+      "heading": "Selalu empat bagian di setiap kotak.",
+      "tag": "section",
+      "shots": [
+        "desktop-S03.png"
+      ],
+      "shot": "desktop-S03.png"
+    },
+    {
+      "id": "S04",
+      "top": 1979,
+      "height": 973,
+      "heading": "Isinya ganti tiap hari. Bagiannya tetap.",
+      "tag": "section",
+      "shots": [
+        "desktop-S04.png"
+      ],
+      "shot": "desktop-S04.png"
+    },
+    {
+      "id": "S05",
+      "top": 2952,
+      "height": 763,
+      "heading": "Rp 45.000 sekotak. Mulai dari satu minggu.",
+      "tag": "section",
+      "shots": [
+        "desktop-S05.png"
+      ],
+      "shot": "desktop-S05.png"
+    },
+    {
+      "id": "S06",
+      "top": 3716,
+      "height": 955,
+      "heading": "Mulai langganan lewat satu chat.",
+      "tag": "section",
+      "shots": [
+        "desktop-S06.png"
+      ],
+      "shot": "desktop-S06.png"
+    },
+    {
+      "id": "S07",
+      "top": 4671,
+      "height": 745,
+      "heading": "Soal jam antar, area, dan bayar.",
+      "tag": "section",
+      "shots": [
+        "desktop-S07.png"
+      ],
+      "shot": "desktop-S07.png"
+    },
+    {
+      "id": "S08",
+      "top": 5416,
+      "height": 478,
+      "heading": "Lima hari makan siang, satu chat.",
+      "tag": "section",
+      "shots": [
+        "desktop-S08.png"
+      ],
+      "shot": "desktop-S08.png"
+    },
+    {
+      "id": "S09",
+      "top": 5894,
+      "height": 106,
+      "heading": "Dapur Seimbang · Katering makan siang untuk kanto…",
+      "tag": "footer",
+      "shots": [
+        "desktop-S09.png"
+      ],
+      "shot": "desktop-S09.png"
+    }
+  ],
+  "elements": [
+    {
+      "kind": "action",
+      "section": "S01",
+      "label": "Dapur Seimbang",
+      "tag": "a",
+      "rect": {
+        "x": 120,
+        "y": 19,
+        "w": 207,
+        "h": 26
+      },
+      "href": "#",
+      "flags": [],
+      "id": "E01",
+      "phone": "visible"
+    },
+    {
+      "kind": "action",
+      "section": "S01",
+      "label": "Chat WhatsApp",
+      "tag": "a",
+      "rect": {
+        "x": 1135,
+        "y": 10,
+        "w": 185,
+        "h": 44
+      },
+      "href": "https://wa.me/6281234567890?text=Halo%20Dapur%20Seimbang%2C%20saya%20mau%20langganan%20makan%20siang.%0ANama%3A%20%0AAlamat%20kantor%3A%20%0AMulai%20tanggal%3A%20%0ANasi%20merah%20atau%20shirataki%3A%20",
+      "flags": [],
+      "id": "E02",
+      "phone": "visible"
+    },
+    {
+      "kind": "heading",
+      "section": "S02",
+      "label": "Makan siang seimbang.",
+      "tag": "h1",
+      "rect": {
+        "x": 120,
+        "y": 204,
+        "w": 677,
+        "h": 209
+      },
+      "flags": [],
+      "id": "E03",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S02",
+      "label": "Diantar ke kantormu di Jakarta Selatan, Senin sampai Jumat. Nasi merah atau shirataki, la…",
+      "tag": "p",
+      "rect": {
+        "x": 120,
+        "y": 437,
+        "w": 436,
+        "h": 96
+      },
+      "flags": [],
+      "id": "E04",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S02",
+      "label": "Rp 45.000",
+      "tag": "strong",
+      "rect": {
+        "x": 120,
+        "y": 573,
+        "w": 187,
+        "h": 40
+      },
+      "flags": [],
+      "id": "E05",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S02",
+      "label": "per porsi · langganan mulai 5 hari",
+      "tag": "span",
+      "rect": {
+        "x": 321,
+        "y": 586,
+        "w": 263,
+        "h": 29
+      },
+      "flags": [],
+      "id": "E06",
+      "phone": "visible"
+    },
+    {
+      "kind": "action",
+      "section": "S02",
+      "label": "Pesan lewat WhatsApp",
+      "tag": "a",
+      "rect": {
+        "x": 120,
+        "y": 638,
+        "w": 279,
+        "h": 56
+      },
+      "href": "https://wa.me/6281234567890?text=Halo%20Dapur%20Seimbang%2C%20saya%20mau%20langganan%20makan%20siang.%0ANama%3A%20%0AAlamat%20kantor%3A%20%0AMulai%20tanggal%3A%20%0ANasi%20merah%20atau%20shirataki%3A%20",
+      "flags": [],
+      "id": "E07",
+      "phone": "visible"
+    },
+    {
+      "kind": "illustration",
+      "section": "S02",
+      "label": "Ilustrasi kotak makan siang Dapur Seimbang: nasi merah, ayam, sayur, dan buah naga dalam …",
+      "tag": "svg",
+      "rect": {
+        "x": 842,
+        "y": 97,
+        "w": 703,
+        "h": 703
+      },
+      "src": "",
+      "flags": [],
+      "id": "E08",
+      "phone": "visible"
+    },
+    {
+      "kind": "illustration",
+      "section": "S03",
+      "label": "Ilustrasi kotak dengan empat bagian: karbo, lauk, sayur, buah",
+      "tag": "svg",
+      "rect": {
+        "x": 120,
+        "y": 1041,
+        "w": 520,
+        "h": 520
+      },
+      "src": "",
+      "flags": [],
+      "id": "E09",
+      "phone": "visible"
+    },
+    {
+      "kind": "heading",
+      "section": "S03",
+      "label": "Selalu empat bagian di setiap kotak.",
+      "tag": "h2",
+      "rect": {
+        "x": 752,
+        "y": 1041,
+        "w": 568,
+        "h": 125
+      },
+      "flags": [],
+      "id": "E10",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S03",
+      "label": "Bukan salad diet. Ini makan siang lengkap.",
+      "tag": "p",
+      "rect": {
+        "x": 752,
+        "y": 1190,
+        "w": 436,
+        "h": 32
+      },
+      "flags": [],
+      "id": "E11",
+      "phone": "visible"
+    },
+    {
+      "kind": "list",
+      "section": "S03",
+      "label": "Karbo: nasi merah atau shirataki Pilih salah satu waktu pesan. Lauk: ayam, ikan, atau tah…",
+      "tag": "ol",
+      "rect": {
+        "x": 752,
+        "y": 1262,
+        "w": 568,
+        "h": 582
+      },
+      "inside": "4 items",
+      "flags": [],
+      "id": "E12",
+      "phone": "visible"
+    },
+    {
+      "kind": "heading",
+      "section": "S04",
+      "label": "Isinya ganti tiap hari. Bagiannya tetap.",
+      "tag": "h2",
+      "rect": {
+        "x": 120,
+        "y": 2115,
+        "w": 473,
+        "h": 187
+      },
+      "flags": [],
+      "id": "E13",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S04",
+      "label": "Contoh menu. Menu asli dikirim tiap minggu lewat WhatsApp.",
+      "tag": "p",
+      "rect": {
+        "x": 120,
+        "y": 2319,
+        "w": 473,
+        "h": 58
+      },
+      "flags": [],
+      "id": "E14",
+      "phone": "visible"
+    },
+    {
+      "kind": "illustration",
+      "section": "S04",
+      "label": "Kotak hari Senin: Ayam panggang bumbu kuning, Tumis buncis wortel, Pepaya",
+      "tag": "svg",
+      "rect": {
+        "x": 120,
+        "y": 2416,
+        "w": 400,
+        "h": 400
+      },
+      "src": "",
+      "flags": [],
+      "id": "E15",
+      "phone": "visible"
+    },
+    {
+      "kind": "list",
+      "section": "S04",
+      "label": "Senin Ayam panggang bumbu kuning Tumis buncis wortel Pepaya Selasa Pepes ikan Sayur benin…",
+      "tag": "ul",
+      "rect": {
+        "x": 657,
+        "y": 2115,
+        "w": 663,
+        "h": 417
+      },
+      "inside": "5 items",
+      "flags": [],
+      "id": "E16",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S04",
+      "label": "Karbonya tetap pilihanmu: nasi merah atau shirataki.",
+      "tag": "p",
+      "rect": {
+        "x": 657,
+        "y": 2556,
+        "w": 663,
+        "h": 29
+      },
+      "flags": [],
+      "id": "E17",
+      "phone": "visible"
+    },
+    {
+      "kind": "heading",
+      "section": "S05",
+      "label": "Rp 45.000 sekotak. Mulai dari satu minggu.",
+      "tag": "h2",
+      "rect": {
+        "x": 120,
+        "y": 3088,
+        "w": 675,
+        "h": 125
+      },
+      "flags": [],
+      "id": "E18",
+      "phone": "visible"
+    },
+    {
+      "kind": "illustration",
+      "section": "S05",
+      "label": "",
+      "tag": "svg",
+      "rect": {
+        "x": 120,
+        "y": 3317,
+        "w": 64,
+        "h": 64
+      },
+      "src": "",
+      "flags": [
+        "decorative"
+      ],
+      "id": "E19",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S05",
+      "label": "Sen",
+      "tag": "span",
+      "rect": {
+        "x": 138,
+        "y": 3387,
+        "w": 28,
+        "h": 26
+      },
+      "flags": [],
+      "id": "E20",
+      "phone": "visible"
+    },
+    {
+      "kind": "illustration",
+      "section": "S05",
+      "label": "",
+      "tag": "svg",
+      "rect": {
+        "x": 196,
+        "y": 3317,
+        "w": 64,
+        "h": 64
+      },
+      "src": "",
+      "flags": [
+        "decorative"
+      ],
+      "id": "E21",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S05",
+      "label": "Sel",
+      "tag": "span",
+      "rect": {
+        "x": 217,
+        "y": 3387,
+        "w": 22,
+        "h": 26
+      },
+      "flags": [],
+      "id": "E22",
+      "phone": "visible"
+    },
+    {
+      "kind": "illustration",
+      "section": "S05",
+      "label": "",
+      "tag": "svg",
+      "rect": {
+        "x": 272,
+        "y": 3317,
+        "w": 64,
+        "h": 64
+      },
+      "src": "",
+      "flags": [
+        "decorative"
+      ],
+      "id": "E23",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S05",
+      "label": "Rab",
+      "tag": "span",
+      "rect": {
+        "x": 290,
+        "y": 3387,
+        "w": 28,
+        "h": 26
+      },
+      "flags": [],
+      "id": "E24",
+      "phone": "visible"
+    },
+    {
+      "kind": "illustration",
+      "section": "S05",
+      "label": "",
+      "tag": "svg",
+      "rect": {
+        "x": 348,
+        "y": 3317,
+        "w": 64,
+        "h": 64
+      },
+      "src": "",
+      "flags": [
+        "decorative"
+      ],
+      "id": "E25",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S05",
+      "label": "Kam",
+      "tag": "span",
+      "rect": {
+        "x": 364,
+        "y": 3387,
+        "w": 31,
+        "h": 26
+      },
+      "flags": [],
+      "id": "E26",
+      "phone": "visible"
+    },
+    {
+      "kind": "illustration",
+      "section": "S05",
+      "label": "",
+      "tag": "svg",
+      "rect": {
+        "x": 424,
+        "y": 3317,
+        "w": 64,
+        "h": 64
+      },
+      "src": "",
+      "flags": [
+        "decorative"
+      ],
+      "id": "E27",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S05",
+      "label": "Jum",
+      "tag": "span",
+      "rect": {
+        "x": 441,
+        "y": 3387,
+        "w": 31,
+        "h": 26
+      },
+      "flags": [],
+      "id": "E28",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S05",
+      "label": "Rp 225.000 5 hari × Rp 45.000",
+      "tag": "p",
+      "rect": {
+        "x": 120,
+        "y": 3453,
+        "w": 663,
+        "h": 127
+      },
+      "flags": [],
+      "id": "E29",
+      "phone": "visible"
+    },
+    {
+      "kind": "list",
+      "section": "S05",
+      "label": "Satu kotak makan siang per hari kerja Karbo, lauk, sayur, dan buah Diantar ke kantormu, S…",
+      "tag": "ul",
+      "rect": {
+        "x": 847,
+        "y": 3288,
+        "w": 473,
+        "h": 114
+      },
+      "inside": "3 items",
+      "flags": [],
+      "id": "E30",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S05",
+      "label": "Tidak perlu antre atau pilih menu tiap siang. Tidak ada paket bulanan wajib.",
+      "tag": "p",
+      "rect": {
+        "x": 847,
+        "y": 3426,
+        "w": 473,
+        "h": 58
+      },
+      "flags": [],
+      "id": "E31",
+      "phone": "visible"
+    },
+    {
+      "kind": "action",
+      "section": "S05",
+      "label": "Pesan 5 hari lewat WhatsApp",
+      "tag": "a",
+      "rect": {
+        "x": 847,
+        "y": 3524,
+        "w": 329,
+        "h": 56
+      },
+      "href": "https://wa.me/6281234567890?text=Halo%20Dapur%20Seimbang%2C%20saya%20mau%20langganan%20makan%20siang.%0ANama%3A%20%0AAlamat%20kantor%3A%20%0AMulai%20tanggal%3A%20%0ANasi%20merah%20atau%20shirataki%3A%20",
+      "flags": [],
+      "id": "E32",
+      "phone": "visible"
+    },
+    {
+      "kind": "heading",
+      "section": "S06",
+      "label": "Mulai langganan lewat satu chat.",
+      "tag": "h2",
+      "rect": {
+        "x": 120,
+        "y": 3852,
+        "w": 675,
+        "h": 125
+      },
+      "flags": [],
+      "id": "E33",
+      "phone": "visible"
+    },
+    {
+      "kind": "list",
+      "section": "S06",
+      "label": "1 Buka WhatsApp Tombol di bawah membuka chat ke 0812-3456-7890 dengan pesan yang sudah te…",
+      "tag": "ol",
+      "rect": {
+        "x": 120,
+        "y": 4040,
+        "w": 1200,
+        "h": 199
+      },
+      "inside": "3 items",
+      "flags": [],
+      "id": "E34",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S06",
+      "label": "Pesan yang terkirim:",
+      "tag": "p",
+      "rect": {
+        "x": 120,
+        "y": 4303,
+        "w": 677,
+        "h": 26
+      },
+      "flags": [],
+      "id": "E35",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S06",
+      "label": "Halo Dapur Seimbang, saya mau langganan makan siang. Nama: Alamat kantor: Mulai tanggal: …",
+      "tag": "p",
+      "rect": {
+        "x": 120,
+        "y": 4339,
+        "w": 677,
+        "h": 196
+      },
+      "flags": [],
+      "id": "E36",
+      "phone": "visible"
+    },
+    {
+      "kind": "action",
+      "section": "S06",
+      "label": "Kirim pesan ini lewat WhatsApp",
+      "tag": "a",
+      "rect": {
+        "x": 837,
+        "y": 4479,
+        "w": 351,
+        "h": 56
+      },
+      "href": "https://wa.me/6281234567890?text=Halo%20Dapur%20Seimbang%2C%20saya%20mau%20langganan%20makan%20siang.%0ANama%3A%20%0AAlamat%20kantor%3A%20%0AMulai%20tanggal%3A%20%0ANasi%20merah%20atau%20shirataki%3A%20",
+      "flags": [],
+      "id": "E37",
+      "phone": "visible"
+    },
+    {
+      "kind": "heading",
+      "section": "S07",
+      "label": "Soal jam antar, area, dan bayar.",
+      "tag": "h2",
+      "rect": {
+        "x": 120,
+        "y": 4807,
+        "w": 473,
+        "h": 125
+      },
+      "flags": [],
+      "id": "E38",
+      "phone": "visible"
+    },
+    {
+      "kind": "disclosure",
+      "section": "S07",
+      "label": "Jam berapa makan siangnya sampai?",
+      "tag": "details",
+      "rect": {
+        "x": 657,
+        "y": 4807,
+        "w": 663,
+        "h": 147
+      },
+      "inside": "open",
+      "flags": [],
+      "id": "E39",
+      "phone": "visible"
+    },
+    {
+      "kind": "disclosure",
+      "section": "S07",
+      "label": "Kantor mana saja yang bisa diantar?",
+      "tag": "details",
+      "rect": {
+        "x": 657,
+        "y": 4954,
+        "w": 663,
+        "h": 65
+      },
+      "inside": "closed",
+      "flags": [],
+      "id": "E40",
+      "phone": "visible"
+    },
+    {
+      "kind": "disclosure",
+      "section": "S07",
+      "label": "Boleh pilih nasi merah atau shirataki?",
+      "tag": "details",
+      "rect": {
+        "x": 657,
+        "y": 5019,
+        "w": 663,
+        "h": 65
+      },
+      "inside": "closed",
+      "flags": [],
+      "id": "E41",
+      "phone": "visible"
+    },
+    {
+      "kind": "disclosure",
+      "section": "S07",
+      "label": "Minimal pesan berapa hari?",
+      "tag": "details",
+      "rect": {
+        "x": 657,
+        "y": 5084,
+        "w": 663,
+        "h": 65
+      },
+      "inside": "closed",
+      "flags": [],
+      "id": "E42",
+      "phone": "visible"
+    },
+    {
+      "kind": "disclosure",
+      "section": "S07",
+      "label": "Kalau aku cuti atau kerja dari rumah?",
+      "tag": "details",
+      "rect": {
+        "x": 657,
+        "y": 5149,
+        "w": 663,
+        "h": 65
+      },
+      "inside": "closed",
+      "flags": [],
+      "id": "E43",
+      "phone": "visible"
+    },
+    {
+      "kind": "disclosure",
+      "section": "S07",
+      "label": "Bayarnya bagaimana?",
+      "tag": "details",
+      "rect": {
+        "x": 657,
+        "y": 5214,
+        "w": 663,
+        "h": 66
+      },
+      "inside": "closed",
+      "flags": [],
+      "id": "E44",
+      "phone": "visible"
+    },
+    {
+      "kind": "heading",
+      "section": "S08",
+      "label": "Lima hari makan siang, satu chat.",
+      "tag": "h2",
+      "rect": {
+        "x": 120,
+        "y": 5552,
+        "w": 675,
+        "h": 125
+      },
+      "flags": [],
+      "id": "E45",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S08",
+      "label": "Chat langsung dengan Dapur Seimbang. Kirim nama dan alamat kantormu, kami balas jadwal an…",
+      "tag": "p",
+      "rect": {
+        "x": 120,
+        "y": 5700,
+        "w": 462,
+        "h": 58
+      },
+      "flags": [],
+      "id": "E46",
+      "phone": "visible"
+    },
+    {
+      "kind": "action",
+      "section": "S08",
+      "label": "Chat 0812-3456-7890",
+      "tag": "a",
+      "rect": {
+        "x": 837,
+        "y": 5649,
+        "w": 273,
+        "h": 56
+      },
+      "href": "https://wa.me/6281234567890?text=Halo%20Dapur%20Seimbang%2C%20saya%20mau%20langganan%20makan%20siang.%0ANama%3A%20%0AAlamat%20kantor%3A%20%0AMulai%20tanggal%3A%20%0ANasi%20merah%20atau%20shirataki%3A%20",
+      "flags": [],
+      "id": "E47",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S08",
+      "label": "WhatsApp +62 812-3456-7890",
+      "tag": "p",
+      "rect": {
+        "x": 837,
+        "y": 5729,
+        "w": 464,
+        "h": 29
+      },
+      "flags": [],
+      "id": "E48",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S09",
+      "label": "Dapur Seimbang · Katering makan siang untuk kantor di Jakarta Selatan · WhatsApp 0812-345…",
+      "tag": "p",
+      "rect": {
+        "x": 120,
+        "y": 5934,
+        "w": 722,
+        "h": 26
+      },
+      "flags": [],
+      "id": "E49",
+      "phone": "visible"
+    },
+    {
+      "kind": "text",
+      "section": "S09",
+      "label": "Gambar di halaman ini ilustrasi, bukan foto menu.",
+      "tag": "p",
+      "rect": {
+        "x": 972,
+        "y": 5934,
+        "w": 348,
+        "h": 26
+      },
+      "flags": [],
+      "id": "E50",
+      "phone": "visible"
+    }
+  ],
+  "truncated": false,
+  "shots": {
+    "desktop": [
+      "desktop-S01.png",
+      "desktop-S02.png",
+      "desktop-S03.png",
+      "desktop-S04.png",
+      "desktop-S05.png",
+      "desktop-S06.png",
+      "desktop-S07.png",
+      "desktop-S08.png",
+      "desktop-S09.png"
+    ],
+    "phone": [
+      "mobile-01.png",
+      "mobile-02.png",
+      "mobile-03.png",
+      "mobile-04.png"
+    ]
+  }
+}

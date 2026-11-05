@@ -1,0 +1,30 @@
+{
+  "mode": "create",
+  "effort": "standard",
+  "gates": "autopilot",
+  "created": "2026-11-05T16:30:51.832Z",
+  "delivered": "2026-11-05T17:01:31.288Z",
+  "approvals": {
+    "brief": {
+      "by": "claude",
+      "at": "2026-11-05T16:31:11.650Z",
+      "note": "Autopilot: brief taken as written by the owner; no liked sites given so team visual defaults apply; open facts (jam antar, area, ongkir, bayar) kept as client questions, not stated on the page"
+    },
+    "strategy": {
+      "by": "claude",
+      "at": "2026-11-05T16:34:07.148Z",
+      "note": "Autopilot: strategy v2 accepted with roast changes (no delivery-time promise, on-page sample label, week as signature). High points #1-3 all accepted. Roast not independent (no subagents)."
+    },
+    "direction": {
+      "by": "claude",
+      "at": "2026-11-05T16:34:53.050Z",
+      "note": "Autopilot: direction A (one motif: the four-part box) with dials bold / x6 / illustration / story-light / price near action; references Swehl (colour chapters), Quite Nice (swap interaction), Summer Smash (subject palette, press buttons) adapted without asking"
+    },
+    "final": {
+      "by": "claude",
+      "at": "2026-11-05T17:01:31.141Z",
+      "note": "Autopilot: delivered v3 after one look round (jury 6.7 before fixes, top three fixed, gate 0/0); open items need the client (jam antar, area/ongkir, photos, owner name)"
+    }
+  },
+  "history": []
+}

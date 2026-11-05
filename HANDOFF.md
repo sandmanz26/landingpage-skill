@@ -433,6 +433,14 @@ Evaluation speed (2026-10-31, owner asked "how do we make evaluation faster"):
   is in the repo: `python3 templates/make_template.py` (formulas checked after a LibreOffice
   recalculation).
 
+Katering comparison, with-skill run (2026-11-05, autopilot, standard): `examples/katering-sehat-compare/with-skill/`
+(index.html; `.design/` holds brief, research, strategy, roast, directions, targets, spec, voice/copy, reason, jury/r1,
+critique, deliver.md; generator in `.design/build/`). Jury r1: weighted 6.7, no veto; top three fixed but NOT re-scored
+(only one look round allowed; no verifier). Limits seen: WebFetch blocked for news sites (research from search
+summaries only), photos.mjs could not reach Openverse/Commons, strategy roast not independent (no subagents in that
+session). fit.mjs counts hard 0-blur button press edges as shadows, giving a colour MISS (a possible false positive to
+review in fit.mjs).
+
 ## 4. Decisions and why (do not undo without a reason)
 
 | Decision | Why |

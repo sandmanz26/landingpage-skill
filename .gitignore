@@ -11,3 +11,6 @@ examples/**/measure-*/**/*.png
 !examples/**/measure-*/mobile-fold.png
 !examples/**/measure-*/sheet-desktop.png
 !examples/**/measure-*/sheet-mobile.png
+# A run's design trail: page-by-page screenshots and motion frames are reproducible.
+examples/**/design/**/*-page-[0-9]*.png
+examples/**/design/**/motion-frames/

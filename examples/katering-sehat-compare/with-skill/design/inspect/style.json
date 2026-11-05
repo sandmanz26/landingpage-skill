@@ -1,0 +1,123 @@
+{
+  "url": "http://127.0.0.1:38155/index.html",
+  "readAt": "2026-11-05T16:59:55.772Z",
+  "tags": [
+    "shadowed",
+    "many-colours",
+    "pill-shapes",
+    "expressive-type",
+    "many-type-sizes",
+    "illustration"
+  ],
+  "palette": {
+    "chromatic": 6,
+    "families": 4,
+    "text": [
+      "#17241c",
+      "#ffffff",
+      "#3e4a42",
+      "#f6e3e6"
+    ],
+    "backgrounds": [
+      "#f3f4ef",
+      "#0f5132",
+      "#8e2f3c",
+      "#f2b829",
+      "#6fae45",
+      "#e04f7a",
+      "#ffffff"
+    ],
+    "gradients": 0,
+    "shadows": 5,
+    "blur": 0
+  },
+  "type": {
+    "families": [
+      {
+        "family": "figtree",
+        "share": 83
+      },
+      {
+        "family": "bricolage grotesque",
+        "share": 17
+      }
+    ],
+    "cuts": [
+      {
+        "family": "Figtree",
+        "share": 83
+      },
+      {
+        "family": "Bricolage Grotesque",
+        "share": 17
+      }
+    ],
+    "sizes": {
+      "desktop": [
+        107,
+        84,
+        60,
+        40,
+        24,
+        22,
+        20,
+        18,
+        16
+      ],
+      "mobile": [
+        52,
+        44,
+        34,
+        30,
+        22,
+        21,
+        20,
+        18,
+        17,
+        16
+      ]
+    },
+    "display": 107,
+    "body": 16,
+    "ratio": 6.7
+  },
+  "shape": {
+    "radii": [
+      "999px",
+      "5px",
+      "32px"
+    ]
+  },
+  "spacing": {
+    "distinct": 14,
+    "offScale": 5
+  },
+  "motion": {
+    "libraries": [],
+    "stickyPanels": 0,
+    "durationsMs": {
+      "min": 320,
+      "max": 320
+    },
+    "easings": [
+      "cubic-bezier(0.16, 1, 0.3, 1)"
+    ],
+    "reducedMotionRespected": true,
+    "smoothness": {
+      "fps": 59.9,
+      "longFrames": 0,
+      "baselineLongFrames": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    }
+  },
+  "imagery": {
+    "photos": 0,
+    "illustrations": 3,
+    "videos": 0
+  },
+  "layout": {
+    "pageHeight": 6045,
+    "screens": 7
+  },
+  "doNotCopy": []
+}

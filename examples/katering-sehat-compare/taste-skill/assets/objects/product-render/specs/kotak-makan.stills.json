@@ -1,6 +1,6 @@
 {
  "id": "kotak-makan",
- "made": "2026-11-05T16:51:49.273Z",
+ "made": "2026-11-05T17:00:45.999Z",
  "px": 1100,
  "grounds": [
   "light"
@@ -116,27 +116,27 @@
       "file": "stills/kotak-makan-detail-nasi-nasi-merah.webp",
       "half": "stills/kotak-makan-detail-nasi-nasi-merah-half.webp",
       "w": 1375,
-      "h": 1064
+      "h": 1516
      },
      "shirataki": {
       "file": "stills/kotak-makan-detail-nasi-shirataki.webp",
       "half": "stills/kotak-makan-detail-nasi-shirataki-half.webp",
       "w": 1375,
-      "h": 1064
+      "h": 1516
      }
     }
    },
    "box": [
-    0.0582,
-    0.0893,
+    0.0218,
+    0.2546,
     1,
     1
    ],
    "focus": [
-    0.1001,
-    0.1,
-    0.8999,
-    0.9
+    0.2037,
+    0.3446,
+    0.7963,
+    0.6554
    ],
    "cut": [
     0,
