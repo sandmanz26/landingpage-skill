@@ -83,7 +83,7 @@ section{padding-block:var(--space-6)}
 .week__art .box{width:100%;height:auto;display:block}
 .days{list-style:none;margin:0;padding:0;display:grid;gap:10px}
 .day{width:100%;display:grid;grid-template-columns:110px 1fr;gap:var(--space-2);align-items:center;text-align:left;padding:18px 22px;min-height:64px;
- background:var(--ground);color:var(--ink);border:2px solid transparent;border-radius:24px;font:inherit;cursor:pointer;transition:border-color var(--dur-fast),background-color var(--dur-fast)}
+ background:var(--ground);color:var(--ink);border:2px solid transparent;border-radius:var(--radius-l);font:inherit;cursor:pointer;transition:border-color var(--dur-fast),background-color var(--dur-fast)}
 .day:hover{border-color:var(--ink)}
 .day[aria-pressed="true"]{background:var(--lauk);border-color:var(--ink)}
 .day__name{font:700 var(--step-1)/1.1 var(--font-display)}
@@ -94,9 +94,9 @@ section{padding-block:var(--space-6)}
 .offer{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--space-5);margin-top:var(--space-5);align-items:end}
 .sum{font:700 var(--step-3)/1 var(--font-display);letter-spacing:-.03em}
 .sum small{display:block;font:400 var(--step-0)/1.5 var(--font-text);letter-spacing:0;color:var(--ink-soft);margin-top:var(--space-2)}
-.minis{display:flex;flex-wrap:wrap;gap:12px;margin-top:var(--space-4)}
-.mini{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:16px;color:var(--ink-soft)}
-.mini svg{width:64px;height:64px}
+.minis{margin:var(--space-4) 0 0}
+.minis svg{width:min(100%,348px);height:auto;display:block}
+.minis figcaption{margin-top:10px;font-size:16px;color:var(--ink-soft)}
 .incl{list-style:none;margin:0;padding:0;display:grid;gap:14px}
 .incl li{display:flex;gap:12px}
 .offer__side .btn{margin-top:var(--space-4)}
@@ -108,7 +108,7 @@ section{padding-block:var(--space-6)}
 .steps b{display:block;font:700 var(--step-2)/1 var(--font-display);margin-bottom:var(--space-2)}
 .steps p{color:var(--ink-soft);margin-top:8px}
 .msg{margin-top:var(--space-5);display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--space-4);align-items:end}
-.bubble{background:var(--ground);border-radius:28px 28px 28px 8px;padding:var(--space-3) var(--space-4);border:2px solid var(--ink);white-space:pre-line;font-size:var(--step-0)}
+.bubble{background:var(--ground);border-radius:var(--radius-l) var(--radius-l) var(--radius-l) 8px;padding:var(--space-3) var(--space-4);border:2px solid var(--ink);white-space:pre-line;font-size:var(--step-0)}
 .bubble__cap{font-size:16px;color:var(--ink-soft);margin-bottom:10px}
 /* faq */
 .faq .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--space-5);align-items:start}
@@ -134,19 +134,18 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(-
  .hero .wrap{gap:var(--space-3)}
  .hero__art{width:min(92vw,440px);margin-right:calc(-1 * var(--gutter) - 14vw)}
  .story .wrap{gap:var(--space-3)}
- .story__art{position:static;max-width:360px}
- .week__art{max-width:240px;margin-top:var(--space-3)}
+ .story__art{display:none}
+ .week__art{display:none}
  .week .wrap{gap:var(--space-3)}
  .day{grid-template-columns:1fr;gap:4px;padding:14px 18px}
  .steps{grid-template-columns:1fr;gap:var(--space-3)}
  .offer,.msg,.faq .wrap,.close .wrap{gap:var(--space-3)}
  .bubble{padding:var(--space-3)}
- .minis{gap:8px;flex-wrap:nowrap}
- .mini svg{width:52px;height:52px}
  .day__menu{flex-direction:column;gap:0}
  .day__menu span+span::before{content:none}
 }
-@media (max-width:420px){.top .btn--small span{display:none}}
+.top .sm{display:none}
+@media (max-width:420px){.top .lg{display:none}.top .sm{display:inline}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -154,14 +153,14 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(-
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#"><svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="8" fill="var(--ink)"/><rect x="3" y="3" width="20" height="34" rx="5" fill="var(--karbo)"/><rect x="25" y="3" width="12" height="16" rx="4" fill="var(--lauk)"/><rect x="25" y="21" width="12" height="7" rx="3" fill="var(--sayur)"/><rect x="25" y="30" width="12" height="7" rx="3" fill="var(--buah)"/></svg>Dapur Seimbang</a>
-    <a class="btn btn--small" href="https://wa.me/6281234567890?text=Halo%20Dapur%20Seimbang%2C%20saya%20mau%20langganan%20makan%20siang.%0ANama%3A%20%0AAlamat%20kantor%3A%20%0AMulai%20tanggal%3A%20%0ANasi%20merah%20atau%20shirataki%3A%20" aria-label="Chat WhatsApp 0812-3456-7890"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg><span>Chat WhatsApp</span></a>
+    <a class="btn btn--small" href="https://wa.me/6281234567890?text=Halo%20Dapur%20Seimbang%2C%20saya%20mau%20langganan%20makan%20siang.%0ANama%3A%20%0AAlamat%20kantor%3A%20%0AMulai%20tanggal%3A%20%0ANasi%20merah%20atau%20shirataki%3A%20" ><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg><span class="lg">Chat WhatsApp</span><span class="sm">Chat</span></a>
   </div>
 </header>
 <main>
 <section class="hero">
   <div class="wrap">
     <div>
-      <h1>Makan siang seimbang.</h1>
+      <h1>Makan siang seimbang ke kantormu.</h1>
       <p class="lead">Diantar ke kantormu di Jakarta Selatan, Senin sampai Jumat. Nasi merah atau shirataki, lauk, sayur, dan buah. Menunya ganti tiap hari.</p>
       <p class="hero__price"><strong>Rp 45.000</strong><span>per porsi · langganan mulai 5 hari</span></p>
       <p class="hero__act"><a class="btn" href="https://wa.me/6281234567890?text=Halo%20Dapur%20Seimbang%2C%20saya%20mau%20langganan%20makan%20siang.%0ANama%3A%20%0AAlamat%20kantor%3A%20%0AMulai%20tanggal%3A%20%0ANasi%20merah%20atau%20shirataki%3A%20"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>Pesan lewat WhatsApp</a></p>
@@ -176,7 +175,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(-
     <div>
       <h2>Selalu empat bagian di setiap kotak.</h2>
       <p class="lead">Bukan salad diet. Ini makan siang lengkap.</p>
-      <ol class="parts"><li data-n="1"><span class="mark mark-karbo" aria-hidden="true"></span><div><h3>Karbo: nasi merah atau shirataki</h3><p>Pilih salah satu waktu pesan.</p></div></li><li data-n="2"><span class="mark mark-lauk" aria-hidden="true"></span><div><h3>Lauk: ayam, ikan, atau tahu tempe</h3><p>Lauknya bergantian sepanjang minggu.</p></div></li><li data-n="3"><span class="mark mark-sayur" aria-hidden="true"></span><div><h3>Sayur</h3><p>Selalu ada sayur di setiap kotak.</p></div></li><li data-n="4"><span class="mark mark-buah" aria-hidden="true"></span><div><h3>Buah</h3><p>Buah segar untuk penutup.</p></div></li></ol>
+      <ol class="parts"><li data-n="1"><span class="mark mark-karbo" aria-hidden="true"></span><div><h3>Karbo: nasi merah atau shirataki</h3><p>Pilih salah satu waktu pesan.</p></div></li><li data-n="2"><span class="mark mark-lauk" aria-hidden="true"></span><div><h3>Lauk: ayam, ikan, atau tahu tempe</h3><p>Contohnya ayam panggang bumbu kuning atau pepes ikan.</p></div></li><li data-n="3"><span class="mark mark-sayur" aria-hidden="true"></span><div><h3>Sayur</h3><p>Contohnya tumis buncis wortel atau sayur bening bayam.</p></div></li><li data-n="4"><span class="mark mark-buah" aria-hidden="true"></span><div><h3>Buah</h3><p>Contohnya pepaya, semangka, atau buah naga.</p></div></li></ol>
     </div>
   </div>
 </section>
@@ -185,12 +184,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(-
   <div class="wrap">
     <div>
       <h2>Isinya ganti tiap hari. Bagiannya tetap.</h2>
-      <p class="week__note">Contoh menu. Menu asli dikirim tiap minggu lewat WhatsApp.</p>
+      <p class="week__note">Contoh menu satu minggu. Menu aslinya bisa berbeda.</p>
       <div class="week__art"><svg class="box box--week" data-lauk="ayam" viewBox="0 0 400 400" role="img" aria-label="Kotak hari Senin: Ayam panggang bumbu kuning, Tumis buncis wortel, Pepaya"><rect width="400" height="400" rx="40" fill="var(--ink)"/><g class="part part-karbo"><rect x="16" y="16" width="208" height="368" rx="22" fill="var(--karbo)"/><g class="food"><ellipse cx="195" cy="347" rx="11" ry="5" transform="rotate(21 195 347)" fill="#6E2230"/><ellipse cx="37" cy="135" rx="11" ry="5" transform="rotate(97 37 135)" fill="#B95A66"/><ellipse cx="126" cy="77" rx="11" ry="5" transform="rotate(49 126 77)" fill="#B95A66"/><ellipse cx="81" cy="39" rx="11" ry="5" transform="rotate(158 81 39)" fill="#6E2230"/><ellipse cx="113" cy="42" rx="11" ry="5" transform="rotate(21 113 42)" fill="#B95A66"/><ellipse cx="205" cy="198" rx="11" ry="5" transform="rotate(5 205 198)" fill="#B95A66"/><ellipse cx="123" cy="276" rx="11" ry="5" transform="rotate(91 123 276)" fill="#6E2230"/><ellipse cx="168" cy="102" rx="11" ry="5" transform="rotate(9 168 102)" fill="#B95A66"/><ellipse cx="137" cy="251" rx="11" ry="5" transform="rotate(158 137 251)" fill="#B95A66"/><ellipse cx="72" cy="277" rx="11" ry="5" transform="rotate(144 72 277)" fill="#6E2230"/><ellipse cx="166" cy="156" rx="11" ry="5" transform="rotate(146 166 156)" fill="#B95A66"/><ellipse cx="83" cy="356" rx="11" ry="5" transform="rotate(146 83 356)" fill="#B95A66"/><ellipse cx="49" cy="190" rx="11" ry="5" transform="rotate(123 49 190)" fill="#6E2230"/><ellipse cx="137" cy="182" rx="11" ry="5" transform="rotate(164 137 182)" fill="#B95A66"/><ellipse cx="62" cy="298" rx="11" ry="5" transform="rotate(136 62 298)" fill="#B95A66"/><ellipse cx="90" cy="303" rx="11" ry="5" transform="rotate(50 90 303)" fill="#6E2230"/><ellipse cx="135" cy="61" rx="11" ry="5" transform="rotate(109 135 61)" fill="#B95A66"/><ellipse cx="41" cy="125" rx="11" ry="5" transform="rotate(146 41 125)" fill="#B95A66"/><ellipse cx="83" cy="229" rx="11" ry="5" transform="rotate(27 83 229)" fill="#6E2230"/><ellipse cx="98" cy="129" rx="11" ry="5" transform="rotate(78 98 129)" fill="#B95A66"/><ellipse cx="190" cy="184" rx="11" ry="5" transform="rotate(55 190 184)" fill="#B95A66"/><ellipse cx="79" cy="69" rx="11" ry="5" transform="rotate(30 79 69)" fill="#6E2230"/><ellipse cx="157" cy="307" rx="11" ry="5" transform="rotate(60 157 307)" fill="#B95A66"/><ellipse cx="91" cy="81" rx="11" ry="5" transform="rotate(151 91 81)" fill="#B95A66"/><ellipse cx="51" cy="160" rx="11" ry="5" transform="rotate(115 51 160)" fill="#6E2230"/><ellipse cx="204" cy="52" rx="11" ry="5" transform="rotate(106 204 52)" fill="#B95A66"/><ellipse cx="102" cy="88" rx="11" ry="5" transform="rotate(57 102 88)" fill="#B95A66"/><ellipse cx="154" cy="355" rx="11" ry="5" transform="rotate(14 154 355)" fill="#6E2230"/><ellipse cx="128" cy="360" rx="11" ry="5" transform="rotate(23 128 360)" fill="#B95A66"/><ellipse cx="94" cy="356" rx="11" ry="5" transform="rotate(96 94 356)" fill="#B95A66"/><ellipse cx="119" cy="46" rx="11" ry="5" transform="rotate(67 119 46)" fill="#6E2230"/><ellipse cx="115" cy="99" rx="11" ry="5" transform="rotate(117 115 99)" fill="#B95A66"/><ellipse cx="199" cy="105" rx="11" ry="5" transform="rotate(26 199 105)" fill="#B95A66"/><ellipse cx="131" cy="248" rx="11" ry="5" transform="rotate(176 131 248)" fill="#6E2230"/><ellipse cx="129" cy="302" rx="11" ry="5" transform="rotate(64 129 302)" fill="#B95A66"/><ellipse cx="51" cy="88" rx="11" ry="5" transform="rotate(3 51 88)" fill="#B95A66"/><ellipse cx="111" cy="147" rx="11" ry="5" transform="rotate(106 111 147)" fill="#6E2230"/><ellipse cx="176" cy="329" rx="11" ry="5" transform="rotate(176 176 329)" fill="#B95A66"/><ellipse cx="175" cy="57" rx="11" ry="5" transform="rotate(163 175 57)" fill="#B95A66"/><ellipse cx="164" cy="214" rx="11" ry="5" transform="rotate(108 164 214)" fill="#6E2230"/><ellipse cx="105" cy="289" rx="11" ry="5" transform="rotate(142 105 289)" fill="#B95A66"/><ellipse cx="140" cy="51" rx="11" ry="5" transform="rotate(72 140 51)" fill="#B95A66"/><ellipse cx="53" cy="242" rx="11" ry="5" transform="rotate(85 53 242)" fill="#6E2230"/><ellipse cx="202" cy="274" rx="11" ry="5" transform="rotate(110 202 274)" fill="#B95A66"/><ellipse cx="77" cy="348" rx="11" ry="5" transform="rotate(20 77 348)" fill="#B95A66"/><ellipse cx="93" cy="261" rx="11" ry="5" transform="rotate(29 93 261)" fill="#6E2230"/></g></g><g class="part part-lauk"><rect x="238" y="16" width="146" height="178" rx="22" fill="var(--lauk)"/><g class="lauk lauk-ayam"><rect x="300" y="52" width="58" height="22" rx="11" transform="rotate(35 300 52)" fill="#FFF4D6"/><circle cx="356" cy="88" r="11" fill="#FFF4D6"/><circle cx="344" cy="100" r="11" fill="#FFF4D6"/><ellipse cx="292" cy="118" rx="44" ry="52" transform="rotate(35 292 118)" fill="#B8641C"/><ellipse cx="282" cy="108" rx="18" ry="24" transform="rotate(35 282 108)" fill="#D4862E"/></g><g class="lauk lauk-ikan"><ellipse cx="300" cy="104" rx="56" ry="34" fill="#B8641C"/><path d="M350 104 L382 76 L382 132 Z" fill="#B8641C"/><path d="M262 92 q18 -10 36 0 M262 112 q18 -10 36 0 M300 92 q18 -10 36 0 M300 112 q18 -10 36 0" stroke="#7A3F10" stroke-width="5" fill="none" stroke-linecap="round"/><circle cx="262" cy="98" r="5" fill="#17241C"/></g><g class="lauk lauk-tahu"><rect x="256" y="40" width="70" height="62" rx="12" fill="#FFF4D6"/><rect x="300" y="104" width="76" height="62" rx="12" fill="#A9742A"/><circle cx="318" cy="122" r="5" fill="#E8C27A"/><circle cx="342" cy="134" r="5" fill="#E8C27A"/><circle cx="358" cy="118" r="5" fill="#E8C27A"/><circle cx="326" cy="148" r="5" fill="#E8C27A"/><circle cx="356" cy="150" r="5" fill="#E8C27A"/></g></g><g class="part part-sayur"><rect x="238" y="208" width="146" height="84" rx="22" fill="var(--sayur)"/><g class="food"><path d="M258 270 q30 -60 60 -40 q-20 40 -60 40 Z" fill="#2F6B22"/><path d="M300 280 q40 -50 70 -26 q-28 34 -70 26 Z" fill="#3E7D2A"/><rect x="262" y="240" width="64" height="14" rx="7" transform="rotate(-18 262 240)" fill="#C9E39A"/><circle cx="362" cy="236" r="9" fill="#F28C28"/><circle cx="346" cy="226" r="7" fill="#F28C28"/></g></g><g class="part part-buah"><rect x="238" y="306" width="146" height="78" rx="22" fill="var(--buah)"/><g class="food"><path d="M258 372 a46 46 0 0 1 92 0 Z" fill="#FBE3EC"/><path d="M268 372 a36 36 0 0 1 72 0 Z" fill="#B8234F"/><circle cx="290" cy="358" r="3.5" fill="#17241C"/><circle cx="306" cy="350" r="3.5" fill="#17241C"/><circle cx="318" cy="362" r="3.5" fill="#17241C"/><circle cx="300" cy="364" r="3.5" fill="#17241C"/><circle cx="326" cy="354" r="3.5" fill="#17241C"/><circle cx="364" cy="340" r="14" fill="#F7A9C1"/></g></g></svg></div>
     </div>
     <div>
       <ul class="days" aria-label="Contoh menu Senin sampai Jumat"><li><button class="day" type="button" aria-pressed="true" data-lauk="ayam"><span class="day__name">Senin</span><span class="day__menu"><span>Ayam panggang bumbu kuning</span><span>Tumis buncis wortel</span><span>Pepaya</span></span></button></li><li><button class="day" type="button" aria-pressed="false" data-lauk="ikan"><span class="day__name">Selasa</span><span class="day__menu"><span>Pepes ikan</span><span>Sayur bening bayam</span><span>Semangka</span></span></button></li><li><button class="day" type="button" aria-pressed="false" data-lauk="tahu"><span class="day__name">Rabu</span><span class="day__menu"><span>Tahu tempe bacem</span><span>Capcay</span><span>Melon</span></span></button></li><li><button class="day" type="button" aria-pressed="false" data-lauk="ayam"><span class="day__name">Kamis</span><span class="day__menu"><span>Ayam suwir kemangi</span><span>Urap sayur</span><span>Nanas</span></span></button></li><li><button class="day" type="button" aria-pressed="false" data-lauk="ikan"><span class="day__name">Jumat</span><span class="day__menu"><span>Ikan bakar kecap</span><span>Tumis kangkung</span><span>Buah naga</span></span></button></li></ul>
-      <p class="week__carb">Karbonya tetap pilihanmu: nasi merah atau shirataki.</p>
     </div>
   </div>
 </section>
@@ -200,7 +198,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(-
     <h2>Rp 45.000 sekotak. Mulai dari satu minggu.</h2>
     <div class="offer">
       <div>
-        <div class="minis"><span class="mini"><svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="7" fill="var(--ink)"/><rect x="3" y="3" width="20" height="34" rx="4" fill="var(--karbo)"/><rect x="25" y="3" width="12" height="16" rx="4" fill="var(--lauk)"/><rect x="25" y="21" width="12" height="7" rx="3" fill="var(--sayur)"/><rect x="25" y="30" width="12" height="7" rx="3" fill="var(--buah)"/></svg><span>Sen</span></span><span class="mini"><svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="7" fill="var(--ink)"/><rect x="3" y="3" width="20" height="34" rx="4" fill="var(--karbo)"/><rect x="25" y="3" width="12" height="16" rx="4" fill="var(--lauk)"/><rect x="25" y="21" width="12" height="7" rx="3" fill="var(--sayur)"/><rect x="25" y="30" width="12" height="7" rx="3" fill="var(--buah)"/></svg><span>Sel</span></span><span class="mini"><svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="7" fill="var(--ink)"/><rect x="3" y="3" width="20" height="34" rx="4" fill="var(--karbo)"/><rect x="25" y="3" width="12" height="16" rx="4" fill="var(--lauk)"/><rect x="25" y="21" width="12" height="7" rx="3" fill="var(--sayur)"/><rect x="25" y="30" width="12" height="7" rx="3" fill="var(--buah)"/></svg><span>Rab</span></span><span class="mini"><svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="7" fill="var(--ink)"/><rect x="3" y="3" width="20" height="34" rx="4" fill="var(--karbo)"/><rect x="25" y="3" width="12" height="16" rx="4" fill="var(--lauk)"/><rect x="25" y="21" width="12" height="7" rx="3" fill="var(--sayur)"/><rect x="25" y="30" width="12" height="7" rx="3" fill="var(--buah)"/></svg><span>Kam</span></span><span class="mini"><svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="7" fill="var(--ink)"/><rect x="3" y="3" width="20" height="34" rx="4" fill="var(--karbo)"/><rect x="25" y="3" width="12" height="16" rx="4" fill="var(--lauk)"/><rect x="25" y="21" width="12" height="7" rx="3" fill="var(--sayur)"/><rect x="25" y="30" width="12" height="7" rx="3" fill="var(--buah)"/></svg><span>Jum</span></span></div>
+        <figure class="minis"><svg viewBox="0 0 348 60" role="img" aria-label="Lima kotak makan siang, satu untuk tiap hari Senin sampai Jumat"><g transform="translate(0 0)"><rect width="60" height="60" rx="10" fill="var(--ink)"/><rect x="4" y="4" width="30" height="52" rx="6" fill="var(--karbo)"/><rect x="38" y="4" width="18" height="24" rx="5" fill="var(--lauk)"/><rect x="38" y="31" width="18" height="11" rx="4" fill="var(--sayur)"/><rect x="38" y="45" width="18" height="11" rx="4" fill="var(--buah)"/></g><g transform="translate(72 0)"><rect width="60" height="60" rx="10" fill="var(--ink)"/><rect x="4" y="4" width="30" height="52" rx="6" fill="var(--karbo)"/><rect x="38" y="4" width="18" height="24" rx="5" fill="var(--lauk)"/><rect x="38" y="31" width="18" height="11" rx="4" fill="var(--sayur)"/><rect x="38" y="45" width="18" height="11" rx="4" fill="var(--buah)"/></g><g transform="translate(144 0)"><rect width="60" height="60" rx="10" fill="var(--ink)"/><rect x="4" y="4" width="30" height="52" rx="6" fill="var(--karbo)"/><rect x="38" y="4" width="18" height="24" rx="5" fill="var(--lauk)"/><rect x="38" y="31" width="18" height="11" rx="4" fill="var(--sayur)"/><rect x="38" y="45" width="18" height="11" rx="4" fill="var(--buah)"/></g><g transform="translate(216 0)"><rect width="60" height="60" rx="10" fill="var(--ink)"/><rect x="4" y="4" width="30" height="52" rx="6" fill="var(--karbo)"/><rect x="38" y="4" width="18" height="24" rx="5" fill="var(--lauk)"/><rect x="38" y="31" width="18" height="11" rx="4" fill="var(--sayur)"/><rect x="38" y="45" width="18" height="11" rx="4" fill="var(--buah)"/></g><g transform="translate(288 0)"><rect width="60" height="60" rx="10" fill="var(--ink)"/><rect x="4" y="4" width="30" height="52" rx="6" fill="var(--karbo)"/><rect x="38" y="4" width="18" height="24" rx="5" fill="var(--lauk)"/><rect x="38" y="31" width="18" height="11" rx="4" fill="var(--sayur)"/><rect x="38" y="45" width="18" height="11" rx="4" fill="var(--buah)"/></g></svg><figcaption>Senin sampai Jumat: lima kotak</figcaption></figure>
         <p class="sum" style="margin-top:var(--space-4)">Rp 225.000<small>5 hari × Rp 45.000</small></p>
       </div>
       <div class="offer__side">
@@ -225,7 +223,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(-
       <li><b>3</b><h3>Tunggu balasan</h3><p>Kami balas dengan jadwal antar dan cara bayar.</p></li>
     </ol>
     <div class="msg">
-      <div><p class="bubble__cap">Pesan yang terkirim:</p><p class="bubble">Halo Dapur Seimbang, saya mau langganan makan siang.
+      <div><p class="bubble__cap">Pesan yang akan terkirim:</p><p class="bubble">Halo Dapur Seimbang, saya mau langganan makan siang.
 Nama: 
 Alamat kantor: 
 Mulai tanggal: 
@@ -238,7 +236,7 @@ Nasi merah atau shirataki: …</p></div>
 <section class="faq" id="tanya">
   <div class="wrap">
     <h2>Soal jam antar, area, dan bayar.</h2>
-    <div><details open><summary>Jam berapa makan siangnya sampai?</summary><p>Jam antar tergantung rute ke gedung kantormu. Sebutkan alamatnya waktu chat, kami kasih tahu jamnya.</p></details><details><summary>Kantor mana saja yang bisa diantar?</summary><p>Kantor di Jakarta Selatan. Kirim alamat lengkap gedungnya supaya kami cek rutenya.</p></details><details><summary>Boleh pilih nasi merah atau shirataki?</summary><p>Boleh. Sebutkan pilihanmu waktu pesan.</p></details><details><summary>Minimal pesan berapa hari?</summary><p>Lima hari, Rp 225.000. Tidak ada paket bulanan wajib.</p></details><details><summary>Kalau aku cuti atau kerja dari rumah?</summary><p>Kabari lewat chat WhatsApp yang sama. Atur hari antarnya di sana.</p></details><details><summary>Bayarnya bagaimana?</summary><p>Cara bayar dikirim lewat WhatsApp waktu pesananmu dikonfirmasi.</p></details></div>
+    <div><details open><summary>Jam berapa makan siangnya sampai?</summary><p>Jam antar tergantung rute ke gedung kantormu. Sebutkan alamatnya waktu chat, kami kasih tahu jamnya.</p></details><details><summary>Kantor mana saja yang bisa diantar?</summary><p>Kantor di Jakarta Selatan. Kirim alamat lengkap gedungnya supaya kami cek rutenya.</p></details><details><summary>Kalau aku cuti atau kerja dari rumah?</summary><p>Kabari lewat chat WhatsApp yang sama. Atur hari antarnya di sana.</p></details><details><summary>Bayarnya bagaimana?</summary><p>Cara bayar dikirim lewat WhatsApp waktu pesananmu dikonfirmasi.</p></details></div>
   </div>
 </section>
 
@@ -250,7 +248,6 @@ Nasi merah atau shirataki: …</p></div>
     </div>
     <div>
       <a class="btn" href="https://wa.me/6281234567890?text=Halo%20Dapur%20Seimbang%2C%20saya%20mau%20langganan%20makan%20siang.%0ANama%3A%20%0AAlamat%20kantor%3A%20%0AMulai%20tanggal%3A%20%0ANasi%20merah%20atau%20shirataki%3A%20"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>Chat 0812-3456-7890</a>
-      <p class="close__num">WhatsApp +62 812-3456-7890</p>
     </div>
   </div>
 </section>
@@ -269,16 +266,14 @@ Nasi merah atau shirataki: …</p></div>
   if (story && !reduce && 'IntersectionObserver' in window) {
     var rows = story.querySelectorAll('.parts li');
     story.setAttribute('data-on', '0'); story.classList.add('armed');
-    var io = new IntersectionObserver(function(es){
-      es.forEach(function(e){ if (e.isIntersecting) {
-        var n = +e.target.getAttribute('data-n');
-        if (n > +story.getAttribute('data-on')) story.setAttribute('data-on', String(n));
-      }});
-    }, {rootMargin: '-45% 0px -45% 0px'});
-    rows.forEach(function(r){ io.observe(r); });
-    // safety: once the section bottom is reached, everything is filled
-    var end = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) story.setAttribute('data-on','4'); }); });
-    end.observe(story.querySelector('.parts li:last-child'));
+    var ticking = false;
+    function update(){
+      ticking = false; var n = 0, line = window.innerHeight * 0.6;
+      rows.forEach(function(r, i){ if (r.getBoundingClientRect().top < line) n = i + 1; });
+      if (n > +story.getAttribute('data-on')) story.setAttribute('data-on', String(n));
+    }
+    window.addEventListener('scroll', function(){ if (!ticking) { ticking = true; requestAnimationFrame(update); } }, {passive: true});
+    update();
   }
   // week: pressing a day shows that day's lauk in the box
   var art = document.querySelector('.week__art .box');
@@ -287,7 +282,7 @@ Nasi merah atau shirataki: …</p></div>
     b.addEventListener('click', function(){
       days.forEach(function(o){ o.setAttribute('aria-pressed', o === b ? 'true' : 'false'); });
       if (art) { art.setAttribute('data-lauk', b.getAttribute('data-lauk'));
-        art.setAttribute('aria-label', 'Kotak hari ' + b.querySelector('.day__name').textContent + ': ' + b.querySelector('.day__menu').textContent.replace(/\s+/g,' ')); }
+        art.setAttribute('aria-label', 'Kotak hari ' + b.querySelector('.day__name').textContent + ': ' + Array.prototype.map.call(b.querySelectorAll('.day__menu span'), function(x){ return x.textContent; }).join(', ')); }
     });
   });
 })();

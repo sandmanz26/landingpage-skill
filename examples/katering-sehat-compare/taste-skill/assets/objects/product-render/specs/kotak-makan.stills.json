@@ -1,6 +1,6 @@
 {
  "id": "kotak-makan",
- "made": "2026-11-05T16:44:00.165Z",
+ "made": "2026-11-05T16:51:49.273Z",
  "px": 1100,
  "grounds": [
   "light"
@@ -115,34 +115,34 @@
      "nasi-merah": {
       "file": "stills/kotak-makan-detail-nasi-nasi-merah.webp",
       "half": "stills/kotak-makan-detail-nasi-nasi-merah-half.webp",
-      "w": 1916,
-      "h": 1353
+      "w": 1375,
+      "h": 1064
      },
      "shirataki": {
       "file": "stills/kotak-makan-detail-nasi-shirataki.webp",
       "half": "stills/kotak-makan-detail-nasi-shirataki-half.webp",
-      "w": 1916,
-      "h": 1353
+      "w": 1375,
+      "h": 1064
      }
     }
    },
    "box": [
-    0.2448,
-    0.2602,
+    0.0582,
+    0.0893,
     1,
-    0.9372
+    1
    ],
    "focus": [
-    0.2704,
-    0.2621,
-    0.7296,
-    0.7379
+    0.1001,
+    0.1,
+    0.8999,
+    0.9
    ],
    "cut": [
     0,
     0,
     1,
-    0
+    1
    ],
    "px": 1100
   },
@@ -229,6 +229,111 @@
     1,
     1,
     1
+   ],
+   "px": 1100
+  },
+  "detail-buah": {
+   "view": "detail-buah",
+   "scene": null,
+   "off": false,
+   "grounds": [
+    "light"
+   ],
+   "stills": {
+    "light": {
+     "nasi-merah": {
+      "file": "stills/kotak-makan-detail-buah-nasi-merah.webp",
+      "half": "stills/kotak-makan-detail-buah-nasi-merah-half.webp",
+      "w": 1881,
+      "h": 1574
+     },
+     "shirataki": {
+      "file": "stills/kotak-makan-detail-buah-shirataki.webp",
+      "half": "stills/kotak-makan-detail-buah-shirataki-half.webp",
+      "w": 1881,
+      "h": 1574
+     }
+    }
+   },
+   "box": [
+    0,
+    0,
+    0.9888,
+    0.9091
+   ],
+   "focus": [
+    0.2751,
+    0.2992,
+    0.7249,
+    0.7008
+   ],
+   "cut": [
+    1,
+    1,
+    0,
+    0
+   ],
+   "px": 1100
+  },
+  "three-quarter-meja": {
+   "view": "three-quarter",
+   "scene": "meja",
+   "off": false,
+   "grounds": [
+    "light"
+   ],
+   "stills": {
+    "light": {
+     "nasi-merah": {
+      "file": "stills/kotak-makan-three-quarter-meja-nasi-merah.webp",
+      "half": "stills/kotak-makan-three-quarter-meja-nasi-merah-half.webp",
+      "w": 1128,
+      "h": 661
+     },
+     "shirataki": {
+      "file": "stills/kotak-makan-three-quarter-meja-shirataki.webp",
+      "half": "stills/kotak-makan-three-quarter-meja-shirataki-half.webp",
+      "w": 1128,
+      "h": 661
+     }
+    }
+   },
+   "box": [
+    0.0053,
+    0.0091,
+    0.9778,
+    0.9773
+   ],
+   "px": 1100
+  },
+  "lebar-meja": {
+   "view": "lebar",
+   "scene": "meja",
+   "off": false,
+   "grounds": [
+    "light"
+   ],
+   "stills": {
+    "light": {
+     "nasi-merah": {
+      "file": "stills/kotak-makan-lebar-meja-nasi-merah.webp",
+      "half": "stills/kotak-makan-lebar-meja-nasi-merah-half.webp",
+      "w": 1127,
+      "h": 347
+     },
+     "shirataki": {
+      "file": "stills/kotak-makan-lebar-meja-shirataki.webp",
+      "half": "stills/kotak-makan-lebar-meja-shirataki-half.webp",
+      "w": 1127,
+      "h": 347
+     }
+    }
+   },
+   "box": [
+    0.0053,
+    0.0259,
+    0.9823,
+    0.8905
    ],
    "px": 1100
   }

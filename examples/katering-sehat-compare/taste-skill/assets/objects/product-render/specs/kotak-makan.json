@@ -84,9 +84,10 @@
       "part": [
         "nasi*"
       ],
-      "angle": -40,
-      "elev": 30,
-      "margin": 1.25
+      "angle": -55,
+      "elev": 40,
+      "margin": 1,
+      "cover": 1
     },
     "detail-lauk": {
       "part": [
@@ -120,44 +121,49 @@
         {
           "prop": "desk",
           "at": [
-            0,
+            2,
             -3.2,
             0
           ],
           "size": [
-            1.1,
+            0.96,
             0.032,
-            0.6
+            0.34
           ],
           "scale": 100
         },
         {
           "prop": "sheet",
           "at": [
-            24,
+            34,
             0,
-            10
+            2
           ],
-          "yaw": 12,
+          "yaw": 8,
+          "size": [
+            0.21,
+            0.002,
+            0.297
+          ],
           "scale": 100
         },
         {
           "prop": "book",
           "at": [
-            -25,
+            -36,
             0,
-            -12
+            -4
           ],
-          "yaw": -10,
+          "yaw": -8,
           "count": 2,
           "scale": 100
         },
         {
           "prop": "mug",
           "at": [
-            -24,
+            -19,
             0,
-            14
+            9
           ],
           "scale": 100
         }
@@ -182,7 +188,7 @@
       "detail-lauk",
       "detail-sayur",
       "detail-buah",
-      "three-quarter+meja"
+      "lebar+meja"
     ],
     "grounds": [
       "light"
