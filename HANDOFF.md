@@ -1,7 +1,7 @@
 # Handoff
 
 Read this first if you are a new session, a different model or a different AI tool picking up
-this project. It is kept up to date at every milestone. Last updated: **2026-11-05** (copy sub-skill; batch-008 Quilt).
+this project. It is kept up to date at every milestone. Last updated: **2026-11-06** (three-way test; owner's nine requirements recorded, not yet built).
 
 ## 1. Goal
 
@@ -440,6 +440,43 @@ critique, deliver.md; generator in `.design/build/`). Jury r1: weighted 6.7, no 
 summaries only), photos.mjs could not reach Openverse/Commons, strategy roast not independent (no subagents in that
 session). fit.mjs counts hard 0-blur button press edges as shadows, giving a colour MISS (a possible false positive to
 review in fit.mjs).
+
+Three-way test (2026-11-05/06, `examples/katering-sehat-compare/`, layperson prompt for a healthy
+lunch catering, no human at the gates, no photos for anyone): owner's blind verdict R (design-director)
+best, P (no-skill) "AI slop" but its entrance transition felt alive, Q (taste-skill) not good even
+when served over http. Owner's notes on R: no entrance/transition animation; from the WhatsApp
+section down it is rigid and template-like (the jurors found the same; the builder's fix was not
+re-scored and did not land). Measured: R 0 FAIL, P 3 FAIL, Q 1 FAIL; cost R ~900k tokens (inflated by
+the builder pausing twice and re-reading on resume), P 93k, Q at least 428k (hit the usage limit).
+Learned: each subagent costs ~53k tokens before doing anything; subagents cannot start subagents.
+
+**Owner's nine requirements (2026-11-06), to build next, each in its owning module (CLAUDE.md):**
+1. Transition animation is mandatory (entrance on first load and between states), with a reduced-motion
+   version. Today: motion/functions.md allows it but nothing requires it. Gap.
+2. Copy: offer the user several options framed by the business, plus "percayakan ke AI". Today
+   copy/method.md writes one version. Gap.
+3. Style: always asked, with "percayakan ke AI". Today rules/brief-interview.md + dials + sketches, with
+   "terserah" → team defaults; skipped entirely under autopilot. Mostly covered; make the question
+   mandatory in guided and quick gates.
+4. Colour harmony. Today the colour dial counts hue families (Quite Nice and Quilt show the owner
+   means harmony: few hues repeated across sections, frames and drawings). Gap in measurement.
+5. Cosmetic elements are fine when they have at least a small UX effect (guide the eye, pace, give
+   feedback). Today rubric/reason.md says "looks nice is not a job": soften to accept a named small
+   UX effect. Partly covered; reconcile.
+6. Typography fitted to the brand, never basic defaults. Today: two families rule, system-font-only
+   check, "type personality" in the spec; no method for choosing a face from the brand. Gap.
+7. When the user gives a reference, ask: same as it (full), take the style, or take an element.
+   "Full same" of another company's site conflicts with rules/copyright.md: offer the closest legal
+   form (same structure and feel, own assets and code) and say why. Today: library "adapt or ask" only
+   for stored references. Gap.
+8. Every design carries a branding touch even without a brand: a shape, a signature element, so the
+   site is recognisable. Today team/taste.md Prefer "one signature element"; not enforced. Make it
+   required (spec + reason roast + check).
+9. Every design considers the storyline and reading experience. Today strategy storyline + copy/method.md
+   (copycheck, skim and explain-back tests). Covered; keep checking the lower sections carry the story.
+Also from the test: require the round-2 verifier juror at standard effort; fit.mjs counts hard 0-blur
+press shadows as shadows (likely false colour miss); open a role test (product designer / head of
+design / head of creative / head of UI/UX) only if the owner asks.
 
 ## 4. Decisions and why (do not undo without a reason)
 
