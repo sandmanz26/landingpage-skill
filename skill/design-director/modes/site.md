@@ -25,7 +25,9 @@ only use this system; a new component is added to the system first, then used.
 One spec section per page: its storyline beats (the strategy gives one storyline per page, all
 serving the same message house), sections and content. For each step with behaviour, add a
 logic spec: the rules, every state (idle, loading, success, error, empty), edge cases, and
-acceptance tests with the expected answers written out.
+acceptance tests with the expected answers written out. One `## Motion spec` serves the whole
+site (`motion/functions.md`): the message and its signature motion, the entrance, and the page
+changes and flow steps as its state transitions.
 
 For more than three pages, build each page in its own subagent or session that loads `.design/`
 only (brief, spec, system), so the context does not pile up.

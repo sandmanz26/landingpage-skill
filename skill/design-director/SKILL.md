@@ -83,8 +83,10 @@ means three things at once: it serves the business, it answers the customer, and
    logged with its reason. Check `designers/<name>.md` for a saved preference.
 4. **Guide, then let the user choose early.** Before research, help the user say what they want
    in one short message (`rules/brief-interview.md`): who and what for, 1–3 sites they like and 1
-   they do not (turned into dials by `dials.mjs`), three feeling words, what exists, what is ruled
-   out. At the direction gate the user picks from first-screen sketches of each direction; that
+   they do not (turned into dials by `dials.mjs`), three feeling words, what exists (photos, product
+   UI, brand assets: `rules/brief-interview.md` → Materials), what is ruled out. When no image tool
+   is connected and no photographs are found, say at once that the pictures will be drawn or
+   dummies. At the direction gate the user picks from first-screen sketches of each direction; that
    choice sets the composition, so standard effort needs no hero best-of-3. Full-page variants (2–3 whole
    pages, `--variants`) are for thorough effort or when the user asks; the user chooses on
    `compare.mjs` (`--choose user`), the jury only in autopilot.
@@ -111,8 +113,9 @@ means three things at once: it serves the business, it answers the customer, and
 ## Gate formats
 
 **Brief gate** (`approve brief`). A card of at most 10 lines: what it is, who it is for and their
-situation, the one action, the real content and assets that exist, brand constraints, what to
-avoid, and your one-line reading of anything unclear. Ask at most 5 questions, only for facts that
+situation, the one action, the real content and assets that exist (the `## Materials` section of
+the brief: photos, product UI, brand assets, and the plan for what is missing), brand constraints,
+what to avoid, and your one-line reading of anything unclear. Ask at most 5 questions, only for facts that
 block the work.
 
 **Strategy gate** (`approve strategy`, after the roast). This is where the user first sees the
@@ -138,10 +141,12 @@ research. Show, in this order:
 If the user answers "terserah" or takes the recommendation three times in a row, offer to switch
 them to quick gates and, if they agree, write that to `designers/<name>.md`.
 
-**Final gate** (`approve final`). The package from the mode file: what was built, screenshots at
-desktop and phone, what is sample content, open issues, and **"Supaya lebih bagus"**: at most five
-concrete things the user can do or decide to lift the result (pictures to supply, with the shot
-list; real proof to collect; a dial worth turning; a higher effort level), each with what it would
+**Final gate** (`approve final`). The package from the mode file, written to `.design/deliver.md`:
+what was built, screenshots at desktop and phone, what is sample content (`[SAMPLE]` copy, sample UI
+marked `data-sample`, drawn or dummy pictures with the shot list), open issues, and **"Supaya lebih
+bagus"**: at most five concrete things the user can do or decide to lift the result (pictures to
+supply, with the shot list; real proof to collect; a dial worth turning; a higher effort level; the
+signature motion, when the motion spec found no message to move), each with what it would
 change.
 
 ## When the user changes their mind
@@ -187,7 +192,7 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 | `rules/defaults.md` | Writing the spec: the AI defaults to avoid and what to use instead |
 | `rules/copyright.md` | Before using any reference |
 | `rules/copy-id.md` | Writing copy in Bahasa Indonesia |
-| `motion/functions.md` | Writing the motion spec and building motion |
+| `motion/functions.md` | Writing the motion spec and building motion: the site's message and its one signature motion (or "none found", offered to the user at delivery), the required entrance and state transitions with reduced-motion versions, pause control and budget |
 | `copy/method.md`, `copy/words.json` | The copy step: the reader framed first, the voice felt not stated, the glossary, reading experience, the skim and explain-back tests |
 | `kit/README.md`, `kit/sections.json` | The build step: which tested section answers which customer question, and the rules for using them |
 | `brand/method.md` | The brand mode; the direction step of the design modes (read `.design/brand-kit.json` or write a short kit); a placeholder wordmark when there is no logo |
@@ -195,7 +200,7 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 | `rubric/critic.md` | Briefing the critic subagent; the critique format every juror uses |
 | `rubric/jury.md` | The look step and best-of-N at standard effort and above; judging references |
 | `library/intake.md` | When the team sends references with their notes |
-| `rules/brief-interview.md` | Every question to the user (plain words, what it changes, an example per choice, a recommendation, "percayakan ke AI"); the brief step: the one guiding message, liked sites into dials, sketches at the direction gate |
+| `rules/brief-interview.md` | Every question to the user (plain words, what it changes, an example per choice, a recommendation, "percayakan ke AI"); the brief step: the one guiding message, the materials (photos, product UI, brand assets; mock or placeholder for missing UI; telling the user about dummy pictures), liked sites into dials, sketches at the direction gate |
 | `rules/visual-dials.md` | The direction gate: the dials, presets from the library, how to guide the user |
 | `rules/illustration.md` | Writing the spec when the client has no pictures: drawing flat illustration, the shot list |
 | `library/index.json` (via `library.mjs find`) | The direction step: the team's judged references with their style cards; adapt each to the client or ask (`modes/create.md`) |
@@ -205,10 +210,10 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 
 | Command | Does |
 | --- | --- |
-| `progress.mjs init / check / done / approve / back / skip / log / status` | Order of steps, gates, turn back |
+| `progress.mjs init / check / done / approve / back / skip / log / status` | Order of steps, gates, turn back; content checks per step (brief Materials, spec Interactions and Motion spec, deliver.md, …) |
 | `brandboard.mjs <brand-kit.json or directions.json> [--out .design/brand] [--no-pdf]` | The brand board: palette with roles and contrast pairs, type, shape and motion, elements, the placeholder wordmark, the brand in use (web hero, price card, social post); `board.html` and `board.pdf` |
 | `draw.mjs --sector <s> [--tone <t>] [--have a,b] [--options 3]` | Deals directions into `.design/directions/` (`--list sectors`) |
-| `inspect.mjs <url or file> [--out dir] [--allow rule]` | Real-browser check at 1440/768/390, screenshots, design inventory |
+| `inspect.mjs <url or file> [--out dir] [--allow rule]` | Real-browser check at 1440/768/390, screenshots, design inventory; INFO `placeholder-logo` and `sample-ui` (`data-sample`) for the deliver report |
 | `lint.mjs <files or folders>` | Stock copy, placeholders, default styling patterns in source |
 | `copycheck.mjs <copy.md or page> [--voice .design/voice.md]` | Reading experience and voice, measured: sentence and paragraph length, headline length, long words, self-praise, corporate abstractions, glossary words the reader does not use, generic buttons; prints the skim test |
 | `kit.mjs list` / `get <names> [--out dir]` | Tested sections built from tokens (hero with arch photo, price near the action, evidence rows, reveal cards with a tap path, before/after, sticky story, proof quote, FAQ, closing action): the build's starting floor |

@@ -111,8 +111,8 @@ Playwright check for the critical paths).
 
 ## gate, deliver, learn
 
-As in `modes/create.md`. The deliver package leads with the research summary and the before/after
-table:
+As in `modes/create.md` (in `redesign` the package is written to `.design/deliver.md` and checked
+the same way). The deliver package leads with the research summary and the before/after table:
 
 ```markdown
 | Measure | Before | After |

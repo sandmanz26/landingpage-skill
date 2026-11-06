@@ -527,6 +527,28 @@ offer it to the user at the end as an option; tell the user when images are dumm
 image-generation tool is connected; ask the user for product UI (screenshots, Figma); if none, ask
 whether to build a realistic mock with sample data (marked as sample) or a labelled placeholder.
 
+**2026-11-06: built the owner's motion-message, transition and materials rules (requirement 1 too).**
+- Motion (`motion/functions.md` §"Motion carries the message", §"Transitions are required"): the
+  motion spec names the site's message and its one signature motion (examples Axis Group batch-009,
+  Quilt batch-008, Quite Nice batch-007); entrance on first load and state transitions are required,
+  each with a reduced-motion version; pause control for anything moving > 5 s; budget (transform/
+  opacity, no endless loop with text). No message found → `Message: none found` + `Offered to the
+  user: …`, and the offer goes in `.design/deliver.md` "Supaya lebih bagus". `done spec` (create,
+  site, redesign) checks the Message / Signature motion / Entrance / State transitions lines.
+- Materials (`rules/brief-interview.md` §Materials, the one home; `rules/illustration.md` points
+  to it): ask for photos, product UI, brand assets with plain words and examples; no UI → mock with
+  sample data (`data-sample`) or labelled placeholder, "percayakan ke AI" = mock; no image tool and
+  no photos → tell the user at the start and at delivery that pictures are drawn/dummies, with the
+  shot list. `done brief` (create, site, brand) needs `## Materials` naming the three.
+- Deliver: create/site/redesign now write `.design/deliver.md`; `done deliver` needs it with
+  "## Supaya lebih bagus", the motion offer when none found, the shot list when the brief planned
+  dummy pictures, the sample UI when it planned a mock. `inspect.mjs` reports INFO `sample-ui`
+  (fixture: `data-sample` on clean.html's drawer). SKILL.md tables and steps, modes/create.md
+  (brief template, build, spec, deliver), site.md and improve.md updated. Selftests added.
+- Not verified: no real run with a user; the build of the entrance/transitions is not measured by a
+  script (only the spec lines are checked; evidence.mjs measures loops and pause for the jurors);
+  whether a message is "worth moving" is the model's judgment, not checkable.
+
 ## 4. Decisions and why (do not undo without a reason)
 
 | Decision | Why |

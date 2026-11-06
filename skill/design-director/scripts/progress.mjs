@@ -108,6 +108,46 @@ function brandKitProblems() {
   return out;
 }
 
+// Modes whose spec holds the page's motion spec and whose delivery is a page (.design/deliver.md),
+// and modes whose brief asks for the materials (rules/brief-interview.md → Materials).
+const PAGE_MODES = ['create', 'site', 'redesign'];
+const MATERIAL_MODES = ['create', 'site', 'brand'];
+const readDesign = (f) => (fs.existsSync(path.join(DIR, f)) ? fs.readFileSync(path.join(DIR, f), 'utf8') : '');
+// "Key: value" line inside a block of text (bullets and bold allowed).
+const lineValue = (text, key) => {
+  const m = text.match(new RegExp(`^\\s*(?:[-*]\\s*)?\\**(?:${key})\\**\\s*:\\s*(.*)$`, 'im'));
+  return m ? m[1].trim() : null;
+};
+const NONE_FOUND = /^\(?(none found|tidak ditemukan|belum ditemukan)/i;
+
+// The motion spec names the message and its signature motion, the entrance and the state
+// transitions; with no message found it records the offer to the user (motion/functions.md).
+function motionProblems(spec) {
+  const mo = section(spec, 'Motion spec|Spesifikasi gerak');
+  if (!mo) return ['spec.md has no "## Motion spec" section (motion/functions.md)'];
+  const out = [];
+  const msg = lineValue(mo, 'Message|Pesan');
+  if (!msg || msg.length < 8) out.push('the Motion spec has no "Message:" line naming the site\'s message (or "Message: none found" with "Offered to the user: …")');
+  else if (NONE_FOUND.test(msg)) {
+    if (!/offered to the user|ditawarkan ke (user|pengguna)/i.test(mo)) out.push('"Message: none found" needs an "Offered to the user: <the motion that could carry the message>" note: do not invent motion, offer it in the deliver report');
+  } else if (!lineValue(mo, 'Signature motion|Gerak khas') || lineValue(mo, 'Signature motion|Gerak khas').length < 8)
+    out.push('the Motion spec names a message but no "Signature motion:" line: the one movement that shows it');
+  const ent = lineValue(mo, 'Entrance|Pembuka');
+  if (!ent || ent.length < 8) out.push('the Motion spec has no "Entrance:" line: an entrance on first load is required, with its reduced-motion version (owner\'s requirement 1)');
+  if (!lineValue(mo, 'State transitions|Transisi')) out.push('the Motion spec has no "State transitions:" line: how each state change moves, or "none: no state changes"');
+  return out;
+}
+
+// What the brief planned for missing materials: dummy or drawn pictures, a mock of the product UI.
+function materialsPlan(brief) {
+  const rows = tableRows(brief, 'Materials|Bahan');
+  const row = (re) => rows.filter((c) => re.test(c[0] || '')).map((c) => c.slice(1).join(' ')).join(' ');
+  return {
+    dummyPictures: /\b(dummy|dummies|drawn|digambar|ilustrasi|illustration|placeholder)/i.test(row(/photo|foto|picture|gambar/i)),
+    sampleUi: /\b(mock|sample|contoh|tiruan|dummy)/i.test(row(/\bui\b|interface|antarmuka|screenshot|figma/i)),
+  };
+}
+
 function newestSourceMtime(root = process.cwd()) {
   let newest = 0;
   const SKIP = /^(node_modules|\.git|\.design|dist|build|\.next|\.astro|coverage|\.taste-skill)$/;
@@ -288,6 +328,32 @@ switch (cmd) {
       if (!rows.length && !/\b(none|tidak ada)\b/i.test(ix)) fail('spec.md "## Interactions" is empty: list each interaction in the table, or write "none".');
       const noPurpose = rows.filter((c) => (c[3] || '').length < 4).map((c) => c[0]);
       if (noPurpose.length) fail(`spec.md Interactions: ${noPurpose.join(', ')} name no customer question (fourth column). An interaction with no purpose is cut, not built.`);
+    }
+    if (step === 'brief' && MATERIAL_MODES.includes(s.mode)) {
+      // Photos, product UI and brand assets were asked for, and the plan for what is missing is written down.
+      const mat = section(readDesign('brief.md'), 'Materials|Bahan');
+      if (!mat) fail('brief.md needs a "## Materials" section: photos, product UI (or n/a) and brand assets, what exists and the plan for what is missing (rules/brief-interview.md → Materials).');
+      const absent = [['photos', /photo|foto/i], ['product UI', /\bui\b|interface|antarmuka|screenshot|figma/i], ['brand assets', /brand|logo/i]].filter(([, re]) => !re.test(mat)).map(([n]) => n);
+      if (absent.length) fail(`brief.md "## Materials" does not record ${absent.join(', ')}: ask for each (plain question, what it changes, an example) and write what exists and the plan (rules/brief-interview.md → Materials).`);
+    }
+    if (step === 'spec' && PAGE_MODES.includes(s.mode)) {
+      const probs = motionProblems(readDesign('spec.md'));
+      if (probs.length) fail(`spec.md: ${probs.join('; ')} (motion/functions.md).`);
+    }
+    if (step === 'deliver' && PAGE_MODES.includes(s.mode)) {
+      // The package is written down, and it carries what the earlier steps promised the user.
+      const dm = readDesign('deliver.md');
+      if (!dm) fail('Write the deliver package to .design/deliver.md first (modes/create.md step 13).');
+      const better = section(dm, 'Supaya lebih bagus');
+      if (!better) fail('.design/deliver.md needs a "## Supaya lebih bagus" section: at most five things the user can supply or decide, each with what it would change (SKILL.md, final gate).');
+      const msg = lineValue(section(readDesign('spec.md'), 'Motion spec|Spesifikasi gerak'), 'Message|Pesan');
+      if (msg && NONE_FOUND.test(msg) && !/motion|animasi|gerak/i.test(better))
+        fail('The motion spec found no message to move: offer the signature motion to the user in .design/deliver.md "## Supaya lebih bagus" (motion/functions.md).');
+      const plan = materialsPlan(readDesign('brief.md'));
+      if (plan.dummyPictures && !/shot list|daftar (foto|gambar)/i.test(dm))
+        fail('The brief planned drawn or dummy pictures: say so in .design/deliver.md with the shot list (rules/brief-interview.md → Materials).');
+      if (plan.sampleUi && !/sample ui|data-sample|ui contoh|tiruan|mock/i.test(dm))
+        fail('The brief planned a mock of the product UI: list the sample UI (data-sample) in .design/deliver.md with what to send to replace it (rules/brief-interview.md → Materials).');
     }
     if (step === 'brand-directions') {
       const bp = path.join(DIR, 'brand', 'board.html');

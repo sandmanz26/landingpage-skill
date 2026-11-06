@@ -311,6 +311,10 @@ export function measure({ rules, viewport }) {
   const logos = [...document.querySelectorAll('[data-placeholder-logo]')];
   if (logos.length) add('INFO', 'placeholder-logo', `${logos.length} placeholder wordmark(s): list them in the deliver report as a placeholder to replace with a designer's logo`, logos.slice(0, 3).map((e) => snippet(e)));
 
+  // --- sample product UI (rules/brief-interview.md → Materials): a mock with sample data, listed in the deliver report
+  const sampleUi = [...document.querySelectorAll('[data-sample]')];
+  if (sampleUi.length) add('INFO', 'sample-ui', `${sampleUi.length} element(s) carry sample data (data-sample): list them in the deliver report as sample UI to replace with the real product`, sampleUi.slice(0, 3).map((e) => e.getAttribute('data-sample') || snippet(e)));
+
   // --- headings
   const h1s = [...document.querySelectorAll('h1')].filter(visible);
   if (h1s.length === 0) add('FAIL', 'no-h1', 'No visible h1: the page has no title');

@@ -11,7 +11,12 @@ them is carried by photographs or illustration. Photographs are the key visual (
    and is never presented as their own people, place or product.
 2. **Draw** what no honest photograph exists of (below), in one consistent flat language; drawn
    objects over a photograph's frame (the Summer Smash Tennis frame-break) add brand voice.
-3. **Placeholders** only in drafts, marked as such, with the shot list; never in a delivered page.
+3. **Placeholders** only in drafts, marked as such, with the shot list; never in a delivered page,
+   except a labelled product-UI placeholder the user chose (`rules/brief-interview.md` → Materials).
+
+When no image-generation tool is connected and step 1 finds nothing usable, the user is told at the
+start and in the deliver report that the pictures are drawn or dummies, with the shot list
+(`rules/brief-interview.md` → Materials holds the rule and the words).
 
 Unless the `imagery` dial says `type`, do not ship type alone.
 

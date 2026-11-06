@@ -12,7 +12,8 @@ Read the request and the project. Find out what is real:
 - the one action the page must get (book, buy, sign up, chat on WhatsApp);
 - the real content: services or products, prices, hours, address, numbers, quotes;
 - **the imagery that truly exists**: their photos, product shots, a real interface, an image tool
-  you can call, or nothing;
+  you can call, or nothing; ask for photos, product UI and brand assets as in
+  `rules/brief-interview.md` → Materials, and say at once when pictures will be drawn or dummies;
 - brand constraints (colours, fonts, logo) and the stack;
 - **materials to research from**: existing copy, the old site, brochures, chat exports, reviews,
   sales notes. Ask for them once if none were given; they are the best source of the customer's
@@ -26,13 +27,22 @@ Write `.design/brief.md`:
 - For: <who, and their situation>
 - One action: <the CTA>
 - Real content: <what we have>
-- Imagery that exists: <list, or "none">
 - Brand: <fixed colours/fonts, or "free">
 - Avoid: <what the user or the brand rules out>
 - Stack: <static HTML / Next / Astro / ...>
-- Materials: <what was given to research from, or "none yet">
 - My reading: <one line on anything unclear>
+
+## Materials
+| Material | What exists | Plan |
+| Photos | ... | ... |
+| Product UI | ... or n/a | ... |
+| Brand assets | ... | ... |
+| Image tool | ... | ... |
+| Research materials | ... or "none yet" | ... |
 ```
+
+`done brief` refuses without the `## Materials` section (format and plans:
+`rules/brief-interview.md` → Materials).
 
 Before writing it, guide the user in one message (`rules/brief-interview.md`): who and what for,
 1–3 liked sites and 1 disliked (capture them and run `dials.mjs suggest`), three feeling words,
@@ -201,7 +211,8 @@ Direction: <id> (+ mix notes)
 A row with no purpose is cut, not built. motion/functions.md → Interactions)
 
 ## Motion spec
-(motion/functions.md)
+(motion/functions.md: Message and Signature motion, or "Message: none found" with "Offered to the
+user"; Entrance; State transitions; Loops. `done spec` checks these lines)
 
 ## Not on this page
 <project-specific bans, from the brand, taste and the user>
@@ -259,7 +270,11 @@ Order: tokens → hero → sections → pictures → states (hover, focus, error
 - Sticky and fixed elements: give each sticky panel its own wrapper (the part of the page it belongs
   to), or it stays stuck over the sections that follow. Check it in the scrolled screenshots, not the
   first screen.
-- Motion last, from the motion spec (`motion/functions.md`).
+- Motion last, from the motion spec (`motion/functions.md`): the entrance and every state
+  transition with their reduced-motion versions, then the signature motion if a message was found.
+- **No product UI from the client:** the mock or the labelled placeholder the user chose at the
+  brief (`rules/brief-interview.md` → Materials); every sample element carries `data-sample`
+  (`inspect.mjs` reports INFO `sample-ui`).
 - **No logo from the client:** set a placeholder wordmark (`brand/method.md` §9): the name in the
   display face, optionally one shape from the shape language, marked `data-placeholder-logo`
   (`inspect.mjs` reports it as INFO `placeholder-logo`).
@@ -338,7 +353,7 @@ the rubric, and say in the report that the critique was not independent.
 
 ## 13. deliver (gate)
 
-Show the package:
+Write the package to `.design/deliver.md` and show it:
 
 - **the research report** (`.design/research.md`): the findings that changed the design, the
   competitors and category clichés, the customer's questions in their words, the sources;
@@ -352,9 +367,18 @@ Show the package:
 - the placeholder wordmark, if one was used: "placeholder, replace with a designer's logo";
 - every `[SAMPLE]` item to replace, every found picture with its credit, every picture that stands
   in for photography;
+- **dummy and drawn pictures**: when no image tool was connected and no photographs were found,
+  say plainly that the pictures are drawn or dummies, with the shot list (`rules/illustration.md`);
+- **sample UI**: every `data-sample` mock (the `sample-ui` INFO from `inspect.mjs`) or labelled
+  product-UI placeholder, with what to send to replace it;
 - WARNs kept, each with its one-sentence defence;
 - the fit against the dials (`fit.mjs`), and **Supaya lebih bagus**: at most five things the user
-  can supply or decide to lift the result, each with what it would change (SKILL.md, final gate).
+  can supply or decide to lift the result, each with what it would change (SKILL.md, final gate);
+  when the motion spec says `Message: none found`, the motion offered to the user is one of them.
+
+`done deliver` refuses without `.design/deliver.md` and its "Supaya lebih bagus" section, without
+the motion option when no message was found, without the shot list when the brief planned dummy or
+drawn pictures, and without the sample UI when it planned a mock.
 
 Copy the final screenshots to `.design/snapshots/<date>-v<n>/`. After the user approves:
 `approve final`, `done deliver`.

@@ -35,12 +35,47 @@ Ask only what is missing from the request and the project. In this order:
 3. **Rasa dalam tiga kata.** Offer a short list instead of an open question: hangat, tenang,
    mewah, berani, jenaka, rapi, tradisional, modern, intim, meriah. Translate the picks into dial
    values and say the translation back ("mewah + tenang = warna kalem, huruf ×6 serif tipis, foto").
-4. **Yang sudah ada.** Photos, logo, brand colours, real prices, reviews. What is missing decides
-   the imagery dial and what may never be invented.
+4. **Yang sudah ada.** Photos, product UI, logo and brand colours, real prices, reviews. Ask for
+   the materials as in **Materials** below; what is missing decides the imagery dial and what may
+   never be invented.
 5. **Yang tidak boleh.** Colours, styles or claims the brand or the user rules out.
 
 When the request already answers a question, do not ask it. When the user answers "terserah",
 take the team's taste (`team/visual-defaults.json`) and say so in one line.
+
+## Materials: ask for them, and say what stands in when they are missing
+
+Owner, 2026-11-06. Missing materials are the commonest reason a page looks unfinished, and the user
+often has them but does not know they matter. In the one message, ask for each of the three below
+in the four-part form above (plain question, what it changes, an example, a recommendation with
+"percayakan ke AI"), then record the answer in the brief.
+
+| Material | Ask, in plain words, with an example | When it is missing |
+| --- | --- | --- |
+| **Photos** of the real place, people, product, work | "Ada foto asli tempat, tim, atau produk Anda? Foto asli membuat halaman terasa milik Anda, bukan template. Contoh: foto dapur saat menyiapkan katering, 5-10 foto dari HP sudah cukup." | Look for licensed photographs of the subject's world with `photos.mjs`, then a connected image-generation tool, then draw (`rules/illustration.md`). **If no image-generation tool is connected and `photos.mjs` finds nothing usable, tell the user at the start**: "Gambar di halaman ini akan berupa ilustrasi/dummy dulu, karena tidak ada foto dan tidak ada alat pembuat gambar yang terhubung", and repeat it in the deliver report with the shot list. Owner: "jika user tidak link ke mcp yang bisa generate image maka kita sampaikan bahwa kita menggunakan dummy dulu." |
+| **Product UI**: screenshots, a Figma link, a screen recording (only when the product is software or has an app) | "Ada tangkapan layar atau file Figma dari aplikasi Anda? Calon pelanggan ingin melihat produknya sebelum mendaftar. Contoh: layar dasbor, layar pemesanan, tampilan di HP." | Follow up once. If there is still no interface, ask: "Belum ada tampilan aplikasinya. Mau saya buatkan **tiruan yang realistis dengan data contoh** (terlihat seperti aplikasi sungguhan, ditandai sebagai contoh, Anda ganti nanti) atau **placeholder berlabel** saja (kotak bertulisan 'tampilan aplikasi')? Rekomendasi: tiruan, karena pelanggan menilai dari produknya. Atau percayakan ke AI." **"Percayakan ke AI" chooses the mock.** The mock is built from the product's real features, every sample element carries `data-sample` (`inspect.mjs` reports INFO `sample-ui`), its numbers are never presented as customer results (SKILL.md: proof is never sampled), and it is listed in the deliver report. A placeholder is a labelled box with the shot needed. Owner: "follow up user untuk minta; jika belum ada interface tanya apakah perlu dibuatkan dummy atau placeholder saja." |
+| **Brand assets**: logo, colours, fonts, a brand book | "Ada logo atau warna resmi? Kalau ada, halaman memakai itu; kalau belum, saya buatkan logo sementara dari nama Anda. Contoh: file logo PNG/SVG, kode warna dari desainer, atau foto papan nama toko." | A short brand kit at the direction step and a placeholder wordmark (`brand/method.md` §9), listed in the deliver report. |
+
+Research materials (old copy, brochures, chat exports, reviews) are asked for as in
+`modes/create.md` step 1 and recorded in the same section. A `section` run skips this: it works
+inside a design whose materials exist.
+
+The brief records it (`progress.mjs done brief` refuses a brief in `create`, `site` and `brand`
+without a `## Materials` section that names photos, product UI, and brand assets, "n/a" allowed
+when there is no product UI):
+
+```markdown
+## Materials
+| Material | What exists | Plan |
+| Photos | none | photos.mjs: 0 usable; no image tool → drawn and dummy pictures, user told at the start; shot list at delivery |
+| Product UI | none after a follow-up | user: "percayakan ke AI" → realistic mock with sample data (data-sample) |
+| Brand assets | no logo; colours free | short brand kit, placeholder wordmark |
+| Image tool | none connected | - |
+| Research materials | 40 Google reviews, old menu PDF | research step |
+```
+
+`progress.mjs done deliver` then wants `.design/deliver.md` to list the shot list when the brief
+plans dummy or drawn pictures, and the sample UI when it plans a mock.
 
 ## What the answers become
 

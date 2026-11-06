@@ -19,6 +19,10 @@ const RESEARCH = '# Research\n## Sources\n| # | Source | What it gave | Date rea
 const ROAST = '# Roast\n## Points\n| # | Voice | Point | Evidence | Severity |\n| 1 | Customer | Price too late | R1 | high |\n| 2 | Competitor | Same hero as A | R2 | medium |\n| 3 | Owner | No proof | R3 | low |\n## Response\n| # | Decision | What changed |\n| 1 | Accepted | Price moved to the first screen |\n| 2 | Accepted | Hero built from the clinic photo |\n| 3 | Rejected | Proof waits for real reviews; marked as a gap |\n';
 // A brand kit with the five headings of brand/method.md §8 and the five tests recorded.
 const BRANDKIT = '# Brand kit: Test\n## Sources\n| Source | Ask | Answer |\n| The product | form | bento box |\n## Elements\n| Family | Decision | Source |\n| Shape | radius 28 | box |\n## Hero element\nThe box that fills by day.\n## Rules of use\n| Element | Where | How often | Never | Effect |\n| Box | hero, price | 3 | decoration | shows progress |\n## Tests\n- Cover-the-logo: pass\n- Blur: pass\n- Swap: pass\n- Down-the-page: every section has two\n- Source: all traced\n';
+// A brief with the materials asked for (rules/brief-interview.md → Materials).
+const BRIEF = '# Brief\n- What: test\n## Materials\n| Material | What exists | Plan |\n| --- | --- | --- |\n| Photos | none | photos.mjs: 0 usable; no image tool → drawn and dummy pictures, user told |\n| Product UI | n/a | - |\n| Brand assets | logo.svg | use it |\n';
+// A motion spec with the message, its signature motion, the entrance and the state transitions (motion/functions.md).
+const MOTION = '## Motion spec\nMessage: lunch arrives ready, every weekday\nSignature motion: the lunch box fills compartment by compartment on scroll, once\nEntrance: headline, sub, action, photo rise in 700ms · reduced: cross-fade 150ms\nState transitions: FAQ rows open with height-free reveal · reduced: instant\nLoops: none\n';
 const check = (name, ok, detail = '') => {
   console.log(`${ok ? 'pass' : 'FAIL'}  ${name}${ok ? '' : `\n      ${detail}`}`);
   if (!ok) failed++;
@@ -59,7 +63,7 @@ const check = (name, ok, detail = '') => {
   check('progress refuses a step out of order', p('done', 'research').status === 1);
   check('progress refuses a gate without approval', p('done', 'brief').status === 1);
   check('progress refuses self-approval outside autopilot', p('approve', 'brief', '--by', 'claude').status === 1);
-  fs.writeFileSync(path.join(tmp, '.design/brief.md'), '# brief');
+  fs.writeFileSync(path.join(tmp, '.design/brief.md'), BRIEF);
   p('approve', 'brief', '--note', 'ok');
   check('progress accepts an approved, evidenced step', p('done', 'brief').status === 0);
   fs.writeFileSync(path.join(tmp, '.design/research.md'), '# research\nno sources section');
@@ -204,7 +208,7 @@ const check = (name, ok, detail = '') => {
   const p = (...a) => run('progress.mjs', a, proj);
   p('init', '--mode', 'create', '--effort', 'quick', '--gates', 'autopilot');
   const d = path.join(proj, '.design');
-  fs.writeFileSync(path.join(d, 'brief.md'), '# Brief');
+  fs.writeFileSync(path.join(d, 'brief.md'), BRIEF);
   p('approve', 'brief'); p('done', 'brief');
   fs.writeFileSync(path.join(d, 'research.md'), RESEARCH);
   p('done', 'research');
@@ -250,7 +254,7 @@ const check = (name, ok, detail = '') => {
   const init = p('init', '--mode', 'section', '--effort', 'quick', '--gates', 'guided', '--variants', '2', '--choose', 'user');
   check('progress starts a run with variants', init.status === 0 && /2 variants, chosen by the user/.test(init.stdout), init.stdout + init.stderr);
   const d = path.join(proj, '.design');
-  fs.writeFileSync(path.join(d, 'brief.md'), '# Brief');
+  fs.writeFileSync(path.join(d, 'brief.md'), BRIEF);
   p('approve', 'brief'); p('done', 'brief');
   fs.writeFileSync(path.join(d, 'research.md'), RESEARCH); p('done', 'research');
   fs.writeFileSync(path.join(d, 'spec.md'), '# Spec');
@@ -370,7 +374,7 @@ const check = (name, ok, detail = '') => {
   check('elements flags template filler (emoji, twin cards, generic copy, unsourced numbers, eyebrows)', ['emoji', 'same-as-siblings', 'generic-copy', 'number-claim', 'eyebrow'].every((f) => flags.has(f)), [...flags].join(', '));
   const p = (...a) => run('progress.mjs', a, proj);
   p('init', '--mode', 'section', '--effort', 'quick', '--gates', 'quick');
-  fs.writeFileSync(path.join(d, 'brief.md'), '# Brief');
+  fs.writeFileSync(path.join(d, 'brief.md'), BRIEF);
   p('approve', 'brief'); p('done', 'brief');
   fs.writeFileSync(path.join(d, 'research.md'), RESEARCH); p('done', 'research');
   fs.writeFileSync(path.join(d, 'spec.md'), '# Spec\n## Interactions\nnone'); p('done', 'spec');
@@ -425,7 +429,7 @@ const check = (name, ok, detail = '') => {
   const p = (...a) => run('progress.mjs', a, proj);
   p('init', '--mode', 'create', '--effort', 'standard', '--gates', 'guided');
   const d = path.join(proj, '.design');
-  fs.writeFileSync(path.join(d, 'brief.md'), '# Brief');
+  fs.writeFileSync(path.join(d, 'brief.md'), BRIEF);
   p('approve', 'brief', '--note', 'ok'); p('done', 'brief');
   fs.writeFileSync(path.join(d, 'research.md'), RESEARCH); p('done', 'research');
   fs.writeFileSync(path.join(d, 'strategy.md'), '# S'); p('done', 'strategy');
@@ -450,7 +454,7 @@ const check = (name, ok, detail = '') => {
   const p = (...a) => run('progress.mjs', a, proj);
   p('init', '--mode', 'brand', '--gates', 'guided');
   const d = path.join(proj, '.design');
-  fs.writeFileSync(path.join(d, 'brief.md'), '# Brief');
+  fs.writeFileSync(path.join(d, 'brief.md'), BRIEF);
   p('approve', 'brief', '--note', 'ok'); p('done', 'brief');
   fs.writeFileSync(path.join(d, 'research.md'), RESEARCH); p('done', 'research');
   fs.writeFileSync(path.join(d, 'strategy.md'), '# S'); p('done', 'strategy');
@@ -487,6 +491,57 @@ const check = (name, ok, detail = '') => {
   run('brandboard.mjs', [path.join(d, 'brand-kit.json'), '--out', path.join(d, 'brand')], proj);
   const delivered = p('done', 'deliver');
   check('progress wants the board PDF before a brand delivery', noPdf.status !== 0 && /board\.pdf/.test(noPdf.stderr) && delivered.status === 0, noPdf.stderr + delivered.stderr);
+}
+
+// materials at the brief, the motion message in the spec, and what the deliver report must carry
+{
+  const proj = path.join(tmp, 'materials');
+  fs.mkdirSync(proj);
+  const d = path.join(proj, '.design');
+  const p = (...a) => run('progress.mjs', a, proj);
+  p('init', '--mode', 'create', '--effort', 'quick', '--gates', 'autopilot');
+  p('approve', 'brief');
+  fs.writeFileSync(path.join(d, 'brief.md'), '# Brief\n- What: test');
+  const noMat = p('done', 'brief');
+  fs.writeFileSync(path.join(d, 'brief.md'), BRIEF.replace(/\| Product UI.*\n/, ''));
+  const noUi = p('done', 'brief');
+  fs.writeFileSync(path.join(d, 'brief.md'), BRIEF.replace('| Product UI | n/a | - |', '| Product UI | none after a follow-up | user: "percayakan ke AI" → realistic mock with sample data (data-sample) |'));
+  const okBrief = p('done', 'brief');
+  check('progress wants a "## Materials" brief naming photos, product UI and brand assets', noMat.status !== 0 && /## Materials/.test(noMat.stderr) && noUi.status !== 0 && /product UI/.test(noUi.stderr) && okBrief.status === 0, noMat.stderr + noUi.stderr + okBrief.stderr);
+  const st = JSON.parse(fs.readFileSync(path.join(d, 'progress.json'), 'utf8'));
+  for (const k of ['research', 'strategy', 'roast', 'direction', 'skeleton']) st.steps[k] = { status: 'done' };
+  fs.writeFileSync(path.join(d, 'progress.json'), JSON.stringify(st));
+  const spec = (motion) => fs.writeFileSync(path.join(d, 'spec.md'), `# Spec\n## Interactions\nnone\n${motion}`);
+  spec('');
+  const noMotion = p('done', 'spec');
+  spec(MOTION.replace(/Message:.*\n/, ''));
+  const noMessage = p('done', 'spec');
+  spec(MOTION.replace(/Entrance:.*\n/, ''));
+  const noEntrance = p('done', 'spec');
+  spec(MOTION.replace(/Signature motion:.*\n/, ''));
+  const noSignature = p('done', 'spec');
+  spec(MOTION.replace(/Message:.*\nSignature motion:.*\n/, 'Message: none found\n'));
+  const noOffer = p('done', 'spec');
+  spec(MOTION.replace(/Message:.*\nSignature motion:.*\n/, 'Message: none found. Offered to the user: the menu card turning into the packed box, needs a real box photo\n'));
+  const offered = p('done', 'spec');
+  check('progress refuses a motion spec without Message, Entrance or a signature motion, and "none found" without an offer', [noMotion, noMessage, noEntrance, noSignature, noOffer].every((r) => r.status !== 0) && /Message:/.test(noMessage.stderr) && /Entrance:/.test(noEntrance.stderr) && /Signature motion/.test(noSignature.stderr) && /Offered to the user/.test(noOffer.stderr) && offered.status === 0, [noMotion, noMessage, noEntrance, noSignature, noOffer, offered].map((r) => r.stderr).join(' | '));
+  const st2 = JSON.parse(fs.readFileSync(path.join(d, 'progress.json'), 'utf8'));
+  for (const k of ['copy', 'build', 'reason', 'gate', 'look']) st2.steps[k] = { status: 'done' };
+  fs.writeFileSync(path.join(d, 'progress.json'), JSON.stringify(st2));
+  p('approve', 'final');
+  const noReport = p('done', 'deliver');
+  fs.writeFileSync(path.join(d, 'deliver.md'), '# Deliver\n## Supaya lebih bagus\n1. Kirim foto dapur asli.\n');
+  const noMotionOffer = p('done', 'deliver');
+  fs.appendFileSync(path.join(d, 'deliver.md'), '2. Motion: kartu menu yang berubah jadi kotak makan siang (butuh foto kotak asli).\n');
+  const noShots = p('done', 'deliver');
+  fs.appendFileSync(path.join(d, 'deliver.md'), '## Pictures\nDrawn and dummy pictures; shot list: kitchen at 10am, the box packed.\n');
+  const noSampleUi = p('done', 'deliver');
+  fs.appendFileSync(path.join(d, 'deliver.md'), '## Sample UI\nThe order screen is a mock with sample data (data-sample): send a screenshot to replace it.\n');
+  const delivered = p('done', 'deliver');
+  check('progress wants deliver.md with the motion offer, the shot list for dummy pictures and the sample UI', [noReport, noMotionOffer, noShots, noSampleUi].every((r) => r.status !== 0) && /deliver\.md/.test(noReport.stderr) && /signature motion/.test(noMotionOffer.stderr) && /shot list/.test(noShots.stderr) && /sample UI/.test(noSampleUi.stderr) && delivered.status === 0, [noReport, noMotionOffer, noShots, noSampleUi, delivered].map((r) => r.stderr).join(' | '));
+  const clean = path.join(tmp, 'clean', 'report.json');
+  const rep = fs.existsSync(clean) ? JSON.parse(fs.readFileSync(clean, 'utf8')) : { findings: [] };
+  check('inspect reports data-sample elements as INFO sample-ui', rep.findings.some((f) => f.rule === 'sample-ui' && f.severity === 'INFO'), rep.findings.map((f) => f.rule).join(', '));
 }
 
 // photos: credits and a clear refusal without a search
