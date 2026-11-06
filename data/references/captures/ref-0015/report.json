@@ -1,0 +1,902 @@
+{
+  "target": "https://axisgroup.xyz/",
+  "time": "2026-11-06T04:57:06.901Z",
+  "rules": {
+    "purple-gradient": "warn",
+    "gradient": "info",
+    "glass": "info",
+    "system-font-only": "warn",
+    "too-many-font-sizes": "warn",
+    "too-many-colours": "warn",
+    "shadow-on-everything": "warn",
+    "icon-card-row": "warn",
+    "centred-hero-two-ctas": "warn",
+    "emoji": "warn",
+    "kit-sample": "fail"
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "pageHeight": 12159,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "font-count",
+          "message": "4 typefaces carry the text: ui sans serif, ivyprestodisplay, sfprodisplay, ivyprestoheadline"
+        },
+        {
+          "severity": "WARN",
+          "rule": "too-many-font-sizes",
+          "message": "14 different font sizes on the page (aim for 5 or fewer doing the visible work)"
+        },
+        {
+          "severity": "WARN",
+          "rule": "display-sizes",
+          "message": "8 display sizes (24px and up) with no clear scale: 96, 64, 60, 46, 40, 30, 26, 24 px; use 3-4 steps, each with one role"
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14px (16px or more reads better)",
+          "sample": [
+            "<p> \"We help fintechs secure PSP licenses under PSD2, m\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14px (16px or more reads better)",
+          "sample": [
+            "<p> \"We help businesses secure EMI licenses under EMD2,\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14px (16px or more reads better)",
+          "sample": [
+            "<p> \"We help investment firms obtain and maintain MiFID\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14px (16px or more reads better)",
+          "sample": [
+            "<p> \"We help asset managers secure licenses for AIFs an\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "purple-gradient",
+          "message": "9 purple or indigo gradients",
+          "sample": [
+            "<span> \"Trust\"",
+            "<span> \"industry\"",
+            "<span> \"work\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "23 gradient backgrounds"
+        },
+        {
+          "severity": "WARN",
+          "rule": "shadow-on-everything",
+          "message": "8 boxes carry a drop shadow"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "6 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#8d8d8d on #ffffff = 3.32:1 (needs 4.5, not re-checked on screen) <span> \"Axis specializes in emerging tech, helping founder\"",
+            "#787878 on #ffffff = 4.42:1 (needs 4.5, not re-checked on screen) <p> \"Thorough consultation to understand your business \"",
+            "#9f9f9f on #ffffff = 2.65:1 (needs 4.5, not re-checked on screen) <h4> \"Tailored Legal/Regulatory Strategy\"",
+            "#8d8d8d on #f7f7f7 = 3.1:1 (needs 4.5, not re-checked on screen) <button> \"MiCA\"",
+            "#717171 on #ebebeb = 4.09:1 (needs 4.5, not re-checked on screen) <span> \"EU Regulation (Cybersecurity)\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "contrast-unverified",
+          "message": "20 suspected contrast problems could not be re-measured on screen"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "ui-sans-serif",
+            "share": 78
+          },
+          {
+            "family": "ivyPrestoDisplay",
+            "share": 10
+          },
+          {
+            "family": "sfProDisplay",
+            "share": 9
+          },
+          {
+            "family": "ivyPrestoHeadline",
+            "share": 2
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "ui sans serif",
+            "share": 78
+          },
+          {
+            "family": "ivyprestodisplay",
+            "share": 10
+          },
+          {
+            "family": "sfprodisplay",
+            "share": 9
+          },
+          {
+            "family": "ivyprestoheadline",
+            "share": 2
+          }
+        ],
+        "fontSizes": [
+          126,
+          96,
+          64,
+          60,
+          46,
+          40,
+          30,
+          26,
+          24,
+          20,
+          18,
+          16,
+          14,
+          12
+        ],
+        "textColours": [
+          "#2b2c2c",
+          "#131313",
+          "#000000",
+          "#8d8d8d",
+          "#ffffff",
+          "#787878",
+          "#9f9f9f",
+          "#171717",
+          "#626262",
+          "#0f5efe",
+          "#161717",
+          "#141414",
+          "#fdfdfd",
+          "#717171",
+          "#6a7282"
+        ],
+        "backgroundColours": [
+          "#ffffff",
+          "#000000",
+          "#1a1a1a",
+          "#27272a",
+          "#eeeeee",
+          "#fcfcfc",
+          "#efefef",
+          "#777777",
+          "#141414",
+          "#f0f0f0",
+          "#f8f8f8",
+          "#ebebeb"
+        ],
+        "chromaticColours": 1,
+        "colourFamilies": 1,
+        "spacing": {
+          "distinct": 29,
+          "offScale": 12,
+          "values": [
+            2,
+            3,
+            4,
+            6,
+            8,
+            9,
+            10,
+            12,
+            14,
+            16,
+            18,
+            19,
+            20,
+            24,
+            27,
+            28,
+            32,
+            40,
+            48,
+            56,
+            59,
+            64,
+            80,
+            90,
+            112,
+            120,
+            170,
+            180,
+            3600
+          ]
+        },
+        "radii": [
+          "12px",
+          "6px",
+          "8px",
+          "16px",
+          "3.35544e+07px",
+          "10px",
+          "4px",
+          "60px"
+        ],
+        "shadows": 9,
+        "gradients": 23,
+        "backdropBlur": 0,
+        "transitions": 275,
+        "animatedElements": 31,
+        "cls": 0.011
+      },
+      "screenshots": [
+        "data/references/captures/ref-0015/desktop-fold.png",
+        "data/references/captures/ref-0015/desktop-page-01.png",
+        "data/references/captures/ref-0015/desktop-page-02.png",
+        "data/references/captures/ref-0015/desktop-page-03.png",
+        "data/references/captures/ref-0015/desktop-page-04.png",
+        "data/references/captures/ref-0015/desktop-page-05.png",
+        "data/references/captures/ref-0015/desktop-page-06.png",
+        "data/references/captures/ref-0015/desktop-page-07.png",
+        "data/references/captures/ref-0015/desktop-page-08.png",
+        "data/references/captures/ref-0015/desktop-page-09.png",
+        "data/references/captures/ref-0015/desktop-page-10.png",
+        "data/references/captures/ref-0015/desktop-page-11.png",
+        "data/references/captures/ref-0015/desktop-page-12.png",
+        "data/references/captures/ref-0015/desktop-page-13.png",
+        "data/references/captures/ref-0015/desktop-page-14.png"
+      ]
+    },
+    "tablet": {
+      "width": 768,
+      "pageHeight": 8480,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "font-count",
+          "message": "4 typefaces carry the text: ui sans serif, ivyprestodisplay, sfprodisplay, ivyprestoheadline"
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14px (16px or more reads better)",
+          "sample": [
+            "<p> \"We help fintechs secure PSP licenses under PSD2, m\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14px (16px or more reads better)",
+          "sample": [
+            "<p> \"We help businesses secure EMI licenses under EMD2,\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14px (16px or more reads better)",
+          "sample": [
+            "<p> \"We help investment firms obtain and maintain MiFID\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 14px (16px or more reads better)",
+          "sample": [
+            "<p> \"We help asset managers secure licenses for AIFs an\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "purple-gradient",
+          "message": "9 purple or indigo gradients",
+          "sample": [
+            "<span> \"Trust\"",
+            "<span> \"industry\"",
+            "<span> \"work\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "23 gradient backgrounds"
+        },
+        {
+          "severity": "WARN",
+          "rule": "shadow-on-everything",
+          "message": "7 boxes carry a drop shadow"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "5 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#8d8d8d on #ffffff = 3.32:1 (needs 4.5, not re-checked on screen) <span> \"Axis specializes in emerging tech, helping founder\"",
+            "#787878 on #ffffff = 4.42:1 (needs 4.5, not re-checked on screen) <p> \"Thorough consultation to understand your business \"",
+            "#8d8d8d on #f7f7f7 = 3.1:1 (needs 4.5, not re-checked on screen) <button> \"MiCA\"",
+            "#717171 on #ebebeb = 4.09:1 (needs 4.5, not re-checked on screen) <span> \"EU Regulation (Cybersecurity)\"",
+            "#8d8d8d on #f8f8f8 = 3.13:1 (needs 4.5, not re-checked on screen) <p> \"Where Technology Meets Trust\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "contrast-unverified",
+          "message": "25 suspected contrast problems could not be re-measured on screen"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "ui-sans-serif",
+            "share": 80
+          },
+          {
+            "family": "ivyPrestoDisplay",
+            "share": 10
+          },
+          {
+            "family": "sfProDisplay",
+            "share": 8
+          },
+          {
+            "family": "ivyPrestoHeadline",
+            "share": 2
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "ui sans serif",
+            "share": 80
+          },
+          {
+            "family": "ivyprestodisplay",
+            "share": 10
+          },
+          {
+            "family": "sfprodisplay",
+            "share": 8
+          },
+          {
+            "family": "ivyprestoheadline",
+            "share": 2
+          }
+        ],
+        "fontSizes": [
+          126,
+          42,
+          40,
+          32,
+          24,
+          20,
+          18,
+          16,
+          14,
+          12
+        ],
+        "textColours": [
+          "#131313",
+          "#000000",
+          "#8d8d8d",
+          "#ffffff",
+          "#2b2c2c",
+          "#787878",
+          "#171717",
+          "#626262",
+          "#0f5efe",
+          "#161717",
+          "#141414",
+          "#fdfdfd",
+          "#717171",
+          "#6a7282"
+        ],
+        "backgroundColours": [
+          "#ffffff",
+          "#000000",
+          "#1a1a1a",
+          "#27272a",
+          "#eeeeee",
+          "#fcfcfc",
+          "#efefef",
+          "#777777",
+          "#141414",
+          "#f0f0f0",
+          "#f8f8f8",
+          "#ebebeb"
+        ],
+        "chromaticColours": 1,
+        "colourFamilies": 1,
+        "spacing": {
+          "distinct": 22,
+          "offScale": 8,
+          "values": [
+            2,
+            3,
+            4,
+            6,
+            6.5,
+            8,
+            8.5,
+            10,
+            12,
+            14,
+            16,
+            18,
+            20,
+            24,
+            28,
+            32,
+            40,
+            48,
+            56,
+            64,
+            80,
+            112
+          ]
+        },
+        "radii": [
+          "12px",
+          "6px",
+          "8px",
+          "16px",
+          "3.35544e+07px",
+          "10px",
+          "4px",
+          "60px"
+        ],
+        "shadows": 9,
+        "gradients": 23,
+        "backdropBlur": 0,
+        "transitions": 270,
+        "animatedElements": 29,
+        "cls": 0.01
+      },
+      "screenshots": [
+        "data/references/captures/ref-0015/tablet-fold.png",
+        "data/references/captures/ref-0015/tablet-page-01.png",
+        "data/references/captures/ref-0015/tablet-page-02.png",
+        "data/references/captures/ref-0015/tablet-page-03.png",
+        "data/references/captures/ref-0015/tablet-page-04.png",
+        "data/references/captures/ref-0015/tablet-page-05.png",
+        "data/references/captures/ref-0015/tablet-page-06.png",
+        "data/references/captures/ref-0015/tablet-page-07.png",
+        "data/references/captures/ref-0015/tablet-page-08.png",
+        "data/references/captures/ref-0015/tablet-page-09.png"
+      ]
+    },
+    "mobile": {
+      "width": 390,
+      "pageHeight": 8636,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "font-count",
+          "message": "4 typefaces carry the text: ui sans serif, ivyprestodisplay, sfprodisplay, ivyprestoheadline"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tap-target",
+          "message": "10 controls smaller than 24x24px on a phone",
+          "sample": [
+            "71x20 <a> \"\"",
+            "288x18 <input> \"\"",
+            "66x20 <a> \"Services\"",
+            "34x20 <a> \"Blog\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "text-at-edge",
+          "message": "100 text elements within 12px of the screen edge",
+          "sample": [
+            "<span> \"PaymentProviders\"",
+            "<span> \"InvestmentFunds\"",
+            "<span> \"GamingIndustry\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "purple-gradient",
+          "message": "9 purple or indigo gradients",
+          "sample": [
+            "<span> \"Trust\"",
+            "<span> \"industry\"",
+            "<span> \"work\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "23 gradient backgrounds"
+        },
+        {
+          "severity": "WARN",
+          "rule": "shadow-on-everything",
+          "message": "6 boxes carry a drop shadow"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "5 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#8d8d8d on screen = 3.32:1 median, 3.26:1 in the worst tenth (needs 4.5) <span> \"Axis specializes in emerging tech, helping founder\"",
+            "#787878 on screen = 4.42:1 median, 4.05:1 in the worst tenth (needs 4.5) <p> \"Thorough consultation to understand your business \"",
+            "#8d8d8d on #f7f7f7 = 3.1:1 (needs 4.5, not re-checked on screen) <button> \"MiCA\"",
+            "#717171 on #ebebeb = 4.09:1 (needs 4.5, not re-checked on screen) <span> \"EU Regulation (Cybersecurity)\"",
+            "#8d8d8d on #f8f8f8 = 3.13:1 (needs 4.5, not re-checked on screen) <p> \"Where Technology Meets Trust\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "contrast-unverified",
+          "message": "16 suspected contrast problems could not be re-measured on screen"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "hidden-content",
+          "message": "8 text elements were never visible during a full scroll (a reveal that never fires?)",
+          "sample": [
+            "Corporate Advisory",
+            "Legal Advisory",
+            "Regulatory Advisory",
+            "DeFi Legal & Regulatory",
+            "DORA Advisory"
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "ui-sans-serif",
+            "share": 78
+          },
+          {
+            "family": "ivyPrestoDisplay",
+            "share": 10
+          },
+          {
+            "family": "sfProDisplay",
+            "share": 9
+          },
+          {
+            "family": "ivyPrestoHeadline",
+            "share": 2
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "ui sans serif",
+            "share": 78
+          },
+          {
+            "family": "ivyprestodisplay",
+            "share": 10
+          },
+          {
+            "family": "sfprodisplay",
+            "share": 9
+          },
+          {
+            "family": "ivyprestoheadline",
+            "share": 2
+          }
+        ],
+        "fontSizes": [
+          126,
+          42,
+          40,
+          32,
+          24,
+          20,
+          18,
+          16,
+          14,
+          12
+        ],
+        "textColours": [
+          "#131313",
+          "#000000",
+          "#8d8d8d",
+          "#ffffff",
+          "#2b2c2c",
+          "#787878",
+          "#0f5efe",
+          "#161717",
+          "#141414",
+          "#fdfdfd",
+          "#626262",
+          "#717171",
+          "#6a7282"
+        ],
+        "backgroundColours": [
+          "#ffffff",
+          "#000000",
+          "#1a1a1a",
+          "#27272a",
+          "#fcfcfc",
+          "#efefef",
+          "#777777",
+          "#141414",
+          "#f0f0f0",
+          "#f8f8f8",
+          "#ebebeb"
+        ],
+        "chromaticColours": 1,
+        "colourFamilies": 1,
+        "spacing": {
+          "distinct": 21,
+          "offScale": 8,
+          "values": [
+            2,
+            3,
+            4,
+            6,
+            6.5,
+            8,
+            8.5,
+            10,
+            12,
+            14,
+            16,
+            18,
+            20,
+            24,
+            28,
+            32,
+            40,
+            48,
+            56,
+            80,
+            112
+          ]
+        },
+        "radii": [
+          "12px",
+          "6px",
+          "8px",
+          "16px",
+          "3.35544e+07px",
+          "10px",
+          "4px",
+          "60px"
+        ],
+        "shadows": 9,
+        "gradients": 23,
+        "backdropBlur": 0,
+        "transitions": 282,
+        "animatedElements": 29,
+        "cls": 0.011
+      },
+      "screenshots": [
+        "data/references/captures/ref-0015/mobile-fold.png",
+        "data/references/captures/ref-0015/mobile-page-01.png",
+        "data/references/captures/ref-0015/mobile-page-02.png",
+        "data/references/captures/ref-0015/mobile-page-03.png",
+        "data/references/captures/ref-0015/mobile-page-04.png",
+        "data/references/captures/ref-0015/mobile-page-05.png",
+        "data/references/captures/ref-0015/mobile-page-06.png",
+        "data/references/captures/ref-0015/mobile-page-07.png",
+        "data/references/captures/ref-0015/mobile-page-08.png",
+        "data/references/captures/ref-0015/mobile-page-09.png",
+        "data/references/captures/ref-0015/mobile-page-10.png",
+        "data/references/captures/ref-0015/mobile-page-11.png"
+      ]
+    }
+  },
+  "checks": {
+    "reducedMotion": {
+      "findings": [],
+      "screenshot": "data/references/captures/ref-0015/reduced-motion-fold.png"
+    },
+    "noJavaScript": {
+      "findings": [],
+      "withJs": 4772,
+      "withoutJs": 5145
+    }
+  },
+  "summary": {
+    "fail": 4,
+    "warn": 9
+  },
+  "url": "https://axisgroup.xyz/",
+  "findings": [
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "6 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#8d8d8d on #ffffff = 3.32:1 (needs 4.5, not re-checked on screen) <span> \"Axis specializes in emerging tech, helping founder\"",
+        "#787878 on #ffffff = 4.42:1 (needs 4.5, not re-checked on screen) <p> \"Thorough consultation to understand your business \"",
+        "#9f9f9f on #ffffff = 2.65:1 (needs 4.5, not re-checked on screen) <h4> \"Tailored Legal/Regulatory Strategy\"",
+        "#8d8d8d on #f7f7f7 = 3.1:1 (needs 4.5, not re-checked on screen) <button> \"MiCA\"",
+        "#717171 on #ebebeb = 4.09:1 (needs 4.5, not re-checked on screen) <span> \"EU Regulation (Cybersecurity)\""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "5 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#8d8d8d on #ffffff = 3.32:1 (needs 4.5, not re-checked on screen) <span> \"Axis specializes in emerging tech, helping founder\"",
+        "#787878 on #ffffff = 4.42:1 (needs 4.5, not re-checked on screen) <p> \"Thorough consultation to understand your business \"",
+        "#8d8d8d on #f7f7f7 = 3.1:1 (needs 4.5, not re-checked on screen) <button> \"MiCA\"",
+        "#717171 on #ebebeb = 4.09:1 (needs 4.5, not re-checked on screen) <span> \"EU Regulation (Cybersecurity)\"",
+        "#8d8d8d on #f8f8f8 = 3.13:1 (needs 4.5, not re-checked on screen) <p> \"Where Technology Meets Trust\""
+      ],
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tap-target",
+      "message": "10 controls smaller than 24x24px on a phone",
+      "sample": [
+        "71x20 <a> \"\"",
+        "288x18 <input> \"\"",
+        "66x20 <a> \"Services\"",
+        "34x20 <a> \"Blog\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "hidden-content",
+      "message": "8 text elements were never visible during a full scroll (a reveal that never fires?)",
+      "sample": [
+        "Corporate Advisory",
+        "Legal Advisory",
+        "Regulatory Advisory",
+        "DeFi Legal & Regulatory",
+        "DORA Advisory"
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "font-count",
+      "message": "4 typefaces carry the text: ui sans serif, ivyprestodisplay, sfprodisplay, ivyprestoheadline",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "too-many-font-sizes",
+      "message": "14 different font sizes on the page (aim for 5 or fewer doing the visible work)",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "display-sizes",
+      "message": "8 display sizes (24px and up) with no clear scale: 96, 64, 60, 46, 40, 30, 26, 24 px; use 3-4 steps, each with one role",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "body-size",
+      "message": "Running text at 14px (16px or more reads better)",
+      "sample": [
+        "<p> \"We help fintechs secure PSP licenses under PSD2, m\""
+      ],
+      "where": [
+        "desktop",
+        "tablet"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "purple-gradient",
+      "message": "9 purple or indigo gradients",
+      "sample": [
+        "<span> \"Trust\"",
+        "<span> \"industry\"",
+        "<span> \"work\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "gradient",
+      "message": "23 gradient backgrounds",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "shadow-on-everything",
+      "message": "8 boxes carry a drop shadow",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "contrast-unverified",
+      "message": "20 suspected contrast problems could not be re-measured on screen",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "shadow-on-everything",
+      "message": "7 boxes carry a drop shadow",
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "contrast-unverified",
+      "message": "25 suspected contrast problems could not be re-measured on screen",
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "text-at-edge",
+      "message": "100 text elements within 12px of the screen edge",
+      "sample": [
+        "<span> \"PaymentProviders\"",
+        "<span> \"InvestmentFunds\"",
+        "<span> \"GamingIndustry\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "shadow-on-everything",
+      "message": "6 boxes carry a drop shadow",
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "contrast-unverified",
+      "message": "16 suspected contrast problems could not be re-measured on screen",
+      "where": [
+        "mobile"
+      ]
+    }
+  ]
+}

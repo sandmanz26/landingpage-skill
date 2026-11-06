@@ -1,0 +1,967 @@
+{
+  "url": "https://axisgroup.xyz/",
+  "time": "2026-11-06T05:08:53.182Z",
+  "sheets": {
+    "desktop": "data/references/captures/ref-0015/sheet-desktop.png",
+    "mobile": "data/references/captures/ref-0015/sheet-mobile.png",
+    "motion": "data/references/captures/ref-0015/motion-sheet.png"
+  },
+  "load": {
+    "status": 200,
+    "retries": 0,
+    "failed": false
+  },
+  "overlaysDismissed": [],
+  "outline": {
+    "title": "Axis Group",
+    "description": "Axis Group is a premier advisory firm specialising in the Emerging Technology Industry. We empower clients with comprehensive Legal, Regulatory, and Corporate services, guiding innovators through complex challenges to build and scale cutting-edge solutions.",
+    "headings": [
+      "H1 1% Where Technology Meets Trust",
+      "H2 8% Servicing your industry",
+      "H2 15% How we work",
+      "H2 57% Stay compliantwith industry regulations",
+      "H2 76% What clients say about Axis",
+      "H2 84% Meet the team",
+      "H2 90% Resource & insights",
+      "H3 94% How Axis Group advises on CRA",
+      "H3 94% How Axis Group advises on DORA",
+      "H3 94% Where automated token launch protocols sit under MiCA",
+      "H3 94% Betting on Everything: Are Prediction Markets Regulated Under MiFID II?",
+      "H3 94% Accounting & Bookkeeping for CASPs",
+      "H3 94% An analysis of how specific smart contract interactions map onto the definitional limbs of",
+      "H3 94% A decades-old mortgage finance structure is being adapted to fund institutional digital as",
+      "H3 94% MiCA's Disclosure Regime and Blockworks' Token Transparency Framework",
+      "H3 94% The Definitive Guide to Token Classification in the British Virgin Islands",
+      "H3 94% The Definitive Guide to Crypto Perpetual Futures in the European Union",
+      "H3 94% The Definitive Guide to MiCA Crypto-Asset Whitepapers",
+      "H3 94% How Would OpenClaw Be Regulated in the EU?",
+      "H3 94% PSD2 vs MiCA",
+      "H3 94% Airdrops Under MiCA",
+      "H3 94% EU AI Act",
+      "H3 94% MiCA (Markets in Crypto-Assets Regulation)",
+      "H3 94% European Securities and Markets Authority (ESMA)"
+    ],
+    "actions": [
+      {
+        "label": "Book a Call",
+        "count": 1,
+        "firstAt": 0,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Send a Message",
+        "count": 2,
+        "firstAt": 4,
+        "firstScreen": true,
+        "sticky": false
+      },
+      {
+        "label": "Contact Us",
+        "count": 2,
+        "firstAt": 9,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Licensing & Authorisations",
+        "count": 1,
+        "firstAt": 58,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Legal & Regulatory",
+        "count": 1,
+        "firstAt": 58,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "MiCA Focused Services",
+        "count": 1,
+        "firstAt": 58,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Start Your Project Today",
+        "count": 2,
+        "firstAt": 78,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Joseph Axisa Managing Partner",
+        "count": 1,
+        "firstAt": 85,
+        "firstScreen": false,
+        "sticky": false
+      }
+    ],
+    "prices": [],
+    "proofMentions": {
+      "testimonial": 1,
+      "clients": 1
+    },
+    "logoImages": 80,
+    "forms": 0,
+    "imagery": {
+      "photos": 10,
+      "illustrations": 21,
+      "videos": 0,
+      "rasterChecked": []
+    },
+    "pageHeight": 11413
+  },
+  "motion": {
+    "libraries": {
+      "gsap": true,
+      "scrollTrigger": true,
+      "splitText": false,
+      "lenis": false,
+      "locomotive": false,
+      "swiper": false,
+      "lottie": false,
+      "framerMotion": true,
+      "viewTransitions": false
+    },
+    "stickyPanels": [],
+    "maxRunning": 14,
+    "durationsMs": {
+      "min": 300,
+      "max": 98222
+    },
+    "easings": [
+      "linear",
+      "cubic-bezier(0, 0, 0.2, 1)"
+    ],
+    "properties": [
+      "backgroundPositionX",
+      "backgroundPositionY",
+      "transform",
+      "opacity",
+      "filter",
+      "scale"
+    ],
+    "movingWithoutInput": 0,
+    "movingWithoutInputFurtherDown": [
+      {
+        "y": 1800,
+        "moving": 2
+      },
+      {
+        "y": 2700,
+        "moving": 6
+      },
+      {
+        "y": 3600,
+        "moving": 6
+      },
+      {
+        "y": 4500,
+        "moving": 2
+      }
+    ],
+    "scriptDrivenOnScroll": 4,
+    "infiniteLoops": 56,
+    "infiniteLoopsWithText": 10,
+    "pauseControl": false,
+    "steps": [
+      {
+        "y": 450,
+        "running": 12,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "span.title-accent",
+            "hasText": true,
+            "duration": 2000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "backgroundPositionX",
+              "backgroundPositionY"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.rfm-marquee",
+            "hasText": false,
+            "duration": 74367,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.rfm-marquee",
+            "hasText": false,
+            "duration": 74367,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.mx-auto",
+            "hasText": false,
+            "duration": 2000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.mx-auto",
+            "hasText": false,
+            "duration": 2000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.rfm-marquee",
+            "hasText": false,
+            "duration": 98222,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 900,
+        "running": 12,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "span.title-accent",
+            "hasText": true,
+            "duration": 2000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "backgroundPositionX",
+              "backgroundPositionY"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.rfm-marquee",
+            "hasText": false,
+            "duration": 74367,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.rfm-marquee",
+            "hasText": false,
+            "duration": 74367,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.mx-auto",
+            "hasText": false,
+            "duration": 2000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.mx-auto",
+            "hasText": false,
+            "duration": 2000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.rfm-marquee",
+            "hasText": false,
+            "duration": 98222,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1350,
+        "running": 14,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "img.w-full",
+            "hasText": false,
+            "duration": 700,
+            "iterations": 1,
+            "easing": "cubic-bezier(0, 0, 0.2, 1)",
+            "props": [
+              "filter"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "img.w-full",
+            "hasText": false,
+            "duration": 700,
+            "iterations": 1,
+            "easing": "cubic-bezier(0, 0, 0.2, 1)",
+            "props": [
+              "scale"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "span.title-accent",
+            "hasText": true,
+            "duration": 2000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "backgroundPositionX",
+              "backgroundPositionY"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.rfm-marquee",
+            "hasText": false,
+            "duration": 74367,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.rfm-marquee",
+            "hasText": false,
+            "duration": 74367,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.mx-auto",
+            "hasText": false,
+            "duration": 2000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1800,
+        "running": 12,
+        "scriptDriven": 1,
+        "idleMoving": 2,
+        "sample": [
+          {
+            "target": "span.title-accent",
+            "hasText": true,
+            "duration": 2000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "backgroundPositionX",
+              "backgroundPositionY"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.rfm-marquee",
+            "hasText": false,
+            "duration": 74367,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.rfm-marquee",
+            "hasText": false,
+            "duration": 74367,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.mx-auto",
+            "hasText": false,
+            "duration": 2000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.mx-auto",
+            "hasText": false,
+            "duration": 2000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.rfm-marquee",
+            "hasText": false,
+            "duration": 98222,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 2250,
+        "running": 12,
+        "scriptDriven": 2,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "span.title-accent",
+            "hasText": true,
+            "duration": 2000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "backgroundPositionX",
+              "backgroundPositionY"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.rfm-marquee",
+            "hasText": false,
+            "duration": 74367,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.rfm-marquee",
+            "hasText": false,
+            "duration": 74367,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.mx-auto",
+            "hasText": false,
+            "duration": 2000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.mx-auto",
+            "hasText": false,
+            "duration": 2000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.rfm-marquee",
+            "hasText": false,
+            "duration": 98222,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 2700,
+        "running": 12,
+        "scriptDriven": 2,
+        "idleMoving": 6,
+        "sample": [
+          {
+            "target": "span.title-accent",
+            "hasText": true,
+            "duration": 2000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "backgroundPositionX",
+              "backgroundPositionY"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.rfm-marquee",
+            "hasText": false,
+            "duration": 74367,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.rfm-marquee",
+            "hasText": false,
+            "duration": 74367,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.mx-auto",
+            "hasText": false,
+            "duration": 2000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.mx-auto",
+            "hasText": false,
+            "duration": 2000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.rfm-marquee",
+            "hasText": false,
+            "duration": 98222,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 3150,
+        "running": 12,
+        "scriptDriven": 2,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "span.title-accent",
+            "hasText": true,
+            "duration": 2000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "backgroundPositionX",
+              "backgroundPositionY"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.rfm-marquee",
+            "hasText": false,
+            "duration": 74367,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.rfm-marquee",
+            "hasText": false,
+            "duration": 74367,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.mx-auto",
+            "hasText": false,
+            "duration": 2000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.mx-auto",
+            "hasText": false,
+            "duration": 2000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.rfm-marquee",
+            "hasText": false,
+            "duration": 98222,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 3600,
+        "running": 12,
+        "scriptDriven": 2,
+        "idleMoving": 6,
+        "sample": [
+          {
+            "target": "span.title-accent",
+            "hasText": true,
+            "duration": 2000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "backgroundPositionX",
+              "backgroundPositionY"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.rfm-marquee",
+            "hasText": false,
+            "duration": 74367,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.rfm-marquee",
+            "hasText": false,
+            "duration": 74367,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.mx-auto",
+            "hasText": false,
+            "duration": 2000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.mx-auto",
+            "hasText": false,
+            "duration": 2000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.rfm-marquee",
+            "hasText": false,
+            "duration": 98222,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 4050,
+        "running": 12,
+        "scriptDriven": 4,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "span.title-accent",
+            "hasText": true,
+            "duration": 2000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "backgroundPositionX",
+              "backgroundPositionY"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.rfm-marquee",
+            "hasText": false,
+            "duration": 74367,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.rfm-marquee",
+            "hasText": false,
+            "duration": 74367,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.mx-auto",
+            "hasText": false,
+            "duration": 2000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.mx-auto",
+            "hasText": false,
+            "duration": 2000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.rfm-marquee",
+            "hasText": false,
+            "duration": 98222,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 4500,
+        "running": 14,
+        "scriptDriven": 4,
+        "idleMoving": 2,
+        "sample": [
+          {
+            "target": "div.overflow-hidden",
+            "hasText": false,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "cubic-bezier(0, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.overflow-hidden",
+            "hasText": true,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "cubic-bezier(0, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "span.title-accent",
+            "hasText": true,
+            "duration": 2000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "backgroundPositionX",
+              "backgroundPositionY"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.rfm-marquee",
+            "hasText": false,
+            "duration": 74367,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.rfm-marquee",
+            "hasText": false,
+            "duration": 74367,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.mx-auto",
+            "hasText": false,
+            "duration": 2000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      }
+    ]
+  },
+  "smoothness": {
+    "page": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 52680,
+      "frames": 258,
+      "fps": 4.9,
+      "medianMs": 16.7,
+      "p95Ms": 999.9,
+      "maxMs": 1433,
+      "longFrames": 95,
+      "droppedShare": 40,
+      "longTasks": 96,
+      "longTaskMs": 50166,
+      "scriptBlockedShare": 95,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "baseline": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 1738,
+      "frames": 104,
+      "fps": 59.8,
+      "medianMs": 16.7,
+      "p95Ms": 16.8,
+      "maxMs": 17,
+      "longFrames": 0,
+      "droppedShare": 0,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "longFramesOverBaseline": 95,
+    "p95OverBaseline": 983.1
+  },
+  "reducedMotion": {
+    "movingWithoutInput": 10,
+    "movingOnScroll": 14,
+    "idleNavigation": null,
+    "loadFailed": false
+  },
+  "idleRunLoadFailed": false,
+  "idleNavigation": null
+}

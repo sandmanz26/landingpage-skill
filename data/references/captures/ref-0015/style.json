@@ -1,0 +1,169 @@
+{
+  "url": "https://axisgroup.xyz/",
+  "readAt": "2026-11-06T05:08:53.334Z",
+  "tags": [
+    "gradient-heavy",
+    "shadowed",
+    "restrained-colour",
+    "pill-shapes",
+    "expressive-type",
+    "many-type-sizes",
+    "scroll-choreography",
+    "endless-motion",
+    "photography",
+    "illustration",
+    "ignores-reduced-motion"
+  ],
+  "palette": {
+    "chromatic": 1,
+    "families": 1,
+    "text": [
+      "#2b2c2c",
+      "#131313",
+      "#000000",
+      "#8d8d8d",
+      "#ffffff",
+      "#787878"
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#000000",
+      "#1a1a1a",
+      "#27272a",
+      "#eeeeee",
+      "#fcfcfc",
+      "#efefef",
+      "#777777"
+    ],
+    "gradients": 23,
+    "shadows": 9,
+    "blur": 0
+  },
+  "type": {
+    "families": [
+      {
+        "family": "ui sans serif",
+        "share": 78
+      },
+      {
+        "family": "ivyprestodisplay",
+        "share": 10
+      },
+      {
+        "family": "sfprodisplay",
+        "share": 9
+      },
+      {
+        "family": "ivyprestoheadline",
+        "share": 2
+      }
+    ],
+    "cuts": [
+      {
+        "family": "ui-sans-serif",
+        "share": 78
+      },
+      {
+        "family": "ivyPrestoDisplay",
+        "share": 10
+      },
+      {
+        "family": "sfProDisplay",
+        "share": 9
+      },
+      {
+        "family": "ivyPrestoHeadline",
+        "share": 2
+      }
+    ],
+    "sizes": {
+      "desktop": [
+        126,
+        96,
+        64,
+        60,
+        46,
+        40,
+        30,
+        26,
+        24,
+        20,
+        18,
+        16,
+        14,
+        12
+      ],
+      "mobile": [
+        126,
+        42,
+        40,
+        32,
+        24,
+        20,
+        18,
+        16,
+        14,
+        12
+      ]
+    },
+    "display": 126,
+    "body": 16,
+    "ratio": 7.9
+  },
+  "shape": {
+    "radii": [
+      "12px",
+      "6px",
+      "8px",
+      "16px",
+      "3.35544e+07px",
+      "10px",
+      "4px",
+      "60px"
+    ]
+  },
+  "spacing": {
+    "distinct": 29,
+    "offScale": 12
+  },
+  "motion": {
+    "libraries": [
+      "gsap",
+      "scrollTrigger",
+      "framerMotion"
+    ],
+    "stickyPanels": 0,
+    "durationsMs": {
+      "min": 300,
+      "max": 98222
+    },
+    "easings": [
+      "linear",
+      "cubic-bezier(0, 0, 0.2, 1)"
+    ],
+    "reducedMotionRespected": false,
+    "smoothness": {
+      "fps": 4.9,
+      "longFrames": 95,
+      "baselineLongFrames": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    }
+  },
+  "imagery": {
+    "photos": 10,
+    "illustrations": 21,
+    "videos": 0,
+    "rasterChecked": []
+  },
+  "layout": {
+    "pageHeight": 12159,
+    "screens": 14
+  },
+  "doNotCopy": [
+    "contrast: 6 text elements below WCAG AA (measured on screen pixels)",
+    "contrast: 5 text elements below WCAG AA (measured on screen pixels)",
+    "tap-target: 10 controls smaller than 24x24px on a phone",
+    "hidden-content: 8 text elements were never visible during a full scroll (a reveal that never fires?)",
+    "motion without a reduced-motion path"
+  ]
+}

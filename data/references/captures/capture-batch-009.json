@@ -1,0 +1,22 @@
+{
+  "list": "data/references/batch-009.txt",
+  "jobs": 1,
+  "seconds": 707,
+  "results": [
+    {
+      "id": "ref-0015",
+      "url": "https://axisgroup.xyz/",
+      "ok": true,
+      "inspectSeconds": 417,
+      "evidenceSeconds": 290,
+      "flags": [
+        "stutters while scrolling: 95 long frames (>50 ms) vs 0 on a plain page, p95 999.9 ms",
+        "under reduced motion 10 elements still move on their own and 14 move with the scroll",
+        "elements keep moving with no input further down at 1800px (2), 2700px (6), 3600px (6), 4500px (2); no pause control found",
+        "endless moving text with no pause control",
+        "no price on the page"
+      ],
+      "error": null
+    }
+  ]
+}
