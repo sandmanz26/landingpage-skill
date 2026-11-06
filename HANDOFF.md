@@ -474,6 +474,13 @@ Learned: each subagent costs ~53k tokens before doing anything; subagents cannot
    required (spec + reason roast + check).
 9. Every design considers the storyline and reading experience. Today strategy storyline + copy/method.md
    (copycheck, skim and explain-back tests). Covered; keep checking the lower sections carry the story.
+Brand elements module, DRAFT for the owner's review (2026-11-06): `skill/design-director/brand/method.md`
+(sources → element families: shape, colour, gradient, vector on element, background/pattern, type as
+brand, imagery treatment, icons, line/label devices, signature component, motion signature, microcopy
+voice → one hero element + 2-3 supporting → rules of use incl. the lower half and a UX effect per
+element → five tests: cover-the-logo, blur, swap, down-the-page, source → `.design/brand-kit.md`).
+Not wired yet (no SKILL.md row, no progress check, no selftest) on purpose: the owner reviews first,
+then it is wired at the direction step and tested. It covers requirements 4, 5, 8 and part of 7.
 Also from the test: require the round-2 verifier juror at standard effort; fit.mjs counts hard 0-blur
 press shadows as shadows (likely false colour miss); open a role test (product designer / head of
 design / head of creative / head of UI/UX) only if the owner asks.
