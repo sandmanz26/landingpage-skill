@@ -193,7 +193,7 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 | `rubric/critic.md` | Briefing the critic subagent; the critique format every juror uses |
 | `rubric/jury.md` | The look step and best-of-N at standard effort and above; judging references |
 | `library/intake.md` | When the team sends references with their notes |
-| `rules/brief-interview.md` | The brief step: the one guiding message, liked sites into dials, sketches at the direction gate |
+| `rules/brief-interview.md` | Every question to the user (plain words, what it changes, an example per choice, a recommendation, "percayakan ke AI"); the brief step: the one guiding message, liked sites into dials, sketches at the direction gate |
 | `rules/visual-dials.md` | The direction gate: the dials, presets from the library, how to guide the user |
 | `rules/illustration.md` | Writing the spec when the client has no pictures: drawing flat illustration, the shot list |
 | `library/index.json` (via `library.mjs find`) | The direction step: the team's judged references with their style cards; adapt each to the client or ask (`modes/create.md`) |

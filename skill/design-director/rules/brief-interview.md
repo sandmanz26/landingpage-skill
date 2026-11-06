@@ -5,6 +5,22 @@ Before research, help the user narrow it down in one short exchange, so the work
 instead of drifting. Guide, do not interrogate: one message, at most five questions, each with
 choices and a recommendation, and "terserah" always allowed.
 
+## How every question to the user is asked (all steps and gates)
+
+The user is often not a designer (owner, 2026-11-06: "berikan keterangan yang jelas, contoh yang
+jelas"). Every question, at the brief, at a gate or anywhere else, has four parts:
+
+1. **The question in plain words**, no design jargon ("Mau warnanya tenang atau berani?", not "Mau
+   palet monokromatik atau komplementer?").
+2. **What it changes**, in one line ("Ini menentukan apakah halaman terasa kalem atau ramai").
+3. **A concrete example for each choice**: a site they may know, a picture (sketch, swatch, a
+   screenshot from the library), or a one-line description of how it would look for *their*
+   business ("Berani: hijau tua penuh di bagian harga, kuning untuk tombol, seperti Quite Nice").
+4. **A recommendation with its reason, and "percayakan ke AI"** as an answer that is always
+   accepted; the choice then follows the recommendation and is logged as such.
+
+A question without an example is not asked: find the example first, or decide and say so.
+
 ## The one message (brief step, before the brief gate)
 
 Ask only what is missing from the request and the project. In this order:

@@ -481,6 +481,13 @@ voice → one hero element + 2-3 supporting → rules of use incl. the lower hal
 element → five tests: cover-the-logo, blur, swap, down-the-page, source → `.design/brand-kit.md`).
 Not wired yet (no SKILL.md row, no progress check, no selftest) on purpose: the owner reviews first,
 then it is wired at the direction step and tested. It covers requirements 4, 5, 8 and part of 7.
+Rule added 2026-11-06 (owner): every question to the user has plain words, what it changes, a
+concrete example per choice and a recommendation with "percayakan ke AI" (`rules/brief-interview.md`
+§How every question is asked; SKILL.md files table). Doc rule only: it is not checkable by script.
+Proposed, waiting for the owner's go: a `brand` mode (own flow in progress.mjs; outputs a brand
+board in HTML and PDF with 2-3 brand directions, then the chosen kit; accepts brand references with
+the full/style/element question), sharing brand/method.md with the design flow, which reads an
+existing brand kit instead of inventing one.
 Also from the test: require the round-2 verifier juror at standard effort; fit.mjs counts hard 0-blur
 press shadows as shadows (likely false colour miss); open a role test (product designer / head of
 design / head of creative / head of UI/UX) only if the owner asks.
