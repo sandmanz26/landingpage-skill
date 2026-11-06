@@ -1,0 +1,3 @@
+# batch-010 (2026-11-06) owner: visual 8, ship 9.5; fintech (crypto wallet); home + the get-started page
+ref-0016 https://www.solflare.com/
+ref-0016-onboard https://solflare.com/onboard
