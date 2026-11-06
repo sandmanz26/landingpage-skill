@@ -17,6 +17,8 @@ const run = (script, args, cwd = tmp) => spawnSync(process.execPath, [path.join(
 // A research report and a roast that pass the substantive checks (three sources; every point answered).
 const RESEARCH = '# Research\n## Sources\n| # | Source | What it gave | Date read |\n| --- | --- | --- | --- |\n| 1 | Brief from the owner | offer and price | 2026-11-04 |\n| 2 | Competitor site A | their pricing page | 2026-11-04 |\n| 3 | 40 Google reviews | the fear of pain | 2026-11-04 |\n';
 const ROAST = '# Roast\n## Points\n| # | Voice | Point | Evidence | Severity |\n| 1 | Customer | Price too late | R1 | high |\n| 2 | Competitor | Same hero as A | R2 | medium |\n| 3 | Owner | No proof | R3 | low |\n## Response\n| # | Decision | What changed |\n| 1 | Accepted | Price moved to the first screen |\n| 2 | Accepted | Hero built from the clinic photo |\n| 3 | Rejected | Proof waits for real reviews; marked as a gap |\n';
+// A brand kit with the five headings of brand/method.md §8 and the five tests recorded.
+const BRANDKIT = '# Brand kit: Test\n## Sources\n| Source | Ask | Answer |\n| The product | form | bento box |\n## Elements\n| Family | Decision | Source |\n| Shape | radius 28 | box |\n## Hero element\nThe box that fills by day.\n## Rules of use\n| Element | Where | How often | Never | Effect |\n| Box | hero, price | 3 | decoration | shows progress |\n## Tests\n- Cover-the-logo: pass\n- Blur: pass\n- Swap: pass\n- Down-the-page: every section has two\n- Source: all traced\n';
 const check = (name, ok, detail = '') => {
   console.log(`${ok ? 'pass' : 'FAIL'}  ${name}${ok ? '' : `\n      ${detail}`}`);
   if (!ok) failed++;
@@ -155,6 +157,8 @@ const check = (name, ok, detail = '') => {
   const dir = path.join(tmp, 'error-page');
   const r = spawnSync(process.execPath, [path.join(here, 'evidence.mjs'), path.join(fixtures, 'error-page.html'), '--dir', dir, '--idle', '1'], { cwd: tmp, encoding: 'utf8', env: { ...process.env, DD_LOAD_TRIES: '1' } });
   check('evidence reports a page that did not load', /did not load/.test(r.stdout) && /loaded an error page/.test(r.stdout), r.stdout + r.stderr);
+  const rl = spawnSync(process.execPath, [path.join(here, 'evidence.mjs'), path.join(fixtures, 'rate-limited.html'), '--dir', path.join(tmp, 'rate-limited'), '--idle', '1'], { cwd: tmp, encoding: 'utf8', env: { ...process.env, DD_LOAD_TRIES: '1' } });
+  check('a rate-limit answer ("Too many requests", Solflare batch-010) is reported, not judged', /did not load/.test(rl.stdout), rl.stdout + rl.stderr);
 }
 
 // smoothness: a page that blocks while scrolling stutters, a plain one does not
@@ -210,6 +214,11 @@ const check = (name, ok, detail = '') => {
   p('approve', 'strategy'); p('done', 'roast');
   fs.mkdirSync(path.join(d, 'directions'));
   p('approve', 'direction');
+  fs.writeFileSync(path.join(d, 'targets.json'), JSON.stringify({ colour: 'bold', typeRatio: 6 }));
+  const noKit = p('done', 'direction');
+  check('progress refuses an autopilot direction with no brand kit and no logged default', noKit.status !== 0 && /brand-kit default/.test(noKit.stderr), noKit.stderr);
+  p('log', 'brand-kit default: hero = the product photo in an arch; supporting = arch radius, two-colour chapters');
+  fs.rmSync(path.join(d, 'targets.json'));
   const without = p('done', 'direction');
   fs.writeFileSync(path.join(d, 'targets.json'), JSON.stringify({ colour: 'bold', typeRatio: 6 }));
   const withDials = p('done', 'direction');
@@ -425,10 +434,59 @@ const check = (name, ok, detail = '') => {
   fs.mkdirSync(path.join(d, 'directions'));
   fs.writeFileSync(path.join(d, 'targets.json'), '{}');
   p('approve', 'direction', '--note', 'A');
+  const noKit = p('done', 'direction');
+  check('progress wants a brand kit before a guided direction', noKit.status !== 0 && /brand-kit\.md/.test(noKit.stderr), noKit.stderr);
+  fs.writeFileSync(path.join(d, 'brand-kit.md'), BRANDKIT);
   const without = p('done', 'direction');
   for (const x of ['a', 'b']) fs.copyFileSync(path.join(fixtures, 'clean.html'), path.join(d, 'directions', `sketch-${x}.html`));
   const withSketches = p('done', 'direction');
   check('progress wants first-screen sketches before a guided direction', without.status !== 0 && /sketch/.test(without.stderr) && withSketches.status === 0, without.stderr + withSketches.stderr);
+}
+
+// brand mode: board with directions, the kit, the PDF at delivery; brandboard renders and passes inspect
+{
+  const proj = path.join(tmp, 'brand');
+  fs.mkdirSync(proj);
+  const p = (...a) => run('progress.mjs', a, proj);
+  p('init', '--mode', 'brand', '--gates', 'guided');
+  const d = path.join(proj, '.design');
+  fs.writeFileSync(path.join(d, 'brief.md'), '# Brief');
+  p('approve', 'brief', '--note', 'ok'); p('done', 'brief');
+  fs.writeFileSync(path.join(d, 'research.md'), RESEARCH); p('done', 'research');
+  fs.writeFileSync(path.join(d, 'strategy.md'), '# S'); p('done', 'strategy');
+  fs.writeFileSync(path.join(d, 'roast.md'), ROAST);
+  p('approve', 'strategy', '--note', 'ok'); p('done', 'roast');
+  p('approve', 'direction', '--note', 'B');
+  const noBoard = p('done', 'brand-directions');
+  const one = run('brandboard.mjs', [path.join(fixtures, 'brand/kit.json'), '--out', path.join(d, 'brand'), '--no-pdf'], proj);
+  const oneDir = p('done', 'brand-directions');
+  const two = run('brandboard.mjs', [path.join(fixtures, 'brand/directions.json'), '--out', path.join(d, 'brand')], proj);
+  const twoDir = p('done', 'brand-directions');
+  check('progress wants a board with at least two brand directions', noBoard.status !== 0 && one.status === 0 && oneDir.status !== 0 && /2-3 brand directions/.test(oneDir.stderr) && two.status === 0 && twoDir.status === 0, noBoard.stderr + one.stderr + oneDir.stderr + two.stderr + twoDir.stderr);
+  check('brandboard writes the board and a PDF', fs.existsSync(path.join(d, 'brand/board.html')) && fs.existsSync(path.join(d, 'brand/board.pdf')) && fs.readFileSync(path.join(d, 'brand/board.pdf')).slice(0, 4).toString() === '%PDF', two.stdout + two.stderr);
+  const ins = run('inspect.mjs', [path.join(d, 'brand/board.html'), '--out', path.join(tmp, 'board-inspect'), '--quiet'], proj);
+  const ir = path.join(tmp, 'board-inspect/report.json');
+  const rep = fs.existsSync(ir) ? JSON.parse(fs.readFileSync(ir, 'utf8')) : { summary: { fail: -1 }, findings: [] };
+  check('the brand board passes inspect without FAIL', ins.status === 0 && rep.summary.fail === 0, ins.stdout + ins.stderr);
+  check('inspect reports a placeholder wordmark as INFO', rep.findings.some((f) => f.rule === 'placeholder-logo' && f.severity === 'INFO'), rep.findings.map((f) => f.rule).join(', '));
+  fs.writeFileSync(path.join(d, 'brand-kit.md'), BRANDKIT.replace(/## Tests[\s\S]*/, ''));
+  const noTests = p('done', 'kit');
+  fs.writeFileSync(path.join(d, 'brand-kit.md'), BRANDKIT);
+  const bad = JSON.parse(fs.readFileSync(path.join(fixtures, 'brand/kit.json'), 'utf8'));
+  delete bad.wordmark;
+  fs.writeFileSync(path.join(d, 'brand-kit.json'), JSON.stringify(bad));
+  const badJson = p('done', 'kit');
+  fs.copyFileSync(path.join(fixtures, 'brand/kit.json'), path.join(d, 'brand-kit.json'));
+  const kit = p('done', 'kit');
+  check('progress wants brand-kit.md with its sections and a valid brand-kit.json', noTests.status !== 0 && /Tests/.test(noTests.stderr) && badJson.status !== 0 && /wordmark/.test(badJson.stderr) && kit.status === 0, noTests.stderr + badJson.stderr + kit.stderr);
+  const bad2 = run('brandboard.mjs', [path.join(d, 'brand-kit.md')], proj);
+  check('brandboard refuses an input that is not a kit', bad2.status !== 0);
+  fs.rmSync(path.join(d, 'brand/board.pdf'));
+  p('approve', 'final', '--note', 'ok');
+  const noPdf = p('done', 'deliver');
+  run('brandboard.mjs', [path.join(d, 'brand-kit.json'), '--out', path.join(d, 'brand')], proj);
+  const delivered = p('done', 'deliver');
+  check('progress wants the board PDF before a brand delivery', noPdf.status !== 0 && /board\.pdf/.test(noPdf.stderr) && delivered.status === 0, noPdf.stderr + delivered.stderr);
 }
 
 // photos: credits and a clear refusal without a search

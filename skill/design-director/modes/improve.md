@@ -75,7 +75,7 @@ Show the findings as a checklist and let the user pick what to do now. Record th
 
 As in `modes/create.md` (strategy, then the roast and the strategy gate), with the existing
 content. Pass `--have` honestly. When the brand fixes colours or fonts, keep them and take only
-composition from the direction.
+composition from the direction. The brand kit at the direction step (`modes/create.md` → "Brand kit") starts from the existing site's elements (`brand/method.md` §1 "What exists").
 
 ## fix
 

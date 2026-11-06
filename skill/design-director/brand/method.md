@@ -1,4 +1,4 @@
-# Brand elements (DRAFT for the owner's review, 2026-11-06; not yet wired into progress.mjs)
+# Brand elements (approved by the owner, 2026-11-06)
 
 A page has branding when someone who sees one screenshot, with the logo covered, still knows whose
 it is. That comes from a small set of **brand elements**: shapes, colours, motifs and behaviours that
@@ -6,9 +6,11 @@ repeat across the page and come from the business itself. Generated pages fail h
 they have no elements at all (a neutral template with a logo), or they have many unrelated
 decorations (a blob here, a gradient there) that belong to no one.
 
-This method builds a **brand kit** for the page, even when the client has no brand yet. It runs at
-the direction step (`modes/create.md` step 5), from the strategy's subject inventory, and writes
-`.design/brand-kit.md`. The spec turns the kit into tokens and rules; the reason roast and the jury
+This method builds a **brand kit** for the page, even when the client has no brand yet. It runs in the
+`brand` mode (`modes/brand.md`, a full kit with 2-3 directions on a board) or, in the design modes,
+as a short kit at the direction step (`modes/create.md` step 5) from the strategy's subject
+inventory; both write `.design/brand-kit.md`. When `.design/brand-kit.json` exists from a brand run,
+the design modes read it and do not invent elements. The spec turns the kit into tokens and rules; the reason roast and the jury
 check that the kit is used, consistently, all the way down the page.
 
 ## 1. Where elements come from (sources)
@@ -111,5 +113,45 @@ whole feel (structure and mood, rebuilt with the client's own assets and code; n
 ## Tests              (§6: results of the five tests, with screenshots named)
 ```
 
-The spec's Decisions and Tokens take their values from this file. Open questions for the owner's
-review are in HANDOFF.md.
+The spec's Decisions and Tokens take their values from this file. `progress.mjs` checks the five
+headings (brand mode `kit` step; design modes `direction` step, except autopilot with a logged default).
+
+**Short kit (design modes).** Same headings, one line per family is enough, one hero element and
+two supporting; it takes minutes, not a board. With `--gates autopilot` the run may instead log a
+default (`progress.mjs log "brand-kit default: <hero element, supporting elements>"`).
+
+## 9. Placeholder wordmark (when the client has no logo)
+
+The logo itself is not part of this skill (owner, 2026-11-06: "logo tidak termasuk tapi ... buatkan
+dummy logo"). When the client has none, every mode makes a **placeholder wordmark**: the name set in
+the display face, at the kit's ink colour, optionally with one shape from the shape language (a
+dot, an arch, a compartment). No drawn symbol, no imitation of another brand's mark.
+
+- In pages mark it `data-placeholder-logo` (`<a class="logo" data-placeholder-logo>Seimbang</a>`);
+  `inspect.mjs` reports it as INFO `placeholder-logo`.
+- In `brand-kit.json` it is `wordmark` with `"placeholder": true`.
+- The deliver report lists it under things to replace: "placeholder wordmark, replace with a
+  designer's logo".
+
+## 10. `.design/brand-kit.json` (brand mode)
+
+The tokens of the chosen direction, read by `brandboard.mjs` and by the design modes:
+
+```json
+{
+  "name": "Dapur Seimbang",
+  "direction": "Four compartments",
+  "colors": [{ "name": "Rice", "hex": "#F5EFE3", "role": "ground" }, { "hex": "#1F2A24", "role": "ink" },
+             { "hex": "#2F6B4F", "role": "signature" }, { "hex": "#E2A13B", "role": "action" }],
+  "fonts": { "display": "Fraunces", "body": "Inter" },
+  "radii": { "small": 8, "large": 28 },
+  "motion": { "easing": "cubic-bezier(.2,.8,.2,1)", "durations": { "short": 160, "long": 420 } },
+  "hero": { "name": "The box that fills by day", "description": "...", "source": "the product" },
+  "supporting": [{ "name": "Compartment shape", "source": "the bento box", "effect": "groups items" }],
+  "wordmark": { "text": "Seimbang", "placeholder": true, "shape": "compartment" }
+}
+```
+
+Required keys: `name`, `colors` (each with `hex` and `role`, an `ink` and an `action` among them),
+`fonts.display`, `fonts.body`, `radii`, `motion.easing`, `motion.durations`, `hero`, `supporting`
+(2-3), `wordmark`. A directions file for the board is `{ "directions": [kit, kit, kit] }`.

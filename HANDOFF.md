@@ -492,6 +492,32 @@ Also from the test: require the round-2 verifier juror at standard effort; fit.m
 press shadows as shadows (likely false colour miss); open a role test (product designer / head of
 design / head of creative / head of UI/UX) only if the owner asks.
 
+**2026-11-06: brand mode built (owner approved).** `modes/brand.md` + `progress.mjs init --mode brand`
+(brief → research → strategy → roast → brand-directions [direction gate] → kit → deliver → learn).
+`brand/method.md` is no longer a draft: added §9 placeholder wordmark (no client logo → the name in the
+display face, optional one shape, `data-placeholder-logo`, listed in the deliver report) and §10
+`brand-kit.json` format; the key check lives once in `scripts/lib/brandkit.mjs` (used by progress and
+brandboard). New `scripts/brandboard.mjs`: kit or directions JSON → `board.html` (palette + roles +
+contrast pairs, type, shape/motion, elements, wordmark, web hero / price card / social post) and
+`board.pdf` (Playwright page.pdf); fixtures in `evals/fixtures/brand/`. Checks: brand-directions needs
+a board with ≥ 2 directions; kit needs brand-kit.md (Sources, Elements, Hero element, Rules of use,
+Tests naming the five tests) and a valid brand-kit.json; brand deliver needs board.pdf; the `direction`
+step of create/site/redesign now needs `.design/brand-kit.md` (autopilot may log "brand-kit default: …").
+inspect reports INFO `placeholder-logo`. Selftests added; `npm test` passes (one earlier run had a
+flaky `layout-shift` FAIL on the kit demo, unrelated, passed on rerun).
+Not verified: no real brand run with a user; the board's look is not judged by the jury or the owner;
+fonts that are not system faces load from Google Fonts (not tested offline); packaging is not an
+application on the board (web hero, price card, social post only); the board renders the kit but does
+not run the five tests itself (they are written by the model in brand-kit.md).
+
+Known flake (2026-11-06): the selftest "kit demo passes the inspector with no findings" failed twice
+while captures, jurors and a second test run used the machine at the same time (agent saw a
+layout-shift); it passes on an idle machine and could not be reproduced with three parallel
+inspects. Root cause not found. Do not skip it; investigate if it recurs.
+Capture fix: gotoStable treats HTTP 429 and "Too many requests"/rate-limit bodies as failed loads and
+waits 15 s × try before retrying (Solflare batch-010 was captured as {"errors":["Too many
+requests."]}); fixture evals/fixtures/rate-limited.html.
+
 ## 4. Decisions and why (do not undo without a reason)
 
 | Decision | Why |

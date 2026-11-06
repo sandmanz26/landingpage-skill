@@ -115,9 +115,10 @@ export async function gotoStable(page, url, { timeout = 30000, tries = Number(pr
     }
     const status = res ? res.status() : 0;
     const text = await page.evaluate(() => (document.body ? document.body.innerText.slice(0, 300) : '')).catch(() => '');
-    const failed = status >= 500 || (text.length < 300 && /upstream request failed|bad gateway|service unavailable|gateway time-?out/i.test(text));
+    // A rate limit (429) or a short error body is not the site: wait longer and try again.
+    const failed = status >= 500 || status === 429 || (text.length < 300 && /upstream request failed|bad gateway|service unavailable|gateway time-?out|too many requests|rate limit/i.test(text));
     if (!failed) return { status, retries: i };
-    await page.waitForTimeout(3000 * (i + 1));
+    await page.waitForTimeout((status === 429 || /too many requests/i.test(text) ? 15000 : 3000) * (i + 1));
   }
   return { status: 0, retries: tries, failed: true };
 }

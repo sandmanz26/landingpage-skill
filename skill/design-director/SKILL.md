@@ -3,7 +3,7 @@ name: design-director
 description: >-
   Art direction and a checked build process for web pages that look designed for their subject
   instead of generated: landing pages, marketing and product sites, portfolios, multi-page sites,
-  single sections, and improving, restyling, redesigning or reviewing an existing web UI or app
+  single sections, brand kits (elements, palette, type, a placeholder wordmark on a board), and improving, restyling, redesigning or reviewing an existing web UI or app
   screen. Use it whenever the user asks to design, build, redesign, restyle, polish, review or audit
   a web page, site, hero, section or dashboard, or says a page looks generic, templated or AI-made.
   Every run researches the business, competitors and customers, builds a storyline that serves both
@@ -38,7 +38,7 @@ means three things at once: it serves the business, it answers the customer, and
    what the spec says.
 5. **The designer chooses; you propose.** Short gates: the brief, the strategy, the direction, and
    the final result.
-6. **The team's taste is data.** `team/taste.md` and the brand file outrank your own preferences.
+6. **The team's taste is data.** `team/taste.md` and the brand file outrank your own preferences. Brand elements come from `brand/method.md` (a kit from a `brand` run, or a short kit at the direction step).
 7. **Never judge from code, and never judge alone.** Judge screenshots. At standard effort and above a
    jury of separate expert agents judges (`rubric/jury.md`), and designers' votes are combined with
    theirs; taste ties go to the humans, accessibility vetoes cannot be outvoted.
@@ -59,6 +59,7 @@ means three things at once: it serves the business, it answers the customer, and
    | `review` | "Review", "audit", "why does this look off" (no code changes) | `modes/improve.md` |
    | `restyle` | Improve the look, keep the layout | `modes/improve.md` |
    | `redesign` | Rebuild the structure, keep content, stack and behaviour | `modes/improve.md` |
+   | `brand` | A brand kit (elements, colours, type, shape, motion, a placeholder wordmark) shown on a board, before or without a page | `modes/brand.md` |
 
    Add `modes/app-screen.md` on top when the screen is worked in (dashboard, admin, settings,
    inbox, editor) rather than read.
@@ -189,6 +190,7 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 | `motion/functions.md` | Writing the motion spec and building motion |
 | `copy/method.md`, `copy/words.json` | The copy step: the reader framed first, the voice felt not stated, the glossary, reading experience, the skim and explain-back tests |
 | `kit/README.md`, `kit/sections.json` | The build step: which tested section answers which customer question, and the rules for using them |
+| `brand/method.md` | The brand mode; the direction step of the design modes (read `.design/brand-kit.json` or write a short kit); a placeholder wordmark when there is no logo |
 | `rubric/reason.md` | The reason step: every element of the built page names its job or goes |
 | `rubric/critic.md` | Briefing the critic subagent; the critique format every juror uses |
 | `rubric/jury.md` | The look step and best-of-N at standard effort and above; judging references |
@@ -204,6 +206,7 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 | Command | Does |
 | --- | --- |
 | `progress.mjs init / check / done / approve / back / skip / log / status` | Order of steps, gates, turn back |
+| `brandboard.mjs <brand-kit.json or directions.json> [--out .design/brand] [--no-pdf]` | The brand board: palette with roles and contrast pairs, type, shape and motion, elements, the placeholder wordmark, the brand in use (web hero, price card, social post); `board.html` and `board.pdf` |
 | `draw.mjs --sector <s> [--tone <t>] [--have a,b] [--options 3]` | Deals directions into `.design/directions/` (`--list sectors`) |
 | `inspect.mjs <url or file> [--out dir] [--allow rule]` | Real-browser check at 1440/768/390, screenshots, design inventory |
 | `lint.mjs <files or folders>` | Stock copy, placeholders, default styling patterns in source |

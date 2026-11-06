@@ -307,6 +307,10 @@ export function measure({ rules, viewport }) {
   const samples = [...document.querySelectorAll('[data-kit-sample]')];
   if (samples.length) style('kit-sample', `${samples.length} section(s) still carry the kit's sample content: write their content from the spec and remove data-kit-sample`, samples.slice(0, 3).map((e) => e.getAttribute('data-kit') || snippet(e)));
 
+  // --- placeholder wordmark (brand/method.md §9): reported so the deliver report lists it for replacement
+  const logos = [...document.querySelectorAll('[data-placeholder-logo]')];
+  if (logos.length) add('INFO', 'placeholder-logo', `${logos.length} placeholder wordmark(s): list them in the deliver report as a placeholder to replace with a designer's logo`, logos.slice(0, 3).map((e) => snippet(e)));
+
   // --- headings
   const h1s = [...document.querySelectorAll('h1')].filter(visible);
   if (h1s.length === 0) add('FAIL', 'no-h1', 'No visible h1: the page has no title');

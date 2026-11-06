@@ -125,6 +125,20 @@ otherwise; a recommendation that turns a dial away from the team's taste says wh
 chooses: write `.design/targets.json` (the dials with the user's words), the choice (or the mix)
 with `progress.mjs log`, `approve direction --note "..."`, `done direction`.
 
+### Brand kit (before the gate)
+
+The page's brand elements are decided here, not invented during the build (`brand/method.md`):
+
+- If `.design/brand-kit.json` exists (from a `brand` run, `modes/brand.md`), read it and
+  `.design/brand-kit.md`: use its colours, fonts, radii, motion, hero and supporting elements in
+  every direction; a direction that needs other elements says so at the gate.
+- If not, write a **short kit** to `.design/brand-kit.md` with `brand/method.md` (§8 headings,
+  one hero element, two supporting, from the strategy's subject inventory).
+- With `--gates autopilot` a logged default is allowed instead:
+  `progress.mjs log "brand-kit default: <hero element; supporting elements>"`.
+
+`done direction` refuses without one of these.
+
 Redraw (`draw.mjs` again with `--exclude <ids>`) only for a reason you can state: it needs an asset
 that does not exist, it contradicts the brand, or the user rejected all three.
 
@@ -246,6 +260,9 @@ Order: tokens → hero → sections → pictures → states (hover, focus, error
   to), or it stays stuck over the sections that follow. Check it in the scrolled screenshots, not the
   first screen.
 - Motion last, from the motion spec (`motion/functions.md`).
+- **No logo from the client:** set a placeholder wordmark (`brand/method.md` §9): the name in the
+  display face, optionally one shape from the shape language, marked `data-placeholder-logo`
+  (`inspect.mjs` reports it as INFO `placeholder-logo`).
 
 ## Variants (when the run makes 2–3)
 
@@ -332,6 +349,7 @@ Show the package:
 - the direction (id, seed), the idea sentence, and any redraws or mixes with reasons;
 - the critic's final scores, the five-questions test, and what still falls short;
 - the hypotheses to test after launch, with the metric for each;
+- the placeholder wordmark, if one was used: "placeholder, replace with a designer's logo";
 - every `[SAMPLE]` item to replace, every found picture with its credit, every picture that stands
   in for photography;
 - WARNs kept, each with its one-sentence defence;

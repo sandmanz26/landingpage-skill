@@ -3,7 +3,7 @@
 // turn-back protocol. State lives in .design/progress.json; every change is
 // appended to .design/decisions.log.
 //
-//   node progress.mjs init --mode create|review|restyle|redesign|section|site
+//   node progress.mjs init --mode create|review|restyle|redesign|section|site|brand
 //                          [--effort quick|standard|thorough] [--gates guided|quick|autopilot]
 //                          [--variants 1-3] [--choose jury|user]
 //   Several variants: build .design/variants/v1 … vN/index.html; the jury (choice.json) or the
@@ -18,6 +18,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { parseArgs } from './lib/browser.mjs';
+import { validateKit } from './lib/brandkit.mjs';
 
 const DIR = path.resolve('.design');
 const STATE = path.join(DIR, 'progress.json');
@@ -31,6 +32,7 @@ const FLOWS = {
   section: ['brief:brief', 'research', 'spec', 'roast', 'build', 'reason', 'gate', 'look', 'deliver:final'],
   review: ['context', 'research', 'before', 'reason', 'review', 'roast', 'deliver:final'],
   restyle: ['context', 'research', 'before', 'review', 'roast', 'choose:choose', 'fix', 'reason', 'after', 'gate', 'deliver:final', 'learn'],
+  brand: ['brief:brief', 'research', 'strategy', 'roast:strategy', 'brand-directions:direction', 'kit', 'deliver:final', 'learn'],
   redesign: ['context', 'research', 'before', 'review', 'strategy', 'roast:strategy', 'choose:choose', 'direction:direction', 'spec', 'fix', 'reason', 'after', 'gate', 'deliver:final', 'learn'],
 };
 const stepsOf = (mode) => FLOWS[mode].map((x) => x.split(':')[0]);
@@ -89,6 +91,22 @@ const section = (text, heading) => {
   const end = rest.slice(1).findIndex((l) => /^##\s/.test(l));
   return (end < 0 ? rest : rest.slice(0, end + 1)).join('\n');
 };
+
+// brand-kit.md carries the five headings of brand/method.md §8, and its Tests name the five tests (§6).
+function brandKitProblems() {
+  const kp = path.join(DIR, 'brand-kit.md');
+  if (!fs.existsSync(kp)) return ['.design/brand-kit.md does not exist (brand/method.md §8)'];
+  const t = fs.readFileSync(kp, 'utf8');
+  const out = [];
+  const missing = ['Sources', 'Elements', 'Hero element', 'Rules of use', 'Tests'].filter((h) => !new RegExp(`^##\\s*${h}\\b`, 'im').test(t));
+  if (missing.length) out.push(`.design/brand-kit.md has no ${missing.join(', ')} section (brand/method.md §8)`);
+  else {
+    const tests = section(t, 'Tests');
+    const absent = ['cover', 'blur', 'swap', 'down', 'source'].filter((w) => !new RegExp(`\\b${w}`, 'i').test(tests));
+    if (absent.length) out.push(`.design/brand-kit.md "## Tests" does not record the ${absent.join(', ')} test(s) (brand/method.md §6)`);
+  }
+  return out;
+}
 
 function newestSourceMtime(root = process.cwd()) {
   let newest = 0;
@@ -270,6 +288,32 @@ switch (cmd) {
       if (!rows.length && !/\b(none|tidak ada)\b/i.test(ix)) fail('spec.md "## Interactions" is empty: list each interaction in the table, or write "none".');
       const noPurpose = rows.filter((c) => (c[3] || '').length < 4).map((c) => c[0]);
       if (noPurpose.length) fail(`spec.md Interactions: ${noPurpose.join(', ')} name no customer question (fourth column). An interaction with no purpose is cut, not built.`);
+    }
+    if (step === 'brand-directions') {
+      const bp = path.join(DIR, 'brand', 'board.html');
+      if (!fs.existsSync(bp)) fail('"brand-directions" needs the board: brandboard.mjs .design/brand/directions.json --out .design/brand (modes/brand.md).');
+      const n = (fs.readFileSync(bp, 'utf8').match(/<section class="kit"/g) || []).length;
+      if (n < 2) fail(`.design/brand/board.html shows ${n} direction(s): show 2-3 brand directions on one board so the user can choose.`);
+    }
+    if (step === 'kit') {
+      const probs = brandKitProblems();
+      const jp = path.join(DIR, 'brand-kit.json');
+      if (!fs.existsSync(jp)) probs.push('.design/brand-kit.json does not exist (brand/method.md §10)');
+      else {
+        let kit = null;
+        try { kit = JSON.parse(fs.readFileSync(jp, 'utf8')); } catch { probs.push('.design/brand-kit.json is not valid JSON'); }
+        if (kit) probs.push(...validateKit(kit, 'brand-kit.json'));
+      }
+      if (probs.length) fail(`"kit" is not done: ${probs.join('; ')}.`);
+    }
+    if (step === 'deliver' && s.mode === 'brand' && !fs.existsSync(path.join(DIR, 'brand', 'board.pdf')))
+      fail('The brand delivery includes the board as a PDF: brandboard.mjs .design/brand-kit.json --out .design/brand (writes board.pdf).');
+    if (step === 'direction') {
+      // The page's brand elements are decided before the spec: a kit from a brand run, a short kit, or (autopilot) a logged default.
+      const probs = brandKitProblems();
+      const logged = fs.existsSync(LOG) && /brand-kit default/i.test(fs.readFileSync(LOG, 'utf8'));
+      if (probs.length && !(s.gates === 'autopilot' && logged))
+        fail(`"direction" needs the brand kit: ${probs.join('; ')}. Read .design/brand-kit.json from a brand run, or write a short kit with brand/method.md${s.gates === 'autopilot' ? '; in autopilot you may instead log a default: log "brand-kit default: <hero element, supporting elements>"' : ''}.`);
     }
     if (step === 'direction' && !fs.existsSync(path.join(DIR, 'directions'))) fail('"direction" needs the dealt directions in .design/directions/.');
     if (step === 'direction' && s.gates === 'guided') {

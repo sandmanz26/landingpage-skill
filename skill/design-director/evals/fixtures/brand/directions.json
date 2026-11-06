@@ -1,0 +1,148 @@
+{
+  "directions": [
+    {
+      "name": "Dapur Seimbang",
+      "direction": "Four compartments",
+      "colors": [
+        {
+          "name": "Rice",
+          "hex": "#F5EFE3",
+          "role": "ground"
+        },
+        {
+          "name": "Soy",
+          "hex": "#1F2A24",
+          "role": "ink"
+        },
+        {
+          "name": "Leaf",
+          "hex": "#2F6B4F",
+          "role": "signature"
+        },
+        {
+          "name": "Tamarind",
+          "hex": "#E7D3B0",
+          "role": "support"
+        },
+        {
+          "name": "Turmeric",
+          "hex": "#E2A13B",
+          "role": "action"
+        }
+      ],
+      "fonts": {
+        "display": "Georgia",
+        "body": "Verdana"
+      },
+      "radii": {
+        "small": 8,
+        "large": 28
+      },
+      "motion": {
+        "easing": "cubic-bezier(.2,.8,.2,1)",
+        "durations": {
+          "short": 160,
+          "long": 420
+        }
+      },
+      "hero": {
+        "name": "The box that fills by day",
+        "description": "a four-compartment box that fills one cell per weekday",
+        "source": "the product (bento box)"
+      },
+      "supporting": [
+        {
+          "name": "Compartment shape",
+          "source": "the bento box",
+          "effect": "groups related items"
+        },
+        {
+          "name": "One colour per compartment",
+          "source": "the four food groups",
+          "effect": "marks a new chapter"
+        }
+      ],
+      "wordmark": {
+        "text": "Seimbang",
+        "placeholder": true,
+        "shape": "compartment"
+      },
+      "sampleAction": "Pesan untuk minggu ini",
+      "samplePrice": "Rp 45.000",
+      "samplePriceNote": "per hari, antar ke meja kantor",
+      "samplePost": "Makan siang lengkap, tanpa mikir"
+    },
+    {
+      "name": "Dapur Seimbang",
+      "direction": "Lunch at twelve",
+      "colors": [
+        {
+          "name": "Rice",
+          "hex": "#F5EFE3",
+          "role": "ground"
+        },
+        {
+          "name": "Soy",
+          "hex": "#1F2A24",
+          "role": "ink"
+        },
+        {
+          "name": "Leaf",
+          "hex": "#8A3B2E",
+          "role": "signature"
+        },
+        {
+          "name": "Tamarind",
+          "hex": "#E7D3B0",
+          "role": "support"
+        },
+        {
+          "name": "Turmeric",
+          "hex": "#E2A13B",
+          "role": "action"
+        }
+      ],
+      "fonts": {
+        "display": "Georgia",
+        "body": "Verdana"
+      },
+      "radii": {
+        "small": 8,
+        "large": 28
+      },
+      "motion": {
+        "easing": "cubic-bezier(.2,.8,.2,1)",
+        "durations": {
+          "short": 160,
+          "long": 420
+        }
+      },
+      "hero": {
+        "name": "The box that fills by day",
+        "description": "a four-compartment box that fills one cell per weekday",
+        "source": "the product (bento box)"
+      },
+      "supporting": [
+        {
+          "name": "Compartment shape",
+          "source": "the bento box",
+          "effect": "groups related items"
+        },
+        {
+          "name": "One colour per compartment",
+          "source": "the four food groups",
+          "effect": "marks a new chapter"
+        }
+      ],
+      "wordmark": {
+        "text": "Seimbang",
+        "placeholder": true,
+        "shape": "arch"
+      },
+      "sampleAction": "Pesan untuk minggu ini",
+      "samplePrice": "Rp 45.000",
+      "samplePriceNote": "per hari, antar ke meja kantor",
+      "samplePost": "Makan siang lengkap, tanpa mikir"
+    }
+  ]
+}
