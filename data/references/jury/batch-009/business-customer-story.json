@@ -1,0 +1,55 @@
+{
+  "juror": "business-customer-story",
+  "kind": "ai",
+  "method": "Evidence pack only (digest.md, desktop-fold, sheet-desktop, motion-sheet, mobile-fold, sheet-mobile) plus the coordinator's measurements in _brief.md. No browser, no live site, no access to the contact flow; motion judged from stills, so timing and feel of the Rive hero were not seen. Read as a fintech/crypto founder deciding whether to contact a regulatory firm.",
+  "refs": {
+    "ref-0015": {
+      "business": "Axis Group, a Malta/EU-centred legal, regulatory and corporate advisory firm for crypto, payments, AI, gaming and investment firms (MiCA, PSD2/PSP, EMD2/EMI, MiFID II, AIF/UCITS licensing). Paying action: get a founder into a conversation ('Send a Message', 'Book a Call', 'Contact us on Telegram'). Note: the digest counts 0 forms, so the 'contact form' the brief names is not on this page; contact runs through a message link, a call link and Telegram.",
+      "scores": { "business": 6, "customer": 6, "story": 7 },
+      "reasons": {
+        "business": "Proof is strong but placed late: $1B+ total transaction value, $600M+ client valuation, $10B+ AUM backed by VCs, 10+ jurisdictions, 70+ clients, $3.5M+ grants, a logo wall with recognisable crypto names (dYdX and others), three named partners with photos, and 17 dated regulatory briefs (MiCA, DORA, CRA, MiFID II). That is real authority for a legal buyer. But the hero says none of it: 'Where Technology Meets Trust' plus 'helping founders navigate legal and regulatory challenges' could belong to any law firm, auditor or KYC vendor. The concrete offer (licences by regime) first appears at 57% of page height, the numbers at about 70%. Only one testimonial (Infrared Finance, founder, no named person). The CTA is low-friction and specific at the end ('Talk to us in less than 10 minutes', Mon-Fri 7AM-6PM CEST, Telegram), which suits crypto founders.",
+        "customer": "The industry cards show the buyer's own product back to them (crypto price list, AI chat, payment QR, fund balance), which signals 'we know your business'. The service cards name the buyer's real job (secure a PSP/EMI/MiFID II licence) and the blog speaks the buyer's open questions (are airdrops exempt, are frontends regulated under MiCA). What is missing is the buyer's pain and stakes: no deadline (MiCA transition period), no cost of a refused or delayed licence, no time-to-licence, no outcome a founder can quote. Copy is generic in places: 'driving measurable results in any field' appears twice (under industries and, copy-pasted, under testimonials, where it does not fit). Typo 'Artificial Intellligence' on an industry card hurts a firm selling precision. Grey subcopy fails contrast (#8d8d8d 3.32:1).",
+        "story": "The page has a real narrative spine: industries enter (hero tiles) -> 'How we work' shows the engagement as artefacts (client chat, whiteboard strategy note with named cursors, a redlined 'Warrant to purchase tokens' document) -> services by regime -> numbers -> client voice -> the people -> the thinking (briefs) -> a time-bound invitation. The 'How we work' sequence is the best storytelling on the page because it shows the work product, not adjectives. Weak points: the hero metaphor is abstract (labelled tiles become Axis-logo blocks across a divider; readable as 'your industry passes through Axis', not as 'licensed' or 'trust'), and the brand voice drops to boilerplate in section subtitles. Display serif italic accent words (Trust, industry, work, compliant, questions, results, clients, team, insights) are a consistent device but are applied to almost every H2, so they stop marking what matters."
+      },
+      "claims": [
+        {
+          "claim": "The hero motion gives a strong message for the hero.",
+          "verdict": "Partly true; overstated.",
+          "evidence": "desktop-fold and motion-sheet 00-04: tiles labelled Crypto/Payments/Gaming/Fintech slide toward a vertical divider and on the other side appear as white Axis-logo cross blocks. The idea (your sector goes in, comes out structured by Axis) is there and on-brand, but the labels are small and rotated, the metaphor needs explaining, and nothing in it says 'regulated', 'licensed' or 'trust'. It supports the headline; it does not carry a message the headline lacks. The message would be strong if the output side showed a licence/approval, not the logo."
+        },
+        {
+          "claim": "The images depict finance.",
+          "verdict": "True for the industry cards, but they depict the client's product, not the service.",
+          "evidence": "sheet-desktop page-02 and sheet-mobile page-02: dark UI mockups of crypto prices, an AI chat, a payment QR and an investment balance ($3.7M, $250,000). They tell a founder 'we know your sector'. They do not depict legal or regulatory work; that job is done by the 'How we work' artefacts (chat, strategy note, token warrant document)."
+        },
+        {
+          "claim": "There is motion that depicts chat.",
+          "verdict": "True.",
+          "evidence": "motion-sheet 07-scroll-2250px and sheet-desktop page-03/07: client and Axis message bubbles appear in sequence for 'Onboarding & Initial Consultation' and 'Ongoing Support' (e.g. a client asking about MiCA authorisation, Axis replying). This one earns its place: it shows the 'responsive collaboration' promise instead of stating it."
+        }
+      ],
+      "motion": [
+        { "what": "Hero Rive animation: sector tiles (Crypto, Payments, Gaming, Fintech) cross a divider and become Axis-logo blocks", "message it carries": "Your industry goes through Axis and comes out structured; abstract, labels hard to read", "verdict": "earns its place (weakly); would earn more if the output showed an approved licence rather than the logo" },
+        { "what": "'How we work' step 1 and 4: chat bubbles between client and Axis appear in sequence", "message it carries": "Responsive, direct access to the team; ongoing support after licensing", "verdict": "earns its place" },
+        { "what": "'How we work' step 2: handwritten 'Client Strategy Session' note with named cursors", "message it carries": "A tailored roadmap built together with the client", "verdict": "earns its place" },
+        { "what": "'How we work' step 3: redlined 'Warrant to purchase tokens' document with cursors", "message it carries": "Real legal drafting and execution; the work product itself", "verdict": "earns its place (the strongest proof-by-showing on the page)" },
+        { "what": "Industry-card UI mockups and logo-wall loops (part of 56 endless loops, 10 with text, no pause control)", "message it carries": "none beyond 'we serve these sectors', which the static card already says", "verdict": "decoration" },
+        { "what": "Gradient/blur reveals on italic accent words and section reveals (backgroundPosition, filter, opacity)", "message it carries": "none", "verdict": "decoration; and on mobile 8 text elements (e.g. Corporate Advisory, Legal Advisory) never became visible, so it removes content" }
+      ],
+      "problems": [
+        "The hero sells a slogan, not the offer: 'Where Technology Meets Trust' plus a generic subline; licensing by regime (MiCA, PSP, EMI, MiFID II) and the proof numbers ($1B+ transaction value, 10+ jurisdictions, dYdX-tier logos) sit at 57-75% of an 11,413px page. A founder with a licensing question should see the regimes and one hard number in the first screen.",
+        "Motion cost outweighs its message: 56 endless loops with no pause, 10 elements still moving under reduced motion, 4.9 fps with scripts blocking 95% of scroll (relative, software rendering), and 8 mobile text elements never revealed. For a firm whose promise is trust and compliance, a heavy, inaccessible page contradicts the message; the team's 9.5 ship score ignores this.",
+        "Copy precision fails where precision is the product: 'Intellligence' typo, the same boilerplate subtitle ('driving measurable results in any field') reused under testimonials, one unnamed testimonial, grey subcopy below WCAG AA. A regulatory firm is judged on exactness."
+      ],
+      "keep": [
+        "Show the work product as the process: chat -> strategy note -> redlined legal document -> support chat. Function: proves how the engagement feels and what the client gets, replacing adjectives like 'streamlined' and 'expert'.",
+        "Industry cards that mirror the buyer's own product UI. Function: instant self-identification ('they know crypto/payments/funds') before reading any copy.",
+        "Time-bound, low-friction closing CTA: 'Talk to us in less than 10 minutes', hours with time zone, Telegram as channel. Function: removes the fear of a slow, formal law-firm intake, matched to how crypto founders actually communicate.",
+        "Thought-leadership library of dated, regime-specific briefs on the landing page. Function: proof of current expertise for a buyer who will check whether the firm understands their exact regulation.",
+        "Named partners with photos and practice areas. Function: in legal services the buyer hires people, so faces and roles reduce risk."
+      ],
+      "veto": null
+    }
+  },
+  "team_lesson_check": "The lesson is half right. Motion that carries the message is what lifts this page above a tidy template, but only 4 of the moving pieces do that (hero transformation, chat, strategy note, document); the other loops are decoration and cost performance and accessibility. Better rule for the skill: each motion must show the product, the work or the result (state the message in one sentence, or cut it), with a loop budget, a pause control and a real reduced-motion state. Team scores 9 visual / 9.5 ship are too high; from this juror's criteria the page is good (6-7), not best-in-class, mainly because the offer and proof arrive late."
+}

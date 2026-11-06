@@ -1,7 +1,7 @@
 {
-  "builtAt": "2026-11-05T15:28:49.811Z",
+  "builtAt": "2026-11-06T05:31:25.333Z",
   "source": "data/references (batch-*.json, captures/*/style.json)",
-  "count": 14,
+  "count": 15,
   "sectors": {
     "commerce": [
       "ref-0001"
@@ -28,6 +28,9 @@
     ],
     "home": [
       "ref-0014"
+    ],
+    "finance": [
+      "ref-0015"
     ]
   },
   "groups": [
@@ -133,11 +136,11 @@
         "colour:calm",
         "type:firm",
         "imagery:photo",
-        "motion:story",
-        "shape:soft"
+        "motion:story"
       ],
       "members": [
-        "ref-0009"
+        "ref-0009",
+        "ref-0015"
       ]
     },
     {
@@ -1739,6 +1742,120 @@
         ]
       },
       "styleGroup": "style-2"
+    },
+    {
+      "id": "ref-0015",
+      "site": "axis group",
+      "url": "https://axisgroup.xyz/",
+      "batch": "batch-009",
+      "review": "data/references/batch-009-review.md",
+      "business": "Regulatory and legal advisory for fintech and crypto companies (PSP licences under PSD2, MiCA, token legal opinions).",
+      "actionThatPays": "Send a Message / Book a Call / Telegram (no form on the page)",
+      "scores": {
+        "ai": 6.5,
+        "ownerOverall": null,
+        "ownerVisual": 9,
+        "ownerShip": 9.5,
+        "final": 8
+      },
+      "veto": null,
+      "patternOnly": false,
+      "patterns": [
+        "Motion that shows the work being done (chat, annotated note, redlined document) to explain a service that has no product",
+        "A hero animation that turns the sectors served into the brand mark",
+        "Accent words in an italic display serif against a neutral sans: one typographic device across every heading",
+        "Product mockups of the client's own industries on dark cards"
+      ],
+      "avoid": [
+        "56 loops with no pause and motion that ignores reduced motion; a page this heavy",
+        "A hero that is only a slogan while the licences and proof ($1B+, 10+ jurisdictions) wait at 57-75% of the page",
+        "Typos ('Intellligence'), a subheading used twice, an unnamed testimonial; 14 font sizes"
+      ],
+      "sector": "finance",
+      "style": {
+        "features": [
+          "surface:gradient-shadow",
+          "colour:calm",
+          "type:firm",
+          "imagery:photo",
+          "motion:story",
+          "shape:pill"
+        ],
+        "tags": [
+          "gradient-heavy",
+          "shadowed",
+          "restrained-colour",
+          "pill-shapes",
+          "expressive-type",
+          "many-type-sizes",
+          "scroll-choreography",
+          "endless-motion",
+          "photography",
+          "illustration",
+          "ignores-reduced-motion"
+        ],
+        "type": {
+          "families": [
+            "ui sans serif",
+            "ivyprestodisplay",
+            "sfprodisplay",
+            "ivyprestoheadline"
+          ],
+          "display": 126,
+          "body": 16,
+          "ratio": 7.9,
+          "sizes": 14
+        },
+        "palette": {
+          "chromatic": 1,
+          "gradients": 23,
+          "shadows": 9,
+          "backgrounds": [
+            "#ffffff",
+            "#000000",
+            "#1a1a1a",
+            "#27272a",
+            "#eeeeee"
+          ]
+        },
+        "radii": [
+          "12px",
+          "6px",
+          "8px",
+          "16px"
+        ],
+        "motion": {
+          "libraries": [
+            "gsap",
+            "scrollTrigger",
+            "framerMotion"
+          ],
+          "stickyPanels": 0,
+          "durationsMs": {
+            "min": 300,
+            "max": 98222
+          },
+          "easings": [
+            "linear",
+            "cubic-bezier(0, 0, 0.2, 1)"
+          ],
+          "reducedMotionRespected": false,
+          "smoothness": {
+            "fps": 4.9,
+            "longFrames": 95,
+            "baselineLongFrames": 0,
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+          }
+        },
+        "doNotCopy": [
+          "contrast: 6 text elements below WCAG AA (measured on screen pixels)",
+          "contrast: 5 text elements below WCAG AA (measured on screen pixels)",
+          "tap-target: 10 controls smaller than 24x24px on a phone",
+          "hidden-content: 8 text elements were never visible during a full scroll (a reveal that never fires?)",
+          "motion without a reduced-motion path"
+        ]
+      },
+      "styleGroup": "style-7"
     }
   ]
 }

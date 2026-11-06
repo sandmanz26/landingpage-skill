@@ -1,0 +1,78 @@
+{
+ "batch": "batch-009",
+ "received": "2026-11-06",
+ "from": "owner (chat, 3 screenshots, 3 notes + skill lessons)",
+ "status": "captured (single page), judged by 2 combined AI jurors and the owner",
+ "jury": {
+  "folder": "data/references/jury/batch-009",
+  "jurors": [
+   "visual-motion",
+   "business-customer-story"
+  ],
+  "human_votes": 1,
+  "note": "77.8k + 78.6k tokens"
+ },
+ "entries": [
+  {
+   "id": "ref-0015",
+   "url": "https://axisgroup.xyz/",
+   "site": "axis group",
+   "sector": "finance",
+   "business": {
+    "what": "Regulatory and legal advisory for fintech and crypto companies (PSP licences under PSD2, MiCA, token legal opinions).",
+    "action_that_pays": "Send a Message / Book a Call / Telegram (no form on the page)",
+    "source": "captured page",
+    "confidence": "high"
+   },
+   "owner": {
+    "visual": 9,
+    "ship": 9.5
+   },
+   "jury_scores": {
+    "business": 6,
+    "customer": 6,
+    "story": 7,
+    "distinctiveness": 7,
+    "craft": 4,
+    "clarity": 6,
+    "weighted": 6.5
+   },
+   "combined": {
+    "final": 8.0,
+    "gap": 3.0,
+    "visualVsShip": -0.5
+   },
+   "veto": null,
+   "claims": [
+    {
+     "claim": "Hero motion gives a strong message",
+     "verdict": "partly",
+     "evidence": "Rive animation turns industry keycaps (Payments, Gaming, Fintech, Crypto) into the woven Axis logo: on concept, but abstract, wordless and below a generic headline; the fold never says legal, licensing or MiCA."
+    },
+    {
+     "claim": "Images depict finance",
+     "verdict": "true, with a correction",
+     "evidence": "Dark UI mockups of the clients' products (crypto prices, AI chat, payment QR, investment balance), not of Axis's own legal service."
+    },
+    {
+     "claim": "There is motion that depicts chat",
+     "verdict": "true, and it is the most useful motion",
+     "evidence": "In 'How we work' a client-Axis chat, a handwritten strategy note with named cursors and a redlined token-warrant document build on scroll: the work itself shown as it happens. Judged from stills."
+    }
+   ],
+   "motion": "Carries the message: hero keycaps→logo, chat, strategy note, redlined document. Decoration: card and logo loops, gradient text reveals. Cost: 56 endless loops (10 with text) with no pause, 10 elements moving under reduced motion, 4.9 fps while scrolling with scripts blocking 95% (software rendering: relative, but the heaviest page in the library); 8 texts never shown on the phone.",
+   "library_candidates": [
+    "Motion that shows the work being done (chat, annotated note, redlined document) to explain a service that has no product",
+    "A hero animation that turns the sectors served into the brand mark",
+    "Accent words in an italic display serif against a neutral sans: one typographic device across every heading",
+    "Product mockups of the client's own industries on dark cards"
+   ],
+   "avoid": [
+    "56 loops with no pause and motion that ignores reduced motion; a page this heavy",
+    "A hero that is only a slogan while the licences and proof ($1B+, 10+ jurisdictions) wait at 57-75% of the page",
+    "Typos ('Intellligence'), a subheading used twice, an unnamed testimonial; 14 font sizes"
+   ]
+  }
+ ],
+ "owner_taste_signal": "Largest gap on craft (owner 9, AI 4): the owner judges motion by the message it carries; the jurors also count its cost (performance, pause, reduced motion). Both are kept: the skill's rule becomes 'motion that carries the message, with a pause control, a reduced-motion version and a performance budget'."
+}

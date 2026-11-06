@@ -1,0 +1,53 @@
+{
+  "juror": "visual-motion",
+  "kind": "ai",
+  "method": "Evidence pack only (digest.md, desktop-fold, sheet-desktop, motion-sheet, mobile-fold, sheet-mobile) plus the coordinator's measurements in the brief. No browser, no code. Motion judged from timed stills and measured counts, so what is in sequence between frames is inferred, not seen.",
+  "refs": {
+    "ref-0015": {
+      "business": "Axis Group: EU-focused legal, regulatory and licensing advisory (MiCA, PSD2/EMI, MiFID II, funds, AI Act) for crypto, fintech, AI and gaming founders. Paying action: contact (Send a Message / Book a Call / Telegram); the digest counts 0 forms on the page.",
+      "scores": { "clarity": 6, "distinctiveness": 7, "craft": 4 },
+      "reasons": {
+        "clarity": "The fold is tidy: one H1, one subline, one black CTA, and the nav keeps Book a Call visible. But 'Where Technology Meets Trust' could head any fintech, bank or cybersecurity site. The fold never says 'legal', 'licensing' or 'MiCA'; that only appears in the grey subline (#8d8d8d, 3.32:1, below AA) and at 58% of the page. Three CTA labels (Send a Message, Book a Call, Contact us on Telegram) and 0 forms leave the paying step unclear.",
+        "distinctiveness": "Strong ownable pieces: the Rive hero where industry keycaps (Crypto, Payments, Gaming, Fintech) cross a vertical line and become the white woven Axis mark; the 'How we work' section built from artefacts of the actual work (client chat thread, handwritten 'Client Strategy Session' note with named cursors, a redlined 'Warrant to purchase tokens' document). Weaker: the blue-gradient italic serif accent word in every H2 (Trust, industry, work, compliant, questions, results, clients, team, insights) is a common 2024-25 template trope (flagged as a purple gradient ×9). The dark stat bento with a glow and the logo wall are generic.",
+        "craft": "The type and spacing at the fold are refined (Ivy Presto at 126px, a calm grayscale field). Underneath it fails: scrolling ran at 4.9 fps with scripts blocking 95% of it, the heaviest page in the library (relative, software rendering); 56 endless loops with no pause control (WCAG 2.2.2 for loops longer than 5 s); 10 elements still move under reduced motion; 8 mobile text blocks never become visible (a reveal that never fires, e.g. 'Legal Advisory'); 6 contrast failures; 14 font sizes and 8 display sizes with no scale; 10 tap targets under 24px; 14px body text. On a regulatory-trust brand, inaccessible and heavy motion contradicts the message."
+      },
+      "claims": [
+        {
+          "claim": "The hero motion gives a strong message for the hero.",
+          "verdict": "partly true",
+          "evidence": "The Rive piece does carry an idea: dark, separate industry keycaps pass through a divider and come out as ordered, interlocking white Axis tiles, which reads as 'raw sector into structured compliance'. Frames 0-2000 ms show it moving. But it is abstract, sits below the CTA, has no words, and a visitor who does not know the logo will not read 'regulated'. It supports a headline that is itself generic, so 'strong' is overstated; 'distinctive and on-concept' is accurate."
+        },
+        {
+          "claim": "The images depict finance.",
+          "verdict": "partly true, imprecise",
+          "evidence": "The industry cards are dark product-UI mockups: crypto price list, AI chat, payment QR plus amount, investment balance chart ($3.7M, $250,000). These depict the client's products in each sector (one is AI, and Gaming is listed too), not finance in general and not the legal work Axis sells. The images that depict the service itself are in 'How we work' (chat with a client, strategy notes, redlined token warrant), and they are the stronger ones."
+        },
+        {
+          "claim": "There is motion that depicts chat.",
+          "verdict": "true (from stills)",
+          "evidence": "'How we work' step 1 (motion-sheet 07-scroll-2250px, desktop-page-03/07, mobile-page-02/04) shows a Client/Axis message thread with avatars and timestamps whose bubbles change between frames, so it builds in on scroll. It is the clearest piece of motion that shows the actual service (responsive, direct access to lawyers). Sequence and timing are inferred from stills, not watched."
+        }
+      ],
+      "motion": [
+        { "what": "Hero Rive: industry keycaps slide across a divider and turn into the woven Axis mark (loops)", "message it carries": "Your sector, structured and made compliant by Axis", "verdict": "earns its place (concept), but it loops endlessly with no pause and keeps running under reduced motion" },
+        { "what": "How we work step 1: chat bubbles between client and Axis build in on scroll", "message it carries": "Fast, direct, human contact with the advisers", "verdict": "earns its place" },
+        { "what": "How we work step 2: handwritten strategy note with named cursors (collaborators) moving over it", "message it carries": "Tailored strategy built together with the client", "verdict": "earns its place" },
+        { "what": "How we work step 3: legal document with highlighted clauses and cursors", "message it carries": "Execution: the lawyers draft and review your instruments", "verdict": "earns its place" },
+        { "what": "Industry cards: live-looking UI loops (ticking crypto prices, chat, QR, balance chart)", "message it carries": "We know these sectors' products", "verdict": "decoration mostly; sells the client's product rather than Axis, and adds to the 56 loops" },
+        { "what": "Blue gradient on italic accent words, logo marquee, glow on stat cards, scroll reveals", "message it carries": "none", "verdict": "decoration; the reveals fail on mobile (8 blocks never shown)" }
+      ],
+      "problems": [
+        "Motion cost and access: 56 endless loops with no pause, 10 still moving under reduced motion, 4.9 fps scroll with scripts blocking 95% of it; a compliance firm that does not comply with WCAG 2.2.2 or 2.3.3 undermines its own claim.",
+        "The fold names no offer: 'Where Technology Meets Trust' plus a sub-AA grey subline; 'legal', 'licensing' and 'MiCA' come much later. No form despite contact being the paying action, and three competing contact labels.",
+        "Type system sprawl: 4 typefaces, 14 sizes, 8 display sizes, and the gradient-italic accent word repeated in every H2 until it reads as a template tic. Mobile reveals never fire for 8 blocks."
+      ],
+      "keep": [
+        "Show the work as artefacts in motion (chat thread, strategy note with named cursors, redlined document) so 'how we work' is shown instead of listed; this is what makes the site feel made, not the hero.",
+        "A hero animation that is a literal metaphor for the transformation sold (industries into the brand mark), placed after the message and CTA so it supports them instead of replacing them.",
+        "Restrained grayscale field with one accent colour and one display serif, so the motion and accent words are the only colour events.",
+        "Sticky nav with a persistent Book a Call."
+      ],
+      "veto": null
+    }
+  }
+}
