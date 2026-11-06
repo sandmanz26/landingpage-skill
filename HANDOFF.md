@@ -518,6 +518,15 @@ Capture fix: gotoStable treats HTTP 429 and "Too many requests"/rate-limit bodie
 waits 15 s × try before retrying (Solflare batch-010 was captured as {"errors":["Too many
 requests."]}); fixture evals/fixtures/rate-limited.html.
 
+Batch-009 Axis Group (ref-0015, finance): owner 9/9.5, AI 6.5 (craft 4: 56 loops without pause,
+reduced motion ignored, 4.9 fps), final 8. Owner judges motion by its message; jurors add its cost.
+Batch-010 Solflare: not captured. The site answers the headless browser with 429 every time (curl
+gets 200); bot detection was not evaded on purpose. Waiting for the owner's screenshots.
+Owner's rules to build next (one module, 2026-11-06): motion must carry the site's message, else
+offer it to the user at the end as an option; tell the user when images are dummies because no
+image-generation tool is connected; ask the user for product UI (screenshots, Figma); if none, ask
+whether to build a realistic mock with sample data (marked as sample) or a labelled placeholder.
+
 ## 4. Decisions and why (do not undo without a reason)
 
 | Decision | Why |

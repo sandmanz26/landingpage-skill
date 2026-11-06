@@ -1,3 +1,5 @@
 # batch-010 (2026-11-06) owner: visual 8, ship 9.5; fintech (crypto wallet); home + the get-started page
+# NOT CAPTURED: solflare.com answers the automated browser with 429 {"errors":["Too many requests."]} on every try
+# (plain curl gets 200). Not worked around (no bot-detection evasion). Needs the owner's screenshots.
 ref-0016 https://www.solflare.com/
 ref-0016-onboard https://solflare.com/onboard
