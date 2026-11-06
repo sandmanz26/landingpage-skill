@@ -77,7 +77,9 @@ if (/\.md$/i.test(target)) {
   const { url, close } = await resolveTarget(target);
   const browser = await launch();
   const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
-  await page.goto(url, { waitUntil: 'load', timeout: 45000 });
+  // Text is all this check reads: do not wait for heavy pictures or video.
+  await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 45000 });
+  await page.waitForTimeout(1500);
   blocks = await page.evaluate(() => {
     const out = [];
     let section = '(top)';

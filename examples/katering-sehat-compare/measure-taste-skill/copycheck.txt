@@ -1,0 +1,18 @@
+copycheck: 110 words, 14 sentences, average 7.9 words → measure-taste-skill/copycheck.json
+  WARN no-voice: No voice.md: the reader and the glossary are not written down (copy/method.md)
+
+Skim test (headings and buttons only):
+    [Dapur Seimbang]
+    [Berlangganan]
+  Katering makan siang sehat untuk kantor
+    [Berlangganan]
+    [Lihat menu]
+  Kotak makan siang yang lengkap
+  Menu harian dalam empat bagian
+  Nasi
+  Lauk
+  Sayur
+  Buah
+  Antar ke kantor di Jakarta Selatan
+  Pesan langganan makan siang
+    [Berlangganan]

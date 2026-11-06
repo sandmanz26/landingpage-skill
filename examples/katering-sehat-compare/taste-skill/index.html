@@ -36,7 +36,7 @@
   #antar.ground-brand { --p-accent: #2f5228; }
   /* the use scene: a wide frame across the wrap, the desk filling it */
   #antar .frame { --ratio: 34%; }
-  @media (min-width: 640px) and (max-width: 1023px) { #antar .frame { --ratio: 70%; } }
+  @media (min-width: 640px) and (max-width: 1023px) { #antar .frame { --ratio: 60%; } }
   @media (max-width: 639px) { #antar .frame { --ratio: 70%; } }
   /* the hero render's frame reaches 24px under the stage (the room the hero leaves), not 7%, so it ends inside the hero */
   .hero--product .hero__stage > [data-product] { bottom: calc(-1 * var(--s-5)); }
@@ -114,7 +114,7 @@
         <div class="btn-row"><a class="btn btn--primary" href="#pesan">Berlangganan<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a><a class="btn btn--secondary" href="#menu">Lihat menu</a></div>
       </div>
       <div class="hero__stage">
-        <div class="frame" id="hero-kotak" data-product="assets/objects/product-render/specs/kotak-makan.json" data-product-place="stage" data-product-view="lebar" data-product-color="nasi-merah" aria-label="Kotak makan siang Dapur Seimbang berisi nasi merah, ayam, tempe, tahu, sayur, dan buah, dengan sendok dan garpu kayu"></div>
+        <div class="frame" id="hero-kotak" data-product-fill="0.985" data-product-params='{"x":-0.003,"y":0.025}' data-product="assets/objects/product-render/specs/kotak-makan.json" data-product-place="stage" data-product-view="lebar" data-product-color="nasi-merah" aria-label="Kotak makan siang Dapur Seimbang berisi nasi merah, ayam, tempe, tahu, sayur, dan buah, dengan sendok dan garpu kayu"></div>
       </div>
     </div></div>
   </section>
@@ -131,7 +131,7 @@
             <li><span class="rows__name">Hari antar</span><span class="rows__value">Senin–Jumat</span></li>
           </ul>
         </div>
-        <div class="frame frame--split span-7 start-6" id="kotak-shirataki" data-product="assets/objects/product-render/specs/kotak-makan.json" data-product-place="stage" data-product-view="three-quarter" data-product-color="shirataki" aria-label="Kotak makan siang dengan nasi shirataki, ayam, tempe, tahu, sayur, dan buah"></div>
+        <div class="frame frame--split span-7 start-6" id="kotak-shirataki" data-product-params='{"y":0.2}' data-product="assets/objects/product-render/specs/kotak-makan.json" data-product-place="stage" data-product-view="three-quarter" data-product-color="shirataki" aria-label="Kotak makan siang dengan nasi shirataki, ayam, tempe, tahu, sayur, dan buah"></div>
       </div>
     </div>
   </section>
@@ -161,7 +161,7 @@
         <h2 id="antar-h">Antar ke kantor di Jakarta Selatan</h2>
         <p>Untuk karyawan yang ingin makan sehat tapi tidak sempat masak: makan siang datang ke meja kerja Anda.</p>
       </div>
-      <div class="frame" id="antar-meja" data-product="assets/objects/product-render/specs/kotak-makan.json" data-product-place="stage" data-product-view="lebar" data-product-scene="meja" data-product-color="nasi-merah" aria-label="Kotak makan siang di meja kerja, di samping segelas kopi, dua buku, dan selembar kertas"></div>
+      <div class="frame" id="antar-meja" data-product-fill="0.977" data-product-params='{"x":-0.006}' data-product="assets/objects/product-render/specs/kotak-makan.json" data-product-place="stage" data-product-view="lebar" data-product-scene="meja" data-product-color="nasi-merah" aria-label="Kotak makan siang di meja kerja, di samping segelas kopi, dua buku, dan selembar kertas"></div>
     </div>
   </section>
 
@@ -202,7 +202,7 @@
             <p class="t-small">Tombol ini membuka WhatsApp ke 0812-3456-7890 dengan pesanan Anda tertulis.</p>
           </div>
         </div>
-        <div class="frame frame--split span-7 start-6" id="pesan-kotak" data-product="assets/objects/product-render/specs/kotak-makan.json" data-product-place="stage" data-product-view="top" data-product-color="nasi-merah" aria-label="Kotak makan siang dilihat dari atas"></div>
+        <div class="frame frame--split span-7 start-6" id="pesan-kotak" data-product-params='{"y":0.124}' data-product="assets/objects/product-render/specs/kotak-makan.json" data-product-place="stage" data-product-view="top" data-product-color="nasi-merah" aria-label="Kotak makan siang dilihat dari atas"></div>
       </div>
     </div>
   </section>

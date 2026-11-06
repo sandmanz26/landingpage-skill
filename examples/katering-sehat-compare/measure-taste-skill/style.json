@@ -1,0 +1,168 @@
+{
+  "url": "http://127.0.0.1:33435/taste-skill/index.html",
+  "readAt": "2026-11-06T00:06:53.175Z",
+  "tags": [
+    "pill-shapes",
+    "many-type-sizes",
+    "calm-motion",
+    "photography",
+    "illustration"
+  ],
+  "palette": {
+    "chromatic": 4,
+    "families": 2,
+    "text": [
+      "#2a1d17",
+      "#ffffff",
+      "#65564c",
+      "#e5e1d8",
+      "#9e968e"
+    ],
+    "backgrounds": [
+      "#e5e1d8",
+      "#456f3a",
+      "#d4cfc7",
+      "#2f5228",
+      "#dad5ca",
+      "#2a1d17"
+    ],
+    "gradients": 4,
+    "shadows": 0,
+    "blur": 0
+  },
+  "type": {
+    "families": [
+      {
+        "family": "figtree",
+        "share": 76
+      },
+      {
+        "family": "bricolage grotesque",
+        "share": 24
+      }
+    ],
+    "cuts": [
+      {
+        "family": "Figtree",
+        "share": 76
+      },
+      {
+        "family": "Bricolage Grotesque",
+        "share": 24
+      }
+    ],
+    "sizes": {
+      "desktop": [
+        72,
+        48,
+        38,
+        26,
+        22,
+        20,
+        16,
+        15,
+        14,
+        13
+      ],
+      "mobile": [
+        40,
+        30,
+        28,
+        18,
+        17,
+        16,
+        14,
+        13
+      ]
+    },
+    "display": 72,
+    "body": 16,
+    "ratio": 4.5
+  },
+  "shape": {
+    "radii": [
+      "8px",
+      "999px",
+      "20px"
+    ]
+  },
+  "spacing": {
+    "distinct": 11,
+    "offScale": 1
+  },
+  "motion": {
+    "libraries": [],
+    "stickyPanels": 0,
+    "durationsMs": null,
+    "easings": [],
+    "reducedMotionRespected": true,
+    "smoothness": {
+      "fps": 29.1,
+      "longFrames": 48,
+      "baselineLongFrames": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    }
+  },
+  "imagery": {
+    "photos": 5,
+    "illustrations": 3,
+    "videos": 0,
+    "rasterChecked": [
+      {
+        "src": "kotak-makan-lebar-nasi-merah.webp",
+        "cutout": true,
+        "flat": 0.51,
+        "drawn": true
+      },
+      {
+        "src": "kotak-makan-three-quarter-shirataki.webp",
+        "cutout": true,
+        "flat": 0.49,
+        "drawn": false
+      },
+      {
+        "src": "kotak-makan-detail-nasi-nasi-merah.webp",
+        "cutout": true,
+        "flat": 0.53,
+        "drawn": true
+      },
+      {
+        "src": "kotak-makan-detail-lauk-nasi-merah.webp",
+        "cutout": true,
+        "flat": 0.42,
+        "drawn": false
+      },
+      {
+        "src": "kotak-makan-detail-sayur-nasi-merah.webp",
+        "cutout": false,
+        "flat": 0.52,
+        "drawn": false
+      },
+      {
+        "src": "kotak-makan-detail-buah-nasi-merah.webp",
+        "cutout": true,
+        "flat": 0.42,
+        "drawn": false
+      },
+      {
+        "src": "kotak-makan-lebar-meja-nasi-merah.webp",
+        "cutout": true,
+        "flat": 0.58,
+        "drawn": true
+      },
+      {
+        "src": "kotak-makan-top-nasi-merah.webp",
+        "cutout": true,
+        "flat": 0.44,
+        "drawn": false
+      }
+    ]
+  },
+  "layout": {
+    "pageHeight": 5400,
+    "screens": 6
+  },
+  "doNotCopy": [
+    "tap-target: 8 controls smaller than 24x24px on a phone"
+  ]
+}

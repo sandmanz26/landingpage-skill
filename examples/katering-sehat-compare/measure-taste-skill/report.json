@@ -1,0 +1,368 @@
+{
+  "target": "taste-skill/index.html",
+  "time": "2026-11-06T00:05:17.073Z",
+  "rules": {
+    "purple-gradient": "warn",
+    "gradient": "info",
+    "glass": "info",
+    "system-font-only": "warn",
+    "too-many-font-sizes": "warn",
+    "too-many-colours": "warn",
+    "shadow-on-everything": "warn",
+    "icon-card-row": "warn",
+    "centred-hero-two-ctas": "warn",
+    "emoji": "warn",
+    "kit-sample": "fail"
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "pageHeight": 5400,
+      "findings": [
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "4 gradient backgrounds"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Figtree",
+            "share": 76
+          },
+          {
+            "family": "Bricolage Grotesque",
+            "share": 24
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "figtree",
+            "share": 76
+          },
+          {
+            "family": "bricolage grotesque",
+            "share": 24
+          }
+        ],
+        "fontSizes": [
+          72,
+          48,
+          38,
+          26,
+          22,
+          20,
+          16,
+          15,
+          14,
+          13
+        ],
+        "textColours": [
+          "#2a1d17",
+          "#ffffff",
+          "#65564c",
+          "#e5e1d8",
+          "#9e968e"
+        ],
+        "backgroundColours": [
+          "#e5e1d8",
+          "#456f3a",
+          "#d4cfc7",
+          "#2f5228",
+          "#dad5ca",
+          "#2a1d17"
+        ],
+        "chromaticColours": 4,
+        "colourFamilies": 2,
+        "spacing": {
+          "distinct": 11,
+          "offScale": 1,
+          "values": [
+            2,
+            4,
+            8,
+            12,
+            16,
+            24,
+            32,
+            48,
+            64,
+            72,
+            120
+          ]
+        },
+        "radii": [
+          "8px",
+          "999px",
+          "20px"
+        ],
+        "shadows": 0,
+        "gradients": 4,
+        "backdropBlur": 0,
+        "transitions": 22,
+        "animatedElements": 0,
+        "cls": 0
+      },
+      "screenshots": [
+        "measure-taste-skill/desktop-fold.png",
+        "measure-taste-skill/desktop-page-01.png",
+        "measure-taste-skill/desktop-page-02.png",
+        "measure-taste-skill/desktop-page-03.png",
+        "measure-taste-skill/desktop-page-04.png",
+        "measure-taste-skill/desktop-page-05.png",
+        "measure-taste-skill/desktop-page-06.png"
+      ]
+    },
+    "tablet": {
+      "width": 768,
+      "pageHeight": 6144,
+      "findings": [
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "4 gradient backgrounds"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Figtree",
+            "share": 76
+          },
+          {
+            "family": "Bricolage Grotesque",
+            "share": 24
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "figtree",
+            "share": 76
+          },
+          {
+            "family": "bricolage grotesque",
+            "share": 24
+          }
+        ],
+        "fontSizes": [
+          52,
+          37,
+          32,
+          22,
+          18,
+          16,
+          15,
+          14,
+          13
+        ],
+        "textColours": [
+          "#2a1d17",
+          "#ffffff",
+          "#65564c",
+          "#e5e1d8",
+          "#9e968e"
+        ],
+        "backgroundColours": [
+          "#e5e1d8",
+          "#456f3a",
+          "#d4cfc7",
+          "#2f5228",
+          "#2a1d17"
+        ],
+        "chromaticColours": 4,
+        "colourFamilies": 2,
+        "spacing": {
+          "distinct": 13,
+          "offScale": 3,
+          "values": [
+            1,
+            2,
+            4,
+            6,
+            8,
+            12,
+            16,
+            24,
+            32,
+            48,
+            64,
+            72,
+            120
+          ]
+        },
+        "radii": [
+          "999px",
+          "20px",
+          "8px"
+        ],
+        "shadows": 0,
+        "gradients": 4,
+        "backdropBlur": 0,
+        "transitions": 19,
+        "animatedElements": 0,
+        "cls": 0
+      },
+      "screenshots": [
+        "measure-taste-skill/tablet-fold.png",
+        "measure-taste-skill/tablet-page-01.png",
+        "measure-taste-skill/tablet-page-02.png",
+        "measure-taste-skill/tablet-page-03.png",
+        "measure-taste-skill/tablet-page-04.png",
+        "measure-taste-skill/tablet-page-05.png",
+        "measure-taste-skill/tablet-page-06.png"
+      ]
+    },
+    "mobile": {
+      "width": 390,
+      "pageHeight": 5908,
+      "findings": [
+        {
+          "severity": "FAIL",
+          "rule": "tap-target",
+          "message": "8 controls smaller than 24x24px on a phone",
+          "sample": [
+            "147x20 <a> \"Dapur Seimbang\"",
+            "13x13 <input> \"\"",
+            "13x13 <input> \"\"",
+            "150x20 <a> \"Dapur Seimbang\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "4 gradient backgrounds"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Figtree",
+            "share": 76
+          },
+          {
+            "family": "Bricolage Grotesque",
+            "share": 24
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "figtree",
+            "share": 76
+          },
+          {
+            "family": "bricolage grotesque",
+            "share": 24
+          }
+        ],
+        "fontSizes": [
+          40,
+          30,
+          28,
+          18,
+          17,
+          16,
+          14,
+          13
+        ],
+        "textColours": [
+          "#2a1d17",
+          "#ffffff",
+          "#65564c",
+          "#e5e1d8",
+          "#9e968e"
+        ],
+        "backgroundColours": [
+          "#e5e1d8",
+          "#456f3a",
+          "#d4cfc7",
+          "#2f5228",
+          "#2a1d17"
+        ],
+        "chromaticColours": 4,
+        "colourFamilies": 2,
+        "spacing": {
+          "distinct": 12,
+          "offScale": 3,
+          "values": [
+            1,
+            2,
+            4,
+            6,
+            8,
+            12,
+            16,
+            24,
+            32,
+            48,
+            96,
+            144
+          ]
+        },
+        "radii": [
+          "999px",
+          "20px",
+          "8px"
+        ],
+        "shadows": 0,
+        "gradients": 4,
+        "backdropBlur": 0,
+        "transitions": 19,
+        "animatedElements": 0,
+        "cls": 0.053
+      },
+      "screenshots": [
+        "measure-taste-skill/mobile-fold.png",
+        "measure-taste-skill/mobile-page-01.png",
+        "measure-taste-skill/mobile-page-02.png",
+        "measure-taste-skill/mobile-page-03.png",
+        "measure-taste-skill/mobile-page-04.png",
+        "measure-taste-skill/mobile-page-05.png",
+        "measure-taste-skill/mobile-page-06.png",
+        "measure-taste-skill/mobile-page-07.png"
+      ]
+    }
+  },
+  "checks": {
+    "reducedMotion": {
+      "findings": [],
+      "screenshot": "measure-taste-skill/reduced-motion-fold.png"
+    },
+    "noJavaScript": {
+      "findings": [],
+      "withJs": 1230,
+      "withoutJs": 1230
+    }
+  },
+  "summary": {
+    "fail": 1,
+    "warn": 0
+  },
+  "url": "http://127.0.0.1:33435/taste-skill/index.html",
+  "findings": [
+    {
+      "severity": "FAIL",
+      "rule": "tap-target",
+      "message": "8 controls smaller than 24x24px on a phone",
+      "sample": [
+        "147x20 <a> \"Dapur Seimbang\"",
+        "13x13 <input> \"\"",
+        "13x13 <input> \"\"",
+        "150x20 <a> \"Dapur Seimbang\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "gradient",
+      "message": "4 gradient backgrounds",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    }
+  ]
+}

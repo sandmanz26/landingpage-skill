@@ -1,0 +1,278 @@
+{
+  "url": "http://127.0.0.1:33077/taste-skill/index.html",
+  "time": "2026-11-06T00:06:52.347Z",
+  "sheets": {
+    "desktop": "measure-taste-skill/sheet-desktop.png",
+    "mobile": "measure-taste-skill/sheet-mobile.png",
+    "motion": "measure-taste-skill/motion-sheet.png"
+  },
+  "load": {
+    "status": 200,
+    "retries": 0,
+    "failed": false
+  },
+  "overlaysDismissed": [],
+  "outline": {
+    "title": "Dapur Seimbang: katering makan siang sehat untuk kantor di Jakarta Selatan",
+    "description": "Katering makan siang sehat yang diantar ke kantor di Jakarta Selatan, Senin sampai Jumat. Rp 45.000 per porsi, langganan minimal 5 hari, pesan lewat WhatsApp.",
+    "headings": [
+      "H1 2% Katering makan siang sehat untuk kantor",
+      "H2 19% Kotak makan siang yang lengkap",
+      "H2 36% Menu harian dalam empat bagian",
+      "H3 38% Nasi",
+      "H3 38% Lauk",
+      "H3 38% Sayur",
+      "H3 38% Buah",
+      "H2 52% Antar ke kantor di Jakarta Selatan",
+      "H2 69% Pesan langganan makan siang",
+      "H2 86% Makan siang sehat setiap hari kerja"
+    ],
+    "actions": [
+      {
+        "label": "Kotak",
+        "count": 2,
+        "firstAt": 0,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Menu",
+        "count": 2,
+        "firstAt": 0,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Antar",
+        "count": 2,
+        "firstAt": 0,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Berlangganan",
+        "count": 4,
+        "firstAt": 0,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Lihat menu",
+        "count": 1,
+        "firstAt": 4,
+        "firstScreen": true,
+        "sticky": false
+      },
+      {
+        "label": "0812-3456-7890",
+        "count": 1,
+        "firstAt": 95,
+        "firstScreen": false,
+        "sticky": false
+      }
+    ],
+    "prices": [
+      "Rp 45.000",
+      "Rp 225.000"
+    ],
+    "proofMentions": {},
+    "logoImages": 0,
+    "forms": 0,
+    "imagery": {
+      "photos": 5,
+      "illustrations": 3,
+      "videos": 0,
+      "rasterChecked": [
+        {
+          "src": "kotak-makan-lebar-nasi-merah.webp",
+          "cutout": true,
+          "flat": 0.51,
+          "drawn": true
+        },
+        {
+          "src": "kotak-makan-three-quarter-shirataki.webp",
+          "cutout": true,
+          "flat": 0.49,
+          "drawn": false
+        },
+        {
+          "src": "kotak-makan-detail-nasi-nasi-merah.webp",
+          "cutout": true,
+          "flat": 0.53,
+          "drawn": true
+        },
+        {
+          "src": "kotak-makan-detail-lauk-nasi-merah.webp",
+          "cutout": true,
+          "flat": 0.42,
+          "drawn": false
+        },
+        {
+          "src": "kotak-makan-detail-sayur-nasi-merah.webp",
+          "cutout": false,
+          "flat": 0.52,
+          "drawn": false
+        },
+        {
+          "src": "kotak-makan-detail-buah-nasi-merah.webp",
+          "cutout": true,
+          "flat": 0.42,
+          "drawn": false
+        },
+        {
+          "src": "kotak-makan-lebar-meja-nasi-merah.webp",
+          "cutout": true,
+          "flat": 0.58,
+          "drawn": true
+        },
+        {
+          "src": "kotak-makan-top-nasi-merah.webp",
+          "cutout": true,
+          "flat": 0.44,
+          "drawn": false
+        }
+      ]
+    },
+    "pageHeight": 5400
+  },
+  "motion": {
+    "libraries": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "splitText": false,
+      "lenis": false,
+      "locomotive": false,
+      "swiper": false,
+      "lottie": false,
+      "framerMotion": false,
+      "viewTransitions": false
+    },
+    "stickyPanels": [],
+    "maxRunning": 0,
+    "durationsMs": null,
+    "easings": [],
+    "properties": [],
+    "movingWithoutInput": 0,
+    "movingWithoutInputFurtherDown": [],
+    "scriptDrivenOnScroll": 0,
+    "infiniteLoops": 0,
+    "infiniteLoopsWithText": 0,
+    "pauseControl": false,
+    "steps": [
+      {
+        "y": 450,
+        "running": 0,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": []
+      },
+      {
+        "y": 900,
+        "running": 0,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": []
+      },
+      {
+        "y": 1350,
+        "running": 0,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": []
+      },
+      {
+        "y": 1800,
+        "running": 0,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": []
+      },
+      {
+        "y": 2250,
+        "running": 0,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": []
+      },
+      {
+        "y": 2700,
+        "running": 0,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": []
+      },
+      {
+        "y": 3150,
+        "running": 0,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": []
+      },
+      {
+        "y": 3600,
+        "running": 0,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": []
+      },
+      {
+        "y": 4050,
+        "running": 0,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": []
+      },
+      {
+        "y": 4500,
+        "running": 0,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": []
+      }
+    ]
+  },
+  "smoothness": {
+    "page": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 6605,
+      "frames": 192,
+      "fps": 29.1,
+      "medianMs": 16.7,
+      "p95Ms": 83.4,
+      "maxMs": 100,
+      "longFrames": 48,
+      "droppedShare": 26,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "baseline": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 1737,
+      "frames": 105,
+      "fps": 60.4,
+      "medianMs": 16.7,
+      "p95Ms": 16.8,
+      "maxMs": 17,
+      "longFrames": 0,
+      "droppedShare": 0,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "longFramesOverBaseline": 48,
+    "p95OverBaseline": 66.6
+  },
+  "reducedMotion": {
+    "movingWithoutInput": 0,
+    "movingOnScroll": 0,
+    "idleNavigation": null,
+    "loadFailed": false
+  },
+  "idleRunLoadFailed": false,
+  "idleNavigation": null
+}

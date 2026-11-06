@@ -1,0 +1,9 @@
+fit against ../../skill/design-director/team/visual-defaults.json:
+  MISS colour   want bold: 4+ flat colour families with roles · got 2 colour families (4 values), 4 gradients (team Prefer: bold flat colour)
+  MISS type     want display ÷ body ≥ 6 · got 72/16px = ×4.5
+  OK   imagery  want photo · got 5 photos, 3 illustrations, 0 videos
+  MISS motion   want story · got no library, 0 sticky panels, up to 0 moving on scroll
+  OK   fonts    want 2 type families or fewer · got figtree 76% + bricolage grotesque 24%
+  OK   always   want a price near the main action · got Rp 45.000, Rp 225.000
+
+3 target(s) missed: fix them, or give the reason in the critique's Fit section.

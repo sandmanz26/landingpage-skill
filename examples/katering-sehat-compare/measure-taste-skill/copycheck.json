@@ -1,0 +1,40 @@
+{
+  "target": "taste-skill/index.html",
+  "voice": null,
+  "time": "2026-11-06T00:07:50.531Z",
+  "stats": {
+    "headings": 9,
+    "paragraphs": 12,
+    "sentences": 14,
+    "words": 110,
+    "averageSentence": 7.9,
+    "longWordShare": 0
+  },
+  "skim": [
+    "  [Dapur Seimbang]",
+    "  [Berlangganan]",
+    "Katering makan siang sehat untuk kantor",
+    "  [Berlangganan]",
+    "  [Lihat menu]",
+    "Kotak makan siang yang lengkap",
+    "Menu harian dalam empat bagian",
+    "Nasi",
+    "Lauk",
+    "Sayur",
+    "Buah",
+    "Antar ke kantor di Jakarta Selatan",
+    "Pesan langganan makan siang",
+    "  [Berlangganan]"
+  ],
+  "findings": [
+    {
+      "severity": "WARN",
+      "rule": "no-voice",
+      "message": "No voice.md: the reader and the glossary are not written down (copy/method.md)"
+    }
+  ],
+  "summary": {
+    "fail": 0,
+    "warn": 1
+  }
+}
