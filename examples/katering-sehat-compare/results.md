@@ -12,3 +12,9 @@ Notes:
 - taste-skill's own checks after its run: check.mjs clean at 5 widths; consistency.mjs 111 checks with 4 FAIL left (section-air, split-pair, section-gaps, a placeholder flag on the owner's phone number); perf.mjs 4 FAIL (stills without width/height/lazy).
 - Fit is measured against the team defaults for all three. design-director turned its own imagery dial to illustration (no photos available) and passes 5 of 6 against its own targets.
 - Blind letters for the owner: lihat/mapping-3.json (open only after scoring).
+
+## Owner's blind verdict (2026-11-06, no numbers given)
+
+- P (no-skill): "transition animation-nya hidup" on first load; looks like no-skill and "AI slop". Guessed right.
+- Q (taste-skill): "tidak tahu tapi yang pasti fail". The owner first opened it from file://, where its module script and render specs cannot load, so the page showed no pictures; whether the verdict holds when served over http is not confirmed.
+- R (design-director): "terbaik", with two notes: no entrance/transition animation; from the WhatsApp section down it loses energy, "kaku dan sangat template". The second note matches juror r1 problem 3, which the builder fixed without a re-score: the fix did not land for the owner.
