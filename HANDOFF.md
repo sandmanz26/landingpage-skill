@@ -549,6 +549,13 @@ whether to build a realistic mock with sample data (marked as sample) or a label
   script (only the spec lines are checked; evidence.mjs measures loops and pause for the jurors);
   whether a message is "worth moving" is the model's judgment, not checkable.
 
+Team prompting guide deepened (2026-11-07, Claude Doc https://claude.ai/artifact/L4QfVHybTmdhTvg4KKhEVv):
+four new sections before "Prompt template": What designers most often miss (10 misses, cost, fix,
+from the three-way test and the reference batches), Give Claude what it cannot see (materials,
+reference intent feel/style/element, the reader), Beyond a tidy layout (prompt blocks for motion,
+brand elements, copy), Checklist before/after. The doc stays in English; the template block itself
+was not changed.
+
 ## 4. Decisions and why (do not undo without a reason)
 
 | Decision | Why |
