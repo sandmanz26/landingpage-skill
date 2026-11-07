@@ -3,7 +3,9 @@
 A page without pictures looks unfinished next to the references the team admires; every one of
 them is carried by photographs or illustration. Photographs are the key visual (team rule).
 
-1. **Find photographs first.** `node <skill>/scripts/photos.mjs search "<an item from the subject
+1. **Find photographs first**, by the path the user chose for stand-in pictures
+   (`rules/brief-interview.md` → No photos: stand-in pictures): links they pasted
+   (`photos.mjs get <unsplash link>`), or a search: `node <skill>/scripts/photos.mjs search "<an item from the subject
    inventory>" --sheet .design/photos/sheet.png`, look at the sheet, then `photos.mjs get <ref>`.
    Search the subject's world, not the category: "tennis ball on clay court", "coach with
    walkie-talkie at a wedding venue", not "happy people". Avoid posed stock smiles. Credits go to

@@ -556,6 +556,33 @@ reference intent feel/style/element, the reader), Beyond a tidy layout (prompt b
 brand elements, copy), Checklist before/after. The doc stays in English; the template block itself
 was not changed.
 
+**2026-11-07: stand-in pictures and the admin component library (owner).**
+- Pictures: `rules/brief-interview.md` §Materials → "No photos: stand-in pictures" (the one home):
+  with no photos, ask (four-part form) whether stand-ins are needed; three paths with examples:
+  (a) user pastes Unsplash links, no key; (b) `photos.mjs search` with the user's free Access Key
+  (sign-up → developers → Register as a developer → oauth/applications → New Application → accept
+  guidelines → copy the Access Key, never the Secret; demo ~50 req/h; store as `UNSPLASH_ACCESS_KEY`
+  in the shell profile or the cloud environment's settings, never in chat or a commit); (c) drawn
+  or labelled placeholders with the shot list. "Percayakan ke AI" → (b) with a key, else (c).
+  `photos.mjs get <link>` (new `scripts/lib/unsplash-link.mjs`): `images.unsplash.com` downloads
+  without a key, credit "photographer unknown" + a note how to fix (`--by`, `--page`);
+  `unsplash.com/photos/…` uses the API with a key; without one it asks for the image address
+  (the coordinator removed the agent's page-reading fallback: scraping unsplash.com is against its
+  terms and bot-blocked); `plus.unsplash.com` refused. Tested live: an images link
+  downloaded; a page link was refused as expected. Selftests: URL parsing, credit record, CLI with a
+  mocked fetch (no network).
+- Admin: new `rules/stack.md` (no file owned stack decisions; the brief's `Stack:` line points
+  here): admin panel / dashboard / back office with no agreed library → shadcn/ui (React +
+  Tailwind), told to the user with the reason; referenced from SKILL.md (mode step, Files table),
+  `modes/app-screen.md`, `modes/create.md` (brief template `Component library:`). `done brief`
+  refuses an admin `What:` line without `Component library:`, refuses a non-shadcn library not
+  marked agreed, and logs `component-library default: shadcn/ui …` to decisions.log. Selftest added.
+- Not verified: admin detection is a word match on the brief's `What:` line (admin, back office,
+  dashboard, dasbor; a landing/marketing page about a dashboard is excluded), so a brief worded
+  otherwise escapes the check; whether the user was actually told is not checkable; the Unsplash
+  page path without a key could not be tested live (bot wall); the build itself is not checked for
+  shadcn/ui use.
+
 ## 4. Decisions and why (do not undo without a reason)
 
 | Decision | Why |

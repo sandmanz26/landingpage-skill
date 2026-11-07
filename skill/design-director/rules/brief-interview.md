@@ -52,9 +52,51 @@ in the four-part form above (plain question, what it changes, an example, a reco
 
 | Material | Ask, in plain words, with an example | When it is missing |
 | --- | --- | --- |
-| **Photos** of the real place, people, product, work | "Ada foto asli tempat, tim, atau produk Anda? Foto asli membuat halaman terasa milik Anda, bukan template. Contoh: foto dapur saat menyiapkan katering, 5-10 foto dari HP sudah cukup." | Look for licensed photographs of the subject's world with `photos.mjs`, then a connected image-generation tool, then draw (`rules/illustration.md`). **If no image-generation tool is connected and `photos.mjs` finds nothing usable, tell the user at the start**: "Gambar di halaman ini akan berupa ilustrasi/dummy dulu, karena tidak ada foto dan tidak ada alat pembuat gambar yang terhubung", and repeat it in the deliver report with the shot list. Owner: "jika user tidak link ke mcp yang bisa generate image maka kita sampaikan bahwa kita menggunakan dummy dulu." |
+| **Photos** of the real place, people, product, work | "Ada foto asli tempat, tim, atau produk Anda? Foto asli membuat halaman terasa milik Anda, bukan template. Contoh: foto dapur saat menyiapkan katering, 5-10 foto dari HP sudah cukup." | Ask whether stand-in pictures are needed and offer the three paths in **No photos: stand-in pictures** below; then a connected image-generation tool, then draw (`rules/illustration.md`). **If no image-generation tool is connected and `photos.mjs` finds nothing usable, tell the user at the start**: "Gambar di halaman ini akan berupa ilustrasi/dummy dulu, karena tidak ada foto dan tidak ada alat pembuat gambar yang terhubung", and repeat it in the deliver report with the shot list. Owner: "jika user tidak link ke mcp yang bisa generate image maka kita sampaikan bahwa kita menggunakan dummy dulu." |
 | **Product UI**: screenshots, a Figma link, a screen recording (only when the product is software or has an app) | "Ada tangkapan layar atau file Figma dari aplikasi Anda? Calon pelanggan ingin melihat produknya sebelum mendaftar. Contoh: layar dasbor, layar pemesanan, tampilan di HP." | Follow up once. If there is still no interface, ask: "Belum ada tampilan aplikasinya. Mau saya buatkan **tiruan yang realistis dengan data contoh** (terlihat seperti aplikasi sungguhan, ditandai sebagai contoh, Anda ganti nanti) atau **placeholder berlabel** saja (kotak bertulisan 'tampilan aplikasi')? Rekomendasi: tiruan, karena pelanggan menilai dari produknya. Atau percayakan ke AI." **"Percayakan ke AI" chooses the mock.** The mock is built from the product's real features, every sample element carries `data-sample` (`inspect.mjs` reports INFO `sample-ui`), its numbers are never presented as customer results (SKILL.md: proof is never sampled), and it is listed in the deliver report. A placeholder is a labelled box with the shot needed. Owner: "follow up user untuk minta; jika belum ada interface tanya apakah perlu dibuatkan dummy atau placeholder saja." |
 | **Brand assets**: logo, colours, fonts, a brand book | "Ada logo atau warna resmi? Kalau ada, halaman memakai itu; kalau belum, saya buatkan logo sementara dari nama Anda. Contoh: file logo PNG/SVG, kode warna dari desainer, atau foto papan nama toko." | A short brand kit at the direction step and a placeholder wordmark (`brand/method.md` §9), listed in the deliver report. |
+
+### No photos: stand-in pictures (owner, 2026-11-07)
+
+When the user has no photos, ask in the four-part form whether they want stand-in (dummy) pictures
+until theirs exist, and if yes offer three paths, each with an example:
+
+> "Belum ada foto asli. Mau saya pakaikan **gambar pengganti** dulu sampai foto Anda siap? Ini
+> menentukan apakah halaman terlihat hidup sekarang atau masih kotak kosong. Ada tiga cara:
+> **(a) Anda pilih sendiri di unsplash.com** lalu tempel link fotonya di sini, tanpa daftar apa pun
+> (contoh: cari "dapur katering", klik foto, klik kanan → *Copy image address*, tempel
+> `https://images.unsplash.com/photo-…`);
+> **(b) saya cari otomatis** di Unsplash, butuh *Access Key* gratis dari Anda (langkahnya di bawah;
+> contoh: saya cari "nasi kotak di meja kantor" dan kirim lembar pilihan 8 foto);
+> **(c) ilustrasi gambar atau kotak berlabel** dengan daftar foto yang perlu Anda ambil (contoh:
+> gambar datar papan rundown dan walkie-talkie, atau kotak bertulisan "foto tim di dapur, horizontal").
+> Rekomendasi: (a) kalau Anda sempat memilih 5 menit, karena Anda yang paling tahu rasanya. Atau
+> percayakan ke AI."
+
+- **(a) Pasted links, no key.** `photos.mjs get <link>` takes an `images.unsplash.com/…` link (the
+  image loads without a key) or an `unsplash.com/photos/…` page link (needs the key, or a page
+  that answers; often bot-blocked, then ask for the image address). Credit the photographer:
+  `credits.json` records the name when the link allows and says "photographer unknown" with how to
+  fix it when it does not (`--by "<name>" --page <photo page link>`); ask the user for the page link
+  or the name. `plus.unsplash.com` (Unsplash+) is a paid licence: refused.
+- **(b) Automatic search, free Unsplash Access Key.** Give the user these steps:
+  1. Sign up at unsplash.com/join.
+  2. Open unsplash.com/developers and click **Register as a developer**.
+  3. Go to unsplash.com/oauth/applications → **New Application**, accept the API guidelines, give
+     it a name.
+  4. Copy the **Access Key** only, never the **Secret Key**. A new app runs in demo mode: about 50
+     requests per hour, enough for one project.
+  5. Store it as the environment variable `UNSPLASH_ACCESS_KEY`: locally in the shell profile
+     (`export UNSPLASH_ACCESS_KEY=…` in `~/.zshrc` or `~/.bashrc`, then a new terminal), in a cloud
+     session in the environment's settings (secrets / environment variables). **Never paste it into
+     the chat and never commit it into the skill or the project.**
+  Then `photos.mjs search "<subject>" --sheet .design/photos/sheet.png`, show the sheet, `get` the
+  chosen ones (`rules/illustration.md` step 1).
+- **(c) Drawn illustration or labelled placeholders**, with the shot list (`rules/illustration.md`).
+
+**"Percayakan ke AI"** → (b) when `UNSPLASH_ACCESS_KEY` is set, else (c). Every stand-in is listed
+in the deliver report with the shot list; a found photograph is never presented as the client's own.
+If the user says no stand-ins are needed, the plan is (c) placeholders in drafts only.
 
 Research materials (old copy, brochures, chat exports, reviews) are asked for as in
 `modes/create.md` step 1 and recorded in the same section. A `section` run skips this: it works
@@ -67,7 +109,7 @@ when there is no product UI):
 ```markdown
 ## Materials
 | Material | What exists | Plan |
-| Photos | none | photos.mjs: 0 usable; no image tool → drawn and dummy pictures, user told at the start; shot list at delivery |
+| Photos | none | stand-ins wanted: (a) user pastes 6 Unsplash links → photos.mjs get, credits; else (c) drawn and dummy pictures, user told at the start; shot list at delivery |
 | Product UI | none after a follow-up | user: "percayakan ke AI" → realistic mock with sample data (data-sample) |
 | Brand assets | no logo; colours free | short brand kit, placeholder wordmark |
 | Image tool | none connected | - |

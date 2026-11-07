@@ -5,15 +5,19 @@
 //   node photos.mjs search "<query>" [--provider unsplash|openverse|commons|all] [--n 8]
 //        [--orientation landscape|portrait|squarish] [--sheet .design/photos/sheet.png]
 //   node photos.mjs get <provider:id> [--to assets/photos] [--width 1600]
+//   node photos.mjs get <pasted Unsplash link> [--by "<photographer>"] [--page <photo page link>]
+//        a photo the user picked on unsplash.com: an images.unsplash.com link loads without a key;
+//        an unsplash.com/photos/… link needs the key (full credit); without one it asks for the image link
 //   node photos.mjs credits [--html]
 //
-// Unsplash needs a free access key (unsplash.com/developers) in UNSPLASH_ACCESS_KEY; never commit
-// it. Openverse and Wikimedia Commons need none. Behind a proxy, run node with NODE_USE_ENV_PROXY=1.
+// Unsplash search needs a free access key (unsplash.com/developers) in UNSPLASH_ACCESS_KEY; never
+// commit it or paste it into a chat (rules/brief-interview.md → Materials has the steps). Openverse and Wikimedia Commons need none. Behind a proxy, run node with NODE_USE_ENV_PROXY=1.
 // A found photograph shows the subject's world; it is never presented as the client's own people,
 // place or product (rules/copyright.md, rules/illustration.md).
 import fs from 'node:fs';
 import path from 'node:path';
 import { launch, parseArgs } from './lib/browser.mjs';
+import { parseUnsplashLink, sizedImageUrl, linkCredit } from './lib/unsplash-link.mjs';
 
 const args = parseArgs(process.argv.slice(2));
 const [cmd, arg] = args._;
@@ -104,6 +108,55 @@ async function contactSheet(items, out) {
   await browser.close();
 }
 
+// A photo the user picked on unsplash.com and pasted (rules/brief-interview.md → Materials, path a).
+async function getLink(link) {
+  const L = parseUnsplashLink(link);
+  if (!L) {
+    console.error(`${link} is not an Unsplash photo link: paste an images.unsplash.com/… or unsplash.com/photos/… link.`);
+    process.exit(2);
+  }
+  if (L.kind === 'plus') {
+    console.error('plus.unsplash.com is Unsplash+ (a paid licence): pick a free photo instead.');
+    process.exit(2);
+  }
+  let imageUrl = L.kind === 'image' ? L.imageUrl : '';
+  let pageUrl = args.page || (L.kind === 'page' ? L.pageUrl : '');
+  let creator = args.by || '';
+  let creatorUrl = '';
+  let title = '';
+  let ref = L.kind === 'image' ? `unsplash-img:${L.key}` : `unsplash:${L.id}`;
+  if (L.kind === 'page' && KEY) {
+    const p = await getJSON(`https://api.unsplash.com/photos/${L.id}`, { Authorization: `Client-ID ${KEY}`, 'Accept-Version': 'v1' });
+    imageUrl = String(p.urls.raw).split('?')[0];
+    creator = creator || p.user.name;
+    creatorUrl = `${p.user.links.html}?utm_source=${APP}&utm_medium=referral`;
+    pageUrl = `${p.links.html}?utm_source=${APP}&utm_medium=referral`;
+    title = p.alt_description || p.description || '';
+    await fetch(p.links.download_location, { headers: { ...UA, Authorization: `Client-ID ${KEY}` } }).catch(() => {});
+  } else if (L.kind === 'page') {
+    // Without a key the photo page is not read: scraping unsplash.com is against its terms (and bot-blocked).
+    console.error('An unsplash.com/photos/… link needs UNSPLASH_ACCESS_KEY for its credit. Without a key: open the photo, right-click it → "Copy image address", and paste that images.unsplash.com link with --by "<photographer>" --page <this link>.');
+    process.exit(1);
+  }
+  const to = path.resolve(args.to || 'assets/photos');
+  fs.mkdirSync(to, { recursive: true });
+  const r = await fetch(sizedImageUrl(imageUrl, args.width), { headers: UA }).catch((e) => ({ ok: false, status: e.message }));
+  const type = (r.ok && r.headers.get('content-type')) || '';
+  if (!r.ok || !/^image\//.test(type)) {
+    console.error(`Download failed: ${r.status} ${type}`.trim());
+    process.exit(1);
+  }
+  const ext = /png/.test(type) ? 'png' : /webp/.test(type) ? 'webp' : 'jpg';
+  const file = path.join(to, `${ref.replace(':', '-')}.${ext}`);
+  fs.writeFileSync(file, Buffer.from(await r.arrayBuffer()));
+  const rec = linkCredit({ ref, file: path.relative(process.cwd(), file), imageUrl, pageUrl, creator, creatorUrl, title: strip(title) });
+  fs.mkdirSync(DIR, { recursive: true });
+  const credits = loadCredits().filter((c) => c.ref !== ref);
+  credits.push(rec);
+  fs.writeFileSync(CREDITS, JSON.stringify(credits, null, 2));
+  console.log(`saved ${rec.file} (${Math.round(fs.statSync(file).size / 1024)} KB); credit: ${rec.credit}${rec.note ? `\n${rec.note}` : ''}`);
+}
+
 const loadCredits = () => (fs.existsSync(CREDITS) ? JSON.parse(fs.readFileSync(CREDITS, 'utf8')) : []);
 
 if (cmd === 'search') {
@@ -136,6 +189,8 @@ if (cmd === 'search') {
     console.log(`sheet: ${args.sheet} (look before choosing)`);
   }
   if (!all.length) process.exit(1);
+} else if (cmd === 'get' && /^https?:\/\//i.test(arg || '')) {
+  await getLink(arg);
 } else if (cmd === 'get') {
   const last = fs.existsSync(LAST) ? JSON.parse(fs.readFileSync(LAST, 'utf8')) : { results: [] };
   const item = last.results.find((x) => x.ref === arg);
@@ -172,6 +227,6 @@ if (cmd === 'search') {
   if (args.html) console.log(credits.map((c) => `<a href="${c.source}">${c.credit}</a>`).join(' · '));
   else for (const c of credits) console.log(`${c.credit} · ${c.source} · ${c.file}`);
 } else {
-  console.error('Usage: node photos.mjs search "<query>" | get <provider:id> | credits [--html]');
+  console.error('Usage: node photos.mjs search "<query>" | get <provider:id or Unsplash link> | credits [--html]');
   process.exit(2);
 }

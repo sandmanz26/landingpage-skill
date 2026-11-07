@@ -544,6 +544,35 @@ const check = (name, ok, detail = '') => {
   check('inspect reports data-sample elements as INFO sample-ui', rep.findings.some((f) => f.rule === 'sample-ui' && f.severity === 'INFO'), rep.findings.map((f) => f.rule).join(', '));
 }
 
+// an admin request names its component library; the shadcn/ui default is logged (rules/stack.md)
+{
+  const proj = path.join(tmp, 'stack');
+  fs.mkdirSync(proj);
+  const d = path.join(proj, '.design');
+  const p = (...a) => run('progress.mjs', a, proj);
+  p('init', '--mode', 'create', '--effort', 'quick', '--gates', 'autopilot');
+  p('approve', 'brief');
+  const brief = (what, lib) => fs.writeFileSync(path.join(d, 'brief.md'), BRIEF.replace('- What: test', `- What: ${what}${lib ? `\n- Component library: ${lib}` : ''}`));
+  brief('landing page for an analytics dashboard product');
+  const page = p('done', 'brief');
+  p('back', 'brief', '--reason', 'test');
+  p('approve', 'brief');
+  brief('admin panel for orders and stock');
+  const noLib = p('done', 'brief');
+  brief('admin panel for orders and stock', 'MUI because it looks nice');
+  const unagreed = p('done', 'brief');
+  brief('admin panel for orders and stock', 'shadcn/ui (React + Tailwind), default: none agreed; told the user');
+  const dflt = p('done', 'brief');
+  const logged = fs.readFileSync(path.join(d, 'decisions.log'), 'utf8');
+  p('back', 'brief', '--reason', 'user chose MUI');
+  p('approve', 'brief');
+  brief('panel admin pesanan', 'MUI (the user\'s design system, agreed 2026-11-07)');
+  const agreed = p('done', 'brief');
+  check('progress wants an admin brief to name its component library, shadcn/ui unless the user agreed another, and logs the default',
+    page.status === 0 && noLib.status !== 0 && /Component library/.test(noLib.stderr) && unagreed.status !== 0 && /agreement/.test(unagreed.stderr) && dflt.status === 0 && /component-library default: shadcn\/ui/.test(logged) && agreed.status === 0,
+    [page, noLib, unagreed, dflt, agreed].map((r) => r.stderr).join(' | '));
+}
+
 // photos: credits and a clear refusal without a search
 {
   const proj = path.join(tmp, 'photos');
@@ -551,6 +580,42 @@ const check = (name, ok, detail = '') => {
   const none = run('photos.mjs', ['credits'], proj);
   const get = run('photos.mjs', ['get', 'unsplash:abc'], proj);
   check('photos keeps credits and refuses a download it has not searched', /No photographs recorded/.test(none.stdout) && get.status === 2 && /search first/.test(get.stderr), none.stdout + get.stderr);
+}
+
+// photos: a pasted Unsplash link, parsed and credited; fetch is mocked, no network
+{
+  const { parseUnsplashLink, linkCredit } = await import(path.join(here, 'lib/unsplash-link.mjs'));
+  const img = parseUnsplashLink('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?ixlib=rb-4.0.3&w=800');
+  const pg = parseUnsplashLink('https://unsplash.com/photos/a-close-up-of-a-flower-W9dLVt7Y0FU?utm_source=x');
+  const old = parseUnsplashLink('https://unsplash.com/photos/W9dLVt7Y0FU');
+  const loc = parseUnsplashLink('https://unsplash.com/de/fotos/eine-blume-W9dLVt7Y0FU');
+  check('photos parses image links, photo pages (new, old, localised) and refuses Unsplash+ and other sites',
+    img.kind === 'image' && img.key === 'photo-1500530855697-b586d89ba3ee' && pg.kind === 'page' && pg.id === 'W9dLVt7Y0FU' && old.id === 'W9dLVt7Y0FU' && loc.id === 'W9dLVt7Y0FU' &&
+      parseUnsplashLink('https://plus.unsplash.com/premium_photo-1').kind === 'plus' && parseUnsplashLink('https://example.com/photos/x') === null && parseUnsplashLink('not a link') === null,
+    JSON.stringify([img, pg, old, loc]));
+  const unknown = linkCredit({ ref: 'unsplash-img:photo-1', file: 'a.jpg', imageUrl: 'https://images.unsplash.com/photo-1' });
+  const known = linkCredit({ ref: 'unsplash:W9dLVt7Y0FU', file: 'b.jpg', imageUrl: 'https://images.unsplash.com/photo-2', pageUrl: 'https://unsplash.com/photos/W9dLVt7Y0FU', creator: 'Rina Putri' });
+  check('photos records "photographer unknown" for an image link and the name when it is given',
+    unknown.creator === 'unknown' && unknown.creatorKnown === false && /unknown/.test(unknown.credit) && /--by/.test(unknown.note) && known.credit === 'Photo by Rina Putri on Unsplash' && !known.note,
+    JSON.stringify([unknown, known]));
+  // The CLI with fetch replaced: images answer a tiny JPEG, a photo page answers HTML (or a bot wall).
+  const mock = path.join(tmp, 'fetch-mock.mjs');
+  fs.writeFileSync(mock, `globalThis.fetch = async (u) => {
+  u = String(u);
+  if (u.startsWith('https://images.unsplash.com/')) return new Response(new Uint8Array([255, 216, 255, 224, 0, 16]), { headers: { 'content-type': 'image/jpeg' } });
+  throw new Error('unexpected fetch ' + u);
+};\n`);
+  const proj = path.join(tmp, 'photos-link');
+  fs.mkdirSync(proj);
+  const cli = (env, ...a) => spawnSync(process.execPath, ['--import', mock, path.join(here, 'photos.mjs'), ...a], { cwd: proj, encoding: 'utf8', env: { ...process.env, UNSPLASH_ACCESS_KEY: '', ...env } });
+  const a = cli({}, 'get', 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800');
+  const b = cli({}, 'get', 'https://images.unsplash.com/photo-2?w=800', '--by', 'Rina Putri', '--page', 'https://unsplash.com/photos/a-flower-W9dLVt7Y0FU');
+  const c = cli({}, 'get', 'https://unsplash.com/photos/a-flower-W9dLVt7Y0FU');
+  const credits = fs.existsSync(path.join(proj, '.design/photos/credits.json')) ? JSON.parse(fs.readFileSync(path.join(proj, '.design/photos/credits.json'), 'utf8')) : [];
+  check('photos downloads a pasted image link without a key and writes its credit; a photo page without a key asks for the image address (never scraped)',
+    a.status === 0 && b.status === 0 && credits.length === 2 && credits.some((x) => x.creator === 'unknown' && x.note) && credits.some((x) => x.credit === 'Photo by Rina Putri on Unsplash') &&
+      c.status === 1 && /Copy image address/.test(c.stderr),
+    [a, b, c].map((r) => r.stdout + r.stderr).join(' | '));
 }
 
 // draw

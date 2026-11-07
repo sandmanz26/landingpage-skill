@@ -62,7 +62,9 @@ means three things at once: it serves the business, it answers the customer, and
    | `brand` | A brand kit (elements, colours, type, shape, motion, a placeholder wordmark) shown on a board, before or without a page | `modes/brand.md` |
 
    Add `modes/app-screen.md` on top when the screen is worked in (dashboard, admin, settings,
-   inbox, editor) rather than read.
+   inbox, editor) rather than read. An admin panel, dashboard or back office with no agreed design
+   system or component library is built with shadcn/ui (React + Tailwind) until the user approves
+   another; tell them why (`rules/stack.md`).
 
 2. **Effort.** `quick` for a section or a small fix, `standard` for a page (default), `thorough` for a
    pitch, a flagship page or a whole site (best-of-3 on every key section). Subagent budget per run
@@ -84,9 +86,10 @@ means three things at once: it serves the business, it answers the customer, and
 4. **Guide, then let the user choose early.** Before research, help the user say what they want
    in one short message (`rules/brief-interview.md`): who and what for, 1–3 sites they like and 1
    they do not (turned into dials by `dials.mjs`), three feeling words, what exists (photos, product
-   UI, brand assets: `rules/brief-interview.md` → Materials), what is ruled out. When no image tool
-   is connected and no photographs are found, say at once that the pictures will be drawn or
-   dummies. At the direction gate the user picks from first-screen sketches of each direction; that
+   UI, brand assets: `rules/brief-interview.md` → Materials), what is ruled out. With no photos,
+   ask whether stand-in pictures are needed and offer the three paths (pasted Unsplash links, search
+   with the user's free Access Key, drawn or placeholders). When no image tool is connected and no
+   photographs are found, say at once that the pictures will be drawn or dummies. At the direction gate the user picks from first-screen sketches of each direction; that
    choice sets the composition, so standard effort needs no hero best-of-3. Full-page variants (2–3 whole
    pages, `--variants`) are for thorough effort or when the user asks; the user chooses on
    `compare.mjs` (`--choose user`), the jury only in autopilot.
@@ -200,9 +203,10 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 | `rubric/critic.md` | Briefing the critic subagent; the critique format every juror uses |
 | `rubric/jury.md` | The look step and best-of-N at standard effort and above; judging references |
 | `library/intake.md` | When the team sends references with their notes |
-| `rules/brief-interview.md` | Every question to the user (plain words, what it changes, an example per choice, a recommendation, "percayakan ke AI"); the brief step: the one guiding message, the materials (photos, product UI, brand assets; mock or placeholder for missing UI; telling the user about dummy pictures), liked sites into dials, sketches at the direction gate |
+| `rules/brief-interview.md` | Every question to the user (plain words, what it changes, an example per choice, a recommendation, "percayakan ke AI"); the brief step: the one guiding message, the materials (photos, product UI, brand assets; mock or placeholder for missing UI; telling the user about dummy pictures; with no photos, the three stand-in paths and the Unsplash Access Key steps), liked sites into dials, sketches at the direction gate |
+| `rules/stack.md` | The brief step: the stack and component library; an admin panel, dashboard or back office defaults to shadcn/ui (React + Tailwind) until the user agrees another |
 | `rules/visual-dials.md` | The direction gate: the dials, presets from the library, how to guide the user |
-| `rules/illustration.md` | Writing the spec when the client has no pictures: drawing flat illustration, the shot list |
+| `rules/illustration.md` | Writing the spec when the client has no pictures: photographs by the chosen stand-in path, drawing flat illustration, the shot list |
 | `library/index.json` (via `library.mjs find`) | The direction step: the team's judged references with their style cards; adapt each to the client or ask (`modes/create.md`) |
 | `team/taste.md`, `brands/`, `designers/` | At the start, if present |
 
@@ -210,7 +214,7 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 
 | Command | Does |
 | --- | --- |
-| `progress.mjs init / check / done / approve / back / skip / log / status` | Order of steps, gates, turn back; content checks per step (brief Materials, spec Interactions and Motion spec, deliver.md, …) |
+| `progress.mjs init / check / done / approve / back / skip / log / status` | Order of steps, gates, turn back; content checks per step (brief Materials, an admin brief's Component library with the shadcn/ui default logged, spec Interactions and Motion spec, deliver.md, …) |
 | `brandboard.mjs <brand-kit.json or directions.json> [--out .design/brand] [--no-pdf]` | The brand board: palette with roles and contrast pairs, type, shape and motion, elements, the placeholder wordmark, the brand in use (web hero, price card, social post); `board.html` and `board.pdf` |
 | `draw.mjs --sector <s> [--tone <t>] [--have a,b] [--options 3]` | Deals directions into `.design/directions/` (`--list sectors`) |
 | `inspect.mjs <url or file> [--out dir] [--allow rule]` | Real-browser check at 1440/768/390, screenshots, design inventory; INFO `placeholder-logo` and `sample-ui` (`data-sample`) for the deliver report |
@@ -223,7 +227,7 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 | `capture.mjs <list.txt> [--jobs 3]` | Runs inspect, evidence, digest and style for a whole batch in parallel |
 | `dials.mjs suggest <liked dirs> [--dislike dirs]` | Sites the user likes and dislikes → suggested dials, with where they agree and what to avoid |
 | `compare.mjs <v1.html> <v2.html> … [--labels a,b] [--blind]` | A page for the user to compare variants side by side at desktop or phone width, score them and copy a reply |
-| `photos.mjs search "<query>" [--sheet f.png]` / `get <ref>` / `credits` | Licensed photographs of the subject's world (Unsplash with `UNSPLASH_ACCESS_KEY`, Openverse, Wikimedia Commons), downloaded with their credits |
+| `photos.mjs search "<query>" [--sheet f.png]` / `get <ref or Unsplash link> [--by name --page link]` / `credits` | Licensed photographs of the subject's world (Unsplash with `UNSPLASH_ACCESS_KEY`, Openverse, Wikimedia Commons), downloaded with their credits; a pasted `images.unsplash.com` link loads without a key, credited "photographer unknown" until the name is given |
 | `fit.mjs <inspect dir> [--targets .design/targets.json]` | The built page against the chosen dials and the team's taste; misses need a fix or a reason |
 | `style.mjs <dir>` | Style card of a captured reference: palette, type, shape, motion, tags, do-not-copy |
 | `library.mjs build` / `groups` / `find <words> --tags a,b` | Builds `library/index.json` from judged batches, grouping every reference by sector and by style on its own; finds the closest references with their style |

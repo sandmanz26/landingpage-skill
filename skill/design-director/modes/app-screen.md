@@ -3,6 +3,10 @@
 Use on top of a mode when the screen is worked in (dashboard, admin, analytics, settings, billing,
 inbox, editor) rather than read and scrolled. Different rules apply:
 
+- **Component library:** with no design system or library agreed, build with shadcn/ui (React +
+  Tailwind) until the user approves another, and tell them why; the brief records it on a
+  `Component library:` line (`rules/stack.md`, checked by `progress.mjs done brief`). An existing
+  project keeps its own (`modes/improve.md`).
 - **Allowed here:** quiet 1px borders, small labels, tables, repeated panels, tabular figures,
   monospace for real code or IDs. They help people scan and work.
 - **Priorities:** hierarchy of the task (what the user does most), alignment, density that fits the

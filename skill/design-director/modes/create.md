@@ -14,7 +14,8 @@ Read the request and the project. Find out what is real:
 - **the imagery that truly exists**: their photos, product shots, a real interface, an image tool
   you can call, or nothing; ask for photos, product UI and brand assets as in
   `rules/brief-interview.md` → Materials, and say at once when pictures will be drawn or dummies;
-- brand constraints (colours, fonts, logo) and the stack;
+- brand constraints (colours, fonts, logo) and the stack (`rules/stack.md`; an admin panel or
+  dashboard with no agreed library uses shadcn/ui, and the user is told why);
 - **materials to research from**: existing copy, the old site, brochures, chat exports, reviews,
   sales notes. Ask for them once if none were given; they are the best source of the customer's
   real voice.
@@ -30,6 +31,7 @@ Write `.design/brief.md`:
 - Brand: <fixed colours/fonts, or "free">
 - Avoid: <what the user or the brand rules out>
 - Stack: <static HTML / Next / Astro / ...>
+- Component library: <only for an admin panel, dashboard or back office: shadcn/ui default or the agreed one (rules/stack.md)>
 - My reading: <one line on anything unclear>
 
 ## Materials

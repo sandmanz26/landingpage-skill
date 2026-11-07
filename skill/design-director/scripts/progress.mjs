@@ -118,6 +118,10 @@ const lineValue = (text, key) => {
   const m = text.match(new RegExp(`^\\s*(?:[-*]\\s*)?\\**(?:${key})\\**\\s*:\\s*(.*)$`, 'im'));
   return m ? m[1].trim() : null;
 };
+// An admin request on the brief's What line (rules/stack.md); a page about a dashboard product is not one.
+const ADMIN = /\b(admin|back[- ]?office|backoffice|dashboard|dasbor)\b/i;
+const NOT_ADMIN = /\b(landing|marketing|website|situs|company profile|profil perusahaan)\b/i;
+const AGREED = /\b(agreed|approved|disetujui|setuju|the user'?s|milik (user|pengguna|klien)|existing|sudah ada|design system)\b/i;
 const NONE_FOUND = /^\(?(none found|tidak ditemukan|belum ditemukan)/i;
 
 // The motion spec names the message and its signature motion, the entrance and the state
@@ -335,6 +339,18 @@ switch (cmd) {
       if (!mat) fail('brief.md needs a "## Materials" section: photos, product UI (or n/a) and brand assets, what exists and the plan for what is missing (rules/brief-interview.md → Materials).');
       const absent = [['photos', /photo|foto/i], ['product UI', /\bui\b|interface|antarmuka|screenshot|figma/i], ['brand assets', /brand|logo/i]].filter(([, re]) => !re.test(mat)).map(([n]) => n);
       if (absent.length) fail(`brief.md "## Materials" does not record ${absent.join(', ')}: ask for each (plain question, what it changes, an example) and write what exists and the plan (rules/brief-interview.md → Materials).`);
+    }
+    if (step === 'brief') {
+      // Admin panels, dashboards, back offices name their component library; the default is shadcn/ui (rules/stack.md).
+      const brief = readDesign('brief.md');
+      const what = lineValue(brief, 'What|Apa') || '';
+      const lib = lineValue(brief, 'Component library|Library komponen|Pustaka komponen');
+      if (ADMIN.test(what) && !NOT_ADMIN.test(what) && !lib)
+        fail('brief.md asks for an admin panel, dashboard or back office: add a "- Component library:" line. With none agreed, use shadcn/ui (React + Tailwind) as the default and tell the user why (rules/stack.md).');
+      if (lib && !/shadcn/i.test(lib) && !AGREED.test(lib))
+        fail(`brief.md "Component library: ${lib}": a library other than the shadcn/ui default needs the user's agreement on that line ("agreed", "the user's design system", "existing") (rules/stack.md).`);
+      if (lib && /shadcn/i.test(lib) && /default|bawaan/i.test(lib) && !(fs.existsSync(LOG) && /component-library default/i.test(fs.readFileSync(LOG, 'utf8'))))
+        log('decision step=brief by=claude component-library default: shadcn/ui (React + Tailwind) until the user approves another; consistent, accessible components, fast to build, restyled with tokens (rules/stack.md)');
     }
     if (step === 'spec' && PAGE_MODES.includes(s.mode)) {
       const probs = motionProblems(readDesign('spec.md'));
