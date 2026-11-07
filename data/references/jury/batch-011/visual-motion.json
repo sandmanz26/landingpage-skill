@@ -1,0 +1,57 @@
+{
+  "juror": "visual-motion",
+  "kind": "ai",
+  "method": "Evidence packs only, no browser and no code: ref-0017 digest.md, desktop-fold.png, sheet-desktop.png, motion-sheet.png, mobile-fold.png, sheet-mobile.png; ref-0017-demo digest.md. Motion is judged from 10 still frames (load 0-2000 ms, scroll 450-4050 px) plus the measured counts, so timing, easing and loop behaviour were not seen. Not verified: what the Structure and Leverage steps show when selected, whether the 52 never-visible elements are hidden carousel or tab states or a broken reveal, and the demo page visuals (its sheet-desktop.png was not opened).",
+  "refs": {
+    "ref-0017": {
+      "business": "Bipsync: research and knowledge management SaaS for institutional investors (asset managers, asset owners, consultants). The conversion is a sales-led 'Get a demo' form (1 form on /book-a-demo/, discovery call then tailored walkthrough).",
+      "scores": { "clarity": 6, "distinctiveness": 6, "craft": 5 },
+      "reasons": {
+        "clarity": "The H1 states the outcome ('Turn fragmented investment knowledge into an institutional advantage') and the eyebrow names the category, and the 'Today / With Bipsync' pairs state each pain and its fix. Against: the H1 runs 6 lines on desktop and 7 on mobile. On mobile both CTAs sit below the fold under the consent banner (mobile-fold.png). The 'Capture. Structure. Leverage.' and 'Access your institutional knowledge' sections show small UI at 9-13 px with 12.5-13.5 px body text, so the proof can't be read at viewing size.",
+        "distinctiveness": "The hero device is specific to the brand: labelled particle clusters (Data, Research, Email, Meetings, Documents) converge into an ordered grid over a hexagon field. The bull-mark green is used consistently. Everything else is the standard dark-SaaS kit: Inter only, mint #3beba8 accent on near-black, alternating light-mint and dark bands, numbered step cards, stat tiles (15+, $4T+, 40TB+, 75%), a logo grid, three blog cards and a closing CTA band. Take away the hero and it could be any fintech SaaS page.",
+        "craft": "Clean grid, a consistent colour family and a CLS of 0.002 are solid. But 24 font sizes with 12 display sizes and no scale, 36 chromatic colours, 26 drop shadows, 14 text elements below WCAG AA (the green H3 'The challenge is putting it to work.' at 2.72:1, the red 'Today' labels at 4.26:1), and text at 9-9.8 px. 26 tap targets on mobile are under 24 px (22x3 carousel dots). Under reduced motion 11 text elements stay hidden ('The challenge', 'Top results'), so content is withheld from exactly the visitors who asked for less motion. The hero source labels are near-black on black and barely visible."
+      },
+      "claims": [
+        {
+          "claim": "1. The hero is good because it is animated.",
+          "verdict": "Partly true, wrong reason.",
+          "evidence": "Moving is not what makes it good. The motion acts out the headline: motion-sheet 00-2000 ms shows scattered dots grouped by source (Data, Research, Email, Meetings, Documents) converging into one ordered grid, i.e. 'fragmented -> institutional'. Two things weaken it. The source labels that carry the meaning are nearly invisible (dark grey on black in desktop-fold.png). And the consent banner covers the lower third on desktop and the whole animation on mobile, where it is pushed below the copy (sheet-mobile page-01). A decorative particle field would score lower, not higher."
+        },
+        {
+          "claim": "2. 'Capture. Structure. Leverage.' is motion that really gives the user a message.",
+          "verdict": "Partly true, only for the Capture step as far as the evidence shows.",
+          "evidence": "Frame 06-scroll-1350px and sheet-desktop page-03 show a 3-step list with Capture active, linked by a connector to a 'Research Inbox' panel listing auto-captured items from named sources (AlphaSense, Excel, Preqin, Canoe, Teams), each tagged 'Captured'. That carries a message: knowledge arrives without manual filing. No frame shows what Structure or Leverage change in the panel. A small progress bar under the active step suggests an auto-advancing stepper, which is good only if the pause control applies to it (not verified). The panel text is 10-11 px, so the message lands as 'something is happening' rather than something the visitor can read."
+        },
+        {
+          "claim": "3. A demo of the product is shown, maybe only a video.",
+          "verdict": "False on the 'video' part: it is built in code. 'Demo' overstates it.",
+          "evidence": "The product UI (Notes list, 'Private Credit (12)', Toro AI summary 'Searched 1,240 notes · 86 meetings · 14 decisions', 'Task created', 'TOP RESULTS', '↵ to open') appears as live DOM text in the page text, and the inspector flags its 9-9.8 px spans as tiny text. A video would put no text in the DOM. It is a stylised HTML mock of the product with fictional data, not an interactive demo. The real demo is the sales call behind /book-a-demo/."
+        },
+        {
+          "claim": "4. The rest is decent, especially layout, colour and cleanliness.",
+          "verdict": "Layout and cleanliness: true. Colour: half true.",
+          "evidence": "The layout is orderly, with generous spacing and a predictable rhythm of alternating dark and mint sections (sheet-desktop). The palette reads as one family, but it measures 36 chromatic colours, and two of its signature accents fail contrast (green H3 at 2.72:1, red 'Today' at 4.26:1; demo page 'institutional investors.' at 2.16:1). Cleanliness is undermined at the detail level by 26 shadows, 9 backdrop blurs and 24 type sizes."
+        }
+      ],
+      "motion": [
+        { "what": "Hero: labelled particle clusters by source converge into an ordered grid over a hex field (load 0-2000 ms)", "message it carries": "Fragmented knowledge from many sources becomes one structured institutional base: the H1, acted out", "verdict": "earns its place" },
+        { "what": "Capture/Structure/Leverage stepper with Research Inbox items arriving as 'Captured'", "message it carries": "Capture happens automatically from the tools you already use (Capture step only verified)", "verdict": "earns its place" },
+        { "what": "Scroll fade/slide-in reveals on headings and cards (opacity, transform; 300-800 ms)", "message it carries": "none", "verdict": "decoration, and harmful: 11 texts stay hidden under reduced motion and 52 never become visible during a full scroll" },
+        { "what": "Today / With Bipsync card carousel (dots 22x3 px)", "message it carries": "before vs after, but a carousel hides 3 of 4 pairs", "verdict": "decoration (a static 2-column grid would carry the same message better)" },
+        { "what": "4 endless loops further down (4500 px: 20 moving elements, e.g. testimonial/visual tile, stat count-ups)", "message it carries": "none", "verdict": "decoration (pause control present, which mitigates)" }
+      ],
+      "problems": [
+        "Reduced-motion handling withholds content: 11 text elements stay hidden for visitors who ask for reduced motion, and 52 never appear in a full scroll. The 'reduced motion respected' measure only says nothing moves; it does not say the content shows.",
+        "Product proof is unreadable at viewing size: the HTML product mocks use 9-11 px text and body copy runs 12.5-13.5 px, so the strongest evidence (Research Inbox, Toro answer with sources) reads as texture.",
+        "Typography and colour have no system: 24 sizes / 12 display sizes, 36 colours, 14 AA contrast failures including the signature green H3, and an H1 at 6-7 lines. On mobile the consent banner plus a long H1 push both CTAs and the hero animation below the fold."
+      ],
+      "keep": [
+        "A hero animation that enacts the headline (scattered sources -> one ordered structure), so the motion is the value proposition and not ambience.",
+        "Product UI built in HTML rather than video: crisp at any size, light, indexable, and it can respond to reduced motion. It needs readable type sizes to pay off.",
+        "Paired 'Today / With Bipsync' statements: pain and fix in the same unit, scannable.",
+        "A motion system with a pause control and no autoplay at the top. Continuous motion starts only further down."
+      ],
+      "veto": null
+    }
+  }
+}
