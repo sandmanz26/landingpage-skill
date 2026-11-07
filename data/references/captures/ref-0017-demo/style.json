@@ -1,0 +1,153 @@
+{
+  "url": "https://bipsync.com/book-a-demo/",
+  "readAt": "2026-11-07T18:36:11.013Z",
+  "tags": [
+    "gradient-heavy",
+    "pill-shapes",
+    "expressive-type",
+    "many-type-sizes",
+    "one-typeface",
+    "serif",
+    "endless-motion",
+    "type-only",
+    "pop-up-on-load"
+  ],
+  "palette": {
+    "chromatic": 4,
+    "families": 1,
+    "text": [
+      "#e9f1ee",
+      "#03231a",
+      "#f4f8f6",
+      "#3beba8",
+      "#c3cfcb",
+      "#dce7e3"
+    ],
+    "backgrounds": [
+      "#3beba8",
+      "#020403",
+      "#ffffff",
+      "#06120e",
+      "#030806",
+      "#050807",
+      "#3beba7"
+    ],
+    "gradients": 5,
+    "shadows": 4,
+    "blur": 0
+  },
+  "type": {
+    "families": [
+      {
+        "family": "inter",
+        "share": 99
+      },
+      {
+        "family": "arial",
+        "share": 1
+      },
+      {
+        "family": "georgia",
+        "share": 0
+      }
+    ],
+    "cuts": [
+      {
+        "family": "Inter",
+        "share": 99
+      },
+      {
+        "family": "Arial",
+        "share": 1
+      },
+      {
+        "family": "Georgia",
+        "share": 0
+      }
+    ],
+    "sizes": {
+      "desktop": [
+        80,
+        62,
+        42,
+        34,
+        24,
+        18,
+        16,
+        15,
+        14,
+        13,
+        12,
+        11
+      ],
+      "mobile": [
+        80,
+        38,
+        34,
+        28,
+        24,
+        19,
+        18,
+        16,
+        15,
+        14,
+        13,
+        12,
+        11
+      ]
+    },
+    "display": 80,
+    "body": 16,
+    "ratio": 5
+  },
+  "shape": {
+    "radii": [
+      "8px",
+      "6px",
+      "999px",
+      "20px",
+      "9px",
+      "14px",
+      "12px",
+      "18px",
+      "50%"
+    ]
+  },
+  "spacing": {
+    "distinct": 33,
+    "offScale": 16
+  },
+  "motion": {
+    "libraries": [],
+    "stickyPanels": 0,
+    "durationsMs": {
+      "min": 300,
+      "max": 800
+    },
+    "easings": [
+      "ease",
+      "linear"
+    ],
+    "reducedMotionRespected": true,
+    "smoothness": {
+      "fps": 60,
+      "longFrames": 0,
+      "baselineLongFrames": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    }
+  },
+  "imagery": {
+    "photos": 0,
+    "illustrations": 0,
+    "videos": 0
+  },
+  "layout": {
+    "pageHeight": 2781,
+    "screens": 3
+  },
+  "doNotCopy": [
+    "contrast: 1 text elements below WCAG AA (measured on screen pixels)",
+    "tap-target: 18 controls smaller than 24x24px on a phone",
+    "pop-up over the first screen on load"
+  ]
+}

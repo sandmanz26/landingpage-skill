@@ -1,0 +1,31 @@
+{
+  "list": "data/references/batch-011.txt",
+  "jobs": 1,
+  "seconds": 288,
+  "results": [
+    {
+      "id": "ref-0017",
+      "url": "https://bipsync.com/",
+      "ok": true,
+      "inspectSeconds": 89,
+      "evidenceSeconds": 76,
+      "flags": [
+        "pop-up or banner on load, closed for the outline: Close dialog",
+        "elements keep moving with no input further down at 900px (6), 1800px (11), 2700px (5), 4500px (20)"
+      ],
+      "error": null
+    },
+    {
+      "id": "ref-0017-demo",
+      "url": "https://bipsync.com/book-a-demo/",
+      "ok": true,
+      "inspectSeconds": 55,
+      "evidenceSeconds": 67,
+      "flags": [
+        "pop-up or banner on load, closed for the outline: Close dialog",
+        "elements keep moving with no input further down at 900px (9); no pause control found"
+      ],
+      "error": null
+    }
+  ]
+}

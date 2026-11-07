@@ -1,0 +1,1016 @@
+{
+  "url": "https://bipsync.com/",
+  "time": "2026-11-07T18:34:08.284Z",
+  "sheets": {
+    "desktop": "data/references/captures/ref-0017/sheet-desktop.png",
+    "mobile": "data/references/captures/ref-0017/sheet-mobile.png",
+    "motion": "data/references/captures/ref-0017/motion-sheet.png"
+  },
+  "load": {
+    "status": 200,
+    "retries": 0,
+    "failed": false
+  },
+  "overlaysDismissed": [
+    "Close dialog"
+  ],
+  "outline": {
+    "title": "Bipsync | Research management software for investment teams",
+    "description": "Stop wasting hours in disparate systems. Capture, structure, and leverage collective investment intelligence at scale. Book a demo.",
+    "headings": [
+      "H1 3% Investment research and knowledge management platform Turn fragmented investment knowledge",
+      "H2 15% Your most valuable investment intelligence already exists.",
+      "H3 18% The challenge is putting it to work.",
+      "H3 17% Context gets lost",
+      "H3 17% Context travels with the work",
+      "H3 17% Process lives in inboxes",
+      "H3 17% Your process runs in one place",
+      "H3 20% Insight is hard to find",
+      "H3 20% Insight on demand",
+      "H3 20% Research gets repeated",
+      "H3 20% Research builds on itself",
+      "H2 26% Capture. Structure. Leverage.",
+      "H3 27% Capture",
+      "H3 30% Structure",
+      "H3 32% Leverage",
+      "H2 39% Access your institutional knowledge. Faster.",
+      "H2 52% Built for the institutional investment community.",
+      "H3 55% Asset Managers",
+      "H2 63% Trusted by leading investors. Proven at scale.",
+      "H3 68% Trusted by investment organizations around the world.",
+      "H2 74% Your research is valuable. We keep it protected.",
+      "H2 80% The latest from Bipsync.",
+      "H3 81% AI is only as powerful as the data foundation it’s built on",
+      "H3 81% Bipsync and AlphaSense integrate to put clients’ institutional knowledge inside market int",
+      "H3 81% What we learned building AI for investment teams",
+      "H2 87% Put your institutional knowledge to work."
+    ],
+    "actions": [
+      {
+        "label": "Platform",
+        "count": 1,
+        "firstAt": 0,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Who We Help",
+        "count": 1,
+        "firstAt": 0,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "News & Insights",
+        "count": 1,
+        "firstAt": 0,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "About Us",
+        "count": 1,
+        "firstAt": 0,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Get a demo",
+        "count": 4,
+        "firstAt": 0,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Explore Bipsync",
+        "count": 1,
+        "firstAt": 10,
+        "firstScreen": true,
+        "sticky": false
+      },
+      {
+        "label": "Manage consent",
+        "count": 1,
+        "firstAt": 12,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "See why teams choose Bipsync",
+        "count": 1,
+        "firstAt": 34,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Explore the platform",
+        "count": 1,
+        "firstAt": 47,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Explore Asset Managers",
+        "count": 1,
+        "firstAt": 59,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Read our success stories",
+        "count": 1,
+        "firstAt": 71,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Explore Security & Governance",
+        "count": 1,
+        "firstAt": 76,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "SOC 2 & ISO 27001 Certified",
+        "count": 1,
+        "firstAt": 98,
+        "firstScreen": false,
+        "sticky": false
+      }
+    ],
+    "prices": [
+      "$4"
+    ],
+    "proofMentions": {
+      "review": 2,
+      "trusted": 4,
+      "clients": 2
+    },
+    "logoImages": 0,
+    "forms": 0,
+    "imagery": {
+      "photos": 1,
+      "illustrations": 3,
+      "videos": 0
+    },
+    "pageHeight": 7184
+  },
+  "motion": {
+    "libraries": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "splitText": false,
+      "lenis": false,
+      "locomotive": false,
+      "swiper": false,
+      "lottie": false,
+      "framerMotion": false,
+      "viewTransitions": false
+    },
+    "stickyPanels": [],
+    "maxRunning": 48,
+    "durationsMs": {
+      "min": 250,
+      "max": 10000
+    },
+    "easings": [
+      "ease",
+      "linear",
+      "cubic-bezier(0.4, 0, 0.2, 1)"
+    ],
+    "properties": [
+      "backgroundColor",
+      "borderBottomColor",
+      "transform",
+      "opacity",
+      "width",
+      "strokeDashoffset",
+      "left",
+      "top"
+    ],
+    "movingWithoutInput": 0,
+    "movingWithoutInputFurtherDown": [
+      {
+        "y": 900,
+        "moving": 6
+      },
+      {
+        "y": 1800,
+        "moving": 11
+      },
+      {
+        "y": 2700,
+        "moving": 5
+      },
+      {
+        "y": 4500,
+        "moving": 20
+      }
+    ],
+    "scriptDrivenOnScroll": 12,
+    "infiniteLoops": 4,
+    "infiniteLoopsWithText": 0,
+    "pauseControl": true,
+    "steps": [
+      {
+        "y": 450,
+        "running": 32,
+        "scriptDriven": 2,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.hd",
+            "hasText": true,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "backgroundColor"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.hd",
+            "hasText": true,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "borderBottomColor"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "a.btn",
+            "hasText": true,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "backgroundColor"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "a.btn",
+            "hasText": true,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "h2.reveal",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "h3.sub",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      },
+      {
+        "y": 900,
+        "running": 30,
+        "scriptDriven": 9,
+        "idleMoving": 6,
+        "sample": [
+          {
+            "target": "a.btn",
+            "hasText": true,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "backgroundColor"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "a.btn",
+            "hasText": true,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "h2.reveal",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "h3.sub",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "p.reveal",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "p.reveal",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      },
+      {
+        "y": 1350,
+        "running": 21,
+        "scriptDriven": 3,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "i",
+            "hasText": false,
+            "duration": 8000,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "i",
+            "hasText": false,
+            "duration": 10000,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "width"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "h1.reveal",
+            "hasText": true,
+            "duration": 900,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "p.reveal",
+            "hasText": true,
+            "duration": 900,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.btns",
+            "hasText": true,
+            "duration": 900,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "path",
+            "hasText": false,
+            "duration": 1200,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "strokeDashoffset"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1800,
+        "running": 25,
+        "scriptDriven": 6,
+        "idleMoving": 11,
+        "sample": [
+          {
+            "target": "i",
+            "hasText": false,
+            "duration": 10000,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "width"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "h1.reveal",
+            "hasText": true,
+            "duration": 900,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "p.reveal",
+            "hasText": true,
+            "duration": 900,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.btns",
+            "hasText": true,
+            "duration": 900,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "path",
+            "hasText": false,
+            "duration": 1200,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "strokeDashoffset"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "span.live",
+            "hasText": false,
+            "duration": 1600,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 2250,
+        "running": 31,
+        "scriptDriven": 10,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "i",
+            "hasText": false,
+            "duration": 10000,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "width"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.row",
+            "hasText": true,
+            "duration": 1600,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "backgroundColor"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "h1.reveal",
+            "hasText": true,
+            "duration": 900,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "p.reveal",
+            "hasText": true,
+            "duration": 900,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.btns",
+            "hasText": true,
+            "duration": 900,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "path",
+            "hasText": false,
+            "duration": 1200,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "strokeDashoffset"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 2700,
+        "running": 34,
+        "scriptDriven": 3,
+        "idleMoving": 5,
+        "sample": [
+          {
+            "target": "i",
+            "hasText": false,
+            "duration": 10000,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "width"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.row",
+            "hasText": true,
+            "duration": 1600,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "backgroundColor"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.cursor",
+            "hasText": false,
+            "duration": 650,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "left"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.cursor",
+            "hasText": false,
+            "duration": 650,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "top"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "h1.reveal",
+            "hasText": true,
+            "duration": 900,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "p.reveal",
+            "hasText": true,
+            "duration": 900,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 3150,
+        "running": 34,
+        "scriptDriven": 4,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "i",
+            "hasText": false,
+            "duration": 10000,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "width"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "h2.reveal",
+            "hasText": true,
+            "duration": 700,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "p.intro",
+            "hasText": true,
+            "duration": 700,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.sel",
+            "hasText": true,
+            "duration": 700,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "h1.reveal",
+            "hasText": true,
+            "duration": 900,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "p.reveal",
+            "hasText": true,
+            "duration": 900,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 3600,
+        "running": 34,
+        "scriptDriven": 3,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "i",
+            "hasText": false,
+            "duration": 10000,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "width"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "h2.reveal",
+            "hasText": true,
+            "duration": 700,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "p.intro",
+            "hasText": true,
+            "duration": 700,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.sel",
+            "hasText": true,
+            "duration": 700,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "h1.reveal",
+            "hasText": true,
+            "duration": 900,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "p.reveal",
+            "hasText": true,
+            "duration": 900,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 4050,
+        "running": 45,
+        "scriptDriven": 2,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "i",
+            "hasText": false,
+            "duration": 10000,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "width"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "h2.reveal",
+            "hasText": true,
+            "duration": 700,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.stat",
+            "hasText": true,
+            "duration": 700,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.stat",
+            "hasText": true,
+            "duration": 700,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.stat",
+            "hasText": true,
+            "duration": 700,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.stat",
+            "hasText": true,
+            "duration": 700,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      },
+      {
+        "y": 4500,
+        "running": 48,
+        "scriptDriven": 12,
+        "idleMoving": 20,
+        "sample": [
+          {
+            "target": "i",
+            "hasText": false,
+            "duration": 10000,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "width"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "h2.reveal",
+            "hasText": true,
+            "duration": 700,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.stat",
+            "hasText": true,
+            "duration": 700,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.stat",
+            "hasText": true,
+            "duration": 700,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.stat",
+            "hasText": true,
+            "duration": 700,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.stat",
+            "hasText": true,
+            "duration": 700,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      }
+    ]
+  },
+  "smoothness": {
+    "page": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 6476,
+      "frames": 359,
+      "fps": 55.4,
+      "medianMs": 16.7,
+      "p95Ms": 33.3,
+      "maxMs": 67,
+      "longFrames": 1,
+      "droppedShare": 1,
+      "longTasks": 1,
+      "longTaskMs": 51,
+      "scriptBlockedShare": 1,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "baseline": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 1726,
+      "frames": 104,
+      "fps": 60.3,
+      "medianMs": 16.7,
+      "p95Ms": 16.7,
+      "maxMs": 17,
+      "longFrames": 0,
+      "droppedShare": 0,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "longFramesOverBaseline": 1,
+    "p95OverBaseline": 16.6
+  },
+  "reducedMotion": {
+    "movingWithoutInput": 0,
+    "movingOnScroll": 0,
+    "idleNavigation": null,
+    "loadFailed": false
+  },
+  "idleRunLoadFailed": false,
+  "idleNavigation": null
+}

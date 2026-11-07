@@ -1,0 +1,2905 @@
+{
+  "target": "https://bipsync.com/",
+  "time": "2026-11-07T18:31:23.533Z",
+  "rules": {
+    "purple-gradient": "warn",
+    "gradient": "info",
+    "glass": "info",
+    "system-font-only": "warn",
+    "too-many-font-sizes": "warn",
+    "too-many-colours": "warn",
+    "shadow-on-everything": "warn",
+    "icon-card-row": "warn",
+    "centred-hero-two-ctas": "warn",
+    "emoji": "warn",
+    "kit-sample": "fail"
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "pageHeight": 7184,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "system-font-only",
+          "message": "Only a default typeface carries the page (Inter, Arial)"
+        },
+        {
+          "severity": "WARN",
+          "rule": "too-many-font-sizes",
+          "message": "24 different font sizes on the page (aim for 5 or fewer doing the visible work)"
+        },
+        {
+          "severity": "WARN",
+          "rule": "display-sizes",
+          "message": "12 display sizes (24px and up) with no clear scale: 60, 52, 50, 48, 46, 43, 42, 37, 36, 32, 30, 28 px; use 3-4 steps, each with one role"
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 13.5px (16px or more reads better)",
+          "sample": [
+            "<p> \"Capture research, meetings, notes, documents, data\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 13.5px (16px or more reads better)",
+          "sample": [
+            "<p> \"Organize research around the managers, investments\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 13.5px (16px or more reads better)",
+          "sample": [
+            "<p> \"Search, discover, synthesize and apply everything \""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<div> \"Connected sources & integrations\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"Addepar · Portfolio data sync\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"AlphaSense · Research\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"Preqin · Third-party research\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"Canoe · Document extraction\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12.5px (16px or more reads better)",
+          "sample": [
+            "<p> \"Ask complex questions across years of research, me\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12.5px (16px or more reads better)",
+          "sample": [
+            "<p> \"Put relevant knowledge into the hands of investmen\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<span> \"⌥ S\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10px",
+          "sample": [
+            "<div> \"▽ Filtered by Notes only\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<span> \"Title\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<span> \"Created ↓\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"Private Credit Secondaries: Market Update\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"Lakeview Lane Credit Fund IV – Manager Review\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"IC Meeting – Q3 Secondaries Pipeline\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"Marina Tower Partners – Reference Call\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"GP-led Continuation Vehicles Primer\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"Secondaries Pricing Tracker Q3\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"Halsted Bridge – Annual Meeting Notes\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"Private Credit Allocation Memo\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"Mid-market Lending Outlook 2027\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"Fund IV LPAC Call – Summary\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"Secondaries Market Map\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<span> \"● Priya Shah ▾\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<span> \"Updated 14 Oct ▾\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<span> \"2 Comments\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<span> \"Note Index ▾\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<div> \"Note Type *\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.8px",
+          "sample": [
+            "<span> \"Research×\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<div> \"Type\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.8px",
+          "sample": [
+            "<span> \"○ Market Update×\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<div> \"Quarter\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<div> \"Year\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.8px",
+          "sample": [
+            "<span> \"2026×\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<div> \"Participants\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.8px",
+          "sample": [
+            "<span> \"Priya Shah×\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.8px",
+          "sample": [
+            "<span> \"Daniel Reyes×\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9px",
+          "sample": [
+            "<small> \"Bipsync AI\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.3px",
+          "sample": [
+            "<b> \"1,240\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.8px",
+          "sample": [
+            "<div> \"Ask a follow up question…➤\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 11.5px",
+          "sample": [
+            "<h6> \"Follow up with Lakeview Lane on Fund IV pricing\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9px",
+          "sample": [
+            "<span> \"Team\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9px",
+          "sample": [
+            "<span> \"Lakeview Lane Credit Partners\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9px",
+          "sample": [
+            "<span> \"Fund IV\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9px",
+          "sample": [
+            "<div> \"Top results\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 11px",
+          "sample": [
+            "<mark> \"Private Credit Secondaries\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<span> \"Research Note · 14 Oct 2026\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 11px",
+          "sample": [
+            "<b> \"Lakeview Lane Credit Partners\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<span> \"Manager · Private Credit\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<mark> \"Private Credit\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 11px",
+          "sample": [
+            "<b> \"IC Meeting – Q3 Secondaries Pipeline\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<span> \"Meeting · 2 Oct 2026\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 11px",
+          "sample": [
+            "<mark> \"Private Credit Secondaries\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<span> \"Strategy · 4 managers · 31 notes\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.8px",
+          "sample": [
+            "<div> \"View all 1,240 results ↵ to open\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.8px",
+          "sample": [
+            "<span> \"↵ to open\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15px (16px or more reads better)",
+          "sample": [
+            "<p> \"Capture research as it happens, share insight acro\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 13px (16px or more reads better)",
+          "sample": [
+            "<p> \"Proprietary research and decision history kept wit\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15px (16px or more reads better)",
+          "sample": [
+            "<p> \"The research management and trusted knowledge plat\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "headline-lines",
+          "message": "h1 runs to 6 lines",
+          "sample": [
+            "<h1> \"Investment research and knowledge management platf\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "headline-lines",
+          "message": "h2 runs to 4 lines",
+          "sample": [
+            "<h2> \"Your most valuable investment intelligence already\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "25 gradient backgrounds"
+        },
+        {
+          "severity": "INFO",
+          "rule": "glass",
+          "message": "9 blurred glass panels"
+        },
+        {
+          "severity": "WARN",
+          "rule": "too-many-colours",
+          "message": "36 distinct chromatic colours",
+          "sample": [
+            "#3beba8",
+            "#1db07a",
+            "#c9504a",
+            "#2b1a18",
+            "#179a69",
+            "#a6f3d6",
+            "#33eeaa",
+            "#39eaaa"
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "shadow-on-everything",
+          "message": "26 boxes carry a drop shadow"
+        },
+        {
+          "severity": "WARN",
+          "rule": "icon-card-row",
+          "message": "1 rows of identical icon cards",
+          "sample": [
+            "<div> \"Protected knowledgeProprietary research and decisi\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "overlays-dismissed",
+          "message": "Closed 1 pop-up or banner(s) before capturing the screens",
+          "sample": [
+            "Close dialog"
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "14 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#1db07a on screen = 2.72:1 median, 2.70:1 in the worst tenth (needs 3) <h3> \"The challenge is putting it to work.\"",
+            "#c9504a on screen = 4.26:1 median, 4.25:1 in the worst tenth (needs 4.5) <span> \"Today\"",
+            "#179a69 on screen = 3.44:1 median, 3.43:1 in the worst tenth (needs 4.5) <span> \"With Bipsync\"",
+            "#c9504a on screen = 4.25:1 median, 4.24:1 in the worst tenth (needs 4.5) <span> \"Today\"",
+            "#179a69 on screen = 3.43:1 median, 3.42:1 in the worst tenth (needs 4.5) <span> \"With Bipsync\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "hidden-content",
+          "message": "52 text elements were never visible during a full scroll (a reveal that never fires?)",
+          "sample": [
+            "Bipsync changes that.",
+            "● Priya Shah ▾",
+            "Updated 14 Oct ▾",
+            "2 Comments",
+            "Note Index ▾"
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Inter",
+            "share": 100
+          },
+          {
+            "family": "Arial",
+            "share": 0
+          },
+          {
+            "family": "Georgia",
+            "share": 0
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "inter",
+            "share": 100
+          },
+          {
+            "family": "arial",
+            "share": 0
+          },
+          {
+            "family": "georgia",
+            "share": 0
+          }
+        ],
+        "fontSizes": [
+          60,
+          54,
+          52,
+          50,
+          48,
+          46,
+          43,
+          42,
+          37,
+          36,
+          32,
+          30,
+          28,
+          20,
+          19,
+          17,
+          16,
+          15,
+          14,
+          13,
+          12,
+          11,
+          10,
+          9
+        ],
+        "textColours": [
+          "#e9f1ee",
+          "#03231a",
+          "#f4f8f6",
+          "#3beba8",
+          "#d5e0dc",
+          "#ffffff",
+          "#121715",
+          "#1db07a",
+          "#4a5551",
+          "#c9504a",
+          "#2b1a18",
+          "#179a69",
+          "#eaf2ef",
+          "#a6f3d6",
+          "#c3cfcb",
+          "#93a59f",
+          "#5f716b",
+          "#22c487",
+          "#082418",
+          "#8c9894",
+          "#aab4b0",
+          "#e8efec",
+          "#d3dad7",
+          "#7c8884",
+          "#3f4946",
+          "#13865b",
+          "#283230",
+          "#2e6bd8",
+          "#9aa4a1",
+          "#24302c",
+          "#13a06c",
+          "#062317",
+          "#2f3936",
+          "#0e5c4a",
+          "#f1f6f4",
+          "#8fa39c",
+          "#e3ece9",
+          "#0e5c45",
+          "#eef6f2",
+          "#eaf3ef",
+          "#b9ccc5",
+          "#1d5fc2",
+          "#5b3fc4",
+          "#04221a",
+          "#b9c7c2",
+          "#dce7e3",
+          "#7f948d",
+          "#222222"
+        ],
+        "backgroundColours": [
+          "#3beba8",
+          "#020403",
+          "#ffffff",
+          "#fff8f7",
+          "#f3fbf7",
+          "#e1e9e5",
+          "#040706",
+          "#33eeaa",
+          "#1f2625",
+          "#141b18",
+          "#39eaaa",
+          "#3beba7",
+          "#3ee8aa",
+          "#3aefa5",
+          "#4de083",
+          "#f89539",
+          "#a889f9",
+          "#22c487",
+          "#e3f8ef",
+          "#e4eae8",
+          "#f1f2f2",
+          "#1d2120",
+          "#2a2f2d",
+          "#3b6fe0",
+          "#21c285",
+          "#eafbf3",
+          "#f8f9f9",
+          "#eef0ef",
+          "#e3e7e5",
+          "#c7e7df",
+          "#fff1e6",
+          "#eaf1fe",
+          "#f2ecfe",
+          "#fdecf4",
+          "#40e6a6",
+          "#030a08",
+          "#e1eefd",
+          "#ddf7eb",
+          "#eae4fd",
+          "#f2f7f5",
+          "#03100c",
+          "#050807"
+        ],
+        "chromaticColours": 36,
+        "colourFamilies": 5,
+        "spacing": {
+          "distinct": 52,
+          "offScale": 36,
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            20,
+            21,
+            22,
+            22.5,
+            23,
+            24,
+            25,
+            26,
+            27.5,
+            28,
+            29,
+            30,
+            32,
+            34,
+            35,
+            36,
+            38,
+            40,
+            42,
+            50,
+            51.5,
+            62
+          ]
+        },
+        "radii": [
+          "8px",
+          "6px",
+          "10px",
+          "12px",
+          "2px",
+          "50%",
+          "9px",
+          "7px",
+          "999px",
+          "5px",
+          "14px",
+          "4px"
+        ],
+        "shadows": 26,
+        "gradients": 25,
+        "backdropBlur": 9,
+        "transitions": 127,
+        "animatedElements": 68,
+        "cls": 0.002
+      },
+      "screenshots": [
+        "data/references/captures/ref-0017/desktop-fold.png",
+        "data/references/captures/ref-0017/desktop-overlay.png",
+        "data/references/captures/ref-0017/desktop-page-01.png",
+        "data/references/captures/ref-0017/desktop-page-02.png",
+        "data/references/captures/ref-0017/desktop-page-03.png",
+        "data/references/captures/ref-0017/desktop-page-04.png",
+        "data/references/captures/ref-0017/desktop-page-05.png",
+        "data/references/captures/ref-0017/desktop-page-06.png",
+        "data/references/captures/ref-0017/desktop-page-07.png",
+        "data/references/captures/ref-0017/desktop-page-08.png"
+      ]
+    },
+    "tablet": {
+      "width": 768,
+      "pageHeight": 9083,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "system-font-only",
+          "message": "Only a default typeface carries the page (Inter, Georgia)"
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 13.5px (16px or more reads better)",
+          "sample": [
+            "<p> \"Capture research, meetings, notes, documents, data\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 13.5px (16px or more reads better)",
+          "sample": [
+            "<p> \"Organize research around the managers, investments\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 13.5px (16px or more reads better)",
+          "sample": [
+            "<p> \"Search, discover, synthesize and apply everything \""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<div> \"Connected sources & integrations\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"Addepar · Portfolio data sync\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"AlphaSense · Research\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"Preqin · Third-party research\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"Canoe · Document extraction\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12.5px (16px or more reads better)",
+          "sample": [
+            "<p> \"Ask complex questions across years of research, me\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12.5px (16px or more reads better)",
+          "sample": [
+            "<p> \"Put relevant knowledge into the hands of investmen\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<span> \"⌥ S\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10px",
+          "sample": [
+            "<div> \"▽ Filtered by Notes only\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<span> \"Title\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<span> \"Created ↓\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"Private Credit Secondaries: Market Update\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"Lakeview Lane Credit Fund IV – Manager Review\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"IC Meeting – Q3 Secondaries Pipeline\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"Marina Tower Partners – Reference Call\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"GP-led Continuation Vehicles Primer\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"Secondaries Pricing Tracker Q3\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"Halsted Bridge – Annual Meeting Notes\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"Private Credit Allocation Memo\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"Mid-market Lending Outlook 2027\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"Fund IV LPAC Call – Summary\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"Secondaries Market Map\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<span> \"● Priya Shah ▾\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<span> \"Updated 14 Oct ▾\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<span> \"2 Comments\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<span> \"Note Index ▾\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<div> \"Note Type *\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.8px",
+          "sample": [
+            "<span> \"Research×\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<div> \"Type\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.8px",
+          "sample": [
+            "<span> \"○ Market Update×\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<div> \"Quarter\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<div> \"Year\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.8px",
+          "sample": [
+            "<span> \"2026×\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<div> \"Participants\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.8px",
+          "sample": [
+            "<span> \"Priya Shah×\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.8px",
+          "sample": [
+            "<span> \"Daniel Reyes×\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9px",
+          "sample": [
+            "<small> \"Bipsync AI\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.3px",
+          "sample": [
+            "<b> \"1,240\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.8px",
+          "sample": [
+            "<div> \"Ask a follow up question…➤\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 11.5px",
+          "sample": [
+            "<h6> \"Follow up with Lakeview Lane on Fund IV pricing\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9px",
+          "sample": [
+            "<span> \"Team\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9px",
+          "sample": [
+            "<span> \"Lakeview Lane Credit Partners\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9px",
+          "sample": [
+            "<span> \"Fund IV\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9px",
+          "sample": [
+            "<div> \"Top results\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 11px",
+          "sample": [
+            "<mark> \"Private Credit Secondaries\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<span> \"Research Note · 14 Oct 2026\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 11px",
+          "sample": [
+            "<b> \"Lakeview Lane Credit Partners\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<span> \"Manager · Private Credit\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<mark> \"Private Credit\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 11px",
+          "sample": [
+            "<b> \"IC Meeting – Q3 Secondaries Pipeline\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<span> \"Meeting · 2 Oct 2026\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 11px",
+          "sample": [
+            "<mark> \"Private Credit Secondaries\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<span> \"Strategy · 4 managers · 31 notes\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.8px",
+          "sample": [
+            "<div> \"View all 1,240 results ↵ to open\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.8px",
+          "sample": [
+            "<span> \"↵ to open\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15px (16px or more reads better)",
+          "sample": [
+            "<p> \"Capture research as it happens, share insight acro\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 13px (16px or more reads better)",
+          "sample": [
+            "<p> \"Proprietary research and decision history kept wit\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15px (16px or more reads better)",
+          "sample": [
+            "<p> \"The research management and trusted knowledge plat\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "headline-lines",
+          "message": "h1 runs to 4 lines",
+          "sample": [
+            "<h1> \"Investment research and knowledge management platf\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "25 gradient backgrounds"
+        },
+        {
+          "severity": "INFO",
+          "rule": "glass",
+          "message": "9 blurred glass panels"
+        },
+        {
+          "severity": "WARN",
+          "rule": "too-many-colours",
+          "message": "36 distinct chromatic colours",
+          "sample": [
+            "#3beba8",
+            "#1db07a",
+            "#c9504a",
+            "#2b1a18",
+            "#179a69",
+            "#a6f3d6",
+            "#33eeaa",
+            "#39eaaa"
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "shadow-on-everything",
+          "message": "17 boxes carry a drop shadow"
+        },
+        {
+          "severity": "WARN",
+          "rule": "icon-card-row",
+          "message": "1 rows of identical icon cards",
+          "sample": [
+            "<div> \"Protected knowledgeProprietary research and decisi\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "overlays-dismissed",
+          "message": "Closed 1 pop-up or banner(s) before capturing the screens",
+          "sample": [
+            "Close dialog"
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "14 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#1db07a on screen = 2.68:1 median, 2.63:1 in the worst tenth (needs 3) <h3> \"The challenge is putting it to work.\"",
+            "#c9504a on screen = 4.26:1 median, 4.25:1 in the worst tenth (needs 4.5) <span> \"Today\"",
+            "#179a69 on screen = 3.44:1 median, 3.43:1 in the worst tenth (needs 4.5) <span> \"With Bipsync\"",
+            "#c9504a on screen = 4.25:1 median, 4.24:1 in the worst tenth (needs 4.5) <span> \"Today\"",
+            "#179a69 on screen = 3.43:1 median, 3.42:1 in the worst tenth (needs 4.5) <span> \"With Bipsync\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "hidden-content",
+          "message": "49 text elements were never visible during a full scroll (a reveal that never fires?)",
+          "sample": [
+            "Bipsync changes that.",
+            "● Priya Shah ▾",
+            "Updated 14 Oct ▾",
+            "2 Comments",
+            "Note Index ▾"
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Inter",
+            "share": 100
+          },
+          {
+            "family": "Georgia",
+            "share": 0
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "inter",
+            "share": 100
+          },
+          {
+            "family": "georgia",
+            "share": 0
+          }
+        ],
+        "fontSizes": [
+          54,
+          36,
+          32,
+          30,
+          28,
+          26,
+          24,
+          22,
+          20,
+          19,
+          17,
+          16,
+          15,
+          14,
+          13,
+          12,
+          11,
+          10,
+          9
+        ],
+        "textColours": [
+          "#03231a",
+          "#f4f8f6",
+          "#3beba8",
+          "#d5e0dc",
+          "#ffffff",
+          "#121715",
+          "#1db07a",
+          "#4a5551",
+          "#c9504a",
+          "#2b1a18",
+          "#179a69",
+          "#eaf2ef",
+          "#a6f3d6",
+          "#c3cfcb",
+          "#93a59f",
+          "#5f716b",
+          "#22c487",
+          "#082418",
+          "#8c9894",
+          "#aab4b0",
+          "#e8efec",
+          "#d3dad7",
+          "#7c8884",
+          "#3f4946",
+          "#13865b",
+          "#283230",
+          "#2e6bd8",
+          "#9aa4a1",
+          "#24302c",
+          "#13a06c",
+          "#062317",
+          "#2f3936",
+          "#0e5c4a",
+          "#f1f6f4",
+          "#8fa39c",
+          "#e3ece9",
+          "#0e5c45",
+          "#eef6f2",
+          "#eaf3ef",
+          "#b9ccc5",
+          "#1d5fc2",
+          "#5b3fc4",
+          "#04221a",
+          "#b9c7c2",
+          "#dce7e3",
+          "#7f948d",
+          "#e9f1ee"
+        ],
+        "backgroundColours": [
+          "#3beba8",
+          "#ffffff",
+          "#020403",
+          "#fff8f7",
+          "#f3fbf7",
+          "#e1e9e5",
+          "#040706",
+          "#33eeaa",
+          "#1f2625",
+          "#141b18",
+          "#39eaaa",
+          "#3beba7",
+          "#3ee8aa",
+          "#3aefa5",
+          "#4de083",
+          "#f89539",
+          "#a889f9",
+          "#22c487",
+          "#e3f8ef",
+          "#e4eae8",
+          "#f1f2f2",
+          "#1d2120",
+          "#2a2f2d",
+          "#3b6fe0",
+          "#21c285",
+          "#eafbf3",
+          "#f8f9f9",
+          "#eef0ef",
+          "#e3e7e5",
+          "#c7e7df",
+          "#fff1e6",
+          "#eaf1fe",
+          "#f2ecfe",
+          "#fdecf4",
+          "#40e6a6",
+          "#030a08",
+          "#e1eefd",
+          "#ddf7eb",
+          "#eae4fd",
+          "#f2f7f5",
+          "#03100c",
+          "#050807"
+        ],
+        "chromaticColours": 36,
+        "colourFamilies": 5,
+        "spacing": {
+          "distinct": 48,
+          "offScale": 31,
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            16,
+            17,
+            18,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            28,
+            29,
+            30,
+            32,
+            34,
+            35,
+            36,
+            38,
+            40,
+            42,
+            48,
+            50,
+            51.5,
+            52,
+            56,
+            62
+          ]
+        },
+        "radii": [
+          "6px",
+          "8px",
+          "2px",
+          "10px",
+          "12px",
+          "50%",
+          "9px",
+          "3px",
+          "7px",
+          "999px",
+          "5px",
+          "14px"
+        ],
+        "shadows": 22,
+        "gradients": 25,
+        "backdropBlur": 9,
+        "transitions": 124,
+        "animatedElements": 68,
+        "cls": 0.002
+      },
+      "screenshots": [
+        "data/references/captures/ref-0017/tablet-fold.png",
+        "data/references/captures/ref-0017/tablet-overlay.png",
+        "data/references/captures/ref-0017/tablet-page-01.png",
+        "data/references/captures/ref-0017/tablet-page-02.png",
+        "data/references/captures/ref-0017/tablet-page-03.png",
+        "data/references/captures/ref-0017/tablet-page-04.png",
+        "data/references/captures/ref-0017/tablet-page-05.png",
+        "data/references/captures/ref-0017/tablet-page-06.png",
+        "data/references/captures/ref-0017/tablet-page-07.png",
+        "data/references/captures/ref-0017/tablet-page-08.png",
+        "data/references/captures/ref-0017/tablet-page-09.png"
+      ]
+    },
+    "mobile": {
+      "width": 390,
+      "pageHeight": 11027,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "system-font-only",
+          "message": "Only a default typeface carries the page (Inter, Georgia)"
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 13.5px (16px or more reads better)",
+          "sample": [
+            "<p> \"Capture research, meetings, notes, documents, data\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 13.5px (16px or more reads better)",
+          "sample": [
+            "<p> \"Organize research around the managers, investments\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 13.5px (16px or more reads better)",
+          "sample": [
+            "<p> \"Search, discover, synthesize and apply everything \""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<div> \"Connected sources & integrations\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"Addepar · Portfolio data sync\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"AlphaSense · Research\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"Preqin · Third-party research\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"Canoe · Document extraction\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12.5px (16px or more reads better)",
+          "sample": [
+            "<p> \"Ask complex questions across years of research, me\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12.5px (16px or more reads better)",
+          "sample": [
+            "<p> \"Put relevant knowledge into the hands of investmen\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<span> \"⌥ S\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10px",
+          "sample": [
+            "<div> \"▽ Filtered by Notes only\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<span> \"Title\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<span> \"Created ↓\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"Private Credit Secondaries: Market Update\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"Lakeview Lane Credit Fund IV – Manager Review\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"IC Meeting – Q3 Secondaries Pipeline\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"Marina Tower Partners – Reference Call\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"GP-led Continuation Vehicles Primer\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"Secondaries Pricing Tracker Q3\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"Halsted Bridge – Annual Meeting Notes\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"Private Credit Allocation Memo\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"Mid-market Lending Outlook 2027\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"Fund IV LPAC Call – Summary\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.5px",
+          "sample": [
+            "<span> \"Secondaries Market Map\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<span> \"● Priya Shah ▾\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<span> \"Updated 14 Oct ▾\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<span> \"2 Comments\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<span> \"Note Index ▾\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<div> \"Note Type *\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.8px",
+          "sample": [
+            "<span> \"Research×\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<div> \"Type\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.8px",
+          "sample": [
+            "<span> \"○ Market Update×\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<div> \"Quarter\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<div> \"Year\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.8px",
+          "sample": [
+            "<span> \"2026×\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<div> \"Participants\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.8px",
+          "sample": [
+            "<span> \"Priya Shah×\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.8px",
+          "sample": [
+            "<span> \"Daniel Reyes×\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9px",
+          "sample": [
+            "<small> \"Bipsync AI\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.3px",
+          "sample": [
+            "<b> \"1,240\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.8px",
+          "sample": [
+            "<div> \"Ask a follow up question…➤\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 11.5px",
+          "sample": [
+            "<h6> \"Follow up with Lakeview Lane on Fund IV pricing\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9px",
+          "sample": [
+            "<span> \"Team\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9px",
+          "sample": [
+            "<span> \"Lakeview Lane Credit Partners\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9px",
+          "sample": [
+            "<span> \"Fund IV\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9px",
+          "sample": [
+            "<div> \"Top results\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 11px",
+          "sample": [
+            "<mark> \"Private Credit Secondaries\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<span> \"Research Note · 14 Oct 2026\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 11px",
+          "sample": [
+            "<b> \"Lakeview Lane Credit Partners\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<span> \"Manager · Private Credit\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<mark> \"Private Credit\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 11px",
+          "sample": [
+            "<b> \"IC Meeting – Q3 Secondaries Pipeline\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<span> \"Meeting · 2 Oct 2026\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 11px",
+          "sample": [
+            "<mark> \"Private Credit Secondaries\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.5px",
+          "sample": [
+            "<span> \"Strategy · 4 managers · 31 notes\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.8px",
+          "sample": [
+            "<div> \"View all 1,240 results ↵ to open\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.8px",
+          "sample": [
+            "<span> \"↵ to open\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15px (16px or more reads better)",
+          "sample": [
+            "<p> \"Capture research as it happens, share insight acro\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 13px (16px or more reads better)",
+          "sample": [
+            "<p> \"Proprietary research and decision history kept wit\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 15px (16px or more reads better)",
+          "sample": [
+            "<p> \"The research management and trusted knowledge plat\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "headline-lines",
+          "message": "h1 runs to 7 lines",
+          "sample": [
+            "<h1> \"Investment research and knowledge management platf\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tap-target",
+          "message": "26 controls smaller than 24x24px on a phone",
+          "sample": [
+            "22x3 <button> \"\"",
+            "22x3 <button> \"\"",
+            "22x3 <button> \"\"",
+            "22x3 <button> \"\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "text-at-edge",
+          "message": "9 text elements within 12px of the screen edge",
+          "sample": [
+            "<small> \"Bipsync AI\"",
+            "<span> \"✕\"",
+            "<b> \"1,240\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "25 gradient backgrounds"
+        },
+        {
+          "severity": "INFO",
+          "rule": "glass",
+          "message": "9 blurred glass panels"
+        },
+        {
+          "severity": "WARN",
+          "rule": "too-many-colours",
+          "message": "36 distinct chromatic colours",
+          "sample": [
+            "#3beba8",
+            "#1db07a",
+            "#c9504a",
+            "#2b1a18",
+            "#179a69",
+            "#a6f3d6",
+            "#33eeaa",
+            "#39eaaa"
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "shadow-on-everything",
+          "message": "14 boxes carry a drop shadow"
+        },
+        {
+          "severity": "INFO",
+          "rule": "overlays-dismissed",
+          "message": "Closed 1 pop-up or banner(s) before capturing the screens",
+          "sample": [
+            "Close dialog"
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "14 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#1db07a on screen = 2.76:1 median, 2.09:1 in the worst tenth (needs 3) <h3> \"The challenge is putting it to work.\"",
+            "#c9504a on screen = 4.25:1 median, 4.24:1 in the worst tenth (needs 4.5) <span> \"Today\"",
+            "#179a69 on screen = 3.43:1 median, 3.42:1 in the worst tenth (needs 4.5) <span> \"With Bipsync\"",
+            "#c9504a on screen = 4.25:1 median, 4.25:1 in the worst tenth (needs 4.5) <span> \"Today\"",
+            "#179a69 on screen = 3.43:1 median, 3.43:1 in the worst tenth (needs 4.5) <span> \"With Bipsync\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "contrast-unverified",
+          "message": "1 suspected contrast problems could not be re-measured on screen"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "hidden-content",
+          "message": "49 text elements were never visible during a full scroll (a reveal that never fires?)",
+          "sample": [
+            "Bipsync changes that.",
+            "● Priya Shah ▾",
+            "Updated 14 Oct ▾",
+            "2 Comments",
+            "Note Index ▾"
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Inter",
+            "share": 100
+          },
+          {
+            "family": "Georgia",
+            "share": 0
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "inter",
+            "share": 100
+          },
+          {
+            "family": "georgia",
+            "share": 0
+          }
+        ],
+        "fontSizes": [
+          54,
+          36,
+          32,
+          30,
+          28,
+          26,
+          24,
+          22,
+          20,
+          19,
+          17,
+          16,
+          15,
+          14,
+          13,
+          12,
+          11,
+          10,
+          9
+        ],
+        "textColours": [
+          "#03231a",
+          "#f4f8f6",
+          "#3beba8",
+          "#d5e0dc",
+          "#ffffff",
+          "#121715",
+          "#1db07a",
+          "#4a5551",
+          "#c9504a",
+          "#2b1a18",
+          "#179a69",
+          "#eaf2ef",
+          "#a6f3d6",
+          "#c3cfcb",
+          "#93a59f",
+          "#5f716b",
+          "#22c487",
+          "#082418",
+          "#8c9894",
+          "#aab4b0",
+          "#e8efec",
+          "#d3dad7",
+          "#7c8884",
+          "#3f4946",
+          "#13865b",
+          "#283230",
+          "#2e6bd8",
+          "#9aa4a1",
+          "#24302c",
+          "#13a06c",
+          "#062317",
+          "#2f3936",
+          "#0e5c4a",
+          "#f1f6f4",
+          "#8fa39c",
+          "#e3ece9",
+          "#0e5c45",
+          "#eef6f2",
+          "#eaf3ef",
+          "#b9ccc5",
+          "#1d5fc2",
+          "#5b3fc4",
+          "#04221a",
+          "#b9c7c2",
+          "#dce7e3",
+          "#7f948d",
+          "#e9f1ee"
+        ],
+        "backgroundColours": [
+          "#3beba8",
+          "#ffffff",
+          "#020403",
+          "#fff8f7",
+          "#f3fbf7",
+          "#e1e9e5",
+          "#040706",
+          "#33eeaa",
+          "#141b18",
+          "#39eaaa",
+          "#3beba7",
+          "#3ee8aa",
+          "#3aefa5",
+          "#4de083",
+          "#f89539",
+          "#a889f9",
+          "#22c487",
+          "#e3f8ef",
+          "#e4eae8",
+          "#f1f2f2",
+          "#1d2120",
+          "#2a2f2d",
+          "#3b6fe0",
+          "#21c285",
+          "#eafbf3",
+          "#f8f9f9",
+          "#eef0ef",
+          "#e3e7e5",
+          "#c7e7df",
+          "#fff1e6",
+          "#eaf1fe",
+          "#f2ecfe",
+          "#fdecf4",
+          "#40e6a6",
+          "#030a08",
+          "#e1eefd",
+          "#ddf7eb",
+          "#eae4fd",
+          "#f2f7f5",
+          "#03100c",
+          "#050807"
+        ],
+        "chromaticColours": 36,
+        "colourFamilies": 5,
+        "spacing": {
+          "distinct": 47,
+          "offScale": 31,
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            16,
+            17,
+            18,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            28,
+            29,
+            30,
+            32,
+            34,
+            35,
+            35.5,
+            36,
+            38,
+            40,
+            42,
+            44,
+            48,
+            50,
+            52,
+            55
+          ]
+        },
+        "radii": [
+          "6px",
+          "8px",
+          "2px",
+          "10px",
+          "12px",
+          "50%",
+          "7px",
+          "999px",
+          "5px",
+          "14px",
+          "4px",
+          "3px"
+        ],
+        "shadows": 20,
+        "gradients": 25,
+        "backdropBlur": 9,
+        "transitions": 124,
+        "animatedElements": 69,
+        "cls": 0
+      },
+      "screenshots": [
+        "data/references/captures/ref-0017/mobile-fold.png",
+        "data/references/captures/ref-0017/mobile-overlay.png",
+        "data/references/captures/ref-0017/mobile-page-01.png",
+        "data/references/captures/ref-0017/mobile-page-02.png",
+        "data/references/captures/ref-0017/mobile-page-03.png",
+        "data/references/captures/ref-0017/mobile-page-04.png",
+        "data/references/captures/ref-0017/mobile-page-05.png",
+        "data/references/captures/ref-0017/mobile-page-06.png",
+        "data/references/captures/ref-0017/mobile-page-07.png",
+        "data/references/captures/ref-0017/mobile-page-08.png",
+        "data/references/captures/ref-0017/mobile-page-09.png",
+        "data/references/captures/ref-0017/mobile-page-10.png",
+        "data/references/captures/ref-0017/mobile-page-11.png",
+        "data/references/captures/ref-0017/mobile-page-12.png",
+        "data/references/captures/ref-0017/mobile-page-13.png",
+        "data/references/captures/ref-0017/mobile-page-14.png"
+      ]
+    }
+  },
+  "checks": {
+    "reducedMotion": {
+      "findings": [
+        {
+          "severity": "FAIL",
+          "rule": "reduced-motion",
+          "message": "11 text elements stay hidden when the visitor asks for reduced motion",
+          "sample": [
+            "The challenge",
+            "Top results",
+            ": Market Update",
+            "Research Note · 14 Oct 2026",
+            "Manager ·"
+          ]
+        }
+      ],
+      "screenshot": "data/references/captures/ref-0017/reduced-motion-fold.png"
+    },
+    "noJavaScript": {
+      "findings": [],
+      "withJs": 7534,
+      "withoutJs": 7648
+    }
+  },
+  "summary": {
+    "fail": 12,
+    "warn": 19
+  },
+  "url": "https://bipsync.com/",
+  "findings": [
+    {
+      "severity": "FAIL",
+      "rule": "tiny-text",
+      "message": "Text at 9.5px",
+      "sample": [
+        "<span> \"⌥ S\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tiny-text",
+      "message": "Text at 9.8px",
+      "sample": [
+        "<span> \"Research×\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tiny-text",
+      "message": "Text at 9px",
+      "sample": [
+        "<small> \"Bipsync AI\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tiny-text",
+      "message": "Text at 9.3px",
+      "sample": [
+        "<b> \"1,240\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "headline-lines",
+      "message": "h1 runs to 6 lines",
+      "sample": [
+        "<h1> \"Investment research and knowledge management platf\""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "14 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#1db07a on screen = 2.72:1 median, 2.70:1 in the worst tenth (needs 3) <h3> \"The challenge is putting it to work.\"",
+        "#c9504a on screen = 4.26:1 median, 4.25:1 in the worst tenth (needs 4.5) <span> \"Today\"",
+        "#179a69 on screen = 3.44:1 median, 3.43:1 in the worst tenth (needs 4.5) <span> \"With Bipsync\"",
+        "#c9504a on screen = 4.25:1 median, 4.24:1 in the worst tenth (needs 4.5) <span> \"Today\"",
+        "#179a69 on screen = 3.43:1 median, 3.42:1 in the worst tenth (needs 4.5) <span> \"With Bipsync\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "hidden-content",
+      "message": "52 text elements were never visible during a full scroll (a reveal that never fires?)",
+      "sample": [
+        "Bipsync changes that.",
+        "● Priya Shah ▾",
+        "Updated 14 Oct ▾",
+        "2 Comments",
+        "Note Index ▾"
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "headline-lines",
+      "message": "h1 runs to 4 lines",
+      "sample": [
+        "<h1> \"Investment research and knowledge management platf\""
+      ],
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "hidden-content",
+      "message": "49 text elements were never visible during a full scroll (a reveal that never fires?)",
+      "sample": [
+        "Bipsync changes that.",
+        "● Priya Shah ▾",
+        "Updated 14 Oct ▾",
+        "2 Comments",
+        "Note Index ▾"
+      ],
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "headline-lines",
+      "message": "h1 runs to 7 lines",
+      "sample": [
+        "<h1> \"Investment research and knowledge management platf\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tap-target",
+      "message": "26 controls smaller than 24x24px on a phone",
+      "sample": [
+        "22x3 <button> \"\"",
+        "22x3 <button> \"\"",
+        "22x3 <button> \"\"",
+        "22x3 <button> \"\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "reduced-motion",
+      "message": "11 text elements stay hidden when the visitor asks for reduced motion",
+      "sample": [
+        "The challenge",
+        "Top results",
+        ": Market Update",
+        "Research Note · 14 Oct 2026",
+        "Manager ·"
+      ],
+      "where": [
+        "reducedMotion"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "system-font-only",
+      "message": "Only a default typeface carries the page (Inter, Arial)",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "too-many-font-sizes",
+      "message": "24 different font sizes on the page (aim for 5 or fewer doing the visible work)",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "display-sizes",
+      "message": "12 display sizes (24px and up) with no clear scale: 60, 52, 50, 48, 46, 43, 42, 37, 36, 32, 30, 28 px; use 3-4 steps, each with one role",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "body-size",
+      "message": "Running text at 13.5px (16px or more reads better)",
+      "sample": [
+        "<p> \"Capture research, meetings, notes, documents, data\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "small-text",
+      "message": "Text at 10.5px",
+      "sample": [
+        "<div> \"Connected sources & integrations\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "body-size",
+      "message": "Running text at 12.5px (16px or more reads better)",
+      "sample": [
+        "<p> \"Ask complex questions across years of research, me\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "small-text",
+      "message": "Text at 10px",
+      "sample": [
+        "<div> \"▽ Filtered by Notes only\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "small-text",
+      "message": "Text at 11.5px",
+      "sample": [
+        "<h6> \"Follow up with Lakeview Lane on Fund IV pricing\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "small-text",
+      "message": "Text at 11px",
+      "sample": [
+        "<mark> \"Private Credit Secondaries\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "body-size",
+      "message": "Running text at 15px (16px or more reads better)",
+      "sample": [
+        "<p> \"Capture research as it happens, share insight acro\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "body-size",
+      "message": "Running text at 13px (16px or more reads better)",
+      "sample": [
+        "<p> \"Proprietary research and decision history kept wit\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "headline-lines",
+      "message": "h2 runs to 4 lines",
+      "sample": [
+        "<h2> \"Your most valuable investment intelligence already\""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "gradient",
+      "message": "25 gradient backgrounds",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "glass",
+      "message": "9 blurred glass panels",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "too-many-colours",
+      "message": "36 distinct chromatic colours",
+      "sample": [
+        "#3beba8",
+        "#1db07a",
+        "#c9504a",
+        "#2b1a18",
+        "#179a69",
+        "#a6f3d6",
+        "#33eeaa",
+        "#39eaaa"
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "shadow-on-everything",
+      "message": "26 boxes carry a drop shadow",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "icon-card-row",
+      "message": "1 rows of identical icon cards",
+      "sample": [
+        "<div> \"Protected knowledgeProprietary research and decisi\""
+      ],
+      "where": [
+        "desktop",
+        "tablet"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "overlays-dismissed",
+      "message": "Closed 1 pop-up or banner(s) before capturing the screens",
+      "sample": [
+        "Close dialog"
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "system-font-only",
+      "message": "Only a default typeface carries the page (Inter, Georgia)",
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "shadow-on-everything",
+      "message": "17 boxes carry a drop shadow",
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "text-at-edge",
+      "message": "9 text elements within 12px of the screen edge",
+      "sample": [
+        "<small> \"Bipsync AI\"",
+        "<span> \"✕\"",
+        "<b> \"1,240\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "shadow-on-everything",
+      "message": "14 boxes carry a drop shadow",
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "contrast-unverified",
+      "message": "1 suspected contrast problems could not be re-measured on screen",
+      "where": [
+        "mobile"
+      ]
+    }
+  ]
+}

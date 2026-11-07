@@ -1,0 +1,988 @@
+{
+  "url": "https://bipsync.com/book-a-demo/",
+  "time": "2026-11-07T18:36:10.874Z",
+  "sheets": {
+    "desktop": "data/references/captures/ref-0017-demo/sheet-desktop.png",
+    "mobile": "data/references/captures/ref-0017-demo/sheet-mobile.png",
+    "motion": "data/references/captures/ref-0017-demo/motion-sheet.png"
+  },
+  "load": {
+    "status": 200,
+    "retries": 0,
+    "failed": false
+  },
+  "overlaysDismissed": [
+    "Close dialog"
+  ],
+  "outline": {
+    "title": "Book a Demo | Bipsync Research Management Software",
+    "description": "Ready to streamline your research? Book a demo to see how Bipsync helps investment teams save hours every week.",
+    "headings": [
+      "H1 7% See Bipsync in action.",
+      "H3 7% Request your demo",
+      "H2 39% Trusted by leading institutional investors.",
+      "H2 63% Questions, answered."
+    ],
+    "actions": [
+      {
+        "label": "Platform",
+        "count": 1,
+        "firstAt": 1,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Who We Help",
+        "count": 1,
+        "firstAt": 1,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "News & Insights",
+        "count": 1,
+        "firstAt": 1,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "About Us",
+        "count": 1,
+        "firstAt": 1,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Get a demo",
+        "count": 3,
+        "firstAt": 1,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Manage consent",
+        "count": 1,
+        "firstAt": 32,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "How does the process work?",
+        "count": 1,
+        "firstAt": 63,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Request your demo",
+        "count": 1,
+        "firstAt": 68,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Who should join?",
+        "count": 1,
+        "firstAt": 69,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "SOC 2 & ISO 27001 Certified",
+        "count": 1,
+        "firstAt": 94,
+        "firstScreen": false,
+        "sticky": false
+      }
+    ],
+    "prices": [
+      "$4"
+    ],
+    "proofMentions": {
+      "trusted": 3,
+      "clients": 1
+    },
+    "logoImages": 0,
+    "forms": 1,
+    "imagery": {
+      "photos": 0,
+      "illustrations": 0,
+      "videos": 0
+    },
+    "pageHeight": 2781
+  },
+  "motion": {
+    "libraries": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "splitText": false,
+      "lenis": false,
+      "locomotive": false,
+      "swiper": false,
+      "lottie": false,
+      "framerMotion": false,
+      "viewTransitions": false
+    },
+    "stickyPanels": [],
+    "maxRunning": 20,
+    "durationsMs": {
+      "min": 300,
+      "max": 800
+    },
+    "easings": [
+      "ease",
+      "linear"
+    ],
+    "properties": [
+      "backgroundColor",
+      "borderBottomColor",
+      "opacity",
+      "transform"
+    ],
+    "movingWithoutInput": 0,
+    "movingWithoutInputFurtherDown": [
+      {
+        "y": 900,
+        "moving": 9
+      }
+    ],
+    "scriptDrivenOnScroll": 9,
+    "infiniteLoops": 0,
+    "infiniteLoopsWithText": 0,
+    "pauseControl": false,
+    "steps": [
+      {
+        "y": 450,
+        "running": 20,
+        "scriptDriven": 1,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.hd",
+            "hasText": true,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "backgroundColor"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.hd",
+            "hasText": true,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "borderBottomColor"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "h2.reveal",
+            "hasText": true,
+            "duration": 700,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.st",
+            "hasText": true,
+            "duration": 700,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.st",
+            "hasText": true,
+            "duration": 700,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.st",
+            "hasText": true,
+            "duration": 700,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      },
+      {
+        "y": 900,
+        "running": 18,
+        "scriptDriven": 9,
+        "idleMoving": 9,
+        "sample": [
+          {
+            "target": "h2.reveal",
+            "hasText": true,
+            "duration": 700,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.st",
+            "hasText": true,
+            "duration": 700,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.st",
+            "hasText": true,
+            "duration": 700,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.st",
+            "hasText": true,
+            "duration": 700,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.logo",
+            "hasText": false,
+            "duration": 700,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.logo",
+            "hasText": false,
+            "duration": 700,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      },
+      {
+        "y": 1350,
+        "running": 7,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.eyebrow",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "h1.reveal",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "p.lead",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.trust",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "p.other",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.fw",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1800,
+        "running": 7,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "div.eyebrow",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "h1.reveal",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "p.lead",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.trust",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "p.other",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.fw",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1881,
+        "running": 7,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.eyebrow",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "h1.reveal",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "p.lead",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.trust",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "p.other",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.fw",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1881,
+        "running": 7,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "div.eyebrow",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "h1.reveal",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "p.lead",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.trust",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "p.other",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.fw",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1881,
+        "running": 7,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.eyebrow",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "h1.reveal",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "p.lead",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.trust",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "p.other",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.fw",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1881,
+        "running": 7,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "div.eyebrow",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "h1.reveal",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "p.lead",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.trust",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "p.other",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.fw",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1881,
+        "running": 7,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.eyebrow",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "h1.reveal",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "p.lead",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.trust",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "p.other",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.fw",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1881,
+        "running": 7,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "div.eyebrow",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "h1.reveal",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "p.lead",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.trust",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "p.other",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.fw",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      }
+    ]
+  },
+  "smoothness": {
+    "page": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 2417,
+      "frames": 145,
+      "fps": 60,
+      "medianMs": 16.7,
+      "p95Ms": 16.8,
+      "maxMs": 17,
+      "longFrames": 0,
+      "droppedShare": 0,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "baseline": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 1721,
+      "frames": 103,
+      "fps": 59.8,
+      "medianMs": 16.7,
+      "p95Ms": 16.7,
+      "maxMs": 17,
+      "longFrames": 0,
+      "droppedShare": 0,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "longFramesOverBaseline": 0,
+    "p95OverBaseline": 0.1
+  },
+  "reducedMotion": {
+    "movingWithoutInput": 0,
+    "movingOnScroll": 0,
+    "idleNavigation": null,
+    "loadFailed": false
+  },
+  "idleRunLoadFailed": false,
+  "idleNavigation": null
+}
