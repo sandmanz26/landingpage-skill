@@ -1,0 +1,61 @@
+{
+  "juror": "business-customer-story",
+  "kind": "ai",
+  "method": "Evidence packs only, no browser, no code. Read ref-0017/digest.md (outline, actions, motion measures, inspector findings, first 6000 of 8682 chars of page text), desktop-fold.png, sheet-desktop.png, motion-sheet.png, mobile-fold.png, sheet-mobile.png, and ref-0017-demo/digest.md plus sheet-desktop.png. Judged business (does the page move a qualified buyer to the demo), customer (does it speak the buyer's job, pains and language), story (does the sequence carry one argument). Not verified: what the Structure and Leverage steps show when active (only the Capture state is in the captures), whether stats count up, what the 4 endless loops are, the last 2682 characters of home page text, real conversion data.",
+  "refs": {
+    "ref-0017": {
+      "business": "Bipsync sells a research management and knowledge platform (with Toro AI) to institutional investors: asset managers, asset owners (endowments, pensions, family offices) and consultants/OCIOs. Enterprise sale; the paying action is a demo request through a qualifying form, followed by a discovery call and a tailored walkthrough.",
+      "scores": { "business": 7, "customer": 7, "story": 7 },
+      "reasons": {
+        "business": "One action, repeated: 'Get a demo' x4 on home, sticky in the nav at desktop and mobile, closing CTA 'Put your institutional knowledge to work' at 87%. The demo page is the strongest part of the funnel: 'It starts with a conversation', trust chips (SOC 2 & ISO 27001, 15+ years) beside the form, an organization dropdown that segments the lead (traditional, hedge fund, GP, allocator, consultant), and an FAQ that removes enterprise friction (how the process works, who should join incl. compliance and IT, security and migration). Proof is credible for this buyer: $4T+ client AUM, 40TB+, 75% of top 20 US endowments, named logos (Colorado PERA, WashU, USC, Pilot House, Triodos) and an attributed quote. Held back: proof first appears at 63% of the home page, no outcome figure anywhere (the demo meta promises 'save hours every week' but the page never quantifies it), the form is 8 fields incl. phone and an open question, and the cookie banner covers the hero CTAs on the first screen at both widths.",
+        "customer": "The vocabulary is the buyer's own: managers, funds, diligence, IC meetings, LPAC call, capital call notice, Fund IV, GP-led continuation vehicles; the product mock is filled with that data, which tells an analyst 'this was built for my desk'. The 'Today / With Bipsync' pairs name real pains (notes apart from managers, approvals in inboxes, research repeated, knowledge leaves with people). The segment picker lets each of three buyer types self-select. Weak: the H1 'Turn fragmented investment knowledge into an institutional advantage' is a category abstraction, not a job outcome, and runs 6 lines desktop / 7 mobile; the pain section's key line 'The challenge is putting it to work.' measures 2.72:1 contrast; running text in the product sections sits at 12.5-15px and the mock at 9-10px, so the domain detail that wins the buyer is hard to read.",
+        "story": "A complete, conventional enterprise arc: category + promise -> problem (knowledge exists but is fragmented) -> before/after pairs -> method (Capture. Structure. Leverage.) -> product proof (search and Toro answering from your own records, then creating a task) -> who it is for -> proof at scale -> security -> news -> CTA. The hero visual supports the thesis (labelled clusters Data/Research/Email/Meetings/Documents resolving into a hex structure). The arc breaks at its hinge: 'Bipsync changes that.' is among 52 text elements never visible during a full scroll, and with reduced motion 11 text elements (incl. 'The challenge') stay hidden, so the pivot from problem to solution can be lost. The triad 'Capture. Structure. Leverage.' is generic SaaS phrasing; the specific story is carried by the mock, not the words."
+      },
+      "claims": [
+        {
+          "claim": "1. The hero is good because it is animated.",
+          "verdict": "Partly true, wrong reason.",
+          "evidence": "motion-sheet 0-2000ms: scattered coloured dots labelled Data, Research, Email, Meetings, Documents settle into a structured hex field. That motion carries the thesis (fragmented -> structured), which is why it is worth having; animation alone is not the merit. The source labels are near-invisible at fold size, the H1 is 6 lines, nothing in the hero states an outcome or proof, and the cookie banner hides the Get a demo / Explore Bipsync buttons on desktop and mobile first screen. The hero is good on message and mood, average on conversion."
+        },
+        {
+          "claim": "2. 'Capture. Structure. Leverage.' is motion that really gives the user a message.",
+          "verdict": "True for Capture; not verified for Structure and Leverage.",
+          "evidence": "Captures show the Capture step active with a 'Research Inbox, Auto-captured' list (Expert call transcript from AlphaSense, Performance_Q3.xlsx, Preqin outlook, Canoe capital call notice, Teams IC notes, each marked 'Captured', 1,245 items) linked to 'Connected sources & integrations'. That shows the integration claim instead of asserting it. No capture shows what changes when Structure or Leverage becomes active. The headline words themselves are generic."
+        },
+        {
+          "claim": "3. A demo of the product is shown, maybe only a video.",
+          "verdict": "Product is shown; the evidence points to coded HTML, not video (not confirmed by code inspection).",
+          "evidence": "The mock's labels are in the page text (Priya Shah, Notes list with dates, Toro 'Searched 1,240 notes · 86 meetings · 14 decisions', '+ Create task', 'Task created: Follow up with Lakeview Lane on Fund IV pricing', 'TOP RESULTS ... View all 1,240 results') and the inspector measures font sizes inside it (9px 'Bipsync AI', 9.3px '1,240'), which a video would not expose. It is a staged mock with plausible data, not proof it is the shipping UI. For the buyer it is the most persuasive block on the page: ask -> sourced answer -> action."
+        },
+        {
+          "claim": "4. The rest is decent, especially layout, colour and cleanliness.",
+          "verdict": "Layout and surface: yes. System: weaker than it looks.",
+          "evidence": "Alternating dark green-black and light mint sections pace the page well and the single accent (#3beba8) keeps the CTA findable. But: 36 chromatic colours, 24 font sizes with 12 display sizes on no scale, 26 drop shadows, 14 text elements below WCAG AA, 52 never-visible text elements, 26 sub-24px tap targets on mobile. Clean to the eye at thumbnail size, not clean in the build."
+        }
+      ],
+      "motion": [
+        { "what": "Hero: labelled particle clusters (Data, Research, Email, Meetings, Documents) settling into a hex structure on load", "message it carries": "Scattered sources become one structure: the product thesis", "verdict": "earns its place (labels too faint to read)" },
+        { "what": "'Today / With Bipsync' paired cards with slider dots (pain card flips to solution)", "message it carries": "Before -> after for each pain", "verdict": "earns its place, but the reveal fails: 'Bipsync changes that.' never becomes visible" },
+        { "what": "Capture/Structure/Leverage stepper with Research Inbox items arriving as 'Captured' from named integrations", "message it carries": "Your existing sources feed Bipsync automatically", "verdict": "earns its place (Structure/Leverage states not verified)" },
+        { "what": "Search + Toro AI mock: query, sourced answer, task created, top results", "message it carries": "Ask your own records and act on the answer", "verdict": "earns its place" },
+        { "what": "Scroll fade-in of headings and copy (motion-sheet 450px, 2250px, 4050px show half-faded text)", "message it carries": "none", "verdict": "decoration; harmful: 11 texts stay hidden under reduced motion" },
+        { "what": "4 endless loops further down (about 4500px, 20 moving elements; likely logo/testimonial or background, not identified)", "message it carries": "none identified", "verdict": "decoration (pause control present)" }
+      ],
+      "problems": [
+        "The story's hinge can disappear: 52 text elements never become visible on scroll (incl. 'Bipsync changes that.') and 11 stay hidden with reduced motion; a reveal must never gate content.",
+        "The hero sells a category, not an outcome: abstract 6-7 line H1, no number for time saved or decisions sped up, proof held until 63% of the page, and the cookie banner covers the hero CTAs on the first screen.",
+        "The persuasive detail is hard to read: 14 contrast failures (e.g. 'The challenge is putting it to work.' 2.72:1), 9-10px text in the product mock, running text at 12.5-15px."
+      ],
+      "keep": [
+        "Today vs With Bipsync pairs: names each pain in the buyer's words and answers it in the same card.",
+        "Product mock filled with domain-true data (IC meeting, Fund IV, LPAC, capital call notice): proves fit to an investment team faster than any claim.",
+        "Ask -> sourced answer -> task created sequence: shows AI value as an action with sources, not a promise.",
+        "Segment picker (asset managers / asset owners / consultants): lets three buyers self-identify and see their own benefits.",
+        "Buyer-specific proof: client AUM, share of top 20 US endowments, named institutional logos, attributed quote.",
+        "Demo page pattern: 'It starts with a conversation', trust chips beside the form, segmenting dropdown, FAQ on process, who should join, security and migration: removes enterprise purchase friction at the moment of asking.",
+        "Security section before the final CTA: answers the compliance objection before the ask."
+      ],
+      "veto": null
+    }
+  }
+}

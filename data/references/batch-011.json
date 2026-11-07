@@ -1,0 +1,87 @@
+{
+ "batch": "batch-011",
+ "received": "2026-11-07",
+ "from": "owner (chat, 3 screenshots, 4 notes)",
+ "status": "captured (home, book-a-demo), judged by 2 combined AI jurors and the owner",
+ "jury": {
+  "folder": "data/references/jury/batch-011",
+  "jurors": [
+   "visual-motion",
+   "business-customer-story"
+  ],
+  "human_votes": 1,
+  "note": "82.2k + 85.3k tokens"
+ },
+ "entries": [
+  {
+   "id": "ref-0017",
+   "url": "https://bipsync.com/",
+   "site": "bipsync",
+   "sector": "finance",
+   "pages": {
+    "demo": "ref-0017-demo (https://bipsync.com/book-a-demo/)"
+   },
+   "business": {
+    "what": "Investment research and knowledge management platform for asset managers, owners and consultants (notes, meetings, documents, AI assistant 'Toro').",
+    "action_that_pays": "Get a demo (a qualifying form with FAQ on process, security and migration)",
+    "source": "captured pages",
+    "confidence": "high"
+   },
+   "owner": {
+    "visual": 7.5,
+    "ship": 8
+   },
+   "jury_scores": {
+    "business": 7,
+    "customer": 7,
+    "story": 7,
+    "distinctiveness": 6,
+    "craft": 5,
+    "clarity": 6,
+    "weighted": 6.7
+   },
+   "combined": {
+    "final": 7.4,
+    "gap": 1.3,
+    "visualVsShip": -0.5
+   },
+   "veto": null,
+   "claims": [
+    {
+     "claim": "The hero is good because it is animated",
+     "verdict": "partly; right result, wrong reason",
+     "evidence": "The motion is good because it acts out the H1: particles labelled with sources (Data, Research, Email, Meetings, Documents) join into one grid. The labels are nearly invisible, the cookie banner covers the animation and the CTAs, and the H1 runs 6-7 lines on the phone."
+    },
+    {
+     "claim": "Capture/Structure/Leverage: motion that gives the user a message",
+     "verdict": "true for Capture, unverified for the rest",
+     "evidence": "The Research Inbox fills itself from integrations (Outlook, Addepar, AlphaSense): auto-capture shown, not told. Structure and Leverage states were not in the capture."
+    },
+    {
+     "claim": "A product demo, maybe only a video",
+     "verdict": "not a video",
+     "evidence": "The product UI is built in code: its texts (notes list, Toro answers, top results) are page text and measured at 9-11 px. A built mock, not a video and not an interactive demo."
+    },
+    {
+     "claim": "Layout, colour, cleanliness are very good",
+     "verdict": "layout yes, system no",
+     "evidence": "Clean and orderly at a glance, but 24 font sizes, 36 colour values (partly integration logos), 14 texts below AA (a green H3 at 2.72:1), body text 12.5-13.5 px."
+    }
+   ],
+   "motion": "Carries the message: hero sources-into-grid; Research Inbox auto-capturing; ask-to-sourced-answer-to-task flow. Measured: 55 fps, pause control present, reduced motion respected for movement. But 52 texts never appear during a scroll and 11 stay hidden under reduced motion (e.g. the key line 'Bipsync changes that.'); cause unverified (reveals that do not fire, or cycling mock states).",
+   "library_candidates": [
+    "A hero motion that acts out the headline (scattered sources joining into one structure)",
+    "A product mock filled with real domain data (fund names, IC meetings, expert calls) built in code",
+    "'Today vs With Bipsync' comparison cards",
+    "A demo page that qualifies the lead and answers process, security and migration questions"
+   ],
+   "avoid": [
+    "Product UI text at 9-11 px: the most convincing detail becomes unreadable",
+    "Reveals that never fire, hiding a key line",
+    "24 font sizes; a 6-7 line H1 on the phone; a cookie banner over the first screen's actions",
+    "A category hero with no outcome number; proof only at 63% of the page"
+   ]
+  }
+ ],
+ "owner_taste_signal": "Owner and AI agree on business (8 vs 7) and differ on craft (7.5 vs 5): the jurors count the type system, contrast and hidden text that the owner reads as 'clean'. Second site in a row where the owner praises motion for its message, and the jurors confirm the message while correcting the reason ('animated' is not the merit; acting out the headline is)."
+}

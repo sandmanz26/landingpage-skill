@@ -1,7 +1,7 @@
 {
-  "builtAt": "2026-11-06T05:31:25.333Z",
+  "builtAt": "2026-11-07T18:38:30.682Z",
   "source": "data/references (batch-*.json, captures/*/style.json)",
-  "count": 15,
+  "count": 16,
   "sectors": {
     "commerce": [
       "ref-0001"
@@ -30,22 +30,25 @@
       "ref-0014"
     ],
     "finance": [
-      "ref-0015"
+      "ref-0015",
+      "ref-0017"
     ]
   },
   "groups": [
     {
       "id": "style-1",
-      "name": "surface:glass · colour:bold · motion:subtle · shape:pill",
+      "name": "surface:glass · colour:bold · motion:subtle · shape:pill · type:serif",
       "shared": [
         "surface:glass",
         "colour:bold",
         "motion:subtle",
-        "shape:pill"
+        "shape:pill",
+        "type:serif"
       ],
       "members": [
         "ref-0001",
-        "ref-0002"
+        "ref-0002",
+        "ref-0017"
       ]
     },
     {
@@ -1856,6 +1859,126 @@
         ]
       },
       "styleGroup": "style-7"
+    },
+    {
+      "id": "ref-0017",
+      "site": "bipsync",
+      "url": "https://bipsync.com/",
+      "batch": "batch-011",
+      "review": "data/references/batch-011-review.md",
+      "business": "Investment research and knowledge management platform for asset managers, owners and consultants (notes, meetings, documents, AI assistant 'Toro').",
+      "actionThatPays": "Get a demo (a qualifying form with FAQ on process, security and migration)",
+      "scores": {
+        "ai": 6.7,
+        "ownerOverall": null,
+        "ownerVisual": 7.5,
+        "ownerShip": 8,
+        "final": 7.4
+      },
+      "veto": null,
+      "patternOnly": false,
+      "patterns": [
+        "A hero motion that acts out the headline (scattered sources joining into one structure)",
+        "A product mock filled with real domain data (fund names, IC meetings, expert calls) built in code",
+        "'Today vs With Bipsync' comparison cards",
+        "A demo page that qualifies the lead and answers process, security and migration questions"
+      ],
+      "avoid": [
+        "Product UI text at 9-11 px: the most convincing detail becomes unreadable",
+        "Reveals that never fire, hiding a key line",
+        "24 font sizes; a 6-7 line H1 on the phone; a cookie banner over the first screen's actions",
+        "A category hero with no outcome number; proof only at 63% of the page"
+      ],
+      "sector": "finance",
+      "style": {
+        "features": [
+          "surface:glass",
+          "colour:bold",
+          "type:quiet",
+          "type:serif",
+          "imagery:illustration",
+          "motion:subtle",
+          "shape:pill"
+        ],
+        "tags": [
+          "gradient-heavy",
+          "glass",
+          "shadowed",
+          "many-colours",
+          "pill-shapes",
+          "many-type-sizes",
+          "one-typeface",
+          "serif",
+          "endless-motion",
+          "illustration",
+          "pop-up-on-load"
+        ],
+        "type": {
+          "families": [
+            "inter",
+            "arial",
+            "georgia"
+          ],
+          "display": 60,
+          "body": 16,
+          "ratio": 3.8,
+          "sizes": 24
+        },
+        "palette": {
+          "chromatic": 36,
+          "gradients": 25,
+          "shadows": 26,
+          "backgrounds": [
+            "#3beba8",
+            "#020403",
+            "#ffffff",
+            "#fff8f7",
+            "#f3fbf7"
+          ]
+        },
+        "radii": [
+          "8px",
+          "6px",
+          "10px",
+          "12px"
+        ],
+        "motion": {
+          "libraries": [],
+          "stickyPanels": 0,
+          "durationsMs": {
+            "min": 250,
+            "max": 10000
+          },
+          "easings": [
+            "ease",
+            "linear",
+            "cubic-bezier(0.4, 0, 0.2, 1)"
+          ],
+          "reducedMotionRespected": true,
+          "smoothness": {
+            "fps": 55.4,
+            "longFrames": 1,
+            "baselineLongFrames": 0,
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+          }
+        },
+        "doNotCopy": [
+          "tiny-text: Text at 9.5px",
+          "tiny-text: Text at 9.8px",
+          "tiny-text: Text at 9px",
+          "tiny-text: Text at 9.3px",
+          "headline-lines: h1 runs to 6 lines",
+          "contrast: 14 text elements below WCAG AA (measured on screen pixels)",
+          "hidden-content: 52 text elements were never visible during a full scroll (a reveal that never fires?)",
+          "headline-lines: h1 runs to 4 lines",
+          "hidden-content: 49 text elements were never visible during a full scroll (a reveal that never fires?)",
+          "headline-lines: h1 runs to 7 lines",
+          "tap-target: 26 controls smaller than 24x24px on a phone",
+          "reduced-motion: 11 text elements stay hidden when the visitor asks for reduced motion",
+          "pop-up over the first screen on load"
+        ]
+      },
+      "styleGroup": "style-1"
     }
   ]
 }
