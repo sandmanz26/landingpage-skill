@@ -1,0 +1,3 @@
+# batch-011 (2026-11-07) owner: visual 7.5, ship 8; fintech (investment research SaaS); home + book-a-demo (the action that pays)
+ref-0017 https://bipsync.com/
+ref-0017-demo https://bipsync.com/book-a-demo/
