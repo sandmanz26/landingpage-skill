@@ -7,6 +7,14 @@ inbox, editor) rather than read and scrolled. Different rules apply:
   Tailwind) until the user approves another, and tell them why; the brief records it on a
   `Component library:` line (`rules/stack.md`, checked by `progress.mjs done brief`). An existing
   project keeps its own (`modes/improve.md`).
+- **Style variations (direction step):** admin screens look alike, so ask whether the user wants
+  to see 2–3 style options first (four-part question with "percayakan ke AI", `admin/method.md` §4).
+  "Ya": `adminoptions.mjs` renders A/B/C side by side (sidebar, modal, a table when the screen
+  lists records) from the team's admin references, restyled by the brand kit when it exists; the
+  user replies "Pilih B" and you log `admin-style: …`. "Percayakan ke AI": pick the direction whose
+  "fits" matches the brief, render the page anyway and say why. "Tidak": log
+  `admin-variations declined: …`. Same shadcn/ui structure, 3–4 of the ten style levers changed.
+  With guided gates `progress.mjs done direction` checks it.
 - **Allowed here:** quiet 1px borders, small labels, tables, repeated panels, tabular figures,
   monospace for real code or IDs. They help people scan and work.
 - **Priorities:** hierarchy of the task (what the user does most), alignment, density that fits the

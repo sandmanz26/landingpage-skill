@@ -122,6 +122,10 @@ const lineValue = (text, key) => {
 const ADMIN = /\b(admin|back[- ]?office|backoffice|dashboard|dasbor)\b/i;
 const NOT_ADMIN = /\b(landing|marketing|website|situs|company profile|profil perusahaan)\b/i;
 const AGREED = /\b(agreed|approved|disetujui|setuju|the user'?s|milik (user|pengguna|klien)|existing|sudah ada|design system)\b/i;
+const isAdminBrief = (brief) => {
+  const what = lineValue(brief, 'What|Apa') || '';
+  return ADMIN.test(what) && !NOT_ADMIN.test(what);
+};
 const NONE_FOUND = /^\(?(none found|tidak ditemukan|belum ditemukan)/i;
 
 // The motion spec names the message and its signature motion, the entrance and the state
@@ -343,9 +347,8 @@ switch (cmd) {
     if (step === 'brief') {
       // Admin panels, dashboards, back offices name their component library; the default is shadcn/ui (rules/stack.md).
       const brief = readDesign('brief.md');
-      const what = lineValue(brief, 'What|Apa') || '';
       const lib = lineValue(brief, 'Component library|Library komponen|Pustaka komponen');
-      if (ADMIN.test(what) && !NOT_ADMIN.test(what) && !lib)
+      if (isAdminBrief(brief) && !lib)
         fail('brief.md asks for an admin panel, dashboard or back office: add a "- Component library:" line. With none agreed, use shadcn/ui (React + Tailwind) as the default and tell the user why (rules/stack.md).');
       if (lib && !/shadcn/i.test(lib) && !AGREED.test(lib))
         fail(`brief.md "Component library: ${lib}": a library other than the shadcn/ui default needs the user's agreement on that line ("agreed", "the user's design system", "existing") (rules/stack.md).`);
@@ -398,10 +401,24 @@ switch (cmd) {
         fail(`"direction" needs the brand kit: ${probs.join('; ')}. Read .design/brand-kit.json from a brand run, or write a short kit with brand/method.md${s.gates === 'autopilot' ? '; in autopilot you may instead log a default: log "brand-kit default: <hero element, supporting elements>"' : ''}.`);
     }
     if (step === 'direction' && !fs.existsSync(path.join(DIR, 'directions'))) fail('"direction" needs the dealt directions in .design/directions/.');
+    // Admin and app screens with guided gates: the style variations were shown and a choice logged, or declined (admin/method.md §4).
+    const adminRun = step === 'direction' && isAdminBrief(readDesign('brief.md'));
+    const adminOptions = path.join(DIR, 'options', 'admin-options.html');
+    if (adminRun && s.gates === 'guided') {
+      const logText = fs.existsSync(LOG) ? fs.readFileSync(LOG, 'utf8') : '';
+      const declined = /admin-variations declined/i.test(logText);
+      const pick = logText.match(/admin-style:\s*([A-C])\b/i);
+      if (!declined) {
+        if (!fs.existsSync(adminOptions)) fail('This is an admin/app-screen run: ask the variation question (admin/method.md §4). With "ya" or "percayakan ke AI" render the options with adminoptions.mjs (.design/options/admin-options.html) and log the choice: log "admin-style: <letter> <id> (user: <their words>)"; with "tidak" log "admin-variations declined: <their words>".');
+        if (!pick) fail('.design/options/admin-options.html exists but no choice is logged: show it, then log "admin-style: <letter> <id> (user: <their words>)", or "(percayakan ke AI: <reason>)" (admin/method.md §4).');
+        if (!new RegExp(`data-option="${pick[1].toUpperCase()}"`).test(fs.readFileSync(adminOptions, 'utf8'))) fail(`The logged admin-style ${pick[1].toUpperCase()} is not an option on .design/options/admin-options.html: log the letter the user picked from that page.`);
+      }
+    }
     if (step === 'direction' && s.gates === 'guided') {
       const dd = path.join(DIR, 'directions');
       const sketches = fs.existsSync(dd) ? fs.readdirSync(dd).filter((f) => /^sketch-.*\.html$/.test(f)) : [];
-      if (sketches.length < 2) fail('With guided gates the user chooses from pictures: build a first-screen sketch per direction (.design/directions/sketch-a.html, sketch-b.html …) and show them with compare.mjs (rules/brief-interview.md).');
+      // In an admin run the options page is the picture the user chose from.
+      if (sketches.length < 2 && !(adminRun && fs.existsSync(adminOptions))) fail('With guided gates the user chooses from pictures: build a first-screen sketch per direction (.design/directions/sketch-a.html, sketch-b.html …) and show them with compare.mjs (rules/brief-interview.md).');
     }
     if (step === 'direction' && !fs.existsSync(path.join(DIR, 'targets.json')))
       fail('"direction" needs .design/targets.json: the visual dials the user chose (rules/visual-dials.md), or team/visual-defaults.json copied with the reason.');

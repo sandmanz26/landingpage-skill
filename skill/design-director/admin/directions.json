@@ -1,0 +1,105 @@
+{
+  "_comment": "Style directions for admin panels and app screens (admin/method.md). Derived from the owner's admin references in data/admin-patterns (batch admin-a01 sidebar, admin-a02 modal: style_levers and owner notes, 2026-11-09). Structure stays shadcn/ui (rules/stack.md); a direction changes 3-4 of the ten levers, named in `levers`. Tokens are rebuilt in our own values; no asset from a reference is copied (rules/copyright.md). Accents are stand-ins: a brand kit (.design/brand-kit.json) replaces colours, radii and fonts. Read by scripts/adminoptions.mjs.",
+  "version": "2026-11-09",
+  "baseline": "shadcn/ui default (neutral): white surface, 1px zinc borders, radius 8-10, grey active item, black primary, outline icons, 14px system type, no shadow, 150ms colour transitions",
+  "directions": [
+    {
+      "id": "soft-floating",
+      "name": "Lembut melayang",
+      "character": "Kartu putih melayang di atas latar abu muda, sudut besar, tombol utama gelap dan lebar: tenang dan rapi, untuk tim yang bekerja lama di layar.",
+      "fits": "SaaS umum, alat kerja tim, HR, penjadwalan, CRM; pengguna non-teknis",
+      "avoid": "tabel sangat padat (sudut besar dan jarak lega memakan tempat)",
+      "levers": ["shape", "depth", "primary", "details"],
+      "refs": [
+        { "id": "sb-001", "takes": "pencarian dengan pintasan ⌘, menu dikelompokkan, akun di bawah, jarak bersih" },
+        { "id": "sb-002", "takes": "kartu melayang, item aktif berupa pill abu, badge jumlah" },
+        { "id": "sb-004", "takes": "kartu bersudut sangat besar di atas latar berwarna" },
+        { "id": "md-001", "takes": "judul + subjudul, tombol utama gelap selebar sisa ruang, Batal kecil bergaris, header dan footer dipisah garis tipis" }
+      ],
+      "tokens": {
+        "scheme": "light",
+        "canvas": "#e8e8ec",
+        "surface": "#ffffff",
+        "inset": "#f4f4f6",
+        "border": "#e3e3e8",
+        "text": "#16181d",
+        "muted": "#5b5f6b",
+        "accent": "#4338ca",
+        "primary": "#141a33",
+        "active": { "style": "pill", "bg": "#f0f0f3", "text": "#16181d" },
+        "icons": { "style": "outline", "stroke": 1.6, "activeAccent": false },
+        "type": { "titleWeight": 650, "titleSize": 20, "body": 14, "groupLabel": "plain", "tracking": "-0.01em" },
+        "radius": { "surface": 24, "control": 12, "item": 10, "button": 12 },
+        "density": { "row": 36, "pad": 16, "gap": 2 },
+        "shadow": "0 1px 2px rgba(20,24,40,.06), 0 18px 40px -12px rgba(20,24,40,.22)",
+        "glass": null,
+        "details": ["pintasan ⌘ di pencarian dan menu utama", "subjudul abu di modal", "garis tipis memisah header dan footer modal", "segmented control untuk pilihan pendek"],
+        "motion": "Modal naik 8px + memudar 200ms; item menu ganti latar 150ms. Reduced motion: hanya memudar."
+      }
+    },
+    {
+      "id": "dark-layered",
+      "name": "Gelap berlapis, satu aksen",
+      "character": "Lapisan biru-gelap bertingkat (rail ikon, panel menu, isi) dengan satu warna aksen yang menghidupkan item aktif dan tombol utama: fokus, cocok untuk kerja lama dan menu bertingkat.",
+      "fits": "alat developer, analitik, operasional, menu bertingkat (multi-level), pengguna yang membuka panel seharian",
+      "avoid": "pengguna awam yang mengharapkan tampilan terang; brand yang warnanya pudar di latar gelap",
+      "levers": ["surface", "active", "primary", "icons"],
+      "refs": [
+        { "id": "sb-003", "takes": "rail ikon + panel kedua (tiga level), segmented control untuk lingkup menu, garis indentasi sub-menu, item aktif berupa lapisan lebih terang" },
+        { "id": "sb-003 (catatan owner)", "takes": "warna dan nada sudah baik tetapi perlu satu warna utama supaya hidup: aksen dipakai di item aktif dan tombol utama; kontras item aktif dicek terhadap AA" }
+      ],
+      "tokens": {
+        "scheme": "dark",
+        "canvas": "#0b1020",
+        "rail": "#0d1324",
+        "surface": "#121a2c",
+        "inset": "#1b2438",
+        "border": "#26314a",
+        "text": "#eef1f7",
+        "muted": "#9aa4b8",
+        "accent": "#34d399",
+        "primary": "#34d399",
+        "active": { "style": "layer-bar", "bg": "#1f2a42", "text": "#ffffff" },
+        "icons": { "style": "outline", "stroke": 1.7, "activeAccent": true },
+        "type": { "titleWeight": 600, "titleSize": 19, "body": 14, "groupLabel": "caps", "tracking": "0" },
+        "radius": { "surface": 14, "control": 8, "item": 8, "button": 8 },
+        "density": { "row": 34, "pad": 14, "gap": 2 },
+        "shadow": "0 24px 60px -20px rgba(0,0,0,.6)",
+        "glass": null,
+        "details": ["rail ikon di kiri panel menu", "label grup huruf kapital kecil", "garis indentasi untuk sub-menu", "titik aksen pada notifikasi"],
+        "motion": "Garis aksen item aktif bergeser 160ms; modal memudar + skala 0.98→1 180ms. Reduced motion: tanpa geser dan skala."
+      }
+    },
+    {
+      "id": "glass-dark",
+      "name": "Kaca gelap, cahaya hangat",
+      "character": "Panel kaca tembus pandang di atas latar hampir hitam dengan cahaya oranye di belakang, garis tipis terang, tombol pill, angka putih besar: terasa teknologi dan keuangan.",
+      "fits": "fintech, kripto, dasbor keuangan, produk teknologi yang ingin terasa premium",
+      "avoid": "tabel padat dan form panjang (kaca menurunkan keterbacaan); perangkat lemah (blur mahal); jangan untuk semua panel, cukup kartu dan modal",
+      "levers": ["surface", "depth", "shape", "type"],
+      "refs": [
+        { "id": "md-005", "takes": "kaca gelap tembus pandang, cahaya oranye hangat di belakang, garis tipis terang, sudut besar, tombol pill sekunder, huruf tipis besar, angka putih" }
+      ],
+      "tokens": {
+        "scheme": "dark",
+        "canvas": "#121212",
+        "surface": "#262422",
+        "inset": "#33302d",
+        "border": "#4a4541",
+        "text": "#f6f4f2",
+        "muted": "#b7b0aa",
+        "accent": "#f97316",
+        "primary": "#f97316",
+        "active": { "style": "glass-pill", "bg": "#3a3532", "text": "#ffffff" },
+        "icons": { "style": "outline", "stroke": 1.5, "activeAccent": true },
+        "type": { "titleWeight": 400, "titleSize": 22, "body": 14, "groupLabel": "plain", "tracking": "0.01em" },
+        "radius": { "surface": 24, "control": 999, "item": 999, "button": 999 },
+        "density": { "row": 36, "pad": 18, "gap": 4 },
+        "shadow": "0 30px 80px -20px rgba(0,0,0,.7)",
+        "glass": { "alpha": 0.62, "blur": 18, "glow": "#f97316" },
+        "details": ["cahaya hangat di belakang panel", "angka dengan tabular figures", "pill hijau/merah untuk perubahan", "tanda brand di kiri atas"],
+        "motion": "Cahaya diam (tidak berdenyut); modal memudar 220ms. Reduced motion: langsung tampil."
+      }
+    }
+  ]
+}

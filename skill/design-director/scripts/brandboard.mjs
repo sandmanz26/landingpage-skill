@@ -10,7 +10,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { parseArgs, launch, resolveTarget } from './lib/browser.mjs';
-import { validateKit } from './lib/brandkit.mjs';
+import { validateKit, ratio, SYSTEM_FONT as SYSTEM } from './lib/brandkit.mjs';
 
 const args = parseArgs(process.argv.slice(2));
 const input = args._[0];
@@ -32,15 +32,7 @@ if (errs.length) {
   process.exit(1);
 }
 
-// --- colour maths (WCAG relative luminance)
-const rgb = (h) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16) / 255);
-const lum = (h) => rgb(h).map((c) => (c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4)).reduce((a, c, i) => a + c * [0.2126, 0.7152, 0.0722][i], 0);
-const ratio = (a, b) => {
-  const [x, y] = [lum(a), lum(b)].sort((m, n) => n - m);
-  return (x + 0.05) / (y + 0.05);
-};
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
-const SYSTEM = /^(arial|helvetica|georgia|times new roman|verdana|tahoma|trebuchet ms|courier new|palatino|garamond|dejavu (sans|serif)|liberation (sans|serif)|noto (sans|serif)|system-ui|serif|sans-serif|monospace)$/i;
 
 function tokens(kit) {
   const by = (role) => (kit.colors.find((c) => c.role === role) || {}).hex;

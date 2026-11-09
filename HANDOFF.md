@@ -583,6 +583,28 @@ was not changed.
   page path without a key could not be tested live (bot wall); the build itself is not checked for
   shadcn/ui use.
 
+**2026-11-09: admin style variations (owner).**
+- New module `admin/` (one home): `admin/method.md` (the ten style levers; change 3–4
+  consistently, not all ten; the variation question in the four-part form with "percayakan ke AI";
+  brand kit overrides colours, radii, fonts; chosen tokens into the shadcn/ui theme) and
+  `admin/directions.json` (soft-floating ← sb-001/002/004 + md-001; dark-layered ← sb-003 + owner's
+  "needs a primary colour"; glass-dark ← md-005; tokens, levers, ref ids, fits/avoid).
+- `scripts/adminoptions.mjs`: writes `.design/options/admin-options.html` (A/B/C side by side:
+  expanded sidebar with search, groups, active item, account; modal with title, subtitle, short
+  form, wide primary + small secondary; optional table; sample content marked `data-sample`;
+  reply "Pilih B" / "Percayakan ke AI") and `admin-options.json` (effective tokens + shadcn/ui
+  CSS variables per option). Text colours are nudged to AA automatically. Colour maths and the
+  system-font list moved to `scripts/lib/brandkit.mjs` (shared with brandboard.mjs).
+- `progress.mjs done direction`: an admin brief (`What:` line, same detection as rules/stack.md)
+  with guided gates needs the options page + a logged `admin-style: <A-C> …` (letter must be on
+  the page), or a logged `admin-variations declined: …`; in an admin run the options page stands
+  in for the first-screen sketches. Wired in SKILL.md (step 1, Files, Scripts), modes/app-screen.md,
+  modes/create.md §5, rules/stack.md. Five selftests added; `npm test` passes (113 checks).
+- Not verified: no run with a real user; the directions' look is not judged by the jury or the
+  owner; accents are stand-ins; admin detection is the brief word match (a redesign without
+  brief.md escapes the check); a turn back to direction keeps an earlier `admin-style:` log line;
+  only sidebar, modal and table are rendered (no popover/tabs from md-003/md-004 yet).
+
 ## 4. Decisions and why (do not undo without a reason)
 
 | Decision | Why |

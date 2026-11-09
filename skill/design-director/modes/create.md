@@ -125,6 +125,10 @@ references with the role each one plays (see `rules/copyright.md`), and read the
 5. Never carry over anything in `doNotCopy`, under a veto, or from an entry marked `patternOnly`
    (those are used through their tags only).
 
+Admin panels and app screens (`modes/app-screen.md`): ask the style-variation question here and
+let the user pick from `.design/options/admin-options.html` (`admin/method.md` §4); in an admin run
+that page is the picture the user chooses from, in place of the first-screen sketches.
+
 With guided gates, build each direction's first screen as a quick sketch
 (`.design/directions/sketch-a.html` …: real headline, action, dial values, the main picture idea)
 and show them side by side with `compare.mjs` so the user chooses from pictures, not descriptions.

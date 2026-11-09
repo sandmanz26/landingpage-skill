@@ -64,7 +64,9 @@ means three things at once: it serves the business, it answers the customer, and
    Add `modes/app-screen.md` on top when the screen is worked in (dashboard, admin, settings,
    inbox, editor) rather than read. An admin panel, dashboard or back office with no agreed design
    system or component library is built with shadcn/ui (React + Tailwind) until the user approves
-   another; tell them why (`rules/stack.md`).
+   another; tell them why (`rules/stack.md`). At the direction step ask whether the user wants
+   to see 2–3 style variations (sidebar, modal, …) so the panel does not look generic; they pick
+   from `adminoptions.mjs`'s page, or trust the AI (`admin/method.md`).
 
 2. **Effort.** `quick` for a section or a small fix, `standard` for a page (default), `thorough` for a
    pitch, a flagship page or a whole site (best-of-3 on every key section). Subagent budget per run
@@ -205,6 +207,7 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 | `library/intake.md` | When the team sends references with their notes |
 | `rules/brief-interview.md` | Every question to the user (plain words, what it changes, an example per choice, a recommendation, "percayakan ke AI"); the brief step: the one guiding message, the materials (photos, product UI, brand assets; mock or placeholder for missing UI; telling the user about dummy pictures; with no photos, the three stand-in paths and the Unsplash Access Key steps), liked sites into dials, sketches at the direction gate |
 | `rules/stack.md` | The brief step: the stack and component library; an admin panel, dashboard or back office defaults to shadcn/ui (React + Tailwind) until the user agrees another |
+| `admin/method.md`, `admin/directions.json` | The direction step of an admin or app screen: the ten style levers (change 3–4, consistently), the style directions from the team's admin references, the variation question, the brand kit overriding a direction, the chosen tokens into the shadcn/ui theme |
 | `rules/visual-dials.md` | The direction gate: the dials, presets from the library, how to guide the user |
 | `rules/illustration.md` | Writing the spec when the client has no pictures: photographs by the chosen stand-in path, drawing flat illustration, the shot list |
 | `library/index.json` (via `library.mjs find`) | The direction step: the team's judged references with their style cards; adapt each to the client or ask (`modes/create.md`) |
@@ -214,7 +217,7 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 
 | Command | Does |
 | --- | --- |
-| `progress.mjs init / check / done / approve / back / skip / log / status` | Order of steps, gates, turn back; content checks per step (brief Materials, an admin brief's Component library with the shadcn/ui default logged, spec Interactions and Motion spec, deliver.md, …) |
+| `progress.mjs init / check / done / approve / back / skip / log / status` | Order of steps, gates, turn back; content checks per step (brief Materials, an admin brief's Component library with the shadcn/ui default logged, an admin direction's style options with a logged choice or decline, spec Interactions and Motion spec, deliver.md, …) |
 | `brandboard.mjs <brand-kit.json or directions.json> [--out .design/brand] [--no-pdf]` | The brand board: palette with roles and contrast pairs, type, shape and motion, elements, the placeholder wordmark, the brand in use (web hero, price card, social post); `board.html` and `board.pdf` |
 | `draw.mjs --sector <s> [--tone <t>] [--have a,b] [--options 3]` | Deals directions into `.design/directions/` (`--list sectors`) |
 | `inspect.mjs <url or file> [--out dir] [--allow rule]` | Real-browser check at 1440/768/390, screenshots, design inventory; INFO `placeholder-logo` and `sample-ui` (`data-sample`) for the deliver report |
@@ -226,6 +229,7 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 | `digest.mjs <dir>` | `digest.md`: the one short file a juror reads first (outline, motion, inventory, findings, page text) |
 | `capture.mjs <list.txt> [--jobs 3]` | Runs inspect, evidence, digest and style for a whole batch in parallel |
 | `dials.mjs suggest <liked dirs> [--dislike dirs]` | Sites the user likes and dislikes → suggested dials, with where they agree and what to avoid |
+| `adminoptions.mjs [--kit f] [--brief "…"] [--components sidebar,modal,table] [--only ids] [--recommend id --why "…"]` | Admin style options: 2–3 directions from `admin/directions.json` rendered side by side as real components (sidebar, modal, table), labelled A/B/C with their character and reference ids, restyled by the brand kit, with the reply to copy ("Pilih B"); `.design/options/admin-options.html` + `.json` (shadcn/ui variables per option) |
 | `compare.mjs <v1.html> <v2.html> … [--labels a,b] [--blind]` | A page for the user to compare variants side by side at desktop or phone width, score them and copy a reply |
 | `photos.mjs search "<query>" [--sheet f.png]` / `get <ref or Unsplash link> [--by name --page link]` / `credits` | Licensed photographs of the subject's world (Unsplash with `UNSPLASH_ACCESS_KEY`, Openverse, Wikimedia Commons), downloaded with their credits; a pasted `images.unsplash.com` link loads without a key, credited "photographer unknown" until the name is given |
 | `fit.mjs <inspect dir> [--targets .design/targets.json]` | The built page against the chosen dials and the team's taste; misses need a fix or a reason |

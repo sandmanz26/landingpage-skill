@@ -1,4 +1,4 @@
-// The shape of .design/brand-kit.json (brand/method.md §10), shared by brandboard.mjs and progress.mjs
+// The shape of .design/brand-kit.json (brand/method.md §10), shared by brandboard.mjs, adminoptions.mjs and progress.mjs
 // so the rule lives in one place.
 export const REQUIRED = ['name', 'colors', 'fonts', 'radii', 'motion', 'hero', 'supporting', 'wordmark'];
 
@@ -17,3 +17,14 @@ export function validateKit(kit, label = 'kit') {
   if (kit.supporting && (!Array.isArray(kit.supporting) || kit.supporting.length < 2 || kit.supporting.length > 3)) errs.push(`${label}: 2-3 supporting elements`);
   return errs;
 }
+
+// Colour maths (WCAG relative luminance and contrast ratio) for 6-digit hex colours.
+const rgb = (h) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16) / 255);
+export const lum = (h) => rgb(h).map((c) => (c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4)).reduce((a, c, i) => a + c * [0.2126, 0.7152, 0.0722][i], 0);
+export const ratio = (a, b) => {
+  const [x, y] = [lum(a), lum(b)].sort((m, n) => n - m);
+  return (x + 0.05) / (y + 0.05);
+};
+
+// Faces found on most machines; any other kit font is loaded from Google Fonts.
+export const SYSTEM_FONT = /^(arial|helvetica|georgia|times new roman|verdana|tahoma|trebuchet ms|courier new|palatino|garamond|dejavu (sans|serif)|liberation (sans|serif)|noto (sans|serif)|system-ui|serif|sans-serif|monospace)$/i;

@@ -447,6 +447,71 @@ const check = (name, ok, detail = '') => {
   check('progress wants first-screen sketches before a guided direction', without.status !== 0 && /sketch/.test(without.stderr) && withSketches.status === 0, without.stderr + withSketches.stderr);
 }
 
+// admin style variations: the options page, the logged choice or a logged decline (admin/method.md §4)
+{
+  const proj = path.join(tmp, 'admin-style');
+  fs.mkdirSync(proj);
+  const p = (...a) => run('progress.mjs', a, proj);
+  const ADMIN_BRIEF = BRIEF.replace('- What: test', '- What: admin panel for orders and stock\n- Component library: shadcn/ui (React + Tailwind), default: none agreed; told the user');
+  const toDirection = (dir) => {
+    const d = path.join(dir, '.design');
+    fs.writeFileSync(path.join(d, 'brief.md'), ADMIN_BRIEF);
+    const q = (...a) => run('progress.mjs', a, dir);
+    q('approve', 'brief', '--note', 'ok'); q('done', 'brief');
+    fs.writeFileSync(path.join(d, 'research.md'), RESEARCH); q('done', 'research');
+    fs.writeFileSync(path.join(d, 'strategy.md'), '# S'); q('done', 'strategy');
+    fs.writeFileSync(path.join(d, 'roast.md'), ROAST);
+    q('approve', 'strategy', '--note', 'ok'); q('done', 'roast');
+    fs.mkdirSync(path.join(d, 'directions'));
+    fs.writeFileSync(path.join(d, 'targets.json'), '{}');
+    fs.writeFileSync(path.join(d, 'brand-kit.md'), BRANDKIT);
+    q('approve', 'direction', '--note', 'ok');
+    return d;
+  };
+  p('init', '--mode', 'create', '--effort', 'standard', '--gates', 'guided');
+  const d = toDirection(proj);
+  const none = p('done', 'direction');
+  const made = run('adminoptions.mjs', ['--brief', 'Panel admin toko sambal', '--components', 'sidebar,modal,table', '--recommend', 'B', '--why', 'operasional seharian'], proj);
+  const page = path.join(d, 'options/admin-options.html');
+  const noPick = p('done', 'direction');
+  p('log', 'admin-style: B dark-layered (user: Pilih B)', '--step', 'direction', '--by', 'user');
+  const picked = p('done', 'direction');
+  check('progress wants an admin run with guided gates to show the style options and log the choice (the options page stands in for the sketches)',
+    none.status !== 0 && /admin\/method\.md/.test(none.stderr) && made.status === 0 && fs.existsSync(page) && noPick.status !== 0 && /no choice is logged/.test(noPick.stderr) && picked.status === 0,
+    [none, made, noPick, picked].map((r) => r.stdout + r.stderr).join(' | '));
+  const proj2 = path.join(tmp, 'admin-declined');
+  fs.mkdirSync(proj2);
+  const p2 = (...a) => run('progress.mjs', a, proj2);
+  p2('init', '--mode', 'create', '--effort', 'standard', '--gates', 'guided');
+  const d2 = toDirection(proj2);
+  p2('log', 'admin-variations declined: langsung saja, pakai bawaan', '--step', 'direction', '--by', 'user');
+  const noSketch = p2('done', 'direction');
+  for (const x of ['a', 'b']) fs.copyFileSync(path.join(fixtures, 'clean.html'), path.join(d2, 'directions', `sketch-${x}.html`));
+  const declined = p2('done', 'direction');
+  check('progress accepts a logged decline of the admin variations (then the sketches are needed)', noSketch.status !== 0 && /sketch/.test(noSketch.stderr) && declined.status === 0, noSketch.stderr + declined.stderr);
+  const html = fs.existsSync(page) ? fs.readFileSync(page, 'utf8') : '';
+  const json = fs.existsSync(page.replace(/\.html$/, '.json')) ? JSON.parse(fs.readFileSync(page.replace(/\.html$/, '.json'), 'utf8')) : { options: [] };
+  check('adminoptions renders A/B/C with a sidebar, a modal and a table, the references, the reply and shadcn/ui variables',
+    ['A', 'B', 'C'].every((l) => html.includes(`data-option="${l}"`)) && (html.match(/class="sb[ "]/g) || []).length === 3 && (html.match(/role="dialog"/g) || []).length === 3 && (html.match(/<table>/g) || []).length === 3 &&
+      /sb-003/.test(html) && /md-005/.test(html) && /Pilih/.test(html) && /Percayakan ke AI/.test(html) && json.recommend === 'B' && json.options.every((o) => o.shadcn['--primary'] && o.shadcn['--radius'] && o.levers.length >= 3 && o.levers.length <= 4),
+    html.slice(0, 300));
+  const ins = run('inspect.mjs', [page, '--out', path.join(tmp, 'admin-inspect'), '--app', '--quiet'], proj);
+  const ir = path.join(tmp, 'admin-inspect/report.json');
+  const rep = fs.existsSync(ir) ? JSON.parse(fs.readFileSync(ir, 'utf8')) : { summary: { fail: -1 }, findings: [] };
+  check('the admin options page passes inspect without FAIL', ins.status === 0 && rep.summary.fail === 0, ins.stdout + ins.stderr + rep.findings.filter((f) => f.severity === 'FAIL').map((f) => f.rule).join(', '));
+  const withKit = run('adminoptions.mjs', ['--kit', path.join(fixtures, 'brand/kit.json'), '--out', path.join(tmp, 'admin-kit/opts.html')], proj);
+  const kj = fs.existsSync(path.join(tmp, 'admin-kit/opts.json')) ? JSON.parse(fs.readFileSync(path.join(tmp, 'admin-kit/opts.json'), 'utf8')) : { options: [] };
+  check('adminoptions lets the brand kit override colours and shape', withKit.status === 0 && kj.kit === 'Dapur Seimbang' && kj.options.length === 3 && kj.options.every((o) => o.tokens.accent === '#E2A13B' && o.tokens.radius.surface === 28 && o.tokens.radius.button === 8),
+    withKit.stdout + withKit.stderr + JSON.stringify(kj.options.map((o) => o.tokens.accent)));
+  const bad = path.join(tmp, 'bad-directions.json');
+  const dirs = JSON.parse(fs.readFileSync(path.join(skill, 'admin/directions.json'), 'utf8'));
+  dirs.directions[0].levers = ['surface', 'active', 'primary', 'icons', 'type'];
+  fs.writeFileSync(bad, JSON.stringify(dirs));
+  const tooMany = run('adminoptions.mjs', ['--directions', bad, '--out', path.join(tmp, 'admin-bad/x.html')], proj);
+  const one = run('adminoptions.mjs', ['--only', 'glass-dark', '--out', path.join(tmp, 'admin-bad/y.html')], proj);
+  check('adminoptions refuses a direction that changes more than 4 levers, and fewer than two options', tooMany.status === 2 && /3-4 levers/.test(tooMany.stderr) && one.status === 2 && /2-3 directions/.test(one.stderr), tooMany.stderr + one.stderr);
+}
+
 // brand mode: board with directions, the kit, the PDF at delivery; brandboard renders and passes inspect
 {
   const proj = path.join(tmp, 'brand');

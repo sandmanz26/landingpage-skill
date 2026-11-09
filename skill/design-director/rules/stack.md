@@ -20,6 +20,9 @@ build it with **shadcn/ui (React + Tailwind)** until the user approves something
   baris, seperti dasbor Vercel atau Linear. Rekomendasi: shadcn/ui, karena konsisten, mudah diakses
   keyboard, cepat dibangun dan warnanya bisa diganti lewat token. Atau percayakan ke AI."
   "Percayakan ke AI" keeps shadcn/ui.
+- **Style:** the structure comes from shadcn/ui, the style from tokens: at the direction step the
+  user may pick one of 2–3 style directions drawn from the team's admin references
+  (`admin/method.md`).
 - **Not this rule:** the project already has a library or design system (use it: `modes/improve.md`),
   or the user names one (use theirs). A landing page *for* a dashboard product is a page, not an
   admin panel: this rule does not apply.
