@@ -1,0 +1,18 @@
+{
+ "batch": "admin-a01", "pattern": "sidebar navigation", "received": "2026-11-09", "from": "owner (chat, 4 screenshots, concept shots: no live product, no behaviour)",
+ "status": "raw intake; the admin pattern spec and rubric do not exist yet (proposed 2026-11-09)",
+ "entries": [
+  {"id": "sb-001", "file": "sb-001.png", "owner_score": 8,
+   "owner_notes": ["search at the top makes finding easier", "grouping the menu reduces overwhelm", "icons are good", "keyboard shortcuts shown", "workspace switcher at the top: only when multi-project", "user account at the bottom: right, it is used less", "colour and spacing clean"],
+   "coordinator_notes": ["shortcuts (⌘1-⌘4) serve the keyboard, not clicking", "expanded, collapsed rail with tooltip, workspace switcher and account menu shown together: four states of one component", "notification dot on Activity; project colour chips"]},
+  {"id": "sb-002", "file": "sb-002.webp", "owner_score": 8,
+   "owner_notes": ["sparkle icon marks new or AI features", "bottom banner good for paid SaaS", "collapse/expand is a must"],
+   "coordinator_notes": ["one sparkle meaning both 'new' and 'AI' is ambiguous: pick one meaning", "the update banner is dismissible (×): an upsell must be dismissible and not permanent", "message count badge 16; Favorites and Records groups collapsible; account menu lists shortcuts"]},
+  {"id": "sb-003", "file": "sb-003.png", "owner_score": 6.5,
+   "owner_notes": ["good for multi-level menus", "colour and tone OK but needs a primary colour to feel alive"],
+   "coordinator_notes": ["icon rail + secondary panel + content: three levels", "My account / Shared segmented control scopes the menu", "active item contrast is low on dark: check it against AA"]},
+  {"id": "sb-004", "file": "sb-004.png", "owner_score": 7,
+   "owner_notes": ["vertical line in the sidebar shows steps: good for onboarding or products that need a stepper"],
+   "coordinator_notes": ["the line here is a tree/indent guide for nested documentation pages, not a stepper: a stepper needs a state per step (done, current, next) and an order the user must follow", "Quick search with Ctrl+K hint; icons in tinted circles for the top level"]}
+ ]
+}
