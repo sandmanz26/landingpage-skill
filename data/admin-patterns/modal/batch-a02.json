@@ -1,0 +1,23 @@
+{
+ "batch": "admin-a02", "pattern": "modal and floating panels", "received": "2026-11-09", "from": "owner (chat, 5 concept screenshots)",
+ "scoring": "none on purpose: 'modal is modal'; the owner sends these for style, to adapt to the user's case. Form fields inside are business content, not part of the style.",
+ "entries": [
+  {"id": "md-001", "file": "md-001.webp", "kind": "form modal",
+   "owner_notes": ["has a subtitle; the primary button is much wider than Cancel, so attention goes to it", "the form inside depends on the business"],
+   "style_levers": {"surface": "white, large radius (~28px), thin inner border, header and footer separated by hairlines", "action": "primary = dark navy, full remaining width; secondary = small outlined", "detail": "context card at the top (job + company logo, skill chips); segmented control for duration; dashed divider between groups", "type": "semibold title + grey subtitle"}},
+  {"id": "md-002", "file": "md-002.webp", "kind": "two-panel modal",
+   "owner_notes": ["two panels side by side give variety that does not look generic, when the content fits"],
+   "style_levers": {"surface": "two separate white cards inside one frame, background dimmed and greyed", "action": "primary blue only on Send invite; Copy as outlined", "detail": "QR code with scan line glow; invite list with status chips (Invite sent / Invited accepted); seats usage bar as a quiet upsell", "type": "large bold titles, grey one-line explainers"}},
+  {"id": "md-003", "file": "md-003.webp", "kind": "modal with tabs (segmented)",
+   "owner_notes": ["interesting way to handle tabs inside a modal"],
+   "style_levers": {"surface": "white, large radius, grey inset panel for the form body", "action": "full-width black primary at the bottom", "detail": "segmented control (Single Token / Token Pair) as the tab; back and settings icon buttons in the header; gradient range slider with ticks; balance with % link", "type": "centred title with info icon"}},
+  {"id": "md-004", "file": "md-004.png", "kind": "notification popover with tabs (a dropdown panel, not a modal)",
+   "owner_notes": ["another way to handle tabs inside a modal, like md-003"],
+   "coordinator_note": "this is a popover/dropdown panel, not a modal: it opens from a bell and does not block the page; the tab pattern (underline + count badge) still applies to modals",
+   "style_levers": {"surface": "white card, light shadow, grey footer band", "action": "inline Accept (blue) / Decline (outlined) per item", "detail": "underline tabs with a count pill; unread dots; hovered item highlighted (right variant); keyboard hint '↑↓ to navigate'; Mark all as read", "type": "regular weight body, timestamps right"}},
+  {"id": "md-005", "file": "md-005.webp", "kind": "glass card (a widget, not a modal)",
+   "owner_notes": ["fits fintech or tech themes; glass style; an icon placed in front"],
+   "coordinator_note": "this is a dashboard card/widget rather than a modal; its glass style transfers to modals",
+   "style_levers": {"surface": "dark translucent glass, warm orange glow behind, thin light border, large radius", "action": "pill 'Switch Account' as a quiet secondary", "detail": "brand mark at the top left; stacked bars (orange over grey); a summary sentence with the key number in bold; green/red pills for change", "type": "light weight, large; numbers in white"}}
+ ]
+}
