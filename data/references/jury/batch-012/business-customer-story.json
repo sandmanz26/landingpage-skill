@@ -1,0 +1,114 @@
+{
+  "juror": "business-customer-story",
+  "kind": "ai",
+  "method": "Evidence packs only, no browser or code. Turn 1: three home digest.md plus desktop-fold.png and sheet-desktop.png. Turn 2: the three motion-sheet.png, ref-0019-works and ref-0019-about sheet-desktop.png, ref-0020-release sheet-desktop.png and the three mobile-fold.png, combined into two contact sheets with ImageMagick montage (to stay inside the tool budget; the images are smaller, so fine detail on the secondary pages was read at reduced resolution), plus the outline lines of the three secondary digests. Each site judged against its own business: who buys or listens, what the page must make them do, and whether the copy and the order of sections tell that. Not verified: page-to-page transitions, audio, video content of the showreel, sound, real-GPU smoothness, anything past the first 6000 characters of text, and the Coveo pop-up content beyond what the overlay frames show.",
+  "refs": {
+    "ref-0018": {
+      "business": "SquadEasy: B2B SaaS employee-engagement app (step/mobility challenges, team challenges, charity donations, CO2 tracking, social wall, white-label colours) sold to HR/CSR/QWL leads at companies; the page's job is to book a demo (REQUEST A DEMO at fold, TALK TO US sticky, ASK FOR A DEMO in footer) and secondarily to let an employee pitch it internally ('Become an ambassador for your HR team').",
+      "scores": { "business": 7, "customer": 6, "story": 6 },
+      "reasons": {
+        "business": "One clear conversion (demo) repeated at fold, sticky header and footer; proof stack is right for a B2B HR buyer: customer logo strip (L'Oreal and others), '+30 loyal customers', '2 million employees', App Store/Google Play 4/5, VivaTech 2023 and Publicis90 awards, named case studies in the nav (Societe Generale, Edenred). Loses points: mid-page CTAs are generic ('FIND OUT MORE' x3, 'LEARN MORE' x2), stats ('+X% productivity gains per user', '1.2 million euros donated') carry no source, and no price or plan signal for a buyer who needs to budget.",
+        "customer": "Speaks to the HR buyer's job (cohesion, engagement, CSR, health) and names the outcome they report on (wellbeing %, productivity %, CO2). But the H1 is a pun ('never been so close to bringing your employees closer together') that says the wish, not the product; the category ('team-building app') arrives only at 18% of the page. The page then switches audience at 72% ('EMPLOYEES, it's easy to get your company involved') without signalling it. The EN page shows a French cookie banner and French footer lines, which tells an international buyer the English site is secondary. The key phrase 'your employees' is pink at 1.87:1 contrast.",
+        "story": "There is an arc: promise (closer together) -> what it is (favourite team-building app) -> proof -> purpose (cohesion not for nothing: donations, CO2) -> habit (cohesion is a daily sport) -> who we are -> features (engage them all) -> make it yours (your colours) -> CTA. Each beat is a punny all-caps headline plus one stat, so the story is a chain of slogans rather than one customer's before/after; no customer quote on the home page itself (testimonials are a link out)."
+      },
+      "claims": [
+        { "claim": "Excellent scrollcraft: every scroll moves frames and builds a harmony of elements.", "verdict": "partly true", "evidence": "motion-sheet: at 450px the hero headline blurs/fades while a phone mockup rises through it; at 2250px and 4050px tilted photo cards and stat stickers (78, 6, 1.2, 3275) assemble into a collage; sections change background colour (tan, blue, lilac, lime). That is real choreography. 'Excellent' is overstated: 9 endless loops with no pause control, CLS 0.241 desktop / 0.305 mobile, and 2 stat texts ('1.2', '70') stay hidden with reduced motion, so the numbers that carry the proof depend on the animation." },
+        { "claim": "Simple, good layout.", "verdict": "mostly true", "evidence": "sheet-desktop: one centred column per section, big headline + one visual + one CTA. Against it: 12 font sizes, 6 typefaces, h1 runs to 5 lines desktop / 7 lines mobile, and the hero is a 100%-height sticky section." },
+        { "claim": "Simple colouring.", "verdict": "false as stated", "evidence": "Digest counts 9 chromatic colours (tan #e1c19e, lime #e4ff60, blue #7fb6e6, lilac #adabff, mint #c2ebb8, pink #ea5da3, two greens). It reads as playful because each section uses one flat block colour, but the palette is not simple; the cohesion comes from flat fills and black type, not from few colours." },
+        { "claim": "Could not name the category.", "verdict": "fair criticism of the fold, not of the page", "evidence": "The H1 never names the product; the category is said in H2 at 18% ('EMPLOYEES' FAVOURITE, TEAM-BUILDING APP') and the <title> says 'Employees' favorite team-building app'. A buyer who reads only the fold sees smiling faces and a pun. Fix: put 'team-building app for companies' in the fold." }
+      ],
+      "motion": [
+        { "what": "Hero headline blurs out while a phone mockup with the app feed rises through it (scroll 0-450px)", "message it carries": "the promise turns into the product: this is an app", "verdict": "earns its place" },
+        { "what": "Tilted employee photos scattered around the hero, drifting", "message it carries": "real people, informal, team", "verdict": "earns its place" },
+        { "what": "Count-up stat numbers on stickers (78%, +6%, 1.2M EUR, 3275 t CO2, 2 million)", "message it carries": "proof by numbers", "verdict": "decoration that harms: the text reads 0 before it fires and 2 stay hidden under reduced motion" },
+        { "what": "Looping feature tabs marquee (A SOCIAL APP / MEASURE YOUR IMPACT / MOVE FOR YOUR HEALTH ...)", "message it carries": "breadth of features", "verdict": "decoration: repeated three times, no pause, duplicates content for screen readers" },
+        { "what": "Section background colour changes and photo collages assembling on scroll", "message it carries": "each benefit is its own chapter", "verdict": "earns its place" }
+      ],
+      "problems": [
+        "Fold does not name the product or buyer; the H1 is a pun and the category waits until 18% of the page.",
+        "Proof depends on animation: count-up stats read as 0 before firing, 2 stay hidden under reduced motion, no source for productivity/wellbeing percentages; CLS 0.24-0.31.",
+        "Mixed language and audience: French cookie banner and footer on the EN page, and an unannounced switch from HR buyer to employee-ambassador at 72%; generic 'FIND OUT MORE' CTAs."
+      ],
+      "keep": [
+        "One flat colour per section with one claim + one stat + one visual: makes each benefit a scannable chapter for a busy HR buyer.",
+        "Hero copy morphs into a phone mockup on scroll: shows the product the moment the visitor engages, answering 'what is it' without a feature list.",
+        "Real-people tilted photo cards around the headline: signals the human, informal tone a team-building product sells.",
+        "Proof strip mixing customer logos, store ratings and named awards next to the 'loyal customers' claim: the right proof types for a B2B HR purchase.",
+        "Secondary path for the employee champion ('Become an ambassador for your HR team'): a real bottom-up B2B acquisition route; keep it but label the audience switch."
+      ],
+      "veto": null
+    },
+    "ref-0019": {
+      "business": "Figure Film: London production collective (directors, DPs, producers, post) selling end-to-end commercial, music-video and branded-content production; buyers are brand marketers, agency producers and music labels/platforms. The site's job is to prove taste and calibre through the work and client names, then start a conversation (hello@ email, 'LET'S COLLABORATE').",
+      "scores": { "business": 6, "customer": 5, "story": 7 },
+      "reasons": {
+        "business": "Client x talent titles are the proof that matters in this market (Boiler Room x JGrrey, ASICS x Djokovic, Marriott x Al Maha, Plaion x Let's Sing 2025) and they are on the home page; the About page lists services (content production, post-production, photography, on-set editing) and 'Our people'. But the only conversion is a bare email in a black footer, the positioning line sits in 9-12px mono at the bottom right of the fold, and the inspector says 16 text elements (the work titles and categories on home) never became visible during a full scroll, so the proof can fail to show.",
+        "customer": "A producer scanning for a partner gets mood but has to work to get facts: no h1, the services and team are only on About, no sense of scale/budget beyond 'any project scale', no outcomes or awards, tiny text, 12 sub-24px tap targets on mobile. The 'nice / SEE SHOWREEL / stuff' pill is charming but the one action a buyer wants (watch the reel) is the only action at the fold, which is correct.",
+        "story": "Strong identity told by the frame itself: vertical guide lines labelled 2.76:1, 2.39:1, 2:1, 1.66:1, 1.19:1, 1.33:1, 1:1 are cinema aspect-ratio gates, so the whole site says 'we think in frames'. It repeats on home, works and about with the same giant cream wordmark (with a block hiding the I), PT Mono captions, cobalt #2c54c7 sections and a black LET'S COLLABORATE footer. 'Every frame with care and quality over all' on About states the belief. The home page itself is short (2542px) and tells no project's story."
+      },
+      "claims": [
+        { "claim": "A unique concept.", "verdict": "true", "evidence": "Aspect-ratio grid lines with ratio labels across every page, plus the wordmark with a solid block replacing the I, is a concept specific to a film company; I do not see it as a borrowed template." },
+        { "claim": "Retro/vintage yet minimalist.", "verdict": "partly true; 'vintage' is the wrong word for most of it", "evidence": "Cream #fcf8c9 condensed display type, typewriter-style PT Mono and grain-heavy footage give a film-stock warmth, but the device is technical cinema framing (aspect-ratio gates, numbered reels 01-07), not nostalgia. Minimalist holds for palette (2 chromatic colours) and copy (993 characters on home)." },
+        { "claim": "Solid colours with effects.", "verdict": "true", "evidence": "Three flat fields (cream, cobalt blue, near-black) plus 7 gradients and video effects; About uses a black starburst graphic on cobalt; works tiles sit on cobalt." },
+        { "claim": "Explore the other pages for the pattern.", "verdict": "done; the pattern holds", "evidence": "works and about sheets repeat: same top wordmark + IG/VIMEO/IN + ABOUT/WORK/CONTACT, ratio guide lines, cobalt background, client x talent tiles, black 'FIGURE ... LET'S COLLABORATE' footer, 'SHOW ME ALL' pill with the same notched shape as 'SEE SHOWREEL'." },
+        { "claim": "7 visual / 8.2 ship.", "verdict": "visual undersold, ship oversold", "evidence": "The identity is more distinctive than a 7; but CLS 1.088, no h1, 16 work titles that never appear, and failing reduced-motion are ship problems, not polish." }
+      ],
+      "motion": [
+        { "what": "Full-bleed footage behind the wordmark changing clips (teal club, tan hallway, red DJ booth across 0-2000ms)", "message it carries": "this is the work, shown before it is named", "verdict": "earns its place" },
+        { "what": "Featured-work section: tiles expand (width/height/flex-basis animations) as the cursor/scroll reaches them", "message it carries": "one project at a time gets the frame", "verdict": "earns its place, but it causes the 1.088 layout shift and leaves titles hidden" },
+        { "what": "Cursor dot / small yellow circle following on cobalt sections", "message it carries": "none", "verdict": "decoration" },
+        { "what": "Reveal-on-scroll of work titles and categories", "message it carries": "the client names, which are the proof", "verdict": "harms: 16 elements never fired in the capture and stay hidden under reduced motion" }
+      ],
+      "problems": [
+        "The proof can vanish: 16 work titles/categories never became visible in a full scroll and stay hidden under reduced motion; layout shift 1.088.",
+        "Positioning and services are hidden: no h1, the one positioning line is 9-12px mono at the fold's corner, services and team only on About.",
+        "Weak conversion path for a buyer: only a bare email at the bottom; no brief prompt, no 'what we do' summary or credentials on home."
+      ],
+      "keep": [
+        "Aspect-ratio guide lines labelled with real cinema ratios over every page: tells 'we think in frames' without a sentence, and unifies all pages.",
+        "Full-bleed moving footage at the fold with a single 'SEE SHOWREEL' action: the buyer's first question (is their work good?) answered first.",
+        "Client x talent naming on every tile (BRAND X ARTIST): proof and range in one line, the exact format a commissioning producer scans for.",
+        "Same notched pill for every primary action (SEE SHOWREEL, SHOW ME ALL, VIEW ALL) and same black LET'S COLLABORATE footer on every page: learnable controls and one consistent close.",
+        "Three-colour system (cream, cobalt, black) applied identically across pages: makes a thin site feel like a studio brand."
+      ],
+      "veto": null
+    },
+    "ref-0020": {
+      "business": "COVEO: solo instrumental electronic/piano music project by Connell McCarthy, presented as an audio/visual portfolio (11 releases 2018-2025, each with its own artwork and a release page with 'Behind the song'). Goals: get listeners to preview and connect with the music, and secondarily licensing inquiries and press (footer links).",
+      "scores": { "business": 5, "customer": 6, "story": 8 },
+      "reasons": {
+        "business": "Listening is one tap away (artwork arc, 'Tap artwork to preview a song', 11 PREVIEW buttons, persistent player with pause), which is the core job. But the money paths are buried: 'Licensing Inquires' (typo) and 'Press Kit' sit in the footer at 99%, there is no visible streaming/follow/newsletter link in the captured text, and a Credits modal is open on load and stays on screen over content in every sheet frame (fixed, 29% of the screen).",
+        "customer": "The tagline names the listener precisely ('Music for the day-dreamers, the over-thinkers, the storytellers, and the wanderers') but it is set at 8.4px, rotated vertically at the left edge. Track facts are well chosen (date, songs, duration). '{TRACK.TITLE}' and '0:00 / 0:00' placeholders appear in the page text; 38 images lack alt; 12px body.",
+        "story": "First-person origin story (piano in the parents' living room, GarageBand, the sound that 'swells into euphoric climaxes before settling into bittersweet outros'), a numbered discography 001-011 that reads as a body of work, and release pages with 'Behind the song'. Artwork arc + handwritten script 'these are my stories' carry the sonic-and-visual idea. It is the most coherent story of the three; it only lacks a next step for the moved visitor."
+      },
+      "claims": [
+        { "claim": "Music; simple, not loud.", "verdict": "true", "evidence": "Off-white #eeeeee page, 1 chromatic colour (the orange avatar disc), Inter at small sizes, one serif italic display word ('Storytelling', 'The complete works')." },
+        { "claim": "Plays with simple elements (text and images) and small motions.", "verdict": "partly true", "evidence": "Elements are simple, but the motion is not small: 37 elements move at load, the cover arc rotates as a loop, and four libraries (lenis, locomotive, swiper, view transitions) drive it. It feels calm because easing is soft and colours are muted, not because there is little motion. Pause control exists, which is good." },
+        { "claim": "Suits a portfolio.", "verdict": "true", "evidence": "Numbered discography, per-release pages, 'Designed & Developed by Bo & Co Studio', credits; it is as much the studio's showcase as the artist's." },
+        { "claim": "Few contents and lots of white space.", "verdict": "true", "evidence": "3119 characters; sheet shows wide empty margins around a centred arc and a single-line release table." },
+        { "claim": "Photos not monotonous, slight diagonal tilt.", "verdict": "true", "evidence": "Album covers are rounded squares rotated along the arc, each a different medium (cloud photo, rose, collage, polaroid); studio photos on the story section are offset and overlapped by product cut-outs (speaker, camera)." },
+        { "claim": "8 visual / 8.5 ship.", "verdict": "ship oversold", "evidence": "Credits modal left open over content, template placeholder text, 8.4-9.6px text, 38 missing alts, 7 texts hidden under reduced motion, buried licensing/press." }
+      ],
+      "motion": [
+        { "what": "Arc of album covers orbiting the artist avatar, tilted, slowly rotating", "message it carries": "a catalogue of stories around one person; each cover is playable", "verdict": "earns its place" },
+        { "what": "Handwritten script stroke drawing in behind the arc (strokeDashoffset)", "message it carries": "personal, hand-made, 'these are my stories'", "verdict": "earns its place" },
+        { "what": "Smooth scroll (lenis/locomotive) and soft fade/blur reveals of story and discography", "message it carries": "unhurried, reflective listening mood", "verdict": "earns its place, mostly; 18 elements still move with scroll under reduced motion" },
+        { "what": "Studio photos and cut-out objects (speaker, camera) sliding in on the story section", "message it carries": "music plus visual craft", "verdict": "earns its place" },
+        { "what": "Overshoot easing bounce (cubic-bezier 0.34,1.56) on UI elements", "message it carries": "none", "verdict": "decoration" }
+      ],
+      "problems": [
+        "Credits modal open on load and staying fixed over content (seen in every desktop frame): the first thing a listener meets is a dialog about the designer.",
+        "No visible next step for a moved listener or a buyer: no streaming/follow/newsletter in the captured page, licensing and press kit buried in the footer (with a typo).",
+        "Unshipped details: '{TRACK.TITLE}' placeholder, 8.4-9.6px text including the audience tagline, 38 images without alt, 7 texts hidden under reduced motion."
+      ],
+      "keep": [
+        "Cover arc around the artist avatar with tap-to-preview: makes the catalogue the hero and the first action listening.",
+        "Numbered discography (011 to 001) with date, format and duration: turns singles into a body of work and lets a newcomer pick a starting point.",
+        "First-person origin story plus a 'Behind the song' section on each release page: the emotional reason to listen, repeated per release.",
+        "One accent colour (orange avatar) on a muted ground with a single serif italic display word per section: calm hierarchy that matches the music.",
+        "Persistent mini player with pause: audio stays under the visitor's control while they browse."
+      ],
+      "veto": null
+    }
+  }
+}

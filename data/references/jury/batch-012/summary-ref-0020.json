@@ -1,0 +1,65 @@
+{
+  "cmd": "score",
+  "jurors": 3,
+  "ai": 2,
+  "humans": 1,
+  "humanWeight": 0.5,
+  "rows": [
+    {
+      "criterion": "business",
+      "ai": 5,
+      "human": null,
+      "final": 5,
+      "spread": 0,
+      "flag": false
+    },
+    {
+      "criterion": "customer",
+      "ai": 6,
+      "human": null,
+      "final": 6,
+      "spread": 0,
+      "flag": false
+    },
+    {
+      "criterion": "story",
+      "ai": 8,
+      "human": null,
+      "final": 8,
+      "spread": 0,
+      "flag": false
+    },
+    {
+      "criterion": "distinctiveness",
+      "ai": 8,
+      "human": 8,
+      "final": 8,
+      "spread": 0,
+      "flag": false
+    },
+    {
+      "criterion": "craft",
+      "ai": 6,
+      "human": 8,
+      "final": 7,
+      "spread": 2,
+      "flag": false
+    },
+    {
+      "criterion": "clarity",
+      "ai": 7,
+      "human": null,
+      "final": 7,
+      "spread": 0,
+      "flag": false
+    }
+  ],
+  "weighted": 6.7,
+  "humanOverall": 8.5,
+  "final": 7.6,
+  "gap": 1.8,
+  "humanVisual": 8,
+  "humanShip": 8.5,
+  "visualVsShip": -0.5,
+  "vetoes": []
+}

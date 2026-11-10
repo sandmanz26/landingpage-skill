@@ -1,0 +1,190 @@
+{
+ "batch": "batch-012",
+ "received": "2026-11-10",
+ "from": "owner (chat, 3 URLs with notes)",
+ "status": "captured (6 pages), judged by 2 combined AI jurors and the owner",
+ "jury": {
+  "folder": "data/references/jury/batch-012",
+  "jurors": [
+   "visual-motion",
+   "business-customer-story"
+  ],
+  "human_votes": 1,
+  "note": "93.4k + 101.2k tokens for three sites"
+ },
+ "entries": [
+  {
+   "id": "ref-0018",
+   "url": "https://www.squadeasy.com/en/",
+   "site": "squadeasy",
+   "sector": "software",
+   "business": {
+    "what": "B2B employee engagement app: team challenges (steps, sport, wellbeing) sold to HR",
+    "action_that_pays": "Talk to us / book a demo",
+    "confidence": "high"
+   },
+   "owner": {
+    "visual": 8,
+    "ship": 8.5
+   },
+   "jury_scores": {
+    "business": 7,
+    "customer": 6,
+    "story": 6,
+    "distinctiveness": 6,
+    "craft": 5,
+    "clarity": 5,
+    "weighted": 6.3
+   },
+   "combined": {
+    "final": 7.4,
+    "gap": 2.2
+   },
+   "veto": null,
+   "claims": [
+    {
+     "claim": "excellent scrollcraft: frames shift and build a harmony",
+     "verdict": "partly",
+     "evidence": "The hero turning into a phone mockup earns its place; otherwise 9 loops without pause, stat counters at 0 until they fire (2 stay hidden with reduced motion), CLS 0.24-0.31 on mobile."
+    },
+    {
+     "claim": "simple good layout",
+     "verdict": "true"
+    },
+    {
+     "claim": "simple colouring",
+     "verdict": "false",
+     "evidence": "9 colours measured"
+    },
+    {
+     "claim": "category unclear",
+     "verdict": "confirmed as a page problem",
+     "evidence": "The H1 is a pun; 'team-building app' appears only at 18% of the page."
+    }
+   ],
+   "library_candidates": [
+    "Hero that turns into the product (phone mockup) on scroll",
+    "B2B HR proof stack: client logos, awards, store ratings"
+   ],
+   "avoid": [
+    "A pun H1 that does not name the product",
+    "Counters that show 0 until animated",
+    "A French cookie banner on the English page"
+   ]
+  },
+  {
+   "id": "ref-0019",
+   "url": "https://figurefilm.co.uk/",
+   "site": "figure film",
+   "sector": "creative",
+   "pages": {
+    "works": "ref-0019-works",
+    "about": "ref-0019-about"
+   },
+   "business": {
+    "what": "London film production company",
+    "action_that_pays": "Email (Let's collaborate)",
+    "confidence": "high"
+   },
+   "owner": {
+    "visual": 7,
+    "ship": 8.2
+   },
+   "jury_scores": {
+    "business": 6,
+    "customer": 5,
+    "story": 7,
+    "distinctiveness": 9,
+    "craft": 6,
+    "clarity": 6,
+    "weighted": 6.3
+   },
+   "combined": {
+    "final": 7.3,
+    "gap": 1.9
+   },
+   "veto": null,
+   "claims": [
+    {
+     "claim": "unique concept",
+     "verdict": "confirmed (strongest distinctiveness in the batch)",
+     "evidence": "Lines labelled with cinema aspect ratios (2.76:1 to 1:1), a wordmark cut like a film frame, cream/cobalt/black, the black 'LET'S COLLABORATE' footer: repeated on home, works and about."
+    },
+    {
+     "claim": "retro/vintage yet minimalist",
+     "verdict": "mostly a misreading",
+     "evidence": "It is film-framing language (aspect ratios, frames), not nostalgia."
+    },
+    {
+     "claim": "other pages show the pattern",
+     "verdict": "confirmed"
+    }
+   ],
+   "library_candidates": [
+    "A signature element from the trade itself: aspect-ratio lines as the page grid",
+    "A wordmark shaped like the medium (a film frame)"
+   ],
+   "avoid": [
+    "CLS 1.088; 16 work titles never shown; no h1; text 9-12px",
+    "Services only on About; email as the only action"
+   ]
+  },
+  {
+   "id": "ref-0020",
+   "url": "https://coveomusic.com/",
+   "site": "coveo music",
+   "sector": "music",
+   "pages": {
+    "release": "ref-0020-release"
+   },
+   "business": {
+    "what": "Independent musician's site: discography, release pages, preview player",
+    "action_that_pays": "Listen / follow (no streaming CTA found)",
+    "confidence": "medium"
+   },
+   "owner": {
+    "visual": 8,
+    "ship": 8.5
+   },
+   "jury_scores": {
+    "business": 5,
+    "customer": 6,
+    "story": 8,
+    "distinctiveness": 8,
+    "craft": 6,
+    "clarity": 7,
+    "weighted": 6.7
+   },
+   "combined": {
+    "final": 7.6,
+    "gap": 1.8
+   },
+   "veto": null,
+   "claims": [
+    {
+     "claim": "simple, text and images, white space, suits a portfolio",
+     "verdict": "true"
+    },
+    {
+     "claim": "small motions",
+     "verdict": "partly wrong",
+     "evidence": "37 elements move at load, 4 animation libraries; calm in feel, not small in amount."
+    },
+    {
+     "claim": "photos not monotonous, slight diagonal tilt",
+     "verdict": "true"
+    }
+   ],
+   "library_candidates": [
+    "Discography numbered 001-011 with 'Behind the song' per release: story through the archive",
+    "Slightly tilted photos to break a calm grid"
+   ],
+   "avoid": [
+    "A Credits pop-up fixed over content",
+    "{TRACK.TITLE} placeholder leaking; text down to 8.4px; 38 images without alt",
+    "No streaming CTA"
+   ]
+  }
+ ],
+ "owner_taste_signal": "Third batch in a row where expression is strong and technical craft weak (text size, layout shift, hidden content). The owner's ship scores run 1.8-2.2 above the AI's; the AI counts these craft faults as shipping risks. Figure Film shows the brand-element rule at its best: a signature taken from the trade (aspect ratios)."
+}

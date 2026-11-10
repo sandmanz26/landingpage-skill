@@ -1,14 +1,15 @@
 {
-  "builtAt": "2026-11-07T18:38:30.682Z",
+  "builtAt": "2026-11-10T18:44:57.317Z",
   "source": "data/references (batch-*.json, captures/*/style.json)",
-  "count": 16,
+  "count": 19,
   "sectors": {
     "commerce": [
       "ref-0001"
     ],
     "software": [
       "ref-0002",
-      "ref-0003"
+      "ref-0003",
+      "ref-0018"
     ],
     "health": [
       "ref-0004",
@@ -32,6 +33,12 @@
     "finance": [
       "ref-0015",
       "ref-0017"
+    ],
+    "creative": [
+      "ref-0019"
+    ],
+    "music": [
+      "ref-0020"
     ]
   },
   "groups": [
@@ -71,18 +78,19 @@
     },
     {
       "id": "style-3",
-      "name": "surface:flat · colour:bold · type:expressive · type:rounded · motion:story",
+      "name": "surface:flat · colour:bold · type:expressive · shape:soft · type:rounded",
       "shared": [
         "surface:flat",
         "colour:bold",
         "type:expressive",
+        "shape:soft",
         "type:rounded",
-        "motion:story",
-        "shape:soft"
+        "motion:story"
       ],
       "members": [
         "ref-0004",
-        "ref-0005"
+        "ref-0005",
+        "ref-0018"
       ]
     },
     {
@@ -133,17 +141,19 @@
     },
     {
       "id": "style-7",
-      "name": "surface:gradient-shadow · colour:calm · type:firm · imagery:photo · motion:story",
+      "name": "colour:calm · type:firm · imagery:photo · motion:story · surface:gradient-shadow",
       "shared": [
-        "surface:gradient-shadow",
         "colour:calm",
         "type:firm",
         "imagery:photo",
-        "motion:story"
+        "motion:story",
+        "surface:gradient-shadow",
+        "shape:soft"
       ],
       "members": [
         "ref-0009",
-        "ref-0015"
+        "ref-0015",
+        "ref-0020"
       ]
     },
     {
@@ -159,6 +169,20 @@
       ],
       "members": [
         "ref-0010"
+      ]
+    },
+    {
+      "id": "style-9",
+      "name": "surface:gradient-shadow · colour:calm · type:expressive · motion:subtle · shape:soft",
+      "shared": [
+        "surface:gradient-shadow",
+        "colour:calm",
+        "type:expressive",
+        "motion:subtle",
+        "shape:soft"
+      ],
+      "members": [
+        "ref-0019"
       ]
     }
   ],
@@ -1979,6 +2003,333 @@
         ]
       },
       "styleGroup": "style-1"
+    },
+    {
+      "id": "ref-0018",
+      "site": "squadeasy",
+      "url": "https://www.squadeasy.com/en/",
+      "batch": "batch-012",
+      "review": "data/references/batch-012-review.md",
+      "business": "B2B employee engagement app: team challenges (steps, sport, wellbeing) sold to HR",
+      "actionThatPays": "Talk to us / book a demo",
+      "scores": {
+        "ai": 6.3,
+        "ownerOverall": null,
+        "ownerVisual": 8,
+        "ownerShip": 8.5,
+        "final": 7.4
+      },
+      "veto": null,
+      "patternOnly": false,
+      "patterns": [
+        "Hero that turns into the product (phone mockup) on scroll",
+        "B2B HR proof stack: client logos, awards, store ratings"
+      ],
+      "avoid": [
+        "A pun H1 that does not name the product",
+        "Counters that show 0 until animated",
+        "A French cookie banner on the English page"
+      ],
+      "sector": "software",
+      "style": {
+        "features": [
+          "surface:flat",
+          "colour:bold",
+          "type:expressive",
+          "imagery:photo",
+          "motion:subtle",
+          "shape:soft"
+        ],
+        "tags": [
+          "many-colours",
+          "expressive-type",
+          "many-type-sizes",
+          "endless-motion",
+          "photography",
+          "ignores-reduced-motion"
+        ],
+        "type": {
+          "families": [
+            "body",
+            "black",
+            "regular",
+            "arial",
+            "medium",
+            "epilogue",
+            "sharpie"
+          ],
+          "display": 220,
+          "body": 16,
+          "ratio": 13.8,
+          "sizes": 12
+        },
+        "palette": {
+          "chromatic": 9,
+          "gradients": 0,
+          "shadows": 2,
+          "backgrounds": [
+            "#ffffff",
+            "#000000",
+            "#e1c19e",
+            "#e4ff60",
+            "#7fb6e6"
+          ]
+        },
+        "radii": [
+          "14px",
+          "10px",
+          "100px",
+          "500px"
+        ],
+        "motion": {
+          "libraries": [],
+          "stickyPanels": 0,
+          "durationsMs": {
+            "min": 300,
+            "max": 48000
+          },
+          "easings": [
+            "ease",
+            "linear"
+          ],
+          "reducedMotionRespected": false,
+          "smoothness": {
+            "fps": 59.8,
+            "longFrames": 0,
+            "baselineLongFrames": 0,
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+          }
+        },
+        "doNotCopy": [
+          "font-not-loaded: \"Epilogue\" is named in the CSS but never loaded; the browser shows a fallback font (2% of the text)",
+          "headline-lines: h1 runs to 5 lines",
+          "contrast: 3 text elements below WCAG AA (measured on screen pixels)",
+          "contrast: 2 text elements below WCAG AA (measured on screen pixels)",
+          "headline-lines: h1 runs to 7 lines",
+          "tap-target: 3 controls smaller than 24x24px on a phone",
+          "layout-shift: Layout shift 0.305 (over 0.25)",
+          "reduced-motion: 2 text elements stay hidden when the visitor asks for reduced motion",
+          "motion without a reduced-motion path"
+        ]
+      },
+      "styleGroup": "style-3"
+    },
+    {
+      "id": "ref-0019",
+      "site": "figure film",
+      "url": "https://figurefilm.co.uk/",
+      "batch": "batch-012",
+      "review": "data/references/batch-012-review.md",
+      "business": "London film production company",
+      "actionThatPays": "Email (Let's collaborate)",
+      "scores": {
+        "ai": 6.3,
+        "ownerOverall": null,
+        "ownerVisual": 7,
+        "ownerShip": 8.2,
+        "final": 7.3
+      },
+      "veto": null,
+      "patternOnly": false,
+      "patterns": [
+        "A signature element from the trade itself: aspect-ratio lines as the page grid",
+        "A wordmark shaped like the medium (a film frame)"
+      ],
+      "avoid": [
+        "CLS 1.088; 16 work titles never shown; no h1; text 9-12px",
+        "Services only on About; email as the only action"
+      ],
+      "sector": "creative",
+      "style": {
+        "features": [
+          "surface:gradient-shadow",
+          "colour:calm",
+          "type:expressive",
+          "motion:subtle",
+          "shape:soft"
+        ],
+        "tags": [
+          "gradient-heavy",
+          "restrained-colour",
+          "expressive-type",
+          "layout-shift"
+        ],
+        "type": {
+          "families": [
+            "pt mono",
+            "jeanlucweb"
+          ],
+          "display": 216,
+          "body": 12,
+          "ratio": 18,
+          "sizes": 7
+        },
+        "palette": {
+          "chromatic": 2,
+          "gradients": 7,
+          "shadows": 0,
+          "backgrounds": [
+            "#fcf8c9",
+            "#2c54c7",
+            "#080808"
+          ]
+        },
+        "radii": [
+          "50%",
+          "64px"
+        ],
+        "motion": {
+          "libraries": [],
+          "stickyPanels": 0,
+          "durationsMs": {
+            "min": 200,
+            "max": 800
+          },
+          "easings": [
+            "ease-out",
+            "linear",
+            "ease-in-out",
+            "cubic-bezier(0.25, 0.1, 0.25, 1)"
+          ],
+          "reducedMotionRespected": true,
+          "smoothness": {
+            "fps": 50.6,
+            "longFrames": 1,
+            "baselineLongFrames": 0,
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+          }
+        },
+        "doNotCopy": [
+          "tiny-text: Text at 9px",
+          "no-h1: No visible h1: the page has no title",
+          "contrast: 3 text elements below WCAG AA (measured on screen pixels)",
+          "hidden-content: 16 text elements were never visible during a full scroll (a reveal that never fires?)",
+          "layout-shift: Layout shift 1.088 (over 0.25)",
+          "tap-target: 12 controls smaller than 24x24px on a phone",
+          "reduced-motion: 16 text elements stay hidden when the visitor asks for reduced motion"
+        ]
+      },
+      "styleGroup": "style-9"
+    },
+    {
+      "id": "ref-0020",
+      "site": "coveo music",
+      "url": "https://coveomusic.com/",
+      "batch": "batch-012",
+      "review": "data/references/batch-012-review.md",
+      "business": "Independent musician's site: discography, release pages, preview player",
+      "actionThatPays": "Listen / follow (no streaming CTA found)",
+      "scores": {
+        "ai": 6.7,
+        "ownerOverall": null,
+        "ownerVisual": 8,
+        "ownerShip": 8.5,
+        "final": 7.6
+      },
+      "veto": null,
+      "patternOnly": false,
+      "patterns": [
+        "Discography numbered 001-011 with 'Behind the song' per release: story through the archive",
+        "Slightly tilted photos to break a calm grid"
+      ],
+      "avoid": [
+        "A Credits pop-up fixed over content",
+        "{TRACK.TITLE} placeholder leaking; text down to 8.4px; 38 images without alt",
+        "No streaming CTA"
+      ],
+      "sector": "music",
+      "style": {
+        "features": [
+          "surface:flat",
+          "colour:calm",
+          "colour:dark",
+          "type:firm",
+          "imagery:photo",
+          "motion:story",
+          "shape:soft"
+        ],
+        "tags": [
+          "glass",
+          "restrained-colour",
+          "dark",
+          "expressive-type",
+          "scroll-choreography",
+          "smoothed-scroll",
+          "endless-motion",
+          "photography",
+          "illustration",
+          "ignores-reduced-motion",
+          "pop-up-on-load"
+        ],
+        "type": {
+          "families": [
+            "inter",
+            "monospace",
+            "eiko",
+            "arial"
+          ],
+          "display": 60,
+          "body": 11,
+          "ratio": 5.5,
+          "sizes": 7
+        },
+        "palette": {
+          "chromatic": 1,
+          "gradients": 1,
+          "shadows": 2,
+          "backgrounds": [
+            "#000000",
+            "#eeeeee",
+            "#1d1812",
+            "#d5d5d5",
+            "#ffffff"
+          ]
+        },
+        "radii": [
+          "8px",
+          "100%",
+          "50%",
+          "24%"
+        ],
+        "motion": {
+          "libraries": [
+            "lenis",
+            "locomotive",
+            "swiper",
+            "viewTransitions"
+          ],
+          "stickyPanels": 0,
+          "durationsMs": {
+            "min": 138,
+            "max": 3000
+          },
+          "easings": [
+            "ease",
+            "linear",
+            "cubic-bezier(0.22, 1, 0.36, 1)",
+            "cubic-bezier(0.34, 1.56, 0.64, 1)",
+            "cubic-bezier(0.64, 0, 0.78, 0)"
+          ],
+          "reducedMotionRespected": false,
+          "smoothness": {
+            "fps": 59.9,
+            "longFrames": 0,
+            "baselineLongFrames": 0,
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+          }
+        },
+        "doNotCopy": [
+          "tiny-text: Text at 9.6px",
+          "tiny-text: Text at 8.4px",
+          "img-alt: 38 images without an alt attribute",
+          "contrast: 2 text elements below WCAG AA (measured on screen pixels)",
+          "tap-target: 4 controls smaller than 24x24px on a phone",
+          "reduced-motion: 7 text elements stay hidden when the visitor asks for reduced motion",
+          "motion without a reduced-motion path",
+          "pop-up over the first screen on load"
+        ]
+      },
+      "styleGroup": "style-7"
     }
   ]
 }
