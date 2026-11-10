@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Produk: tabel yang rapi</title>
+<!-- Fixture for the data-table checks (admin/table.md): the same data as table.html done to the
+     rules. Numbers right-aligned with their headers, checkboxes on one line with 24px label targets,
+     a cut name with its full text (title, and the detail view), a bulk bar with a count when rows are
+     selected, sticky identifier and actions columns on the wide table. -->
+<style>
+  body { margin: 0; padding: 24px; font-family: Georgia, serif; color: #1a1a1a; background: #fff; }
+  h1 { font-size: 28px; margin: 0 0 16px; }
+  .wrap { overflow-x: auto; max-width: 900px; }
+  table { border-collapse: separate; border-spacing: 0; min-width: 1300px; }
+  th, td { padding: 10px 12px; border-bottom: 1px solid #ccc; text-align: left; font-size: 16px; white-space: nowrap; background: #fff; }
+  .num { text-align: right; font-variant-numeric: tabular-nums; }
+  .cb { width: 24px; position: sticky; left: 0; z-index: 1; }
+  .id { position: sticky; left: 48px; z-index: 1; }
+  .act { position: sticky; right: 0; z-index: 1; }
+  .cb label { display: inline-flex; width: 24px; height: 24px; align-items: center; justify-content: center; cursor: pointer; }
+  .cb input { width: 16px; height: 16px; margin: 0; }
+  .name { display: block; max-width: 150px; overflow: hidden; text-overflow: ellipsis; }
+  button { font: inherit; padding: 8px 12px; min-height: 36px; }
+  .bulk { display: none; align-items: center; gap: 12px; padding: 8px 12px; margin-bottom: 8px; background: #eef2f7; }
+  .bulk.on { display: flex; }
+</style>
+</head>
+<body>
+<h1>Produk</h1>
+<div class="bulk" id="bulk" role="region" aria-label="Aksi untuk produk terpilih">
+  <span id="count" aria-live="polite">0 dipilih</span>
+  <button type="button">Ubah kategori</button>
+  <button type="button">Hapus terpilih</button>
+</div>
+<div class="wrap">
+<table aria-label="Produk">
+  <thead>
+    <tr><th class="cb" scope="col"><label><input type="checkbox" id="all" aria-label="Pilih semua"></label></th><th class="id" scope="col">Produk</th><th scope="col">SKU</th><th class="num" scope="col">Stok</th><th class="num" scope="col">Harga</th><th scope="col">Kategori</th><th scope="col">Dibuat</th><th class="act" scope="col">Aksi</th></tr>
+  </thead>
+  <tbody>
+    <tr><td class="cb"><label><input type="checkbox" aria-label="Pilih Kopi Arabika Gayo"></label></td><td class="id"><span class="name" title="Kopi Arabika Gayo Wine Process 250 gram">Kopi Arabika Gayo Wine Process 250 gram</span></td><td>KB-0012</td><td class="num">4</td><td class="num">Rp 125.000</td><td>Kopi</td><td>2026-11-02</td><td class="act"><button type="button">Ubah</button></td></tr>
+    <tr><td class="cb"><label><input type="checkbox" aria-label="Pilih Teh Melati"></label></td><td class="id"><span class="name" title="Teh Melati Tubruk">Teh Melati Tubruk</span></td><td>TH-0101</td><td class="num">120</td><td class="num">Rp 18.500</td><td>Teh</td><td>2026-10-28</td><td class="act"><button type="button">Ubah</button></td></tr>
+    <tr><td class="cb"><label><input type="checkbox" aria-label="Pilih Gula Aren Cair"></label></td><td class="id"><span class="name" title="Gula Aren Cair Botol Kaca 500 ml Edisi Dapur">Gula Aren Cair Botol Kaca 500 ml Edisi Dapur</span></td><td>GL-0450</td><td class="num">38</td><td class="num">Rp 42.000</td><td>Pemanis</td><td>2026-10-19</td><td class="act"><button type="button">Ubah</button></td></tr>
+    <tr><td class="cb"><label><input type="checkbox" aria-label="Pilih Susu Oat"></label></td><td class="id"><span class="name" title="Susu Oat Barista">Susu Oat Barista</span></td><td>SU-0077</td><td class="num">1.240</td><td class="num">Rp 39.900</td><td>Susu</td><td>2026-09-30</td><td class="act"><button type="button">Ubah</button></td></tr>
+  </tbody>
+</table>
+</div>
+<script>
+  const rows = [...document.querySelectorAll('tbody input[type="checkbox"]')];
+  const all = document.getElementById('all');
+  const update = () => {
+    const n = rows.filter((r) => r.checked).length;
+    document.getElementById('count').textContent = `${n} dipilih`;
+    document.getElementById('bulk').classList.toggle('on', n > 0);
+    all.checked = n === rows.length;
+    all.indeterminate = n > 0 && n < rows.length;
+  };
+  rows.forEach((r) => r.addEventListener('change', update));
+  all.addEventListener('change', () => { rows.forEach((r) => { r.checked = all.checked; }); update(); });
+</script>
+</body>
+</html>

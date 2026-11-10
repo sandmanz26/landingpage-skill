@@ -15,6 +15,12 @@ inbox, editor) rather than read and scrolled. Different rules apply:
   "fits" matches the brief, render the page anyway and say why. "Tidak": log
   `admin-variations declined: …`. Same shadcn/ui structure, 3–4 of the ten style levers changed.
   With guided gates `progress.mjs done direction` checks it.
+- **Data tables:** any screen that lists records follows `admin/table.md` (one home): import/export,
+  sort, sticky identifier and actions on wide tables, checkboxes on one line with 24px targets,
+  bulk-action bar with the count, filters that fit the data type, thumbnails for products,
+  wrap-before-truncate, pagination, right-aligned numbers, and the states. Each rule has its reason
+  and when not; cite the rule id in "Alasan desain" (`rules/rationale.md`). The inspector measures
+  five of them (`table-*` findings).
 - **Allowed here:** quiet 1px borders, small labels, tables, repeated panels, tabular figures,
   monospace for real code or IDs. They help people scan and work.
 - **Priorities:** hierarchy of the task (what the user does most), alignment, density that fits the

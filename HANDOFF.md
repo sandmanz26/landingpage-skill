@@ -514,6 +514,9 @@ Known flake (2026-11-06): the selftest "kit demo passes the inspector with no fi
 while captures, jurors and a second test run used the machine at the same time (agent saw a
 layout-shift); it passes on an idle machine and could not be reproduced with three parallel
 inspects. Root cause not found. Do not skip it; investigate if it recurs.
+Recurred 2026-11-10 right after a subagent's own test run (possibly still overlapping); passed on
+the immediate rerun and the kit page is clean when inspected alone. The selftest does not print the
+failing rule for this check: add that detail first when investigating.
 Capture fix: gotoStable treats HTTP 429 and "Too many requests"/rate-limit bodies as failed loads and
 waits 15 s × try before retrying (Solflare batch-010 was captured as {"errors":["Too many
 requests."]}); fixture evals/fixtures/rate-limited.html.
@@ -604,6 +607,45 @@ was not changed.
   owner; accents are stand-ins; admin detection is the brief word match (a redesign without
   brief.md escapes the check); a turn back to direction keeps an earlier `admin-style:` log line;
   only sidebar, modal and table are rendered (no popover/tabs from md-003/md-004 yet).
+
+**2026-11-10: data-table rules from research, and design rationale for every run (owner).**
+- Research (curl + text extraction, pages read 2026-11-10; WebFetch was blocked for most hosts, curl
+  through the proxy worked): 33 sources cited in `admin/table.md` → NN/g (data tables, tooltips,
+  infinite scroll, mobile tables, view all/pagination, empty states), Carbon (data table usage and
+  accessibility, filtering), Material MDC README, Atlassian dynamic table, GOV.UK table, Primer
+  DataTable and truncation, Shopify resource index, W3C APG (table, grid, sortable table), WCAG
+  1.4.10/1.4.13/2.5.8/4.1.3, W3C decorative images, Roselli (sortable, fixed headers, responsive),
+  Inclusive Components, Higley (grids), Pencil & Paper, Smashing (Nikitina 2023), Andrew Coyle, MUI
+  column pinning, shadcn/ui data table, Agriculture design system. Not reachable: Material guideline
+  pages (script-rendered), SLDS guidance (only a class list), SAP Fiori (403), Baymard, Medium.
+- `admin/table.md` (one home): T1–T9 the owner's nine basics, T10–T11 the audit failures
+  (right-aligned numbers; bulk-action bar with count), T12–T19 research basics (sticky header,
+  states, density, column visibility, row actions + side panel, identifier/caption/semantics, lines
+  vs zebra, saved views). Each: rule, why in plain words, when/when not, accessibility, sources.
+  Disagreements with the owner's basics: page-size menu (Nielsen: often overkill; kept with options
+  far apart, remembered), truncation + tooltip (Primer/NN/g: tooltips rarely right, not on touch;
+  changed to wrap first, truncate with a keyboard/touch path), sticky actions column (a convention,
+  no study; one frozen column on phones), thumbnails and import/export (conventions, no research),
+  hover-only checkboxes (P&P) vs visible, unsorted sort icon (Carbon hover vs W3C always).
+- `rules/rationale.md` (one home): every key decision told with UX reason, trade-off and a source,
+  neutral. `.design/deliver.md` needs `## Alasan desain` (or `## Design rationale`) with ≥ 3 entries
+  that each name a trade-off; `progress.mjs done deliver` checks it in create/site/redesign and in
+  any mode that writes deliver.md. Wired: SKILL.md (step 1, rules for every step, final gate, Files,
+  Scripts), modes/create.md §13, modes/app-screen.md, modes/brand.md, modes/improve.md (review),
+  admin/method.md §5, rules/objective.md.
+- Inspector (`scripts/lib/measure.mjs`, severities in `rules/style-defaults.json`): WARN
+  `table-numbers-align`, `table-checkbox-align`, `table-checkbox-target` (desktop/tablet; the phone
+  keeps `tap-target`), `table-truncation`, `table-bulk-actions` (new `tableSelectionProbe` clicks the
+  first row checkbox at desktop and compares actions; INFO `table-bulk-unmeasured`), INFO
+  `table-sticky-columns`. Fixes made on the way: `tap-target` counts a checkbox's label; sticky table
+  cells are not `fixed-cover`; `text-at-edge` skips text in a sideways-scrolling box.
+  `adminoptions.mjs` now right-aligns its Total column. Fixtures `evals/fixtures/table.html` (breaks
+  every rule, plus an ARIA table) and `table-good.html`. 12 selftests added; `npm test` passes (125).
+- Not verified: no real admin build was judged against these rules; the bulk probe misses actions
+  that are always enabled (false WARN) and only tests the first selectable table; numeric detection
+  is a pattern + header match (a numeric ID column without a telling header may be flagged);
+  `title` passes the truncation check although it is mouse-only; whether a rationale is true or
+  neutral is not checkable by script.
 
 ## 4. Decisions and why (do not undo without a reason)
 

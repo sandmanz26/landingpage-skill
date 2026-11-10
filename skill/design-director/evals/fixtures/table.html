@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Produk: tabel dengan masalah</title>
+<!-- Fixture for the data-table checks (admin/table.md): numbers left-aligned, a row checkbox out of
+     line and 14px targets, a cut name with no way to read it, selection with no bulk actions, a wide
+     table whose identifier and actions columns scroll away. A second, ARIA-built table repeats the
+     left-aligned number. -->
+<style>
+  body { margin: 0; padding: 24px; font-family: Georgia, serif; color: #1a1a1a; background: #fff; }
+  h1 { font-size: 28px; margin: 0 0 16px; }
+  .wrap { overflow-x: auto; max-width: 900px; }
+  table { border-collapse: collapse; min-width: 1300px; }
+  th, td { padding: 10px 12px; border-bottom: 1px solid #ccc; text-align: left; font-size: 16px; white-space: nowrap; }
+  .cb input { width: 14px; height: 14px; margin: 0; }
+  .cb.off { padding-left: 22px; }
+  .name { display: block; max-width: 150px; overflow: hidden; text-overflow: ellipsis; }
+  button { font: inherit; padding: 8px 12px; min-height: 36px; }
+  .grid { margin-top: 32px; max-width: 480px; }
+  .row { display: grid; grid-template-columns: 2fr 1fr; border-bottom: 1px solid #ccc; }
+  .row > div { padding: 10px 12px; }
+</style>
+</head>
+<body>
+<h1>Produk</h1>
+<div class="wrap">
+<table aria-label="Produk">
+  <thead>
+    <tr><th class="cb" scope="col"><input type="checkbox" aria-label="Pilih semua"></th><th scope="col">Produk</th><th scope="col">SKU</th><th scope="col">Stok</th><th scope="col">Harga</th><th scope="col">Kategori</th><th scope="col">Dibuat</th><th scope="col">Aksi</th></tr>
+  </thead>
+  <tbody>
+    <tr><td class="cb"><input type="checkbox" aria-label="Pilih Kopi Arabika Gayo"></td><td><span class="name">Kopi Arabika Gayo Wine Process 250 gram</span></td><td>KB-0012</td><td>4</td><td>Rp 125.000</td><td>Kopi</td><td>2026-11-02</td><td><button type="button">Ubah</button></td></tr>
+    <tr><td class="cb off"><input type="checkbox" aria-label="Pilih Teh Melati"></td><td><span class="name">Teh Melati Tubruk</span></td><td>TH-0101</td><td>120</td><td>Rp 18.500</td><td>Teh</td><td>2026-10-28</td><td><button type="button">Ubah</button></td></tr>
+    <tr><td class="cb"><input type="checkbox" aria-label="Pilih Gula Aren Cair"></td><td><span class="name">Gula Aren Cair Botol Kaca 500 ml Edisi Dapur</span></td><td>GL-0450</td><td>38</td><td>Rp 42.000</td><td>Pemanis</td><td>2026-10-19</td><td><button type="button">Ubah</button></td></tr>
+    <tr><td class="cb"><input type="checkbox" aria-label="Pilih Susu Oat"></td><td><span class="name">Susu Oat Barista</span></td><td>SU-0077</td><td>1.240</td><td>Rp 39.900</td><td>Susu</td><td>2026-09-30</td><td><button type="button">Ubah</button></td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="grid" role="table" aria-label="Stok gudang">
+  <div class="row" role="row"><div role="columnheader">Gudang</div><div role="columnheader">Jumlah</div></div>
+  <div class="row" role="row"><div role="cell">Bandung</div><div role="cell">1.204</div></div>
+  <div class="row" role="row"><div role="cell">Surabaya</div><div role="cell">87</div></div>
+  <div class="row" role="row"><div role="cell">Medan</div><div role="cell">15</div></div>
+</div>
+</body>
+</html>

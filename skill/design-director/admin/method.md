@@ -98,3 +98,7 @@ Write the chosen direction into `.design/spec.md` as tokens: `adminoptions.mjs` 
 `--card`, `--primary`, `--radius`, `--sidebar-*`, …). Copy the chosen block into the theme; a mix
 takes each lever from one direction and says which. Every component then uses the same tokens; a
 lever that is not in the chosen direction stays at the shadcn/ui default.
+
+A direction changes how a table looks, never what it does: a table's behaviour (alignment,
+selection and bulk actions, sticky columns, truncation, pagination, states) follows
+`admin/table.md` in every direction.

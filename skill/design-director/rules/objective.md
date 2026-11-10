@@ -16,6 +16,7 @@ Measured by `scripts/inspect.mjs` on every run, whatever the taste. FAIL blocks 
 | Hidden content | Text still invisible after scrolling the whole page; text hidden under reduced motion | |
 | Stability | Layout shift over 0.25 | Layout shift over 0.1; console errors |
 | Without JavaScript | | Less than half of the text visible |
+| Data tables (`admin/table.md`; severities in `rules/style-defaults.json`) | | Numbers people compare not right-aligned (T10); row checkboxes more than 2px out of line or under 24×24px off the phone (T5); a cut value with no way to read it (T8); selecting a row shows no bulk action (T11, desktop). INFO: a wide table without sticky identifier and actions columns (T3) |
 
 Targets the inspector reports as inventory (not pass/fail), to keep the system tight:
 

@@ -13,7 +13,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { launch, resolveTarget, parseArgs, gotoStable, dismissOverlays } from './lib/browser.mjs';
-import { measure, hiddenText, markSeen } from './lib/measure.mjs';
+import { measure, hiddenText, markSeen, tableSelectionProbe } from './lib/measure.mjs';
 import { decodePng } from './lib/png.mjs';
 
 const args = parseArgs(process.argv.slice(2));
@@ -212,7 +212,17 @@ for (const vp of VIEWPORTS) {
   }
   await page.evaluate(() => window.scrollTo(0, 0));
 
+  // Data tables with selectable rows: does selecting a row bring up the bulk actions (admin/table.md T11)?
+  // Desktop only, after the screenshots; the selection is cleared again.
+  let selection = null;
+  const bulkSeverity = { fail: 'FAIL', warn: 'WARN', info: 'INFO' }[String(rules['table-bulk-actions'] || 'off').toLowerCase()];
+  if (vp.name === 'desktop' && bulkSeverity) selection = await page.evaluate(tableSelectionProbe).catch((e) => ({ status: 'unclickable', why: String(e.message || e).slice(0, 120) }));
+
   const findings = m.findings;
+  if (selection && selection.status === 'no-bulk')
+    add(findings, bulkSeverity, 'table-bulk-actions', `Selecting a row in "${selection.table}" brings up no action to apply to the selection${selection.count ? ` (only the count "${selection.count}")` : ''}: show a bulk-action bar with the count and the actions, or tie always-visible actions to the selection (admin/table.md T11)`);
+  if (selection && selection.status === 'unclickable')
+    add(findings, 'INFO', 'table-bulk-unmeasured', `Bulk actions not measured: ${selection.why}; check by hand that selecting rows shows the count and the actions`);
   if (overlays.length) add(findings, 'INFO', 'overlays-dismissed', `Closed ${overlays.length} pop-up or banner(s) before capturing the screens`, overlays);
   if (contrastCheck.failures.length)
     add(findings, 'FAIL', 'contrast', `${contrastCheck.failures.length} text elements below WCAG AA (measured on screen pixels)`, contrastCheck.failures.slice(0, 5));

@@ -66,7 +66,10 @@ means three things at once: it serves the business, it answers the customer, and
    system or component library is built with shadcn/ui (React + Tailwind) until the user approves
    another; tell them why (`rules/stack.md`). At the direction step ask whether the user wants
    to see 2–3 style variations (sidebar, modal, …) so the panel does not look generic; they pick
-   from `adminoptions.mjs`'s page, or trust the AI (`admin/method.md`).
+   from `adminoptions.mjs`'s page, or trust the AI (`admin/method.md`). A screen that lists
+   records (three rows or more) follows the data-table rules of `admin/table.md`: right-aligned
+   numbers, a bulk-action bar on selection, sticky identifier and actions on wide tables, and the
+   rest, each with its reason and when not.
 
 2. **Effort.** `quick` for a section or a small fix, `standard` for a page (default), `thorough` for a
    pitch, a flagship page or a whole site (best-of-3 on every key section). Subagent budget per run
@@ -114,6 +117,9 @@ means three things at once: it serves the business, it answers the customer, and
 - When two rules conflict, `rules/precedence.md` decides. Name the conflict in the report.
 - In a long session, re-read `.design/spec.md` before building each section.
 - Do not report a check you did not run. If the browser or a subagent is unavailable, say so.
+- **Explain every key decision** with its UX reason, its trade-off (when it would be wrong) and a
+  source where there is one, in neutral words ("most guidance recommends … because …; an exception
+  is …"), so the user can defend the design next to another AI's (`rules/rationale.md`).
 
 ## Gate formats
 
@@ -148,8 +154,9 @@ them to quick gates and, if they agree, write that to `designers/<name>.md`.
 
 **Final gate** (`approve final`). The package from the mode file, written to `.design/deliver.md`:
 what was built, screenshots at desktop and phone, what is sample content (`[SAMPLE]` copy, sample UI
-marked `data-sample`, drawn or dummy pictures with the shot list), open issues, and **"Supaya lebih
-bagus"**: at most five concrete things the user can do or decide to lift the result (pictures to
+marked `data-sample`, drawn or dummy pictures with the shot list), open issues, **"Alasan
+desain"**: at least three key decisions, each with its UX reason, trade-off and source
+(`rules/rationale.md`), and **"Supaya lebih bagus"**: at most five concrete things the user can do or decide to lift the result (pictures to
 supply, with the shot list; real proof to collect; a dial worth turning; a higher effort level; the
 signature motion, when the motion spec found no message to move), each with what it would
 change.
@@ -207,6 +214,8 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 | `library/intake.md` | When the team sends references with their notes |
 | `rules/brief-interview.md` | Every question to the user (plain words, what it changes, an example per choice, a recommendation, "percayakan ke AI"); the brief step: the one guiding message, the materials (photos, product UI, brand assets; mock or placeholder for missing UI; telling the user about dummy pictures; with no photos, the three stand-in paths and the Unsplash Access Key steps), liked sites into dials, sketches at the direction gate |
 | `rules/stack.md` | The brief step: the stack and component library; an admin panel, dashboard or back office defaults to shadcn/ui (React + Tailwind) until the user agrees another |
+| `admin/table.md` | Building any screen that lists records (3+ rows): the data-table rules (the owner's nine basics, right-aligned numbers, the bulk-action bar, and research basics such as sticky header, states, density, row actions), each with why, when not, accessibility and dated sources; what the inspector measures |
+| `rules/rationale.md` | Every gate and the deliver report: each key decision with its UX reason, its trade-off and a source, neutral; the "Alasan desain" section of `.design/deliver.md` |
 | `admin/method.md`, `admin/directions.json` | The direction step of an admin or app screen: the ten style levers (change 3–4, consistently), the style directions from the team's admin references, the variation question, the brand kit overriding a direction, the chosen tokens into the shadcn/ui theme |
 | `rules/visual-dials.md` | The direction gate: the dials, presets from the library, how to guide the user |
 | `rules/illustration.md` | Writing the spec when the client has no pictures: photographs by the chosen stand-in path, drawing flat illustration, the shot list |
@@ -217,10 +226,10 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 
 | Command | Does |
 | --- | --- |
-| `progress.mjs init / check / done / approve / back / skip / log / status` | Order of steps, gates, turn back; content checks per step (brief Materials, an admin brief's Component library with the shadcn/ui default logged, an admin direction's style options with a logged choice or decline, spec Interactions and Motion spec, deliver.md, …) |
+| `progress.mjs init / check / done / approve / back / skip / log / status` | Order of steps, gates, turn back; content checks per step (brief Materials, an admin brief's Component library with the shadcn/ui default logged, an admin direction's style options with a logged choice or decline, spec Interactions and Motion spec, deliver.md with "Alasan desain" (3+ decisions with a trade-off), …) |
 | `brandboard.mjs <brand-kit.json or directions.json> [--out .design/brand] [--no-pdf]` | The brand board: palette with roles and contrast pairs, type, shape and motion, elements, the placeholder wordmark, the brand in use (web hero, price card, social post); `board.html` and `board.pdf` |
 | `draw.mjs --sector <s> [--tone <t>] [--have a,b] [--options 3]` | Deals directions into `.design/directions/` (`--list sectors`) |
-| `inspect.mjs <url or file> [--out dir] [--allow rule]` | Real-browser check at 1440/768/390, screenshots, design inventory; INFO `placeholder-logo` and `sample-ui` (`data-sample`) for the deliver report |
+| `inspect.mjs <url or file> [--out dir] [--allow rule]` | Real-browser check at 1440/768/390, screenshots, design inventory; INFO `placeholder-logo` and `sample-ui` (`data-sample`) for the deliver report; data tables (`admin/table.md`): numbers not right-aligned, checkboxes out of line or under 24px, cut values with no way to read them, selection with no bulk actions (clicks a row at desktop), wide tables without sticky identifier/actions |
 | `lint.mjs <files or folders>` | Stock copy, placeholders, default styling patterns in source |
 | `copycheck.mjs <copy.md or page> [--voice .design/voice.md]` | Reading experience and voice, measured: sentence and paragraph length, headline length, long words, self-praise, corporate abstractions, glossary words the reader does not use, generic buttons; prints the skim test |
 | `kit.mjs list` / `get <names> [--out dir]` | Tested sections built from tokens (hero with arch photo, price near the action, evidence rows, reveal cards with a tap path, before/after, sticky story, proof quote, FAQ, closing action): the build's starting floor |

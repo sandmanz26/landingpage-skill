@@ -64,7 +64,8 @@ sell better and answer the customer better, or only look different? Answer every
 Response section.
 
 In `review` mode, `deliver` is the research summary, the ranked findings after the roast, and the
-three changes that would move the page most, and the run stops. Change no code.
+three changes that would move the page most, each with its UX reason, trade-off and source
+(`rules/rationale.md`), and the run stops. Change no code.
 
 ## choose (gate)
 

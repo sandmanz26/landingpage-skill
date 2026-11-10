@@ -130,7 +130,7 @@ const content = {
     fields: [{ label: 'Nama produk', value: 'Sambal bawang 250 g' }, { label: 'Harga', value: 'Rp 38.000', half: true }, { label: 'Stok awal', value: '40', half: true }, { label: 'Kategori', kind: 'segmented', options: ['Sambal', 'Bumbu', 'Kering'] }],
     secondary: 'Batal', primary: 'Simpan produk',
   },
-  table: { title: 'Pesanan terbaru', cols: ['Pesanan', 'Pelanggan', 'Total', 'Status'], rows: [['#1042', 'Dewi A.', 'Rp 114.000', 'Dibayar'], ['#1041', 'Bima S.', 'Rp 76.000', 'Dikirim'], ['#1040', 'Sari W.', 'Rp 38.000', 'Menunggu'], ['#1039', 'Andi P.', 'Rp 152.000', 'Dibayar']] },
+  table: { title: 'Pesanan terbaru', cols: ['Pesanan', 'Pelanggan', 'Total', 'Status'], numeric: [2], rows: [['#1042', 'Dewi A.', 'Rp 114.000', 'Dibayar'], ['#1041', 'Bima S.', 'Rp 76.000', 'Dikirim'], ['#1040', 'Sari W.', 'Rp 38.000', 'Menunggu'], ['#1039', 'Andi P.', 'Rp 152.000', 'Dibayar']] },
   ...(args.content ? JSON.parse(fs.readFileSync(args.content, 'utf8')) : {}),
 };
 
@@ -186,8 +186,10 @@ function modal(o) {
 
 function table(o) {
   const tb = content.table;
-  return `<div class="tbl"><p class="tbl-title">${esc(tb.title)}</p><div class="tbl-scroll"><table><thead><tr>${tb.cols.map((c) => `<th scope="col">${esc(c)}</th>`).join('')}</tr></thead>
-  <tbody>${tb.rows.map((r) => `<tr>${r.map((c, i) => `<td>${i === r.length - 1 ? `<span class="chip">${esc(c)}</span>` : esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div></div>`;
+  // Amounts are right-aligned, header with them (admin/table.md T10).
+  const num = (i) => (tb.numeric || []).includes(i) ? ' class="num"' : '';
+  return `<div class="tbl"><p class="tbl-title">${esc(tb.title)}</p><div class="tbl-scroll"><table><thead><tr>${tb.cols.map((c, i) => `<th scope="col"${num(i)}>${esc(c)}</th>`).join('')}</tr></thead>
+  <tbody>${tb.rows.map((r) => `<tr>${r.map((c, i) => `<td${num(i)}>${i === r.length - 1 ? `<span class="chip">${esc(c)}</span>` : esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div></div>`;
 }
 
 const fontStack = (f) => (f ? `'${f}', ui-sans-serif, system-ui, sans-serif` : 'ui-sans-serif, system-ui, sans-serif');
@@ -292,7 +294,7 @@ h1{font-size:30px;line-height:1.15;margin:0 0 8px} h2{font-size:21px;margin:0} .
 .tbl{width:100%;max-width:520px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-surface);box-shadow:var(--shadow);overflow:hidden;-webkit-backdrop-filter:blur(var(--blur));backdrop-filter:blur(var(--blur))}
 .tbl-title{margin:0;padding:var(--pad);font-family:var(--font-display);font-weight:var(--title-w);font-size:17px;border-bottom:1px solid var(--border)}
 .tbl-scroll{overflow-x:auto} table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
-th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--border);white-space:nowrap} th{font-weight:600;color:var(--muted)} tr:last-child td{border-bottom:0}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--border);white-space:nowrap} th{font-weight:600;color:var(--muted)} .num{text-align:right} tr:last-child td{border-bottom:0}
 @media (max-width:520px){th,td{white-space:normal;padding:8px 10px}}
 .chip{display:inline-block;padding:2px 10px;border-radius:99px;background:var(--active-bg);color:var(--active-text);font-size:13px;font-weight:600}
 .opt :focus-visible{outline:2px solid var(--accent);outline-offset:2px}

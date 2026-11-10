@@ -363,8 +363,10 @@ Write the package to `.design/deliver.md` and show it:
 
 - **the research report** (`.design/research.md`): the findings that changed the design, the
   competitors and category clichés, the customer's questions in their words, the sources;
-- **the rationale**: each major decision (storyline, idea, direction, key sections) with the research
-  finding or roast point behind it;
+- **"## Alasan desain"** (`rules/rationale.md`): at least three key decisions (storyline, idea,
+  direction, key sections, the component library, table rules from `admin/table.md`), each with its
+  UX reason, its trade-off or "kapan tidak", and its source (a research finding, a roast point, a
+  rule id, or a dated link), in neutral words;
 - what was built and where (files, how to open it);
 - desktop and phone screenshots of the final version;
 - the direction (id, seed), the idea sentence, and any redraws or mixes with reasons;
@@ -383,6 +385,7 @@ Write the package to `.design/deliver.md` and show it:
   when the motion spec says `Message: none found`, the motion offered to the user is one of them.
 
 `done deliver` refuses without `.design/deliver.md` and its "Supaya lebih bagus" section, without
+"Alasan desain" holding three decisions that each name a trade-off, without
 the motion option when no message was found, without the shot list when the brief planned dummy or
 drawn pictures, and without the sample UI when it planned a mock.
 

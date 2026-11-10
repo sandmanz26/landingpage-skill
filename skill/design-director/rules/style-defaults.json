@@ -1,5 +1,5 @@
 {
-  "_comment": "Severity of style checks in inspect.mjs: fail | warn | info | off. Team overrides go in team/taste-rules.json, brand overrides in the project's .design/rules.json. Objective checks (contrast, overflow, fonts, tap targets, hidden content) are always on.",
+  "_comment": "Severity of style checks in inspect.mjs: fail | warn | info | off. Team overrides go in team/taste-rules.json, brand overrides in the project's .design/rules.json. Objective checks (contrast, overflow, fonts, tap targets, hidden content) are always on. The table-* checks are the data-table rules of admin/table.md.",
   "purple-gradient": "warn",
   "gradient": "info",
   "glass": "info",
@@ -10,5 +10,11 @@
   "icon-card-row": "warn",
   "centred-hero-two-ctas": "warn",
   "emoji": "warn",
-  "kit-sample": "fail"
+  "kit-sample": "fail",
+  "table-numbers-align": "warn",
+  "table-checkbox-align": "warn",
+  "table-checkbox-target": "warn",
+  "table-truncation": "warn",
+  "table-bulk-actions": "warn",
+  "table-sticky-columns": "info"
 }

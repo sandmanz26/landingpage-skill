@@ -315,6 +315,170 @@ export function measure({ rules, viewport }) {
   const sampleUi = [...document.querySelectorAll('[data-sample]')];
   if (sampleUi.length) add('INFO', 'sample-ui', `${sampleUi.length} element(s) carry sample data (data-sample): list them in the deliver report as sample UI to replace with the real product`, sampleUi.slice(0, 3).map((e) => e.getAttribute('data-sample') || snippet(e)));
 
+  // --- data tables (admin/table.md): a <table>, role=table or role=grid with 3+ data rows.
+  // Severities come from rules (style-defaults.json), so a team or brand can tune them.
+  {
+    const TABLES = 'table, [role="table"], [role="grid"], [role="treegrid"]';
+    const tableName = (t) => {
+      const cap = t.querySelector('caption');
+      const lab = t.getAttribute('aria-label') || (t.getAttribute('aria-labelledby') && document.getElementById(t.getAttribute('aria-labelledby').split(' ')[0])?.textContent) || (cap && cap.textContent) || '';
+      return lab.trim().replace(/\s+/g, ' ').slice(0, 40) || `table ${[...document.querySelectorAll(TABLES)].indexOf(t) + 1}`;
+    };
+    const cellsOf = (t, r) => (t.tagName === 'TABLE' ? [...r.cells] : [...r.querySelectorAll('[role="cell"], [role="gridcell"], [role="columnheader"], [role="rowheader"]')].filter((c) => c.closest('[role="row"]') === r));
+    const isHead = (t, r) => (r.parentElement && r.parentElement.tagName === 'THEAD') || cellsOf(t, r).every((c) => (c.tagName === 'TH' && c.getAttribute('scope') !== 'row') || c.getAttribute('role') === 'columnheader');
+    // Column index that counts colspans, so cells line up with their header.
+    const indexed = (t, r) => {
+      let i = 0;
+      return cellsOf(t, r).map((c) => {
+        const at = i;
+        i += t.tagName === 'TABLE' ? c.colSpan || 1 : 1;
+        return { c, i: at };
+      });
+    };
+    const tables = [...document.querySelectorAll(TABLES)].filter((t) => {
+      if (!visible(t) || (t.parentElement && t.parentElement.closest(TABLES))) return false;
+      const role = t.getAttribute('role');
+      return !(t.tagName === 'TABLE' && role && !/^(table|grid|treegrid)$/.test(role));
+    }).map((t) => {
+      const rows = (t.tagName === 'TABLE' ? [...t.rows] : [...t.querySelectorAll('[role="row"]')]).filter(visible);
+      const head = rows.filter((r) => isHead(t, r)).pop() || null;
+      const body = rows.filter((r) => !isHead(t, r) && cellsOf(t, r).length);
+      return { t, head, body, name: tableName(t) };
+    }).filter((x) => x.body.length >= 3);
+
+    // Text box of a cell from its text nodes only (a block child spans the whole cell).
+    const textBox = (el) => {
+      let left = Infinity;
+      let right = -Infinity;
+      const walk = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+      while (walk.nextNode()) {
+        if (!walk.currentNode.textContent.trim()) continue;
+        const range = document.createRange();
+        range.selectNodeContents(walk.currentNode);
+        for (const q of range.getClientRects()) {
+          if (!q.width) continue;
+          left = Math.min(left, q.left);
+          right = Math.max(right, q.right);
+        }
+      }
+      return left === Infinity ? null : { left, right };
+    };
+    const contentBox = (cell) => {
+      const r = cell.getBoundingClientRect();
+      const cs = getComputedStyle(cell);
+      return { left: r.left + parseFloat(cs.paddingLeft) + parseFloat(cs.borderLeftWidth), right: r.right - parseFloat(cs.paddingRight) - parseFloat(cs.borderRightWidth) };
+    };
+    // A quantity people compare (amount, count, percent), not a number used as a name (ID, phone, date, year).
+    const QUANTITY = /^[-+−(]?\s*(?:rp\.?|idr|usd|eur|sgd|\$|€|£|¥)?\s*[-+−]?\d[\d.,\s]*(?:%|k|rb|ribu|jt|juta|m|kg|g|pcs|x|items?|unit)?\)?$/i;
+    const NAME_NUMBER = /\b(id|no|nomor|number|kode|code|sku|phone|telp|telepon|hp|tanggal|date|tahun|year|zip|kode pos|postcode|rank|peringkat|versi|version)\b|#/i;
+    const isQuantity = (s) => s.length <= 24 && QUANTITY.test(s) && !/^(\+|0\d)/.test(s);
+    const hasCheckbox = (cell) => cell.querySelector('input[type="checkbox"], [role="checkbox"]');
+
+    const misaligned = [];
+    const checkboxOff = [];
+    const smallBoxes = [];
+    const truncated = [];
+    const notSticky = [];
+    for (const { t, head, body, name } of tables) {
+      // 1. Numbers people compare are right-aligned, so units line up under units (T10).
+      const headText = new Map((head ? indexed(t, head) : []).map(({ c, i }) => [i, (c.textContent || '').trim()]));
+      const cols = new Map();
+      for (const r of body) for (const { c, i } of indexed(t, r)) {
+        if (!cols.has(i)) cols.set(i, []);
+        cols.get(i).push(c);
+      }
+      for (const [i, cells] of cols) {
+        if (NAME_NUMBER.test(headText.get(i) || '')) continue;
+        const texts = cells.map((c) => (c.textContent || '').replace(/\s+/g, ' ').trim()).filter(Boolean);
+        if (texts.length < 3 || texts.filter(isQuantity).length < texts.length * 0.8) continue;
+        let decided = 0;
+        let right = 0;
+        for (const c of cells) {
+          const tb = textBox(c);
+          if (!tb) continue;
+          const cb = contentBox(c);
+          const gapR = cb.right - tb.right;
+          const gapL = tb.left - cb.left;
+          if (gapR + gapL < 6) continue; // the value fills the cell: alignment cannot be seen
+          decided++;
+          if (gapR <= 2) right++;
+        }
+        if (decided >= 2 && right < decided * 0.5) misaligned.push(`${name}: column "${headText.get(i) || i + 1}" (${right}/${decided} cells right-aligned)`);
+      }
+
+      // 2. Row checkboxes sit on one vertical line with the header checkbox, each with a 24px target (T5).
+      const boxes = [];
+      for (const r of [head, ...body].filter(Boolean)) {
+        const cell = cellsOf(t, r).find(hasCheckbox);
+        if (!cell) continue;
+        const ctl = hasCheckbox(cell);
+        const label = ctl.closest('label') || (ctl.id && document.querySelector(`label[for="${CSS.escape(ctl.id)}"]`));
+        const shown = visible(ctl) ? ctl : label && visible(label) ? label : ctl.parentElement;
+        const rr = shown.getBoundingClientRect();
+        // The hit area: the control and a label wrapped around it or pointing at it.
+        let hit = visible(ctl) ? ctl.getBoundingClientRect() : rr;
+        if (label && visible(label)) {
+          const lr = label.getBoundingClientRect();
+          hit = { width: Math.max(hit.right, lr.right) - Math.min(hit.left, lr.left), height: Math.max(hit.bottom, lr.bottom) - Math.min(hit.top, lr.top), left: Math.min(hit.left, lr.left), right: Math.max(hit.right, lr.right) };
+        }
+        boxes.push({ x: rr.left + rr.width / 2, w: hit.width, h: hit.height, head: r === head });
+      }
+      if (boxes.filter((b) => !b.head).length >= 2) {
+        const xs = boxes.map((b) => b.x);
+        const spread = Math.max(...xs) - Math.min(...xs);
+        if (spread > 2) checkboxOff.push(`${name}: checkbox centres differ by ${Math.round(spread)}px${boxes.some((b) => b.head) ? ' (header included)' : ''}`);
+        const small = boxes.filter((b) => b.w < 24 || b.h < 24);
+        if (small.length && !isPhone) smallBoxes.push(`${name}: ${small.length} checkbox(es) with a hit area of ${Math.round(small[0].w)}x${Math.round(small[0].h)}px`);
+      }
+
+      // 3. A value cut with an ellipsis has a way to be read in full (T8).
+      for (const r of body) for (const c of cellsOf(t, r)) {
+        for (const el of [c, ...c.querySelectorAll('*')]) {
+          const cs = getComputedStyle(el);
+          const cutX = cs.textOverflow === 'ellipsis' && cs.overflowX !== 'visible' && el.scrollWidth > el.clientWidth + 1;
+          const cutY = cs.webkitLineClamp && cs.webkitLineClamp !== 'none' && el.scrollHeight > el.clientHeight + 1;
+          if (!cutX && !cutY) continue;
+          let reachable = false;
+          for (let e = el; e && e !== r.parentElement; e = e.parentElement) {
+            if (e.matches('[title], [aria-label], [aria-describedby], [data-tooltip], [data-tip]')) reachable = true;
+            if (e === r) break;
+          }
+          if (r.querySelector('[aria-expanded]')) reachable = true;
+          if (!reachable) truncated.push(`${name}: "${(el.textContent || '').trim().slice(0, 40)}"`);
+          break;
+        }
+      }
+
+      // 4. A table wider than its box keeps the identifier and the actions in view (T3).
+      let box = null;
+      for (let e = t; e && e !== document.body; e = e.parentElement) {
+        const ox = getComputedStyle(e).overflowX;
+        if (/(auto|scroll)/.test(ox) && e.scrollWidth > e.clientWidth + 1) {
+          box = e;
+          break;
+        }
+      }
+      if (box) {
+        const sticky = (cell) => [cell, ...cell.querySelectorAll('*')].some((e) => getComputedStyle(e).position === 'sticky');
+        const width = Math.max(...cols.keys()) + 1;
+        const colCells = (i) => cols.get(i) || [];
+        const isChecks = (i) => colCells(i).filter(hasCheckbox).length >= colCells(i).length * 0.6;
+        const isActions = (i) => colCells(i).filter((c) => c.querySelector('button, [role="button"], [aria-haspopup]') && (c.textContent || '').trim().length < 30).length >= colCells(i).length * 0.6 || /^(aksi|actions?|tindakan|opsi|options)$/i.test(headText.get(i) || '');
+        const idCol = [...Array(width).keys()].find((i) => !isChecks(i) && colCells(i).length);
+        const actCol = [...Array(width).keys()].reverse().find(isActions);
+        const parts = [];
+        if (idCol !== undefined && !colCells(idCol).every(sticky)) parts.push(`identifier column "${headText.get(idCol) || idCol + 1}"`);
+        if (actCol !== undefined && !colCells(actCol).every(sticky)) parts.push(`actions column "${headText.get(actCol) || actCol + 1}"`);
+        if (parts.length) notSticky.push(`${name}: scrolls sideways (${box.scrollWidth} in ${box.clientWidth}px); not sticky: ${parts.join(', ')}`);
+      }
+    }
+    if (misaligned.length) style('table-numbers-align', `${misaligned.length} numeric column(s) not right-aligned: amounts and counts are compared digit by digit, so they line up on the right (admin/table.md T10)`, misaligned.slice(0, 4));
+    if (checkboxOff.length) style('table-checkbox-align', `Row checkboxes are not on one vertical line (more than 2px apart): the selection column should read as one column, header checkbox included (admin/table.md T5)`, checkboxOff.slice(0, 3));
+    if (smallBoxes.length) style('table-checkbox-target', `Row checkboxes with a hit area under 24x24px: make the label or the cell the target (WCAG 2.5.8; on a phone the tap-target rule applies) (admin/table.md T5)`, smallBoxes.slice(0, 3));
+    if (truncated.length) style('table-truncation', `${truncated.length} table value(s) cut with an ellipsis and no way to read them in full (no title, aria-label, aria-describedby tooltip or expand control); prefer wrapping or a detail view (admin/table.md T8)`, truncated.slice(0, 4));
+    if (notSticky.length) style('table-sticky-columns', `A wide table scrolls sideways without keeping its identifier and actions columns in view (admin/table.md T3)`, notSticky.slice(0, 3));
+  }
+
   // --- headings
   const h1s = [...document.querySelectorAll('h1')].filter(visible);
   if (h1s.length === 0) add('FAIL', 'no-h1', 'No visible h1: the page has no title');
@@ -346,6 +510,8 @@ export function measure({ rules, viewport }) {
     const r = el.getBoundingClientRect();
     const bar = r.width >= innerWidth * 0.9 && r.height <= innerHeight * 0.15;
     const panel = cs.position === 'sticky' && r.height >= innerHeight * 0.5; // a pinned section device
+    // A sticky header cell or column inside a table pins to the table's own scroll box, not the screen (admin/table.md T3, T12).
+    if (cs.position === 'sticky' && el.closest('th, td, [role="cell"], [role="gridcell"], [role="columnheader"], [role="rowheader"], thead, [role="rowgroup"]')) continue;
     // A closed drawer or modal sits in a full-screen wrapper that lets clicks through and paints
     // nothing (Quite Nice): not a cover. Only the part inside the screen counts.
     const paints = cs.backgroundColor !== 'rgba(0, 0, 0, 0)' || cs.backgroundImage !== 'none' || parseFloat(cs.borderTopWidth) > 0;
@@ -363,7 +529,13 @@ export function measure({ rules, viewport }) {
       const parent = el.parentElement;
       const inline = el.tagName === 'A' && parent && ['P', 'LI', 'SPAN'].includes(parent.tagName) && (parent.textContent || '').trim().length > (el.textContent || '').trim().length + 20;
       if (inline) continue;
-      const r = el.getBoundingClientRect();
+      let r = el.getBoundingClientRect();
+      // A checkbox or radio is hit through its label too: the target is the two together.
+      const label = el.matches('input') && (el.closest('label') || (el.id && document.querySelector(`label[for="${CSS.escape(el.id)}"]`)));
+      if (label && visible(label)) {
+        const lr = label.getBoundingClientRect();
+        r = { width: Math.max(r.right, lr.right) - Math.min(r.left, lr.left), height: Math.max(r.bottom, lr.bottom) - Math.min(r.top, lr.top) };
+      }
       if (r.width < 24 || r.height < 24) small.push(`${Math.round(r.width)}x${Math.round(r.height)} ${snippet(el)}`);
     }
     if (small.length) add('FAIL', 'tap-target', `${small.length} controls smaller than 24x24px on a phone`, small.slice(0, 4));
@@ -383,7 +555,15 @@ export function measure({ rules, viewport }) {
       }
       return left === Infinity ? el.getBoundingClientRect() : { left, right };
     };
+    // Text in a box that scrolls sideways (a wide table) runs past the edge by design.
+    const inSideScroll = (el) => {
+      for (let e = el.parentElement; e && e !== document.body; e = e.parentElement) {
+        if (/(auto|scroll)/.test(getComputedStyle(e).overflowX) && e.scrollWidth > e.clientWidth + 1) return true;
+      }
+      return false;
+    };
     const edge = textEls.filter((el) => {
+      if (inSideScroll(el)) return false;
       const r = textBox(el);
       return r.left < 12 || r.right > vw - 12;
     });
@@ -539,4 +719,56 @@ export function measure({ rules, viewport }) {
       transitions,
     },
   };
+}
+
+// Selecting a row in a data table should bring up what can be done with the selection: a count and
+// the bulk actions (admin/table.md T11). Clicks the first row checkbox of the first data table with
+// selectable rows, compares the actions on screen before and after, then clears the selection again.
+// Returns { status: 'none' | 'ok' | 'no-bulk' | 'unclickable', table, count, actions }.
+export async function tableSelectionProbe() {
+  const TABLES = 'table, [role="table"], [role="grid"], [role="treegrid"]';
+  const shown = (el) => {
+    const r = el.getBoundingClientRect();
+    const cs = getComputedStyle(el);
+    return r.width > 0 && r.height > 0 && cs.visibility !== 'hidden' && cs.display !== 'none' && parseFloat(cs.opacity) > 0.05;
+  };
+  const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
+  for (const t of document.querySelectorAll(TABLES)) {
+    if (!shown(t) || (t.parentElement && t.parentElement.closest(TABLES))) continue;
+    const rows = (t.tagName === 'TABLE' ? [...t.rows] : [...t.querySelectorAll('[role="row"]')]).filter(shown);
+    const body = rows.filter((r) => !(r.parentElement && r.parentElement.tagName === 'THEAD') && !r.querySelector('th[scope="col"], [role="columnheader"]'));
+    if (body.length < 3) continue;
+    const boxes = body.map((r) => r.querySelector('input[type="checkbox"], [role="checkbox"]')).filter(Boolean);
+    if (boxes.length < 2) continue;
+    const box = boxes[0];
+    const checked = (b) => (b.matches('input') ? b.checked : b.getAttribute('aria-checked') === 'true' || b.getAttribute('data-state') === 'checked');
+    const target = shown(box) ? box : box.closest('label') || (box.id && document.querySelector(`label[for="${CSS.escape(box.id)}"]`)) || box;
+    // Actions outside the data rows: their label and whether they can be used now.
+    const actions = () => {
+      const out = new Map();
+      for (const el of document.querySelectorAll('button, [role="button"], a[href], [role="menuitem"]')) {
+        if (!shown(el) || body.some((r) => r.contains(el))) continue;
+        const key = `${(el.getAttribute('aria-label') || el.textContent || '').replace(/\s+/g, ' ').trim()}`;
+        if (key) out.set(key, !(el.disabled || el.getAttribute('aria-disabled') === 'true'));
+      }
+      return out;
+    };
+    const COUNT = /(\d+)\s*(?:of\s*\d+\s*)?(?:row\(?s?\)?|items?|baris|data)?\s*(selected|dipilih|terpilih)/i;
+    const text = () => (document.body.innerText || '').match(COUNT)?.[0] || '';
+    const before = actions();
+    const countBefore = text();
+    if (checked(box)) return { status: 'unclickable', why: 'the first row is already selected' };
+    target.click();
+    await sleep(400);
+    if (!checked(box)) return { status: 'unclickable', why: 'clicking the first row checkbox did not select it' };
+    const after = actions();
+    const countAfter = text();
+    target.click();
+    await sleep(200);
+    const appeared = [...after].filter(([k, on]) => on && !before.get(k)).map(([k]) => k);
+    const count = countAfter && countAfter !== countBefore ? countAfter : '';
+    const name = (t.getAttribute('aria-label') || t.querySelector('caption')?.textContent || 'table').trim().slice(0, 40);
+    return { status: appeared.length ? 'ok' : 'no-bulk', table: name, count, actions: appeared.slice(0, 5) };
+  }
+  return { status: 'none' };
 }

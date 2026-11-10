@@ -156,6 +156,18 @@ function materialsPlan(brief) {
   };
 }
 
+// The design rationale (rules/rationale.md): key decisions, each with its UX reason and its trade-off.
+// Counts table rows with decision, reason and trade-off filled, and bullets with a trade-off label;
+// null when the section is missing.
+const RATIONALE = 'Alasan desain|Design rationale';
+function rationaleEntries(deliver) {
+  const sec = section(deliver, RATIONALE);
+  if (!sec) return null;
+  const rows = tableRows(deliver, RATIONALE).filter((c) => c.length >= 3 && c.slice(0, 3).every((x) => x && !/^[-–—]+$/.test(x)));
+  const bullets = sec.split('\n').filter((l) => /^\s*(?:[-*]|\d+[.)])\s+\S/.test(l) && /(trade-?off|kompromi|kapan tidak|when not|cost|biaya)\s*\**\s*:/i.test(l));
+  return rows.length + bullets.length;
+}
+
 function newestSourceMtime(root = process.cwd()) {
   let newest = 0;
   const SKIP = /^(node_modules|\.git|\.design|dist|build|\.next|\.astro|coverage|\.taste-skill)$/;
@@ -373,6 +385,12 @@ switch (cmd) {
         fail('The brief planned drawn or dummy pictures: say so in .design/deliver.md with the shot list (rules/brief-interview.md → Materials).');
       if (plan.sampleUi && !/sample ui|data-sample|ui contoh|tiruan|mock/i.test(dm))
         fail('The brief planned a mock of the product UI: list the sample UI (data-sample) in .design/deliver.md with what to send to replace it (rules/brief-interview.md → Materials).');
+    }
+    if (step === 'deliver' && (PAGE_MODES.includes(s.mode) || readDesign('deliver.md'))) {
+      // Every key decision is explained with its reason and its cost, so the user can defend it (rules/rationale.md).
+      const n = rationaleEntries(readDesign('deliver.md'));
+      if (n === null) fail('.design/deliver.md needs a "## Alasan desain" (or "## Design rationale") section: at least three key decisions, each with its UX reason, its trade-off and a source where there is one (rules/rationale.md).');
+      if (n < 3) fail(`.design/deliver.md "## Alasan desain" has ${n} decision(s) with a trade-off: list at least three key decisions, each with its UX reason and its trade-off (a table row Keputusan | Alasan UX | Trade-off | Sumber, or a bullet with "Trade-off:") (rules/rationale.md).`);
     }
     if (step === 'brand-directions') {
       const bp = path.join(DIR, 'brand', 'board.html');

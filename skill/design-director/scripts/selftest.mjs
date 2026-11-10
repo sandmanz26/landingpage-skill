@@ -499,6 +499,7 @@ const check = (name, ok, detail = '') => {
   const ir = path.join(tmp, 'admin-inspect/report.json');
   const rep = fs.existsSync(ir) ? JSON.parse(fs.readFileSync(ir, 'utf8')) : { summary: { fail: -1 }, findings: [] };
   check('the admin options page passes inspect without FAIL', ins.status === 0 && rep.summary.fail === 0, ins.stdout + ins.stderr + rep.findings.filter((f) => f.severity === 'FAIL').map((f) => f.rule).join(', '));
+  check('the admin options table follows its own rule: the amount column is right-aligned (admin/table.md T10)', /<th scope="col" class="num">Total/.test(html) && !rep.findings.some((f) => f.rule === 'table-numbers-align'), rep.findings.map((f) => f.rule).join(', '));
   const withKit = run('adminoptions.mjs', ['--kit', path.join(fixtures, 'brand/kit.json'), '--out', path.join(tmp, 'admin-kit/opts.html')], proj);
   const kj = fs.existsSync(path.join(tmp, 'admin-kit/opts.json')) ? JSON.parse(fs.readFileSync(path.join(tmp, 'admin-kit/opts.json'), 'utf8')) : { options: [] };
   check('adminoptions lets the brand kit override colours and shape', withKit.status === 0 && kj.kit === 'Dapur Seimbang' && kj.options.length === 3 && kj.options.every((o) => o.tokens.accent === '#E2A13B' && o.tokens.radius.surface === 28 && o.tokens.radius.button === 8),
@@ -602,11 +603,42 @@ const check = (name, ok, detail = '') => {
   fs.appendFileSync(path.join(d, 'deliver.md'), '## Pictures\nDrawn and dummy pictures; shot list: kitchen at 10am, the box packed.\n');
   const noSampleUi = p('done', 'deliver');
   fs.appendFileSync(path.join(d, 'deliver.md'), '## Sample UI\nThe order screen is a mock with sample data (data-sample): send a screenshot to replace it.\n');
+  // The design rationale (rules/rationale.md): the section, then three decisions that each name a trade-off.
+  const noRationale = p('done', 'deliver');
+  fs.appendFileSync(path.join(d, 'deliver.md'), '## Alasan desain\n| Keputusan | Alasan UX | Trade-off / kapan tidak | Sumber |\n| --- | --- | --- | --- |\n| Harga di layar pertama | Pembeli bertanya harga dulu | Kurang cocok bila harga per proyek | R2 |\n| Foto dapur asli | Bukti yang bisa dilihat | Butuh sesi foto | R1 |\n- **Satu tombol utama**: satu tindakan yang dibayar (strategy)\n');
+  const twoEntries = p('done', 'deliver');
+  fs.appendFileSync(path.join(d, 'deliver.md'), '- **Angka rata kanan di tabel**: satuan sejajar, mudah dibandingkan · Trade-off: nomor pesanan tetap rata kiri · Sumber: admin/table.md T10\n');
   const delivered = p('done', 'deliver');
   check('progress wants deliver.md with the motion offer, the shot list for dummy pictures and the sample UI', [noReport, noMotionOffer, noShots, noSampleUi].every((r) => r.status !== 0) && /deliver\.md/.test(noReport.stderr) && /signature motion/.test(noMotionOffer.stderr) && /shot list/.test(noShots.stderr) && /sample UI/.test(noSampleUi.stderr) && delivered.status === 0, [noReport, noMotionOffer, noShots, noSampleUi, delivered].map((r) => r.stderr).join(' | '));
+  check('progress wants "## Alasan desain" in deliver.md with at least three key decisions, each with its reason and trade-off (rules/rationale.md)',
+    noRationale.status !== 0 && /Alasan desain/.test(noRationale.stderr) && twoEntries.status !== 0 && /has 2 decision/.test(twoEntries.stderr) && delivered.status === 0,
+    [noRationale, twoEntries, delivered].map((r) => r.stderr).join(' | '));
   const clean = path.join(tmp, 'clean', 'report.json');
   const rep = fs.existsSync(clean) ? JSON.parse(fs.readFileSync(clean, 'utf8')) : { findings: [] };
   check('inspect reports data-sample elements as INFO sample-ui', rep.findings.some((f) => f.rule === 'sample-ui' && f.severity === 'INFO'), rep.findings.map((f) => f.rule).join(', '));
+}
+
+// data tables (admin/table.md): each measured rule fires on the broken table and stays quiet on the good one
+{
+  const rules = ['table-numbers-align', 'table-checkbox-align', 'table-checkbox-target', 'table-truncation', 'table-sticky-columns', 'table-bulk-actions'];
+  const report = (name, file) => {
+    run('inspect.mjs', [path.join(fixtures, file), '--out', path.join(tmp, name), '--quiet']);
+    const f = path.join(tmp, name, 'report.json');
+    return fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')) : { findings: [] };
+  };
+  const bad = report('table-bad', 'table.html');
+  const good = report('table-good', 'table-good.html');
+  const find = (rep, rule) => rep.findings.find((f) => f.rule === rule);
+  for (const rule of rules) check(`inspect reports ${rule} on a data table that breaks it`, !!find(bad, rule), bad.findings.map((f) => f.rule).join(', '));
+  const nums = JSON.stringify((find(bad, 'table-numbers-align') || {}).sample || []);
+  check('table-numbers-align flags amounts and counts (also in an ARIA table) but not SKUs or dates', /Stok/.test(nums) && /Harga/.test(nums) && /Jumlah/.test(nums) && !/SKU|Dibuat/.test(nums), nums);
+  check('table-checkbox-target is a WARN off the phone (the phone has the tap-target FAIL), table-sticky-columns is INFO',
+    (find(bad, 'table-checkbox-target') || {}).severity === 'WARN' && !(find(bad, 'table-checkbox-target') || { where: ['mobile'] }).where.includes('mobile') && (find(bad, 'table-sticky-columns') || {}).severity === 'INFO',
+    JSON.stringify([find(bad, 'table-checkbox-target'), find(bad, 'table-sticky-columns')]));
+  check('the data table done to the rules passes: right-aligned numbers, aligned 24px checkboxes, readable cut values, a bulk bar, sticky columns',
+    !good.findings.some((f) => rules.includes(f.rule) || f.rule === 'table-bulk-unmeasured' || f.severity === 'FAIL'), good.findings.map((f) => `${f.severity} ${f.rule}`).join(', '));
+  check('sticky table cells are not fixed covers, and a checkbox label counts toward its tap target',
+    !good.findings.some((f) => ['fixed-cover', 'tap-target', 'text-at-edge'].includes(f.rule)), good.findings.map((f) => f.rule).join(', '));
 }
 
 // an admin request names its component library; the shadcn/ui default is logged (rules/stack.md)

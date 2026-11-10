@@ -69,7 +69,9 @@ Render the final board: `brandboard.mjs .design/brand-kit.json --out .design/bra
 
 Show: the research report, the kit with its sources and rules of use, the board (`board.pdf`), the
 five test results, and **placeholders to replace**: the placeholder wordmark ("ganti dengan logo
-dari desainer"), any sample text on the applications. Add "Supaya lebih bagus" (SKILL.md). After
+dari desainer"), any sample text on the applications. Add "Supaya lebih bagus" (SKILL.md) and
+"Alasan desain": the hero element, palette and type choices with their reason and trade-off
+(`rules/rationale.md`; checked when `.design/deliver.md` is written). After
 the user approves: `approve final`, `done deliver` (needs `.design/brand/board.pdf`).
 
 A later `create` or `site` run in the same project reads `.design/brand-kit.json` at its direction
