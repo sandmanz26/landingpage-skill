@@ -4,7 +4,9 @@ Every run researches before it designs. The user does not have to ask. A designe
 when every decision can be traced to something true about the business and its customers; this
 step is where that evidence comes from, and its report is returned to the user with the work.
 
-Write `.design/research.md` in the format at the end of this file. In a project that already has a
+Write `.design/research.md` in the format at the end of this file. This report is the Head of
+Business's evidence (`rubric/council.md`): its market point in the spec's `## Council` cites a
+finding from here. In a project that already has a
 research report younger than 90 days, read it, add only what this run needs, and update its date.
 
 ## What to find out

@@ -34,6 +34,13 @@ Write `.design/brief.md`:
 - Component library: <only for an admin panel, dashboard or back office: shadcn/ui default or the agreed one (rules/stack.md)>
 - My reading: <one line on anything unclear>
 
+## Product
+- Vision: <what the product is for>
+- User and outcome: <who, and what is different for them after>
+- Metric: <the one number that shows it works>
+- Scope: in <…> · out <…>
+- Patterns: <existing names, flows, components to match, or "n/a: new product">
+
 ## Materials
 | Material | What exists | Plan |
 | Photos | ... | ... |
@@ -44,7 +51,9 @@ Write `.design/brief.md`:
 ```
 
 `done brief` refuses without the `## Materials` section (format and plans:
-`rules/brief-interview.md` → Materials).
+`rules/brief-interview.md` → Materials) and without the Head of Product's part: vision, outcome,
+metric and scope (`rubric/council.md` → The product question; "percayakan ke AI" gives an
+`(AI proposal)`).
 
 Before writing it, guide the user in one message (`rules/brief-interview.md`): who and what for,
 1–3 liked sites and 1 disliked (capture them and run `dials.mjs suggest`), three feeling words,
@@ -68,7 +77,9 @@ answer, the proof, why they read on), and the subject inventory with the idea se
 
 ## 4. roast (strategy gate)
 
-Follow `roast/method.md`: a separate subagent attacks the strategy and storyline in four voices,
+Follow `roast/method.md`: a separate subagent attacks the strategy and storyline in five voices
+(the Business, Product and Creative heads among them; at thorough effort one subagent per head,
+`rubric/council.md`),
 writes a pre-mortem and lists contradictions with the research. Answer every point in the
 **Response** section: accept and change the strategy, or reject with a reason.
 
@@ -222,7 +233,18 @@ user"; Entrance; State transitions; Loops. `done spec` checks these lines)
 
 ## Not on this page
 <project-specific bans, from the brand, taste and the user>
+
+## Council
+(rubric/council.md → The spec sign-off: one or two lines each, signed against that head's evidence)
+- Product: vision …; outcome …; metric …; scope in … / out …
+- Business: <the market point> (research #n); action that pays …
+- Design: <grid, type ratio, what leads>
+- Creative: <the idea's device>; signature …; brand elements …
+- Engineering: stack …; component library …; budget ≤ … KB first load, images ≤ … KB, JS ≤ … KB; tokens only
 ```
+
+`done spec` refuses without `## Council` naming all five heads, a metric on the Product line and a
+budget in KB or MB on the Engineering line.
 
 Check `rules/defaults.md`: if a choice in the table is one of the AI defaults, either change it or
 write the reason it is right here. Colours: avoid the cream-and-terracotta "assistant palette" and
@@ -331,6 +353,14 @@ Fix every FAIL. Treat each WARN as wrong unless you can defend it to a designer 
 write that sentence in the report. Re-run until there is no FAIL, then `done gate` (it refuses if
 the source changed after the last inspection).
 
+**Engineering review** (standard and thorough). Right after the gate, start the Head of
+Engineering as a separate subagent with the brief in `rubric/council.md` → The engineering review
+(it may run while the jurors run: it reads code, they read screenshots). It writes
+`.design/review/engineering.json` with a verdict and its findings. Fix every blocking finding (mark
+it `"status": "fixed"`) or answer it by id in `.design/critique.md` → `## Engineering`; fix the
+major ones or say why not there. At quick effort write the same file yourself with
+`"independent": false` (optional).
+
 ## 12. look
 
 At standard and thorough effort, the look is done by the **jury** (`rubric/jury.md`), sized by effort
@@ -343,8 +373,9 @@ and nothing else (not the code, not your intentions). Designers may add their vo
 folder. Combine with `jury.mjs score .design/jury/<round>` and write the combined critique to
 `.design/critique.md`: the scores, the flagged disagreements, any veto, and the top three problems
 across all jurors. At quick effort one critic (`rubric/critic.md`) is enough. `done look` refuses at
-standard and thorough effort without at least two AI juror files in `.design/jury/<round>/`, and
-whenever the page changed after the last inspection.
+standard and thorough effort without at least two AI juror files in `.design/jury/<round>/`, without
+the engineering review (a verdict, no blocking finding left open or unanswered), and whenever the
+page changed after the last inspection.
 
 Before the jurors, run `fit.mjs .design/inspect --targets .design/targets.json` and give its result
 to the jurors with the evidence pack. Every missed target is fixed, or `.design/critique.md` gets a
@@ -366,7 +397,9 @@ Write the package to `.design/deliver.md` and show it:
 - **"## Alasan desain"** (`rules/rationale.md`): at least three key decisions (storyline, idea,
   direction, key sections, the component library, table rules from `admin/table.md`), each with its
   UX reason, its trade-off or "kapan tidak", and its source (a research finding, a roast point, a
-  rule id, or a dated link), in neutral words;
+  rule id, or a dated link), in neutral words, and where it helps the head behind it (Produk,
+  Bisnis, Desain, Kreatif, Engineering: `rubric/council.md`);
+- the engineering review: verdict, the budget as measured, and any finding left open;
 - what was built and where (files, how to open it);
 - desktop and phone screenshots of the final version;
 - the direction (id, seed), the idea sentence, and any redraws or mixes with reasons;

@@ -168,6 +168,39 @@ function rationaleEntries(deliver) {
   return rows.length + bullets.length;
 }
 
+// The council (rubric/council.md): the brief's Product part, the spec's sign-off by the five heads,
+// and the engineering review after the gate.
+const PRODUCT_KEYS = [['vision', 'Vision|Visi'], ['outcome', 'User and outcome|Outcome|Hasil'], ['metric', 'Metric|Metrik'], ['scope', 'Scope|Lingkup']];
+function productProblems(brief) {
+  const sec = section(brief, 'Product|Produk');
+  const text = sec || lineValue(brief, 'Product|Produk') || '';
+  if (!text) return ['brief.md has no "## Product" section (or "- Product:" line): vision, user and outcome, metric, scope, patterns (rubric/council.md → The product question)'];
+  const missing = PRODUCT_KEYS.filter(([, k]) => !new RegExp(`(?:^|[\\s;*-])(?:${k})\\**\\s*:\\s*[^;\\n]{4,}`, 'im').test(text)).map(([n]) => n);
+  return missing.length ? [`brief.md Product part has no ${missing.join(', ')}: ask the Product question in the four-part form, or write the AI proposal marked "(AI proposal)" (rubric/council.md)`] : [];
+}
+const HEADS = ['Product', 'Business', 'Design', 'Creative', 'Engineering'];
+function councilProblems(spec) {
+  const sec = section(spec, 'Council|Dewan');
+  if (!sec) return ['spec.md has no "## Council" section: one or two lines per head (Product, Business, Design, Creative, Engineering) signing off its part (rubric/council.md → The spec sign-off)'];
+  const out = [];
+  const line = (h) => lineValue(sec, h);
+  const absent = HEADS.filter((h) => !line(h) || line(h).length < 12);
+  if (absent.length) out.push(`"## Council" has no line (or an empty one) for ${absent.join(', ')}`);
+  if (line('Product') && !/metric|metrik/i.test(line('Product'))) out.push('the Product line names no metric');
+  if (line('Engineering') && !/\d\s*(kb|mb)\b/i.test(line('Engineering'))) out.push('the Engineering line names no performance budget (a size in KB or MB)');
+  return out;
+}
+function engineeringProblems() {
+  const rp = path.join(DIR, 'review', 'engineering.json');
+  if (!fs.existsSync(rp)) return ['no .design/review/engineering.json: after the gate the Head of Engineering reviews the code (a subagent, brief in rubric/council.md → The engineering review)'];
+  let r;
+  try { r = JSON.parse(fs.readFileSync(rp, 'utf8')); } catch { return ['.design/review/engineering.json is not valid JSON']; }
+  if (!/^(pass|fix|block)$/i.test(r.verdict || '')) return ['.design/review/engineering.json has no verdict (pass, fix or block)'];
+  const eng = section(readDesign('critique.md'), 'Engineering');
+  const open = (r.findings || []).filter((f) => /^block/i.test(f.severity || '') && !/^fixed$/i.test(f.status || '') && !(f.id && new RegExp(`\\b${f.id}\\b`).test(eng)));
+  return open.length ? [`blocking engineering finding(s) ${open.map((f) => f.id || f.issue).join(', ')} are neither fixed ("status": "fixed") nor answered by id in critique.md "## Engineering"`] : [];
+}
+
 function newestSourceMtime(root = process.cwd()) {
   let newest = 0;
   const SKIP = /^(node_modules|\.git|\.design|dist|build|\.next|\.astro|coverage|\.taste-skill)$/;
@@ -356,6 +389,11 @@ switch (cmd) {
       const absent = [['photos', /photo|foto/i], ['product UI', /\bui\b|interface|antarmuka|screenshot|figma/i], ['brand assets', /brand|logo/i]].filter(([, re]) => !re.test(mat)).map(([n]) => n);
       if (absent.length) fail(`brief.md "## Materials" does not record ${absent.join(', ')}: ask for each (plain question, what it changes, an example) and write what exists and the plan (rules/brief-interview.md → Materials).`);
     }
+    if (step === 'brief' && MATERIAL_MODES.includes(s.mode)) {
+      // The Head of Product's part: vision, user and outcome, metric, scope (rubric/council.md).
+      const probs = productProblems(readDesign('brief.md'));
+      if (probs.length) fail(probs.join('; '));
+    }
     if (step === 'brief') {
       // Admin panels, dashboards, back offices name their component library; the default is shadcn/ui (rules/stack.md).
       const brief = readDesign('brief.md');
@@ -370,6 +408,8 @@ switch (cmd) {
     if (step === 'spec' && PAGE_MODES.includes(s.mode)) {
       const probs = motionProblems(readDesign('spec.md'));
       if (probs.length) fail(`spec.md: ${probs.join('; ')} (motion/functions.md).`);
+      const council = councilProblems(readDesign('spec.md'));
+      if (council.length) fail(`spec.md: ${council.join('; ')} (rubric/council.md).`);
     }
     if (step === 'deliver' && PAGE_MODES.includes(s.mode)) {
       // The package is written down, and it carries what the earlier steps promised the user.
@@ -452,6 +492,11 @@ switch (cmd) {
           : [];
         const need = s.effort === 'thorough' ? 5 : 2;
         if (jurors.length < need) fail(`At ${s.effort} effort the look is done by at least ${need === 2 ? 'two' : need} AI jurors (rubric/jury.md → Panel size): put their files in .design/jury/<round>/. Without subagents, say "not independent" in critique.md.`);
+      }
+      if (s.effort !== 'quick') {
+        // The Head of Engineering read the code after the gate, and nothing blocking is left unanswered.
+        const eng = engineeringProblems();
+        if (eng.length) fail(`At ${s.effort} effort the look needs the engineering review: ${eng.join('; ')} (rubric/council.md).`);
       }
       const ir = path.join(DIR, 'inspect/report.json');
       if ((s.variants || 1) === 1 && fs.existsSync(ir) && newestSourceMtime() > Date.parse(JSON.parse(fs.readFileSync(ir, 'utf8')).time))

@@ -647,6 +647,48 @@ was not changed.
   `title` passes the truncation check although it is mouse-only; whether a rationale is true or
   neutral is not checkable by script.
 
+**2026-11-10: the council: five heads sign off every job (owner).**
+- New `rubric/council.md` (one home; placed in rubric/ because the council judges plan, spec and code,
+  and a new top-level module would also need CLAUDE.md's module list changed): per head what it owns,
+  asks, reads, may veto and where it speaks; speaking by effort; the Product question at the brief;
+  the spec's `## Council` sign-off with a starting performance budget (team starting point, not a
+  measured standard); the engineering reviewer's brief (≤ 9 tool calls) and
+  `.design/review/engineering.json` format (verdict pass/fix/block, findings with severity
+  blocking/major/minor and status).
+- Mapping onto what exists (no new panel): Business = research + strategy §1 + the roast's
+  competitor's-marketer and owner voices + the conversion juror; Product = NEW (brief `## Product`:
+  vision, user and outcome, metric, scope in/out, patterns; a new fifth roast voice; the customer
+  researcher juror); Design = art director + accessibility juror; Creative = senior art director
+  voice, brand and story + motion jurors; Engineering = NEW, one subagent after the gate reading the
+  code (the jury still never sees code; SKILL.md principle 7 reworded, principle 11 added).
+  quick: main session plays the heads, not independent; standard: heads inside the roast and the two
+  combined jurors (visual-motion = Design + Creative, business-customer-story = Product + Business)
+  + 1 engineering reviewer; thorough: 4 head roasters (Engineering does not roast a plan without
+  code) + the full look panel grouped by head + the engineering reviewer.
+- The strategy's Success measure is the brief's Product metric carried forward (no second metric).
+- `progress.mjs`: `done brief` (create, site, brand; app screens run inside these) refuses without
+  vision, outcome, metric and scope (section or one `Product:` line); `done spec` (create, site,
+  redesign) refuses without `## Council` with a line per head, a metric on Product and a KB/MB budget
+  on Engineering; `done look` at standard/thorough refuses without `.design/review/engineering.json`
+  with a verdict, or with a blocking finding neither `"status": "fixed"` nor named by id in
+  critique.md `## Engineering`. Three selftests added; the shared BRIEF fixture got a `## Product`.
+  `npm test` passes (128 checks; the first run had one kit-demo `layout-shift` flake, gone on the
+  rerun alone).
+- Wired: SKILL.md (principles, step 4, effort/cost table, brief and final gate, Files, Scripts),
+  modes/create.md (brief template, roast, spec template, engineering review after the gate, look,
+  deliver), modes/site.md, modes/app-screen.md (shadcn/ui conventions in the review), modes/brand.md,
+  roast/method.md (five voices with heads, by effort), rubric/jury.md (juror → head mapping, panel
+  size), rules/rationale.md (optional "Kepala"), rules/brief-interview.md (the Product question,
+  merged with "siapa dan untuk apa" to stay at five questions), strategy/method.md, research/method.md.
+- Cost (estimates, NOT measured): engineering reviewer 70-110k per run; standard about +70-110k
+  (budget 320-430k); thorough about +250-350k (3 extra head roasters at 60-80k each + reviewer;
+  budget 850k-1.15M). Measure both on the next real run.
+- Not verified: no real run; whether head lines are true; whether quick-effort roles are really
+  played apart; page weight is not measured by the inspector (the reviewer measures from files);
+  the review's freshness after later fixes is not checked (later rounds check fixes in the main
+  session); a `section` run has no Product or Council check; the brand mode has no spec, so no
+  Council check there.
+
 ## 4. Decisions and why (do not undo without a reason)
 
 | Decision | Why |

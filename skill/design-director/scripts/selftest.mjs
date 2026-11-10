@@ -20,7 +20,9 @@ const ROAST = '# Roast\n## Points\n| # | Voice | Point | Evidence | Severity |\n
 // A brand kit with the five headings of brand/method.md §8 and the five tests recorded.
 const BRANDKIT = '# Brand kit: Test\n## Sources\n| Source | Ask | Answer |\n| The product | form | bento box |\n## Elements\n| Family | Decision | Source |\n| Shape | radius 28 | box |\n## Hero element\nThe box that fills by day.\n## Rules of use\n| Element | Where | How often | Never | Effect |\n| Box | hero, price | 3 | decoration | shows progress |\n## Tests\n- Cover-the-logo: pass\n- Blur: pass\n- Swap: pass\n- Down-the-page: every section has two\n- Source: all traced\n';
 // A brief with the materials asked for (rules/brief-interview.md → Materials).
-const BRIEF = '# Brief\n- What: test\n## Materials\n| Material | What exists | Plan |\n| --- | --- | --- |\n| Photos | none | photos.mjs: 0 usable; no image tool → drawn and dummy pictures, user told |\n| Product UI | n/a | - |\n| Brand assets | logo.svg | use it |\n';
+const BRIEF = '# Brief\n- What: test\n## Materials\n| Material | What exists | Plan |\n| --- | --- | --- |\n| Photos | none | photos.mjs: 0 usable; no image tool → drawn and dummy pictures, user told |\n| Product UI | n/a | - |\n| Brand assets | logo.svg | use it |\n## Product\n- Vision: office lunch that arrives ready, every weekday\n- User and outcome: office workers stop queueing at lunch\n- Metric: weekly subscriptions\n- Scope: in the landing page · out the ordering app (next quarter)\n- Patterns: n/a: new product\n';
+// The council's sign-off in the spec (rubric/council.md): a line per head, a metric, a budget.
+const COUNCIL = '## Council\n- Product: vision office lunch ready; outcome no queue; metric weekly subscriptions; scope in landing / out app\n- Business: competitors hide the price (research #2); action that pays is the WhatsApp order\n- Design: one 12-column grid, type ratio 1.333, the lunch box leads every screen\n- Creative: the lunch box becomes the page grid; signature box filling on scroll\n- Engineering: static HTML + CSS; no component library; budget ≤ 900 KB first load, images ≤ 200 KB, JS ≤ 30 KB; tokens only\n';
 // A motion spec with the message, its signature motion, the entrance and the state transitions (motion/functions.md).
 const MOTION = '## Motion spec\nMessage: lunch arrives ready, every weekday\nSignature motion: the lunch box fills compartment by compartment on scroll, once\nEntrance: headline, sub, action, photo rise in 700ms · reduced: cross-fade 150ms\nState transitions: FAQ rows open with height-free reveal · reduced: instant\nLoops: none\n';
 const check = (name, ok, detail = '') => {
@@ -408,6 +410,22 @@ const check = (name, ok, detail = '') => {
   const noJury = p('done', 'look');
   fs.mkdirSync(path.join(d, 'jury', 'r1'), { recursive: true });
   for (const j of ['art', 'customer']) fs.writeFileSync(path.join(d, 'jury', 'r1', `${j}.json`), JSON.stringify({ juror: j, kind: 'ai', refs: {} }));
+  // The Head of Engineering's code review (rubric/council.md): a verdict, and every blocking finding fixed or answered.
+  const noEng = p('done', 'look');
+  fs.mkdirSync(path.join(d, 'review'), { recursive: true });
+  const eng = (o) => fs.writeFileSync(path.join(d, 'review', 'engineering.json'), JSON.stringify({ reviewer: 'head-of-engineering', kind: 'ai', ...o }));
+  eng({ findings: [] });
+  const noVerdict = p('done', 'look');
+  const ENG1 = { id: 'ENG1', severity: 'blocking', area: 'a11y-code', where: 'index.html:12', issue: 'menu button has no name', fix: 'aria-label', status: 'open' };
+  eng({ verdict: 'fix', findings: [ENG1, { id: 'ENG2', severity: 'minor', issue: 'unused class', status: 'open' }] });
+  const openBlock = p('done', 'look');
+  fs.writeFileSync(path.join(d, 'critique.md'), '# Critique\n## Engineering\n- ENG1: aria-label="Buka menu" added, checked in the code.');
+  const answered = p('done', 'look');
+  eng({ verdict: 'fix', findings: [{ ...ENG1, status: 'fixed' }] });
+  fs.writeFileSync(path.join(d, 'critique.md'), '# Critique');
+  check('progress wants the engineering review with a verdict before a standard look, and every blocking finding fixed or answered by id',
+    noEng.status !== 0 && /engineering\.json/.test(noEng.stderr) && noVerdict.status !== 0 && /verdict/.test(noVerdict.stderr) && openBlock.status !== 0 && /ENG1/.test(openBlock.stderr) && !/ENG2/.test(openBlock.stderr) && !/ENG1/.test(answered.stderr),
+    [noEng, noVerdict, openBlock, answered].map((r) => r.stderr).join(' | '));
   const future = new Date(Date.now() + 60000);
   fs.utimesSync(path.join(proj, 'index.html'), future, future);
   const stale = p('done', 'look');
@@ -577,7 +595,19 @@ const check = (name, ok, detail = '') => {
   const st = JSON.parse(fs.readFileSync(path.join(d, 'progress.json'), 'utf8'));
   for (const k of ['research', 'strategy', 'roast', 'direction', 'skeleton']) st.steps[k] = { status: 'done' };
   fs.writeFileSync(path.join(d, 'progress.json'), JSON.stringify(st));
-  const spec = (motion) => fs.writeFileSync(path.join(d, 'spec.md'), `# Spec\n## Interactions\nnone\n${motion}`);
+  const spec = (motion, council = COUNCIL) => fs.writeFileSync(path.join(d, 'spec.md'), `# Spec\n## Interactions\nnone\n${motion}${council}`);
+  spec(MOTION, '');
+  const noCouncil = p('done', 'spec');
+  spec(MOTION, COUNCIL.replace(/- Creative:.*\n/, ''));
+  const noCreative = p('done', 'spec');
+  spec(MOTION, COUNCIL.replace('metric weekly subscriptions', 'more orders'));
+  const noMetric = p('done', 'spec');
+  spec(MOTION, COUNCIL.replace(/budget ≤ 900 KB first load, images ≤ 200 KB, JS ≤ 30 KB/, 'fast enough'));
+  const noBudget = p('done', 'spec');
+  spec(MOTION);
+  check('progress wants the spec\'s "## Council": a line per head, a metric on the Product line, a budget on the Engineering line (rubric/council.md)',
+    noCouncil.status !== 0 && /## Council/.test(noCouncil.stderr) && noCreative.status !== 0 && /Creative/.test(noCreative.stderr) && noMetric.status !== 0 && /no metric/.test(noMetric.stderr) && noBudget.status !== 0 && /budget/.test(noBudget.stderr) && p('done', 'spec').status === 0,
+    [noCouncil, noCreative, noMetric, noBudget].map((r) => r.stderr).join(' | '));
   spec('');
   const noMotion = p('done', 'spec');
   spec(MOTION.replace(/Message:.*\n/, ''));
@@ -639,6 +669,26 @@ const check = (name, ok, detail = '') => {
     !good.findings.some((f) => rules.includes(f.rule) || f.rule === 'table-bulk-unmeasured' || f.severity === 'FAIL'), good.findings.map((f) => `${f.severity} ${f.rule}`).join(', '));
   check('sticky table cells are not fixed covers, and a checkbox label counts toward its tap target',
     !good.findings.some((f) => ['fixed-cover', 'tap-target', 'text-at-edge'].includes(f.rule)), good.findings.map((f) => f.rule).join(', '));
+}
+
+// the Head of Product's part of the brief (rubric/council.md): vision, outcome, metric, scope
+{
+  const proj = path.join(tmp, 'product');
+  fs.mkdirSync(proj);
+  const d = path.join(proj, '.design');
+  const p = (...a) => run('progress.mjs', a, proj);
+  p('init', '--mode', 'create', '--effort', 'quick', '--gates', 'autopilot');
+  p('approve', 'brief');
+  const brief = (product) => fs.writeFileSync(path.join(d, 'brief.md'), BRIEF.replace(/## Product[\s\S]*/, product));
+  brief('');
+  const none = p('done', 'brief');
+  brief('- Product: vision: office lunch, ready; outcome: no queue at noon; scope: in landing / out app');
+  const noMetric = p('done', 'brief');
+  brief('- Product: vision: office lunch, ready; outcome: no queue at noon; metric: weekly subscriptions (AI proposal); scope: in landing / out app; patterns: n/a');
+  const line = p('done', 'brief');
+  check('progress wants the brief\'s Product part (vision, outcome, metric, scope) as a section or one line',
+    none.status !== 0 && /## Product/.test(none.stderr) && noMetric.status !== 0 && /metric/.test(noMetric.stderr) && line.status === 0,
+    [none, noMetric, line].map((r) => r.stderr).join(' | '));
 }
 
 // an admin request names its component library; the shadcn/ui default is logged (rules/stack.md)

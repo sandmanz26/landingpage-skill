@@ -11,6 +11,8 @@ Write `.design/strategy.md` in the format at the end of this file.
 
 - **The action that pays:** the one thing the page must get (book, buy, sign up, ask for a quote).
 - **Success measure:** what would show the page works (bookings per week, leads, sales, chats).
+  This is the brief's Product metric carried forward (`rubric/council.md`), not a second one; if
+  the research shows it cannot be measured, say so and propose another at the strategy gate.
 - **Offer:** what exactly is on the table, at what price, with what risk-reducer (trial, guarantee,
   free first visit).
 - **Position:** against which alternatives, and the one difference that matters to customers.

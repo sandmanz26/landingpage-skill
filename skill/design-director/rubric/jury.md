@@ -21,6 +21,13 @@ never the builder's intentions, never another juror's answer.
 | **Interaction and motion designer** | Motion, micro-interaction, states | Does motion have a function? Are states and feedback right? Motion cannot be judged from stills: this juror reads the motion log, reduced-motion and idle results in `evidence.json` and the frames in `motion-sheet.png`, and opens a browser only to check a specific doubt | craft (motion) |
 | **Front-end and accessibility engineer** | Performance, accessibility, responsive | Reads the inspector report and the screenshots: contrast, tap targets, reflow, hidden content | craft (technical) |
 
+**The jurors are the council's heads at the look** (`rubric/council.md`): art director and the
+front-end and accessibility juror = **Head of Design**; brand and story strategist and the motion
+designer = **Head of Creative**; customer researcher = **Head of Product** (the outcome and the
+five questions); conversion strategist = **Head of Business**. The **Head of Engineering** is not a
+juror: the jury never sees the code, so the code is read by the separate engineering review after
+the gate (`rubric/council.md` → The engineering review), whose blocking findings `done look` checks.
+Each juror's file may carry `"head": "design"` (or `creative`, `product`, `business`).
 ## Panel size by effort (cost)
 
 Each AI juror costs about 60-95k tokens (measured: 59-66k per juror on the WO run-2 page with the
@@ -30,9 +37,10 @@ five-juror panels (hero best-of-3 and look). So the panel grows with the effort,
 | Effort | Look, round 1 | Later rounds (2-3) | Hero best-of-3 |
 | --- | --- | --- | --- |
 | quick | one critic with all six criteria (`rubric/critic.md`) | the same critic, top three only | no |
-| standard | **two combined jurors**: *visual-motion* (art director + motion + accessibility: clarity, distinctiveness, craft) and *business-customer-story* (conversion + customer + story: business, customer, story) | **one verifier**: the previous top three and the new pack, scoring only the criteria the fixes touched | no (sketches at the direction gate choose the composition) |
-| thorough | the full panel above (five or six jurors) | two combined jurors | yes, ranked by two combined jurors |
+| standard | **two combined jurors**: *visual-motion* = Design + Creative heads (art director + motion + accessibility: clarity, distinctiveness, craft) and *business-customer-story* = Product + Business heads (conversion + customer + story: business, customer, story); plus the engineering review on the code | **one verifier**: the previous top three and the new pack, scoring only the criteria the fixes touched | no (sketches at the direction gate choose the composition) |
+| thorough | the full panel above (five or six jurors, grouped by head), plus the engineering review | two combined jurors | yes, ranked by two combined jurors |
 
+The engineering reviewer is estimated at 70-110k (not measured yet; `rubric/council.md`).
 Every juror follows the reading order below and stays under 10 tool calls; a juror over budget is
 reported in the critique with its token count.
 

@@ -17,6 +17,9 @@ Every key design decision the skill makes is told to the user with:
 4. **a source** where there is one: a research finding (R3), a roast point, a rule
    (`admin/table.md` T10), or an outside source with its link and the date read. "Pengalaman tim"
    or "pilihan gaya" is an honest source too; do not invent one.
+5. **the head behind it**, optional: Produk, Bisnis, Desain, Kreatif or Engineering
+   (`rubric/council.md`), as an extra column `Kepala` or a `Kepala:` label, so the user knows which
+   argument it is (a product scope call is defended differently from a type choice).
 
 **Neutral, not absolute.** Design is contextual. Write "most guidance recommends … because …; an
 exception is …", never "this is the only right way". Where sources disagree, say so in one line.

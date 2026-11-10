@@ -29,7 +29,9 @@ ke AI"); skip what the request already answers:
   > (misalnya lengkungnya) · Rekomendasi: B, supaya brand Anda tetap milik sendiri · Atau
   > percayakan ke AI.
 
-Write `.design/brief.md` (the create format, plus "Personality", "References and what to take").
+Write `.design/brief.md` (the create format with its `## Product` part, plus "Personality",
+"References and what to take"); the Product question is asked as in `rules/brief-interview.md`
+(the brand serves the product's vision and outcome, `rubric/council.md`).
 Show the brief gate, `approve brief`, `done brief`.
 
 ## 2. research, 3. strategy, 4. roast (strategy gate)

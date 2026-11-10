@@ -31,5 +31,9 @@ inbox, editor) rather than read and scrolled. Different rules apply:
   tinted squares as decoration, fake dashboards of grey bars.
 - **Charts:** one series colour plus one highlight; label directly instead of a legend when there
   are few series.
+- **Engineering review:** the Head of Engineering (`rubric/council.md`) checks the shadcn/ui
+  conventions in the code: components from `components/ui`, the theme variables carry the chosen
+  admin tokens, no restyled copies of a component, labels and focus on every form control, and the
+  React JS budget written on the spec's Engineering line.
 - Run the inspector with `--app`; style rules meant for marketing pages are relaxed by the team's
   `taste-rules.json` where needed.

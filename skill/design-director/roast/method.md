@@ -19,14 +19,22 @@ A **separate subagent with a fresh context**, so it has no stake in the plan. Gi
 if any; nothing about what you hoped. If subagents are unavailable, do it as a separate step that
 reads only those files, and say in the report that it was not independent.
 
-It speaks in four voices, each in turn:
+It speaks in five voices, each in turn. Four of them are the council's heads (`rubric/council.md`)
+speaking about the plan:
 
-| Voice | Asks |
-| --- | --- |
-| **The sceptical customer** | Would I believe this? Is my real question answered before I am asked to act? Where would I leave? |
-| **The competitor's marketer** | What could we copy in a day? Where is this weaker than us? Which of our strengths does it ignore? |
-| **The owner / the money** | Does this page lead to the one action that pays? Is the offer clear enough to say yes to? Is any section there for decoration rather than for the sale? |
-| **The senior art director** | Is the idea really this client's, or a category idea? Does the direction serve the story, or fight it? What is the cliché here? |
+| Voice | Head | Asks |
+| --- | --- | --- |
+| **The sceptical customer** | (the customer) | Would I believe this? Is my real question answered before I am asked to act? Where would I leave? |
+| **The competitor's marketer** | Business | What could we copy in a day? Where is this weaker than us? Which of our strengths does it ignore? |
+| **The owner / the money** | Business | Does this page lead to the one action that pays? Is the offer clear enough to say yes to? Is any section there for decoration rather than for the sale? |
+| **The head of product** | Product | Does the plan serve the product's vision and the user's outcome in the brief's `## Product`? Will the one metric show whether it works? Is anything out of scope, or missing that is in? Does it match the product's existing names and flows? |
+| **The senior art director** | Creative (and Design) | Is the idea really this client's, or a category idea? Does the direction serve the story, or fight it? What is the cliché here? |
+
+**By effort** (`rubric/council.md` → Where they speak): quick, the main session plays the voices in
+one pass and says the roast was not independent; standard, the one roast subagent speaks all five;
+thorough, one subagent per head (Business, Product, Design, Creative), each writing its own points
+into the same `roast.md` table with its head in the Voice column. Engineering does not roast a plan
+without code; it signs off the stack and budget in the spec.
 
 Then a **pre-mortem**: "Six months after launch this page failed. The three most likely reasons."
 

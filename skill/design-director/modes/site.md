@@ -34,6 +34,7 @@ only (brief, spec, system), so the context does not pile up.
 
 ## gate
 
-Inspect every page. Then check consistency across pages: the same tokens, the same components,
+Inspect every page. The engineering review (`rubric/council.md`) reads the shared system first,
+then the pages, still under 10 tool calls. Then check consistency across pages: the same tokens, the same components,
 no values outside the system (compare the inspector inventories), navigation identical, and every
 acceptance test run and passing.

@@ -27,18 +27,27 @@ Ask only what is missing from the request and the project. In this order:
 
 1. **Siapa dan untuk apa.** "Halaman ini untuk siapa, dan apa satu hal yang harus mereka lakukan?"
    Offer the likely answers for this business (cek tanggal via WhatsApp / isi form / beli).
-2. **Contoh yang disukai.** "Kirim 1–3 situs yang Anda suka, dan kalau ada, 1 yang tidak Anda suka.
+2. **Produknya.** The Head of Product's question (`rubric/council.md`), in the four-part form:
+   "Apa tujuan produk ini, dan apa yang berubah bagi pengguna setelah memakainya? Ini menentukan
+   apa yang halaman utamakan dan angka apa yang kita pakai untuk menilai berhasil atau tidak.
+   Contoh: 'karyawan kantor tidak perlu antre makan siang; ukurannya langganan mingguan; sekarang
+   hanya landing page, aplikasi pemesanan kuartal depan'. Rekomendasi: satu angka saja yang Anda
+   cek tiap minggu. Atau percayakan ke AI." The answer fills the brief's `## Product` (vision, user
+   and outcome, metric, scope in/out, existing patterns); "percayakan ke AI" gives a proposal
+   marked `(AI proposal)`. When 1 and 2 are both missing, ask them as one question, so the
+   message stays at five.
+3. **Contoh yang disukai.** "Kirim 1–3 situs yang Anda suka, dan kalau ada, 1 yang tidak Anda suka.
    Tidak harus dari bisnis yang sama." This is the strongest scoping tool: capture them
    (`capture.mjs` or inspect + evidence) and turn them into dials with
    `dials.mjs suggest <liked dirs> --dislike <dirs>`. When the user sends none, offer two or three
    from the team library (`library.mjs groups`, `library.mjs find`) by name and one line each.
-3. **Rasa dalam tiga kata.** Offer a short list instead of an open question: hangat, tenang,
+4. **Rasa dalam tiga kata.** Offer a short list instead of an open question: hangat, tenang,
    mewah, berani, jenaka, rapi, tradisional, modern, intim, meriah. Translate the picks into dial
    values and say the translation back ("mewah + tenang = warna kalem, huruf ×6 serif tipis, foto").
-4. **Yang sudah ada.** Photos, product UI, logo and brand colours, real prices, reviews. Ask for
+5. **Yang sudah ada.** Photos, product UI, logo and brand colours, real prices, reviews. Ask for
    the materials as in **Materials** below; what is missing decides the imagery dial and what may
    never be invented.
-5. **Yang tidak boleh.** Colours, styles or claims the brand or the user rules out.
+6. **Yang tidak boleh.** Colours, styles or claims the brand or the user rules out.
 
 When the request already answers a question, do not ask it. When the user answers "terserah",
 take the team's taste (`team/visual-defaults.json`) and say so in one line.

@@ -39,12 +39,18 @@ means three things at once: it serves the business, it answers the customer, and
 5. **The designer chooses; you propose.** Short gates: the brief, the strategy, the direction, and
    the final result.
 6. **The team's taste is data.** `team/taste.md` and the brand file outrank your own preferences. Brand elements come from `brand/method.md` (a kit from a `brand` run, or a short kit at the direction step).
-7. **Never judge from code, and never judge alone.** Judge screenshots. At standard effort and above a
+7. **Never judge the look from code, and never judge alone.** Judge screenshots. At standard effort and above a
    jury of separate expert agents judges (`rubric/jury.md`), and designers' votes are combined with
-   theirs; taste ties go to the humans, accessibility vetoes cannot be outvoted.
+   theirs; taste ties go to the humans, accessibility vetoes cannot be outvoted. The code is judged
+   too, but on its own terms and by its own head: the engineering review (`rubric/council.md`).
 8. **Respect what exists.** In an existing project, change tokens and components, not page overrides.
 9. **Never invent proof.** No made-up testimonials, client logos, statistics, awards or press.
 10. **Read only what the step needs.** Each step names its files; do not load the whole skill.
+11. **Five heads sign off every job.** Product (vision, outcome, metric, scope), Business (market
+   insight), Design (composition, system, accessibility), Creative (idea, brand, signature, motion)
+   and Engineering (the code) each own their part (`rubric/council.md`). Four are played inside the
+   roast and the jury that already run; Engineering reviews the code after the gate. The spec ends
+   with their `## Council` sign-off.
 
 ## Start every run
 
@@ -77,11 +83,14 @@ means three things at once: it serves the business, it answers the customer, and
 
    | Effort | Subagents | Budget |
    | --- | --- | --- |
-   | quick | one critic | about 70k |
-   | standard | reason roaster + 2 combined jurors + 1 verifier per later round | about 250-320k |
-   | thorough | reason roaster + hero jury (2) + full look panel (5-6) + 2 per later round | about 600-800k |
+   | quick | one critic (the five heads played by the main session, not independent) | about 70k |
+   | standard | reason roaster + 2 combined jurors + 1 verifier per later round + 1 engineering reviewer | about 320-430k |
+   | thorough | 4 head roasters + reason roaster + hero jury (2) + full look panel (5-6, grouped by head) + 1 engineering reviewer + 2 per later round | about 850k-1.15M |
 
    Measured parts: reason roaster 93k (WO run-2 page, 67 elements, 9 calls); jurors 59-94k each.
+   **Not measured yet (estimates):** the engineering reviewer about 70-110k (53k fixed overhead plus
+   the source files of one page); each extra head roaster at thorough about 60-80k (overhead plus
+   brief, research and strategy). Measure both on the next real run and replace these numbers.
    The main session comes on top. Run 2 (standard, before these limits) spent about 630k on
    subagents alone; most of it was two five-juror panels.
 3. **Gate style.** `guided` (default): three direction cards. `quick`: one recommendation with a
@@ -89,7 +98,9 @@ means three things at once: it serves the business, it answers the customer, and
    "terserah" / "up to you". `autopilot`: no human in the loop (batch runs, evals); every choice is
    logged with its reason. Check `designers/<name>.md` for a saved preference.
 4. **Guide, then let the user choose early.** Before research, help the user say what they want
-   in one short message (`rules/brief-interview.md`): who and what for, 1–3 sites they like and 1
+   in one short message (`rules/brief-interview.md`): who and what for, the product behind it (vision,
+   outcome, the one metric, what is in and out of scope: the Head of Product's question,
+   `rubric/council.md`), 1–3 sites they like and 1
    they do not (turned into dials by `dials.mjs`), three feeling words, what exists (photos, product
    UI, brand assets: `rules/brief-interview.md` → Materials), what is ruled out. With no photos,
    ask whether stand-in pictures are needed and offer the three paths (pasted Unsplash links, search
@@ -124,7 +135,8 @@ means three things at once: it serves the business, it answers the customer, and
 ## Gate formats
 
 **Brief gate** (`approve brief`). A card of at most 10 lines: what it is, who it is for and their
-situation, the one action, the real content and assets that exist (the `## Materials` section of
+situation, the one action, the product part (vision, outcome, the one metric, what is in and out of
+scope: `rubric/council.md`), the real content and assets that exist (the `## Materials` section of
 the brief: photos, product UI, brand assets, and the plan for what is missing), brand constraints,
 what to avoid, and your one-line reading of anything unclear. Ask at most 5 questions, only for facts that
 block the work.
@@ -154,9 +166,10 @@ them to quick gates and, if they agree, write that to `designers/<name>.md`.
 
 **Final gate** (`approve final`). The package from the mode file, written to `.design/deliver.md`:
 what was built, screenshots at desktop and phone, what is sample content (`[SAMPLE]` copy, sample UI
-marked `data-sample`, drawn or dummy pictures with the shot list), open issues, **"Alasan
-desain"**: at least three key decisions, each with its UX reason, trade-off and source
-(`rules/rationale.md`), and **"Supaya lebih bagus"**: at most five concrete things the user can do or decide to lift the result (pictures to
+marked `data-sample`, drawn or dummy pictures with the shot list), open issues (with the engineering
+review's verdict, measured budget and open findings), **"Alasan
+desain"**: at least three key decisions, each with its UX reason, trade-off and source, and the
+head behind it where that helps (`rules/rationale.md`, `rubric/council.md`), and **"Supaya lebih bagus"**: at most five concrete things the user can do or decide to lift the result (pictures to
 supply, with the shot list; real proof to collect; a dial worth turning; a higher effort level; the
 signature motion, when the motion spec found no message to move), each with what it would
 change.
@@ -211,6 +224,7 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 | `rubric/reason.md` | The reason step: every element of the built page names its job or goes |
 | `rubric/critic.md` | Briefing the critic subagent; the critique format every juror uses |
 | `rubric/jury.md` | The look step and best-of-N at standard effort and above; judging references |
+| `rubric/council.md` | The five heads (Product, Business, Design, Creative, Engineering): what each owns, asks and may veto, where each speaks by effort; the Product question at the brief; the spec's `## Council` sign-off and the starting performance budget; the engineering review after the gate (reviewer brief and `.design/review/engineering.json`) |
 | `library/intake.md` | When the team sends references with their notes |
 | `rules/brief-interview.md` | Every question to the user (plain words, what it changes, an example per choice, a recommendation, "percayakan ke AI"); the brief step: the one guiding message, the materials (photos, product UI, brand assets; mock or placeholder for missing UI; telling the user about dummy pictures; with no photos, the three stand-in paths and the Unsplash Access Key steps), liked sites into dials, sketches at the direction gate |
 | `rules/stack.md` | The brief step: the stack and component library; an admin panel, dashboard or back office defaults to shadcn/ui (React + Tailwind) until the user agrees another |
@@ -226,7 +240,7 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 
 | Command | Does |
 | --- | --- |
-| `progress.mjs init / check / done / approve / back / skip / log / status` | Order of steps, gates, turn back; content checks per step (brief Materials, an admin brief's Component library with the shadcn/ui default logged, an admin direction's style options with a logged choice or decline, spec Interactions and Motion spec, deliver.md with "Alasan desain" (3+ decisions with a trade-off), …) |
+| `progress.mjs init / check / done / approve / back / skip / log / status` | Order of steps, gates, turn back; content checks per step (brief Materials and Product part, spec `## Council` with all five heads, the engineering review with a verdict and no unanswered blocking finding before a standard or thorough look, an admin brief's Component library with the shadcn/ui default logged, an admin direction's style options with a logged choice or decline, spec Interactions and Motion spec, deliver.md with "Alasan desain" (3+ decisions with a trade-off), …) |
 | `brandboard.mjs <brand-kit.json or directions.json> [--out .design/brand] [--no-pdf]` | The brand board: palette with roles and contrast pairs, type, shape and motion, elements, the placeholder wordmark, the brand in use (web hero, price card, social post); `board.html` and `board.pdf` |
 | `draw.mjs --sector <s> [--tone <t>] [--have a,b] [--options 3]` | Deals directions into `.design/directions/` (`--list sectors`) |
 | `inspect.mjs <url or file> [--out dir] [--allow rule]` | Real-browser check at 1440/768/390, screenshots, design inventory; INFO `placeholder-logo` and `sample-ui` (`data-sample`) for the deliver report; data tables (`admin/table.md`): numbers not right-aligned, checkboxes out of line or under 24px, cut values with no way to read them, selection with no bulk actions (clicks a row at desktop), wide tables without sticky identifier/actions |
