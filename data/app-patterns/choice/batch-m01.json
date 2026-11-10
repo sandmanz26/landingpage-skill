@@ -1,0 +1,25 @@
+{
+ "batch": "app-m01", "platform": "mobile app", "pattern": "presenting choices (destinations, categories, events, collections)", "received": "2026-11-10", "from": "owner (chat, 5 concept screenshots)",
+ "entries": [
+  {"id": "ch-001", "file": "ch-001.webp", "owner_score": {"visual": 7, "ship": 7.5}, "verdict": "use when few options",
+   "owner_notes": ["stacked cards are a good way to present choices", "UX problem: does not suit many items; must fit the business type"],
+   "style_levers": {"layout": "cards stacked with the front one full and the ones behind peeking (Australia, Sweden, Norway)", "surface": "large radius, photo cards, translucent glass labels with flags, heart on each card", "detail": "lime accent for the active filter and the home tab; floating pill tab bar; light topographic texture on onboarding"},
+   "coordinator_notes": ["stacking hides all but the front item: good for a short curated set, poor for comparing or scanning many", "give a visible way to see all (View All) and a non-gesture way to move between cards"]},
+  {"id": "ch-002", "file": "ch-002.png", "owner_score": null, "verdict": "use when few categories",
+   "owner_notes": ["good idea when options are not too many", "stacking concept and draggable, suits category choice"],
+   "style_levers": {"layout": "two rows of category chips scrolling sideways, each chip a label plus a cut-out food photo bleeding off its edge", "colour": "one red selected chip, grey others", "detail": "search with filter icon; Open / rating badges on the venue card"},
+   "coordinator_notes": ["what is visible is two horizontally scrollable rows of image chips, not stacked cards; the drag is the sideways scroll", "show that more chips exist (a cut-off chip at the edge does this here)"]},
+  {"id": "ch-003", "file": "ch-003.webp", "owner_score": null, "verdict": "use for something different, time-based content",
+   "owner_notes": ["unique: plays with vertical scroll; an option when the user wants something different"],
+   "style_levers": {"layout": "vertical date rail on the left (selected range 02-03 in a tinted pill), poster cards on the right scrolling with it", "type": "heavy condensed display type on the posters", "colour": "soft pink-lilac gradient ground, black selected category pill"},
+   "coordinator_notes": ["fits events or bookings where the date is the main filter", "the date rail must stay readable and reachable by thumb; posters with text over images need contrast"]},
+  {"id": "ch-004", "file": "ch-004.webp", "owner_score": null, "verdict": "use for categories and collections",
+   "owner_notes": ["Pinterest-like grid is quite good as a reference for categories"],
+   "style_levers": {"layout": "story-like circles (Trending Now) then a bento grid of mixed card sizes", "colour": "each card its own pastel ground matching the photo", "type": "serif display on the promo cards"},
+   "coordinator_notes": ["this is a bento grid (mixed fixed sizes) more than a masonry; both give rhythm, bento keeps reading order clearer"]},
+  {"id": "ch-005", "file": "ch-005.webp", "owner_score": null, "verdict": "do not use (owner: standard, not good, not modern)",
+   "owner_notes": ["this kind of UI is standard; not recommended; not good and not modern"],
+   "coordinator_notes": ["why it reads dated: white centred text straight on busy photos (contrast), all-caps headings, equal-weight grid with no hierarchy, outline icons with a thin orange accent, '2018' in the hero", "kept as a negative anchor: what the skill must not produce"]}
+ ],
+ "patterns_across": ["choice presentation depends on the number of options: few -> stacked cards or image chips; many -> grid or list with search and filters; time-based -> a date rail", "every pattern needs a non-gesture way to see all options"]
+}
