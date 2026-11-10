@@ -1,0 +1,15 @@
+{
+ "batch": "app-m02", "platform": "mobile app", "pattern": "category pages: safe and weak anchors", "received": "2026-11-10", "from": "owner (chat, 3 screenshots of real apps)",
+ "tiers": {"safe": "acceptable when the user asks for 'aman' (safe); never offered as the good option", "avoid": "safe but not good; avoid when the user wants a good design", "bad": "negative anchor: never produce"},
+ "entries": [
+  {"id": "ch-006", "file": "ch-006.webp", "tier": "safe", "owner_notes": ["standard category page, not unique but safe, as long as it combines image and text"],
+   "style_levers": {"layout": "3-column grid of identical poster cards", "surface": "black ground, white card headers with the artist name, coloured photo panels", "detail": "red Play Now pill, underline tabs"},
+   "coordinator_notes": ["works because every card pairs a face with a name; reads as a template because all cards are the same size and treatment"]},
+  {"id": "ch-007", "file": "ch-007.png", "tier": "avoid", "owner_notes": ["very ordinary: small icon categories; safe but not good or unique; avoid if the user wants a good design"],
+   "style_levers": {"layout": "row of square icon tiles with two-line labels under, promo banners below", "detail": "illustrated object icons, voucher and rewards cards"},
+   "coordinator_notes": ["the icon-tile row is the marketplace default; labels wrapping to two lines and many competing promos make it busy"]},
+  {"id": "ch-008", "file": "ch-008.png", "tier": "bad", "owner_notes": ["a very bad UI because it is very ordinary"],
+   "style_levers": {"layout": "search, three emoji tiles, all-caps tabs, empty state, floating Done button", "colour": "dark navy ground, blue accent"},
+   "coordinator_notes": ["neutral note: the empty state itself is sound UX (explains why it is empty and offers Create food); what reads as bad is the visual: emoji as category icons, all-caps tabs, a large empty field, a floating Done with no clear role", "keep it as a negative anchor for the visual layer, not for the empty-state pattern"]}
+ ]
+}
