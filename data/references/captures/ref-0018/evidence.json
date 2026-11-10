@@ -1,0 +1,934 @@
+{
+  "url": "https://www.squadeasy.com/en/",
+  "time": "2026-11-10T18:34:38.421Z",
+  "sheets": {
+    "desktop": "data/references/captures/ref-0018/sheet-desktop.png",
+    "mobile": "data/references/captures/ref-0018/sheet-mobile.png",
+    "motion": "data/references/captures/ref-0018/motion-sheet.png"
+  },
+  "load": {
+    "status": 200,
+    "retries": 0,
+    "failed": false
+  },
+  "overlaysDismissed": [],
+  "outline": {
+    "title": "SquadEasy - Employees' favorite team-building app",
+    "description": "We help companies to once again become places where team spirit flourishes, thanks to the employees themselves. Because, between us, it's best when it comes from them.",
+    "headings": [
+      "H1 2% YOU'VE NEVER BEEN SO CLOSE TO BRINGING YOUR EMPLOYEES CLOSER TOGETHER.",
+      "H2 18% EMPLOYEES' FAVOURITE, TEAM-BUILDING APP.",
+      "H2 34% COHESION, YES, BUT NOT FOR NOTHING!",
+      "H2 44% COHESION IS, A DAILY SPORT.",
+      "H2 57% MILLION EMPLOYEES ADDICTED",
+      "H2 61% ENGAGE THEM ALL",
+      "H3 72% EMPLOYEES, IT'S EASY TO GET YOUR COMPANY INVOLVED.",
+      "H2 78% SQUADEASY WITH YOUR COLOURS",
+      "H3 86% READY TO MAKE A LASTING COMMITMENT TO YOUR TEAMS WITH SQUADEASY? IT'S SO EASY!"
+    ],
+    "actions": [
+      {
+        "label": "Our solution",
+        "count": 1,
+        "firstAt": 0,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Case studies",
+        "count": 1,
+        "firstAt": 0,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Challenges",
+        "count": 1,
+        "firstAt": 0,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Resources",
+        "count": 1,
+        "firstAt": 0,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "TALK TO US",
+        "count": 1,
+        "firstAt": 0,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "REQUEST A DEMO",
+        "count": 1,
+        "firstAt": 6,
+        "firstScreen": true,
+        "sticky": false
+      },
+      {
+        "label": "Détails",
+        "count": 1,
+        "firstAt": 7,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Accepter",
+        "count": 1,
+        "firstAt": 7,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Refuser",
+        "count": 1,
+        "firstAt": 8,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "FIND OUT MORE",
+        "count": 3,
+        "firstAt": 23,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "DISCOVER OUR CUSTOMER TESTIMONIALS",
+        "count": 1,
+        "firstAt": 27,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "WE GET TO KNOW EACH OTHER?",
+        "count": 1,
+        "firstAt": 53,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "LEARN MORE",
+        "count": 2,
+        "firstAt": 74,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "SOLUTION",
+        "count": 1,
+        "firstAt": 93,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "CHALLENGES",
+        "count": 1,
+        "firstAt": 93,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "CASE STUDIES",
+        "count": 1,
+        "firstAt": 93,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "RESOURCES",
+        "count": 1,
+        "firstAt": 93,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "ASK FOR A DEMO",
+        "count": 1,
+        "firstAt": 94,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Gérer mes cookies",
+        "count": 1,
+        "firstAt": 98,
+        "firstScreen": false,
+        "sticky": false
+      }
+    ],
+    "prices": [],
+    "proofMentions": {
+      "testimonial": 1,
+      "customers": 1
+    },
+    "logoImages": 1,
+    "forms": 0,
+    "imagery": {
+      "photos": 18,
+      "illustrations": 0,
+      "videos": 0,
+      "rasterChecked": []
+    },
+    "pageHeight": 10721
+  },
+  "motion": {
+    "libraries": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "splitText": false,
+      "lenis": false,
+      "locomotive": false,
+      "swiper": false,
+      "lottie": false,
+      "framerMotion": false,
+      "viewTransitions": false
+    },
+    "stickyPanels": [],
+    "maxRunning": 18,
+    "durationsMs": {
+      "min": 300,
+      "max": 48000
+    },
+    "easings": [
+      "ease",
+      "linear"
+    ],
+    "properties": [
+      "opacity",
+      "transform",
+      "filter"
+    ],
+    "movingWithoutInput": 3,
+    "movingWithoutInputFurtherDown": [
+      {
+        "y": 900,
+        "moving": 1
+      },
+      {
+        "y": 1800,
+        "moving": 4
+      },
+      {
+        "y": 2700,
+        "moving": 2
+      },
+      {
+        "y": 3600,
+        "moving": 3
+      }
+    ],
+    "scriptDrivenOnScroll": 9,
+    "infiniteLoops": 9,
+    "infiniteLoopsWithText": 3,
+    "pauseControl": false,
+    "steps": [
+      {
+        "y": 450,
+        "running": 18,
+        "scriptDriven": 8,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.hero-section__abs-img",
+            "hasText": false,
+            "duration": 400,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.hero-section__abs-img",
+            "hasText": false,
+            "duration": 400,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.hero-section__abs-img",
+            "hasText": false,
+            "duration": 400,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.hero-section__abs-img",
+            "hasText": false,
+            "duration": 400,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.hero-section__abs-img",
+            "hasText": false,
+            "duration": 400,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.hero-section__abs-img",
+            "hasText": false,
+            "duration": 400,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      },
+      {
+        "y": 900,
+        "running": 6,
+        "scriptDriven": 9,
+        "idleMoving": 1,
+        "sample": [
+          {
+            "target": "div.element-to-blur",
+            "hasText": true,
+            "duration": 400,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "filter"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.element-to-blur",
+            "hasText": true,
+            "duration": 400,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.element-to-blur",
+            "hasText": true,
+            "duration": 400,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "button.hero-home__button",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "img.phonePopUp",
+            "hasText": false,
+            "duration": 1000,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.hs-cookie-notification-position-bottom",
+            "hasText": true,
+            "duration": 500,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1350,
+        "running": 4,
+        "scriptDriven": 1,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.sec-text-postit__heading",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.sec-text-postit__heading",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "button.hero-home__button",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.hs-cookie-notification-position-bottom",
+            "hasText": true,
+            "duration": 500,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1800,
+        "running": 12,
+        "scriptDriven": 2,
+        "idleMoving": 4,
+        "sample": [
+          {
+            "target": "div.sec-text-postit__heading",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.sec-text-postit__heading",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.sec-text-postit__img",
+            "hasText": false,
+            "duration": 600,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.sec-text-postit__img",
+            "hasText": false,
+            "duration": 600,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.sec-text-postit__img",
+            "hasText": false,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.sec-text-postit__img",
+            "hasText": false,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      },
+      {
+        "y": 2250,
+        "running": 5,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.sec-logo__number",
+            "hasText": false,
+            "duration": 400,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.sec-logo__number",
+            "hasText": false,
+            "duration": 400,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "button.hero-home__button",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.sec-logo-widget_1701864325634__slider",
+            "hasText": true,
+            "duration": 48000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.hs-cookie-notification-position-bottom",
+            "hasText": true,
+            "duration": 500,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 2700,
+        "running": 7,
+        "scriptDriven": 4,
+        "idleMoving": 2,
+        "sample": [
+          {
+            "target": "div.sec-logo__number",
+            "hasText": false,
+            "duration": 400,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.sec-logo__number",
+            "hasText": false,
+            "duration": 400,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.sec-text-postit__heading",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.sec-text-postit__heading",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "button.hero-home__button",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.sec-logo-widget_1701864325634__slider",
+            "hasText": true,
+            "duration": 48000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 3150,
+        "running": 3,
+        "scriptDriven": 1,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "button.hero-home__button",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.sec-logo-widget_1701864325634__slider",
+            "hasText": true,
+            "duration": 48000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.hs-cookie-notification-position-bottom",
+            "hasText": true,
+            "duration": 500,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 3600,
+        "running": 10,
+        "scriptDriven": 0,
+        "idleMoving": 3,
+        "sample": [
+          {
+            "target": "div.sec-text-postit__img",
+            "hasText": false,
+            "duration": 600,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.sec-text-postit__img",
+            "hasText": false,
+            "duration": 600,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.sec-text-postit__img",
+            "hasText": false,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.sec-text-postit__img",
+            "hasText": false,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.sec-text-postit__img",
+            "hasText": false,
+            "duration": 600,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.sec-text-postit__img",
+            "hasText": false,
+            "duration": 600,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      },
+      {
+        "y": 4050,
+        "running": 4,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.sec-text-postit__heading",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.sec-text-postit__heading",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "button.hero-home__button",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.hs-cookie-notification-position-bottom",
+            "hasText": true,
+            "duration": 500,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity",
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 4500,
+        "running": 11,
+        "scriptDriven": 1,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "div.sec-text-postit__heading",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.sec-text-postit__heading",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.sec-text-postit__img",
+            "hasText": false,
+            "duration": 600,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.sec-text-postit__img",
+            "hasText": false,
+            "duration": 600,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.sec-text-postit__img",
+            "hasText": false,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.sec-text-postit__img",
+            "hasText": false,
+            "duration": 300,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      }
+    ]
+  },
+  "smoothness": {
+    "page": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 6856,
+      "frames": 410,
+      "fps": 59.8,
+      "medianMs": 16.7,
+      "p95Ms": 16.8,
+      "maxMs": 33,
+      "longFrames": 0,
+      "droppedShare": 0,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "baseline": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 1725,
+      "frames": 103,
+      "fps": 59.7,
+      "medianMs": 16.7,
+      "p95Ms": 16.7,
+      "maxMs": 17,
+      "longFrames": 0,
+      "droppedShare": 0,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "longFramesOverBaseline": 0,
+    "p95OverBaseline": 0.1
+  },
+  "reducedMotion": {
+    "movingWithoutInput": 1,
+    "movingOnScroll": 14,
+    "idleNavigation": null,
+    "loadFailed": false
+  },
+  "idleRunLoadFailed": false,
+  "idleNavigation": null
+}

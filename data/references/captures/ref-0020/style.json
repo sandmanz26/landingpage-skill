@@ -1,0 +1,159 @@
+{
+  "url": "https://coveomusic.com/",
+  "readAt": "2026-11-10T18:40:26.543Z",
+  "tags": [
+    "glass",
+    "restrained-colour",
+    "dark",
+    "expressive-type",
+    "scroll-choreography",
+    "smoothed-scroll",
+    "endless-motion",
+    "photography",
+    "illustration",
+    "ignores-reduced-motion",
+    "pop-up-on-load"
+  ],
+  "palette": {
+    "chromatic": 1,
+    "families": 1,
+    "text": [
+      "#524d46",
+      "#1d1812",
+      "#000000"
+    ],
+    "backgrounds": [
+      "#000000",
+      "#eeeeee",
+      "#1d1812",
+      "#d5d5d5",
+      "#ffffff"
+    ],
+    "gradients": 1,
+    "shadows": 2,
+    "blur": 13
+  },
+  "type": {
+    "families": [
+      {
+        "family": "inter",
+        "share": 92
+      },
+      {
+        "family": "monospace",
+        "share": 5
+      },
+      {
+        "family": "eiko",
+        "share": 3
+      },
+      {
+        "family": "arial",
+        "share": 1
+      }
+    ],
+    "cuts": [
+      {
+        "family": "Inter",
+        "share": 92
+      },
+      {
+        "family": "monospace",
+        "share": 5
+      },
+      {
+        "family": "Eiko",
+        "share": 3
+      },
+      {
+        "family": "Arial",
+        "share": 1
+      }
+    ],
+    "sizes": {
+      "desktop": [
+        60,
+        14,
+        13,
+        12,
+        11,
+        10,
+        8
+      ],
+      "mobile": [
+        60,
+        14,
+        13,
+        12,
+        11,
+        10,
+        8
+      ]
+    },
+    "display": 60,
+    "body": 11,
+    "ratio": 5.5
+  },
+  "shape": {
+    "radii": [
+      "8px",
+      "100%",
+      "50%",
+      "24%",
+      "12px",
+      "40px",
+      "4px",
+      "25%"
+    ]
+  },
+  "spacing": {
+    "distinct": 19,
+    "offScale": 11
+  },
+  "motion": {
+    "libraries": [
+      "lenis",
+      "locomotive",
+      "swiper",
+      "viewTransitions"
+    ],
+    "stickyPanels": 0,
+    "durationsMs": {
+      "min": 138,
+      "max": 3000
+    },
+    "easings": [
+      "ease",
+      "linear",
+      "cubic-bezier(0.22, 1, 0.36, 1)",
+      "cubic-bezier(0.34, 1.56, 0.64, 1)",
+      "cubic-bezier(0.64, 0, 0.78, 0)"
+    ],
+    "reducedMotionRespected": false,
+    "smoothness": {
+      "fps": 59.9,
+      "longFrames": 0,
+      "baselineLongFrames": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    }
+  },
+  "imagery": {
+    "photos": 3,
+    "illustrations": 3,
+    "videos": 0
+  },
+  "layout": {
+    "pageHeight": 4618,
+    "screens": 5
+  },
+  "doNotCopy": [
+    "tiny-text: Text at 9.6px",
+    "tiny-text: Text at 8.4px",
+    "img-alt: 38 images without an alt attribute",
+    "contrast: 2 text elements below WCAG AA (measured on screen pixels)",
+    "tap-target: 4 controls smaller than 24x24px on a phone",
+    "reduced-motion: 7 text elements stay hidden when the visitor asks for reduced motion",
+    "motion without a reduced-motion path",
+    "pop-up over the first screen on load"
+  ]
+}

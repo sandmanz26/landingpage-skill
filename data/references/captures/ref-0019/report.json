@@ -1,0 +1,725 @@
+{
+  "target": "https://figurefilm.co.uk/",
+  "time": "2026-11-10T18:32:02.378Z",
+  "rules": {
+    "purple-gradient": "warn",
+    "gradient": "info",
+    "glass": "info",
+    "system-font-only": "warn",
+    "too-many-font-sizes": "warn",
+    "too-many-colours": "warn",
+    "shadow-on-everything": "warn",
+    "icon-card-row": "warn",
+    "centred-hero-two-ctas": "warn",
+    "emoji": "warn",
+    "kit-sample": "fail",
+    "table-numbers-align": "warn",
+    "table-checkbox-align": "warn",
+    "table-checkbox-target": "warn",
+    "table-truncation": "warn",
+    "table-bulk-actions": "warn",
+    "table-sticky-columns": "info"
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "pageHeight": 2542,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"LONDON BASED PRODUCTION COMPANY WITH A TIGHT CORE \""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"WE ARE A COLLECTIVE OF FILM DIRECTORS, CINEMATOGRA\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9px",
+          "sample": [
+            "<p> \"made with love by we3studio.pl\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9px",
+          "sample": [
+            "<a> \"we3studio.pl\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "no-h1",
+          "message": "No visible h1: the page has no title"
+        },
+        {
+          "severity": "WARN",
+          "rule": "fixed-cover",
+          "message": "1 fixed or sticky element(s) that are not a bar cover part of every screen; make it a slim bar or let it scroll away",
+          "sample": [
+            "1440x303 (34% of the screen height) <nav> \"MENUaboutworkcontactigvimeoINigvimeoINaboutworkcon\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "7 gradient backgrounds"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "3 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#a2b1c8 on screen = 2.90:1 median, 1.98:1 in the worst tenth (needs 4.5) <p> \"01\"",
+            "#496bc7 on screen = 3.81:1 median, 1.95:1 in the worst tenth (needs 4.5) <p> \"Commercial\"",
+            "#94a6c8 on screen = 2.57:1 median, 1.87:1 in the worst tenth (needs 4.5) <p> \"02\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "hidden-content",
+          "message": "16 text elements were never visible during a full scroll (a reveal that never fires?)",
+          "sample": [
+            "BOILER ROOM X JGRREY",
+            "Music",
+            "BOILER ROOM X JGRREY",
+            "MARRIOTT X AL MAHA",
+            "MARRIOTT X AL MAHA"
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "layout-shift",
+          "message": "Layout shift 1.088 (over 0.25)"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "PT Mono",
+            "share": 80
+          },
+          {
+            "family": "JeanLucWeb-Bold",
+            "share": 20
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "pt mono",
+            "share": 80
+          },
+          {
+            "family": "jeanlucweb",
+            "share": 20
+          }
+        ],
+        "fontSizes": [
+          216,
+          60,
+          40,
+          24,
+          12,
+          10,
+          9
+        ],
+        "textColours": [
+          "#fcf8c9"
+        ],
+        "backgroundColours": [
+          "#fcf8c9",
+          "#2c54c7",
+          "#080808"
+        ],
+        "chromaticColours": 2,
+        "colourFamilies": 2,
+        "spacing": {
+          "distinct": 5,
+          "offScale": 2,
+          "values": [
+            10,
+            20,
+            40,
+            80,
+            158.5
+          ]
+        },
+        "radii": [
+          "50%",
+          "64px"
+        ],
+        "shadows": 0,
+        "gradients": 7,
+        "backdropBlur": 0,
+        "transitions": 29,
+        "animatedElements": 50,
+        "cls": 1.088
+      },
+      "screenshots": [
+        "data/references/captures/ref-0019/desktop-fold.png",
+        "data/references/captures/ref-0019/desktop-page-01.png",
+        "data/references/captures/ref-0019/desktop-page-02.png",
+        "data/references/captures/ref-0019/desktop-page-03.png"
+      ]
+    },
+    "tablet": {
+      "width": 768,
+      "pageHeight": 5074,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10px",
+          "sample": [
+            "<p> \"LONDON BASED PRODUCTION COMPANY WITH A TIGHT CORE \""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 10px (16px or more reads better)",
+          "sample": [
+            "<p> \"LONDON BASED PRODUCTION COMPANY WITH A TIGHT CORE \""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10px",
+          "sample": [
+            "<p> \"WE ARE A COLLECTIVE OF FILM DIRECTORS, CINEMATOGRA\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 10px (16px or more reads better)",
+          "sample": [
+            "<p> \"WE ARE A COLLECTIVE OF FILM DIRECTORS, CINEMATOGRA\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9px",
+          "sample": [
+            "<p> \"made with love by we3studio.pl\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9px",
+          "sample": [
+            "<a> \"we3studio.pl\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10px",
+          "sample": [
+            "<p> \"If you’d like to chat about making a film, give us\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10px",
+          "sample": [
+            "<a> \"hello@figurefilm.co.uk\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10px",
+          "sample": [
+            "<p> \"85 Great Portland Street, First Floor, London, Eng\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "no-h1",
+          "message": "No visible h1: the page has no title"
+        },
+        {
+          "severity": "WARN",
+          "rule": "fixed-cover",
+          "message": "1 fixed or sticky element(s) that are not a bar cover part of every screen; make it a slim bar or let it scroll away",
+          "sample": [
+            "768x170 (17% of the screen height) <nav> \"MENUaboutworkcontactigvimeoINigvimeoINaboutworkcon\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "1 gradient backgrounds"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "PT Mono",
+            "share": 66
+          },
+          {
+            "family": "JeanLucWeb-Bold",
+            "share": 34
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "pt mono",
+            "share": 66
+          },
+          {
+            "family": "jeanlucweb",
+            "share": 34
+          }
+        ],
+        "fontSizes": [
+          115,
+          60,
+          45,
+          40,
+          24,
+          20,
+          10,
+          9
+        ],
+        "textColours": [
+          "#fcf8c9"
+        ],
+        "backgroundColours": [
+          "#fcf8c9",
+          "#2c54c7",
+          "#080808"
+        ],
+        "chromaticColours": 2,
+        "colourFamilies": 2,
+        "spacing": {
+          "distinct": 6,
+          "offScale": 3,
+          "values": [
+            5,
+            10,
+            20,
+            40,
+            80,
+            84.5
+          ]
+        },
+        "radii": [
+          "64px"
+        ],
+        "shadows": 0,
+        "gradients": 1,
+        "backdropBlur": 0,
+        "transitions": 30,
+        "animatedElements": 48,
+        "cls": 0.006
+      },
+      "screenshots": [
+        "data/references/captures/ref-0019/tablet-fold.png",
+        "data/references/captures/ref-0019/tablet-page-01.png",
+        "data/references/captures/ref-0019/tablet-page-02.png",
+        "data/references/captures/ref-0019/tablet-page-03.png",
+        "data/references/captures/ref-0019/tablet-page-04.png",
+        "data/references/captures/ref-0019/tablet-page-05.png"
+      ]
+    },
+    "mobile": {
+      "width": 390,
+      "pageHeight": 3307,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10px",
+          "sample": [
+            "<p> \"LONDON BASED PRODUCTION COMPANY WITH A TIGHT CORE \""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 10px (16px or more reads better)",
+          "sample": [
+            "<p> \"LONDON BASED PRODUCTION COMPANY WITH A TIGHT CORE \""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10px",
+          "sample": [
+            "<p> \"WE ARE A COLLECTIVE OF FILM DIRECTORS, CINEMATOGRA\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 10px (16px or more reads better)",
+          "sample": [
+            "<p> \"WE ARE A COLLECTIVE OF FILM DIRECTORS, CINEMATOGRA\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9px",
+          "sample": [
+            "<p> \"made with love by we3studio.pl\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9px",
+          "sample": [
+            "<a> \"we3studio.pl\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10px",
+          "sample": [
+            "<p> \"If you’d like to chat about making a film, give us\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10px",
+          "sample": [
+            "<a> \"hello@figurefilm.co.uk\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10px",
+          "sample": [
+            "<p> \"85 Great Portland Street, First Floor, London, Eng\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "no-h1",
+          "message": "No visible h1: the page has no title"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tap-target",
+          "message": "12 controls smaller than 24x24px on a phone",
+          "sample": [
+            "10x48 <div> \"\"",
+            "15x23 <a> \"ig\"",
+            "48x23 <a> \"vimeo\"",
+            "16x23 <a> \"IN\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "text-at-edge",
+          "message": "10 text elements within 12px of the screen edge",
+          "sample": [
+            "<a> \"ig\"",
+            "<a> \"contact\"",
+            "<span> \"featured\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "2 gradient backgrounds"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "PT Mono",
+            "share": 66
+          },
+          {
+            "family": "JeanLucWeb-Bold",
+            "share": 34
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "pt mono",
+            "share": 66
+          },
+          {
+            "family": "jeanlucweb",
+            "share": 34
+          }
+        ],
+        "fontSizes": [
+          60,
+          59,
+          45,
+          40,
+          24,
+          20,
+          10,
+          9
+        ],
+        "textColours": [
+          "#fcf8c9"
+        ],
+        "backgroundColours": [
+          "#fcf8c9",
+          "#2c54c7",
+          "#080808"
+        ],
+        "chromaticColours": 2,
+        "colourFamilies": 2,
+        "spacing": {
+          "distinct": 6,
+          "offScale": 3,
+          "values": [
+            5,
+            10,
+            20,
+            40,
+            43,
+            80
+          ]
+        },
+        "radii": [
+          "64px"
+        ],
+        "shadows": 0,
+        "gradients": 2,
+        "backdropBlur": 0,
+        "transitions": 30,
+        "animatedElements": 46,
+        "cls": 0.005
+      },
+      "screenshots": [
+        "data/references/captures/ref-0019/mobile-fold.png",
+        "data/references/captures/ref-0019/mobile-page-01.png",
+        "data/references/captures/ref-0019/mobile-page-02.png",
+        "data/references/captures/ref-0019/mobile-page-03.png",
+        "data/references/captures/ref-0019/mobile-page-04.png"
+      ]
+    }
+  },
+  "checks": {
+    "reducedMotion": {
+      "findings": [
+        {
+          "severity": "FAIL",
+          "rule": "reduced-motion",
+          "message": "16 text elements stay hidden when the visitor asks for reduced motion",
+          "sample": [
+            "BOILER ROOM X JGRREY",
+            "Music",
+            "BOILER ROOM X JGRREY",
+            "MARRIOTT X AL MAHA",
+            "MARRIOTT X AL MAHA"
+          ]
+        }
+      ],
+      "screenshot": "data/references/captures/ref-0019/reduced-motion-fold.png"
+    },
+    "noJavaScript": {
+      "findings": [],
+      "withJs": 590,
+      "withoutJs": 590
+    }
+  },
+  "summary": {
+    "fail": 7,
+    "warn": 5
+  },
+  "url": "https://figurefilm.co.uk/",
+  "findings": [
+    {
+      "severity": "FAIL",
+      "rule": "tiny-text",
+      "message": "Text at 9px",
+      "sample": [
+        "<p> \"made with love by we3studio.pl\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "no-h1",
+      "message": "No visible h1: the page has no title",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "3 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#a2b1c8 on screen = 2.90:1 median, 1.98:1 in the worst tenth (needs 4.5) <p> \"01\"",
+        "#496bc7 on screen = 3.81:1 median, 1.95:1 in the worst tenth (needs 4.5) <p> \"Commercial\"",
+        "#94a6c8 on screen = 2.57:1 median, 1.87:1 in the worst tenth (needs 4.5) <p> \"02\""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "hidden-content",
+      "message": "16 text elements were never visible during a full scroll (a reveal that never fires?)",
+      "sample": [
+        "BOILER ROOM X JGRREY",
+        "Music",
+        "BOILER ROOM X JGRREY",
+        "MARRIOTT X AL MAHA",
+        "MARRIOTT X AL MAHA"
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "layout-shift",
+      "message": "Layout shift 1.088 (over 0.25)",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tap-target",
+      "message": "12 controls smaller than 24x24px on a phone",
+      "sample": [
+        "10x48 <div> \"\"",
+        "15x23 <a> \"ig\"",
+        "48x23 <a> \"vimeo\"",
+        "16x23 <a> \"IN\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "reduced-motion",
+      "message": "16 text elements stay hidden when the visitor asks for reduced motion",
+      "sample": [
+        "BOILER ROOM X JGRREY",
+        "Music",
+        "BOILER ROOM X JGRREY",
+        "MARRIOTT X AL MAHA",
+        "MARRIOTT X AL MAHA"
+      ],
+      "where": [
+        "reducedMotion"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "body-size",
+      "message": "Running text at 12px (16px or more reads better)",
+      "sample": [
+        "<p> \"LONDON BASED PRODUCTION COMPANY WITH A TIGHT CORE \""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "fixed-cover",
+      "message": "1 fixed or sticky element(s) that are not a bar cover part of every screen; make it a slim bar or let it scroll away",
+      "sample": [
+        "1440x303 (34% of the screen height) <nav> \"MENUaboutworkcontactigvimeoINigvimeoINaboutworkcon\""
+      ],
+      "where": [
+        "desktop",
+        "tablet"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "gradient",
+      "message": "7 gradient backgrounds",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "small-text",
+      "message": "Text at 10px",
+      "sample": [
+        "<p> \"LONDON BASED PRODUCTION COMPANY WITH A TIGHT CORE \""
+      ],
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "body-size",
+      "message": "Running text at 10px (16px or more reads better)",
+      "sample": [
+        "<p> \"LONDON BASED PRODUCTION COMPANY WITH A TIGHT CORE \""
+      ],
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "gradient",
+      "message": "1 gradient backgrounds",
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "text-at-edge",
+      "message": "10 text elements within 12px of the screen edge",
+      "sample": [
+        "<a> \"ig\"",
+        "<a> \"contact\"",
+        "<span> \"featured\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "gradient",
+      "message": "2 gradient backgrounds",
+      "where": [
+        "mobile"
+      ]
+    }
+  ]
+}

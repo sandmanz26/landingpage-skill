@@ -1,0 +1,94 @@
+{
+  "list": "data/references/batch-012.txt",
+  "jobs": 2,
+  "seconds": 581,
+  "results": [
+    {
+      "id": "ref-0018",
+      "url": "https://www.squadeasy.com/en/",
+      "ok": true,
+      "inspectSeconds": 80,
+      "evidenceSeconds": 76,
+      "flags": [
+        "under reduced motion 1 elements still move on their own and 14 move with the scroll",
+        "3 elements move with no input at the top (loops, marquees, auto-play)",
+        "elements keep moving with no input further down at 900px (1), 1800px (4), 2700px (2), 3600px (3); no pause control found",
+        "endless moving text with no pause control",
+        "no price on the page"
+      ],
+      "error": null
+    },
+    {
+      "id": "ref-0019",
+      "url": "https://figurefilm.co.uk/",
+      "ok": true,
+      "inspectSeconds": 111,
+      "evidenceSeconds": 99,
+      "flags": [
+        "under reduced motion 0 elements still move on their own and 3 move with the scroll",
+        "no price on the page"
+      ],
+      "error": null
+    },
+    {
+      "id": "ref-0019-works",
+      "url": "https://figurefilm.co.uk/works/",
+      "ok": true,
+      "inspectSeconds": 97,
+      "evidenceSeconds": 82,
+      "flags": [
+        "stutters while scrolling: 35 long frames (>50 ms) vs 0 on a plain page, p95 83.3 ms",
+        "under reduced motion 0 elements still move on their own and 12 move with the scroll",
+        "elements keep moving with no input further down at 1800px (6), 2700px (3), 3600px (2), 4500px (6); no pause control found",
+        "no styled action in the first screen",
+        "no price on the page"
+      ],
+      "error": null
+    },
+    {
+      "id": "ref-0019-about",
+      "url": "https://figurefilm.co.uk/about/",
+      "ok": true,
+      "inspectSeconds": 91,
+      "evidenceSeconds": 79,
+      "flags": [
+        "4 full-screen sticky panels: a CSS scroll device (stacking or curtain reveal) even with no scroll library",
+        "under reduced motion 4 elements still move on their own and 4 move with the scroll",
+        "444 elements move with no input at the top (loops, marquees, auto-play)",
+        "elements keep moving with no input further down at 900px (4); no pause control found",
+        "no styled action in the first screen",
+        "no price on the page"
+      ],
+      "error": null
+    },
+    {
+      "id": "ref-0020",
+      "url": "https://coveomusic.com/",
+      "ok": true,
+      "inspectSeconds": 63,
+      "evidenceSeconds": 107,
+      "flags": [
+        "pop-up or banner on load, closed for the outline: CLOSE MODAL",
+        "under reduced motion 1 elements still move on their own and 18 move with the scroll",
+        "37 elements move with no input at the top (loops, marquees, auto-play)",
+        "elements keep moving with no input further down at 900px (4), 1800px (5), 2700px (8), 3600px (1)",
+        "no price on the page"
+      ],
+      "error": null
+    },
+    {
+      "id": "ref-0020-release",
+      "url": "https://coveomusic.com/chapter-i",
+      "ok": true,
+      "inspectSeconds": 85,
+      "evidenceSeconds": 115,
+      "flags": [
+        "pop-up or banner on load, closed for the outline: CLOSE MODAL, CLOSE MODAL",
+        "under reduced motion 0 elements still move on their own and 13 move with the scroll",
+        "elements keep moving with no input further down at 900px (2), 1350px (2), 2250px (11)",
+        "no price on the page"
+      ],
+      "error": null
+    }
+  ]
+}

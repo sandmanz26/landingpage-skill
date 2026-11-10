@@ -1,0 +1,1071 @@
+{
+  "target": "https://www.squadeasy.com/en/",
+  "time": "2026-11-10T18:32:02.395Z",
+  "rules": {
+    "purple-gradient": "warn",
+    "gradient": "info",
+    "glass": "info",
+    "system-font-only": "warn",
+    "too-many-font-sizes": "warn",
+    "too-many-colours": "warn",
+    "shadow-on-everything": "warn",
+    "icon-card-row": "warn",
+    "centred-hero-two-ctas": "warn",
+    "emoji": "warn",
+    "kit-sample": "fail",
+    "table-numbers-align": "warn",
+    "table-checkbox-align": "warn",
+    "table-checkbox-target": "warn",
+    "table-truncation": "warn",
+    "table-bulk-actions": "warn",
+    "table-sticky-columns": "info"
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "pageHeight": 11714,
+      "findings": [
+        {
+          "severity": "FAIL",
+          "rule": "font-not-loaded",
+          "message": "\"Epilogue\" is named in the CSS but never loaded; the browser shows a fallback font (2% of the text)"
+        },
+        {
+          "severity": "WARN",
+          "rule": "font-count",
+          "message": "6 typefaces carry the text: body, black, regular, arial, medium, epilogue"
+        },
+        {
+          "severity": "WARN",
+          "rule": "too-many-font-sizes",
+          "message": "12 different font sizes on the page (aim for 5 or fewer doing the visible work)"
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"Ce site web stocke des cookies sur votre ordinateu\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "headline-lines",
+          "message": "h1 runs to 5 lines",
+          "sample": [
+            "<h1> \"You've never been so close to bringing your employ\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "headline-lines",
+          "message": "h3 runs to 4 lines",
+          "sample": [
+            "<h3> \"EMPLOYEES, IT'S EASY TO GET YOUR COMPANY INVOLVED.\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "fixed-cover",
+          "message": "3 fixed or sticky element(s) that are not a bar cover part of every screen; make it a slim bar or let it scroll away",
+          "sample": [
+            "1074x83 (9% of the screen height) <header> \"Our solution Sport and mobility +7.4% average prod\"",
+            "1440x900 (100% of the screen height) <section> \"You've never been so close to bringing your employ\"",
+            "240x296 (33% of the screen height) <div> \"Ce site web stocke des cookies sur votre ordinateu\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "glass",
+          "message": "1 blurred glass panels"
+        },
+        {
+          "severity": "WARN",
+          "rule": "too-many-colours",
+          "message": "9 distinct chromatic colours",
+          "sample": [
+            "#6fb853",
+            "#e1c19e",
+            "#ea5da3",
+            "#0000ee",
+            "#e4ff60",
+            "#7fb6e6",
+            "#adabff",
+            "#139271"
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "3 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#ea5da3 on screen = 1.87:1 median, 1.87:1 in the worst tenth (needs 3) <mark> \"your employees\"",
+            "#808080 on screen = 3.95:1 median, 3.08:1 in the worst tenth (needs 4.5) <div> \"The strength of teams\"",
+            "#6fb853 on screen = 2.43:1 median, 1.68:1 in the worst tenth (needs 4.5) <a> \"notre politique de confidentialité\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "layout-shift",
+          "message": "Layout shift 0.241 (over 0.1)"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Body",
+            "share": 42
+          },
+          {
+            "family": "Black",
+            "share": 20
+          },
+          {
+            "family": "Regular",
+            "share": 18
+          },
+          {
+            "family": "arial",
+            "share": 9
+          },
+          {
+            "family": "Medium",
+            "share": 9
+          },
+          {
+            "family": "Epilogue",
+            "share": 2
+          },
+          {
+            "family": "Sharpie",
+            "share": 0
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "body",
+            "share": 42
+          },
+          {
+            "family": "black",
+            "share": 20
+          },
+          {
+            "family": "regular",
+            "share": 18
+          },
+          {
+            "family": "arial",
+            "share": 9
+          },
+          {
+            "family": "medium",
+            "share": 9
+          },
+          {
+            "family": "epilogue",
+            "share": 2
+          },
+          {
+            "family": "sharpie",
+            "share": 0
+          }
+        ],
+        "fontSizes": [
+          220,
+          110,
+          80,
+          62,
+          56,
+          50,
+          22,
+          18,
+          17,
+          16,
+          14,
+          12
+        ],
+        "textColours": [
+          "#000000",
+          "#ffffff",
+          "#ea5da3",
+          "#139271",
+          "#6fb853",
+          "#666666"
+        ],
+        "backgroundColours": [
+          "#ffffff",
+          "#000000",
+          "#e1c19e",
+          "#e4ff60",
+          "#7fb6e6",
+          "#adabff",
+          "#f6f6f6",
+          "#c2ebb8"
+        ],
+        "chromaticColours": 9,
+        "colourFamilies": 7,
+        "spacing": {
+          "distinct": 30,
+          "offScale": 14,
+          "values": [
+            1,
+            3,
+            4,
+            5,
+            6,
+            8,
+            10,
+            12,
+            14,
+            14.5,
+            15,
+            16,
+            20,
+            23,
+            24,
+            28,
+            30,
+            32,
+            40,
+            46,
+            50,
+            60,
+            80,
+            90,
+            100,
+            106,
+            120,
+            136,
+            272,
+            900
+          ]
+        },
+        "radii": [
+          "14px",
+          "10px",
+          "100px",
+          "500px",
+          "36px"
+        ],
+        "shadows": 2,
+        "gradients": 0,
+        "backdropBlur": 1,
+        "transitions": 80,
+        "animatedElements": 43,
+        "cls": 0.241
+      },
+      "screenshots": [
+        "data/references/captures/ref-0018/desktop-fold.png",
+        "data/references/captures/ref-0018/desktop-page-01.png",
+        "data/references/captures/ref-0018/desktop-page-02.png",
+        "data/references/captures/ref-0018/desktop-page-03.png",
+        "data/references/captures/ref-0018/desktop-page-04.png",
+        "data/references/captures/ref-0018/desktop-page-05.png",
+        "data/references/captures/ref-0018/desktop-page-06.png",
+        "data/references/captures/ref-0018/desktop-page-07.png",
+        "data/references/captures/ref-0018/desktop-page-08.png",
+        "data/references/captures/ref-0018/desktop-page-09.png",
+        "data/references/captures/ref-0018/desktop-page-10.png",
+        "data/references/captures/ref-0018/desktop-page-11.png",
+        "data/references/captures/ref-0018/desktop-page-12.png",
+        "data/references/captures/ref-0018/desktop-page-13.png",
+        "data/references/captures/ref-0018/desktop-page-14.png"
+      ]
+    },
+    "tablet": {
+      "width": 768,
+      "pageHeight": 9497,
+      "findings": [
+        {
+          "severity": "FAIL",
+          "rule": "font-not-loaded",
+          "message": "\"Epilogue\" is named in the CSS but never loaded; the browser shows a fallback font (2% of the text)"
+        },
+        {
+          "severity": "WARN",
+          "rule": "font-count",
+          "message": "6 typefaces carry the text: body, black, regular, arial, medium, epilogue"
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"Ce site web stocke des cookies sur votre ordinateu\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "headline-lines",
+          "message": "h1 runs to 5 lines",
+          "sample": [
+            "<h1> \"You've never been so close to bringing your employ\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "headline-lines",
+          "message": "h3 runs to 4 lines",
+          "sample": [
+            "<h3> \"EMPLOYEES, IT'S EASY TO GET YOUR COMPANY INVOLVED.\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "headline-lines",
+          "message": "h3 runs to 5 lines",
+          "sample": [
+            "<h3> \"Ready to make a lasting commitment to your teams w\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "fixed-cover",
+          "message": "2 fixed or sticky element(s) that are not a bar cover part of every screen; make it a slim bar or let it scroll away",
+          "sample": [
+            "768x1024 (100% of the screen height) <section> \"You've never been so close to bringing your employ\"",
+            "240x296 (29% of the screen height) <div> \"Ce site web stocke des cookies sur votre ordinateu\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "glass",
+          "message": "1 blurred glass panels"
+        },
+        {
+          "severity": "WARN",
+          "rule": "too-many-colours",
+          "message": "9 distinct chromatic colours",
+          "sample": [
+            "#6fb853",
+            "#e1c19e",
+            "#ea5da3",
+            "#0000ee",
+            "#e4ff60",
+            "#7fb6e6",
+            "#adabff",
+            "#139271"
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "2 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#ea5da3 on screen = 1.87:1 median, 1.87:1 in the worst tenth (needs 3) <mark> \"your employees\"",
+            "#6fb853 on screen = 2.43:1 median, 1.68:1 in the worst tenth (needs 4.5) <a> \"notre politique de confidentialité\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "layout-shift",
+          "message": "Layout shift 0.179 (over 0.1)"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Body",
+            "share": 38
+          },
+          {
+            "family": "Black",
+            "share": 22
+          },
+          {
+            "family": "Regular",
+            "share": 17
+          },
+          {
+            "family": "arial",
+            "share": 10
+          },
+          {
+            "family": "Medium",
+            "share": 10
+          },
+          {
+            "family": "Epilogue",
+            "share": 2
+          },
+          {
+            "family": "Sharpie",
+            "share": 0
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "body",
+            "share": 38
+          },
+          {
+            "family": "black",
+            "share": 22
+          },
+          {
+            "family": "regular",
+            "share": 17
+          },
+          {
+            "family": "arial",
+            "share": 10
+          },
+          {
+            "family": "medium",
+            "share": 10
+          },
+          {
+            "family": "epilogue",
+            "share": 2
+          },
+          {
+            "family": "sharpie",
+            "share": 0
+          }
+        ],
+        "fontSizes": [
+          150,
+          44,
+          40,
+          38,
+          34,
+          22,
+          18,
+          17,
+          16,
+          14,
+          12
+        ],
+        "textColours": [
+          "#ffffff",
+          "#000000",
+          "#ea5da3",
+          "#139271",
+          "#6fb853",
+          "#666666"
+        ],
+        "backgroundColours": [
+          "#ffffff",
+          "#000000",
+          "#e1c19e",
+          "#e4ff60",
+          "#7fb6e6",
+          "#adabff",
+          "#f6f6f6",
+          "#c2ebb8"
+        ],
+        "chromaticColours": 9,
+        "colourFamilies": 7,
+        "spacing": {
+          "distinct": 29,
+          "offScale": 13,
+          "values": [
+            1,
+            4,
+            5,
+            6,
+            8,
+            10,
+            12,
+            14,
+            14.5,
+            15,
+            16,
+            18,
+            20,
+            23,
+            24,
+            30,
+            32,
+            36,
+            40,
+            46,
+            48,
+            50,
+            58,
+            60,
+            72,
+            80,
+            100,
+            120,
+            1024
+          ]
+        },
+        "radii": [
+          "14px",
+          "10px",
+          "100px",
+          "500px",
+          "36px"
+        ],
+        "shadows": 2,
+        "gradients": 0,
+        "backdropBlur": 1,
+        "transitions": 52,
+        "animatedElements": 53,
+        "cls": 0.179
+      },
+      "screenshots": [
+        "data/references/captures/ref-0018/tablet-fold.png",
+        "data/references/captures/ref-0018/tablet-page-01.png",
+        "data/references/captures/ref-0018/tablet-page-02.png",
+        "data/references/captures/ref-0018/tablet-page-03.png",
+        "data/references/captures/ref-0018/tablet-page-04.png",
+        "data/references/captures/ref-0018/tablet-page-05.png",
+        "data/references/captures/ref-0018/tablet-page-06.png",
+        "data/references/captures/ref-0018/tablet-page-07.png",
+        "data/references/captures/ref-0018/tablet-page-08.png",
+        "data/references/captures/ref-0018/tablet-page-09.png",
+        "data/references/captures/ref-0018/tablet-page-10.png"
+      ]
+    },
+    "mobile": {
+      "width": 390,
+      "pageHeight": 10240,
+      "findings": [
+        {
+          "severity": "FAIL",
+          "rule": "font-not-loaded",
+          "message": "\"Epilogue\" is named in the CSS but never loaded; the browser shows a fallback font (2% of the text)"
+        },
+        {
+          "severity": "WARN",
+          "rule": "font-count",
+          "message": "6 typefaces carry the text: body, black, regular, arial, medium, epilogue"
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"Ce site web stocke des cookies sur votre ordinateu\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "headline-lines",
+          "message": "h1 runs to 7 lines",
+          "sample": [
+            "<h1> \"You've never been so close to bringing your employ\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "headline-lines",
+          "message": "h2 runs to 4 lines",
+          "sample": [
+            "<h2> \"Employees' favourite,team-building app.\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "headline-lines",
+          "message": "h3 runs to 6 lines",
+          "sample": [
+            "<h3> \"EMPLOYEES, IT'S EASY TO GET YOUR COMPANY INVOLVED.\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "headline-lines",
+          "message": "h3 runs to 8 lines",
+          "sample": [
+            "<h3> \"Ready to make a lasting commitment to your teams w\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "fixed-cover",
+          "message": "2 fixed or sticky element(s) that are not a bar cover part of every screen; make it a slim bar or let it scroll away",
+          "sample": [
+            "390x844 (100% of the screen height) <section> \"You've never been so close to bringing your employ\"",
+            "240x296 (35% of the screen height) <div> \"Ce site web stocke des cookies sur votre ordinateu\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tap-target",
+          "message": "3 controls smaller than 24x24px on a phone",
+          "sample": [
+            "30x20 <a> \"CGU\"",
+            "47x20 <a> \"Privacy\"",
+            "119x19 <button> \"Gérer mes cookies\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "glass",
+          "message": "1 blurred glass panels"
+        },
+        {
+          "severity": "WARN",
+          "rule": "too-many-colours",
+          "message": "9 distinct chromatic colours",
+          "sample": [
+            "#6fb853",
+            "#e1c19e",
+            "#ea5da3",
+            "#0000ee",
+            "#e4ff60",
+            "#7fb6e6",
+            "#adabff",
+            "#139271"
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "2 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#ea5da3 on screen = 1.87:1 median, 1.87:1 in the worst tenth (needs 3) <mark> \"your employees\"",
+            "#6fb853 on screen = 2.43:1 median, 1.68:1 in the worst tenth (needs 4.5) <a> \"notre politique de confidentialité\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "layout-shift",
+          "message": "Layout shift 0.305 (over 0.25)"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Body",
+            "share": 38
+          },
+          {
+            "family": "Black",
+            "share": 22
+          },
+          {
+            "family": "Regular",
+            "share": 17
+          },
+          {
+            "family": "arial",
+            "share": 10
+          },
+          {
+            "family": "Medium",
+            "share": 10
+          },
+          {
+            "family": "Epilogue",
+            "share": 2
+          },
+          {
+            "family": "Sharpie",
+            "share": 0
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "body",
+            "share": 38
+          },
+          {
+            "family": "black",
+            "share": 22
+          },
+          {
+            "family": "regular",
+            "share": 17
+          },
+          {
+            "family": "arial",
+            "share": 10
+          },
+          {
+            "family": "medium",
+            "share": 10
+          },
+          {
+            "family": "epilogue",
+            "share": 2
+          },
+          {
+            "family": "sharpie",
+            "share": 0
+          }
+        ],
+        "fontSizes": [
+          150,
+          44,
+          40,
+          38,
+          34,
+          22,
+          18,
+          17,
+          16,
+          14,
+          12
+        ],
+        "textColours": [
+          "#ffffff",
+          "#000000",
+          "#ea5da3",
+          "#139271",
+          "#6fb853",
+          "#666666"
+        ],
+        "backgroundColours": [
+          "#ffffff",
+          "#000000",
+          "#e1c19e",
+          "#e4ff60",
+          "#7fb6e6",
+          "#adabff",
+          "#f6f6f6",
+          "#c2ebb8"
+        ],
+        "chromaticColours": 9,
+        "colourFamilies": 7,
+        "spacing": {
+          "distinct": 29,
+          "offScale": 13,
+          "values": [
+            1,
+            4,
+            5,
+            6,
+            8,
+            10,
+            12,
+            14,
+            14.5,
+            15,
+            16,
+            18,
+            20,
+            23,
+            24,
+            30,
+            32,
+            36,
+            40,
+            46,
+            48,
+            50,
+            58,
+            60,
+            72,
+            80,
+            100,
+            120,
+            844
+          ]
+        },
+        "radii": [
+          "14px",
+          "10px",
+          "100px",
+          "500px",
+          "36px"
+        ],
+        "shadows": 2,
+        "gradients": 0,
+        "backdropBlur": 1,
+        "transitions": 47,
+        "animatedElements": 48,
+        "cls": 0.305
+      },
+      "screenshots": [
+        "data/references/captures/ref-0018/mobile-fold.png",
+        "data/references/captures/ref-0018/mobile-page-01.png",
+        "data/references/captures/ref-0018/mobile-page-02.png",
+        "data/references/captures/ref-0018/mobile-page-03.png",
+        "data/references/captures/ref-0018/mobile-page-04.png",
+        "data/references/captures/ref-0018/mobile-page-05.png",
+        "data/references/captures/ref-0018/mobile-page-06.png",
+        "data/references/captures/ref-0018/mobile-page-07.png",
+        "data/references/captures/ref-0018/mobile-page-08.png",
+        "data/references/captures/ref-0018/mobile-page-09.png",
+        "data/references/captures/ref-0018/mobile-page-10.png",
+        "data/references/captures/ref-0018/mobile-page-11.png",
+        "data/references/captures/ref-0018/mobile-page-12.png",
+        "data/references/captures/ref-0018/mobile-page-13.png"
+      ]
+    }
+  },
+  "checks": {
+    "reducedMotion": {
+      "findings": [
+        {
+          "severity": "FAIL",
+          "rule": "reduced-motion",
+          "message": "2 text elements stay hidden when the visitor asks for reduced motion",
+          "sample": [
+            "1.2",
+            "70"
+          ]
+        }
+      ],
+      "screenshot": "data/references/captures/ref-0018/reduced-motion-fold.png"
+    },
+    "noJavaScript": {
+      "findings": [],
+      "withJs": 3503,
+      "withoutJs": 3601
+    }
+  },
+  "summary": {
+    "fail": 8,
+    "warn": 13
+  },
+  "url": "https://www.squadeasy.com/en/",
+  "findings": [
+    {
+      "severity": "FAIL",
+      "rule": "font-not-loaded",
+      "message": "\"Epilogue\" is named in the CSS but never loaded; the browser shows a fallback font (2% of the text)",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "headline-lines",
+      "message": "h1 runs to 5 lines",
+      "sample": [
+        "<h1> \"You've never been so close to bringing your employ\""
+      ],
+      "where": [
+        "desktop",
+        "tablet"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "3 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#ea5da3 on screen = 1.87:1 median, 1.87:1 in the worst tenth (needs 3) <mark> \"your employees\"",
+        "#808080 on screen = 3.95:1 median, 3.08:1 in the worst tenth (needs 4.5) <div> \"The strength of teams\"",
+        "#6fb853 on screen = 2.43:1 median, 1.68:1 in the worst tenth (needs 4.5) <a> \"notre politique de confidentialité\""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "2 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#ea5da3 on screen = 1.87:1 median, 1.87:1 in the worst tenth (needs 3) <mark> \"your employees\"",
+        "#6fb853 on screen = 2.43:1 median, 1.68:1 in the worst tenth (needs 4.5) <a> \"notre politique de confidentialité\""
+      ],
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "headline-lines",
+      "message": "h1 runs to 7 lines",
+      "sample": [
+        "<h1> \"You've never been so close to bringing your employ\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tap-target",
+      "message": "3 controls smaller than 24x24px on a phone",
+      "sample": [
+        "30x20 <a> \"CGU\"",
+        "47x20 <a> \"Privacy\"",
+        "119x19 <button> \"Gérer mes cookies\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "layout-shift",
+      "message": "Layout shift 0.305 (over 0.25)",
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "reduced-motion",
+      "message": "2 text elements stay hidden when the visitor asks for reduced motion",
+      "sample": [
+        "1.2",
+        "70"
+      ],
+      "where": [
+        "reducedMotion"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "font-count",
+      "message": "6 typefaces carry the text: body, black, regular, arial, medium, epilogue",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "too-many-font-sizes",
+      "message": "12 different font sizes on the page (aim for 5 or fewer doing the visible work)",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "body-size",
+      "message": "Running text at 12px (16px or more reads better)",
+      "sample": [
+        "<p> \"Ce site web stocke des cookies sur votre ordinateu\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "headline-lines",
+      "message": "h3 runs to 4 lines",
+      "sample": [
+        "<h3> \"EMPLOYEES, IT'S EASY TO GET YOUR COMPANY INVOLVED.\""
+      ],
+      "where": [
+        "desktop",
+        "tablet"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "fixed-cover",
+      "message": "3 fixed or sticky element(s) that are not a bar cover part of every screen; make it a slim bar or let it scroll away",
+      "sample": [
+        "1074x83 (9% of the screen height) <header> \"Our solution Sport and mobility +7.4% average prod\"",
+        "1440x900 (100% of the screen height) <section> \"You've never been so close to bringing your employ\"",
+        "240x296 (33% of the screen height) <div> \"Ce site web stocke des cookies sur votre ordinateu\""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "glass",
+      "message": "1 blurred glass panels",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "too-many-colours",
+      "message": "9 distinct chromatic colours",
+      "sample": [
+        "#6fb853",
+        "#e1c19e",
+        "#ea5da3",
+        "#0000ee",
+        "#e4ff60",
+        "#7fb6e6",
+        "#adabff",
+        "#139271"
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "layout-shift",
+      "message": "Layout shift 0.241 (over 0.1)",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "headline-lines",
+      "message": "h3 runs to 5 lines",
+      "sample": [
+        "<h3> \"Ready to make a lasting commitment to your teams w\""
+      ],
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "fixed-cover",
+      "message": "2 fixed or sticky element(s) that are not a bar cover part of every screen; make it a slim bar or let it scroll away",
+      "sample": [
+        "768x1024 (100% of the screen height) <section> \"You've never been so close to bringing your employ\"",
+        "240x296 (29% of the screen height) <div> \"Ce site web stocke des cookies sur votre ordinateu\""
+      ],
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "layout-shift",
+      "message": "Layout shift 0.179 (over 0.1)",
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "headline-lines",
+      "message": "h2 runs to 4 lines",
+      "sample": [
+        "<h2> \"Employees' favourite,team-building app.\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "headline-lines",
+      "message": "h3 runs to 6 lines",
+      "sample": [
+        "<h3> \"EMPLOYEES, IT'S EASY TO GET YOUR COMPANY INVOLVED.\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "headline-lines",
+      "message": "h3 runs to 8 lines",
+      "sample": [
+        "<h3> \"Ready to make a lasting commitment to your teams w\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    }
+  ]
+}

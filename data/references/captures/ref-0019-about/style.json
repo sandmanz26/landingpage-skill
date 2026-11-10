@@ -1,0 +1,125 @@
+{
+  "url": "https://figurefilm.co.uk/about/",
+  "readAt": "2026-11-10T18:38:22.389Z",
+  "tags": [
+    "flat",
+    "restrained-colour",
+    "expressive-type",
+    "scroll-choreography",
+    "css-scroll-device",
+    "endless-motion",
+    "photography",
+    "ignores-reduced-motion"
+  ],
+  "palette": {
+    "chromatic": 1,
+    "families": 1,
+    "text": [
+      "#fcf8c9"
+    ],
+    "backgrounds": [
+      "#fcf8c9",
+      "#080808"
+    ],
+    "gradients": 0,
+    "shadows": 0,
+    "blur": 0
+  },
+  "type": {
+    "families": [
+      {
+        "family": "pt mono",
+        "share": 66
+      },
+      {
+        "family": "jeanlucweb",
+        "share": 34
+      }
+    ],
+    "cuts": [
+      {
+        "family": "PT Mono",
+        "share": 66
+      },
+      {
+        "family": "JeanLucWeb-Bold",
+        "share": 34
+      }
+    ],
+    "sizes": {
+      "desktop": [
+        120,
+        60,
+        40,
+        30,
+        24,
+        12,
+        10,
+        9
+      ],
+      "mobile": [
+        60,
+        40,
+        30,
+        24,
+        20,
+        18,
+        10,
+        9
+      ]
+    },
+    "display": 120,
+    "body": 24,
+    "ratio": 5
+  },
+  "shape": {
+    "radii": [
+      "50%"
+    ]
+  },
+  "spacing": {
+    "distinct": 9,
+    "offScale": 3
+  },
+  "motion": {
+    "libraries": [
+      "gsap",
+      "scrollTrigger",
+      "swiper",
+      "lottie"
+    ],
+    "stickyPanels": 4,
+    "durationsMs": {
+      "min": 800,
+      "max": 800
+    },
+    "easings": [
+      "linear"
+    ],
+    "reducedMotionRespected": false,
+    "smoothness": {
+      "fps": 52.4,
+      "longFrames": 0,
+      "baselineLongFrames": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    }
+  },
+  "imagery": {
+    "photos": 32,
+    "illustrations": 1,
+    "videos": 4,
+    "rasterChecked": []
+  },
+  "layout": {
+    "pageHeight": 7682,
+    "screens": 9
+  },
+  "doNotCopy": [
+    "tiny-text: Text at 9px",
+    "no-h1: No visible h1: the page has no title",
+    "contrast: 2 text elements below WCAG AA (measured on screen pixels)",
+    "tap-target: 6 controls smaller than 24x24px on a phone",
+    "contrast: 1 text elements below WCAG AA (measured on screen pixels)",
+    "motion without a reduced-motion path"
+  ]
+}

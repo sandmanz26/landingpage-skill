@@ -1,0 +1,896 @@
+{
+  "url": "https://figurefilm.co.uk/works/",
+  "time": "2026-11-10T18:37:36.949Z",
+  "sheets": {
+    "desktop": "data/references/captures/ref-0019-works/sheet-desktop.png",
+    "mobile": "data/references/captures/ref-0019-works/sheet-mobile.png",
+    "motion": "data/references/captures/ref-0019-works/motion-sheet.png"
+  },
+  "load": {
+    "status": 200,
+    "retries": 0,
+    "failed": false
+  },
+  "overlaysDismissed": [],
+  "outline": {
+    "title": "FIGUREFILM",
+    "description": "",
+    "headings": [
+      "H3 2% SHOW ME",
+      "H2 6% MARRIOTT X AL MAHA",
+      "H2 11% IZZA X MARRAKESH",
+      "H2 11% PLAION X LET'S SING 2025",
+      "H2 18% RING X EAST 17",
+      "H2 24% BOILER ROOM X JGRREY",
+      "H2 23% GALLEGOS X BREAKS ARE IN MY BONES",
+      "H2 30% ARGOS",
+      "H2 35% PLAION X LET'S SING 2025",
+      "H2 35% AYSEDENIZ X AUDIO NETWORK",
+      "H2 42% ASICS X DJOKOVIC",
+      "H2 47% BOILER ROOM X SHERELLE",
+      "H2 47% GAGOSIAN X EDMUND DE WAAL",
+      "H2 53% THE PRINTMAKER X JONATHAN LAWES",
+      "H2 59% RHYS LEWIS X ALONE",
+      "H2 59% PLAION X LET'S SING 2025",
+      "H2 66% SPRAY DOCUMENTARY",
+      "H2 71% NEWARTCENTRE X ANTHONY CARO",
+      "H2 71% BIKE CLUB",
+      "H2 77% MARK KNIGHT X ALL 4 LOVE",
+      "H2 83% LEFTWING:KODY X CAMDEN COX",
+      "H2 83% DOMBRESKY X CAMDEN COX",
+      "H2 89% AVIVA X BRAND FILM",
+      "H2 94% CVB X DOCUMENTARY",
+      "H2 99% LET'S COLLABORATE"
+    ],
+    "actions": [],
+    "prices": [],
+    "proofMentions": {},
+    "logoImages": 0,
+    "forms": 0,
+    "imagery": {
+      "photos": 0,
+      "illustrations": 0,
+      "videos": 3
+    },
+    "pageHeight": 11122
+  },
+  "motion": {
+    "libraries": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "splitText": false,
+      "lenis": false,
+      "locomotive": false,
+      "swiper": false,
+      "lottie": false,
+      "framerMotion": false,
+      "viewTransitions": false
+    },
+    "stickyPanels": [],
+    "maxRunning": 57,
+    "durationsMs": {
+      "min": 200,
+      "max": 800
+    },
+    "easings": [
+      "ease-in-out",
+      "linear",
+      "cubic-bezier(0.4, 0, 0.2, 1)"
+    ],
+    "properties": [
+      "height",
+      "width",
+      "opacity",
+      "transform"
+    ],
+    "movingWithoutInput": 0,
+    "movingWithoutInputFurtherDown": [
+      {
+        "y": 1800,
+        "moving": 6
+      },
+      {
+        "y": 2700,
+        "moving": 3
+      },
+      {
+        "y": 3600,
+        "moving": 2
+      },
+      {
+        "y": 4500,
+        "moving": 6
+      }
+    ],
+    "scriptDrivenOnScroll": 6,
+    "infiniteLoops": 0,
+    "infiniteLoopsWithText": 0,
+    "pauseControl": false,
+    "steps": [
+      {
+        "y": 450,
+        "running": 40,
+        "scriptDriven": 2,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div",
+            "hasText": false,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "ease-in-out",
+            "props": [
+              "height"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div",
+            "hasText": false,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "ease-in-out",
+            "props": [
+              "width"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div",
+            "hasText": false,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "ease-in-out",
+            "props": [
+              "height"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div",
+            "hasText": false,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "ease-in-out",
+            "props": [
+              "width"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 900,
+        "running": 38,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "div",
+            "hasText": false,
+            "duration": 500,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "img",
+            "hasText": false,
+            "duration": 250,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1350,
+        "running": 45,
+        "scriptDriven": 3,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div",
+            "hasText": false,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "ease-in-out",
+            "props": [
+              "height"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div",
+            "hasText": false,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "ease-in-out",
+            "props": [
+              "width"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div",
+            "hasText": false,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "ease-in-out",
+            "props": [
+              "height"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div",
+            "hasText": false,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "ease-in-out",
+            "props": [
+              "width"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.Work__WorkContainer-sc-1uiuw33-1",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.Work__WorkContainer-sc-1uiuw33-1",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      },
+      {
+        "y": 1800,
+        "running": 57,
+        "scriptDriven": 5,
+        "idleMoving": 6,
+        "sample": [
+          {
+            "target": "div",
+            "hasText": false,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "ease-in-out",
+            "props": [
+              "height"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div",
+            "hasText": false,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "ease-in-out",
+            "props": [
+              "width"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div",
+            "hasText": false,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "ease-in-out",
+            "props": [
+              "height"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div",
+            "hasText": false,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "ease-in-out",
+            "props": [
+              "width"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.Work__WorkContainer-sc-1uiuw33-1",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.Work__WorkContainer-sc-1uiuw33-1",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      },
+      {
+        "y": 2250,
+        "running": 39,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 2700,
+        "running": 48,
+        "scriptDriven": 3,
+        "idleMoving": 3,
+        "sample": [
+          {
+            "target": "div",
+            "hasText": false,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "ease-in-out",
+            "props": [
+              "height"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div",
+            "hasText": false,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "ease-in-out",
+            "props": [
+              "width"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div",
+            "hasText": false,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "ease-in-out",
+            "props": [
+              "height"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div",
+            "hasText": false,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "ease-in-out",
+            "props": [
+              "width"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.Work__WorkContainer-sc-1uiuw33-1",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.Work__WorkContainer-sc-1uiuw33-1",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      },
+      {
+        "y": 3150,
+        "running": 54,
+        "scriptDriven": 2,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div",
+            "hasText": false,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "ease-in-out",
+            "props": [
+              "height"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div",
+            "hasText": false,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "ease-in-out",
+            "props": [
+              "width"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div",
+            "hasText": false,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "ease-in-out",
+            "props": [
+              "height"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div",
+            "hasText": false,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "ease-in-out",
+            "props": [
+              "width"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.Work__WorkContainer-sc-1uiuw33-1",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.Work__WorkContainer-sc-1uiuw33-1",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      },
+      {
+        "y": 3600,
+        "running": 55,
+        "scriptDriven": 6,
+        "idleMoving": 2,
+        "sample": [
+          {
+            "target": "div.Work__WorkContainer-sc-1uiuw33-1",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.Work__WorkContainer-sc-1uiuw33-1",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "span.WorkType-sc-hp3h4a-0",
+            "hasText": true,
+            "duration": 600,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "span.WorkType-sc-hp3h4a-0",
+            "hasText": true,
+            "duration": 600,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.Work__WorkContainer-sc-1uiuw33-1",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.Work__WorkContainer-sc-1uiuw33-1",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      },
+      {
+        "y": 4050,
+        "running": 43,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 4500,
+        "running": 53,
+        "scriptDriven": 2,
+        "idleMoving": 6,
+        "sample": [
+          {
+            "target": "div.Work__WorkContainer-sc-1uiuw33-1",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.Work__WorkContainer-sc-1uiuw33-1",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "span.WorkType-sc-hp3h4a-0",
+            "hasText": true,
+            "duration": 600,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "span.WorkType-sc-hp3h4a-0",
+            "hasText": true,
+            "duration": 600,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.Work__WorkContainer-sc-1uiuw33-1",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.Work__WorkContainer-sc-1uiuw33-1",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      }
+    ]
+  },
+  "smoothness": {
+    "page": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 9712,
+      "frames": 306,
+      "fps": 31.5,
+      "medianMs": 16.7,
+      "p95Ms": 83.3,
+      "maxMs": 217,
+      "longFrames": 35,
+      "droppedShare": 23,
+      "longTasks": 9,
+      "longTaskMs": 555,
+      "scriptBlockedShare": 6,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "baseline": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 1723,
+      "frames": 103,
+      "fps": 59.8,
+      "medianMs": 16.7,
+      "p95Ms": 16.7,
+      "maxMs": 17,
+      "longFrames": 0,
+      "droppedShare": 0,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "longFramesOverBaseline": 35,
+    "p95OverBaseline": 66.6
+  },
+  "reducedMotion": {
+    "movingWithoutInput": 0,
+    "movingOnScroll": 12,
+    "idleNavigation": null,
+    "loadFailed": false
+  },
+  "idleRunLoadFailed": false,
+  "idleNavigation": null
+}

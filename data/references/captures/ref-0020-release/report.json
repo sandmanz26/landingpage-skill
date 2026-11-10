@@ -1,0 +1,850 @@
+{
+  "target": "https://coveomusic.com/chapter-i",
+  "time": "2026-11-10T18:38:22.463Z",
+  "rules": {
+    "purple-gradient": "warn",
+    "gradient": "info",
+    "glass": "info",
+    "system-font-only": "warn",
+    "too-many-font-sizes": "warn",
+    "too-many-colours": "warn",
+    "shadow-on-everything": "warn",
+    "icon-card-row": "warn",
+    "centred-hero-two-ctas": "warn",
+    "emoji": "warn",
+    "kit-sample": "fail",
+    "table-numbers-align": "warn",
+    "table-checkbox-align": "warn",
+    "table-checkbox-target": "warn",
+    "table-truncation": "warn",
+    "table-bulk-actions": "warn",
+    "table-sticky-columns": "info"
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "pageHeight": 3367,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "system-font-only",
+          "message": "Only a default typeface carries the page (Inter, monospace)"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.6px",
+          "sample": [
+            "<p> \"Previewing\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.2px",
+          "sample": [
+            "<a> \"Listen on Apple Music\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.2px",
+          "sample": [
+            "<p> \"12 minutes 22 seconds\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.6px",
+          "sample": [
+            "<span> \"production.25-276.f0c9c2b\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "fixed-cover",
+          "message": "1 fixed or sticky element(s) that are not a bar cover part of every screen; make it a slim bar or let it scroll away",
+          "sample": [
+            "320x264 (29% of the screen height) <div> \"Credits Close modal A project by Connell McCarthy \""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "img-alt",
+          "message": "15 images without an alt attribute",
+          "sample": [
+            null,
+            "/assets/releases/chapter-i/chapter-i-140.jpg",
+            "/assets/releases/chapter-i/chapter-i-feature.jpg"
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "glass",
+          "message": "22 blurred glass panels"
+        },
+        {
+          "severity": "INFO",
+          "rule": "overlays-dismissed",
+          "message": "Closed 2 pop-up or banner(s) before capturing the screens",
+          "sample": [
+            "CLOSE MODAL",
+            "CLOSE MODAL"
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "1 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#ffffff on screen = 3.77:1 median, 1.42:1 in the worst tenth (needs 4.5) <button> \"Preview\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "contrast-unverified",
+          "message": "5 suspected contrast problems could not be re-measured on screen"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Inter",
+            "share": 82
+          },
+          {
+            "family": "monospace",
+            "share": 17
+          },
+          {
+            "family": "Arial",
+            "share": 1
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "inter",
+            "share": 82
+          },
+          {
+            "family": "monospace",
+            "share": 17
+          },
+          {
+            "family": "arial",
+            "share": 1
+          }
+        ],
+        "fontSizes": [
+          48,
+          19,
+          13,
+          12,
+          11,
+          10
+        ],
+        "textColours": [
+          "#524d46",
+          "#1d1812",
+          "#000000",
+          "#ffffff"
+        ],
+        "backgroundColours": [
+          "#000000",
+          "#eeeeee",
+          "#1d1812",
+          "#ffffff",
+          "#222222",
+          "#dddddd"
+        ],
+        "chromaticColours": 1,
+        "colourFamilies": 1,
+        "spacing": {
+          "distinct": 21,
+          "offScale": 13,
+          "values": [
+            2,
+            2.5,
+            4,
+            5,
+            6,
+            7,
+            9.5,
+            10,
+            12,
+            16.5,
+            18,
+            18.5,
+            20.5,
+            24,
+            36,
+            38.5,
+            48,
+            72,
+            77,
+            96,
+            144
+          ]
+        },
+        "radii": [
+          "8px",
+          "100%",
+          "4px",
+          "12px",
+          "40px",
+          "24px",
+          "50%",
+          "25%"
+        ],
+        "shadows": 4,
+        "gradients": 0,
+        "backdropBlur": 22,
+        "transitions": 70,
+        "animatedElements": 29,
+        "cls": 0.001
+      },
+      "screenshots": [
+        "data/references/captures/ref-0020-release/desktop-fold.png",
+        "data/references/captures/ref-0020-release/desktop-overlay.png",
+        "data/references/captures/ref-0020-release/desktop-page-01.png",
+        "data/references/captures/ref-0020-release/desktop-page-02.png",
+        "data/references/captures/ref-0020-release/desktop-page-03.png",
+        "data/references/captures/ref-0020-release/desktop-page-04.png"
+      ]
+    },
+    "tablet": {
+      "width": 768,
+      "pageHeight": 2969,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "system-font-only",
+          "message": "Only a default typeface carries the page (Inter, monospace)"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.6px",
+          "sample": [
+            "<p> \"Previewing\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.2px",
+          "sample": [
+            "<a> \"Listen on Apple Music\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.6px",
+          "sample": [
+            "<span> \"production.25-276.f0c9c2b\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "fixed-cover",
+          "message": "2 fixed or sticky element(s) that are not a bar cover part of every screen; make it a slim bar or let it scroll away",
+          "sample": [
+            "320x105 (10% of the screen height) <div> \"COVEO Close modal Follow COVEO to stay connected\"",
+            "320x264 (26% of the screen height) <div> \"Credits Close modal A project by Connell McCarthy \""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "img-alt",
+          "message": "15 images without an alt attribute",
+          "sample": [
+            null,
+            "/assets/releases/chapter-i/chapter-i-140.jpg",
+            "/assets/releases/chapter-i/chapter-i-feature.jpg"
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "glass",
+          "message": "22 blurred glass panels"
+        },
+        {
+          "severity": "INFO",
+          "rule": "overlays-dismissed",
+          "message": "Closed 2 pop-up or banner(s) before capturing the screens",
+          "sample": [
+            "CLOSE MODAL",
+            "CLOSE MODAL"
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "3 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#747474 on screen = 4.03:1 median, 4.03:1 in the worst tenth (needs 4.5) <p> \"Previewing\"",
+            "#000000 on #333333 = 1.66:1 (needs 4.5, not re-checked on screen) <span> \"Play/Pause Audio\"",
+            "#ffffff on screen = 3.77:1 median, 1.41:1 in the worst tenth (needs 4.5) <button> \"Preview\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "contrast-unverified",
+          "message": "1 suspected contrast problems could not be re-measured on screen"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Inter",
+            "share": 80
+          },
+          {
+            "family": "monospace",
+            "share": 19
+          },
+          {
+            "family": "Arial",
+            "share": 2
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "inter",
+            "share": 80
+          },
+          {
+            "family": "monospace",
+            "share": 19
+          },
+          {
+            "family": "arial",
+            "share": 2
+          }
+        ],
+        "fontSizes": [
+          48,
+          19,
+          13,
+          12,
+          11,
+          10
+        ],
+        "textColours": [
+          "#747474",
+          "#ffffff",
+          "#000000",
+          "#524d46",
+          "#1d1812"
+        ],
+        "backgroundColours": [
+          "#000000",
+          "#eeeeee",
+          "#ffffff",
+          "#222222",
+          "#dddddd"
+        ],
+        "chromaticColours": 1,
+        "colourFamilies": 1,
+        "spacing": {
+          "distinct": 20,
+          "offScale": 13,
+          "values": [
+            2,
+            2.5,
+            4,
+            5,
+            6,
+            7,
+            9.5,
+            10,
+            12,
+            16.5,
+            18,
+            18.5,
+            20.5,
+            24,
+            36,
+            38.5,
+            48,
+            72,
+            77,
+            144
+          ]
+        },
+        "radii": [
+          "100%",
+          "8px",
+          "4px",
+          "12px",
+          "40px",
+          "24px",
+          "50%",
+          "25%"
+        ],
+        "shadows": 3,
+        "gradients": 0,
+        "backdropBlur": 22,
+        "transitions": 73,
+        "animatedElements": 26,
+        "cls": 0.003
+      },
+      "screenshots": [
+        "data/references/captures/ref-0020-release/tablet-fold.png",
+        "data/references/captures/ref-0020-release/tablet-overlay.png",
+        "data/references/captures/ref-0020-release/tablet-page-01.png",
+        "data/references/captures/ref-0020-release/tablet-page-02.png",
+        "data/references/captures/ref-0020-release/tablet-page-03.png"
+      ]
+    },
+    "mobile": {
+      "width": 390,
+      "pageHeight": 2933,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "system-font-only",
+          "message": "Only a default typeface carries the page (Inter, monospace)"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.6px",
+          "sample": [
+            "<p> \"Previewing\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.2px",
+          "sample": [
+            "<a> \"Listen on Apple Music\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.6px",
+          "sample": [
+            "<span> \"production.25-276.f0c9c2b\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "fixed-cover",
+          "message": "2 fixed or sticky element(s) that are not a bar cover part of every screen; make it a slim bar or let it scroll away",
+          "sample": [
+            "320x105 (12% of the screen height) <div> \"COVEO Close modal Follow COVEO to stay connected\"",
+            "320x264 (31% of the screen height) <div> \"Credits Close modal A project by Connell McCarthy \""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tap-target",
+          "message": "4 controls smaller than 24x24px on a phone",
+          "sample": [
+            "102x16 <a> \"Connell McCarthy\"",
+            "40x16 <button> \"Credits\"",
+            "103x16 <a> \"Licensing Inquires\"",
+            "50x16 <a> \"Press Kit\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "text-at-edge",
+          "message": "11 text elements within 12px of the screen edge",
+          "sample": [
+            "<span> \"Play/Pause Audio\"",
+            "<span> \"Close modal\"",
+            "<h2> \"Credits\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "img-alt",
+          "message": "15 images without an alt attribute",
+          "sample": [
+            null,
+            "/assets/releases/chapter-i/chapter-i-140.jpg",
+            "/assets/releases/chapter-i/chapter-i-feature.jpg"
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "glass",
+          "message": "22 blurred glass panels"
+        },
+        {
+          "severity": "INFO",
+          "rule": "overlays-dismissed",
+          "message": "Closed 2 pop-up or banner(s) before capturing the screens",
+          "sample": [
+            "CLOSE MODAL",
+            "CLOSE MODAL"
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "5 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#747474 on screen = 4.32:1 median, 2.70:1 in the worst tenth (needs 4.5) <p> \"Previewing\"",
+            "#ffffff on screen = 1.57:1 median, 1.33:1 in the worst tenth (needs 4.5) <p> \"{track.title}\"",
+            "#747474 on #000000 = 4.49:1 (needs 4.5, not re-checked on screen) <span> \"0:00\"",
+            "#000000 on #333333 = 1.66:1 (needs 4.5, not re-checked on screen) <span> \"Play/Pause Audio\"",
+            "#ffffff on screen = 3.77:1 median, 1.41:1 in the worst tenth (needs 4.5) <button> \"Preview\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "contrast-unverified",
+          "message": "2 suspected contrast problems could not be re-measured on screen"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Inter",
+            "share": 80
+          },
+          {
+            "family": "monospace",
+            "share": 19
+          },
+          {
+            "family": "Arial",
+            "share": 2
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "inter",
+            "share": 80
+          },
+          {
+            "family": "monospace",
+            "share": 19
+          },
+          {
+            "family": "arial",
+            "share": 2
+          }
+        ],
+        "fontSizes": [
+          48,
+          19,
+          13,
+          12,
+          11,
+          10
+        ],
+        "textColours": [
+          "#747474",
+          "#ffffff",
+          "#000000",
+          "#524d46",
+          "#1d1812"
+        ],
+        "backgroundColours": [
+          "#000000",
+          "#eeeeee",
+          "#ffffff",
+          "#222222",
+          "#dddddd"
+        ],
+        "chromaticColours": 1,
+        "colourFamilies": 1,
+        "spacing": {
+          "distinct": 21,
+          "offScale": 14,
+          "values": [
+            2,
+            2.5,
+            4,
+            5,
+            6,
+            7,
+            9.5,
+            10,
+            12,
+            16.5,
+            18,
+            18.5,
+            19.5,
+            20.5,
+            24,
+            36,
+            38.5,
+            48,
+            72,
+            77,
+            144
+          ]
+        },
+        "radii": [
+          "100%",
+          "8px",
+          "4px",
+          "12px",
+          "40px",
+          "24px",
+          "50%",
+          "25%"
+        ],
+        "shadows": 3,
+        "gradients": 0,
+        "backdropBlur": 22,
+        "transitions": 73,
+        "animatedElements": 31,
+        "cls": 0.003
+      },
+      "screenshots": [
+        "data/references/captures/ref-0020-release/mobile-fold.png",
+        "data/references/captures/ref-0020-release/mobile-overlay.png",
+        "data/references/captures/ref-0020-release/mobile-page-01.png",
+        "data/references/captures/ref-0020-release/mobile-page-02.png",
+        "data/references/captures/ref-0020-release/mobile-page-03.png",
+        "data/references/captures/ref-0020-release/mobile-page-04.png"
+      ]
+    }
+  },
+  "checks": {
+    "reducedMotion": {
+      "findings": [
+        {
+          "severity": "FAIL",
+          "rule": "reduced-motion",
+          "message": "8 text elements stay hidden when the visitor asks for reduced motion",
+          "sample": [
+            "Close modal",
+            "Follow COVEO to stay connected",
+            "Close modal",
+            "A project by",
+            "Designed & Developed by"
+          ]
+        }
+      ],
+      "screenshot": "data/references/captures/ref-0020-release/reduced-motion-fold.png"
+    },
+    "noJavaScript": {
+      "findings": [],
+      "withJs": 2029,
+      "withoutJs": 2015
+    }
+  },
+  "summary": {
+    "fail": 7,
+    "warn": 5
+  },
+  "url": "https://coveomusic.com/chapter-i",
+  "findings": [
+    {
+      "severity": "FAIL",
+      "rule": "tiny-text",
+      "message": "Text at 9.6px",
+      "sample": [
+        "<p> \"Previewing\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "img-alt",
+      "message": "15 images without an alt attribute",
+      "sample": [
+        null,
+        "/assets/releases/chapter-i/chapter-i-140.jpg",
+        "/assets/releases/chapter-i/chapter-i-feature.jpg"
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "1 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#ffffff on screen = 3.77:1 median, 1.42:1 in the worst tenth (needs 4.5) <button> \"Preview\""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "3 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#747474 on screen = 4.03:1 median, 4.03:1 in the worst tenth (needs 4.5) <p> \"Previewing\"",
+        "#000000 on #333333 = 1.66:1 (needs 4.5, not re-checked on screen) <span> \"Play/Pause Audio\"",
+        "#ffffff on screen = 3.77:1 median, 1.41:1 in the worst tenth (needs 4.5) <button> \"Preview\""
+      ],
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tap-target",
+      "message": "4 controls smaller than 24x24px on a phone",
+      "sample": [
+        "102x16 <a> \"Connell McCarthy\"",
+        "40x16 <button> \"Credits\"",
+        "103x16 <a> \"Licensing Inquires\"",
+        "50x16 <a> \"Press Kit\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "5 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#747474 on screen = 4.32:1 median, 2.70:1 in the worst tenth (needs 4.5) <p> \"Previewing\"",
+        "#ffffff on screen = 1.57:1 median, 1.33:1 in the worst tenth (needs 4.5) <p> \"{track.title}\"",
+        "#747474 on #000000 = 4.49:1 (needs 4.5, not re-checked on screen) <span> \"0:00\"",
+        "#000000 on #333333 = 1.66:1 (needs 4.5, not re-checked on screen) <span> \"Play/Pause Audio\"",
+        "#ffffff on screen = 3.77:1 median, 1.41:1 in the worst tenth (needs 4.5) <button> \"Preview\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "reduced-motion",
+      "message": "8 text elements stay hidden when the visitor asks for reduced motion",
+      "sample": [
+        "Close modal",
+        "Follow COVEO to stay connected",
+        "Close modal",
+        "A project by",
+        "Designed & Developed by"
+      ],
+      "where": [
+        "reducedMotion"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "system-font-only",
+      "message": "Only a default typeface carries the page (Inter, monospace)",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "small-text",
+      "message": "Text at 10.2px",
+      "sample": [
+        "<a> \"Listen on Apple Music\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "fixed-cover",
+      "message": "1 fixed or sticky element(s) that are not a bar cover part of every screen; make it a slim bar or let it scroll away",
+      "sample": [
+        "320x264 (29% of the screen height) <div> \"Credits Close modal A project by Connell McCarthy \""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "glass",
+      "message": "22 blurred glass panels",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "overlays-dismissed",
+      "message": "Closed 2 pop-up or banner(s) before capturing the screens",
+      "sample": [
+        "CLOSE MODAL",
+        "CLOSE MODAL"
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "contrast-unverified",
+      "message": "5 suspected contrast problems could not be re-measured on screen",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "fixed-cover",
+      "message": "2 fixed or sticky element(s) that are not a bar cover part of every screen; make it a slim bar or let it scroll away",
+      "sample": [
+        "320x105 (10% of the screen height) <div> \"COVEO Close modal Follow COVEO to stay connected\"",
+        "320x264 (26% of the screen height) <div> \"Credits Close modal A project by Connell McCarthy \""
+      ],
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "contrast-unverified",
+      "message": "1 suspected contrast problems could not be re-measured on screen",
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "text-at-edge",
+      "message": "11 text elements within 12px of the screen edge",
+      "sample": [
+        "<span> \"Play/Pause Audio\"",
+        "<span> \"Close modal\"",
+        "<h2> \"Credits\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "contrast-unverified",
+      "message": "2 suspected contrast problems could not be re-measured on screen",
+      "where": [
+        "mobile"
+      ]
+    }
+  ]
+}

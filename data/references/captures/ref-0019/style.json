@@ -1,0 +1,120 @@
+{
+  "url": "https://figurefilm.co.uk/",
+  "readAt": "2026-11-10T18:35:32.680Z",
+  "tags": [
+    "gradient-heavy",
+    "restrained-colour",
+    "expressive-type",
+    "layout-shift"
+  ],
+  "palette": {
+    "chromatic": 2,
+    "families": 2,
+    "text": [
+      "#fcf8c9"
+    ],
+    "backgrounds": [
+      "#fcf8c9",
+      "#2c54c7",
+      "#080808"
+    ],
+    "gradients": 7,
+    "shadows": 0,
+    "blur": 0
+  },
+  "type": {
+    "families": [
+      {
+        "family": "pt mono",
+        "share": 80
+      },
+      {
+        "family": "jeanlucweb",
+        "share": 20
+      }
+    ],
+    "cuts": [
+      {
+        "family": "PT Mono",
+        "share": 80
+      },
+      {
+        "family": "JeanLucWeb-Bold",
+        "share": 20
+      }
+    ],
+    "sizes": {
+      "desktop": [
+        216,
+        60,
+        40,
+        24,
+        12,
+        10,
+        9
+      ],
+      "mobile": [
+        60,
+        59,
+        45,
+        40,
+        24,
+        20,
+        10,
+        9
+      ]
+    },
+    "display": 216,
+    "body": 12,
+    "ratio": 18
+  },
+  "shape": {
+    "radii": [
+      "50%",
+      "64px"
+    ]
+  },
+  "spacing": {
+    "distinct": 5,
+    "offScale": 2
+  },
+  "motion": {
+    "libraries": [],
+    "stickyPanels": 0,
+    "durationsMs": {
+      "min": 200,
+      "max": 800
+    },
+    "easings": [
+      "ease-out",
+      "linear",
+      "ease-in-out",
+      "cubic-bezier(0.25, 0.1, 0.25, 1)"
+    ],
+    "reducedMotionRespected": true,
+    "smoothness": {
+      "fps": 50.6,
+      "longFrames": 1,
+      "baselineLongFrames": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    }
+  },
+  "imagery": {
+    "photos": 0,
+    "illustrations": 1,
+    "videos": 1
+  },
+  "layout": {
+    "pageHeight": 2542,
+    "screens": 3
+  },
+  "doNotCopy": [
+    "tiny-text: Text at 9px",
+    "no-h1: No visible h1: the page has no title",
+    "contrast: 3 text elements below WCAG AA (measured on screen pixels)",
+    "hidden-content: 16 text elements were never visible during a full scroll (a reveal that never fires?)",
+    "layout-shift: Layout shift 1.088 (over 0.25)",
+    "tap-target: 12 controls smaller than 24x24px on a phone",
+    "reduced-motion: 16 text elements stay hidden when the visitor asks for reduced motion"
+  ]
+}

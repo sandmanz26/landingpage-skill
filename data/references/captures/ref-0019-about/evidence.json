@@ -1,0 +1,888 @@
+{
+  "url": "https://figurefilm.co.uk/about/",
+  "time": "2026-11-10T18:38:22.263Z",
+  "sheets": {
+    "desktop": "data/references/captures/ref-0019-about/sheet-desktop.png",
+    "mobile": "data/references/captures/ref-0019-about/sheet-mobile.png",
+    "motion": "data/references/captures/ref-0019-about/motion-sheet.png"
+  },
+  "load": {
+    "status": 200,
+    "retries": 0,
+    "failed": false
+  },
+  "overlaysDismissed": [],
+  "outline": {
+    "title": "FIGUREFILM",
+    "description": "",
+    "headings": [
+      "H2 18% A STUDIO THAT PUTS CREATIVITY FIRST",
+      "H2 23% WHAT WE DO",
+      "H2 34% CONTENT PRODUCTION",
+      "H2 34% POST-PRODUCTION",
+      "H2 34% PHOTOGRAPHY",
+      "H2 34% ON-SET EDITING",
+      "H2 73% OUR PEOPLE",
+      "H3 75% Scott Buxton",
+      "H3 76% James McLean",
+      "H3 76% Jakub Pięta",
+      "H2 88% EVERY FRAME WITH CARE AND QUALITY OVER ALL.",
+      "H2 98% LET'S COLLABORATE"
+    ],
+    "actions": [],
+    "prices": [],
+    "proofMentions": {},
+    "logoImages": 88,
+    "forms": 0,
+    "imagery": {
+      "photos": 32,
+      "illustrations": 1,
+      "videos": 4,
+      "rasterChecked": []
+    },
+    "pageHeight": 7682
+  },
+  "motion": {
+    "libraries": {
+      "gsap": true,
+      "scrollTrigger": true,
+      "splitText": false,
+      "lenis": false,
+      "locomotive": false,
+      "swiper": true,
+      "lottie": true,
+      "framerMotion": false,
+      "viewTransitions": false
+    },
+    "stickyPanels": [
+      {
+        "tag": "div",
+        "edge": "top",
+        "zIndex": "6"
+      },
+      {
+        "tag": "div",
+        "edge": "top",
+        "zIndex": "5"
+      },
+      {
+        "tag": "div",
+        "edge": "top",
+        "zIndex": "4"
+      },
+      {
+        "tag": "div",
+        "edge": "top",
+        "zIndex": "3"
+      }
+    ],
+    "maxRunning": 41,
+    "durationsMs": {
+      "min": 800,
+      "max": 800
+    },
+    "easings": [
+      "linear"
+    ],
+    "properties": [
+      "height"
+    ],
+    "movingWithoutInput": 444,
+    "movingWithoutInputFurtherDown": [
+      {
+        "y": 900,
+        "moving": 4
+      }
+    ],
+    "scriptDrivenOnScroll": 4,
+    "infiniteLoops": 0,
+    "infiniteLoopsWithText": 0,
+    "pauseControl": false,
+    "steps": [
+      {
+        "y": 450,
+        "running": 41,
+        "scriptDriven": 4,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 900,
+        "running": 41,
+        "scriptDriven": 4,
+        "idleMoving": 4,
+        "sample": [
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1350,
+        "running": 41,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1800,
+        "running": 41,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 2250,
+        "running": 41,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 2700,
+        "running": 41,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 3150,
+        "running": 41,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 3600,
+        "running": 41,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 4050,
+        "running": 41,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 4500,
+        "running": 41,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "div.Lines__Line-sc-ezao4e-2",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "height"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      }
+    ]
+  },
+  "smoothness": {
+    "page": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 6087,
+      "frames": 319,
+      "fps": 52.4,
+      "medianMs": 16.7,
+      "p95Ms": 33.4,
+      "maxMs": 50,
+      "longFrames": 0,
+      "droppedShare": 3,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "baseline": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 1734,
+      "frames": 104,
+      "fps": 60,
+      "medianMs": 16.7,
+      "p95Ms": 16.7,
+      "maxMs": 17,
+      "longFrames": 0,
+      "droppedShare": 0,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "longFramesOverBaseline": 0,
+    "p95OverBaseline": 16.7
+  },
+  "reducedMotion": {
+    "movingWithoutInput": 4,
+    "movingOnScroll": 4,
+    "idleNavigation": null,
+    "loadFailed": false
+  },
+  "idleRunLoadFailed": false,
+  "idleNavigation": null
+}

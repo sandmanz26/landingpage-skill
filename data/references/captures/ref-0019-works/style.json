@@ -1,0 +1,116 @@
+{
+  "url": "https://figurefilm.co.uk/works/",
+  "readAt": "2026-11-10T18:37:37.084Z",
+  "tags": [
+    "restrained-colour",
+    "expressive-type",
+    "endless-motion",
+    "photography",
+    "ignores-reduced-motion"
+  ],
+  "palette": {
+    "chromatic": 2,
+    "families": 2,
+    "text": [
+      "#fcf8c9"
+    ],
+    "backgrounds": [
+      "#fcf8c9",
+      "#2c54c7",
+      "#080808"
+    ],
+    "gradients": 1,
+    "shadows": 0,
+    "blur": 0
+  },
+  "type": {
+    "families": [
+      {
+        "family": "jeanlucweb",
+        "share": 55
+      },
+      {
+        "family": "pt mono",
+        "share": 45
+      }
+    ],
+    "cuts": [
+      {
+        "family": "JeanLucWeb-Bold",
+        "share": 55
+      },
+      {
+        "family": "PT Mono",
+        "share": 45
+      }
+    ],
+    "sizes": {
+      "desktop": [
+        60,
+        40,
+        24,
+        12,
+        10,
+        9
+      ],
+      "mobile": [
+        60,
+        45,
+        40,
+        20,
+        10,
+        9
+      ]
+    },
+    "display": 60,
+    "body": 12,
+    "ratio": 5
+  },
+  "shape": {
+    "radii": [
+      "50%",
+      "64px"
+    ]
+  },
+  "spacing": {
+    "distinct": 10,
+    "offScale": 5
+  },
+  "motion": {
+    "libraries": [],
+    "stickyPanels": 0,
+    "durationsMs": {
+      "min": 200,
+      "max": 800
+    },
+    "easings": [
+      "ease-in-out",
+      "linear",
+      "cubic-bezier(0.4, 0, 0.2, 1)"
+    ],
+    "reducedMotionRespected": false,
+    "smoothness": {
+      "fps": 31.5,
+      "longFrames": 35,
+      "baselineLongFrames": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    }
+  },
+  "imagery": {
+    "photos": 0,
+    "illustrations": 0,
+    "videos": 3
+  },
+  "layout": {
+    "pageHeight": 11122,
+    "screens": 12
+  },
+  "doNotCopy": [
+    "tiny-text: Text at 9px",
+    "no-h1: No visible h1: the page has no title",
+    "contrast: 1 text elements below WCAG AA (measured on screen pixels)",
+    "contrast: 2 text elements below WCAG AA (measured on screen pixels)",
+    "tap-target: 7 controls smaller than 24x24px on a phone",
+    "motion without a reduced-motion path"
+  ]
+}

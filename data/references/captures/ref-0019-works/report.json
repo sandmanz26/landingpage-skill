@@ -1,0 +1,639 @@
+{
+  "target": "https://figurefilm.co.uk/works/",
+  "time": "2026-11-10T18:34:38.613Z",
+  "rules": {
+    "purple-gradient": "warn",
+    "gradient": "info",
+    "glass": "info",
+    "system-font-only": "warn",
+    "too-many-font-sizes": "warn",
+    "too-many-colours": "warn",
+    "shadow-on-everything": "warn",
+    "icon-card-row": "warn",
+    "centred-hero-two-ctas": "warn",
+    "emoji": "warn",
+    "kit-sample": "fail",
+    "table-numbers-align": "warn",
+    "table-checkbox-align": "warn",
+    "table-checkbox-target": "warn",
+    "table-truncation": "warn",
+    "table-bulk-actions": "warn",
+    "table-sticky-columns": "info"
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "pageHeight": 11122,
+      "findings": [
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9px",
+          "sample": [
+            "<p> \"made with love by we3studio.pl\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9px",
+          "sample": [
+            "<a> \"we3studio.pl\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "no-h1",
+          "message": "No visible h1: the page has no title"
+        },
+        {
+          "severity": "WARN",
+          "rule": "headline-lines",
+          "message": "h2 runs to 4 lines",
+          "sample": [
+            "<h2> \"THE PRINTMAKER X JONATHAN LAWES\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "1 gradient backgrounds"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "1 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#fcf8c9 on screen = 3.42:1 median, 2.48:1 in the worst tenth (needs 4.5) <span> \"2.76:1\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "34 console or page errors",
+          "sample": [
+            "Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+            "Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+            "Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+            "Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+            "Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "JeanLucWeb-Bold",
+            "share": 55
+          },
+          {
+            "family": "PT Mono",
+            "share": 45
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "jeanlucweb",
+            "share": 55
+          },
+          {
+            "family": "pt mono",
+            "share": 45
+          }
+        ],
+        "fontSizes": [
+          60,
+          40,
+          24,
+          12,
+          10,
+          9
+        ],
+        "textColours": [
+          "#fcf8c9"
+        ],
+        "backgroundColours": [
+          "#fcf8c9",
+          "#2c54c7",
+          "#080808"
+        ],
+        "chromaticColours": 2,
+        "colourFamilies": 2,
+        "spacing": {
+          "distinct": 10,
+          "offScale": 5,
+          "values": [
+            2,
+            5,
+            8,
+            10,
+            16,
+            20,
+            40,
+            80,
+            85,
+            150
+          ]
+        },
+        "radii": [
+          "50%",
+          "64px"
+        ],
+        "shadows": 0,
+        "gradients": 1,
+        "backdropBlur": 0,
+        "transitions": 61,
+        "animatedElements": 104,
+        "cls": 0.003
+      },
+      "screenshots": [
+        "data/references/captures/ref-0019-works/desktop-fold.png",
+        "data/references/captures/ref-0019-works/desktop-page-01.png",
+        "data/references/captures/ref-0019-works/desktop-page-02.png",
+        "data/references/captures/ref-0019-works/desktop-page-03.png",
+        "data/references/captures/ref-0019-works/desktop-page-04.png",
+        "data/references/captures/ref-0019-works/desktop-page-05.png",
+        "data/references/captures/ref-0019-works/desktop-page-06.png",
+        "data/references/captures/ref-0019-works/desktop-page-07.png",
+        "data/references/captures/ref-0019-works/desktop-page-08.png",
+        "data/references/captures/ref-0019-works/desktop-page-09.png",
+        "data/references/captures/ref-0019-works/desktop-page-10.png",
+        "data/references/captures/ref-0019-works/desktop-page-11.png",
+        "data/references/captures/ref-0019-works/desktop-page-12.png",
+        "data/references/captures/ref-0019-works/desktop-page-13.png"
+      ]
+    },
+    "tablet": {
+      "width": 768,
+      "pageHeight": 11231,
+      "findings": [
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9px",
+          "sample": [
+            "<p> \"made with love by we3studio.pl\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9px",
+          "sample": [
+            "<a> \"we3studio.pl\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10px",
+          "sample": [
+            "<p> \"If you’d like to chat about making a film, give us\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10px",
+          "sample": [
+            "<a> \"hello@figurefilm.co.uk\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10px",
+          "sample": [
+            "<p> \"85 Great Portland Street, First Floor, London, Eng\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "no-h1",
+          "message": "No visible h1: the page has no title"
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "2 gradient backgrounds"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "2 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#fcf8c9 on screen = 2.32:1 median, 1.76:1 in the worst tenth (needs 3) <a> \"about\"",
+            "#fcf8c9 on screen = 2.59:1 median, 1.79:1 in the worst tenth (needs 3) <h2> \"MARRIOTT X AL MAHA\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "34 console or page errors",
+          "sample": [
+            "Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+            "Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+            "Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+            "Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+            "Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "JeanLucWeb-Bold",
+            "share": 56
+          },
+          {
+            "family": "PT Mono",
+            "share": 44
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "jeanlucweb",
+            "share": 56
+          },
+          {
+            "family": "pt mono",
+            "share": 44
+          }
+        ],
+        "fontSizes": [
+          60,
+          45,
+          40,
+          20,
+          10,
+          9
+        ],
+        "textColours": [
+          "#fcf8c9"
+        ],
+        "backgroundColours": [
+          "#fcf8c9",
+          "#2c54c7",
+          "#080808"
+        ],
+        "chromaticColours": 2,
+        "colourFamilies": 2,
+        "spacing": {
+          "distinct": 7,
+          "offScale": 3,
+          "values": [
+            2,
+            5,
+            8,
+            10,
+            20,
+            40,
+            80
+          ]
+        },
+        "radii": [
+          "64px"
+        ],
+        "shadows": 0,
+        "gradients": 2,
+        "backdropBlur": 0,
+        "transitions": 62,
+        "animatedElements": 96,
+        "cls": 0
+      },
+      "screenshots": [
+        "data/references/captures/ref-0019-works/tablet-fold.png",
+        "data/references/captures/ref-0019-works/tablet-page-01.png",
+        "data/references/captures/ref-0019-works/tablet-page-02.png",
+        "data/references/captures/ref-0019-works/tablet-page-03.png",
+        "data/references/captures/ref-0019-works/tablet-page-04.png",
+        "data/references/captures/ref-0019-works/tablet-page-05.png",
+        "data/references/captures/ref-0019-works/tablet-page-06.png",
+        "data/references/captures/ref-0019-works/tablet-page-07.png",
+        "data/references/captures/ref-0019-works/tablet-page-08.png",
+        "data/references/captures/ref-0019-works/tablet-page-09.png",
+        "data/references/captures/ref-0019-works/tablet-page-10.png",
+        "data/references/captures/ref-0019-works/tablet-page-11.png"
+      ]
+    },
+    "mobile": {
+      "width": 390,
+      "pageHeight": 6340,
+      "findings": [
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9px",
+          "sample": [
+            "<p> \"made with love by we3studio.pl\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9px",
+          "sample": [
+            "<a> \"we3studio.pl\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10px",
+          "sample": [
+            "<p> \"If you’d like to chat about making a film, give us\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10px",
+          "sample": [
+            "<a> \"hello@figurefilm.co.uk\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10px",
+          "sample": [
+            "<p> \"85 Great Portland Street, First Floor, London, Eng\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "no-h1",
+          "message": "No visible h1: the page has no title"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tap-target",
+          "message": "7 controls smaller than 24x24px on a phone",
+          "sample": [
+            "10x48 <div> \"\"",
+            "15x23 <a> \"ig\"",
+            "48x23 <a> \"vimeo\"",
+            "16x23 <a> \"IN\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "text-at-edge",
+          "message": "6 text elements within 12px of the screen edge",
+          "sample": [
+            "<h3> \"show me\"",
+            "<h2> \"LET'S COLLABORATE\"",
+            "<p> \"If you’d like to chat about making a film, give us\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "2 gradient backgrounds"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "1 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#fcf8c9 on screen = 2.10:1 median, 1.54:1 in the worst tenth (needs 4.5) <a> \"vimeo\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "34 console or page errors",
+          "sample": [
+            "Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+            "Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+            "Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+            "Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+            "Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "JeanLucWeb-Bold",
+            "share": 56
+          },
+          {
+            "family": "PT Mono",
+            "share": 44
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "jeanlucweb",
+            "share": 56
+          },
+          {
+            "family": "pt mono",
+            "share": 44
+          }
+        ],
+        "fontSizes": [
+          60,
+          45,
+          40,
+          20,
+          10,
+          9
+        ],
+        "textColours": [
+          "#fcf8c9"
+        ],
+        "backgroundColours": [
+          "#fcf8c9",
+          "#2c54c7",
+          "#080808"
+        ],
+        "chromaticColours": 2,
+        "colourFamilies": 2,
+        "spacing": {
+          "distinct": 7,
+          "offScale": 3,
+          "values": [
+            2,
+            5,
+            8,
+            10,
+            20,
+            40,
+            80
+          ]
+        },
+        "radii": [
+          "64px"
+        ],
+        "shadows": 0,
+        "gradients": 2,
+        "backdropBlur": 0,
+        "transitions": 62,
+        "animatedElements": 86,
+        "cls": 0
+      },
+      "screenshots": [
+        "data/references/captures/ref-0019-works/mobile-fold.png",
+        "data/references/captures/ref-0019-works/mobile-page-01.png",
+        "data/references/captures/ref-0019-works/mobile-page-02.png",
+        "data/references/captures/ref-0019-works/mobile-page-03.png",
+        "data/references/captures/ref-0019-works/mobile-page-04.png",
+        "data/references/captures/ref-0019-works/mobile-page-05.png",
+        "data/references/captures/ref-0019-works/mobile-page-06.png",
+        "data/references/captures/ref-0019-works/mobile-page-07.png",
+        "data/references/captures/ref-0019-works/mobile-page-08.png"
+      ]
+    }
+  },
+  "checks": {
+    "reducedMotion": {
+      "findings": [],
+      "screenshot": "data/references/captures/ref-0019-works/reduced-motion-fold.png"
+    },
+    "noJavaScript": {
+      "findings": [],
+      "withJs": 815,
+      "withoutJs": 782
+    }
+  },
+  "summary": {
+    "fail": 5,
+    "warn": 4
+  },
+  "url": "https://figurefilm.co.uk/works/",
+  "findings": [
+    {
+      "severity": "FAIL",
+      "rule": "tiny-text",
+      "message": "Text at 9px",
+      "sample": [
+        "<p> \"made with love by we3studio.pl\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "no-h1",
+      "message": "No visible h1: the page has no title",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "1 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#fcf8c9 on screen = 3.42:1 median, 2.48:1 in the worst tenth (needs 4.5) <span> \"2.76:1\""
+      ],
+      "where": [
+        "desktop",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "2 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#fcf8c9 on screen = 2.32:1 median, 1.76:1 in the worst tenth (needs 3) <a> \"about\"",
+        "#fcf8c9 on screen = 2.59:1 median, 1.79:1 in the worst tenth (needs 3) <h2> \"MARRIOTT X AL MAHA\""
+      ],
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tap-target",
+      "message": "7 controls smaller than 24x24px on a phone",
+      "sample": [
+        "10x48 <div> \"\"",
+        "15x23 <a> \"ig\"",
+        "48x23 <a> \"vimeo\"",
+        "16x23 <a> \"IN\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "headline-lines",
+      "message": "h2 runs to 4 lines",
+      "sample": [
+        "<h2> \"THE PRINTMAKER X JONATHAN LAWES\""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "gradient",
+      "message": "1 gradient backgrounds",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "console-errors",
+      "message": "34 console or page errors",
+      "sample": [
+        "Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+        "Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+        "Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+        "Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+        "Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "small-text",
+      "message": "Text at 10px",
+      "sample": [
+        "<p> \"If you’d like to chat about making a film, give us\""
+      ],
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "gradient",
+      "message": "2 gradient backgrounds",
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "text-at-edge",
+      "message": "6 text elements within 12px of the screen edge",
+      "sample": [
+        "<h3> \"show me\"",
+        "<h2> \"LET'S COLLABORATE\"",
+        "<p> \"If you’d like to chat about making a film, give us\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    }
+  ]
+}

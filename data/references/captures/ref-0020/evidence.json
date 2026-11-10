@@ -1,0 +1,926 @@
+{
+  "url": "https://coveomusic.com/",
+  "time": "2026-11-10T18:40:26.389Z",
+  "sheets": {
+    "desktop": "data/references/captures/ref-0020/sheet-desktop.png",
+    "mobile": "data/references/captures/ref-0020/sheet-mobile.png",
+    "motion": "data/references/captures/ref-0020/motion-sheet.png"
+  },
+  "load": {
+    "status": 200,
+    "retries": 0,
+    "failed": false
+  },
+  "overlaysDismissed": [
+    "CLOSE MODAL"
+  ],
+  "outline": {
+    "title": "COVEO — An Audio/Visual Project",
+    "description": "",
+    "headings": [
+      "H1 12% COVEO",
+      "H3 16% THE ART OF SONIC AND VISUAL Storytelling",
+      "H3 42% DISCOGRAPHY The complete works",
+      "H2 52% ALL RELEASES — ORDERED BY NEWEST FIRST",
+      "H3 91% ACKNOWLEDGEMENTS",
+      "H2 7% CREDITS"
+    ],
+    "actions": [
+      {
+        "label": "CLOSE MODAL",
+        "count": 1,
+        "firstAt": 7,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Play/Pause Audio",
+        "count": 1,
+        "firstAt": 22,
+        "firstScreen": false,
+        "sticky": true
+      },
+      {
+        "label": "PREVIEW",
+        "count": 11,
+        "firstAt": 54,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Credits",
+        "count": 1,
+        "firstAt": 99,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Licensing Inquires",
+        "count": 1,
+        "firstAt": 99,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Press Kit",
+        "count": 1,
+        "firstAt": 99,
+        "firstScreen": false,
+        "sticky": false
+      }
+    ],
+    "prices": [],
+    "proofMentions": {
+      "review": 13
+    },
+    "logoImages": 0,
+    "forms": 0,
+    "imagery": {
+      "photos": 3,
+      "illustrations": 3,
+      "videos": 0
+    },
+    "pageHeight": 4618
+  },
+  "motion": {
+    "libraries": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "splitText": false,
+      "lenis": true,
+      "locomotive": true,
+      "swiper": true,
+      "lottie": false,
+      "framerMotion": false,
+      "viewTransitions": true
+    },
+    "stickyPanels": [],
+    "maxRunning": 32,
+    "durationsMs": {
+      "min": 138,
+      "max": 3000
+    },
+    "easings": [
+      "ease",
+      "linear",
+      "cubic-bezier(0.22, 1, 0.36, 1)",
+      "cubic-bezier(0.34, 1.56, 0.64, 1)",
+      "cubic-bezier(0.64, 0, 0.78, 0)"
+    ],
+    "properties": [
+      "opacity",
+      "filter",
+      "transform",
+      "strokeDashoffset"
+    ],
+    "movingWithoutInput": 37,
+    "movingWithoutInputFurtherDown": [
+      {
+        "y": 900,
+        "moving": 4
+      },
+      {
+        "y": 1800,
+        "moving": 5
+      },
+      {
+        "y": 2700,
+        "moving": 8
+      },
+      {
+        "y": 3600,
+        "moving": 1
+      }
+    ],
+    "scriptDrivenOnScroll": 10,
+    "infiniteLoops": 4,
+    "infiniteLoopsWithText": 0,
+    "pauseControl": true,
+    "steps": [
+      {
+        "y": 448,
+        "running": 16,
+        "scriptDriven": 3,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "img.animate__fadeIn",
+            "hasText": false,
+            "duration": 1000,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "img.animate__fadeIn",
+            "hasText": false,
+            "duration": 1000,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "p.animate__blurIn",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "filter"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "p.animate__blurIn",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "filter"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.record",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "path",
+            "hasText": false,
+            "duration": 1400,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "strokeDashoffset"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 900,
+        "running": 18,
+        "scriptDriven": 5,
+        "idleMoving": 4,
+        "sample": [
+          {
+            "target": "img.animate__fadeIn",
+            "hasText": false,
+            "duration": 1000,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "img.animate__fadeIn",
+            "hasText": false,
+            "duration": 1000,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "canvas.image-sequence",
+            "hasText": false,
+            "duration": 1000,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "p.animate__blurIn",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "filter"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "p.animate__blurIn",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "filter"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "p.animate__blurIn",
+            "hasText": true,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "filter"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      },
+      {
+        "y": 1343,
+        "running": 13,
+        "scriptDriven": 5,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "h3.animate__fadeIn",
+            "hasText": true,
+            "duration": 1000,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.record",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "path",
+            "hasText": false,
+            "duration": 1400,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "strokeDashoffset"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "path",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "strokeDashoffset"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "path",
+            "hasText": false,
+            "duration": 1000,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "strokeDashoffset"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "path",
+            "hasText": false,
+            "duration": 1200,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "strokeDashoffset"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 1800,
+        "running": 18,
+        "scriptDriven": 2,
+        "idleMoving": 5,
+        "sample": [
+          {
+            "target": "h3.animate__fadeIn",
+            "hasText": true,
+            "duration": 1000,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "img.galleryImage",
+            "hasText": false,
+            "duration": 450,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.22, 1, 0.36, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "h2.animate__blurIn",
+            "hasText": true,
+            "duration": 1000,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "filter"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.release__container",
+            "hasText": true,
+            "duration": 1000,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.release__container",
+            "hasText": true,
+            "duration": 1000,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.release__container",
+            "hasText": true,
+            "duration": 1000,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      },
+      {
+        "y": 2247,
+        "running": 20,
+        "scriptDriven": 3,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "img.galleryImage",
+            "hasText": false,
+            "duration": 450,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.22, 1, 0.36, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "li.release",
+            "hasText": true,
+            "duration": 400,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "li.release",
+            "hasText": true,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "li.release",
+            "hasText": true,
+            "duration": 400,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.release__container",
+            "hasText": true,
+            "duration": 1000,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.release__container",
+            "hasText": true,
+            "duration": 1000,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      },
+      {
+        "y": 2700,
+        "running": 32,
+        "scriptDriven": 10,
+        "idleMoving": 8,
+        "sample": [
+          {
+            "target": "img.galleryImage",
+            "hasText": false,
+            "duration": 725,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.64, 0, 0.78, 0)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "li.release",
+            "hasText": true,
+            "duration": 400,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "li.release",
+            "hasText": true,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "li.release",
+            "hasText": true,
+            "duration": 400,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "li.release",
+            "hasText": true,
+            "duration": 138,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "li.release",
+            "hasText": true,
+            "duration": 138,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      },
+      {
+        "y": 3147,
+        "running": 19,
+        "scriptDriven": 3,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "li.release",
+            "hasText": true,
+            "duration": 400,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "li.release",
+            "hasText": true,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "li.release",
+            "hasText": true,
+            "duration": 400,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "li.release",
+            "hasText": true,
+            "duration": 400,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "li.release",
+            "hasText": true,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "li.release",
+            "hasText": true,
+            "duration": 400,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      },
+      {
+        "y": 3600,
+        "running": 19,
+        "scriptDriven": 2,
+        "idleMoving": 1,
+        "sample": [
+          {
+            "target": "li.release",
+            "hasText": true,
+            "duration": 400,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "li.release",
+            "hasText": true,
+            "duration": 200,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "li.release",
+            "hasText": true,
+            "duration": 400,
+            "iterations": 1,
+            "easing": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.image",
+            "hasText": false,
+            "duration": 1000,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "opacity"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "h3.uppercase",
+            "hasText": true,
+            "duration": 1000,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "filter"
+            ],
+            "type": "CSSTransition"
+          },
+          {
+            "target": "div.signature",
+            "hasText": false,
+            "duration": 1000,
+            "iterations": 1,
+            "easing": "ease",
+            "props": [
+              "filter"
+            ],
+            "type": "CSSTransition"
+          }
+        ]
+      },
+      {
+        "y": 3718,
+        "running": 12,
+        "scriptDriven": 0,
+        "idleMoving": null,
+        "sample": [
+          {
+            "target": "div.record",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "path",
+            "hasText": false,
+            "duration": 1400,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "strokeDashoffset"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "path",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "strokeDashoffset"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "path",
+            "hasText": false,
+            "duration": 1000,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "strokeDashoffset"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "path",
+            "hasText": false,
+            "duration": 1200,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "strokeDashoffset"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "path",
+            "hasText": false,
+            "duration": 1000,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "strokeDashoffset"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      },
+      {
+        "y": 3718,
+        "running": 12,
+        "scriptDriven": 0,
+        "idleMoving": 0,
+        "sample": [
+          {
+            "target": "div.record",
+            "hasText": false,
+            "duration": 3000,
+            "iterations": "infinite",
+            "easing": "linear",
+            "props": [
+              "transform"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "path",
+            "hasText": false,
+            "duration": 1400,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "strokeDashoffset"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "path",
+            "hasText": false,
+            "duration": 800,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "strokeDashoffset"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "path",
+            "hasText": false,
+            "duration": 1000,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "strokeDashoffset"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "path",
+            "hasText": false,
+            "duration": 1200,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "strokeDashoffset"
+            ],
+            "type": "CSSAnimation"
+          },
+          {
+            "target": "path",
+            "hasText": false,
+            "duration": 1000,
+            "iterations": 1,
+            "easing": "linear",
+            "props": [
+              "strokeDashoffset"
+            ],
+            "type": "CSSAnimation"
+          }
+        ]
+      }
+    ]
+  },
+  "smoothness": {
+    "page": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 5356,
+      "frames": 321,
+      "fps": 59.9,
+      "medianMs": 16.7,
+      "p95Ms": 16.7,
+      "maxMs": 17,
+      "longFrames": 0,
+      "droppedShare": 0,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "baseline": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 1727,
+      "frames": 103,
+      "fps": 59.6,
+      "medianMs": 16.7,
+      "p95Ms": 16.7,
+      "maxMs": 17,
+      "longFrames": 0,
+      "droppedShare": 0,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "longFramesOverBaseline": 0,
+    "p95OverBaseline": 0
+  },
+  "reducedMotion": {
+    "movingWithoutInput": 1,
+    "movingOnScroll": 18,
+    "idleNavigation": null,
+    "loadFailed": false
+  },
+  "idleRunLoadFailed": false,
+  "idleNavigation": null
+}

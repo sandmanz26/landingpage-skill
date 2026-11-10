@@ -1,0 +1,184 @@
+{
+  "url": "https://www.squadeasy.com/en/",
+  "readAt": "2026-11-10T18:34:38.560Z",
+  "tags": [
+    "many-colours",
+    "expressive-type",
+    "many-type-sizes",
+    "endless-motion",
+    "photography",
+    "ignores-reduced-motion"
+  ],
+  "palette": {
+    "chromatic": 9,
+    "families": 7,
+    "text": [
+      "#000000",
+      "#ffffff",
+      "#ea5da3",
+      "#139271",
+      "#6fb853",
+      "#666666"
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#000000",
+      "#e1c19e",
+      "#e4ff60",
+      "#7fb6e6",
+      "#adabff",
+      "#f6f6f6",
+      "#c2ebb8"
+    ],
+    "gradients": 0,
+    "shadows": 2,
+    "blur": 1
+  },
+  "type": {
+    "families": [
+      {
+        "family": "body",
+        "share": 42
+      },
+      {
+        "family": "black",
+        "share": 20
+      },
+      {
+        "family": "regular",
+        "share": 18
+      },
+      {
+        "family": "arial",
+        "share": 9
+      },
+      {
+        "family": "medium",
+        "share": 9
+      },
+      {
+        "family": "epilogue",
+        "share": 2
+      },
+      {
+        "family": "sharpie",
+        "share": 0
+      }
+    ],
+    "cuts": [
+      {
+        "family": "Body",
+        "share": 42
+      },
+      {
+        "family": "Black",
+        "share": 20
+      },
+      {
+        "family": "Regular",
+        "share": 18
+      },
+      {
+        "family": "arial",
+        "share": 9
+      },
+      {
+        "family": "Medium",
+        "share": 9
+      },
+      {
+        "family": "Epilogue",
+        "share": 2
+      },
+      {
+        "family": "Sharpie",
+        "share": 0
+      }
+    ],
+    "sizes": {
+      "desktop": [
+        220,
+        110,
+        80,
+        62,
+        56,
+        50,
+        22,
+        18,
+        17,
+        16,
+        14,
+        12
+      ],
+      "mobile": [
+        150,
+        44,
+        40,
+        38,
+        34,
+        22,
+        18,
+        17,
+        16,
+        14,
+        12
+      ]
+    },
+    "display": 220,
+    "body": 16,
+    "ratio": 13.8
+  },
+  "shape": {
+    "radii": [
+      "14px",
+      "10px",
+      "100px",
+      "500px",
+      "36px"
+    ]
+  },
+  "spacing": {
+    "distinct": 30,
+    "offScale": 14
+  },
+  "motion": {
+    "libraries": [],
+    "stickyPanels": 0,
+    "durationsMs": {
+      "min": 300,
+      "max": 48000
+    },
+    "easings": [
+      "ease",
+      "linear"
+    ],
+    "reducedMotionRespected": false,
+    "smoothness": {
+      "fps": 59.8,
+      "longFrames": 0,
+      "baselineLongFrames": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    }
+  },
+  "imagery": {
+    "photos": 18,
+    "illustrations": 0,
+    "videos": 0,
+    "rasterChecked": []
+  },
+  "layout": {
+    "pageHeight": 11714,
+    "screens": 13
+  },
+  "doNotCopy": [
+    "font-not-loaded: \"Epilogue\" is named in the CSS but never loaded; the browser shows a fallback font (2% of the text)",
+    "headline-lines: h1 runs to 5 lines",
+    "contrast: 3 text elements below WCAG AA (measured on screen pixels)",
+    "contrast: 2 text elements below WCAG AA (measured on screen pixels)",
+    "headline-lines: h1 runs to 7 lines",
+    "tap-target: 3 controls smaller than 24x24px on a phone",
+    "layout-shift: Layout shift 0.305 (over 0.25)",
+    "reduced-motion: 2 text elements stay hidden when the visitor asks for reduced motion",
+    "motion without a reduced-motion path"
+  ]
+}

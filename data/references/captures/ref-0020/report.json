@@ -1,0 +1,1216 @@
+{
+  "target": "https://coveomusic.com/",
+  "time": "2026-11-10T18:37:37.148Z",
+  "rules": {
+    "purple-gradient": "warn",
+    "gradient": "info",
+    "glass": "info",
+    "system-font-only": "warn",
+    "too-many-font-sizes": "warn",
+    "too-many-colours": "warn",
+    "shadow-on-everything": "warn",
+    "icon-card-row": "warn",
+    "centred-hero-two-ctas": "warn",
+    "emoji": "warn",
+    "kit-sample": "fail",
+    "table-numbers-align": "warn",
+    "table-checkbox-align": "warn",
+    "table-checkbox-target": "warn",
+    "table-truncation": "warn",
+    "table-bulk-actions": "warn",
+    "table-sticky-columns": "info"
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "pageHeight": 4618,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "system-font-only",
+          "message": "Only a default typeface carries the page (Inter, monospace)"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.6px",
+          "sample": [
+            "<p> \"Previewing\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.8px",
+          "sample": [
+            "<span> \"Click to preview song\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.6px",
+          "sample": [
+            "<p> \"Music for the day-dreamers, the over-thinkers, the\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 9.6px (16px or more reads better)",
+          "sample": [
+            "<p> \"Music for the day-dreamers, the over-thinkers, the\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.6px",
+          "sample": [
+            "<span> \"day-dreamers\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.6px",
+          "sample": [
+            "<span> \"over-thinkers\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.6px",
+          "sample": [
+            "<span> \"storytellers\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.6px",
+          "sample": [
+            "<span> \"wanderers\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.6px",
+          "sample": [
+            "<p> \"An Audio/Visual Project\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"Since childhood, I've been captivated by music. I \""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"My interest in technology quickly grew alongside m\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"As my skills developed, I created COVEO, a project\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"Behind each song is a meticulous artwork process. \""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.2px",
+          "sample": [
+            "<p> \"12 minutes 22 seconds\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8.4px",
+          "sample": [
+            "<p> \"Music for the day-dreamers, the over-thinkers, the\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 8.4px (16px or more reads better)",
+          "sample": [
+            "<p> \"Music for the day-dreamers, the over-thinkers, the\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8.4px",
+          "sample": [
+            "<span> \"day-dreamers\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8.4px",
+          "sample": [
+            "<span> \"over-thinkers\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8.4px",
+          "sample": [
+            "<span> \"storytellers\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8.4px",
+          "sample": [
+            "<span> \"wanderers\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.6px",
+          "sample": [
+            "<span> \"production.25-276.f0c9c2b\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "fixed-cover",
+          "message": "1 fixed or sticky element(s) that are not a bar cover part of every screen; make it a slim bar or let it scroll away",
+          "sample": [
+            "320x264 (29% of the screen height) <div> \"Credits Close modal A project by Connell McCarthy \""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "img-alt",
+          "message": "38 images without an alt attribute",
+          "sample": [
+            null,
+            "/assets/img/avatars/avatar-coveo.jpg",
+            "/assets/releases/mydreamsofyou/mydreamsofyou-140.jpg"
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "1 gradient backgrounds"
+        },
+        {
+          "severity": "INFO",
+          "rule": "glass",
+          "message": "13 blurred glass panels"
+        },
+        {
+          "severity": "INFO",
+          "rule": "overlays-dismissed",
+          "message": "Closed 1 pop-up or banner(s) before capturing the screens",
+          "sample": [
+            "CLOSE MODAL"
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "contrast-unverified",
+          "message": "5 suspected contrast problems could not be re-measured on screen"
+        },
+        {
+          "severity": "INFO",
+          "rule": "carousel-slides",
+          "message": "1 text elements sit in carousel slides the visitor turns to; check the controls work by keyboard and touch"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Inter",
+            "share": 92
+          },
+          {
+            "family": "monospace",
+            "share": 5
+          },
+          {
+            "family": "Eiko",
+            "share": 3
+          },
+          {
+            "family": "Arial",
+            "share": 1
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "inter",
+            "share": 92
+          },
+          {
+            "family": "monospace",
+            "share": 5
+          },
+          {
+            "family": "eiko",
+            "share": 3
+          },
+          {
+            "family": "arial",
+            "share": 1
+          }
+        ],
+        "fontSizes": [
+          60,
+          14,
+          13,
+          12,
+          11,
+          10,
+          8
+        ],
+        "textColours": [
+          "#524d46",
+          "#1d1812",
+          "#000000"
+        ],
+        "backgroundColours": [
+          "#000000",
+          "#eeeeee",
+          "#1d1812",
+          "#d5d5d5",
+          "#ffffff"
+        ],
+        "chromaticColours": 1,
+        "colourFamilies": 1,
+        "spacing": {
+          "distinct": 19,
+          "offScale": 11,
+          "values": [
+            2,
+            2.5,
+            4,
+            5,
+            6,
+            7,
+            8.5,
+            9.5,
+            10,
+            12,
+            18,
+            18.5,
+            20.5,
+            24,
+            36,
+            48,
+            144,
+            216,
+            288
+          ]
+        },
+        "radii": [
+          "8px",
+          "100%",
+          "50%",
+          "24%",
+          "12px",
+          "40px",
+          "4px",
+          "25%"
+        ],
+        "shadows": 2,
+        "gradients": 1,
+        "backdropBlur": 13,
+        "transitions": 102,
+        "animatedElements": 67,
+        "cls": 0
+      },
+      "screenshots": [
+        "data/references/captures/ref-0020/desktop-fold.png",
+        "data/references/captures/ref-0020/desktop-overlay.png",
+        "data/references/captures/ref-0020/desktop-page-01.png",
+        "data/references/captures/ref-0020/desktop-page-02.png",
+        "data/references/captures/ref-0020/desktop-page-03.png",
+        "data/references/captures/ref-0020/desktop-page-04.png",
+        "data/references/captures/ref-0020/desktop-page-05.png",
+        "data/references/captures/ref-0020/desktop-page-06.png"
+      ]
+    },
+    "tablet": {
+      "width": 768,
+      "pageHeight": 7357,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "system-font-only",
+          "message": "Only a default typeface carries the page (Inter, monospace)"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.6px",
+          "sample": [
+            "<p> \"Previewing\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.8px",
+          "sample": [
+            "<span> \"Tap artwork to preview a song\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.6px",
+          "sample": [
+            "<p> \"An Audio/Visual Project\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"Since childhood, I've been captivated by music. I \""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"My interest in technology quickly grew alongside m\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"As my skills developed, I created COVEO, a project\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"Behind each song is a meticulous artwork process. \""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8.4px",
+          "sample": [
+            "<p> \"Music for the day-dreamers, the over-thinkers, the\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 8.4px (16px or more reads better)",
+          "sample": [
+            "<p> \"Music for the day-dreamers, the over-thinkers, the\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8.4px",
+          "sample": [
+            "<span> \"day-dreamers\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8.4px",
+          "sample": [
+            "<span> \"over-thinkers\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8.4px",
+          "sample": [
+            "<span> \"storytellers\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8.4px",
+          "sample": [
+            "<span> \"wanderers\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.6px",
+          "sample": [
+            "<span> \"production.25-276.f0c9c2b\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "fixed-cover",
+          "message": "1 fixed or sticky element(s) that are not a bar cover part of every screen; make it a slim bar or let it scroll away",
+          "sample": [
+            "320x264 (26% of the screen height) <div> \"Credits Close modal A project by Connell McCarthy \""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "img-alt",
+          "message": "38 images without an alt attribute",
+          "sample": [
+            null,
+            "/assets/img/avatars/avatar-coveo.jpg",
+            "/assets/releases/mydreamsofyou/mydreamsofyou-140.jpg"
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "glass",
+          "message": "13 blurred glass panels"
+        },
+        {
+          "severity": "INFO",
+          "rule": "overlays-dismissed",
+          "message": "Closed 1 pop-up or banner(s) before capturing the screens",
+          "sample": [
+            "CLOSE MODAL"
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "2 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#747474 on screen = 4.03:1 median, 4.03:1 in the worst tenth (needs 4.5) <p> \"Previewing\"",
+            "#000000 on #333333 = 1.66:1 (needs 4.5, not re-checked on screen) <span> \"Play/Pause Audio\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "contrast-unverified",
+          "message": "1 suspected contrast problems could not be re-measured on screen"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Inter",
+            "share": 93
+          },
+          {
+            "family": "monospace",
+            "share": 5
+          },
+          {
+            "family": "Eiko",
+            "share": 1
+          },
+          {
+            "family": "Arial",
+            "share": 1
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "inter",
+            "share": 93
+          },
+          {
+            "family": "monospace",
+            "share": 5
+          },
+          {
+            "family": "eiko",
+            "share": 1
+          },
+          {
+            "family": "arial",
+            "share": 1
+          }
+        ],
+        "fontSizes": [
+          60,
+          14,
+          13,
+          12,
+          11,
+          10,
+          8
+        ],
+        "textColours": [
+          "#747474",
+          "#ffffff",
+          "#000000",
+          "#524d46",
+          "#1d1812"
+        ],
+        "backgroundColours": [
+          "#000000",
+          "#eeeeee",
+          "#ffffff",
+          "#d5d5d5"
+        ],
+        "chromaticColours": 1,
+        "colourFamilies": 1,
+        "spacing": {
+          "distinct": 20,
+          "offScale": 12,
+          "values": [
+            2,
+            2.5,
+            4,
+            5,
+            6,
+            7,
+            8.5,
+            9.5,
+            10,
+            11,
+            12,
+            18,
+            18.5,
+            20.5,
+            24,
+            36,
+            48,
+            96,
+            144,
+            216
+          ]
+        },
+        "radii": [
+          "100%",
+          "50%",
+          "24%",
+          "12px",
+          "8px",
+          "40px",
+          "4px",
+          "25%"
+        ],
+        "shadows": 1,
+        "gradients": 0,
+        "backdropBlur": 13,
+        "transitions": 113,
+        "animatedElements": 66,
+        "cls": 0
+      },
+      "screenshots": [
+        "data/references/captures/ref-0020/tablet-fold.png",
+        "data/references/captures/ref-0020/tablet-overlay.png",
+        "data/references/captures/ref-0020/tablet-page-01.png",
+        "data/references/captures/ref-0020/tablet-page-02.png",
+        "data/references/captures/ref-0020/tablet-page-03.png",
+        "data/references/captures/ref-0020/tablet-page-04.png",
+        "data/references/captures/ref-0020/tablet-page-05.png",
+        "data/references/captures/ref-0020/tablet-page-06.png",
+        "data/references/captures/ref-0020/tablet-page-07.png",
+        "data/references/captures/ref-0020/tablet-page-08.png"
+      ]
+    },
+    "mobile": {
+      "width": 390,
+      "pageHeight": 6108,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "system-font-only",
+          "message": "Only a default typeface carries the page (Inter, monospace)"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.6px",
+          "sample": [
+            "<p> \"Previewing\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "small-text",
+          "message": "Text at 10.8px",
+          "sample": [
+            "<span> \"Tap artwork to preview a song\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.6px",
+          "sample": [
+            "<p> \"An Audio/Visual Project\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"Since childhood, I've been captivated by music. I \""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"My interest in technology quickly grew alongside m\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"As my skills developed, I created COVEO, a project\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"Behind each song is a meticulous artwork process. \""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8.4px",
+          "sample": [
+            "<p> \"Music for the day-dreamers, the over-thinkers, the\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 8.4px (16px or more reads better)",
+          "sample": [
+            "<p> \"Music for the day-dreamers, the over-thinkers, the\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8.4px",
+          "sample": [
+            "<span> \"day-dreamers\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8.4px",
+          "sample": [
+            "<span> \"over-thinkers\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8.4px",
+          "sample": [
+            "<span> \"storytellers\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 8.4px",
+          "sample": [
+            "<span> \"wanderers\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tiny-text",
+          "message": "Text at 9.6px",
+          "sample": [
+            "<span> \"production.25-276.f0c9c2b\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "fixed-cover",
+          "message": "1 fixed or sticky element(s) that are not a bar cover part of every screen; make it a slim bar or let it scroll away",
+          "sample": [
+            "320x264 (31% of the screen height) <div> \"Credits Close modal A project by Connell McCarthy \""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tap-target",
+          "message": "4 controls smaller than 24x24px on a phone",
+          "sample": [
+            "102x16 <a> \"Connell McCarthy\"",
+            "40x16 <button> \"Credits\"",
+            "103x16 <a> \"Licensing Inquires\"",
+            "50x16 <a> \"Press Kit\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "text-at-edge",
+          "message": "2 text elements within 12px of the screen edge",
+          "sample": [
+            "<span> \"Play/Pause Audio\"",
+            "<span> \"Close modal\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "img-alt",
+          "message": "38 images without an alt attribute",
+          "sample": [
+            null,
+            "/assets/img/avatars/avatar-coveo.jpg",
+            "/assets/releases/mydreamsofyou/mydreamsofyou-140.jpg"
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "glass",
+          "message": "13 blurred glass panels"
+        },
+        {
+          "severity": "INFO",
+          "rule": "overlays-dismissed",
+          "message": "Closed 1 pop-up or banner(s) before capturing the screens",
+          "sample": [
+            "CLOSE MODAL"
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "2 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#747474 on screen = 4.03:1 median, 4.03:1 in the worst tenth (needs 4.5) <p> \"Previewing\"",
+            "#000000 on #333333 = 1.66:1 (needs 4.5, not re-checked on screen) <span> \"Play/Pause Audio\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "contrast-unverified",
+          "message": "1 suspected contrast problems could not be re-measured on screen"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Inter",
+            "share": 93
+          },
+          {
+            "family": "monospace",
+            "share": 5
+          },
+          {
+            "family": "Eiko",
+            "share": 1
+          },
+          {
+            "family": "Arial",
+            "share": 1
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "inter",
+            "share": 93
+          },
+          {
+            "family": "monospace",
+            "share": 5
+          },
+          {
+            "family": "eiko",
+            "share": 1
+          },
+          {
+            "family": "arial",
+            "share": 1
+          }
+        ],
+        "fontSizes": [
+          60,
+          14,
+          13,
+          12,
+          11,
+          10,
+          8
+        ],
+        "textColours": [
+          "#747474",
+          "#ffffff",
+          "#000000",
+          "#524d46",
+          "#1d1812"
+        ],
+        "backgroundColours": [
+          "#000000",
+          "#eeeeee",
+          "#ffffff",
+          "#d5d5d5"
+        ],
+        "chromaticColours": 1,
+        "colourFamilies": 1,
+        "spacing": {
+          "distinct": 20,
+          "offScale": 12,
+          "values": [
+            2,
+            2.5,
+            4,
+            5,
+            6,
+            7,
+            8.5,
+            9.5,
+            10,
+            11,
+            12,
+            18,
+            18.5,
+            20.5,
+            24,
+            36,
+            48,
+            96,
+            144,
+            216
+          ]
+        },
+        "radii": [
+          "100%",
+          "50%",
+          "24%",
+          "12px",
+          "8px",
+          "40px",
+          "4px",
+          "25%"
+        ],
+        "shadows": 1,
+        "gradients": 0,
+        "backdropBlur": 13,
+        "transitions": 110,
+        "animatedElements": 69,
+        "cls": 0
+      },
+      "screenshots": [
+        "data/references/captures/ref-0020/mobile-fold.png",
+        "data/references/captures/ref-0020/mobile-overlay.png",
+        "data/references/captures/ref-0020/mobile-page-01.png",
+        "data/references/captures/ref-0020/mobile-page-02.png",
+        "data/references/captures/ref-0020/mobile-page-03.png",
+        "data/references/captures/ref-0020/mobile-page-04.png",
+        "data/references/captures/ref-0020/mobile-page-05.png",
+        "data/references/captures/ref-0020/mobile-page-06.png",
+        "data/references/captures/ref-0020/mobile-page-07.png",
+        "data/references/captures/ref-0020/mobile-page-08.png"
+      ]
+    }
+  },
+  "checks": {
+    "reducedMotion": {
+      "findings": [
+        {
+          "severity": "FAIL",
+          "rule": "reduced-motion",
+          "message": "7 text elements stay hidden when the visitor asks for reduced motion",
+          "sample": [
+            "Close modal",
+            "A project by",
+            "Connell McCarthy",
+            "Designed & Developed by",
+            "Bo & Co Studio"
+          ]
+        }
+      ],
+      "screenshot": "data/references/captures/ref-0020/reduced-motion-fold.png"
+    },
+    "noJavaScript": {
+      "findings": [],
+      "withJs": 2998,
+      "withoutJs": 2852
+    }
+  },
+  "summary": {
+    "fail": 6,
+    "warn": 8
+  },
+  "url": "https://coveomusic.com/",
+  "findings": [
+    {
+      "severity": "FAIL",
+      "rule": "tiny-text",
+      "message": "Text at 9.6px",
+      "sample": [
+        "<p> \"Previewing\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tiny-text",
+      "message": "Text at 8.4px",
+      "sample": [
+        "<p> \"Music for the day-dreamers, the over-thinkers, the\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "img-alt",
+      "message": "38 images without an alt attribute",
+      "sample": [
+        null,
+        "/assets/img/avatars/avatar-coveo.jpg",
+        "/assets/releases/mydreamsofyou/mydreamsofyou-140.jpg"
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "2 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#747474 on screen = 4.03:1 median, 4.03:1 in the worst tenth (needs 4.5) <p> \"Previewing\"",
+        "#000000 on #333333 = 1.66:1 (needs 4.5, not re-checked on screen) <span> \"Play/Pause Audio\""
+      ],
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tap-target",
+      "message": "4 controls smaller than 24x24px on a phone",
+      "sample": [
+        "102x16 <a> \"Connell McCarthy\"",
+        "40x16 <button> \"Credits\"",
+        "103x16 <a> \"Licensing Inquires\"",
+        "50x16 <a> \"Press Kit\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "reduced-motion",
+      "message": "7 text elements stay hidden when the visitor asks for reduced motion",
+      "sample": [
+        "Close modal",
+        "A project by",
+        "Connell McCarthy",
+        "Designed & Developed by",
+        "Bo & Co Studio"
+      ],
+      "where": [
+        "reducedMotion"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "system-font-only",
+      "message": "Only a default typeface carries the page (Inter, monospace)",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "small-text",
+      "message": "Text at 10.8px",
+      "sample": [
+        "<span> \"Click to preview song\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "body-size",
+      "message": "Running text at 9.6px (16px or more reads better)",
+      "sample": [
+        "<p> \"Music for the day-dreamers, the over-thinkers, the\""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "body-size",
+      "message": "Running text at 12px (16px or more reads better)",
+      "sample": [
+        "<p> \"Since childhood, I've been captivated by music. I \""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "small-text",
+      "message": "Text at 10.2px",
+      "sample": [
+        "<p> \"12 minutes 22 seconds\""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "body-size",
+      "message": "Running text at 8.4px (16px or more reads better)",
+      "sample": [
+        "<p> \"Music for the day-dreamers, the over-thinkers, the\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "fixed-cover",
+      "message": "1 fixed or sticky element(s) that are not a bar cover part of every screen; make it a slim bar or let it scroll away",
+      "sample": [
+        "320x264 (29% of the screen height) <div> \"Credits Close modal A project by Connell McCarthy \""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "gradient",
+      "message": "1 gradient backgrounds",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "glass",
+      "message": "13 blurred glass panels",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "overlays-dismissed",
+      "message": "Closed 1 pop-up or banner(s) before capturing the screens",
+      "sample": [
+        "CLOSE MODAL"
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "contrast-unverified",
+      "message": "5 suspected contrast problems could not be re-measured on screen",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "carousel-slides",
+      "message": "1 text elements sit in carousel slides the visitor turns to; check the controls work by keyboard and touch",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "contrast-unverified",
+      "message": "1 suspected contrast problems could not be re-measured on screen",
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "text-at-edge",
+      "message": "2 text elements within 12px of the screen edge",
+      "sample": [
+        "<span> \"Play/Pause Audio\"",
+        "<span> \"Close modal\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    }
+  ]
+}
