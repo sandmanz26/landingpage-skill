@@ -1,0 +1,21 @@
+{
+ "batch": "admin-a04", "pattern": "login / sign-in page", "received": "2026-11-10", "from": "owner (chat, 3 web screenshots + 1 idea without a screenshot; no mobile screenshots were attached)",
+ "entries": [
+  {"id": "lg-001", "file": "lg-001.webp", "owner_score": {"visual": 7, "ship": 7},
+   "owner_notes": ["unique concept: plays with an uncommon shape", "the vector illustration could be replaced by an image"],
+   "style_levers": {"layout": "form left on white, a large organic blob shape on the right holding a full illustration", "colour": "violet to orange night scene; violet labels and pill button", "inputs": "underline-only fields", "type": "small 'Welcome to' over a bold product name"},
+   "coordinator_notes": ["underline-only inputs show weaker affordance than boxed fields (NN/g); keep a clear focus state", "no 'Forgot password' link visible", "all-caps LOGIN button", "the blob shape is the transferable idea: the brand shape cut into the page"]},
+  {"id": "lg-002", "file": "lg-002.webp", "owner_score": {"visual": 7, "ship": 8},
+   "owner_notes": ["unique and not generic", "needs an image, but it could be replaced with type and colour"],
+   "style_levers": {"layout": "centred narrow form left; a large rounded media card bleeding off the right edge", "media": "photo with a play button ('Course preview') and award laurels as proof", "actions": "three social sign-in buttons, then email; full-width black primary", "type": "small centred title + one-line subtitle"},
+   "coordinator_notes": ["the media card turns the login wait into a product preview and proof", "social first suits consumer products; B2B often puts SSO/email first"]},
+  {"id": "lg-003", "file": "lg-003.webp", "owner_score": null,
+   "owner_notes": ["Pinterest-like grid is very good", "even better if it moves slowly", "hover could change the content"],
+   "style_levers": {"layout": "form left; three-column masonry of interior photos on the right, cropped at the edges", "colour": "white with one mustard accent for the primary and links", "inputs": "boxed fields, required asterisks, show-password eye", "actions": "Continue with Google, full-width mustard Log In"},
+   "coordinator_notes": ["slow drifting columns: pause on hover, stop under reduced motion, keep it behind the form in attention", "photos must be the client's own world (here interiors for a space-rental brand)"]},
+  {"id": "lg-004", "file": null, "owner_score": null, "kind": "idea, no screenshot",
+   "owner_notes": ["a typical login form, but the background has a hover animation combined with colour, or is animated"],
+   "coordinator_notes": ["keep the background quiet: low contrast behind the form, text contrast AA, a reduced-motion version, no cursor effects that slow typing", "fits the motion rule: the movement should carry the brand, e.g. its shape or colour field"]}
+ ],
+ "patterns_across": ["split layout: form one side, brand expression the other (shape, media card, photo grid, animated field)", "the brand side can be an image, an illustration, or type and colour when there is no image (owner)"]
+}
