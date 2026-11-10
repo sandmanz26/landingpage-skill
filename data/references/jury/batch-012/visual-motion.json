@@ -1,0 +1,110 @@
+{
+  "juror": "visual-motion",
+  "kind": "ai",
+  "method": "Evidence packs only, no browser, no code. Read the three home digest.md, desktop-fold.png and sheet-desktop.png at full size. For turn 2 the three motion-sheet.png, ref-0019-works and ref-0019-about sheet-desktop.png and ref-0020-release sheet-desktop.png were combined into one image and read at reduced resolution (about 650px wide), so fine detail there was not verified. The three mobile-fold.png were NOT viewed (tool budget); mobile judgments rest only on the digests' inspector findings. Motion is judged from frame strips and measured numbers, not from watching it live; page transitions were not measured. Tool calls: 12 including the write, one over the brief's 'under 12', because turn 1 alone needed 7 reads.",
+  "refs": {
+    "ref-0018": {
+      "business": "SquadEasy: B2B employee-engagement app (step and mobility challenges, team challenges, charity donations and CO2 tracking, social wall, brand-coloured white label) sold to HR teams; conversion is 'Request a demo'.",
+      "scores": { "clarity": 5, "distinctiveness": 6, "craft": 5 },
+      "reasons": {
+        "clarity": "The H1 ('You've never been so close to bringing your employees closer together') is a wordplay that names neither the product nor the buyer; the category only appears at 18% ('Employees' favourite team-building app') and the mechanics (steps, CO2, challenges) only at 61%. The team member's 'could not name the category' is the direct result. The demo CTA is clear and high-contrast (lime pill).",
+        "distinctiveness": "Cut-out tilted employee portraits orbiting a heavy grotesque headline, pink highlight words, and a rotating set of flat pastel section grounds (sand, sky blue, lilac, lime) give a recognisable, friendly identity. But it is the common 'playful SaaS' kit of 2023-2025 (giant black caps + floating photo cut-outs + stats counters); nothing in it belongs to team challenges specifically.",
+        "craft": "Smooth scroll (59.8 fps, no long frames) and a consistent sticky nav, but measurable faults: H1 runs 5 lines on desktop and 7 on mobile; the pink key words are 1.87:1 contrast; CLS 0.241 desktop / 0.305 mobile; Epilogue declared but never loaded; 6 typefaces and 12 sizes; 9 chromatic colours; the hero is a 100%-height fixed panel; counters read '0 %' in the text layer and 2 stay hidden under reduced motion; cookie banner in French on the English page covers the lower-left of every screen."
+      },
+      "claims": [
+        { "claim": "Excellent scrollcraft: every scroll moves frames and builds a harmony of elements", "verdict": "partly true", "evidence": "Motion strip confirms continuous motion: the hero fades/blurs into a phone mock-up, photos re-arrange per section, counters tick, 9 endless loops run. It is smooth (59.8 fps). But 'excellent' overstates it: the motion is mostly decorative drift and fade (opacity/transform/filter), with no pause control for 9 loops (3 with text), counters that read 0 to reduced-motion users, and CLS 0.24-0.31. Busy rather than orchestrated." },
+        { "claim": "Simple good layout", "verdict": "partly true", "evidence": "Centered headline + side cut-outs is a simple, legible scheme on desktop, but headlines wrap 4-8 lines on mobile and the full-height fixed hero plus cookie card cover part of every screen." },
+        { "claim": "Simple colouring", "verdict": "false", "evidence": "Inventory: 9 chromatic colours (sand, sky, lilac, lime, mint, pink, green, etc.) across text and backgrounds; flagged too-many-colours. It reads cheerful, not simple." },
+        { "claim": "Could not name the category", "verdict": "true, and it is a page fault, not a reader fault", "evidence": "No 'what it is' line above the fold; the category word ('team-building app') sits at 18% of page height." },
+        { "claim": "8 visual / 8.5 ship", "verdict": "too high", "evidence": "With a vague H1, a 1.87:1 key phrase, hidden counters and CLS over 0.25 on mobile, this is a 6 visual and a 6-6.5 ship by our calibration." }
+      ],
+      "motion": [
+        { "what": "Floating tilted employee portraits around the hero, drifting on load", "message it carries": "'it's about your people' (human, social)", "verdict": "earns its place" },
+        { "what": "Hero headline blurs/fades out while a phone mock-up with the app feed rises in", "message it carries": "'here is the actual product' (the first time the app is shown)", "verdict": "earns its place" },
+        { "what": "Stat counters ticking up (users, productivity, customers, CO2, euros)", "message it carries": "proof figures, but they rest at '0' in the text layer and stay hidden under reduced motion", "verdict": "decoration as built (breaks the proof it is meant to carry)" },
+        { "what": "Endless marquee loops of feature labels (A social app / Measure your impact / Move for your health...)", "message it carries": "none beyond listing features; no pause control", "verdict": "decoration" },
+        { "what": "Photo collages shuffling per section on scroll", "message it carries": "none specific", "verdict": "decoration" }
+      ],
+      "problems": [
+        "The H1 is a pun that hides the category and the buyer; say 'team challenge app for companies' above the fold",
+        "Accessibility: pink highlight words at 1.87:1, counters hidden under reduced motion, 9 endless loops without pause, CLS 0.305 on mobile",
+        "System sprawl: 6 typefaces (one never loads), 12 sizes, 9 chromatic colours, French cookie banner on the English page"
+      ],
+      "keep": [
+        "Real employee portraits as tilted cut-outs around the headline: makes a B2B HR product feel human and social at a glance",
+        "Hero-to-phone hand-off on the first scroll: moves the reader from promise to product in one gesture",
+        "One loud action colour (lime pill) reserved for the demo CTA: the conversion target is unmistakable"
+      ],
+      "veto": null
+    },
+    "ref-0019": {
+      "business": "Figure Film: London production company / directors' collective making commercials, music films (Boiler Room) and content; the site is a showreel-first portfolio whose job is to make brands and agencies get in touch (hello@ email, 'Let's collaborate').",
+      "scores": { "clarity": 6, "distinctiveness": 9, "craft": 6 },
+      "reasons": {
+        "clarity": "For its audience (agencies and brands who judge by the work) a full-bleed film still plus 'See showreel' is the right first message. But the one sentence saying what they are sits at 12px in the bottom-right corner, there is no H1, the opening text is a row of aspect ratios, and the home shows only 7 featured titles with no client logos or credits visible in the fold.",
+        "distinctiveness": "Owned concept: the hero is cut by thin vertical guide lines labelled with cinema aspect ratios (2.76:1, 2.39:1 ... 1:1), the wordmark is chopped into film-frame/gate shapes (blank rectangles, a squashed 'RE', overline bars like a film strip), PT Mono reads as a camera slate or timecode. Palette is three flat values (cream #fcf8c9, cobalt #2c54c7, near-black) over graded footage. It is pure film-craft vocabulary, impossible to transplant to another trade.",
+        "craft": "Typography and palette discipline is excellent (2 families, 3 colours). Execution faults are serious: CLS 1.088 (very high), 16 project titles never become visible during a full scroll and stay hidden under reduced motion, 9-12px text, no H1, 12 sub-24px tap targets on mobile, 50.6 fps with a 33 ms p95 frame (heaviest of the three)."
+      },
+      "claims": [
+        { "claim": "A unique concept", "verdict": "true", "evidence": "Aspect-ratio grid lines with labels, frame-cut wordmark and slate-mono type are specific to filmmaking; recurring on all three pages." },
+        { "claim": "Retro/vintage yet minimalist", "verdict": "mostly true", "evidence": "Cream on cobalt/black with a condensed display face and mono body reads 70s film-title/print; layout is sparse. 'Vintage' comes from type and palette, not from texture: no grain overlays visible in the sheets." },
+        { "claim": "Solid colours with effects", "verdict": "true", "evidence": "Three flat colours; 7 gradients in the inventory; effects are footage grading, the frame-guide lines and width/flex-basis transitions on work tiles." },
+        { "claim": "Explore the other pages for the pattern", "verdict": "true, pattern confirmed", "evidence": "Works and About repeat: the same frame-cut FIGUREFILM wordmark header, cobalt fields, cream condensed caps over footage ('Marriott x Al Maha', 'Post-production', 'Our people'), split 'WHAT  WE  DO' / 'OUR  PEOPLE' headings echoing the split wordmark, and the identical black 'Let's collaborate' footer. Works is a mosaic of tiles of varied size and ratio, i.e. the aspect-ratio idea becomes the grid." },
+        { "claim": "7 visual / 8.2 ship", "verdict": "visual too low, ship too high", "evidence": "Visual identity is the strongest of the batch (9 on distinctiveness), but CLS 1.088, never-visible titles and hidden-under-reduced-motion text make 8.2 ship optimistic; about 6.5 until those are fixed." }
+      ],
+      "motion": [
+        { "what": "Full-bleed footage cycling in the hero behind the ratio grid (cuts between clips in the load frames)", "message it carries": "'this is our work', the showreel itself", "verdict": "earns its place" },
+        { "what": "Work tiles growing in width/flex-basis on hover/scroll (works page mosaic)", "message it carries": "'pick a film', previews the frame of each project", "verdict": "earns its place" },
+        { "what": "Project titles revealed on scroll (16 never fired in the capture)", "message it carries": "intended to name each project; as built it hides them", "verdict": "decoration as built (broken reveal)" },
+        { "what": "Small cream dot cursor/marker on the cobalt section", "message it carries": "none visible from the sheets", "verdict": "decoration" }
+      ],
+      "problems": [
+        "Reveal bugs: 16 project titles never visible, also hidden under reduced motion; CLS 1.088",
+        "Information is too small: 9-12px mono text, no H1, the positioning sentence tucked into a corner, sub-24px tap targets on mobile",
+        "Home shows little proof: no client names or credits beyond 7 titles; 'See showreel' and the email are the only actions"
+      ],
+      "keep": [
+        "Aspect-ratio guide lines with labels over the hero: tells a filmmaker's audience 'we think in frames' without a word of copy",
+        "Wordmark cut into film-gate shapes and reused as the header on every page: identity and navigation in one",
+        "Three-colour system (cream, cobalt, black) over graded footage: lets very different client films sit together as one house style",
+        "Split headings ('WHAT  WE  DO', 'OUR  PEOPLE') echoing the split wordmark: one typographic gesture repeated across pages builds a system"
+      ],
+      "veto": null
+    },
+    "ref-0020": {
+      "business": "COVEO: one-person audio/visual music project (Connell McCarthy) with 11 instrumental releases 2018-2025; the site is an artist portfolio and discography where visitors preview tracks, plus licensing and press-kit links.",
+      "scores": { "clarity": 7, "distinctiveness": 8, "craft": 6 },
+      "reasons": {
+        "clarity": "Fold says it in one look: artist avatar, 'COVEO / An audio/visual project', an arc of the 11 cover artworks, 'The art of sonic and visual storytelling'. The discography is a clean numbered list (001-011) with date, format, length and a Preview button. Weakness: no 'listen on' streaming links or primary action visible; licensing and press kit are only in the footer.",
+        "distinctiveness": "The arc of tilted rounded cover tiles around a central avatar, a huge faint script word behind ('these are my stories'), and a serif italic 'Storytelling' against small Inter caps form a quiet, gallery-like signature tied to the music (each cover is a release). Later sections place hardware photos (speakers, synth) as cut-outs and an orange COVEO poster: personal and coherent.",
+        "craft": "Smooth (59.9 fps), CLS 0, pause control present, a single accent colour (orange). But type is far too small (8.4px tagline, 9.6-12px running text), 38 images without alt, 7 text elements hidden under reduced motion, the credits panel stays fixed over 29% of the screen in every capture, and a '{TRACK.TITLE}' template placeholder leaks into the text layer. Inter as the only working face is flagged system-font-only."
+      },
+      "claims": [
+        { "claim": "Music; simple, not loud, plays with simple elements (text and images) and small motions", "verdict": "true", "evidence": "Neutral grey #eeeeee ground, one orange accent, covers + type only; motion is gentle drift of the cover arc and fades (but 37 elements move with no input at the top, so 'small' means low amplitude, not few)." },
+        { "claim": "Suits a portfolio", "verdict": "true", "evidence": "Numbered discography with metadata and preview reads like a catalogue of works; the release page repeats the pattern (title, cover, video, track list)." },
+        { "claim": "Few contents and lots of white space", "verdict": "true", "evidence": "4618px page, wide margins, one idea per screen; the cost is that the text is shrunk to 8-12px instead of kept readable within the white space." },
+        { "claim": "Photos not monotonous, slight diagonal tilt", "verdict": "true", "evidence": "Covers in the arc are each rotated to follow the curve and vary in palette (sky, night street, rose, polaroid); hardware cut-outs further down are also angled." },
+        { "claim": "8 visual / 8.5 ship", "verdict": "visual fair, ship slightly high", "evidence": "Visual 8 is defensible. Ship 8.5 ignores 8.4px text, 38 missing alts, hidden text under reduced motion, a leaked template placeholder and a persistent credits panel; about 7." }
+      ],
+      "motion": [
+        { "what": "Arc of cover artworks drifting/rotating around the avatar on load", "message it carries": "'here is the whole body of work', each tile is a release; the arc makes a catalogue feel like a constellation", "verdict": "earns its place" },
+        { "what": "Large faint script 'these are my stories' stroke-drawn behind the hero (strokeDashoffset)", "message it carries": "personal, handwritten authorship; echoes 'Storytelling'", "verdict": "earns its place" },
+        { "what": "Preview player with play/pause (persistent 'Previewing' bar)", "message it carries": "lets the visitor hear the product on the page", "verdict": "earns its place" },
+        { "what": "Hardware photo cut-outs and the orange COVEO poster sliding in on scroll", "message it carries": "the studio and the maker behind the music", "verdict": "earns its place, low amplitude" },
+        { "what": "Smooth-scroll libraries (Lenis, Locomotive) on a short page", "message it carries": "none", "verdict": "decoration (adds weight, no meaning)" }
+      ],
+      "problems": [
+        "Text far below readable size (8.4-12px running text) on a page with plenty of space",
+        "Accessibility: 38 images without alt (the covers are the content), 7 text elements hidden under reduced motion, a credits panel fixed over 29% of the screen",
+        "No primary action for the business: no streaming/'listen on' links near the top; licensing and press kit buried in the footer; '{TRACK.TITLE}' placeholder leaks"
+      ],
+      "keep": [
+        "Cover arc around the artist avatar: shows the entire catalogue and the person in one frame",
+        "Numbered discography rows (001-011) with date, format, duration and Preview: turns a list of singles into a navigable archive",
+        "One accent colour (orange) on a neutral ground: lets the varied cover art carry the colour",
+        "Serif italic display word against tiny sans caps: a cheap, strong contrast that reads 'artist' rather than 'brand'"
+      ],
+      "veto": null
+    }
+  }
+}
