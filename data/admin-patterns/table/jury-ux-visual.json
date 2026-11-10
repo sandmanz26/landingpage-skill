@@ -1,0 +1,197 @@
+{
+  "juror": "ux-visual",
+  "kind": "ai",
+  "method": "Visual heuristic audit of 4 static concept screenshots (read together, one pass). Each brief check scored pass / fail / not visible from pixels only. Interaction (hover, focus, keyboard, bulk bar, truncation tooltips) is never inferred. Contrast values are visual estimates, not measured. Scores: 5 = generic framework default, 7 = good, 9 = best-in-class.",
+  "refs": {
+    "tb-001": {
+      "kind": "flat list (CRM record table, spreadsheet-like, collaborative)",
+      "job": "browse and triage a large set of company records daily; quick lookup, tagging, contact work",
+      "audit": [
+        { "check": "scannability: column order", "result": "pass", "evidence": "Identity first (logo + name), then categories, last interaction, domain, phone; every header has an icon + label." },
+        { "check": "scannability: numbers right-aligned", "result": "not visible", "evidence": "No numeric quantity columns; phone numbers are left-aligned, which is acceptable for identifiers." },
+        { "check": "scannability: dates consistent", "result": "fail", "evidence": "Relative times mix units and grammar: '24 hours ago' next to '2 days ago', and '1 hours ago' (Pizza Hut). No absolute date on view." },
+        { "check": "selection", "result": "pass", "evidence": "Header checkbox plus a checkbox on every row." },
+        { "check": "bulk actions", "result": "not visible", "evidence": "Nothing is selected, so no bulk bar is shown." },
+        { "check": "sorting affordance", "result": "pass", "evidence": "Sort toolbar button and an up/down caret on every column header." },
+        { "check": "filtering affordance", "result": "pass", "evidence": "Filter button, Table View switcher, View settings; search with '/' hint in sidebar." },
+        { "check": "status encoding not colour alone", "result": "pass", "evidence": "No status column; category chips carry text labels (B2B, B2C, Marketplace, Technology), so the colour is only extra." },
+        { "check": "hierarchy clarity", "result": "pass", "evidence": "Flat list, no hierarchy needed; page title, toolbar and table form clear levels." },
+        { "check": "row actions discoverability", "result": "fail", "evidence": "No visible row menu or open-record affordance; only the external-link icon on domains. Row actions are probably on hover, which is not visible." },
+        { "check": "density for daily use", "result": "pass", "evidence": "About 57px rows, 16+ records in view, single-line cells." },
+        { "check": "pagination / count", "result": "fail", "evidence": "No record count next to 'Companies' or in the toolbar; the bottom is cropped, so pagination is not visible." },
+        { "check": "empty values", "result": "pass", "evidence": "Empty last-interaction cells say 'No contact' in muted text instead of being blank." },
+        { "check": "long values / truncation", "result": "not visible", "evidence": "Chips fit the column; no long value is shown being cut off." },
+        { "check": "contrast of secondary text", "result": "fail", "evidence": "'No contact' and the header labels are very light grey, estimated below 4.5:1 on white (not measured)." },
+        { "check": "keyboard / accessibility signals", "result": "pass", "evidence": "⌘K quick actions and a '/' search hint are visible; cell focus outlines appear (collaborator cursors 'Khansa', 'Albert'). Real focus order is not visible." }
+      ],
+      "style_levers": {
+        "surface": "white app shell, hairline borders, no cards",
+        "header_treatment": "light grey labels with a leading type icon and sort caret, no fill",
+        "row_separation": "hairline row and column rules (grid)",
+        "chips_badges": "small pastel pill chips, one hue per category with matching text",
+        "icons_avatars": "brand logos in round marks; outline line icons in headers",
+        "accent_colour": "near-black primary button, blue links, pastel chips",
+        "radius": "small to medium (6-8px) on buttons, full pill on chips",
+        "density": "medium-compact"
+      },
+      "scores": { "usability": 7, "clarity": 7, "style": 8 },
+      "take": [
+        "A type icon in each header: you can tell the data type (text, date, link, phone) before reading.",
+        "A muted placeholder ('No contact') for empty cells: tells an empty value apart from a load failure.",
+        "One toolbar that holds view, filter, sort, view settings, export and primary create: every table control sits in one place.",
+        "Logo/avatar plus name as the anchor column: a fast visual anchor while scanning down."
+      ],
+      "avoid": [
+        "Relative times with mixed units and broken plurals ('1 hours ago', '24 hours ago' next to '2 days').",
+        "No visible record count or pagination on a records page.",
+        "Row actions that exist only on hover, with no visible cue.",
+        "Placeholder and header grey too light to pass contrast."
+      ]
+    },
+    "tb-002": {
+      "kind": "tree / hierarchy table (expandable parent categories with nested subcategories)",
+      "job": "manage a category taxonomy (catalogue admin): create, nest, activate or deactivate categories",
+      "audit": [
+        { "check": "scannability: column order", "result": "fail", "evidence": "A placeholder 'Category description' takes the second-widest column with the same text on every row, which pushes the useful data (products, status) to the right." },
+        { "check": "scannability: numbers right-aligned", "result": "fail", "evidence": "The 'Products' counts (20, 0, 8, 7…) are left-aligned." },
+        { "check": "scannability: dates consistent", "result": "fail", "evidence": "The format is DD/Mon/YYYY but 'Snacks' shows '11Mar/2025' without the slash." },
+        { "check": "selection", "result": "fail", "evidence": "Parent rows have checkboxes, but there is no select-all in the header and child rows have no checkbox." },
+        { "check": "bulk actions", "result": "not visible", "evidence": "Nothing is selected." },
+        { "check": "sorting affordance", "result": "fail", "evidence": "No sort indicator on any header." },
+        { "check": "filtering affordance", "result": "pass", "evidence": "Search field and Filter button above the table, plus tabs for Categories and Product." },
+        { "check": "status encoding not colour alone", "result": "pass", "evidence": "The status chip pairs a dot and colour with the word 'Active' or 'Inactive'." },
+        { "check": "hierarchy clarity", "result": "fail", "evidence": "Connector lines and indentation show the nesting, but the expanded icon (chevron up) and the collapsed icon (chevron down) both use the same circled style; leaf rows have no marker. Child rows have empty description, date, products, status and actions, so they look like broken rows." },
+        { "check": "row actions discoverability", "result": "pass", "evidence": "A bordered '…' button on every parent row; child rows have none (fail for children)." },
+        { "check": "density for daily use", "result": "fail", "evidence": "About 67px rows, and an expanded tree of 8 children uses half the viewport with mostly empty cells." },
+        { "check": "pagination / count", "result": "fail", "evidence": "No count and no pagination." },
+        { "check": "empty values", "result": "fail", "evidence": "Child rows are blank instead of showing an inherited value or a dash; the user cannot tell 'not applicable' from 'missing'." },
+        { "check": "long values / truncation", "result": "not visible", "evidence": "All descriptions are the same short placeholder." },
+        { "check": "contrast of secondary text", "result": "pass", "evidence": "Body and header text are dark grey on white; the Inactive grey chip text is readable (estimated)." },
+        { "check": "keyboard / accessibility signals", "result": "not visible", "evidence": "No focus state or shortcut hint." }
+      ],
+      "style_levers": {
+        "surface": "white card on a light grey canvas, rounded table container",
+        "header_treatment": "light grey fill band, regular-weight dark labels, no sort icons",
+        "row_separation": "hairline horizontal rules",
+        "chips_badges": "soft green and grey status pills with a leading dot",
+        "icons_avatars": "light-blue circled line icons for the 'vector'; circled chevrons for expand",
+        "accent_colour": "saturated bright blue (primary CTA, active tab, icons)",
+        "radius": "medium (8-12px) on the container, buttons and chips",
+        "density": "comfortable / low"
+      },
+      "scores": { "usability": 5, "clarity": 5, "style": 6 },
+      "take": [
+        "Elbow connector lines for nesting depth: they show parent-child relations without relying on indent alone.",
+        "A status pill with a dot and a word: survives colour blindness and greyscale.",
+        "A visible bordered '…' per row: actions are discoverable without hover."
+      ],
+      "avoid": [
+        "Child rows that leave most columns blank (no status, count, actions, checkbox).",
+        "Expand and collapse icons that differ only by chevron direction inside the same circle; leaves with no marker.",
+        "Repeated placeholder text in a wide column.",
+        "Left-aligned counts and a date format typo.",
+        "A tree with no sort, no count, no pagination and no select-all."
+      ]
+    },
+    "tb-003": {
+      "kind": "expandable rows (parent user rows open into a list of related users), two-line cells",
+      "job": "a member directory with linked sub-accounts or dependants; lookup by person, low-frequency admin",
+      "audit": [
+        { "check": "scannability: column order", "result": "fail", "evidence": "Each cell stacks two values but only one is labelled: location shows a street plus an unlabelled code (1232, 0001); agreement shows a number plus a date; contact shows a phone plus a second address." },
+        { "check": "scannability: numbers right-aligned", "result": "not visible", "evidence": "No quantity columns; the counts are badges next to the names." },
+        { "check": "scannability: dates consistent", "result": "pass", "evidence": "All dates use MM/DD/YYYY (08/25/2000)." },
+        { "check": "selection", "result": "fail", "evidence": "No checkboxes, so there is no multi-select." },
+        { "check": "bulk actions", "result": "fail", "evidence": "None, because there is no selection." },
+        { "check": "sorting affordance", "result": "pass", "evidence": "A global 'SORT: RECENT FIRST' dropdown; column headers are not sortable." },
+        { "check": "filtering affordance", "result": "pass", "evidence": "An 'ADD FILTER' link and a search icon." },
+        { "check": "status encoding not colour alone", "result": "pass", "evidence": "A green or red dot with the word 'Active' or 'Inactive'." },
+        { "check": "hierarchy clarity", "result": "fail", "evidence": "Expanded children differ only by a faint grey background, with no indent or connector. The count badge (2, 3, 1) is unexplained, and the expand chevron sits at the far right, away from the badge it belongs to." },
+        { "check": "row actions discoverability", "result": "fail", "evidence": "Only the expand chevron; no edit or menu is visible." },
+        { "check": "density for daily use", "result": "fail", "evidence": "About 88px two-line rows; only 7 records fit in a large viewport." },
+        { "check": "pagination / count", "result": "pass", "evidence": "'124 Results', a 'Show: 20' page-size control and a page stepper; no total page count." },
+        { "check": "empty values", "result": "pass", "evidence": "An en dash for a missing agreement number; the empty Location on children is blank (partial)." },
+        { "check": "long values / truncation", "result": "pass", "evidence": "Location is cut off with an ellipsis ('4517 Washington Ave...'); whether the full value can be reached (tooltip) is not visible." },
+        { "check": "contrast of secondary text", "result": "fail", "evidence": "Header labels, 'SORT:', 'FILTER:', the page labels and the second line are light grey-blue, estimated below 4.5:1 (not measured)." },
+        { "check": "keyboard / accessibility signals", "result": "not visible", "evidence": "No focus or shortcut cue." }
+      ],
+      "style_levers": {
+        "surface": "floating white card with a large radius and soft shadow on a striped grey backdrop",
+        "header_treatment": "small uppercase letter-spaced grey labels, no fill",
+        "row_separation": "whitespace plus a tint band on expanded children; no rules",
+        "chips_badges": "small grey count badges; dot status",
+        "icons_avatars": "none (no avatars), minimal chevrons",
+        "accent_colour": "navy text and outline CTA; red and green status dots",
+        "radius": "large (about 24px) card, pill CTA",
+        "density": "spacious"
+      },
+      "scores": { "usability": 5, "clarity": 5, "style": 6 },
+      "take": [
+        "A footer with result count, page size and pager in one row: tells the user where they are and how much is left.",
+        "A plain-language sort and filter state as a sentence ('SORT: RECENT FIRST', 'FILTER: ADD FILTER'): shows the active view state at a glance.",
+        "A child-count badge on the expandable parent: tells the user before expanding that it has children (only if it is labelled)."
+      ],
+      "avoid": [
+        "Stacked two-value cells where the second value has no label (unexplained codes, a second address).",
+        "Expanded children with no indent or connector and the toggle far from the row anchor.",
+        "No selection, no row actions, and 88px rows for an admin list.",
+        "Uppercase pale-grey micro-labels as the only header."
+      ]
+    },
+    "tb-004": {
+      "kind": "grouped / nested (order group header with a nested line-item sub-table), stage tabs",
+      "job": "warehouse fulfilment: choose orders or line items to pick, pack and ship by stage",
+      "audit": [
+        { "check": "scannability: column order", "result": "pass", "evidence": "Line items read name, ID, warehouse, bin, order quantity, stock available, which follows the picking flow. The group header shows customer, invoice, date, address link and carrier." },
+        { "check": "scannability: numbers right-aligned", "result": "fail", "evidence": "'Order Quantity' and 'Stock Available' are left-aligned, and a shortfall (quantity > stock) is not highlighted." },
+        { "check": "scannability: dates consistent", "result": "pass", "evidence": "18/03/2024 (DD/MM/YYYY) throughout." },
+        { "check": "selection", "result": "pass", "evidence": "Header select-all, a group checkbox and per-item checkboxes; the selected group has a blue left rail." },
+        { "check": "bulk actions", "result": "fail", "evidence": "Two items are selected but no bulk bar or selection count appears; 'Create Fulfillment' does not show it acts on the selection." },
+        { "check": "sorting affordance", "result": "fail", "evidence": "No sort control on any header or toolbar." },
+        { "check": "filtering affordance", "result": "pass", "evidence": "Search, labelled filter dropdowns showing their current state ('Status: None', 'Currency: None', 'Payment Status: None') and 'More Filters'; stage tabs New, Pick, Pack, Ship, Consignment." },
+        { "check": "status encoding not colour alone", "result": "fail", "evidence": "The view filters by status and payment status, but no row shows either; carriers are shown only as brand logos, and one group shows two (DHL and UPS) without explanation." },
+        { "check": "hierarchy clarity", "result": "pass", "evidence": "The group header is set apart by an avatar and larger name; children are indented with their own sub-header and a left rail. The top header has only 'Ship to', so parent-level columns are unlabelled (minor)." },
+        { "check": "row actions discoverability", "result": "pass", "evidence": "A visible kebab on every group; no per-line-item action (minor)." },
+        { "check": "density for daily use", "result": "pass", "evidence": "About 57px item rows; the sub-header repeated per group costs a row each." },
+        { "check": "pagination / count", "result": "fail", "evidence": "A full pager with first/last and a page size of 25, but the label says '1 - 10 of 25 items', which contradicts 25 per page and 5+ pages." },
+        { "check": "empty values", "result": "pass", "evidence": "An empty Bin No shows '-'." },
+        { "check": "long values / truncation", "result": "not visible", "evidence": "All values are short." },
+        { "check": "contrast of secondary text", "result": "pass", "evidence": "The invoice, date and 'View Address' grey meta is mid-grey and readable (estimated)." },
+        { "check": "keyboard / accessibility signals", "result": "not visible", "evidence": "No focus state; carrier logos have no visible text alternative." }
+      ],
+      "style_levers": {
+        "surface": "white card on a soft gradient backdrop, tables edge to edge inside",
+        "header_treatment": "a light grey band for the top header; plain grey-label sub-headers per group",
+        "row_separation": "hairline rules; a blue left rail on the selected group",
+        "chips_badges": "none; product emoji-style thumbnails",
+        "icons_avatars": "person avatars on groups, carrier brand logos, product thumbnails",
+        "accent_colour": "royal blue (CTA, active tab, checkboxes, current page)",
+        "radius": "small (4-6px) on inputs, buttons and the page chip",
+        "density": "medium"
+      },
+      "scores": { "usability": 7, "clarity": 6, "style": 6 },
+      "take": [
+        "Stage tabs that follow the workflow (New, Pick, Pack, Ship): the table becomes a step in a process, not a dump.",
+        "Filter dropdowns that show their current value ('Status: None'): the active filter state is readable without opening anything.",
+        "Selection at both group and item level with a left accent rail on the selected group: supports partial fulfilment and makes the selection obvious.",
+        "A full pager with page size and a range label (when it is correct)."
+      ],
+      "avoid": [
+        "Selecting rows without a bulk bar or selection count.",
+        "Filtering by a status the rows never display.",
+        "Left-aligned quantity and stock with no shortfall flag.",
+        "A pagination label that contradicts the page size.",
+        "Brand logos as the only carrier label."
+      ]
+    }
+  },
+  "patterns_across": [
+    "None of the four right-align numbers or flag a numeric comparison (stock vs quantity); this is the most common scannability failure and costs nothing to fix.",
+    "Status works when it is a dot or colour plus a word (tb-002, tb-003); it fails when the status a user filters by is not shown in the row (tb-004).",
+    "Hierarchy needs three cues together: indentation or connectors, a distinct toggle next to the anchor, and child rows that are complete (tb-004 does this, tb-002 and tb-003 fall short).",
+    "Selection is only half a feature without a visible bulk bar and count; none of the four shows the selected state with its follow-up action.",
+    "A count and pager with page size belong on every admin table (tb-003 and tb-004 show them, tb-001 and tb-002 do not); the label must agree with the page size.",
+    "Visible state beats hidden state: filter values shown in the control, the sort written as text, a visible row menu. Hover-only actions (tb-001) and unlabelled stacked values (tb-003) hurt discoverability.",
+    "Density follows the job: daily triage (tb-001, tb-004) at about 56px single-line rows; tb-003's spacious two-line rows suit a showcase, not a work list.",
+    "Pale grey for secondary text and micro-labels is the most common visual failure; set a contrast floor for meta text, placeholders and headers."
+  ]
+}
