@@ -1,0 +1,7 @@
+# batch-012 (2026-11-10) owner scores: SquadEasy 8/8.5 (read "8, 85" as 8.5), Figure Film 7/8.2, Coveo Music 8/8.5
+ref-0018 https://www.squadeasy.com/en/
+ref-0019 https://figurefilm.co.uk/
+ref-0019-works https://figurefilm.co.uk/works/
+ref-0019-about https://figurefilm.co.uk/about/
+ref-0020 https://coveomusic.com/
+ref-0020-release https://coveomusic.com/chapter-i
