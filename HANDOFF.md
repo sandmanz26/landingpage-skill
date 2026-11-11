@@ -1,7 +1,7 @@
 # Handoff
 
 Read this first if you are a new session, a different model or a different AI tool picking up
-this project. It is kept up to date at every milestone. Last updated: **2026-11-06** (three-way test; owner's nine requirements recorded, not yet built).
+this project. It is kept up to date at every milestone. Last updated: **2026-11-11** (slop blind test sent; Fable 5.2 advice; plan to move to the owner's machine for ~15k mobile screens: see §5b and §6).
 
 ## 1. Goal
 
@@ -704,32 +704,96 @@ was not changed.
 
 ## 5. Blockers and environment
 
-- GitHub: pushing to `sandmanz26/landingpage-skill`, branch `claude/affectionate-cray-t2nlj1`, works
-  since 2026-10-30 (earlier pushes failed with 403 until access was granted). No pull request yet.
-- **Network**: the owner opened network access on 2026-10-30; the three reference sites and
-  PubMed now load, but `www.awwwards.com` still fails (likely bot protection or still not allowed).
-- Subagents: in the cloud session, spawn them only when the owner asks (they asked for the jury).
-- Planned home: the owner's local machine with Claude Code (`README.md` has install steps).
+- GitHub: push to `sandmanz26/landingpage-skill`, branch `claude/affectionate-cray-t2nlj1`. No pull
+  request yet. **The repo is PUBLIC** (checked) and holds third-party screenshots under `data/`; the
+  owner plans to split it into a public skill repo and a private data repo. Until then advise private.
+- Cloud session network: many hosts blocked for WebFetch (agents used curl; in the 2026-11-11 slop test
+  the subagents reported web pages blocked and fell back to search summaries). `www.awwwards.com`
+  fails; Solflare answers headless browsers with 429 (not evaded on purpose).
+- Playwright: the cloud has a preinstalled one (1.63). A subagent ran `npm install` in
+  `skill/design-director` (local 1.65 in node_modules); `package-lock.json` there is gitignored. Locally,
+  `npm install && npx playwright install chromium` is the normal path (README).
+- Known flake: selftest "kit demo passes the inspector" sometimes fails with `layout-shift` when test
+  runs overlap; passes alone. Add the failing rule to its output before investigating. Never skip it.
+- Usage limits: the 5-hour limit stopped several subagents; resume them with SendMessage, not new agents.
+- Subagents: spawn them only when the owner asks (they asked for jurors and test builds).
 
-## 6. Next steps, in order
+## 5b. Latest (2026-11-10 → 11-11), not yet recorded above
 
-1. **Prove the skill beats no skill** (not yet shown): one example exists (wedding organizer,
-   owner's verdict pending). Next: 3–5 briefs × (no skill, taste-skill, this skill), judged by the
-   jury and 2+ designers who do not know which is which. Needs real or Excel briefs.
-2. Owner's reply on the scoring proposal (rank within a batch + anchors) and on the conflict between
-   "ship 9.5" for Resolute and the approved "Never" rule.
-3. Batch-004: capture, then jurors with `rubric/jury-brief.md` (digest first); record time and
-   tokens against batch-003 (5.9 min, 649k tokens for 2 sites).
-4. Smoothness on a real machine: the owner runs `smooth.mjs` locally; record the numbers beside the
-   container's.
-5. Confirm with the owner that "ya tidak masalah" meant approving the six taste rules and two scores.
-6. Build the reference pipeline (v0.4): read the Excel, capture each URL (layout + motion), run the
-   jury, write library entries, derive directions/recipes/taste-rule proposals, version as an epoch.
-7. Mini eval (see 1): 5 briefs × (no skill, taste-skill, ours) judged by 2 designers + AI jury.
-8. Adopt taste-skill's open-collection image search (MIT, with attribution) to close the
-   "no photos" gap seen in the Senyum Dental runs.
-9. Owner to provide: 4–6 business models for test briefs, real (anonymised) briefs with customer
-   voice (reviews, WhatsApp questions), 2–3 designers for voting, more references with notes.
+- **Batch-012** (`data/references/batch-012.json`, jury in `jury/batch-012/`): SquadEasy owner 8 / "85"
+  (read as 8.5, confirm), Figure Film 7 / 8.2, Coveo 8 / 8.5. Library: 19 references.
+- **Admin patterns** (`data/admin-patterns/`): sidebar (batch-a01, 4 refs, owner 8/8/6.5/7: wants the
+  *style*, more interesting than shadcn's default), modal (batch-a02, 5 refs, no scores; ask-for-
+  variations option built as `adminoptions.mjs`), table (audited by a ux-visual juror; rules in
+  `admin/table.md` T1-T19), login (batch-a04: 7/7, 7/8, Pinterest grid; idea: animated background).
+- **App patterns** (`data/app-patterns/choice/`): batch-m01 (stacked cards 7/7.5, chips, vertical
+  scroll, Pinterest; ss5 not recommended), batch-m02 tiers safe / avoid / bad (safe only when the user
+  asks for "aman"; bad = never produce). This is the seed for the owner's ~15,000 mobile screens (§6).
+- **Five-head council** built (`rubric/council.md`, see 2026-11-10 above).
+- **Slop blind test (2026-11-11)** `examples/slop-test/`: 5 homepages for 5 businesses, prompts in
+  `prompts.md`: laundry "Bersih Kilat" (no skill, vibe prompt), kursus "Ngoding Bareng" (no skill,
+  Tailwind/shadcn), kopi "Lereng Merapi" (no skill, senior-designer + avoid-generic prompt), yoga
+  "Napas Pagi" and klinik gigi anak "Gigi Ceria" (design-director quick autopilot; their `.design/`
+  run files are kept; roast/reason/look/engineering self-done, not independent; critic 7.4 and 7.2).
+  Blind pack: `blind/A-E/` (index.html + desktop/phone full-page PNGs), `blind/PENILAIAN.md` (slop
+  1-10, quality 1-10, which parts feel slop and why), `slop-blind.zip`; the key
+  `blind/KUNCI-jangan-dibuka-sebelum-menilai.json` (do not read it to the owner before they score).
+  Sent to the owner 2026-11-11; **waiting for scores**. Next: distil an "AI slop tells" list from the
+  scores into rules (owning module, likely `rules/` + `rubric/`) and inspector/copycheck checks, with
+  selftests, per CLAUDE.md.
+- **Fable 5.2 discussion (2026-11-11)**: owner asked to use Fable 5.2 to enrich the skill (more detailed
+  rules, richer motion). Advice given: Fable costs 2x Opus 5.5 per token ($8/$40 vs $4/$20); its docs
+  warn over-prescriptive prompts lower quality, so more prose rules is not the aim; motion must carry
+  meaning (owner's own rule), not be more complex. Proposed pilot: Fable writes 5-6 tested motion
+  recipes in `motion/` (staged entrance, View Transitions between states, scroll-linked, form/price
+  state changes), each with message, when / when not, reduced-motion version, duration limits, plus
+  inspector checks; rebuild one slop-test page with them; owner compares blind. Owner: "oke noted";
+  not started. Not verified that Fable is better for this skill.
+
+## 6. Next steps, in order (2026-11-11)
+
+**Moving to the owner's machine** (owner's plan, 2026-11-11, to read their local portfolio of
+~15,000 mobile screens):
+1. `git clone` the repo, `git checkout claude/affectionate-cray-t2nlj1`; Node 22;
+   `cd skill/design-director && npm install && npx playwright install chromium && npm test`.
+2. Start Claude Code at the repo root (CLAUDE.md → this file). Optional: `UNSPLASH_ACCESS_KEY` in the
+   shell profile (never in chat, never committed).
+3. **Keep the 15k screens outside the repo** (or in a gitignored folder): the repo is public, and
+   client work may be under NDA. Commit only derived patterns, notes and a few owner-approved samples.
+4. **Do not have a model look at all 15k.** Rough estimate, not measured: ~1.5k image tokens per
+   phone screen → ~22M tokens for one look, many usage-limit windows. Build a script first
+   (proposed `scripts/screens.mjs`, not built): index the folder (app, flow, file date from paths),
+   drop near-duplicates (perceptual hash), cluster, make contact sheets, pick a few hundred
+   representatives; the model and the owner label those by pattern (as `data/app-patterns/choice/`:
+   tiers good / safe / avoid / bad, style levers, notes); derive mobile rules and recipes from them.
+   This also needs a mobile mode decision (today `app-screen` covers admin/SaaS; mobile app screens
+   have no mode yet).
+
+**Waiting on the owner:**
+- Slop blind test scores (A-E).
+- Review of the 5 taste rules Claude decided on the owner's delegation (batch-005 four Never rules +
+  batch-006 radius Prefer; marked in `team/taste.md`), revert any rejected.
+- Colour: measure harmony (hue families) instead of hue count: proposal, not changed.
+- Unsplash: a key in the env var, or keep the pasted-links path.
+- Repo privacy / public-private split.
+- Scores for `.design/options/admin-options.html` (admin styles A/B/C).
+- Solflare screenshots (batch-010 not captured).
+- Older pending scores: batch-001, batch-003, wedding organizer verdict, four-way WO scores,
+  batch-004 taste rules; SquadEasy "85" meaning.
+- Fable 5.2 motion pilot: go or not.
+- Opt-in data collection from skill users: deferred by the owner ("nanti saja").
+
+**Proposed, not started:**
+1. Distil AI-slop tells from the blind scores (above).
+2. Re-run Dapur Seimbang with the current skill (owner's notes: entrance transitions, rigid lower half).
+3. Component recipes from the admin/app libraries (sidebar, modal, table, login, choice).
+4. Admin blind test; mobile screens pipeline (§6 above).
+5. Eval harness: 5 real briefs × (no skill, taste-skill, this skill), blind, 2+ designers; release
+   bar ≥ 65% wins over 60 votes with a hold-out set (§4).
+6. Measure real costs of standard/thorough runs with the council (estimates only so far).
+7. Smoothness on a real machine (`smooth.mjs` locally).
+8. Fix measurement gaps: illustrations not counted on Quilt (Lottie/late render); fit.mjs does not count
+   SVG `<use>` drawings and may count hard 0-blur shadows as shadows; bulk-action probe false WARN.
 
 ## 7. Map
 
@@ -738,10 +802,13 @@ HANDOFF.md            this file
 CLAUDE.md, AGENTS.md  working agreement + pointer here (auto-read by Claude Code / other agents)
 README.md             install and usage (Bahasa Indonesia)
 docs/SPEC.md          full specification and rationale
-skill/design-director/  the skill (see its SKILL.md)
+skill/design-director/  the skill (see its SKILL.md): modes/ copy/ motion/ rules/ rubric/ team/ kit/
+                      brand/ admin/ roast/ research/ strategy/ scripts/ evals/
 templates/            Excel template for references and briefs + make_template.py (its generator)
-data/references/      reference batches (batch-<n>.json/.txt, review), captures/<id>/ (report.json,
-                      evidence.json, folds; sheets are regenerated, not committed), jury votes
-examples/             simulation runs
+data/references/      website reference batches 001-012 (json + review), captures, jury votes
+data/admin-patterns/  admin/SaaS component references (sidebar, modal, table, login)
+data/app-patterns/    mobile app pattern references (choice: m01, m02 with tiers)
+examples/             test runs: wedding-organizer-compare, senyum-dental(-v2),
+                      katering-sehat-compare (three-way), slop-test (blind A-E)
 THIRD_PARTY_NOTICES.md  taste-skill MIT notice
 ```
