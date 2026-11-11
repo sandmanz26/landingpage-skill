@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bersih Kilat Laundry</title>
+<meta name="description" content="Laundry kiloan antar-jemput di Bandung. Rp 8.000/kg, jemput gratis minimal 5 kg, selesai 24 jam. Pesan lewat WhatsApp 0812-1111-2222.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f5f2ea;
+    --paper-2: #ebe6d9;
+    --card: #fffdf8;
+    --ink: #11213a;
+    --ink-soft: #46546b;
+    --line: #d6cfbf;
+    --volt: #ffd23f;
+    --volt-ink: #3a2c00;
+    --blue: #1d4ed8;
+    --wa: #128c4a;
+    --wa-hover: #0e7a3f;
+    --radius: 18px;
+    --display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+    --body: "Figtree", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font: 400 17px/1.6 var(--body); -webkit-font-smoothing: antialiased;
+  }
+  img, svg { display: block; max-width: 100%; }
+  a { color: inherit; }
+  .wrap { width: min(1120px, 100% - 32px); margin-inline: auto; }
+  .skip { position: absolute; left: -9999px; }
+  .skip:focus { left: 16px; top: 16px; background: var(--ink); color: #fff; padding: 8px 14px; border-radius: 8px; z-index: 10; }
+  :focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-radius: 6px; }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    min-height: 52px; padding: 0 22px; border-radius: 999px; border: 0;
+    font: 600 17px/1 var(--body); text-decoration: none; cursor: pointer;
+    transition: transform .15s ease, background-color .15s ease;
+  }
+  .btn:active { transform: translateY(1px); }
+  .btn-wa { background: var(--wa); color: #fff; }
+  .btn-wa:hover { background: var(--wa-hover); }
+  .btn-ghost { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 2px var(--ink); }
+  .btn-ghost:hover { background: var(--ink); color: var(--paper); }
+  .btn svg { width: 20px; height: 20px; flex: none; }
+
+  /* Header */
+  header.top { padding: 18px 0; }
+  header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font: 800 21px/1 var(--display); letter-spacing: -.02em; }
+  .brand-mark { width: 34px; height: 34px; border-radius: 10px; background: var(--ink); display: grid; place-items: center; }
+  .brand-mark svg { width: 18px; height: 18px; }
+  .top .btn { min-height: 44px; padding: 0 18px; font-size: 15px; }
+  .top-phone { font-family: var(--mono); font-size: 14px; color: var(--ink-soft); text-decoration: none; }
+  .top-right { display: flex; align-items: center; gap: 18px; }
+  @media (max-width: 640px) { .top-phone { display: none; } }
+
+  /* Hero */
+  .hero { padding: 40px 0 72px; }
+  .hero .wrap { display: grid; grid-template-columns: 1.15fr .85fr; gap: 56px; align-items: center; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 8px; font: 500 13px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); }
+  .eyebrow::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--wa); }
+  h1 {
+    font: 800 clamp(42px, 7vw, 84px)/.95 var(--display); letter-spacing: -.035em;
+    margin: 18px 0 22px; text-wrap: balance;
+  }
+  h1 .hl { position: relative; white-space: nowrap; z-index: 0; }
+  h1 .hl::after { content: ""; position: absolute; left: -4px; right: -4px; bottom: .06em; height: .32em; background: var(--volt); z-index: -1; border-radius: 4px; transform: skew(-8deg); }
+  .lede { font-size: 19px; color: var(--ink-soft); max-width: 34ch; margin: 0 0 30px; }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
+  .facts { display: flex; flex-wrap: wrap; gap: 10px 26px; margin: 36px 0 0; padding: 0; list-style: none; }
+  .facts li { display: flex; align-items: baseline; gap: 8px; font-size: 15px; color: var(--ink-soft); }
+  .facts b { font: 700 22px/1 var(--display); color: var(--ink); letter-spacing: -.02em; }
+
+  /* Receipt calculator */
+  .nota {
+    position: relative; background: var(--card); padding: 28px 26px 34px;
+    border-radius: 6px 6px 0 0; box-shadow: 0 1px 0 var(--line), 0 24px 50px -24px rgba(17,33,58,.35);
+    transform: rotate(1.2deg); font-family: var(--mono); font-size: 14px;
+  }
+  .nota::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: -12px; height: 12px;
+    background: radial-gradient(circle at 8px -2px, transparent 9px, var(--card) 9.5px) repeat-x;
+    background-size: 16px 12px;
+  }
+  .nota-head { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1.5px dashed var(--line); padding-bottom: 14px; margin-bottom: 18px; }
+  .nota-head strong { font: 800 18px/1 var(--display); letter-spacing: -.02em; }
+  .nota-head span { color: var(--ink-soft); font-size: 12px; }
+  .kg-label { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-soft); margin-bottom: 10px; }
+  .stepper { display: grid; grid-template-columns: 48px 1fr 48px; align-items: center; gap: 10px; margin-bottom: 14px; }
+  .stepper button {
+    height: 48px; border-radius: 12px; border: 1.5px solid var(--ink); background: transparent;
+    font: 600 22px/1 var(--body); color: var(--ink); cursor: pointer;
+  }
+  .stepper button:hover { background: var(--ink); color: var(--paper); }
+  .kg-out { text-align: center; font: 800 44px/1 var(--display); letter-spacing: -.03em; }
+  .kg-out small { font: 500 16px var(--mono); color: var(--ink-soft); margin-left: 4px; }
+  input[type=range] { width: 100%; accent-color: var(--ink); margin: 0 0 20px; }
+  .row { display: flex; justify-content: space-between; gap: 12px; padding: 7px 0; }
+  .row span:first-child { color: var(--ink-soft); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 6px; font-size: 12px; font-weight: 500; }
+  .tag-free { background: var(--volt); color: var(--volt-ink); }
+  .tag-ask { background: var(--paper-2); color: var(--ink-soft); }
+  .total { border-top: 1.5px dashed var(--line); margin-top: 10px; padding-top: 14px; align-items: baseline; }
+  .total span:last-child { font: 800 30px/1 var(--display); letter-spacing: -.02em; color: var(--ink); }
+  .nota-note { font-size: 12px; color: var(--ink-soft); margin: 10px 0 18px; min-height: 2.6em; }
+  .nota .btn { width: 100%; font-family: var(--body); }
+
+  /* Sections */
+  section { padding: 88px 0; }
+  .sec-head { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: end; margin-bottom: 44px; }
+  h2 { font: 800 clamp(32px, 4.6vw, 52px)/1 var(--display); letter-spacing: -.03em; margin: 0; text-wrap: balance; }
+  .sec-head p { margin: 0; color: var(--ink-soft); max-width: 42ch; }
+
+  .steps { counter-reset: s; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--ink); }
+  .steps li { padding: 26px 28px 8px 0; position: relative; }
+  .steps li + li { padding-left: 28px; border-left: 1px solid var(--line); }
+  .steps li::before { counter-increment: s; content: "0" counter(s); font: 500 13px var(--mono); color: var(--ink-soft); display: block; margin-bottom: 26px; }
+  .steps h3 { font: 700 24px/1.15 var(--display); letter-spacing: -.02em; margin: 0 0 10px; }
+  .steps p { margin: 0; color: var(--ink-soft); }
+
+  .price { background: var(--ink); color: var(--paper); border-radius: 28px; margin-inline: 16px; }
+  .price h2 { color: var(--paper); }
+  .price .sec-head p { color: #b9c2d3; }
+  .price-grid { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 16px; }
+  .p-card { border: 1px solid rgba(245,242,234,.18); border-radius: var(--radius); padding: 28px; }
+  .p-card.main { background: var(--volt); color: var(--volt-ink); border-color: transparent; }
+  .p-card .k { font: 500 12px var(--mono); text-transform: uppercase; letter-spacing: .08em; opacity: .75; }
+  .p-card .v { font: 800 clamp(40px, 5vw, 60px)/1 var(--display); letter-spacing: -.03em; margin: 18px 0 10px; }
+  .p-card .v small { font: 600 18px var(--body); letter-spacing: 0; }
+  .p-card p { margin: 0; font-size: 15px; opacity: .85; }
+  .price .note { margin: 28px 0 0; font-size: 15px; color: #b9c2d3; }
+  .price .note a { color: var(--volt); }
+
+  .faq { max-width: 760px; }
+  details { border-bottom: 1px solid var(--line); }
+  details:first-of-type { border-top: 2px solid var(--ink); }
+  summary { list-style: none; cursor: pointer; padding: 22px 40px 22px 0; position: relative; font: 700 20px/1.3 var(--display); letter-spacing: -.01em; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; position: absolute; right: 4px; top: 18px; font: 500 26px/1 var(--mono); transition: transform .2s ease; }
+  details[open] summary::after { transform: rotate(45deg); }
+  details p { margin: 0 0 22px; color: var(--ink-soft); max-width: 60ch; }
+
+  .closing { text-align: center; padding: 96px 0 104px; }
+  .closing h2 { font-size: clamp(38px, 6vw, 68px); max-width: 16ch; margin: 0 auto 18px; }
+  .closing p { color: var(--ink-soft); margin: 0 auto 30px; }
+  .closing .num { display: block; font: 500 15px var(--mono); color: var(--ink-soft); margin-top: 18px; }
+
+  footer { border-top: 1px solid var(--line); padding: 26px 0 96px; font-size: 14px; color: var(--ink-soft); }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; }
+
+  .float-wa {
+    position: fixed; right: 16px; bottom: 16px; z-index: 5; display: none;
+    box-shadow: 0 10px 30px -8px rgba(18,140,74,.6);
+  }
+
+  @media (max-width: 900px) {
+    .hero .wrap { grid-template-columns: 1fr; gap: 44px; }
+    .nota { transform: none; max-width: 440px; }
+    .sec-head { grid-template-columns: 1fr; }
+    .price-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 720px) {
+    body { font-size: 16px; }
+    section { padding: 64px 0; }
+    .hero { padding: 20px 0 56px; }
+    .steps { grid-template-columns: 1fr; }
+    .steps li, .steps li + li { padding: 22px 0; border-left: 0; }
+    .steps li + li { border-top: 1px solid var(--line); }
+    .steps li::before { margin-bottom: 12px; }
+    .price { margin-inline: 8px; border-radius: 22px; }
+    .p-card { padding: 22px; }
+    .float-wa { display: inline-flex; }
+    .cta-row .btn { flex: 1 1 100%; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#hitung">Langsung ke hitung biaya</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#" aria-label="Bersih Kilat, ke atas halaman">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="#ffd23f"><path d="M13.5 2 4 13.5h6.5L9.5 22 20 9.5h-6.5L13.5 2Z"/></svg>
+      </span>
+      Bersih Kilat
+    </a>
+    <div class="top-right">
+      <a class="top-phone" href="tel:+6281211112222">0812-1111-2222</a>
+      <a class="btn btn-wa js-wa" href="https://wa.me/6281211112222" target="_blank" rel="noopener">Chat WA</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="padding-top:40px">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Laundry kiloan antar-jemput &middot; Bandung</span>
+        <h1>Kami jemput, cuci, antar. <span class="hl">Beres 24 jam.</span></h1>
+        <p class="lede">Kirim chat, kurir datang ke rumah atau kos Anda. Bayar per kilo, Rp 8.000. Jemput gratis untuk cucian minimal 5 kg.</p>
+        <div class="cta-row">
+          <a class="btn btn-wa js-wa" href="https://wa.me/6281211112222" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3Z"/></svg>
+            Pesan jemput via WhatsApp
+          </a>
+          <a class="btn btn-ghost" href="#hitung">Hitung biaya</a>
+        </div>
+        <ul class="facts">
+          <li><b>Rp 8.000</b> per kg</li>
+          <li><b>Gratis</b> jemput &ge; 5 kg</li>
+          <li><b>24 jam</b> selesai</li>
+        </ul>
+      </div>
+
+      <div class="nota" id="hitung" aria-labelledby="nota-title">
+        <div class="nota-head">
+          <strong id="nota-title">Perkiraan biaya</strong>
+          <span>Bersih Kilat</span>
+        </div>
+        <label class="kg-label" for="kg-range">Berat cucian (perkiraan)</label>
+        <div class="stepper">
+          <button type="button" id="kg-minus" aria-label="Kurangi 1 kg">&minus;</button>
+          <div class="kg-out" aria-live="polite"><span id="kg-val">5</span><small>kg</small></div>
+          <button type="button" id="kg-plus" aria-label="Tambah 1 kg">+</button>
+        </div>
+        <input type="range" id="kg-range" min="1" max="30" step="1" value="5">
+        <div class="row"><span>Cuci kiloan</span><span id="line-wash">5 &times; Rp 8.000</span></div>
+        <div class="row"><span>Jemput</span><span id="line-pickup"><span class="tag tag-free">GRATIS</span></span></div>
+        <div class="row total"><span>Total</span><span id="total">Rp 40.000</span></div>
+        <p class="nota-note" id="nota-note">Berat pasti ditimbang saat cucian dijemput.</p>
+        <a class="btn btn-wa" id="nota-wa" href="https://wa.me/6281211112222" target="_blank" rel="noopener">Kirim pesanan ini ke WA</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="cara">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Tiga langkah, tanpa keluar rumah.</h2>
+        <p>Tidak perlu antre di kios atau bolak-balik ambil cucian. Semua diatur lewat satu chat WhatsApp.</p>
+      </div>
+      <ol class="steps">
+        <li>
+          <h3>Chat kami di WhatsApp</h3>
+          <p>Kirim alamat penjemputan dan perkiraan berat cucian ke 0812-1111-2222.</p>
+        </li>
+        <li>
+          <h3>Kurir menjemput</h3>
+          <p>Cucian ditimbang saat dijemput, jadi Anda tahu biayanya dari awal. Gratis untuk minimal 5 kg.</p>
+        </li>
+        <li>
+          <h3>Bersih dalam 24 jam</h3>
+          <p>Cucian dicuci, dikeringkan, dan dilipat, lalu siap kembali ke tangan Anda.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="price" id="harga">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Harga satu baris. Tanpa paket membingungkan.</h2>
+        <p>Anda membayar sesuai berat cucian. Itu saja.</p>
+      </div>
+      <div class="price-grid">
+        <div class="p-card main">
+          <div class="k">Cuci kiloan</div>
+          <div class="v">Rp 8.000<small> /kg</small></div>
+          <p>Contoh: 5 kg = Rp 40.000, 10 kg = Rp 80.000.</p>
+        </div>
+        <div class="p-card">
+          <div class="k">Antar-jemput</div>
+          <div class="v">Rp 0</div>
+          <p>Gratis untuk cucian minimal 5 kg.</p>
+        </div>
+        <div class="p-card">
+          <div class="k">Waktu pengerjaan</div>
+          <div class="v">24 jam</div>
+          <p>Cucian selesai dalam satu hari.</p>
+        </div>
+      </div>
+      <p class="note">Cucian di bawah 5 kg? <a class="js-wa" href="https://wa.me/6281211112222" target="_blank" rel="noopener">Tanyakan ongkos jemputnya lewat WhatsApp</a>.</p>
+    </div>
+  </section>
+
+  <section id="tanya">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Pertanyaan yang sering masuk.</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Bagaimana cara memesan?</summary>
+          <p>Chat WhatsApp ke 0812-1111-2222 dengan alamat penjemputan di Bandung dan perkiraan berat cucian. Kami balas untuk mengatur jadwal jemput.</p>
+        </details>
+        <details>
+          <summary>Berapa minimal cucian agar jemput gratis?</summary>
+          <p>5 kg. Untuk cucian di bawah 5 kg, tanyakan dulu ongkos jemputnya lewat WhatsApp.</p>
+        </details>
+        <details>
+          <summary>Bagaimana berat cucian dihitung?</summary>
+          <p>Cucian ditimbang saat dijemput. Kalkulator di halaman ini hanya perkiraan; tagihan mengikuti hasil timbangan, dengan tarif Rp 8.000 per kg.</p>
+        </details>
+        <details>
+          <summary>Berapa lama cucian selesai?</summary>
+          <p>24 jam. Jadwal pengantaran kembali disepakati lewat WhatsApp.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="closing">
+    <div class="wrap">
+      <h2>Tumpukan cucian? Biar kami yang angkut.</h2>
+      <p>Satu chat, cucian dijemput. Besok sudah bersih.</p>
+      <a class="btn btn-wa js-wa" href="https://wa.me/6281211112222" target="_blank" rel="noopener">Chat WhatsApp sekarang</a>
+      <a class="num" href="tel:+6281211112222">atau telepon 0812-1111-2222</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; <span id="yr">2026</span> Bersih Kilat &middot; Laundry kiloan antar-jemput, Bandung</span>
+    <span>WA 0812-1111-2222</span>
+  </div>
+</footer>
+
+<a class="btn btn-wa float-wa js-wa" href="https://wa.me/6281211112222" target="_blank" rel="noopener" aria-label="Chat Bersih Kilat di WhatsApp">Chat WA</a>
+
+<script>
+(function () {
+  var PHONE = "6281211112222", RATE = 8000, FREE_MIN = 5;
+  var rp = function (n) { return "Rp " + n.toLocaleString("id-ID"); };
+  var wa = function (msg) { return "https://wa.me/" + PHONE + "?text=" + encodeURIComponent(msg); };
+
+  var generic = wa("Halo Bersih Kilat, saya mau pesan jemput laundry kiloan. Alamat saya: ");
+  document.querySelectorAll(".js-wa").forEach(function (a) { a.href = generic; });
+
+  var range = document.getElementById("kg-range"),
+      val = document.getElementById("kg-val"),
+      wash = document.getElementById("line-wash"),
+      pick = document.getElementById("line-pickup"),
+      total = document.getElementById("total"),
+      note = document.getElementById("nota-note"),
+      btn = document.getElementById("nota-wa");
+
+  function render() {
+    var kg = parseInt(range.value, 10), free = kg >= FREE_MIN;
+    val.textContent = kg;
+    wash.textContent = kg + " × " + rp(RATE);
+    total.textContent = rp(kg * RATE) + (free ? "" : " +");
+    pick.innerHTML = free
+      ? '<span class="tag tag-free">GRATIS</span>'
+      : '<span class="tag tag-ask">tanya via WA</span>';
+    note.textContent = free
+      ? "Berat pasti ditimbang saat cucian dijemput."
+      : "Kurang " + (FREE_MIN - kg) + " kg lagi untuk jemput gratis. Ongkos jemput di bawah 5 kg ditanyakan via WA.";
+    btn.href = wa("Halo Bersih Kilat, saya mau pesan jemput laundry kiloan, perkiraan " + kg + " kg (" + rp(kg * RATE) + "). Alamat saya: ");
+  }
+  function step(d) { range.value = Math.min(30, Math.max(1, parseInt(range.value, 10) + d)); render(); }
+  range.addEventListener("input", render);
+  document.getElementById("kg-minus").addEventListener("click", function () { step(-1); });
+  document.getElementById("kg-plus").addEventListener("click", function () { step(1); });
+  document.getElementById("yr").textContent = new Date().getFullYear();
+  render();
+})();
+</script>
+</body>
+</html>
