@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ngoding Bareng — Kursus Coding Akhir Pekan di Jakarta</title>
+  <meta name="description" content="Kursus coding 8 minggu khusus akhir pekan untuk pekerja kantoran pemula di Jakarta. Kelas maksimal 12 orang, Rp 2,5 juta.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+          },
+          colors: {
+            border: 'hsl(var(--border))',
+            input: 'hsl(var(--input))',
+            ring: 'hsl(var(--ring))',
+            background: 'hsl(var(--background))',
+            foreground: 'hsl(var(--foreground))',
+            primary: { DEFAULT: 'hsl(var(--primary))', foreground: 'hsl(var(--primary-foreground))' },
+            secondary: { DEFAULT: 'hsl(var(--secondary))', foreground: 'hsl(var(--secondary-foreground))' },
+            muted: { DEFAULT: 'hsl(var(--muted))', foreground: 'hsl(var(--muted-foreground))' },
+            accent: { DEFAULT: 'hsl(var(--accent))', foreground: 'hsl(var(--accent-foreground))' },
+            card: { DEFAULT: 'hsl(var(--card))', foreground: 'hsl(var(--card-foreground))' },
+          },
+          borderRadius: { lg: 'var(--radius)', md: 'calc(var(--radius) - 2px)', sm: 'calc(var(--radius) - 4px)' },
+        },
+      },
+    };
+  </script>
+  <style>
+    :root {
+      --background: 0 0% 100%;
+      --foreground: 240 10% 3.9%;
+      --card: 0 0% 100%;
+      --card-foreground: 240 10% 3.9%;
+      --primary: 240 5.9% 10%;
+      --primary-foreground: 0 0% 98%;
+      --secondary: 240 4.8% 95.9%;
+      --secondary-foreground: 240 5.9% 10%;
+      --muted: 240 4.8% 95.9%;
+      --muted-foreground: 240 3.8% 46.1%;
+      --accent: 240 4.8% 95.9%;
+      --accent-foreground: 240 5.9% 10%;
+      --border: 240 5.9% 90%;
+      --input: 240 5.9% 90%;
+      --ring: 240 5.9% 10%;
+      --radius: 0.5rem;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background: 240 10% 3.9%;
+        --foreground: 0 0% 98%;
+        --card: 240 10% 3.9%;
+        --card-foreground: 0 0% 98%;
+        --primary: 0 0% 98%;
+        --primary-foreground: 240 5.9% 10%;
+        --secondary: 240 3.7% 15.9%;
+        --secondary-foreground: 0 0% 98%;
+        --muted: 240 3.7% 15.9%;
+        --muted-foreground: 240 5% 64.9%;
+        --accent: 240 3.7% 15.9%;
+        --accent-foreground: 0 0% 98%;
+        --border: 240 3.7% 15.9%;
+        --input: 240 3.7% 15.9%;
+        --ring: 240 4.9% 83.9%;
+      }
+    }
+    html { scroll-behavior: smooth; }
+    body { background: hsl(var(--background)); color: hsl(var(--foreground)); -webkit-font-smoothing: antialiased; }
+    * { border-color: hsl(var(--border)); }
+    details > summary { list-style: none; }
+    details > summary::-webkit-details-marker { display: none; }
+    details[open] .chev { transform: rotate(180deg); }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body class="font-sans min-h-screen">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <div class="mx-auto flex h-14 max-w-5xl items-center justify-between px-4">
+      <a href="#" class="flex items-center gap-2 font-semibold tracking-tight">
+        <span class="inline-flex h-7 w-7 items-center justify-center rounded-md bg-primary font-mono text-xs text-primary-foreground">{ }</span>
+        Ngoding Bareng
+      </a>
+      <nav class="hidden items-center gap-6 text-sm text-muted-foreground md:flex">
+        <a href="#untuk-siapa" class="hover:text-foreground transition-colors">Untuk siapa</a>
+        <a href="#materi" class="hover:text-foreground transition-colors">Materi</a>
+        <a href="#biaya" class="hover:text-foreground transition-colors">Biaya</a>
+        <a href="#faq" class="hover:text-foreground transition-colors">FAQ</a>
+      </nav>
+      <a href="#daftar" class="inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">Daftar</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="mx-auto max-w-5xl px-4 pb-16 pt-16 md:pt-24">
+      <div class="grid items-center gap-12 md:grid-cols-[1.1fr_0.9fr]">
+        <div>
+          <span class="inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium text-muted-foreground">
+            Jakarta · Akhir pekan · Maks. 12 peserta
+          </span>
+          <h1 class="mt-5 text-4xl font-bold tracking-tight md:text-5xl">
+            Belajar coding dari nol, tanpa mengorbankan pekerjaan kantor.
+          </h1>
+          <p class="mt-5 max-w-xl text-lg text-muted-foreground">
+            Delapan minggu, hanya di akhir pekan. Kelas kecil supaya pengajar sempat melihat kode Anda satu per satu —
+            dan di minggu terakhir Anda menyelesaikan satu proyek web sendiri.
+          </p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="#daftar" class="inline-flex h-11 items-center justify-center rounded-md bg-primary px-6 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">Amankan kursi Anda</a>
+            <a href="#materi" class="inline-flex h-11 items-center justify-center rounded-md border bg-background px-6 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">Lihat materi 8 minggu</a>
+          </div>
+        </div>
+
+        <!-- Fact card -->
+        <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+          <div class="border-b px-6 py-4">
+            <p class="font-mono text-xs text-muted-foreground">ringkasan-kursus.txt</p>
+          </div>
+          <dl class="divide-y text-sm">
+            <div class="flex items-center justify-between px-6 py-4">
+              <dt class="text-muted-foreground">Durasi</dt>
+              <dd class="font-medium">8 minggu</dd>
+            </div>
+            <div class="flex items-center justify-between px-6 py-4">
+              <dt class="text-muted-foreground">Jadwal</dt>
+              <dd class="font-medium">Akhir pekan</dd>
+            </div>
+            <div class="flex items-center justify-between px-6 py-4">
+              <dt class="text-muted-foreground">Ukuran kelas</dt>
+              <dd class="font-medium">Maksimal 12 orang</dd>
+            </div>
+            <div class="flex items-center justify-between px-6 py-4">
+              <dt class="text-muted-foreground">Lokasi</dt>
+              <dd class="font-medium">Jakarta, tatap muka</dd>
+            </div>
+            <div class="flex items-center justify-between px-6 py-4">
+              <dt class="text-muted-foreground">Syarat</dt>
+              <dd class="font-medium">Laptop &amp; niat</dd>
+            </div>
+            <div class="flex items-center justify-between bg-muted/50 px-6 py-4">
+              <dt class="text-muted-foreground">Biaya</dt>
+              <dd class="text-lg font-semibold">Rp 2.500.000</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- Untuk siapa -->
+    <section id="untuk-siapa" class="border-t bg-muted/30">
+      <div class="mx-auto max-w-5xl px-4 py-16 md:py-20">
+        <div class="max-w-2xl">
+          <h2 class="text-3xl font-bold tracking-tight">Dibuat untuk orang kantoran yang baru mulai</h2>
+          <p class="mt-3 text-muted-foreground">Bukan bootcamp yang meminta Anda berhenti kerja. Ini kursus untuk Anda yang Senin–Jumat sibuk, tapi ingin benar-benar paham cara membuat program.</p>
+        </div>
+        <div class="mt-10 grid gap-4 md:grid-cols-3">
+          <div class="rounded-lg border bg-card p-6 shadow-sm">
+            <p class="font-mono text-sm text-muted-foreground">01</p>
+            <h3 class="mt-3 font-semibold">Belum pernah ngoding</h3>
+            <p class="mt-2 text-sm text-muted-foreground">Kita mulai dari cara kerja web dan menulis baris kode pertama. Tidak ada istilah yang dianggap "sudah tahu".</p>
+          </div>
+          <div class="rounded-lg border bg-card p-6 shadow-sm">
+            <p class="font-mono text-sm text-muted-foreground">02</p>
+            <h3 class="mt-3 font-semibold">Waktu terbatas</h3>
+            <p class="mt-2 text-sm text-muted-foreground">Semua sesi di akhir pekan. Latihan di antara sesi dirancang singkat, cukup dikerjakan sepulang kerja.</p>
+          </div>
+          <div class="rounded-lg border bg-card p-6 shadow-sm">
+            <p class="font-mono text-sm text-muted-foreground">03</p>
+            <h3 class="mt-3 font-semibold">Butuh bertanya langsung</h3>
+            <p class="mt-2 text-sm text-muted-foreground">Dengan 12 orang per kelas, error Anda dibahas di meja Anda — bukan tenggelam di antara puluhan peserta.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Materi -->
+    <section id="materi" class="border-t">
+      <div class="mx-auto max-w-5xl px-4 py-16 md:py-20">
+        <div class="max-w-2xl">
+          <h2 class="text-3xl font-bold tracking-tight">Materi 8 minggu</h2>
+          <p class="mt-3 text-muted-foreground">Setiap minggu membangun di atas minggu sebelumnya. Di akhir, Anda punya satu website yang Anda tulis sendiri dan bisa dibuka siapa saja.</p>
+        </div>
+        <ol class="mt-10 grid gap-px overflow-hidden rounded-lg border bg-border sm:grid-cols-2">
+          <li class="bg-card p-6">
+            <p class="font-mono text-xs text-muted-foreground">Minggu 1</p>
+            <h3 class="mt-1 font-semibold">Cara kerja web &amp; HTML</h3>
+            <p class="mt-2 text-sm text-muted-foreground">Menyiapkan editor, memahami browser, dan membuat halaman pertama.</p>
+          </li>
+          <li class="bg-card p-6">
+            <p class="font-mono text-xs text-muted-foreground">Minggu 2</p>
+            <h3 class="mt-1 font-semibold">CSS &amp; tata letak</h3>
+            <p class="mt-2 text-sm text-muted-foreground">Warna, tipografi, Flexbox, dan membuat halaman rapi di layar ponsel.</p>
+          </li>
+          <li class="bg-card p-6">
+            <p class="font-mono text-xs text-muted-foreground">Minggu 3</p>
+            <h3 class="mt-1 font-semibold">Dasar JavaScript</h3>
+            <p class="mt-2 text-sm text-muted-foreground">Variabel, kondisi, perulangan, dan fungsi — logika di balik setiap program.</p>
+          </li>
+          <li class="bg-card p-6">
+            <p class="font-mono text-xs text-muted-foreground">Minggu 4</p>
+            <h3 class="mt-1 font-semibold">Halaman yang interaktif</h3>
+            <p class="mt-2 text-sm text-muted-foreground">Merespons klik dan input pengguna, mengubah isi halaman lewat DOM.</p>
+          </li>
+          <li class="bg-card p-6">
+            <p class="font-mono text-xs text-muted-foreground">Minggu 5</p>
+            <h3 class="mt-1 font-semibold">Data &amp; API</h3>
+            <p class="mt-2 text-sm text-muted-foreground">Array dan objek, mengambil data dari internet, dan menampilkannya.</p>
+          </li>
+          <li class="bg-card p-6">
+            <p class="font-mono text-xs text-muted-foreground">Minggu 6</p>
+            <h3 class="mt-1 font-semibold">Git &amp; GitHub</h3>
+            <p class="mt-2 text-sm text-muted-foreground">Menyimpan riwayat kode dan bekerja seperti developer sungguhan.</p>
+          </li>
+          <li class="bg-card p-6">
+            <p class="font-mono text-xs text-muted-foreground">Minggu 7</p>
+            <h3 class="mt-1 font-semibold">Proyek akhir: membangun</h3>
+            <p class="mt-2 text-sm text-muted-foreground">Merancang dan mengerjakan proyek Anda sendiri, didampingi pengajar.</p>
+          </li>
+          <li class="bg-card p-6">
+            <p class="font-mono text-xs text-muted-foreground">Minggu 8</p>
+            <h3 class="mt-1 font-semibold">Proyek akhir: rilis &amp; presentasi</h3>
+            <p class="mt-2 text-sm text-muted-foreground">Mempublikasikan website ke internet dan mempresentasikannya ke kelas.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Biaya -->
+    <section id="biaya" class="border-t bg-muted/30">
+      <div class="mx-auto max-w-5xl px-4 py-16 md:py-20">
+        <div class="grid items-start gap-10 md:grid-cols-2">
+          <div>
+            <h2 class="text-3xl font-bold tracking-tight">Satu harga, semuanya sudah termasuk</h2>
+            <p class="mt-3 text-muted-foreground">Tidak ada paket bertingkat atau biaya tambahan tersembunyi. Karena kursi hanya 12 per angkatan, pendaftaran ditutup begitu kelas penuh.</p>
+          </div>
+          <div class="rounded-lg border bg-card shadow-sm">
+            <div class="p-6">
+              <p class="text-sm font-medium text-muted-foreground">Ngoding Bareng · 1 angkatan</p>
+              <p class="mt-2 flex items-baseline gap-2">
+                <span class="text-4xl font-bold tracking-tight">Rp 2,5 juta</span>
+                <span class="text-sm text-muted-foreground">/ 8 minggu</span>
+              </p>
+            </div>
+            <ul class="space-y-3 border-t p-6 text-sm">
+              <li class="flex gap-3"><svg class="mt-0.5 h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Sesi tatap muka setiap akhir pekan selama 8 minggu</li>
+              <li class="flex gap-3"><svg class="mt-0.5 h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Kelas maksimal 12 peserta</li>
+              <li class="flex gap-3"><svg class="mt-0.5 h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Latihan mingguan dengan umpan balik dari pengajar</li>
+              <li class="flex gap-3"><svg class="mt-0.5 h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Proyek akhir yang dipublikasikan online</li>
+            </ul>
+            <div class="border-t p-6">
+              <a href="#daftar" class="inline-flex h-11 w-full items-center justify-center rounded-md bg-primary px-6 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">Daftar angkatan berikutnya</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="border-t">
+      <div class="mx-auto max-w-3xl px-4 py-16 md:py-20">
+        <h2 class="text-3xl font-bold tracking-tight">Pertanyaan yang sering diajukan</h2>
+        <div class="mt-8 divide-y border-y">
+          <details class="group py-4">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 text-left font-medium">
+              Saya benar-benar belum pernah ngoding. Apakah bisa ikut?
+              <svg class="chev h-4 w-4 shrink-0 text-muted-foreground transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <p class="mt-3 text-sm text-muted-foreground">Bisa. Kursus ini memang dirancang untuk pemula total. Yang Anda perlukan hanya kemampuan memakai komputer sehari-hari.</p>
+          </details>
+          <details class="group py-4">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 text-left font-medium">
+              Perlu laptop seperti apa?
+              <svg class="chev h-4 w-4 shrink-0 text-muted-foreground transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <p class="mt-3 text-sm text-muted-foreground">Laptop Windows, macOS, atau Linux yang bisa menjalankan browser modern sudah cukup. Semua perangkat lunak yang dipakai gratis.</p>
+          </details>
+          <details class="group py-4">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 text-left font-medium">
+              Bagaimana kalau saya berhalangan satu sesi?
+              <svg class="chev h-4 w-4 shrink-0 text-muted-foreground transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <p class="mt-3 text-sm text-muted-foreground">Hubungi kami sebelum sesi. Karena kelasnya kecil, pengajar dapat membantu Anda mengejar materi yang tertinggal.</p>
+          </details>
+          <details class="group py-4">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 text-left font-medium">
+              Apakah setelah lulus saya langsung bisa kerja sebagai programmer?
+              <svg class="chev h-4 w-4 shrink-0 text-muted-foreground transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <p class="mt-3 text-sm text-muted-foreground">Jujur saja: delapan minggu adalah fondasi, bukan jalan pintas ke pekerjaan baru. Anda akan paham dasar-dasarnya, punya satu proyek nyata, dan tahu langkah belajar berikutnya.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="daftar" class="border-t">
+      <div class="mx-auto max-w-5xl px-4 py-16 md:py-20">
+        <div class="rounded-lg border bg-primary px-6 py-12 text-center text-primary-foreground md:px-12">
+          <h2 class="text-3xl font-bold tracking-tight">Mulai akhir pekan ini berbeda</h2>
+          <p class="mx-auto mt-3 max-w-xl opacity-80">Hanya 12 kursi per angkatan. Kirim pesan untuk menanyakan jadwal angkatan berikutnya dan mengamankan tempat Anda.</p>
+          <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+            <!-- GANTI: nomor WhatsApp dan email asli -->
+            <a href="https://wa.me/62XXXXXXXXXX" class="inline-flex h-11 items-center justify-center rounded-md bg-primary-foreground px-6 text-sm font-medium text-primary shadow-sm transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-primary">Chat via WhatsApp</a>
+            <a href="mailto:halo@example.com" class="inline-flex h-11 items-center justify-center rounded-md border border-primary-foreground/30 px-6 text-sm font-medium transition-colors hover:bg-primary-foreground/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-primary">Kirim email</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t">
+    <div class="mx-auto flex max-w-5xl flex-col gap-2 px-4 py-8 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+      <p>&copy; 2026 Ngoding Bareng · Jakarta</p>
+      <p>Kursus coding akhir pekan untuk pemula.</p>
+    </div>
+  </footer>
+</body>
+</html>

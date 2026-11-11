@@ -14,3 +14,5 @@ examples/**/measure-*/**/*.png
 # A run's design trail: page-by-page screenshots and motion frames are reproducible.
 examples/**/design/**/*-page-[0-9]*.png
 examples/**/design/**/motion-frames/
+# A run that installs Playwright locally leaves a lockfile; the skill relies on the preinstalled one.
+skill/design-director/package-lock.json
