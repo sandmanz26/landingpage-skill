@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lereng Merapi — Roastery Kopi Yogyakarta</title>
+<meta name="description" content="Arabika dari lereng Merapi, disangrai tiap Selasa di Yogyakarta. 200 g mulai Rp 95.000, dikirim ke seluruh Indonesia.">
+<style>
+:root{
+  --ash:#e9e5dc;
+  --ash-2:#dcd6ca;
+  --paper:#f4f1ea;
+  --ink:#1b1916;
+  --ink-2:#4a453d;
+  --ink-3:#7a7367;
+  --basalt:#211f1b;
+  --basalt-2:#2e2b26;
+  --ember:#b8461d;
+  --ember-soft:#e8b49b;
+  --moss:#56603f;
+  --line:rgba(27,25,22,.16);
+  --line-strong:rgba(27,25,22,.42);
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua","URW Palladio L",Georgia,serif;
+  --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"SFMono-Regular",Menlo,Consolas,"Liberation Mono",monospace;
+  --gutter:clamp(16px,4vw,56px);
+  --max:1240px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--ash);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ember);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.mono{font-family:var(--mono);font-size:.78rem;letter-spacing:.04em;text-transform:uppercase}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--paper);padding:8px 12px;z-index:10}
+.skip:focus{left:8px}
+
+/* ---------- header ---------- */
+header.top{border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:64px}
+.mark{display:flex;align-items:baseline;gap:10px;text-decoration:none}
+.mark b{font-family:var(--serif);font-weight:600;font-size:1.25rem;letter-spacing:-.01em}
+.mark span{color:var(--ink-3)}
+nav.main{display:flex;gap:28px;align-items:center}
+nav.main a{text-decoration:none;font-size:.92rem;color:var(--ink-2)}
+nav.main a:hover{color:var(--ink)}
+nav.main a.order{color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:1px}
+@media (max-width:760px){nav.main a:not(.order){display:none}}
+
+/* ---------- hero ---------- */
+.hero{padding:clamp(40px,7vw,96px) 0 0}
+.hero-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,4vw,64px);align-items:end}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.6rem,7.4vw,6.4rem);line-height:.96;letter-spacing:-.025em;margin:18px 0 0}
+.hero h1 em{font-style:italic;color:var(--ember)}
+.hero .lede{max-width:34ch;font-size:1.12rem;color:var(--ink-2);margin:28px 0 0}
+.hero .actions{display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center;margin-top:32px}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--paper);text-decoration:none;border:0;font:inherit;font-size:.95rem;padding:14px 22px;cursor:pointer}
+.btn:hover{background:var(--ember)}
+.btn .arr{transition:transform .2s}
+.btn:hover .arr{transform:translateX(3px)}
+.textlink{font-size:.95rem;color:var(--ink-2)}
+.map{position:relative;margin:0}
+.map svg{width:100%;height:auto}
+.map .c path{fill:none;stroke:var(--ink);stroke-width:.7;opacity:.55}
+.map .c path.idx{stroke-width:1.4;opacity:.9}
+.map figcaption{display:flex;justify-content:space-between;border-top:1px solid var(--line-strong);padding-top:10px;margin-top:6px;color:var(--ink-3)}
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--ink);border-bottom:1px solid var(--line);margin-top:clamp(40px,6vw,72px)}
+.facts div{padding:18px 18px 20px 0}
+.facts div+div{padding-left:18px;border-left:1px solid var(--line)}
+.facts dt{color:var(--ink-3)}
+.facts dd{margin:6px 0 0;font-family:var(--serif);font-size:1.35rem;line-height:1.2}
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:1fr}
+  .map{max-width:440px}
+  .facts{grid-template-columns:1fr 1fr}
+  .facts div:nth-child(3){padding-left:0;border-left:0}
+  .facts div:nth-child(n+3){border-top:1px solid var(--line)}
+}
+
+/* ---------- section scaffolding ---------- */
+section{padding:clamp(64px,10vw,128px) 0}
+.sec-head{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,7fr);gap:24px;margin-bottom:clamp(32px,5vw,56px)}
+.sec-head .no{color:var(--ink-3);padding-top:.6em}
+.sec-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,4.4vw,3.4rem);line-height:1.04;letter-spacing:-.02em;margin:0;max-width:18ch}
+.sec-head p{color:var(--ink-2);max-width:52ch;margin:18px 0 0}
+@media (max-width:760px){.sec-head{grid-template-columns:1fr;gap:8px}}
+
+/* ---------- lots ---------- */
+#biji{background:var(--paper);border-top:1px solid var(--line)}
+.profile{border-bottom:1px solid var(--line-strong);margin-bottom:8px}
+.profile svg{width:100%;height:auto;overflow:visible}
+.profile .ground{fill:var(--ash-2)}
+.profile .ridge{fill:none;stroke:var(--ink);stroke-width:1.4;stroke-linejoin:round}
+.profile .grid line{stroke:var(--ink);stroke-width:.5;stroke-dasharray:2 5;opacity:.45}
+.profile .grid text,.profile .pin text{font-family:var(--mono);font-size:12px;fill:var(--ink-3);letter-spacing:.04em}
+.profile .pin circle{fill:var(--paper);stroke:var(--ink);stroke-width:1.4;transition:fill .2s,r .2s}
+.profile .pin line{stroke:var(--ink);stroke-width:.8}
+.profile .pin.on circle{fill:var(--ember);stroke:var(--ember)}
+.profile .pin.on text{fill:var(--ink)}
+.profile .peak text{font-family:var(--mono);font-size:12px;fill:var(--ink-2)}
+
+.lots{list-style:none;margin:0;padding:0}
+.lot{display:grid;grid-template-columns:72px minmax(0,3.2fr) minmax(0,3fr) minmax(0,1.6fr) auto;gap:20px;align-items:center;padding:26px 0;border-bottom:1px solid var(--line)}
+.lot .alt{font-family:var(--mono);font-size:.8rem;color:var(--ink-3);line-height:1.3}
+.lot .alt b{display:block;font-size:1.05rem;color:var(--ink);font-weight:500}
+.lot h3{font-family:var(--serif);font-weight:400;font-size:clamp(1.5rem,2.6vw,2rem);line-height:1.1;margin:0}
+.lot h3 small{display:block;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-top:8px}
+.lot .notes{color:var(--ink-2);font-size:.98rem}
+.lot .notes i{font-family:var(--serif);font-size:1.08rem;color:var(--ink)}
+.roast{display:flex;gap:3px;margin-top:10px;align-items:center}
+.roast span{width:18px;height:6px;background:var(--ash-2)}
+.roast span.f{background:var(--basalt)}
+.roast em{font-style:normal;font-family:var(--mono);font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3);margin-left:8px}
+.lot .price{font-family:var(--serif);font-size:1.4rem;white-space:nowrap}
+.lot .price small{display:block;font-family:var(--mono);font-size:.72rem;color:var(--ink-3);letter-spacing:.04em}
+.qty{display:inline-flex;align-items:center;border:1px solid var(--line-strong);background:var(--paper)}
+.qty button{appearance:none;border:0;background:none;width:40px;height:44px;font:inherit;font-size:1.1rem;cursor:pointer;color:var(--ink)}
+.qty button:hover{background:var(--ash)}
+.qty output{min-width:28px;text-align:center;font-family:var(--mono)}
+.lot.has{background:linear-gradient(90deg,transparent,rgba(184,70,29,.06) 40%,transparent)}
+.tag{display:inline-block;font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ember);border:1px solid var(--ember);padding:1px 6px;margin-left:8px;vertical-align:middle}
+@media (max-width:900px){
+  .lot{grid-template-columns:64px minmax(0,1fr) auto;grid-template-areas:"alt name price" "alt notes notes" "alt qty qty";row-gap:12px}
+  .lot .alt{grid-area:alt;align-self:start;padding-top:6px}
+  .lot .name{grid-area:name}
+  .lot .notes{grid-area:notes}
+  .lot .price{grid-area:price;text-align:right}
+  .lot .qty{grid-area:qty;justify-self:start}
+}
+
+/* order slip */
+.slip-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,420px);gap:clamp(24px,5vw,72px);margin-top:clamp(40px,6vw,64px);align-items:start}
+.slip-row .aside{color:var(--ink-2);max-width:44ch}
+.slip-row .aside h3{font-family:var(--serif);font-weight:400;font-size:1.5rem;margin:0 0 10px;color:var(--ink)}
+.slip{background:var(--ash);border:1px solid var(--line-strong);padding:24px;position:relative}
+.slip::before,.slip::after{content:"";position:absolute;left:-1px;right:-1px;height:8px;background:radial-gradient(circle at 6px -2px,transparent 6px,var(--ash) 6.5px) 0 0/12px 8px repeat-x}
+.slip::before{top:-8px;transform:scaleY(-1)}
+.slip::after{bottom:-8px}
+.slip h4{margin:0 0 14px;display:flex;justify-content:space-between;color:var(--ink-3);font-weight:400}
+.slip ul{list-style:none;margin:0;padding:0;font-family:var(--mono);font-size:.86rem}
+.slip li{display:flex;justify-content:space-between;gap:12px;padding:6px 0;border-bottom:1px dashed var(--line-strong)}
+.slip li.empty{color:var(--ink-3);border:0}
+.slip .total{display:flex;justify-content:space-between;align-items:baseline;margin:16px 0 4px}
+.slip .total b{font-family:var(--serif);font-weight:400;font-size:1.9rem}
+.slip .fine{font-size:.82rem;color:var(--ink-3);margin:0 0 18px}
+.slip .btn{width:100%;justify-content:center}
+.slip .btn[aria-disabled="true"]{background:var(--ink-3);pointer-events:none}
+@media (max-width:860px){.slip-row{grid-template-columns:1fr}}
+
+/* ---------- process ---------- */
+#proses{background:var(--basalt);color:var(--paper)}
+#proses .sec-head .no,#proses .sec-head p{color:#b3ab9d}
+.rail{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border-top:1px solid rgba(244,241,234,.3);counter-reset:step}
+.rail li{padding:22px 18px 0 0;position:relative}
+.rail li::before{content:"";position:absolute;top:-5px;left:0;width:9px;height:9px;background:var(--basalt);border:1px solid var(--paper);border-radius:50%}
+.rail li.hot::before{background:var(--ember);border-color:var(--ember)}
+.rail .day{font-family:var(--mono);font-size:.75rem;letter-spacing:.06em;color:var(--ember-soft);text-transform:uppercase}
+.rail h3{font-family:var(--serif);font-weight:400;font-size:1.45rem;margin:6px 0 8px}
+.rail p{margin:0;color:#c9c2b5;font-size:.93rem;line-height:1.55}
+@media (max-width:960px){
+  .rail{grid-template-columns:1fr;border-top:0;border-left:1px solid rgba(244,241,234,.3);margin-left:4px}
+  .rail li{padding:0 0 28px 24px}
+  .rail li::before{top:6px;left:-5px}
+}
+.stamp{margin-top:clamp(48px,7vw,80px);display:flex;flex-wrap:wrap;gap:12px 40px;align-items:baseline;border-top:1px solid rgba(244,241,234,.18);padding-top:22px}
+.stamp .mono{color:#b3ab9d}
+.stamp strong{font-family:var(--serif);font-weight:400;font-size:clamp(1.4rem,3vw,2rem);color:var(--paper)}
+
+/* ---------- shipping ---------- */
+.ship{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,5vw,72px)}
+.ship .big{font-family:var(--serif);font-size:clamp(1.3rem,2.4vw,1.75rem);line-height:1.35;margin:0}
+.ship .big+p{color:var(--ink-2)}
+table.eta{width:100%;border-collapse:collapse}
+table.eta th,table.eta td{text-align:left;padding:14px 0;border-bottom:1px solid var(--line);vertical-align:top}
+table.eta thead th{font-family:var(--mono);font-size:.72rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);border-bottom:1px solid var(--ink)}
+table.eta td:last-child,table.eta th:last-child{text-align:right;font-family:var(--mono);white-space:nowrap}
+table.eta tbody th{font-weight:400}
+table.eta tbody th small{display:block;color:var(--ink-3);font-size:.85rem}
+.bar{display:inline-block;height:6px;background:var(--ember);vertical-align:middle;margin-right:10px}
+@media (max-width:860px){.ship{grid-template-columns:1fr}}
+
+/* ---------- brew ---------- */
+#seduh{background:var(--paper);border-top:1px solid var(--line)}
+.recipes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--ink)}
+.recipe{padding:24px 24px 8px 0}
+.recipe+.recipe{padding-left:24px;border-left:1px solid var(--line)}
+.recipe h3{font-family:var(--serif);font-weight:400;font-size:1.5rem;margin:0 0 4px}
+.recipe .ratio{font-family:var(--serif);font-size:3.2rem;line-height:1;letter-spacing:-.02em;margin:18px 0 14px}
+.recipe .ratio span{color:var(--ink-3)}
+.recipe dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:0 0 14px;font-size:.93rem}
+.recipe dt{color:var(--ink-3)}
+.recipe dd{margin:0;font-family:var(--mono);font-size:.86rem}
+.recipe p{color:var(--ink-2);font-size:.93rem;margin:0}
+@media (max-width:860px){.recipes{grid-template-columns:1fr}.recipe,.recipe+.recipe{padding:22px 0;border-left:0;border-bottom:1px solid var(--line)}}
+
+/* ---------- faq ---------- */
+.faq{max-width:860px;margin-left:auto}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:24px;padding:22px 0;font-family:var(--serif);font-size:1.3rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--mono);color:var(--ink-3);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{margin:0 0 22px;color:var(--ink-2);max-width:62ch}
+
+/* ---------- closing ---------- */
+.closing{background:var(--ember);color:var(--paper);padding:clamp(56px,9vw,112px) 0}
+.closing .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:32px}
+.closing h2{font-family:var(--serif);font-weight:400;font-size:clamp(2.2rem,6vw,4.8rem);line-height:1;letter-spacing:-.025em;margin:0;max-width:14ch}
+.closing .btn{background:var(--paper);color:var(--ink)}
+.closing .btn:hover{background:var(--basalt);color:var(--paper)}
+footer{background:var(--basalt);color:#b3ab9d;padding:40px 0;font-size:.9rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+footer b{font-family:var(--serif);font-weight:400;color:var(--paper);font-size:1.1rem}
+</style>
+</head>
+<body>
+<a class="skip" href="#biji">Langsung ke daftar biji</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#"><b>Lereng Merapi</b><span class="mono">Roastery · Yogyakarta</span></a>
+    <nav class="main" aria-label="Utama">
+      <a href="#biji">Biji</a>
+      <a href="#proses">Proses</a>
+      <a href="#kirim">Pengiriman</a>
+      <a href="#seduh">Seduh</a>
+      <a class="order" href="#pesan">Pesan</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="mono" style="color:var(--ink-3);margin:0">Arabika lokal · Lereng selatan Merapi</p>
+        <h1 id="h1">Tumbuh di abu&nbsp;gunung. Disangrai <em>di Jogja.</em></h1>
+        <p class="lede">Kami membeli ceri arabika dari kebun di lereng Merapi, memprosesnya dekat kebun, lalu menyangrainya dalam batch kecil setiap Selasa. Yang sampai di rumah Anda berumur hitungan hari, bukan bulan.</p>
+        <div class="actions">
+          <a class="btn" href="#biji">Pilih biji <span class="arr" aria-hidden="true">→</span></a>
+          <a class="textlink" href="#proses">Bagaimana kami bekerja</a>
+        </div>
+      </div>
+      <figure class="map">
+        <svg viewBox="0 0 600 600" role="img" aria-labelledby="mapt">
+          <title id="mapt">Peta kontur stilistik lereng Merapi dengan titik ketinggian kebun</title>
+          <g class="c"><path d="M333.5,291.4L333.8,293.2L333.6,294.9L332.7,296.6L331.5,298.1L329.9,299.4L328.3,300.6L326.7,301.7L325.2,302.7L323.9,303.8L322.8,304.9L321.9,306.1L320.9,307.3L319.9,308.5L318.7,309.7L317.3,310.6L315.7,311.4L314.0,311.8L312.2,312.0L310.4,312.1L308.7,312.0L307.0,312.0L305.4,311.9L303.8,312.0L302.2,312.1L300.6,312.4L298.9,312.6L297.2,312.9L295.4,313.0L293.6,313.0L291.8,312.8L290.0,312.5L288.2,312.0L286.4,311.5L284.7,310.9L282.9,310.2L281.1,309.4L279.4,308.5L277.8,307.4L276.4,306.1L275.4,304.6L274.7,302.9L274.6,301.1L274.9,299.3L275.6,297.5L276.6,295.7L277.7,294.1L278.7,292.7L279.5,291.4L279.9,290.2L280.0,288.9L279.8,287.6L279.3,286.2L278.8,284.6L278.4,283.0L278.2,281.3L278.4,279.7L279.0,278.2L280.0,276.9L281.3,275.8L282.7,274.8L284.2,274.0L285.8,273.2L287.3,272.4L288.7,271.5L290.1,270.6L291.6,269.6L293.1,268.5L294.7,267.6L296.5,266.8L298.3,266.3L300.3,266.1L302.2,266.1L304.1,266.5L306.0,267.0L307.7,267.8L309.4,268.6L311.0,269.4L312.5,270.3L313.9,271.2L315.2,272.2L316.4,273.2L317.5,274.4L318.5,275.6L319.3,276.8L320.0,278.1L320.6,279.4L321.3,280.5L322.1,281.6L323.2,282.6L324.5,283.5L326.1,284.5L327.8,285.6L329.6,286.8L331.3,288.1L332.6,289.7Z"/>
+<path d="M367.9,292.8L368.0,296.4L367.0,299.8L364.9,303.1L362.0,305.9L358.4,308.4L354.6,310.5L350.9,312.3L347.5,314.0L344.7,315.8L342.5,317.7L340.7,319.9L339.1,322.3L337.5,325.0L335.8,327.6L333.6,330.1L331.1,332.1L328.1,333.7L324.8,334.7L321.3,335.1L317.8,335.2L314.3,335.2L310.9,335.1L307.7,335.2L304.4,335.5L301.1,336.1L297.6,336.9L293.9,337.8L290.0,338.5L286.1,338.8L282.1,338.7L278.2,338.0L274.5,336.9L271.1,335.2L268.0,333.2L265.1,331.0L262.5,328.5L260.2,325.9L258.1,323.1L256.3,320.2L254.9,317.1L254.1,313.9L253.8,310.6L254.2,307.3L255.1,304.1L256.3,300.9L257.7,298.0L259.0,295.3L259.9,292.8L260.3,290.3L259.9,287.8L259.0,285.1L257.6,282.1L256.1,278.8L254.8,275.3L254.0,271.6L254.0,268.0L254.9,264.6L256.8,261.7L259.5,259.2L262.7,257.3L266.3,255.8L270.0,254.6L273.6,253.6L277.1,252.5L280.3,251.2L283.4,249.7L286.6,248.0L289.8,246.4L293.2,244.9L296.8,243.9L300.6,243.4L304.4,243.5L308.1,244.3L311.7,245.7L315.0,247.5L318.0,249.6L320.8,251.7L323.4,253.7L326.0,255.5L328.5,257.2L331.1,258.8L333.7,260.3L336.3,261.8L338.9,263.4L341.4,265.2L343.8,267.1L346.1,269.1L348.5,271.1L351.0,273.2L353.6,275.4L356.4,277.7L359.4,280.3L362.2,283.0L364.8,286.0L366.8,289.3Z"/>
+<path d="M398.7,294.2L397.8,299.3L395.7,304.2L392.3,308.7L388.0,312.8L382.9,316.3L377.5,319.2L372.2,321.8L367.5,324.1L363.5,326.6L360.5,329.4L358.2,332.7L356.4,336.6L354.8,341.0L352.9,345.6L350.5,350.2L347.3,354.3L343.3,357.6L338.6,360.1L333.4,361.5L328.0,362.1L322.4,362.0L317.0,361.7L311.8,361.4L306.6,361.4L301.4,361.8L296.0,362.6L290.4,363.6L284.5,364.5L278.4,365.0L272.3,364.8L266.4,363.7L260.9,361.6L256.1,358.5L252.1,354.7L248.8,350.3L246.2,345.7L244.1,340.9L242.4,336.2L240.9,331.6L239.6,327.1L238.5,322.8L237.6,318.6L236.9,314.3L236.6,310.2L236.5,306.1L236.7,302.0L236.8,298.1L236.7,294.2L236.1,290.3L235.1,286.2L233.4,281.8L231.5,277.1L229.5,271.9L227.8,266.4L226.9,260.7L227.2,255.1L228.8,249.9L231.9,245.4L236.4,241.7L241.8,239.0L248.0,237.2L254.3,236.1L260.5,235.4L266.3,234.8L271.7,233.9L276.6,232.6L281.3,230.8L286.0,228.8L290.8,226.7L295.9,224.9L301.2,223.7L306.6,223.4L312.0,224.1L317.2,225.8L322.0,228.2L326.4,231.2L330.5,234.3L334.3,237.3L338.0,239.9L341.9,242.1L346.1,243.8L350.7,245.2L355.6,246.6L360.7,248.1L365.9,249.9L370.9,252.2L375.6,254.9L379.9,258.1L383.8,261.8L387.2,265.7L390.3,270.0L393.1,274.5L395.4,279.1L397.3,284.0L398.4,289.1Z"/>
+<path d="M422.3,295.6L420.0,301.8L417.0,307.7L413.2,313.3L408.7,318.4L403.6,323.0L398.2,327.2L393.0,331.0L388.1,334.6L384.0,338.4L380.8,342.7L378.5,347.7L376.8,353.5L375.1,360.0L373.1,367.0L370.3,374.0L366.4,380.6L361.3,386.3L355.0,390.6L347.8,393.5L340.0,394.8L332.0,394.8L324.0,394.0L316.3,392.7L308.8,391.6L301.5,390.9L294.1,390.7L286.5,391.0L278.6,391.5L270.5,391.7L262.3,391.2L254.4,389.6L247.1,386.6L240.8,382.3L235.6,376.9L231.7,370.5L229.0,363.6L227.1,356.6L225.7,349.9L224.5,343.6L223.0,337.8L221.1,332.5L218.7,327.4L215.9,322.4L213.0,317.5L210.2,312.3L207.6,306.9L205.4,301.4L203.5,295.6L202.0,289.6L200.6,283.5L199.4,277.1L198.4,270.4L197.7,263.5L197.7,256.4L198.5,249.3L200.6,242.4L204.2,236.1L209.3,230.6L215.8,226.1L223.5,222.9L232.0,221.0L240.8,220.1L249.4,219.9L257.5,219.9L264.8,219.6L271.4,218.7L277.5,217.0L283.3,214.6L289.2,211.7L295.4,208.6L301.9,206.1L308.8,204.4L315.9,203.9L322.8,204.8L329.5,207.0L335.7,210.1L341.4,213.8L346.7,217.6L352.0,221.0L357.4,223.8L363.4,226.0L370.0,227.7L377.2,229.1L385.0,230.7L393.0,232.7L400.7,235.5L407.7,239.3L413.8,244.0L418.5,249.5L422.0,255.7L424.1,262.3L425.2,269.0L425.5,275.8L425.0,282.6L423.9,289.2Z"/>
+<path class="idx" d="M439.3,297.0L435.9,304.0L432.8,310.7L429.9,317.1L427.0,323.5L423.9,329.7L420.6,335.7L417.2,341.6L413.7,347.5L410.3,353.5L407.3,359.9L404.7,367.0L402.3,374.7L399.6,383.0L396.3,391.7L392.1,400.4L386.6,408.6L379.7,415.7L371.4,421.2L361.9,424.8L351.7,426.3L341.1,426.0L330.7,424.2L320.6,421.4L311.0,418.5L301.9,415.8L292.9,413.9L284.0,412.7L274.8,412.1L265.3,411.7L255.6,410.9L246.0,409.3L236.9,406.3L228.9,401.7L222.2,395.6L217.1,388.2L213.5,380.1L211.1,371.6L209.4,363.4L207.7,355.8L205.5,348.9L202.3,342.7L197.9,336.9L192.5,331.3L186.4,325.5L180.0,319.2L173.9,312.4L168.8,304.9L164.9,297.0L162.5,288.7L161.6,280.2L162.0,271.8L163.6,263.4L166.2,255.1L169.6,247.1L173.9,239.4L179.2,232.2L185.6,225.6L192.9,219.8L201.2,215.0L210.5,211.4L220.5,209.1L230.7,207.8L240.7,207.4L250.1,207.2L258.8,206.8L266.6,205.7L273.8,203.6L280.6,200.4L287.5,196.2L294.7,191.6L302.5,187.1L311.0,183.4L319.9,181.0L329.0,180.4L338.0,181.5L346.5,184.3L354.3,188.2L361.7,192.8L368.6,197.4L375.6,201.7L383.0,205.2L391.1,208.1L400.0,210.6L409.6,213.0L419.5,216.0L429.2,219.8L437.9,224.8L445.1,231.0L450.3,238.5L453.2,246.8L453.9,255.7L452.7,264.7L450.1,273.4L446.7,281.8L442.9,289.6Z"/>
+<path d="M454.5,298.4L450.9,306.1L448.7,313.6L447.9,321.2L448.0,329.2L448.4,337.5L448.7,346.2L448.3,355.1L447.0,364.2L444.6,373.2L441.5,382.3L437.8,391.5L433.3,400.7L428.0,409.9L421.8,419.0L414.7,427.8L406.4,435.9L396.8,442.9L386.1,448.3L374.3,451.8L361.9,453.1L349.1,452.3L336.6,449.7L324.5,445.8L313.2,441.4L302.5,437.1L292.3,433.5L282.2,431.0L272.0,429.4L261.3,428.6L250.2,427.9L238.9,426.8L227.7,424.5L217.3,420.7L208.1,415.1L200.6,407.8L194.8,399.3L190.5,390.1L187.2,380.7L184.3,371.8L180.9,363.4L176.5,355.8L170.5,348.8L163.0,341.8L154.3,334.7L145.2,326.9L136.6,318.2L129.3,308.7L124.2,298.4L121.9,287.7L122.5,277.0L125.7,266.6L131.3,256.9L138.6,247.9L147.0,239.8L156.1,232.4L165.4,225.7L174.9,219.7L184.2,214.1L193.5,209.0L203.0,204.5L212.8,200.9L222.8,198.0L232.6,195.7L242.2,193.7L251.4,191.6L260.0,189.0L268.2,185.5L276.3,181.0L284.5,175.6L293.3,169.6L302.8,163.5L313.2,158.1L324.3,154.1L335.8,152.0L347.3,152.2L358.4,154.7L368.7,159.1L378.2,164.8L386.8,171.3L395.0,177.7L403.2,183.7L411.8,188.9L421.2,193.5L431.3,197.8L441.9,202.3L452.3,207.4L462.0,213.7L469.9,221.3L475.5,230.2L478.2,240.2L478.0,250.8L475.2,261.4L470.6,271.7L465.0,281.4L459.4,290.2Z"/>
+<path d="M475.1,299.8L472.1,308.5L471.4,317.3L472.9,326.5L476.1,336.5L480.0,347.4L483.7,359.2L486.2,371.5L486.7,384.0L484.8,396.2L480.7,407.8L474.7,418.8L466.7,428.7L457.1,437.5L446.5,445.3L435.0,452.3L422.9,458.5L410.2,463.6L397.0,467.7L383.4,470.3L369.4,471.4L355.3,470.8L341.5,468.5L328.1,465.1L315.4,460.9L303.3,456.5L291.8,452.7L280.4,449.8L268.8,448.0L256.7,447.1L243.9,446.9L230.5,446.5L216.8,445.2L203.4,442.6L190.9,438.0L179.9,431.4L170.8,423.0L163.6,413.2L157.9,402.7L153.3,392.1L148.8,381.7L143.7,371.9L137.3,362.7L129.4,353.6L120.3,344.3L110.5,334.5L101.2,323.8L93.5,312.2L88.6,299.8L87.2,287.1L89.8,274.5L96.2,262.7L105.9,252.0L118.0,242.7L131.3,234.9L145.0,228.2L158.0,222.4L170.0,217.0L180.5,211.6L189.5,205.7L197.8,199.6L205.8,193.4L213.9,187.1L222.3,181.1L231.0,175.3L240.1,169.7L249.5,164.3L259.2,158.7L269.2,152.9L279.7,146.8L290.8,140.5L302.7,134.3L315.4,128.9L328.9,124.8L342.8,122.7L356.7,123.0L370.1,125.9L382.6,131.1L393.9,138.3L404.0,146.8L413.0,155.8L421.4,164.6L429.8,172.8L438.6,180.1L448.2,186.7L458.3,193.0L468.8,199.5L478.8,206.8L487.6,215.1L494.1,224.7L497.9,235.4L498.5,246.9L496.2,258.5L491.7,269.9L485.9,280.7L480.0,290.6Z"/>
+<path d="M506.6,301.2L504.5,311.6L504.7,322.2L507.4,333.4L512.0,345.6L517.7,359.1L523.0,373.7L526.7,389.0L527.5,404.4L524.8,419.1L518.6,432.6L509.4,444.5L497.1,454.1L482.6,461.5L466.9,466.9L450.7,470.9L434.6,473.8L418.9,476.2L403.7,478.3L388.9,480.1L374.3,481.6L359.9,482.5L345.7,482.7L331.5,482.0L317.6,480.6L303.9,478.7L290.5,476.7L277.0,475.0L263.3,473.8L249.1,473.2L234.1,473.0L218.3,472.7L202.0,471.7L185.6,469.4L169.8,465.2L155.3,458.8L142.7,450.2L132.3,439.6L124.2,427.6L117.9,414.9L112.8,401.9L108.0,389.2L102.8,377.0L96.6,365.1L89.3,353.3L81.4,341.2L73.7,328.6L67.3,315.2L63.5,301.2L63.4,287.0L67.5,273.1L75.9,260.3L88.2,248.8L103.3,239.2L119.8,231.4L136.3,225.1L151.7,219.6L165.0,214.3L175.5,208.3L183.3,200.9L189.6,192.1L195.1,182.2L200.6,171.4L207.0,160.3L214.8,149.5L224.0,139.4L234.6,130.5L246.5,122.9L259.5,116.4L273.2,110.9L287.5,106.3L302.3,102.5L317.6,99.6L333.2,98.0L349.0,97.9L364.6,99.7L379.7,103.8L393.7,110.2L406.4,118.5L417.6,128.4L427.4,139.2L436.1,150.1L444.3,160.5L452.5,170.1L461.3,178.8L470.9,186.6L481.3,194.2L491.8,202.0L501.9,210.6L510.5,220.2L516.8,230.9L520.3,242.6L520.8,254.8L518.7,267.1L514.8,279.1L510.4,290.4Z"/>
+<path d="M549.3,302.6L547.5,315.3L547.2,328.1L548.8,341.4L552.1,355.6L556.5,371.0L560.5,387.5L562.8,404.7L562.1,421.8L557.4,437.8L548.6,452.2L536.2,464.3L520.1,473.2L501.4,479.0L481.4,481.9L461.3,482.9L442.0,482.9L424.2,482.9L407.9,483.7L392.7,485.6L378.4,488.9L364.3,493.1L350.0,497.8L335.2,502.3L319.8,506.2L303.9,509.0L287.7,510.6L271.1,511.2L254.3,510.9L237.1,510.1L219.6,508.7L201.6,506.8L183.2,504.2L164.8,500.2L146.8,494.7L129.9,487.0L114.9,477.2L102.1,465.2L92.1,451.4L84.7,436.4L79.4,420.8L75.6,405.2L72.5,389.9L69.1,375.1L65.2,360.7L60.6,346.5L55.8,332.2L51.6,317.6L49.3,302.6L49.8,287.5L54.0,272.8L62.3,259.0L74.4,246.6L89.5,236.0L106.3,227.3L123.3,220.1L139.1,213.7L152.5,207.4L162.6,199.8L169.2,190.1L173.8,178.2L177.5,164.3L181.4,148.9L186.7,132.9L194.2,117.3L204.3,103.2L217.1,91.4L232.1,82.5L248.7,76.7L266.3,73.6L284.3,72.8L302.2,73.7L319.8,75.8L337.0,78.7L353.8,82.5L370.1,87.0L385.8,92.7L400.7,99.7L414.4,108.0L426.9,117.6L438.1,128.1L448.0,139.1L457.2,150.1L466.0,160.6L475.2,170.2L485.0,179.2L495.8,187.5L507.4,195.8L519.2,204.5L530.5,214.1L540.3,224.8L547.8,236.7L552.6,249.5L554.4,262.8L553.9,276.3L551.8,289.6Z"/>
+<path class="idx" d="M597.4,304.0L594.8,319.2L592.2,334.3L590.5,349.5L589.9,365.1L590.0,381.5L590.0,398.6L588.8,416.1L585.0,433.4L577.7,449.6L566.8,464.0L552.5,476.2L534.4,484.9L513.6,490.1L491.5,492.1L469.5,492.0L448.7,490.9L429.9,490.3L413.1,491.4L398.1,495.0L384.1,501.3L370.1,510.1L355.5,520.5L339.5,531.4L322.0,541.5L303.1,549.9L283.1,555.7L262.5,558.6L241.9,558.7L221.5,556.3L201.5,551.9L181.9,546.0L162.7,539.0L144.0,530.9L125.9,521.7L108.7,511.2L93.0,499.0L79.4,485.3L68.2,469.9L59.8,453.2L54.2,435.7L50.8,417.9L49.0,400.3L48.0,383.2L47.0,366.8L45.5,350.8L43.6,335.2L41.5,319.7L40.1,304.0L40.2,288.3L42.9,272.7L48.8,257.7L58.1,243.8L70.4,231.2L84.7,220.3L100.0,210.7L114.7,202.0L127.8,193.4L137.8,183.6L144.5,171.4L149.3,156.9L153.3,140.1L157.7,121.6L163.8,102.3L172.7,83.7L185.0,67.3L200.6,54.3L219.1,45.7L239.5,41.7L260.9,42.2L282.2,46.4L302.7,53.1L322.0,61.2L340.0,69.7L357.0,77.8L373.1,85.1L388.8,91.7L404.1,98.0L419.1,104.4L433.6,111.3L447.4,119.0L460.4,127.6L472.5,136.9L484.1,146.5L495.4,156.3L507.0,165.8L519.0,175.2L531.8,184.6L545.1,194.3L558.5,204.7L571.1,216.1L582.1,228.8L590.7,242.7L596.4,257.5L599.1,272.9L599.2,288.5Z"/>
+<path d="M641.1,305.4L637.2,322.9L631.7,339.9L625.7,356.5L619.8,372.9L614.3,389.3L609.0,405.9L603.2,422.6L596.0,439.1L586.5,454.7L574.7,469.1L560.5,482.0L543.1,491.8L523.0,498.5L501.6,502.3L479.9,503.9L459.3,504.7L440.4,506.1L423.4,509.5L408.1,515.9L393.5,525.8L378.8,539.0L362.7,554.5L344.6,570.8L324.2,586.2L301.6,598.9L277.5,607.7L252.7,611.7L228.2,610.6L204.8,605.1L183.0,595.8L163.0,583.9L144.6,570.4L127.4,556.2L111.3,541.8L95.9,527.2L81.3,512.4L67.7,497.0L55.8,480.9L45.8,463.8L38.3,446.0L33.2,427.6L30.3,409.1L29.1,390.7L28.8,372.8L28.7,355.5L28.2,338.6L27.3,322.0L26.2,305.4L25.4,288.7L25.9,271.9L28.5,255.3L33.7,239.1L41.8,223.7L52.5,209.5L65.0,196.5L78.3,184.5L91.4,172.9L102.7,160.6L111.5,146.5L119.1,130.7L126.2,113.1L133.8,94.0L143.1,74.5L155.1,55.8L170.3,39.6L189.0,27.4L210.5,20.2L234.0,18.6L258.2,22.5L281.8,31.0L304.0,42.6L324.2,55.6L342.4,68.4L359.1,79.6L374.9,88.3L390.5,94.5L406.7,98.5L423.6,101.0L441.2,103.3L459.3,106.1L477.2,110.3L494.6,116.3L510.9,124.0L526.2,133.4L540.5,143.8L554.1,155.1L567.5,166.9L580.9,179.1L594.2,192.0L607.2,205.5L619.1,220.1L629.3,235.8L636.9,252.4L641.5,269.8L642.8,287.6Z"/></g>
+          <g font-family="ui-monospace,Menlo,monospace" font-size="13" fill="#1b1916">
+            <circle cx="308" cy="293" r="4" fill="#b8461d"/>
+            <text x="320" y="285">PUNCAK ±2.910</text>
+            <circle cx="372" cy="470" r="5" fill="none" stroke="#1b1916" stroke-width="1.4"/>
+            <text x="384" y="474">1.400</text>
+            <circle cx="210" cy="508" r="5" fill="none" stroke="#1b1916" stroke-width="1.4"/>
+            <text x="150" y="534">1.250</text>
+            <circle cx="300" cy="560" r="5" fill="none" stroke="#1b1916" stroke-width="1.4"/>
+            <text x="312" y="580">1.100</text>
+            <path d="M560 40v34M553 54l7-14 7 14" fill="none" stroke="#1b1916" stroke-width="1.2"/>
+            <text x="555" y="92">U</text>
+          </g>
+        </svg>
+        <figcaption class="mono"><span>Kontur stilistik, bukan skala</span><span>7°32′ LS</span></figcaption>
+      </figure>
+    </div>
+    <dl class="facts">
+      <div><dt class="mono">Biji</dt><dd>100% arabika lokal</dd></div>
+      <div><dt class="mono">Kemasan</dt><dd>200 g, katup satu arah</dd></div>
+      <div><dt class="mono">Harga</dt><dd>Mulai Rp 95.000</dd></div>
+      <div><dt class="mono">Kirim</dt><dd>Ke seluruh Indonesia</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id="biji" aria-labelledby="biji-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="no mono">01 — Biji</span>
+      <div>
+        <h2 id="biji-h">Empat lot, diurutkan menurut ketinggian.</h2>
+        <p>Makin tinggi kebunnya, makin lambat ceri matang, dan makin terang rasanya. Arahkan kursor ke lot untuk melihat posisinya di lereng.</p>
+      </div>
+    </div>
+
+    <div class="profile" aria-hidden="true">
+      <svg viewBox="0 0 1000 300">
+        <g class="grid">
+          <line x1="0" x2="1000" y1="230" y2="230"/><text x="0" y="222">1.100 m</text>
+          <line x1="0" x2="1000" y1="155" y2="155"/><text x="0" y="147">1.250 m</text>
+          <line x1="0" x2="1000" y1="80" y2="80"/><text x="0" y="72">1.400 m</text>
+        </g>
+        <path class="ground" d="M0 300 L0 282 L120 268 L240 248 L330 230 L430 196 L520 155 L610 130 L700 108 L790 80 L880 46 L960 12 L1000 -10 L1000 300Z"/>
+        <path class="ridge" d="M0 282 L120 268 L240 248 L330 230 L430 196 L520 155 L610 130 L700 108 L790 80 L880 46 L960 12 L1000 -10"/>
+        <g class="peak"><text x="905" y="12">→ puncak</text></g>
+        <g class="pin" data-pin="harian"><line x1="330" x2="330" y1="230" y2="262"/><circle cx="330" cy="230" r="7"/><text x="338" y="280">LERENG HARIAN</text></g>
+        <g class="pin" data-pin="abu"><line x1="520" x2="520" y1="155" y2="190"/><circle cx="520" cy="155" r="7"/><text x="476" y="208">ABU MANIS</text></g>
+        <g class="pin" data-pin="kabut"><line x1="610" x2="610" y1="130" y2="100"/><circle cx="610" cy="130" r="7"/><text x="560" y="92">KABUT PAGI</text></g>
+        <g class="pin" data-pin="pasir"><line x1="790" x2="790" y1="80" y2="120"/><circle cx="790" cy="80" r="7"/><text x="760" y="138">PASIR HITAM</text></g>
+      </svg>
+    </div>
+
+    <ul class="lots">
+      <li class="lot" data-lot="harian" data-name="Lereng Harian" data-price="95000">
+        <div class="alt"><b>1.100</b>mdpl</div>
+        <div class="name"><h3>Lereng Harian<small>Semi-washed · Batch harian</small></h3></div>
+        <div class="notes"><i>Gula aren, kakao, kacang sangrai.</i> Tebal dan bersahabat dengan susu. Kopi yang kami minum sendiri setiap pagi.
+          <div class="roast" aria-label="Tingkat sangrai: medium"><span class="f"></span><span class="f"></span><span class="f"></span><span></span><span></span><em>Medium</em></div></div>
+        <div class="price">Rp 95.000<small>200 g</small></div>
+        <div class="qty" role="group" aria-label="Jumlah Lereng Harian"><button type="button" data-d="-1" aria-label="Kurangi">−</button><output>0</output><button type="button" data-d="1" aria-label="Tambah">+</button></div>
+      </li>
+      <li class="lot" data-lot="abu" data-name="Abu Manis" data-price="120000">
+        <div class="alt"><b>1.250</b>mdpl</div>
+        <div class="name"><h3>Abu Manis<small>Honey process</small></h3></div>
+        <div class="notes"><i>Nangka, karamel, kayu manis.</i> Lendir buah dibiarkan kering di biji; manisnya terasa sampai tegukan terakhir.
+          <div class="roast" aria-label="Tingkat sangrai: medium terang"><span class="f"></span><span class="f"></span><span></span><span></span><span></span><em>Medium terang</em></div></div>
+        <div class="price">Rp 120.000<small>200 g</small></div>
+        <div class="qty" role="group" aria-label="Jumlah Abu Manis"><button type="button" data-d="-1" aria-label="Kurangi">−</button><output>0</output><button type="button" data-d="1" aria-label="Tambah">+</button></div>
+      </li>
+      <li class="lot" data-lot="kabut" data-name="Kabut Pagi" data-price="115000">
+        <div class="alt"><b>1.300</b>mdpl</div>
+        <div class="name"><h3>Kabut Pagi<small>Full washed</small></h3></div>
+        <div class="notes"><i>Jeruk nipis, melati, madu hutan.</i> Bersih dan jernih. Paling jujur menunjukkan karakter lereng.
+          <div class="roast" aria-label="Tingkat sangrai: terang"><span class="f"></span><span></span><span></span><span></span><span></span><em>Terang</em></div></div>
+        <div class="price">Rp 115.000<small>200 g</small></div>
+        <div class="qty" role="group" aria-label="Jumlah Kabut Pagi"><button type="button" data-d="-1" aria-label="Kurangi">−</button><output>0</output><button type="button" data-d="1" aria-label="Tambah">+</button></div>
+      </li>
+      <li class="lot" data-lot="pasir" data-name="Pasir Hitam" data-price="145000">
+        <div class="alt"><b>1.400</b>mdpl</div>
+        <div class="name"><h3>Pasir Hitam<span class="tag">Terbatas</span><small>Natural anaerob</small></h3></div>
+        <div class="notes"><i>Markisa, anggur merah, cokelat hitam.</i> Fermentasi tertutup 72 jam sebelum dijemur. Liar, dan kami menyukainya.
+          <div class="roast" aria-label="Tingkat sangrai: terang"><span class="f"></span><span></span><span></span><span></span><span></span><em>Terang</em></div></div>
+        <div class="price">Rp 145.000<small>200 g</small></div>
+        <div class="qty" role="group" aria-label="Jumlah Pasir Hitam"><button type="button" data-d="-1" aria-label="Kurangi">−</button><output>0</output><button type="button" data-d="1" aria-label="Tambah">+</button></div>
+      </li>
+    </ul>
+
+    <div class="slip-row" id="pesan">
+      <div class="aside">
+        <h3>Biji utuh atau digiling?</h3>
+        <p>Default kami biji utuh: aromanya bertahan jauh lebih lama. Kalau Anda belum punya grinder, tulis metode seduh Anda di pesan dan kami giling sesuai ukurannya pada hari pengiriman.</p>
+        <p>Pembayaran dan ongkos kirim kami konfirmasi lewat chat setelah pesanan masuk.</p>
+      </div>
+      <div class="slip" aria-live="polite">
+        <h4 class="mono"><span>Nota pesanan</span><span id="slip-date"></span></h4>
+        <ul id="slip-list"><li class="empty">Belum ada biji dipilih.</li></ul>
+        <div class="total"><span class="mono">Subtotal</span><b id="slip-total">Rp 0</b></div>
+        <p class="fine">Belum termasuk ongkos kirim.</p>
+        <a class="btn" id="slip-cta" href="#" aria-disabled="true" target="_blank" rel="noopener">Kirim pesanan lewat WhatsApp <span class="arr" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="proses" aria-labelledby="proses-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="no mono">02 — Proses</span>
+      <div>
+        <h2 id="proses-h">Dari ceri merah ke cangkir Anda.</h2>
+        <p>Tidak ada gudang, tidak ada stok berbulan-bulan. Kami menyangrai sesuai pesanan minggu itu, jadi tanggal sangrai di kemasan selalu dekat.</p>
+      </div>
+    </div>
+    <ol class="rail">
+      <li><span class="day">Panen</span><h3>Petik merah</h3><p>Hanya ceri yang matang penuh. Petani dibayar per kilo ceri merah, bukan per karung campur.</p></li>
+      <li><span class="day">Hari 1</span><h3>Sortir</h3><p>Ceri direndam; yang mengambang disisihkan. Sisa yang padat lanjut ke proses.</p></li>
+      <li><span class="day">2–21 hari</span><h3>Proses &amp; jemur</h3><p>Washed, honey, atau natural, dijemur di para-para bambu sampai kadar air sekitar 11%.</p></li>
+      <li><span class="day">Istirahat</span><h3>Diamkan</h3><p>Gabah disimpan beberapa minggu agar rasa stabil sebelum dikupas menjadi green bean.</p></li>
+      <li class="hot"><span class="day">Selasa</span><h3>Sangrai</h3><p>Batch kecil di Yogyakarta. Setiap batch dicicip sebelum dikemas.</p></li>
+      <li><span class="day">Rabu</span><h3>Kirim</h3><p>Dikemas dengan katup satu arah, tanggal sangrai ditulis tangan, lalu berangkat.</p></li>
+    </ol>
+    <div class="stamp">
+      <span class="mono">Sangrai berikutnya</span>
+      <strong id="next-roast">Selasa ini</strong>
+      <span class="mono" id="next-ship"></span>
+    </div>
+  </div>
+</section>
+
+<section id="kirim" aria-labelledby="kirim-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="no mono">03 — Pengiriman</span>
+      <div><h2 id="kirim-h">Sabang sampai Merauke, dari satu meja sangrai.</h2></div>
+    </div>
+    <div class="ship">
+      <div>
+        <p class="big">Kami kirim ke seluruh Indonesia dengan kurir reguler. Ongkos dihitung dari berat dan kota tujuan, dan kami sampaikan sebelum Anda membayar.</p>
+        <p>Kopi tetap segar di perjalanan: biji sangrai paling enak diseduh antara hari ke-5 dan ke-30 setelah sangrai, jadi beberapa hari di jalan justru waktu istirahat yang ia butuhkan.</p>
+      </div>
+      <table class="eta">
+        <caption class="mono" style="text-align:left;caption-side:bottom;color:var(--ink-3);padding-top:12px">Estimasi sejak dikirim hari Rabu. Bisa berbeda saat musim libur.</caption>
+        <thead><tr><th scope="col">Tujuan</th><th scope="col">Perkiraan tiba</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">D.I. Yogyakarta &amp; Jawa Tengah<small>Termasuk Solo, Semarang, Magelang</small></th><td><span class="bar" style="width:14px"></span>1–2 hari</td></tr>
+          <tr><th scope="row">Jawa lainnya &amp; Bali<small>Jakarta, Bandung, Surabaya, Denpasar</small></th><td><span class="bar" style="width:24px"></span>2–3 hari</td></tr>
+          <tr><th scope="row">Sumatra, Kalimantan, Sulawesi<small>Kota besar</small></th><td><span class="bar" style="width:40px"></span>3–5 hari</td></tr>
+          <tr><th scope="row">Nusa Tenggara, Maluku, Papua</th><td><span class="bar" style="width:64px"></span>5–9 hari</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="seduh" aria-labelledby="seduh-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="no mono">04 — Seduh</span>
+      <div>
+        <h2 id="seduh-h">Tiga resep yang kami pakai sendiri.</h2>
+        <p>Titik awal, bukan aturan. Kalau terlalu asam, giling lebih halus; kalau pahit, lebih kasar.</p>
+      </div>
+    </div>
+    <div class="recipes">
+      <article class="recipe">
+        <h3>V60</h3>
+        <p class="ratio">1<span>:</span>15</p>
+        <dl><dt>Kopi</dt><dd>15 g, gilingan sedang-halus</dd><dt>Air</dt><dd>225 ml, 92 °C</dd><dt>Waktu</dt><dd>2:30–3:00</dd></dl>
+        <p>Cocok untuk Kabut Pagi dan Pasir Hitam. Blooming 40 ml selama 30 detik.</p>
+      </article>
+      <article class="recipe">
+        <h3>Tubruk</h3>
+        <p class="ratio">1<span>:</span>12</p>
+        <dl><dt>Kopi</dt><dd>12 g, gilingan halus</dd><dt>Air</dt><dd>150 ml, baru mendidih</dd><dt>Waktu</dt><dd>4 menit, lalu aduk</dd></dl>
+        <p>Cara paling Jogja. Lereng Harian dengan sedikit gula aren adalah pasangan terbaiknya.</p>
+      </article>
+      <article class="recipe">
+        <h3>French press</h3>
+        <p class="ratio">1<span>:</span>16</p>
+        <dl><dt>Kopi</dt><dd>20 g, gilingan kasar</dd><dt>Air</dt><dd>320 ml, 94 °C</dd><dt>Waktu</dt><dd>4:00</dd></dl>
+        <p>Badan tebal untuk Abu Manis. Tekan pelan, tuang semua agar tidak terus mengekstraksi.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="faq-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="no mono">05 — Tanya</span>
+      <div><h2 id="faq-h">Yang sering ditanyakan.</h2></div>
+    </div>
+    <div class="faq">
+      <details><summary>Berapa lama kopi tetap enak setelah dibuka?</summary><p>Simpan di kemasan aslinya, tutup rapat ziplock-nya, jauhkan dari cahaya dan kulkas. Biji utuh paling enak dalam 4–6 minggu sejak tanggal sangrai; bubuk sebaiknya habis dalam 2 minggu.</p></details>
+      <details><summary>Apakah bisa pesan dalam jumlah besar untuk kafe?</summary><p>Bisa. Untuk kebutuhan rutin di atas 5 kg per bulan, sebutkan di pesan WhatsApp dan kami kirimkan sampel serta harga grosir.</p></details>
+      <details><summary>Bagaimana cara membayar?</summary><p>Setelah pesanan Anda masuk, kami konfirmasi total termasuk ongkos kirim beserta pilihan transfer bank atau QRIS. Kopi disangrai setelah pembayaran diterima.</p></details>
+      <details><summary>Kalau kopinya tidak cocok?</summary><p>Ceritakan rasanya ke kami. Seringnya masalah ada di gilingan atau suhu air, dan kami bantu menyesuaikan. Kalau tetap tidak cocok, pesanan berikutnya kami ganti dengan lot lain.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="closing" aria-labelledby="close-h">
+  <div class="wrap">
+    <h2 id="close-h">Batch Selasa ini masih menerima pesanan.</h2>
+    <a class="btn" href="#biji">Pilih biji <span class="arr" aria-hidden="true">→</span></a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><b>Lereng Merapi</b> · Roastery kopi, Yogyakarta</span>
+    <span class="mono">Disangrai tiap Selasa · Dikirim tiap Rabu</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var rupiah=function(n){return "Rp "+n.toLocaleString("id-ID")};
+  var lots=[].slice.call(document.querySelectorAll(".lot"));
+  var pins={};[].forEach.call(document.querySelectorAll(".pin"),function(p){pins[p.getAttribute("data-pin")]=p});
+  var list=document.getElementById("slip-list"),total=document.getElementById("slip-total"),cta=document.getElementById("slip-cta");
+  var qty={};
+
+  function render(){
+    var lines=[],sum=0,msg=["Halo Lereng Merapi, saya ingin memesan:"];
+    list.innerHTML="";
+    lots.forEach(function(el){
+      var k=el.getAttribute("data-lot"),q=qty[k]||0,p=+el.getAttribute("data-price"),name=el.getAttribute("data-name");
+      el.querySelector("output").textContent=q;
+      el.classList.toggle("has",q>0);
+      if(q>0){
+        sum+=q*p;
+        var li=document.createElement("li");
+        var a=document.createElement("span");a.textContent=q+" × "+name+" 200 g";
+        var b=document.createElement("span");b.textContent=rupiah(q*p);
+        li.appendChild(a);li.appendChild(b);list.appendChild(li);
+        msg.push("- "+q+" × "+name+" 200 g ("+rupiah(q*p)+")");
+      }
+    });
+    if(!sum){list.innerHTML='<li class="empty">Belum ada biji dipilih.</li>'}
+    total.textContent=rupiah(sum);
+    msg.push("Subtotal: "+rupiah(sum),"Biji utuh / giling untuk: ...","Kota tujuan: ...");
+    if(sum){cta.href="https://wa.me/?text="+encodeURIComponent(msg.join("\n"));cta.removeAttribute("aria-disabled")}
+    else{cta.href="#";cta.setAttribute("aria-disabled","true")}
+  }
+
+  lots.forEach(function(el){
+    var k=el.getAttribute("data-lot");
+    el.addEventListener("click",function(e){
+      var b=e.target.closest("button[data-d]");if(!b)return;
+      qty[k]=Math.max(0,Math.min(20,(qty[k]||0)+(+b.getAttribute("data-d"))));render();
+    });
+    var on=function(){pins[k]&&pins[k].classList.add("on")},off=function(){pins[k]&&pins[k].classList.remove("on")};
+    el.addEventListener("mouseenter",on);el.addEventListener("mouseleave",off);
+    el.addEventListener("focusin",on);el.addEventListener("focusout",off);
+  });
+  render();
+
+  // next roast (Tuesday) and ship (Wednesday)
+  var d=new Date(),day=d.getDay(),add=(2-day+7)%7;
+  var roast=new Date(d);roast.setDate(d.getDate()+add);
+  var ship=new Date(roast);ship.setDate(roast.getDate()+1);
+  try{
+    var f=new Intl.DateTimeFormat("id-ID",{weekday:"long",day:"numeric",month:"long"});
+    document.getElementById("next-roast").textContent=f.format(roast);
+    document.getElementById("next-ship").textContent="Dikirim "+f.format(ship);
+    document.getElementById("slip-date").textContent=new Intl.DateTimeFormat("id-ID",{day:"2-digit",month:"2-digit",year:"numeric"}).format(d);
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
