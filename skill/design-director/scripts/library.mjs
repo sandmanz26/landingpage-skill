@@ -11,6 +11,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parseArgs } from './lib/browser.mjs';
+import { recipesForRef } from './motion.mjs';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const indexPath = path.join(here, '..', 'library', 'index.json');
@@ -115,6 +116,9 @@ if (cmd === 'build') {
         patterns: e.library_candidates || [],
         avoid: e.avoid || [],
         sector: e.sector || null,
+        // How it moves, kept so it can be used again: the tested recipes this reference showed
+        // (motion/recipes.json → seen_in) and the notes of whoever read it (batch entry → motion_notes).
+        motion: { recipes: recipesForRef(e.id), notes: e.motion_notes || [] },
         style: style
           ? {
               features: [...features(style)],
@@ -159,7 +163,7 @@ if (cmd === 'build') {
   const wantTags = String(args.tags || '').split(',').filter(Boolean);
   const scored = entries
     .map((e) => {
-      const hay = `${e.sector} ${e.business} ${e.patterns.join(' ')} ${(e.style ? e.style.tags : []).join(' ')}`.toLowerCase();
+      const hay = `${e.sector} ${e.business} ${e.patterns.join(' ')} ${(e.style ? e.style.tags : []).join(' ')} ${e.motion ? `${e.motion.recipes.join(' ')} ${e.motion.notes.join(' ')}` : ''}`.toLowerCase();
       const words = want.filter((w) => hay.includes(w)).length;
       const tags = e.style ? wantTags.filter((t) => e.style.tags.includes(t)).length : 0;
       return { e, score: words + tags * 2 + (e.scores.final || e.scores.ai || 0) / 10 };
@@ -170,6 +174,7 @@ if (cmd === 'build') {
     console.log(`${e.id} ${e.site} · final ${e.scores.final ?? '-'} (AI ${e.scores.ai ?? '-'}) · ${e.business.slice(0, 90)}`);
     if (e.style) console.log(`  style: ${e.style.tags.join(', ')} · type ${e.style.type.families.join(' + ')} ${e.style.type.display}/${e.style.type.body}px · ${e.style.palette.chromatic} colours`);
     for (const p of e.patterns.slice(0, 4)) console.log(`  pattern: ${p}`);
+    if (e.motion && (e.motion.recipes.length || e.motion.notes.length)) console.log(`  motion: ${e.motion.recipes.length ? `recipes ${e.motion.recipes.join(', ')} (node motion.mjs get <id>)` : 'no recipe yet'}${e.motion.notes.length ? ` · ${e.motion.notes.slice(0, 2).join(' · ')}` : ''}`);
     if (e.veto) console.log(`  VETO: ${e.veto.slice(0, 160)}`);
     if (e.style && e.style.doNotCopy.length) console.log(`  do not copy: ${e.style.doNotCopy.slice(0, 3).join(' · ')}`);
   }

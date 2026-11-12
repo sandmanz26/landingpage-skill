@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-11-12T08:10:17.839Z",
+  "builtAt": "2026-11-12T08:59:31.551Z",
   "source": "data/references (batch-*.json, captures/*/style.json)",
   "count": 21,
   "sectors": {
@@ -222,6 +222,10 @@
         "Vague CTA (\"Get updates\") on a high-ticket pre-order"
       ],
       "sector": "commerce",
+      "motion": {
+        "recipes": [],
+        "notes": []
+      },
       "style": {
         "features": [
           "surface:glass",
@@ -325,6 +329,10 @@
         "A 15s auto-advancing carousel with no pause"
       ],
       "sector": "software",
+      "motion": {
+        "recipes": [],
+        "notes": []
+      },
       "style": {
         "features": [
           "surface:glass",
@@ -453,6 +461,10 @@
         "The generic dark-SaaS hero kit (pill eyebrow, centred headline, two CTAs)"
       ],
       "sector": "software",
+      "motion": {
+        "recipes": [],
+        "notes": []
+      },
       "style": {
         "features": [
           "surface:gradient-shadow",
@@ -567,6 +579,10 @@
         "No proof, no cost or eligibility answer for anxious parents"
       ],
       "sector": "health",
+      "motion": {
+        "recipes": [],
+        "notes": []
+      },
       "style": {
         "features": [
           "surface:flat",
@@ -675,6 +691,10 @@
         "Reusing one page template so literally that the age band changes nothing but the colour"
       ],
       "sector": "health",
+      "motion": {
+        "recipes": [],
+        "notes": []
+      },
       "style": {
         "features": [
           "surface:flat",
@@ -791,6 +811,10 @@
         "Key benefit cards cut off at the carousel edge"
       ],
       "sector": "health",
+      "motion": {
+        "recipes": [],
+        "notes": []
+      },
       "style": {
         "features": [
           "surface:glass",
@@ -904,6 +928,12 @@
         "Proof that praises a different pillar than the one the hero sells"
       ],
       "sector": "health",
+      "motion": {
+        "recipes": [
+          "chapter-ground"
+        ],
+        "notes": []
+      },
       "style": {
         "features": [
           "surface:flat",
@@ -1017,6 +1047,10 @@
         "Coined jargon carrying the explanation (Centaur Team, Human 360 Body Data Stack)"
       ],
       "sector": "health",
+      "motion": {
+        "recipes": [],
+        "notes": []
+      },
       "style": {
         "features": [
           "surface:glass",
@@ -1142,6 +1176,10 @@
         "Testimonials hidden in a slider"
       ],
       "sector": "health",
+      "motion": {
+        "recipes": [],
+        "notes": []
+      },
       "style": {
         "features": [
           "surface:gradient-shadow",
@@ -1255,6 +1293,10 @@
         "A first screen that serves the parent club's navigation instead of the page's offer"
       ],
       "sector": "health",
+      "motion": {
+        "recipes": [],
+        "notes": []
+      },
       "style": {
         "features": [
           "surface:flat",
@@ -1353,6 +1395,10 @@
         "Text over photos at 1.94:1; 27 tap targets under 24px"
       ],
       "sector": "beauty",
+      "motion": {
+        "recipes": [],
+        "notes": []
+      },
       "style": {
         "features": [
           "surface:flat",
@@ -1462,6 +1508,10 @@
         "53 endless loops with no pause; cookie banner covering half the phone screen"
       ],
       "sector": "health",
+      "motion": {
+        "recipes": [],
+        "notes": []
+      },
       "style": {
         "features": [
           "surface:gradient-shadow",
@@ -1579,6 +1629,13 @@
         "The product page loses the system: 17 font sizes, 12 colours, 6 display sizes with no scale, 32 small tap targets"
       ],
       "sector": "food",
+      "motion": {
+        "recipes": [
+          "frame-grow",
+          "swap-reveal"
+        ],
+        "notes": []
+      },
       "style": {
         "features": [
           "surface:flat",
@@ -1690,6 +1747,12 @@
         "Scroll animations that ignore reduced motion (10 on the home page, 305 on How it works)"
       ],
       "sector": "home",
+      "motion": {
+        "recipes": [
+          "build-on-scroll"
+        ],
+        "notes": []
+      },
       "style": {
         "features": [
           "surface:gradient-shadow",
@@ -1802,6 +1865,12 @@
         "Typos ('Intellligence'), a subheading used twice, an unnamed testimonial; 14 font sizes"
       ],
       "sector": "finance",
+      "motion": {
+        "recipes": [
+          "build-on-scroll"
+        ],
+        "notes": []
+      },
       "style": {
         "features": [
           "surface:gradient-shadow",
@@ -1917,6 +1986,10 @@
         "A category hero with no outcome number; proof only at 63% of the page"
       ],
       "sector": "finance",
+      "motion": {
+        "recipes": [],
+        "notes": []
+      },
       "style": {
         "features": [
           "surface:glass",
@@ -2034,6 +2107,12 @@
         "A French cookie banner on the English page"
       ],
       "sector": "software",
+      "motion": {
+        "recipes": [
+          "count-from-real"
+        ],
+        "notes": []
+      },
       "style": {
         "features": [
           "surface:flat",
@@ -2143,6 +2222,12 @@
         "Services only on About; email as the only action"
       ],
       "sector": "creative",
+      "motion": {
+        "recipes": [
+          "type-as-image"
+        ],
+        "notes": []
+      },
       "style": {
         "features": [
           "surface:gradient-shadow",
@@ -2241,6 +2326,12 @@
         "No streaming CTA"
       ],
       "sector": "music",
+      "motion": {
+        "recipes": [
+          "scatter-land"
+        ],
+        "notes": []
+      },
       "style": {
         "features": [
           "surface:flat",
@@ -2365,6 +2456,12 @@
         "Motion that ignores reduced motion"
       ],
       "sector": "food",
+      "motion": {
+        "recipes": [
+          "protagonist-travel"
+        ],
+        "notes": []
+      },
       "style": {
         "features": [
           "surface:flat",
@@ -2475,6 +2572,14 @@
         "Broken images and a stale 'updated' date on an information site"
       ],
       "sector": "nonprofit",
+      "motion": {
+        "recipes": [
+          "type-as-image",
+          "scatter-land",
+          "chapter-ground"
+        ],
+        "notes": []
+      },
       "style": {
         "features": [
           "surface:flat",

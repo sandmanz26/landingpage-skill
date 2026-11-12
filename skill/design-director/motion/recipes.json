@@ -1,0 +1,270 @@
+{
+ "_comment": "Motion recipes: movements the team has seen in judged references, rebuilt in our own code and tested (motion/index.html passes inspect.mjs with 0 FAIL and 0 WARN at three widths and under reduced motion). Each names what it shows, the message it can carry, when not to use it, its trigger, timing, technique, reduced-motion version, cost and where it was seen (measured facts, never copied code: rules/copyright.md). A recipe with \"kit\" lives in that kit section. Read with motion.mjs list / find / get. A new reference whose motion fits no recipe gets a new recipe (library/intake.md).",
+ "tokens": "--dur-fast 160ms; --dur-mid 320ms; --dur-slow 600ms; --ease-out cubic-bezier(.16,1,.3,1); --rise 24px; --stagger 70ms",
+ "recipes": [
+  {
+   "id": "staged-entrance",
+   "name": "Staged entrance",
+   "function": "Orientation",
+   "shows": "The first screen arrives in order: headline, sentence, action, picture.",
+   "carries": "Any page: it says what to read first. Required on every page (motion/functions.md → Transitions are required).",
+   "not_when": "Never as a loading screen that holds content back; never longer than about 900 ms in total.",
+   "trigger": "first load",
+   "timing": "4 parts, 600 ms each, 90 ms apart (last starts at 240 ms): 840 ms in total; ease-out cubic-bezier(.16,1,.3,1); rise 24px",
+   "technique": "CSS keyframes with animation-delay, started only under .js; the content is in the HTML",
+   "reduced": "a 160 ms fade, no travel",
+   "cost": "none: transform and opacity",
+   "seen_in": [
+    {
+     "ref": "ref-0023",
+     "site": "Frans Hals Museum",
+     "measured": "text appears between 0.4 and 1.2 s, the hero video by 2.5 s"
+    }
+   ]
+  },
+  {
+   "id": "reveal-on-entry",
+   "name": "Reveal on entry",
+   "function": "Orientation",
+   "shows": "The parts of a section rise into place once, one after another, when the section enters the screen.",
+   "carries": "Reading order inside a section. The base choreography; quiet on purpose.",
+   "not_when": "Not on every single element (that is the fade-up default in rules/defaults.md): one group per section, at most 4 parts.",
+   "trigger": "entry into the viewport, once",
+   "timing": "600 ms, 70 ms stagger, rise 24px",
+   "technique": "IntersectionObserver adds .is-in; CSS transitions with a --i index",
+   "reduced": "nothing is hidden, nothing moves",
+   "cost": "none",
+   "seen_in": [
+    {
+     "ref": "ref-0023",
+     "site": "Frans Hals Museum",
+     "measured": "blocks fade in with transition-opacity as they enter"
+    }
+   ]
+  },
+  {
+   "id": "protagonist-travel",
+   "name": "The product as protagonist",
+   "function": "Story",
+   "shows": "The real product stays on screen and travels down the page; it turns and lands in each section while the colour field behind it changes with the topic.",
+   "carries": "A physical product with variants or steps: 'this is the thing, and here is what it means for you', one point per stop. Ends beside the action.",
+   "not_when": "No real product picture; more than 4 stops; on a phone it becomes a still picture at the top of each step.",
+   "trigger": "scroll, while a tall section is pinned (data-progress=\"pin\")",
+   "timing": "follows the scroll: rotation ±13°, travel 9vh; colour fields cross-fade over about 12% of the section",
+   "technique": "position: sticky stage + a --p custom property (0..1) written on scroll with requestAnimationFrame; transform and opacity only",
+   "reduced": "--p is not written: the product stands still, the first colour field stays",
+   "cost": "one sticky panel (not full-screen); no layout shift when the stage has a fixed height",
+   "needs": "a cut-out product picture (PNG/SVG) and one colour per stop",
+   "seen_in": [
+    {
+     "ref": "ref-0021",
+     "site": "Mana Yerba Maté",
+     "measured": "a can travels from the hero through the benefit cards; gsap + ScrollTrigger, up to 25 script-driven elements per step; their version shifts layout (CLS 1.97), ours must not"
+    }
+   ]
+  },
+  {
+   "id": "frame-grow",
+   "name": "The picture grows out of its frame",
+   "function": "Story",
+   "shows": "A picture starts smaller inside its frame and grows to full width as it is scrolled into view.",
+   "carries": "'This is the event': the dish, the room, the place the page is about.",
+   "not_when": "More than once per page; on a weak picture (it enlarges the weakness).",
+   "trigger": "scroll through the section (data-progress=\"through\")",
+   "timing": "scale .72 → 1 over the first 45% of the crossing",
+   "technique": "transform: scale() from --p, transform-origin at the top",
+   "reduced": "full size, still",
+   "cost": "none: the box keeps its layout size",
+   "needs": "one strong picture at least 1600px wide",
+   "seen_in": [
+    {
+     "ref": "ref-0013",
+     "site": "Quite Nice",
+     "measured": "the hero photograph grows from its arch frame to full width on scroll"
+    }
+   ]
+  },
+  {
+   "id": "type-as-image",
+   "name": "Type as image",
+   "function": "Atmosphere",
+   "shows": "A word or a date set as large as the screen drifts sideways behind the content.",
+   "carries": "A date, a place or a name that IS the message; pictures can be laid over it.",
+   "not_when": "The word is not the message; more than one per page. The real text stays in a normal heading: the giant word is aria-hidden.",
+   "trigger": "scroll through the section",
+   "timing": "drifts 34% of its own width across the crossing",
+   "technique": "transform: translateX() from --p; overflow: clip on the section",
+   "reduced": "still",
+   "cost": "none; check the phone: the word must not push the page wider",
+   "seen_in": [
+    {
+     "ref": "ref-0022",
+     "site": "The Other Side of Truth",
+     "measured": "210px display type; letters and the date '24 FEB 2022' fill the screen behind photographs"
+    },
+    {
+     "ref": "ref-0019",
+     "site": "Figure Film",
+     "measured": "display type as the first-screen picture"
+    }
+   ]
+  },
+  {
+   "id": "scatter-land",
+   "name": "Pictures land one by one",
+   "function": "Story",
+   "shows": "Photographs arrive one after another, each with a small turn, like prints put on a table.",
+   "carries": "Evidence that piles up: places, cases, people. The order they land in is the order of the story.",
+   "not_when": "Decorative stock pictures; more than 6 pictures; a section that must be read fast.",
+   "trigger": "entry into the viewport, once",
+   "timing": "110 ms apart; 320 ms fade, 600 ms settle; from 3× the final angle and 92% size",
+   "technique": "IntersectionObserver + CSS transitions; each figure has --r (its angle) and --i (its order)",
+   "reduced": "all in place at once",
+   "cost": "none",
+   "seen_in": [
+    {
+     "ref": "ref-0022",
+     "site": "The Other Side of Truth",
+     "measured": "dated photographs land over the giant date, each rotated"
+    },
+    {
+     "ref": "ref-0020",
+     "site": "Coveo Music",
+     "measured": "tilted photographs as the portfolio's device"
+    }
+   ]
+  },
+  {
+   "id": "chapter-ground",
+   "name": "The ground changes with the chapter",
+   "function": "Orientation",
+   "shows": "The whole page changes its ground colour when the story turns.",
+   "carries": "A turn in the storyline (problem → answer, day → night, before → after). One or two per page.",
+   "not_when": "A new colour for every section with no turn in the story; any ground that breaks text contrast (check both grounds).",
+   "trigger": "the chapter passes the middle of the screen (both directions)",
+   "timing": "600 ms, linear",
+   "technique": "IntersectionObserver sets body[data-ground]; the tokens --ground and --ink change, background-color and color transition (paint only, no layout)",
+   "reduced": "instant change",
+   "cost": "every colour must come from tokens, or parts of the page keep the old ground",
+   "seen_in": [
+    {
+     "ref": "ref-0022",
+     "site": "The Other Side of Truth",
+     "measured": "yellow turns black where the story turns to destruction"
+    },
+    {
+     "ref": "ref-0007",
+     "site": "Swehl",
+     "measured": "one colour field per chapter"
+    }
+   ]
+  },
+  {
+   "id": "state-change",
+   "name": "State changes move",
+   "function": "Orientation",
+   "shows": "A panel opens by growing, its content fades in; closing is the same, reversed.",
+   "carries": "Required wherever something opens, closes, switches or submits (accordion, tabs, steps, form states).",
+   "not_when": "Never 'none' while the page has states that change.",
+   "trigger": "click, tap or keyboard",
+   "timing": "320 ms, ease-out",
+   "technique": "grid-template-rows 0fr → 1fr with opacity; button[aria-expanded] + aria-controls; page changes and shared elements use the View Transitions API",
+   "reduced": "instant change",
+   "cost": "layout moves, but after a user action (not counted as layout shift)",
+   "seen_in": [
+    {
+     "ref": "ref-0023",
+     "site": "Frans Hals Museum",
+     "measured": "accordion-slide-down / -up and collapsible keyframes; transitions of 0.15 to 0.75 s"
+    }
+   ]
+  },
+  {
+   "id": "count-from-real",
+   "name": "Numbers that never show zero",
+   "function": "Feedback",
+   "shows": "A number runs up to its value when it enters the screen.",
+   "carries": "A real, sourced number worth a second look. Sample numbers stay marked as samples.",
+   "not_when": "Invented numbers (SKILL.md: never invent proof); more than 3 counters.",
+   "trigger": "entry into the viewport, once",
+   "timing": "900 ms, from 80% of the value, ease-out",
+   "technique": "the real number is in the HTML; a small script counts on entry and formats with Intl.NumberFormat",
+   "reduced": "the number stands still",
+   "cost": "none",
+   "seen_in": [
+    {
+     "ref": "ref-0018",
+     "site": "SquadEasy",
+     "measured": "the fault this recipe avoids: counters showed 0 until animated, 2 stayed hidden under reduced motion"
+    }
+   ]
+  },
+  {
+   "id": "draw-line",
+   "name": "A line that draws the journey",
+   "function": "Story",
+   "shows": "A line draws itself along a route as the section is scrolled, passing each step.",
+   "carries": "A process, a route or a timeline: 'this is how it goes, in this order'.",
+   "not_when": "Steps that are not a sequence; a line with no stops.",
+   "trigger": "scroll through the section",
+   "timing": "complete at about 60% of the crossing",
+   "technique": "SVG path with pathLength=1 and stroke-dashoffset from --p (paint only)",
+   "reduced": "the whole line is drawn",
+   "cost": "none",
+   "seen_in": [
+    {
+     "ref": "ref-0024",
+     "site": "Nomadic Tribe (makemepulse)",
+     "measured": "the opening is one thin line and a dot that grow into the title circle"
+    }
+   ]
+  },
+  {
+   "id": "build-on-scroll",
+   "name": "The work builds beside the story",
+   "function": "Story",
+   "kit": "story-sticky",
+   "shows": "A picture stays in place while the steps of the story pass it; each step adds a part to the picture.",
+   "carries": "A service with no product: the visitor watches the work being done.",
+   "not_when": "Fewer than 3 steps; a picture that does not change with the steps.",
+   "trigger": "scroll",
+   "timing": "one change per step",
+   "technique": "the kit section story-sticky (kit.mjs get story-sticky)",
+   "reduced": "all steps shown as a list with their pictures",
+   "cost": "one sticky panel in its own wrapper",
+   "seen_in": [
+    {
+     "ref": "ref-0015",
+     "site": "Axis Group",
+     "measured": "a client chat, a handwritten note and a redlined document build on scroll"
+    },
+    {
+     "ref": "ref-0014",
+     "site": "Quilt",
+     "measured": "isometric rooms explain room-by-room control"
+    }
+   ]
+  },
+  {
+   "id": "swap-reveal",
+   "name": "Hover or tap swaps the picture for its result",
+   "function": "Feedback",
+   "kit": "reveal-cards",
+   "shows": "A card turns from the packet to the finished dish, from the claim to its source.",
+   "carries": "'What will I actually get?' and 'Is this true?'.",
+   "not_when": "Content needed to decide lives only behind hover; no tap path.",
+   "trigger": "hover, focus or tap",
+   "timing": "320 ms cross-fade",
+   "technique": "the kit section reveal-cards (kit.mjs get reveal-cards)",
+   "reduced": "both states visible, or an instant swap",
+   "cost": "none",
+   "seen_in": [
+    {
+     "ref": "ref-0013",
+     "site": "Quite Nice",
+     "measured": "hovering a flavour card turns the packet into the finished bowl; no hover on a phone, so the bowls never showed there"
+    }
+   ]
+  }
+ ]
+}

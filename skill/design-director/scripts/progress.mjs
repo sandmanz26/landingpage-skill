@@ -17,6 +17,7 @@
 //   node progress.mjs log "<decision>" [--step s] [--by user|claude]
 import fs from 'node:fs';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { parseArgs } from './lib/browser.mjs';
 import { validateKit } from './lib/brandkit.mjs';
 
@@ -128,6 +129,14 @@ const isAdminBrief = (brief) => {
 };
 const NONE_FOUND = /^\(?(none found|tidak ditemukan|belum ditemukan)/i;
 
+const motionRecipeIds = () => {
+  try {
+    return JSON.parse(fs.readFileSync(path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'motion', 'recipes.json'), 'utf8')).recipes.map((r) => r.id);
+  } catch {
+    return [];
+  }
+};
+
 // The motion spec names the message and its signature motion, the entrance and the state
 // transitions; with no message found it records the offer to the user (motion/functions.md).
 function motionProblems(spec) {
@@ -143,6 +152,15 @@ function motionProblems(spec) {
   const ent = lineValue(mo, 'Entrance|Pembuka');
   if (!ent || ent.length < 8) out.push('the Motion spec has no "Entrance:" line: an entrance on first load is required, with its reduced-motion version (owner\'s requirement 1)');
   if (!lineValue(mo, 'State transitions|Transisi')) out.push('the Motion spec has no "State transitions:" line: how each state change moves, or "none: no state changes"');
+  // The recipes used (motion/recipes.json), so a motion the team has tested is reused instead of reinvented.
+  const rec = lineValue(mo, 'Recipes|Resep');
+  if (!rec) out.push('the Motion spec has no "Recipes:" line: the motion recipes used (node motion.mjs list), or "custom: <what and why no recipe fits>"');
+  else if (!/custom|khusus/i.test(rec)) {
+    const known = motionRecipeIds();
+    const named = rec.split(/[,;·]/).map((x) => x.trim().split(/[\s(:]/)[0]).filter(Boolean);
+    const unknown = named.filter((n) => !known.includes(n));
+    if (known.length && unknown.length) out.push(`the Motion spec's "Recipes:" line names unknown recipe(s) ${unknown.join(', ')}: use ids from node motion.mjs list, or "custom: <what and why>"`);
+  }
   return out;
 }
 

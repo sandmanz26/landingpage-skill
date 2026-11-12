@@ -77,6 +77,55 @@ pause control (WCAG 2.2.2). **Budget:** `transform` and `opacity` only, no endle
 text, at most one Atmosphere loop, and the signature motion runs once per visit or on scroll, not on
 a timer. `evidence.mjs` measures loops, loops with text and a pause control for the jurors.
 
+## Recipes: motion the team has seen, kept so it can be used again (owner, 2026-11-12)
+
+"Pastikan animasi dan motion itu disimpan": a motion admired in a reference is only kept when it
+is written as a **recipe**: what it shows, the message it can carry, when not to use it, its
+trigger, timing and easing, the technique, the reduced-motion version, its cost, and where it was
+seen with the measured facts. Recipes live in `motion/recipes.json`; each is rebuilt in our own
+code and tested in `motion/index.html` (0 FAIL and 0 WARN in the inspector at three widths and
+under reduced motion). Nothing is copied from the reference (`rules/copyright.md`): the idea and
+the numbers are kept, the code is ours.
+
+```bash
+node <skill>/scripts/motion.mjs list                    # every recipe
+node <skill>/scripts/motion.mjs find product steps      # by words, or --ref ref-0021
+node <skill>/scripts/motion.mjs get protagonist-travel staged-entrance --out .design/motion
+```
+
+| Recipe | Function | Carries |
+| --- | --- | --- |
+| `staged-entrance` | Orientation | the required entrance: headline, sentence, action, picture in order |
+| `reveal-on-entry` | Orientation | reading order inside a section, once |
+| `protagonist-travel` | Story | a real product that travels down the page and lands in each section |
+| `frame-grow` | Story | "this is the event": a picture grows out of its frame |
+| `type-as-image` | Atmosphere | a word or date that is the message, as large as the screen |
+| `scatter-land` | Story | evidence that piles up: pictures land one by one |
+| `chapter-ground` | Orientation | a turn in the story: the ground colour changes |
+| `state-change` | Orientation | the required state transitions (accordion, tabs, steps, form states) |
+| `count-from-real` | Feedback | a real number worth a second look; never shows 0 |
+| `draw-line` | Story | a process, route or timeline drawn as it is read |
+| `build-on-scroll` | Story | a service with no product, seen being done (kit `story-sticky`) |
+| `swap-reveal` | Feedback | "what will I get?": the packet turns into the result (kit `reveal-cards`) |
+
+How to use them:
+
+1. **Start from the message, then find the recipe** (`motion.mjs find`, and `library.mjs find`
+   shows which recipes each reference used). The signature motion is usually one Story recipe; the
+   entrance is `staged-entrance`; state changes use `state-change`.
+2. **Adapt, do not paste.** Map the tokens to the spec's, replace every word and picture, and
+   change the subject of the motion to this client's (their product travels, their steps build).
+   A recipe used with its sample subject is a template.
+3. **Keep each recipe's "not when"** and its reduced-motion version; `motion.mjs get` prints them.
+4. **A motion that fits no recipe** is allowed: write `custom: <what moves, why no recipe fits>` on
+   the Recipes line, build it to the Rules below, and propose it as a new recipe at the learn step.
+5. **Still one signature motion per page.** Recipes are a vocabulary, not a quota: a page uses the
+   entrance, the state changes, one signature, and at most two quiet supports.
+
+A new reference adds to this list at intake (`library/intake.md`): `read.mjs` measures how it
+moves, and whoever reads it maps each movement to a recipe (adding the reference to `seen_in`) or
+writes a new recipe with its demo block and reruns the selftest.
+
 ## Motion spec (in `.design/spec.md`)
 
 ```markdown
@@ -84,6 +133,7 @@ a timer. `evidence.mjs` measures loops, loops with text and a pause control for 
 Message: <the site's message in one line, from the message house>
 Signature motion: <the one movement that shows it, from the subject; when it runs>
 (or) Message: none found. Offered to the user: <the motion that could carry it, what it needs>
+Recipes: <ids from motion.mjs list used on this page, e.g. staged-entrance, protagonist-travel, state-change; or "custom: <what and why no recipe fits>">
 Entrance: <first load: what arrives in what order, total duration> · reduced: <version>
 State transitions: <each state change and how it moves, or "none: no state changes"> · reduced: <version>
 Loops: <none | what loops, how long, the pause control>
@@ -94,7 +144,7 @@ Reduced motion: content present, travel removed, cross-fades kept under 200ms
 ```
 
 `progress.mjs done spec` (create, site, redesign) refuses a Motion spec without a `Message:` line,
-an `Entrance:` line and a `State transitions:` line, a found message without a `Signature motion:`
+a `Recipes:` line (known recipe ids, or `custom: …`), an `Entrance:` line and a `State transitions:` line, a found message without a `Signature motion:`
 line, and `Message: none found` without `Offered to the user`. `done deliver` then wants the offer
 in `.design/deliver.md` under "Supaya lebih bagus". A `section` run uses the page's motion spec.
 

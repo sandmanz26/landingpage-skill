@@ -1,0 +1,182 @@
+{
+  "url": "https://2019.makemepulse.com/",
+  "readAt": "2026-11-12T08:50:48.641Z",
+  "budgetSeconds": 90,
+  "notDone": [],
+  "load": [
+    {
+      "atMs": 400,
+      "running": 0,
+      "visibleText": 0
+    },
+    {
+      "atMs": 1200,
+      "running": 0,
+      "visibleText": 0
+    },
+    {
+      "atMs": 2500,
+      "running": 1,
+      "visibleText": 0
+    },
+    {
+      "atMs": 4500,
+      "running": 0,
+      "visibleText": 0
+    }
+  ],
+  "scroll": [
+    {
+      "at": 0,
+      "moved": 0,
+      "note": "the page did not scroll"
+    },
+    {
+      "at": 0,
+      "moved": 0,
+      "note": "the page did not scroll"
+    },
+    {
+      "at": 0,
+      "moved": 0,
+      "note": "the page did not scroll"
+    },
+    {
+      "at": 0,
+      "moved": 0,
+      "note": "the page did not scroll"
+    },
+    {
+      "at": 0,
+      "moved": 0,
+      "note": "the page did not scroll"
+    },
+    {
+      "at": 0,
+      "moved": 0,
+      "note": "the page did not scroll"
+    },
+    {
+      "at": 0,
+      "moved": 0,
+      "note": "the page did not scroll"
+    },
+    {
+      "at": 0,
+      "moved": 0,
+      "note": "the page did not scroll"
+    },
+    {
+      "at": 0,
+      "moved": 0,
+      "note": "the page did not scroll"
+    },
+    {
+      "at": 0,
+      "moved": 0,
+      "note": "the page did not scroll"
+    }
+  ],
+  "motion": {
+    "libraries": [],
+    "canvases": [
+      {
+        "share": 100,
+        "webgl": true
+      },
+      {
+        "share": 100,
+        "webgl": true
+      },
+      {
+        "share": 2,
+        "webgl": false
+      }
+    ],
+    "running": [
+      {
+        "kind": "CSSTransition",
+        "name": "transform",
+        "durationMs": 500,
+        "delayMs": 0,
+        "easing": "ease",
+        "iterations": 1,
+        "properties": [
+          "transform"
+        ],
+        "on": "<div.loader__bar__foreground>"
+      },
+      {
+        "kind": "CSSTransition",
+        "name": "transform",
+        "durationMs": 500,
+        "delayMs": 0,
+        "easing": "ease",
+        "iterations": 1,
+        "properties": [
+          "transform"
+        ],
+        "on": "<svg>"
+      }
+    ],
+    "keyframes": [],
+    "cssScrollDriven": 0,
+    "unreadableSheets": 0,
+    "transitions": [
+      {
+        "rule": "opacity · 0.5s · ease",
+        "uses": 8
+      },
+      {
+        "rule": "transform, -webkit-transform · 0.5s, 0.5s · ease, ease",
+        "uses": 5
+      },
+      {
+        "rule": "opacity · 0.25s · ease",
+        "uses": 2
+      },
+      {
+        "rule": "opacity · 0.15s · ease",
+        "uses": 1
+      },
+      {
+        "rule": "opacity · 0.4s · ease",
+        "uses": 1
+      },
+      {
+        "rule": "opacity · 0.9s · ease",
+        "uses": 1
+      },
+      {
+        "rule": "transform, -webkit-transform · 0.55s, 0.55s · ease, ease",
+        "uses": 1
+      },
+      {
+        "rule": "fill · 0.5s · ease",
+        "uses": 1
+      },
+      {
+        "rule": "transform, -webkit-transform · 0.8s, 0.8s · cubic-bezier(0.215, 0.61, 0.355, 1), cubic-bezier(0.215, 0.61, 0.355, 1)",
+        "uses": 1
+      },
+      {
+        "rule": "transform, opacity, -webkit-transform · 0.5s, 0.25s, 0.5s · cubic-bezier(0.215, 0.61, 0.355, 1), cubic-bezier(0.215, 0.61, 0.355, 1), cubic-bezier(0.215, 0.61, 0.355, 1)",
+        "uses": 1
+      },
+      {
+        "rule": "opacity · 0.8s · ease",
+        "uses": 1
+      }
+    ],
+    "sticky": [],
+    "videos": 0,
+    "autoplayVideos": 0,
+    "pageHeight": 900,
+    "title": "Nomadic Tribe — makemepulse"
+  },
+  "hover": [],
+  "phone": {
+    "note": "almost no text on the first load (a loader, a canvas, or a desktop-only page)"
+  },
+  "seconds": 21
+}

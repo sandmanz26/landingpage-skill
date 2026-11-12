@@ -229,7 +229,8 @@ A row with no purpose is cut, not built. motion/functions.md → Interactions)
 
 ## Motion spec
 (motion/functions.md: Message and Signature motion, or "Message: none found" with "Offered to the
-user"; Entrance; State transitions; Loops. `done spec` checks these lines)
+user"; Recipes (ids from `motion.mjs list`, or "custom: …"); Entrance; State transitions; Loops.
+`done spec` checks these lines)
 
 ## Not on this page
 <project-specific bans, from the brand, taste and the user>
@@ -302,8 +303,10 @@ Order: tokens → hero → sections → pictures → states (hover, focus, error
 - Sticky and fixed elements: give each sticky panel its own wrapper (the part of the page it belongs
   to), or it stays stuck over the sections that follow. Check it in the scrolled screenshots, not the
   first screen.
-- Motion last, from the motion spec (`motion/functions.md`): the entrance and every state
-  transition with their reduced-motion versions, then the signature motion if a message was found.
+- Motion last, from the motion spec (`motion/functions.md`): `motion.mjs get <the recipes on the
+  Recipes line> --out .design/motion`, mapped to the spec's tokens and to this client's subject;
+  the entrance and every state transition with their reduced-motion versions, then the signature
+  motion if a message was found.
 - **No product UI from the client:** the mock or the labelled placeholder the user chose at the
   brief (`rules/brief-interview.md` → Materials); every sample element carries `data-sample`
   (`inspect.mjs` reports INFO `sample-ui`).

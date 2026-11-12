@@ -24,7 +24,7 @@ const BRIEF = '# Brief\n- What: test\n## Materials\n| Material | What exists | P
 // The council's sign-off in the spec (rubric/council.md): a line per head, a metric, a budget.
 const COUNCIL = '## Council\n- Product: vision office lunch ready; outcome no queue; metric weekly subscriptions; scope in landing / out app\n- Business: competitors hide the price (research #2); action that pays is the WhatsApp order\n- Design: one 12-column grid, type ratio 1.333, the lunch box leads every screen\n- Creative: the lunch box becomes the page grid; signature box filling on scroll\n- Engineering: static HTML + CSS; no component library; budget ≤ 900 KB first load, images ≤ 200 KB, JS ≤ 30 KB; tokens only\n';
 // A motion spec with the message, its signature motion, the entrance and the state transitions (motion/functions.md).
-const MOTION = '## Motion spec\nMessage: lunch arrives ready, every weekday\nSignature motion: the lunch box fills compartment by compartment on scroll, once\nEntrance: headline, sub, action, photo rise in 700ms · reduced: cross-fade 150ms\nState transitions: FAQ rows open with height-free reveal · reduced: instant\nLoops: none\n';
+const MOTION = '## Motion spec\nMessage: lunch arrives ready, every weekday\nSignature motion: the lunch box fills compartment by compartment on scroll, once\nRecipes: staged-entrance, build-on-scroll, state-change\nEntrance: headline, sub, action, photo rise in 700ms · reduced: cross-fade 150ms\nState transitions: FAQ rows open with height-free reveal · reduced: instant\nLoops: none\n';
 const check = (name, ok, detail = '') => {
   console.log(`${ok ? 'pass' : 'FAIL'}  ${name}${ok ? '' : `\n      ${detail}`}`);
   if (!ok) failed++;
@@ -821,6 +821,74 @@ const check = (name, ok, detail = '') => {
   const withAi = p('done', 'deliver');
   check('progress wants the deliver report to name AI-generated draft pictures when the brief planned them',
     noAi.status !== 0 && /AI-generated draft pictures/.test(noAi.stderr) && withAi.status === 0, noAi.stderr + ' | ' + withAi.stderr);
+}
+
+// motion recipes: kept, tested and used (motion/functions.md → Recipes); the fast read of a reference
+{
+  const out = path.join(tmp, 'motion');
+  const r = run('inspect.mjs', [path.join(skill, 'motion', 'index.html'), '--out', out, '--quiet', '--allow', 'system-font-only']);
+  const rep = fs.existsSync(path.join(out, 'report.json')) ? JSON.parse(fs.readFileSync(path.join(out, 'report.json'), 'utf8')) : null;
+  const all = rep ? [...Object.values(rep.viewports).flatMap((v) => v.findings), ...rep.checks.reducedMotion.findings].filter((f) => f.severity !== 'INFO') : [{ rule: 'no report' }];
+  check('the motion recipes demo passes the inspector with no findings at three widths and under reduced motion', r.status === 0 && all.length === 0, all.map((f) => f.rule).join(', '));
+
+  const recipes = JSON.parse(fs.readFileSync(path.join(skill, 'motion', 'recipes.json'), 'utf8')).recipes;
+  const html = fs.readFileSync(path.join(skill, 'motion', 'index.html'), 'utf8');
+  const kitNames = JSON.parse(fs.readFileSync(path.join(skill, 'kit', 'sections.json'), 'utf8')).sections.map((x) => x.name);
+  const fields = ['id', 'name', 'function', 'shows', 'carries', 'not_when', 'trigger', 'timing', 'technique', 'reduced', 'cost', 'seen_in'];
+  const incomplete = recipes.filter((x) => fields.some((f) => !x[f] || (f === 'seen_in' && !x.seen_in.every((s) => /^ref-\d{4}$/.test(s.ref) && s.measured))));
+  const unbuilt = recipes.filter((x) => (x.kit ? !kitNames.includes(x.kit) : !html.includes(`<!-- motion:${x.id} -->`)));
+  check('every motion recipe says what it shows, carries, when not, its timing, reduced version and where it was seen, and is built (in the demo or the kit)',
+    recipes.length >= 10 && !incomplete.length && !unbuilt.length, `incomplete: ${incomplete.map((x) => x.id)}; unbuilt: ${unbuilt.map((x) => x.id)}`);
+
+  const list = run('motion.mjs', ['list']);
+  const find = run('motion.mjs', ['find', 'product', '--ref', 'ref-0021']);
+  const get = run('motion.mjs', ['get', 'protagonist-travel', 'swap-reveal', '--out', path.join(tmp, 'motion-get')]);
+  const bad = run('motion.mjs', ['get', 'wobble']);
+  const got = (f) => (fs.existsSync(path.join(tmp, 'motion-get', f)) ? fs.readFileSync(path.join(tmp, 'motion-get', f), 'utf8') : '');
+  check('motion.mjs lists, finds by words or reference, and gives a recipe with tokens, base and the core script',
+    list.status === 0 && recipes.every((x) => list.stdout.includes(x.id)) && find.status === 0 && find.stdout.startsWith('protagonist-travel')
+    && get.status === 0 && got('motion.html').includes('m-travel') && got('motion.css').includes('motion:tokens') && got('motion.css').includes('motion:protagonist-travel') && !got('motion.css').includes('motion:scatter-land')
+    && got('motion.js').includes('motion:core') && /kit\.mjs get reveal-cards/.test(get.stderr) && bad.status === 2,
+    list.stderr + find.stdout.slice(0, 200) + get.stderr + bad.stderr);
+
+  const proj = path.join(tmp, 'motion-spec');
+  fs.mkdirSync(proj);
+  const d = path.join(proj, '.design');
+  const p = (...a) => run('progress.mjs', a, proj);
+  p('init', '--mode', 'create', '--effort', 'quick', '--gates', 'autopilot');
+  const st = JSON.parse(fs.readFileSync(path.join(d, 'progress.json'), 'utf8'));
+  for (const k of ['brief', 'research', 'strategy', 'roast', 'direction', 'skeleton']) st.steps[k] = { status: 'done' };
+  fs.writeFileSync(path.join(d, 'progress.json'), JSON.stringify(st));
+  fs.writeFileSync(path.join(d, 'brief.md'), BRIEF);
+  const spec = (motion) => fs.writeFileSync(path.join(d, 'spec.md'), `# Spec\n## Interactions\nnone\n${motion}${COUNCIL}`);
+  spec(MOTION.replace(/Recipes:.*\n/, ''));
+  const none = p('done', 'spec');
+  spec(MOTION.replace(/Recipes:.*\n/, 'Recipes: staged-entrance, wobble\n'));
+  const unknown = p('done', 'spec');
+  spec(MOTION.replace(/Recipes:.*\n/, 'Recipes: custom: the menu card folds into the lunch box; no recipe folds paper\n'));
+  const custom = p('done', 'spec');
+  check('progress wants the motion spec\'s "Recipes:" line: known recipe ids, or "custom:" with a reason',
+    none.status !== 0 && /Recipes:/.test(none.stderr) && unknown.status !== 0 && /unknown recipe\(s\) wobble/.test(unknown.stderr) && custom.status === 0,
+    [none, unknown, custom].map((x) => x.stderr).join(' | '));
+
+  const rd = path.join(tmp, 'read');
+  const t0 = Date.now();
+  const read = run('read.mjs', [path.join(skill, 'motion', 'index.html'), '--out', rd, '--budget', '60', '--frames', '8']);
+  const rj = fs.existsSync(path.join(rd, 'read.json')) ? JSON.parse(fs.readFileSync(path.join(rd, 'read.json'), 'utf8')) : { motion: {}, scroll: [], load: [] };
+  // A step that starts or ends inside the pinned stretch shows the stage as moving slower than the page.
+  const sawPinned = rj.scroll.some((x) => [x.pinned, x.slower].some((k) => k && k.examples.some((e) => /m-travel/.test(e))));
+  const sawSideways = rj.scroll.some((x) => x.sideways && x.sideways.examples.some((e) => /m-bigtype-word/.test(e)));
+  check('read.mjs reads a page inside its budget and says how it moves: running animations, a pinned stage, sideways type, the phone screen',
+    read.status === 0 && Date.now() - t0 < 70000 && (rj.motion.keyframes || []).includes('m-rise') && (rj.motion.running || []).some((a) => a.name === 'm-rise' && a.durationMs === 600)
+    && (rj.motion.sticky || []).length === 1 && sawPinned && sawSideways && rj.phone && fs.existsSync(path.join(rd, 'read-sheet.png')) && /How it moves/.test(fs.readFileSync(path.join(rd, 'read.md'), 'utf8')),
+    read.stdout + read.stderr + JSON.stringify(rj.scroll).slice(0, 400));
+
+  const { recipesForRef } = await import(path.join(here, 'motion.mjs'));
+  const index = JSON.parse(fs.readFileSync(path.join(skill, 'library', 'index.json'), 'utf8'));
+  const mana = index.entries.find((e) => e.id === 'ref-0021');
+  check('the library keeps each reference\'s motion as recipes that can be built',
+    recipesForRef('ref-0021').includes('protagonist-travel') && recipesForRef('ref-0013-product').includes('frame-grow') && !!mana && mana.motion.recipes.includes('protagonist-travel'),
+    JSON.stringify(mana && mana.motion));
 }
 
 // draw

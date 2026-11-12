@@ -1,0 +1,144 @@
+{
+  "url": "https://franshalsmuseum.nl/en",
+  "readAt": "2026-11-12T08:50:27.057Z",
+  "budgetSeconds": 90,
+  "notDone": [],
+  "load": [
+    {
+      "atMs": 400,
+      "running": 0,
+      "visibleText": 0
+    },
+    {
+      "atMs": 1200,
+      "running": 0,
+      "visibleText": 16
+    },
+    {
+      "atMs": 2500,
+      "running": 1,
+      "visibleText": 35
+    },
+    {
+      "atMs": 4500,
+      "running": 0,
+      "visibleText": 22
+    }
+  ],
+  "scroll": [
+    {
+      "at": 379,
+      "scrolledPx": 379
+    },
+    {
+      "at": 758,
+      "scrolledPx": 379
+    },
+    {
+      "at": 1137,
+      "scrolledPx": 379
+    },
+    {
+      "at": 1516,
+      "scrolledPx": 379
+    },
+    {
+      "at": 1895,
+      "scrolledPx": 379,
+      "fadedIn": {
+        "count": 1,
+        "examples": [
+          "<div.transition-opacity>"
+        ]
+      }
+    },
+    {
+      "at": 2274,
+      "scrolledPx": 379
+    },
+    {
+      "at": 2653,
+      "scrolledPx": 379,
+      "fadedIn": {
+        "count": 1,
+        "examples": [
+          "<div.transition-opacity>"
+        ]
+      }
+    },
+    {
+      "at": 3032,
+      "scrolledPx": 379
+    },
+    {
+      "at": 3411,
+      "scrolledPx": 379
+    },
+    {
+      "at": 3788,
+      "scrolledPx": 377
+    }
+  ],
+  "motion": {
+    "libraries": [],
+    "canvases": [],
+    "running": [],
+    "keyframes": [
+      "spin",
+      "accordion-slide-down",
+      "collapsible-slide-down",
+      "accordion-slide-up",
+      "collapsible-slide-up"
+    ],
+    "cssScrollDriven": 0,
+    "unreadableSheets": 0,
+    "transitions": [
+      {
+        "rule": "all · 0.75s · ease",
+        "uses": 2
+      },
+      {
+        "rule": "all · 0.4s · ease",
+        "uses": 2
+      },
+      {
+        "rule": "all · 0.2s · ease",
+        "uses": 2
+      },
+      {
+        "rule": "all · 50ms · ease",
+        "uses": 2
+      },
+      {
+        "rule": "all · 1s · ease",
+        "uses": 1
+      },
+      {
+        "rule": "all · 0.15s · ease",
+        "uses": 1
+      },
+      {
+        "rule": "opacity, left, top, width, height, border-width, border-radius · 0.2s, 0.1s, 0.1s, 0.1s, 0.1s, 0.1s, 0.1s · linear, ease, ease, ease, ease, ease, ease",
+        "uses": 1
+      },
+      {
+        "rule": "opacity · 0.2s · linear",
+        "uses": 1
+      },
+      {
+        "rule": "all · 0.1s · ease",
+        "uses": 1
+      }
+    ],
+    "sticky": [],
+    "videos": 1,
+    "autoplayVideos": 1,
+    "pageHeight": 4688,
+    "title": "Haarlem's art museum: welcome to the Frans Hals Museum"
+  },
+  "hover": [],
+  "phone": {
+    "note": "2268 characters of text on the first load"
+  },
+  "seconds": 21
+}

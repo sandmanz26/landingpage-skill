@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Motion recipes: design-director</title>
+<meta name="description" content="Resep gerak yang sudah diuji: tiap resep punya pesan, pemicu, waktu, dan versi reduced motion.">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="stylesheet" href="motion.css">
+</head>
+<body>
+<main>
+
+<!-- motion:staged-entrance -->
+<header class="m-wrap m-entrance">
+  <div>
+    <h1 class="m-e1">Layar pertama datang berurutan</h1>
+    <p class="m-e2">Judul, penjelasan, tombol, lalu gambar: selesai dalam kurang dari satu detik, dari keadaan yang sudah terlihat.</p>
+    <a class="m-btn m-e3" href="#resep">Lihat semua resep</a>
+  </div>
+  <figure class="m-e4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Placeholder foto: produk di meja, cahaya pagi" data-placeholder-image="product"><defs><clipPath id="ph1product"><rect width="1200" height="900"/></clipPath></defs><g clip-path="url(#ph1product)"><rect width="1200" height="900" fill="#f3d6c6"/><g><circle cx="720.0" cy="360.0" r="324.0" fill="#f3b89c"/><rect x="0" y="630.0" width="1200" height="270.0" fill="#d0baad"/><ellipse cx="720.0" cy="670.5" rx="234.0" ry="31.5" fill="#afa096"/><rect x="547.5" y="252.0" width="153.0" height="414.0" rx="27.0" fill="#ca5e2d"/><rect x="547.5" y="396.0" width="153.0" height="117.0" fill="#f3e8df"/><rect x="588.0" y="198.0" width="72.0" height="63.0" rx="10.8" fill="#79462c"/><rect x="741.0" y="513.0" width="180.0" height="153.0" rx="18.0" fill="#F26A2E"/></g><path d="M86 41 H41 V86" fill="none" stroke="#16282B" stroke-opacity=".38" stroke-width="4"/><path d="M1114 41 H1159 V86" fill="none" stroke="#16282B" stroke-opacity=".38" stroke-width="4"/><path d="M1114 859 H1159 V814" fill="none" stroke="#16282B" stroke-opacity=".38" stroke-width="4"/><rect x="41" y="788" width="808" height="71" rx="36" fill="#F3F1EC" fill-opacity=".94"/><text x="72" y="835" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="34" letter-spacing=".04em" fill="#16282B"><tspan font-weight="700">FOTO</tspan> · produk di meja, cahaya pagi</text></g></svg></figure>
+</header>
+<!-- /motion -->
+
+<!-- motion:reveal-on-entry -->
+<section class="m-wrap" id="resep">
+  <h2>Tiap bagian masuk sekali, berurutan</h2>
+  <p class="m-note">Judul, teks, lalu gambar naik 24px saat bagian masuk layar. Sekali saja.</p>
+  <div class="m-reveal" data-enter="rise">
+    <div style="--i:0"><strong>Pertama</strong><p>Yang paling penting datang lebih dulu.</p></div>
+    <div style="--i:1"><strong>Kedua</strong><p>Jeda 70 milidetik antar bagian.</p></div>
+    <div style="--i:2"><strong>Ketiga</strong><p>Tanpa JavaScript, semuanya tetap terlihat.</p></div>
+  </div>
+</section>
+<!-- /motion -->
+
+<!-- motion:protagonist-travel -->
+<section class="m-wrap m-travel" data-progress="pin">
+  <div class="m-travel-steps">
+    <div><h2>Produk jadi tokoh utama</h2><p>Produk tetap di layar dan ikut turun bersama cerita.</p></div>
+    <div><h2>Ia mendarat di tiap bagian</h2><p>Bidang warna di belakangnya berganti saat topik berganti.</p></div>
+    <div><h2>Sampai ke ajakan</h2><p>Di akhir, produk berada tepat di samping tombol.</p><p><a class="m-btn" href="#resep">Pesan sekarang</a></p></div>
+  </div>
+  <div class="m-travel-stage" aria-hidden="true">
+    <div class="m-travel-field"></div><div class="m-travel-field f2"></div><div class="m-travel-field f3"></div>
+    <div class="m-travel-hero"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 300" role="img" aria-label="Botol contoh"><rect x="42" y="0" width="36" height="34" rx="6" fill="#7b432a"/><rect x="18" y="30" width="84" height="270" rx="18" fill="#cc5c2b"/><rect x="18" y="120" width="84" height="84" fill="#f3e9e2"/><rect x="34" y="146" width="52" height="8" fill="#16282b"/><rect x="34" y="164" width="34" height="6" fill="#b8441a"/></svg></div>
+  </div>
+</section>
+<!-- /motion -->
+
+<!-- motion:frame-grow -->
+<section class="m-wrap m-grow" data-progress="through">
+  <h2>Gambar tumbuh dari bingkainya</h2>
+  <p class="m-note">Saat digulir, gambar membesar dari 72% ke ukuran penuh: subjeknya menjadi peristiwa.</p>
+  <figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Placeholder foto: hidangan dari atas, meja kayu" data-placeholder-image="food"><defs><clipPath id="ph2food"><rect width="1200" height="675"/></clipPath></defs><g clip-path="url(#ph2food)"><rect width="1200" height="675" fill="#f3d6c6"/><g transform="translate(1200 0) scale(-1 1)"><rect x="744.0" y="-67.5" width="229.5" height="337.5" fill="#f3b89c" transform="rotate(12 840.0 135.0)"/><circle cx="528.0" cy="351.0" r="270.0" fill="#d0baad"/><circle cx="516.0" cy="337.5" r="263.3" fill="#f3e8df"/><circle cx="516.0" cy="337.5" r="195.8" fill="#f3d0be"/><circle cx="455.3" cy="303.8" r="87.8" fill="#ca5e2d"/><circle cx="590.3" cy="357.8" r="67.5" fill="#F26A2E"/><circle cx="509.3" cy="438.8" r="50.6" fill="#79462c"/><circle cx="1116.0" cy="580.5" r="135.0" fill="#f3e8df"/><circle cx="1116.0" cy="580.5" r="94.5" fill="#ca5e2d"/><rect x="72.0" y="81.0" width="18.9" height="337.5" rx="9.5" fill="#79462c" transform="rotate(-8 72.0 270.0)"/></g><path d="M64 30 H30 V64" fill="none" stroke="#16282B" stroke-opacity=".38" stroke-width="3"/><path d="M1136 30 H1170 V64" fill="none" stroke="#16282B" stroke-opacity=".38" stroke-width="3"/><path d="M1136 645 H1170 V611" fill="none" stroke="#16282B" stroke-opacity=".38" stroke-width="3"/><rect x="30" y="574" width="851" height="71" rx="36" fill="#F3F1EC" fill-opacity=".94"/><text x="61" y="621" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="34" letter-spacing=".04em" fill="#16282B"><tspan font-weight="700">FOTO</tspan> · hidangan dari atas, meja kayu</text></g></svg></figure>
+</section>
+<!-- /motion -->
+
+<!-- motion:type-as-image -->
+<section class="m-bigtype" data-progress="through">
+  <span class="m-bigtype-word" aria-hidden="true">24 FEB 2022</span>
+  <div class="m-wrap">
+    <h2>Huruf sebagai gambar</h2>
+    <p>Kata atau tanggal dibuat sebesar layar dan bergeser pelan di belakang isi. Teks aslinya tetap ada sebagai judul biasa.</p>
+  </div>
+</section>
+<!-- /motion -->
+
+<!-- motion:scatter-land -->
+<section class="m-wrap">
+  <h2>Foto mendarat satu per satu</h2>
+  <p class="m-note">Seperti cetakan foto yang diletakkan di meja: tiap foto datang dengan sedikit putaran, berjeda 110 milidetik.</p>
+  <div class="m-scatter" data-enter="land">
+    <figure style="--r:-4deg;--i:0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" role="img" aria-label="Placeholder foto: tempat dari depan" data-placeholder-image="place"><defs><clipPath id="ph1place"><rect width="1200" height="1500"/></clipPath></defs><g clip-path="url(#ph1place)"><rect width="1200" height="1500" fill="#f3d6c6"/><g><circle cx="912.0" cy="390.0" r="132.0" fill="#f3e8df"/><ellipse cx="240.0" cy="1200.0" rx="600.0" ry="450.0" fill="#f3b89c"/><rect x="480.0" y="450.0" width="456.0" height="750.0" fill="#ca5e2d"/><rect x="432.0" y="390.0" width="552.0" height="90.0" fill="#79462c"/><path d="M636.0 1200.0 V840.0 A72.0 72.0 0 0 1 780.0 840.0 V1200.0 Z" fill="#f3e8df"/><rect x="528.0" y="600.0" width="84.0" height="150.0" fill="#F26A2E"/><rect x="804.0" y="600.0" width="84.0" height="150.0" fill="#dc9c7d"/><rect x="0" y="1200.0" width="1200" height="300.0" fill="#d0baad"/></g><path d="M114 54 H54 V114" fill="none" stroke="#16282B" stroke-opacity=".38" stroke-width="5"/><path d="M1086 54 H1146 V114" fill="none" stroke="#16282B" stroke-opacity=".38" stroke-width="5"/><path d="M1086 1446 H1146 V1386" fill="none" stroke="#16282B" stroke-opacity=".38" stroke-width="5"/><rect x="54" y="1375" width="588" height="71" rx="36" fill="#F3F1EC" fill-opacity=".94"/><text x="85" y="1422" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="34" letter-spacing=".04em" fill="#16282B"><tspan font-weight="700">FOTO</tspan> · tempat dari depan</text></g></svg></figure>
+    <figure style="--r:3deg;--i:1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" role="img" aria-label="Placeholder foto: tangan bekerja" data-placeholder-image="hands"><defs><clipPath id="ph2hands"><rect width="1200" height="1500"/></clipPath></defs><g clip-path="url(#ph2hands)"><rect width="1200" height="1500" fill="#f3d6c6"/><g transform="translate(1200 0) scale(-1 1)"><circle cx="600.0" cy="780.0" r="408.0" fill="#f3b89c"/><rect x="-144.0" y="900.0" width="696.0" height="204.0" rx="102.0" fill="#ca5e2d" transform="rotate(-16 240.0 990.0)"/><rect x="672.0" y="300.0" width="720.0" height="204.0" rx="102.0" fill="#c0886d" transform="rotate(-16 960.0 450.0)"/><rect x="468.0" y="582.0" width="264.0" height="336.0" rx="24.0" fill="#f3e8df" transform="rotate(-16 600.0 750.0)"/><rect x="516.0" y="654.0" width="168.0" height="28.8" fill="#F26A2E" transform="rotate(-16 600.0 750.0)"/><rect x="516.0" y="726.0" width="120.0" height="21.6" fill="#d0baad" transform="rotate(-16 600.0 750.0)"/></g><path d="M114 54 H54 V114" fill="none" stroke="#16282B" stroke-opacity=".38" stroke-width="5"/><path d="M1086 54 H1146 V114" fill="none" stroke="#16282B" stroke-opacity=".38" stroke-width="5"/><path d="M1086 1446 H1146 V1386" fill="none" stroke="#16282B" stroke-opacity=".38" stroke-width="5"/><rect x="54" y="1375" width="523" height="71" rx="36" fill="#F3F1EC" fill-opacity=".94"/><text x="85" y="1422" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="34" letter-spacing=".04em" fill="#16282B"><tspan font-weight="700">FOTO</tspan> · tangan bekerja</text></g></svg></figure>
+    <figure style="--r:-2deg;--i:2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" role="img" aria-label="Placeholder foto: orang di balik usaha" data-placeholder-image="portrait"><defs><clipPath id="ph3portrait"><rect width="1200" height="1500"/></clipPath></defs><g clip-path="url(#ph3portrait)"><rect width="1200" height="1500" fill="#f3d6c6"/><g><path d="M360.0 1500 V750.0 A336.0 336.0 0 0 1 1032.0 750.0 V1500 Z" fill="#f3b89c"/><circle cx="192.0" cy="300.0" r="54.0" fill="#F26A2E"/><ellipse cx="696.0" cy="1560.0" rx="360.0" ry="432.0" fill="#ca5e2d"/><rect x="642.0" y="996.0" width="108.0" height="192.0" fill="#c89075"/><circle cx="696.0" cy="936.0" r="150.0" fill="#c89075"/></g><path d="M114 54 H54 V114" fill="none" stroke="#16282B" stroke-opacity=".38" stroke-width="5"/><path d="M1086 54 H1146 V114" fill="none" stroke="#16282B" stroke-opacity=".38" stroke-width="5"/><path d="M1086 1446 H1146 V1386" fill="none" stroke="#16282B" stroke-opacity=".38" stroke-width="5"/><rect x="54" y="1375" width="654" height="71" rx="36" fill="#F3F1EC" fill-opacity=".94"/><text x="85" y="1422" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="34" letter-spacing=".04em" fill="#16282B"><tspan font-weight="700">FOTO</tspan> · orang di balik usaha</text></g></svg></figure>
+    <figure style="--r:5deg;--i:3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" role="img" aria-label="Placeholder foto: detail bahan" data-placeholder-image="detail"><defs><clipPath id="ph4detail"><rect width="1200" height="1500"/></clipPath></defs><g clip-path="url(#ph4detail)"><rect width="1200" height="1500" fill="#f3d6c6"/><g transform="translate(1200 0) scale(-1 1)"><circle cx="936.0" cy="930.0" r="744.0" fill="#f3b89c"/><circle cx="936.0" cy="930.0" r="528.0" fill="#ca5e2d"/><circle cx="936.0" cy="930.0" r="324.0" fill="#79462c"/><circle cx="936.0" cy="930.0" r="120.0" fill="#F26A2E"/><rect x="96.0" y="210.0" width="240.0" height="36.0" fill="#79462c"/><rect x="96.0" y="282.0" width="156.0" height="36.0" fill="#d0baad"/></g><path d="M114 54 H54 V114" fill="none" stroke="#16282B" stroke-opacity=".38" stroke-width="5"/><path d="M1086 54 H1146 V114" fill="none" stroke="#16282B" stroke-opacity=".38" stroke-width="5"/><path d="M1086 1446 H1146 V1386" fill="none" stroke="#16282B" stroke-opacity=".38" stroke-width="5"/><rect x="54" y="1375" width="479" height="71" rx="36" fill="#F3F1EC" fill-opacity=".94"/><text x="85" y="1422" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="34" letter-spacing=".04em" fill="#16282B"><tspan font-weight="700">FOTO</tspan> · detail bahan</text></g></svg></figure>
+  </div>
+</section>
+<!-- /motion -->
+
+<!-- motion:chapter-ground -->
+<section class="m-wrap" data-ground="night">
+  <h2>Warna dasar berganti di titik balik cerita</h2>
+  <p>Saat bab ini berada di tengah layar, seluruh halaman berganti dasar. Pergantian itu menandai belokan cerita, bukan hiasan.</p>
+<!-- /motion -->
+
+<!-- motion:count-from-real -->
+  <div class="m-count">
+    <div><strong data-count="1240">1.240</strong><span>pesanan bulan lalu (contoh)</span></div>
+    <div><strong data-count="38">38</strong><span>kantor langganan (contoh)</span></div>
+    <div><strong data-count="12">12</strong><span>menit rata-rata antar (contoh)</span></div>
+  </div>
+  <p class="m-note">Angka aslinya sudah tertulis di halaman. Saat masuk layar ia berjalan dari 80% nilainya, tidak pernah dari 0.</p>
+</section>
+<!-- /motion -->
+
+<!-- motion:state-change -->
+<section class="m-wrap">
+  <h2>Perubahan keadaan bergerak, tidak melompat</h2>
+  <div class="m-acc">
+    <div><button type="button" aria-expanded="true" aria-controls="m-acc-1">Kapan pesanan diantar?</button><div class="m-acc-panel" id="m-acc-1"><div><p>Panel membuka dengan tinggi yang tumbuh selama 320 milidetik, isinya memudar masuk.</p></div></div></div>
+    <div><button type="button" aria-expanded="false" aria-controls="m-acc-2">Bisa ganti menu?</button><div class="m-acc-panel" id="m-acc-2"><div><p>Menutup memakai gerak yang sama, terbalik. Dengan reduced motion, perubahan langsung terjadi.</p></div></div></div>
+    <div><button type="button" aria-expanded="false" aria-controls="m-acc-3">Bagaimana cara bayar?</button><div class="m-acc-panel" id="m-acc-3"><div><p>Pola yang sama dipakai untuk tab, langkah formulir, dan keadaan tombol kirim.</p></div></div></div>
+  </div>
+</section>
+<!-- /motion -->
+
+<!-- motion:draw-line -->
+<section class="m-wrap" data-progress="through">
+  <h2>Garis yang menggambar perjalanan</h2>
+  <div class="m-line">
+    <svg viewBox="0 0 120 420" preserveAspectRatio="none" aria-hidden="true"><path class="m-line-track" pathLength="1" d="M60 10 C 10 110, 110 170, 60 250 S 20 360, 60 410"/><path pathLength="1" d="M60 10 C 10 110, 110 170, 60 250 S 20 360, 60 410"/></svg>
+    <ol>
+      <li><strong>Pesan</strong>Garis mulai digambar saat bagian masuk layar.</li>
+      <li><strong>Dimasak</strong>Ia mengikuti guliran, jadi pembaca yang mengatur lajunya.</li>
+      <li><strong>Diantar</strong>Di akhir bagian, garis sudah utuh.</li>
+    </ol>
+  </div>
+</section>
+<!-- /motion -->
+
+</main>
+<script src="motion.js"></script>
+</body>
+</html>
