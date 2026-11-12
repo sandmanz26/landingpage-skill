@@ -1,7 +1,7 @@
 # Handoff
 
 Read this first if you are a new session, a different model or a different AI tool picking up
-this project. It is kept up to date at every milestone. Last updated: **2026-11-12** (skill audit §5c; slop blind test sent; Fable 5.2 advice; plan to move to the owner's machine for ~15k mobile screens: see §5b and §6).
+this project. It is kept up to date at every milestone. Last updated: **2026-11-12** (pictures and batch-013 §5d; skill audit §5c; slop blind test sent; Fable 5.2 advice; plan to move to the owner's machine for ~15k mobile screens: see §5b and §6).
 
 ## 1. Goal
 
@@ -783,6 +783,44 @@ Proposed order: A fast reference reader; B craft module with positive recipes dr
 style cards, tested by rebuilding one slop-test page; C slim SKILL.md/create.md; D juror
 recalibration + motion video; E motion recipes; F voting page for designers. Waiting for the
 owner's choice.
+
+## 5d. 2026-11-12: pictures, batch-013, the owner's goal restated
+
+**Owner's goal, restated:** designs that are more mature and more detailed, at the level of a senior
+creative; improve without losing any quality the skill has; they feel "a big difference when there
+is an image or not". They asked for free image generation or stock sources as a skill, attractive
+placeholders when there is none, or a pure no-image path.
+
+**Pictures (module: `rules/illustration.md`, tools in `scripts/`):**
+- Root cause found: `photos.mjs` failed with "fetch failed" behind a proxy (Node's fetch ignores
+  HTTPS_PROXY without NODE_USE_ENV_PROXY=1), so every cloud run ended with no photographs. It now
+  restarts itself with the variable (keeping `--import` and other startup options).
+- New: Pexels and Pixabay providers with free keys (`PEXELS_API_KEY`, `PIXABAY_API_KEY`; mapping in
+  `scripts/lib/stock.mjs`, tested with sample answers, **not tested live: no key here**);
+  `photos.mjs generate` (Pollinations without a key, **tested live**: one picture per 45 s per IP,
+  886×665, model `sana`, watermark, weak accuracy: a mate gourd came back as a plant in a cup, a
+  figure had distorted limbs; licence for commercial use not verified → draft stand-in only, marked
+  `data-generated`); `scripts/placeholder.mjs`: designed placeholders, eight storyboard shots in
+  the page's colours with the shot as label, `data-placeholder-image` (looked at by Claude, not yet
+  by the owner).
+- Rules: seven picture paths and a four-point quality bar ("a weak picture is worse than a good
+  placeholder"); the brief's stand-in question offers five paths, "percayakan ke AI" = search and
+  keep what passes the bar, the rest designed placeholders; no-picture path only when chosen
+  (`imagery` dial `type`). Inspector INFO `placeholder-image` and `generated-image`;
+  `progress.mjs done deliver` wants AI drafts named when the brief planned them. Wired in SKILL.md,
+  modes/create.md, rules/brief-interview.md; fixture `evals/fixtures/pictures.html`; six selftests.
+- Honest result: without a key, free pictures are not senior-grade (Openverse is mostly snapshots,
+  the free generator mostly fails the bar). The real lift is a free Unsplash or Pexels key, or the
+  client's photographs. Other free generators exist behind an account (Cloudflare Workers AI's free
+  daily allowance, per web sources; not built, not tested).
+
+**Batch-013** (`data/references/batch-013.json`, review in Indonesian): Mana Yerba Maté (ref-0021,
+food) 6.3 and The Other Side of Truth (ref-0022, nonprofit, a new sector) 7.5, judged by the
+coordinator alone at the owner's request (one view, not a panel); no owner scores yet (asked).
+ref-0022's capture stopped at the 25-minute limit (WebGL): 14 of ~41 desktop screens, blank phone
+and tablet shots, no motion numbers. Library: 21 references. Patterns kept: the product as
+protagonist travelling down the page; an illustration world in the product's colours; the
+subject's two colours as the whole system; type as image; the argument as an interaction.
 
 ## 6. Next steps, in order (2026-11-11)
 

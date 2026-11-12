@@ -1,7 +1,7 @@
 {
-  "builtAt": "2026-11-10T18:44:57.317Z",
+  "builtAt": "2026-11-12T08:10:17.839Z",
   "source": "data/references (batch-*.json, captures/*/style.json)",
-  "count": 19,
+  "count": 21,
   "sectors": {
     "commerce": [
       "ref-0001"
@@ -25,7 +25,8 @@
       "ref-0011"
     ],
     "food": [
-      "ref-0013"
+      "ref-0013",
+      "ref-0021"
     ],
     "home": [
       "ref-0014"
@@ -39,6 +40,9 @@
     ],
     "music": [
       "ref-0020"
+    ],
+    "nonprofit": [
+      "ref-0022"
     ]
   },
   "groups": [
@@ -78,19 +82,19 @@
     },
     {
       "id": "style-3",
-      "name": "surface:flat · colour:bold · type:expressive · shape:soft · type:rounded",
+      "name": "surface:flat · colour:bold · type:expressive · shape:soft · motion:story",
       "shared": [
         "surface:flat",
         "colour:bold",
         "type:expressive",
         "shape:soft",
-        "type:rounded",
         "motion:story"
       ],
       "members": [
         "ref-0004",
         "ref-0005",
-        "ref-0018"
+        "ref-0018",
+        "ref-0021"
       ]
     },
     {
@@ -173,16 +177,15 @@
     },
     {
       "id": "style-9",
-      "name": "surface:gradient-shadow · colour:calm · type:expressive · motion:subtle · shape:soft",
+      "name": "colour:calm · type:expressive · shape:soft",
       "shared": [
-        "surface:gradient-shadow",
         "colour:calm",
         "type:expressive",
-        "motion:subtle",
         "shape:soft"
       ],
       "members": [
-        "ref-0019"
+        "ref-0019",
+        "ref-0022"
       ]
     }
   ],
@@ -2330,6 +2333,196 @@
         ]
       },
       "styleGroup": "style-7"
+    },
+    {
+      "id": "ref-0021",
+      "site": "mana yerba mate",
+      "url": "https://en.manayerbamate.com/",
+      "batch": "batch-013",
+      "review": "data/references/batch-013-review.md",
+      "business": "Canned organic yerba mate drinks sold online from Quebec, single cans, boxes and a subscription",
+      "actionThatPays": "Add to cart / subscribe",
+      "scores": {
+        "ai": 6.3,
+        "ownerOverall": null,
+        "ownerVisual": null,
+        "ownerShip": null,
+        "final": 6.3
+      },
+      "veto": null,
+      "patternOnly": false,
+      "patterns": [
+        "The product as protagonist: one real can that travels down the page and lands in each section",
+        "An illustration world in the flavour's own palette around a real product photograph",
+        "One colour field per flavour, so the range reads at a glance",
+        "Benefit cards that answer 'what is it?' in the brand's voice, tilted, one icon each",
+        "One typeface doing everything, with curved display lines as the single device"
+      ],
+      "avoid": [
+        "A loading screen as the first screen",
+        "No price or product facts beside the product on the home page",
+        "Layout shift from scroll choreography (1.97)",
+        "Motion that ignores reduced motion"
+      ],
+      "sector": "food",
+      "style": {
+        "features": [
+          "surface:flat",
+          "colour:bold",
+          "type:expressive",
+          "imagery:photo",
+          "motion:story",
+          "shape:soft"
+        ],
+        "tags": [
+          "flat",
+          "many-colours",
+          "expressive-type",
+          "many-type-sizes",
+          "one-typeface",
+          "scroll-choreography",
+          "smoothed-scroll",
+          "endless-motion",
+          "photography",
+          "illustration",
+          "ignores-reduced-motion",
+          "layout-shift"
+        ],
+        "type": {
+          "families": [
+            "neue montreal 2"
+          ],
+          "display": 334,
+          "body": 16,
+          "ratio": 20.9,
+          "sizes": 11
+        },
+        "palette": {
+          "chromatic": 7,
+          "gradients": 0,
+          "shadows": 0,
+          "backgrounds": [
+            "#2b3d73",
+            "#ffffff",
+            "#acd084",
+            "#195e1c",
+            "#0e0e0e"
+          ]
+        },
+        "radii": [
+          "40px",
+          "100%",
+          "49.536px",
+          "21.384px"
+        ],
+        "motion": {
+          "libraries": [
+            "gsap",
+            "scrollTrigger",
+            "lenis",
+            "swiper",
+            "lottie"
+          ],
+          "stickyPanels": 0,
+          "durationsMs": null,
+          "easings": [],
+          "reducedMotionRespected": false,
+          "smoothness": {
+            "fps": 3.7,
+            "longFrames": 149,
+            "baselineLongFrames": 0,
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+          }
+        },
+        "doNotCopy": [
+          "img-alt: 72 images without an alt attribute",
+          "layout-shift: Layout shift 1.971 (over 0.25)",
+          "contrast: 1 text elements below WCAG AA (measured on screen pixels)",
+          "layout-shift: Layout shift 1.933 (over 0.25)",
+          "tap-target: 3 controls smaller than 24x24px on a phone",
+          "motion without a reduced-motion path"
+        ]
+      },
+      "styleGroup": "style-3"
+    },
+    {
+      "id": "ref-0022",
+      "site": "the other side of truth",
+      "url": "https://theothersideoftruth.com/",
+      "batch": "batch-013",
+      "review": "data/references/batch-013-review.md",
+      "business": "An advocacy and information site about Russia's war on Ukraine by Ukrainian creatives (inferred)",
+      "actionThatPays": "Donate / share",
+      "scores": {
+        "ai": 7.5,
+        "ownerOverall": null,
+        "ownerVisual": null,
+        "ownerShip": null,
+        "final": 7.5
+      },
+      "veto": null,
+      "patternOnly": false,
+      "patterns": [
+        "The subject's own two colours as the whole system (restrained colour, maximum identity)",
+        "Type as image: letters and dates large enough to be the picture, with photographs laid over them",
+        "The argument as an interaction: one switch between two versions of the truth",
+        "Real artefacts as texture with meaning: chat messages from the first morning falling over the headline",
+        "A named chapter list on the first screen, and a change of ground colour to mark the turn of the story"
+      ],
+      "avoid": [
+        "12px running text and low-contrast text on a gradient",
+        "About 41 screens before the action",
+        "Broken images and a stale 'updated' date on an information site"
+      ],
+      "sector": "nonprofit",
+      "style": {
+        "features": [
+          "surface:flat",
+          "colour:calm",
+          "type:expressive",
+          "shape:soft"
+        ],
+        "tags": [
+          "restrained-colour",
+          "expressive-type"
+        ],
+        "type": {
+          "families": [
+            "helveticaneuecyr roman",
+            "nitti",
+            "helveticaneuecyr"
+          ],
+          "display": 210,
+          "body": 16,
+          "ratio": 13.1,
+          "sizes": 7
+        },
+        "palette": {
+          "chromatic": 2,
+          "gradients": 2,
+          "shadows": 0,
+          "backgrounds": [
+            "#f6e54e",
+            "#77afd8",
+            "#1d1d1d",
+            "#202020",
+            "#ffffff"
+          ]
+        },
+        "radii": [
+          "20px"
+        ],
+        "motion": null,
+        "doNotCopy": [
+          "no-h1: No visible h1: the page has no title",
+          "img-broken: 2 images failed to load",
+          "contrast: 14 text elements below WCAG AA (measured on screen pixels)",
+          "img-broken: 1 images failed to load",
+          "contrast: 9 text elements below WCAG AA (measured on screen pixels)",
+          "tap-target: 79 controls smaller than 24x24px on a phone"
+        ]
+      },
+      "styleGroup": "style-9"
     }
   ]
 }

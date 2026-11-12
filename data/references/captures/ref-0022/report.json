@@ -1,0 +1,1248 @@
+{
+  "target": "https://theothersideoftruth.com/",
+  "time": "2026-11-12T07:43:41.228Z",
+  "rules": {
+    "purple-gradient": "warn",
+    "gradient": "info",
+    "glass": "info",
+    "system-font-only": "warn",
+    "too-many-font-sizes": "warn",
+    "too-many-colours": "warn",
+    "shadow-on-everything": "warn",
+    "icon-card-row": "warn",
+    "centred-hero-two-ctas": "warn",
+    "emoji": "warn",
+    "kit-sample": "fail",
+    "table-numbers-align": "warn",
+    "table-checkbox-align": "warn",
+    "table-checkbox-target": "warn",
+    "table-truncation": "warn",
+    "table-bulk-actions": "warn",
+    "table-sticky-columns": "info"
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "pageHeight": 37009,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "font-count",
+          "message": "3 typefaces carry the text: helveticaneuecyr roman, nitti, helveticaneuecyr"
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"More than a third of this area was already seized \""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"Indiscriminate Russian shelling that has trapped a\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"All my achievements are going to hell. Bye-bye, In\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"These people aren't afraid of tanks. These people \""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"We are all one army. We are all protecting our fre\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"If you see Russian soldiers, help Ukraine and uplo\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"This site was created for non-commercial purposes.\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"Ivan Mavrytiuk, Julia Shulgina, Lera Rosinskaya, R\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "no-h1",
+          "message": "No visible h1: the page has no title"
+        },
+        {
+          "severity": "WARN",
+          "rule": "headline-lines",
+          "message": "h2 runs to 5 lines",
+          "sample": [
+            "<h2> \"We want to bring peace back to our country, to our\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "headline-lines",
+          "message": "h2 runs to 5 lines",
+          "sample": [
+            "<h2> \"This is the worst war in Europe since World War II\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "headline-lines",
+          "message": "h2 runs to 4 lines",
+          "sample": [
+            "<h2> \"We are fighting against one of the largest armies \""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "headline-lines",
+          "message": "h3 runs to 4 lines",
+          "sample": [
+            "<h3> \"The world is shouting: Ukrainians are Fighting For\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "line-length",
+          "message": "About 157 characters per line (55-75 reads best)",
+          "sample": [
+            "<p> \"WE’RE FIGHTING NOT ONLY FOR OUR FREEDOM, SOVEREIGN\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "line-length",
+          "message": "About 128 characters per line (55-75 reads best)",
+          "sample": [
+            "<p> \"While Russian troops are destroying thousands of h\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "line-length",
+          "message": "About 106 characters per line (55-75 reads best)",
+          "sample": [
+            "<p> \"They said he would run away. They said he's in Pol\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "fixed-cover",
+          "message": "1 fixed or sticky element(s) that are not a bar cover part of every screen; make it a slim bar or let it scroll away",
+          "sample": [
+            "1440x900 (100% of the screen height) <section> \"/ beginning/ date/ war in numbers/ destruction/ no\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "img-broken",
+          "message": "2 images failed to load",
+          "sample": [
+            "/image/cities/mariupol/1.jpg",
+            "/image/cities/mariupol/2.jpg"
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "2 gradient backgrounds"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "14 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#f6e54e on screen = 1.77:1 median, 1.75:1 in the worst tenth (needs 4.5) <a> \"#standwithukraine\"",
+            "#f6e54e on screen = 1.77:1 median, 1.63:1 in the worst tenth (needs 4.5) <span> \"the information has been\"",
+            "#f6e54e on screen = 1.75:1 median, 1.61:1 in the worst tenth (needs 4.5) <span> \"updated:\"",
+            "#f6e54e on screen = 1.77:1 median, 1.63:1 in the worst tenth (needs 4.5) <span> \"3 July (Jul)\"",
+            "#f6e54e on screen = 1.77:1 median, 1.77:1 in the worst tenth (needs 4.5) <button> \"world TRUTH\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "contrast-unverified",
+          "message": "12 suspected contrast problems could not be re-measured on screen"
+        },
+        {
+          "severity": "WARN",
+          "rule": "screenshots-capped",
+          "message": "Page is 37009px tall; only the first 14 screens were captured"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "HelveticaNeueCyr-Roman",
+            "share": 75
+          },
+          {
+            "family": "Nitti-Normal",
+            "share": 23
+          },
+          {
+            "family": "HelveticaNeueCyr-Heavy",
+            "share": 2
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "helveticaneuecyr roman",
+            "share": 75
+          },
+          {
+            "family": "nitti",
+            "share": 23
+          },
+          {
+            "family": "helveticaneuecyr",
+            "share": 2
+          }
+        ],
+        "fontSizes": [
+          210,
+          80,
+          72,
+          28,
+          20,
+          16,
+          12
+        ],
+        "textColours": [
+          "#f6e54e",
+          "#202020",
+          "#ffffff"
+        ],
+        "backgroundColours": [
+          "#f6e54e",
+          "#77afd8",
+          "#1d1d1d",
+          "#202020",
+          "#ffffff"
+        ],
+        "chromaticColours": 2,
+        "colourFamilies": 2,
+        "spacing": {
+          "distinct": 51,
+          "offScale": 25,
+          "values": [
+            4,
+            5,
+            6,
+            8,
+            10,
+            12,
+            16,
+            17,
+            18,
+            20,
+            24,
+            27,
+            28,
+            29,
+            32,
+            34,
+            38,
+            40,
+            44,
+            48,
+            53,
+            58,
+            64,
+            65,
+            66,
+            68,
+            72,
+            80,
+            91,
+            92,
+            97,
+            98,
+            108,
+            112,
+            113,
+            120,
+            122,
+            136,
+            138,
+            140
+          ]
+        },
+        "radii": [
+          "20px"
+        ],
+        "shadows": 0,
+        "gradients": 2,
+        "backdropBlur": 0,
+        "transitions": 73,
+        "animatedElements": 63,
+        "cls": 0.006
+      },
+      "screenshots": [
+        "data/references/captures/ref-0022/desktop-fold.png",
+        "data/references/captures/ref-0022/desktop-page-01.png",
+        "data/references/captures/ref-0022/desktop-page-02.png",
+        "data/references/captures/ref-0022/desktop-page-03.png",
+        "data/references/captures/ref-0022/desktop-page-04.png",
+        "data/references/captures/ref-0022/desktop-page-05.png",
+        "data/references/captures/ref-0022/desktop-page-06.png",
+        "data/references/captures/ref-0022/desktop-page-07.png",
+        "data/references/captures/ref-0022/desktop-page-08.png",
+        "data/references/captures/ref-0022/desktop-page-09.png",
+        "data/references/captures/ref-0022/desktop-page-10.png",
+        "data/references/captures/ref-0022/desktop-page-11.png",
+        "data/references/captures/ref-0022/desktop-page-12.png",
+        "data/references/captures/ref-0022/desktop-page-13.png",
+        "data/references/captures/ref-0022/desktop-page-14.png"
+      ]
+    },
+    "tablet": {
+      "width": 768,
+      "pageHeight": 1024,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"More than a third of this area was already seized \""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"Indiscriminate Russian shelling that has trapped a\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"While Russian troops are destroying thousands of h\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"Getting out of your comfort zone is painful and sc\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"We are all one army. We are all protecting our fre\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"If you see Russian soldiers, help Ukraine and uplo\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"This site was created for non-commercial purposes.\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"Ivan Mavrytiuk, Julia Shulgina, Lera Rosinskaya, R\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "no-h1",
+          "message": "No visible h1: the page has no title"
+        },
+        {
+          "severity": "WARN",
+          "rule": "headline-lines",
+          "message": "h2 runs to 6 lines",
+          "sample": [
+            "<h2> \"We want to bring peace back to our country, to our\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "headline-lines",
+          "message": "h2 runs to 5 lines",
+          "sample": [
+            "<h2> \"This is the worst war in Europe since World War II\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "headline-lines",
+          "message": "h2 runs to 5 lines",
+          "sample": [
+            "<h2> \"We are fighting against one of the largest armies \""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "headline-lines",
+          "message": "h3 runs to 4 lines",
+          "sample": [
+            "<h3> \"Do You think...\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "line-length",
+          "message": "About 96 characters per line (55-75 reads best)",
+          "sample": [
+            "<p> \"While Russian troops are destroying thousands of h\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "fixed-cover",
+          "message": "1 fixed or sticky element(s) that are not a bar cover part of every screen; make it a slim bar or let it scroll away",
+          "sample": [
+            "768x1024 (100% of the screen height) <div> \"\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "img-broken",
+          "message": "1 images failed to load",
+          "sample": [
+            "/image/cities/mariupol/1.jpg"
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "2 gradient backgrounds"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "9 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#a0963c on screen = 2.35:1 median, 2.35:1 in the worst tenth (needs 4.5) <p> \"28 mar, 2022\"",
+            "#ffffff on screen = 1.29:1 median, 1.29:1 in the worst tenth (needs 3) <span> \"This is the worst war in Europe since World War II\"",
+            "#ffffff on screen = 1.29:1 median, 1.29:1 in the worst tenth (needs 3) <span> \"reason Ukrainian\"",
+            "#ffffff on screen = 1.29:1 median, 1.29:1 in the worst tenth (needs 3) <span> \"cities are\"",
+            "#ffffff on screen = 1.29:1 median, 1.29:1 in the worst tenth (needs 3) <span> \"burning &\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "contrast-unverified",
+          "message": "3 suspected contrast problems could not be re-measured on screen"
+        },
+        {
+          "severity": "INFO",
+          "rule": "carousel-slides",
+          "message": "21 text elements sit in carousel slides the visitor turns to; check the controls work by keyboard and touch"
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "1 console or page errors",
+          "sample": [
+            "TypeError: n.setAttribute is not a function\n    at Array.Rr (https://theothersideoftruth.com/_nuxt/f38db53.js:2:45189)\n    at x (https://theothersideoftruth.com/_nuxt/f38db53.js:2:54904)\n    at R (https://theothersideoftruth.com/_nuxt/f38db53.js:2:58108)\n    at R (https://theothersideoftruth.com/_nuxt/f38db53.js:2:57980)\n    at R (https://theothersideoftruth.com/_nuxt/f38db53.js:2:57980)\n    at R (https://theothersideoftruth.com/_nuxt/f38db53.js:2:57980)\n    at f.__patch__ (https://theothersideoftruth.com/_nuxt/f38db53.js:2:58415)\n    at t._update (https://theothersideoftruth.com/_nuxt/f38db53.js:2:35127)\n    at f.r (https://theothersideoftruth.com/_nuxt/f38db53.js:2:65827)\n    at kn.get (https://theothersideoftruth.com/_nuxt/f38db53.js:2:27380)"
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "HelveticaNeueCyr-Roman",
+            "share": 68
+          },
+          {
+            "family": "Nitti-Normal",
+            "share": 31
+          },
+          {
+            "family": "HelveticaNeueCyr-Heavy",
+            "share": 1
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "helveticaneuecyr roman",
+            "share": 68
+          },
+          {
+            "family": "nitti",
+            "share": 31
+          },
+          {
+            "family": "helveticaneuecyr",
+            "share": 1
+          }
+        ],
+        "fontSizes": [
+          130,
+          112,
+          56,
+          48,
+          20,
+          16,
+          12
+        ],
+        "textColours": [
+          "#f6e54e",
+          "#202020",
+          "#ffffff"
+        ],
+        "backgroundColours": [
+          "#f6e54e",
+          "#77afd8",
+          "#1d1d1d",
+          "#202020",
+          "#ffffff",
+          "#000000"
+        ],
+        "chromaticColours": 2,
+        "colourFamilies": 2,
+        "spacing": {
+          "distinct": 37,
+          "offScale": 18,
+          "values": [
+            4,
+            5,
+            6,
+            8,
+            12,
+            16,
+            17,
+            24,
+            25,
+            27,
+            28,
+            32,
+            37,
+            38.5,
+            40,
+            44,
+            45,
+            48,
+            49,
+            50,
+            51,
+            56,
+            58,
+            68,
+            72,
+            76,
+            78,
+            80,
+            85,
+            95,
+            104,
+            113,
+            120,
+            121,
+            156,
+            605.5,
+            684
+          ]
+        },
+        "radii": [
+          "20px"
+        ],
+        "shadows": 0,
+        "gradients": 2,
+        "backdropBlur": 0,
+        "transitions": 93,
+        "animatedElements": 3,
+        "cls": 0.011
+      },
+      "screenshots": [
+        "data/references/captures/ref-0022/tablet-fold.png",
+        "data/references/captures/ref-0022/tablet-page-01.png"
+      ]
+    },
+    "mobile": {
+      "width": 390,
+      "pageHeight": 844,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"More than a third of this area was already seized \""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"Indiscriminate Russian shelling that has trapped a\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"While Russian troops are destroying thousands of h\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"Getting out of your comfort zone is painful and sc\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"We are all one army. We are all protecting our fre\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"If you see Russian soldiers, help Ukraine and uplo\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"This site was created for non-commercial purposes.\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "body-size",
+          "message": "Running text at 12px (16px or more reads better)",
+          "sample": [
+            "<p> \"Ivan Mavrytiuk, Julia Shulgina, Lera Rosinskaya, R\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "no-h1",
+          "message": "No visible h1: the page has no title"
+        },
+        {
+          "severity": "WARN",
+          "rule": "headline-lines",
+          "message": "h2 runs to 9 lines",
+          "sample": [
+            "<h2> \"We want to bring peace back to our country, to our\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "headline-lines",
+          "message": "h2 runs to 7 lines",
+          "sample": [
+            "<h2> \"Russia is the reason Ukrainian cities are burning \""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "headline-lines",
+          "message": "h2 runs to 7 lines",
+          "sample": [
+            "<h2> \"We are fighting against one of the largest armies \""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "headline-lines",
+          "message": "h3 runs to 4 lines",
+          "sample": [
+            "<h3> \"Do You think...\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "headline-lines",
+          "message": "h2 runs to 5 lines",
+          "sample": [
+            "<h2> \"what's the difference? we are not the same\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "headline-lines",
+          "message": "h2 runs to 5 lines",
+          "sample": [
+            "<h2> \"DOES IT LOOK LIKE MILITARY OBJECTIVES FOR YOU ?\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "fixed-cover",
+          "message": "1 fixed or sticky element(s) that are not a bar cover part of every screen; make it a slim bar or let it scroll away",
+          "sample": [
+            "390x844 (100% of the screen height) <div> \"\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "tap-target",
+          "message": "79 controls smaller than 24x24px on a phone",
+          "sample": [
+            "101x21 <button> \"world TRUTH\"",
+            "20x11 <button> \"\"",
+            "111x21 <button> \"russian TRUTH\"",
+            "86x21 <a> \"/ beginning\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "text-at-edge",
+          "message": "33 text elements within 12px of the screen edge",
+          "sample": [
+            "<h2> \"guarantees\"",
+            "<h2> \"sovereignty\"",
+            "<span> \"stop\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "img-broken",
+          "message": "1 images failed to load",
+          "sample": [
+            "/image/cities/mariupol/1.jpg"
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "gradient",
+          "message": "3 gradient backgrounds"
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "9 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#a0963c on screen = 2.35:1 median, 2.35:1 in the worst tenth (needs 4.5) <p> \"28 mar, 2022\"",
+            "#ffffff on screen = 1.29:1 median, 1.29:1 in the worst tenth (needs 3) <h2> \"Russia is the reason Ukrainian cities are burning \"",
+            "#ffffff on screen = 1.29:1 median, 1.29:1 in the worst tenth (needs 3) <span> \"cities\"",
+            "#ffffff on screen = 1.29:1 median, 1.29:1 in the worst tenth (needs 3) <span> \"are\"",
+            "#ffffff on screen = 1.29:1 median, 1.29:1 in the worst tenth (needs 4.5) <p> \"destroyed buildings\""
+          ]
+        },
+        {
+          "severity": "INFO",
+          "rule": "contrast-unverified",
+          "message": "2 suspected contrast problems could not be re-measured on screen"
+        },
+        {
+          "severity": "INFO",
+          "rule": "carousel-slides",
+          "message": "24 text elements sit in carousel slides the visitor turns to; check the controls work by keyboard and touch"
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "1 console or page errors",
+          "sample": [
+            "TypeError: n.setAttribute is not a function\n    at Array.Rr (https://theothersideoftruth.com/_nuxt/f38db53.js:2:45189)\n    at x (https://theothersideoftruth.com/_nuxt/f38db53.js:2:54904)\n    at R (https://theothersideoftruth.com/_nuxt/f38db53.js:2:58108)\n    at R (https://theothersideoftruth.com/_nuxt/f38db53.js:2:57980)\n    at f.__patch__ (https://theothersideoftruth.com/_nuxt/f38db53.js:2:58415)\n    at t._update (https://theothersideoftruth.com/_nuxt/f38db53.js:2:35127)\n    at f.r (https://theothersideoftruth.com/_nuxt/f38db53.js:2:65827)\n    at kn.get (https://theothersideoftruth.com/_nuxt/f38db53.js:2:27380)\n    at new kn (https://theothersideoftruth.com/_nuxt/f38db53.js:2:27298)\n    at t (https://theothersideoftruth.com/_nuxt/f38db53.js:2:65851)"
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "HelveticaNeueCyr-Roman",
+            "share": 68
+          },
+          {
+            "family": "Nitti-Normal",
+            "share": 31
+          },
+          {
+            "family": "HelveticaNeueCyr-Heavy",
+            "share": 1
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "helveticaneuecyr roman",
+            "share": 68
+          },
+          {
+            "family": "nitti",
+            "share": 31
+          },
+          {
+            "family": "helveticaneuecyr",
+            "share": 1
+          }
+        ],
+        "fontSizes": [
+          92,
+          60,
+          44,
+          20,
+          16,
+          12
+        ],
+        "textColours": [
+          "#f6e54e",
+          "#202020",
+          "#ffffff"
+        ],
+        "backgroundColours": [
+          "#f6e54e",
+          "#77afd8",
+          "#1d1d1d",
+          "#202020",
+          "#ffffff",
+          "#000000"
+        ],
+        "chromaticColours": 2,
+        "colourFamilies": 2,
+        "spacing": {
+          "distinct": 42,
+          "offScale": 22,
+          "values": [
+            2,
+            4,
+            5,
+            6,
+            8,
+            10,
+            12,
+            13,
+            14,
+            16,
+            17,
+            18,
+            20,
+            24,
+            29,
+            32,
+            37,
+            38.5,
+            40,
+            44,
+            45,
+            46,
+            47,
+            48,
+            50,
+            52,
+            56,
+            56.5,
+            58,
+            60.5,
+            64,
+            68,
+            72,
+            80,
+            84,
+            90,
+            96,
+            98,
+            100,
+            113
+          ]
+        },
+        "radii": [
+          "20px"
+        ],
+        "shadows": 0,
+        "gradients": 3,
+        "backdropBlur": 0,
+        "transitions": 79,
+        "animatedElements": 3,
+        "cls": 0.013
+      },
+      "screenshots": [
+        "data/references/captures/ref-0022/mobile-fold.png",
+        "data/references/captures/ref-0022/mobile-page-01.png"
+      ]
+    }
+  },
+  "checks": {
+    "reducedMotion": {
+      "findings": [],
+      "screenshot": "data/references/captures/ref-0022/reduced-motion-fold.png"
+    },
+    "noJavaScript": {
+      "findings": [],
+      "withJs": 1792,
+      "withoutJs": 6700
+    }
+  },
+  "summary": {
+    "fail": 6,
+    "warn": 16
+  },
+  "url": "https://theothersideoftruth.com/",
+  "findings": [
+    {
+      "severity": "FAIL",
+      "rule": "no-h1",
+      "message": "No visible h1: the page has no title",
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "img-broken",
+      "message": "2 images failed to load",
+      "sample": [
+        "/image/cities/mariupol/1.jpg",
+        "/image/cities/mariupol/2.jpg"
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "14 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#f6e54e on screen = 1.77:1 median, 1.75:1 in the worst tenth (needs 4.5) <a> \"#standwithukraine\"",
+        "#f6e54e on screen = 1.77:1 median, 1.63:1 in the worst tenth (needs 4.5) <span> \"the information has been\"",
+        "#f6e54e on screen = 1.75:1 median, 1.61:1 in the worst tenth (needs 4.5) <span> \"updated:\"",
+        "#f6e54e on screen = 1.77:1 median, 1.63:1 in the worst tenth (needs 4.5) <span> \"3 July (Jul)\"",
+        "#f6e54e on screen = 1.77:1 median, 1.77:1 in the worst tenth (needs 4.5) <button> \"world TRUTH\""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "img-broken",
+      "message": "1 images failed to load",
+      "sample": [
+        "/image/cities/mariupol/1.jpg"
+      ],
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "9 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#a0963c on screen = 2.35:1 median, 2.35:1 in the worst tenth (needs 4.5) <p> \"28 mar, 2022\"",
+        "#ffffff on screen = 1.29:1 median, 1.29:1 in the worst tenth (needs 3) <span> \"This is the worst war in Europe since World War II\"",
+        "#ffffff on screen = 1.29:1 median, 1.29:1 in the worst tenth (needs 3) <span> \"reason Ukrainian\"",
+        "#ffffff on screen = 1.29:1 median, 1.29:1 in the worst tenth (needs 3) <span> \"cities are\"",
+        "#ffffff on screen = 1.29:1 median, 1.29:1 in the worst tenth (needs 3) <span> \"burning &\""
+      ],
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tap-target",
+      "message": "79 controls smaller than 24x24px on a phone",
+      "sample": [
+        "101x21 <button> \"world TRUTH\"",
+        "20x11 <button> \"\"",
+        "111x21 <button> \"russian TRUTH\"",
+        "86x21 <a> \"/ beginning\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "font-count",
+      "message": "3 typefaces carry the text: helveticaneuecyr roman, nitti, helveticaneuecyr",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "body-size",
+      "message": "Running text at 12px (16px or more reads better)",
+      "sample": [
+        "<p> \"More than a third of this area was already seized \""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "headline-lines",
+      "message": "h2 runs to 5 lines",
+      "sample": [
+        "<h2> \"We want to bring peace back to our country, to our\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "headline-lines",
+      "message": "h2 runs to 4 lines",
+      "sample": [
+        "<h2> \"We are fighting against one of the largest armies \""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "headline-lines",
+      "message": "h3 runs to 4 lines",
+      "sample": [
+        "<h3> \"The world is shouting: Ukrainians are Fighting For\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "line-length",
+      "message": "About 157 characters per line (55-75 reads best)",
+      "sample": [
+        "<p> \"WE’RE FIGHTING NOT ONLY FOR OUR FREEDOM, SOVEREIGN\""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "line-length",
+      "message": "About 128 characters per line (55-75 reads best)",
+      "sample": [
+        "<p> \"While Russian troops are destroying thousands of h\""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "line-length",
+      "message": "About 106 characters per line (55-75 reads best)",
+      "sample": [
+        "<p> \"They said he would run away. They said he's in Pol\""
+      ],
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "fixed-cover",
+      "message": "1 fixed or sticky element(s) that are not a bar cover part of every screen; make it a slim bar or let it scroll away",
+      "sample": [
+        "1440x900 (100% of the screen height) <section> \"/ beginning/ date/ war in numbers/ destruction/ no\""
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "gradient",
+      "message": "2 gradient backgrounds",
+      "where": [
+        "desktop",
+        "tablet"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "contrast-unverified",
+      "message": "12 suspected contrast problems could not be re-measured on screen",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "screenshots-capped",
+      "message": "Page is 37009px tall; only the first 14 screens were captured",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "headline-lines",
+      "message": "h2 runs to 6 lines",
+      "sample": [
+        "<h2> \"We want to bring peace back to our country, to our\""
+      ],
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "line-length",
+      "message": "About 96 characters per line (55-75 reads best)",
+      "sample": [
+        "<p> \"While Russian troops are destroying thousands of h\""
+      ],
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "contrast-unverified",
+      "message": "3 suspected contrast problems could not be re-measured on screen",
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "carousel-slides",
+      "message": "21 text elements sit in carousel slides the visitor turns to; check the controls work by keyboard and touch",
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "console-errors",
+      "message": "1 console or page errors",
+      "sample": [
+        "TypeError: n.setAttribute is not a function\n    at Array.Rr (https://theothersideoftruth.com/_nuxt/f38db53.js:2:45189)\n    at x (https://theothersideoftruth.com/_nuxt/f38db53.js:2:54904)\n    at R (https://theothersideoftruth.com/_nuxt/f38db53.js:2:58108)\n    at R (https://theothersideoftruth.com/_nuxt/f38db53.js:2:57980)\n    at R (https://theothersideoftruth.com/_nuxt/f38db53.js:2:57980)\n    at R (https://theothersideoftruth.com/_nuxt/f38db53.js:2:57980)\n    at f.__patch__ (https://theothersideoftruth.com/_nuxt/f38db53.js:2:58415)\n    at t._update (https://theothersideoftruth.com/_nuxt/f38db53.js:2:35127)\n    at f.r (https://theothersideoftruth.com/_nuxt/f38db53.js:2:65827)\n    at kn.get (https://theothersideoftruth.com/_nuxt/f38db53.js:2:27380)"
+      ],
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "headline-lines",
+      "message": "h2 runs to 9 lines",
+      "sample": [
+        "<h2> \"We want to bring peace back to our country, to our\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "headline-lines",
+      "message": "h2 runs to 7 lines",
+      "sample": [
+        "<h2> \"Russia is the reason Ukrainian cities are burning \""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "text-at-edge",
+      "message": "33 text elements within 12px of the screen edge",
+      "sample": [
+        "<h2> \"guarantees\"",
+        "<h2> \"sovereignty\"",
+        "<span> \"stop\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "gradient",
+      "message": "3 gradient backgrounds",
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "contrast-unverified",
+      "message": "2 suspected contrast problems could not be re-measured on screen",
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "rule": "carousel-slides",
+      "message": "24 text elements sit in carousel slides the visitor turns to; check the controls work by keyboard and touch",
+      "where": [
+        "mobile"
+      ]
+    }
+  ]
+}

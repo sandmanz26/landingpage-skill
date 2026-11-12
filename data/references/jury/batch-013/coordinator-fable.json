@@ -1,0 +1,73 @@
+{
+ "juror": "coordinator-fable",
+ "kind": "ai",
+ "method": "The owner asked the coordinator to be the juror (2026-11-12, model Fable 5.2); one juror scores all six criteria, so this is one view, not a panel. Read: digest.md, sheet-desktop.png, sheet-mobile.png and style.json of ref-0021; digest.md, sheet-desktop.png, desktop-fold.png, desktop-page-04.png and desktop-page-09.png of ref-0022. Not verified: ref-0022's capture stopped at the time limit (heavy WebGL): no evidence.json, no motion numbers, phone and tablet screenshots are blank, and only the first 14 of about 41 desktop screens were seen; ref-0021's smoothness number comes from software rendering and is not judged.",
+ "refs": {
+  "ref-0021": {
+   "business": "Mana Yerba Maté: canned organic yerba mate drinks sold online from Quebec (shop, subscription with 10% off). Action that pays: add to cart / subscribe.",
+   "scores": {
+    "business": 6,
+    "customer": 6,
+    "story": 7,
+    "clarity": 6,
+    "distinctiveness": 8,
+    "craft": 5
+   },
+   "reasons": {
+    "business": "Shop and Subscription stay in the bar and the flavours end in 'See all our products', but the home page shows no price (only the $35 free-shipping line), no rating and no caffeine or ingredient facts next to the can.",
+    "customer": "It answers the first question of a newcomer, 'what is yerba mate?', in four cards (without the crash, natural caffeine, antioxidant, vegan) in a light voice. It does not answer taste per flavour, caffeine per can, sugar or price on this page.",
+    "story": "The can is the protagonist: it leaves the hero, travels down the page into the 'what are we talking about' cards, then the photographs, the flavour colours and the subscription. One voice from top to bottom ('We don't deliver in space yet, but who knows').",
+    "clarity": "The first screen captured is a loader ('INFUSED OF BIO ENERGY'); after it the can and the flavour name carry the screen, but the visible H1 is the hidden 'Mana - Drinking tea' and 'yerba mate' is explained only at 37%. 11 type sizes, 6 display sizes with no scale.",
+    "distinctiveness": "An illustrated world drawn in the flavour's own colours (fruit, flowers, a character) around the real can, one colour field per flavour, type set on a curve, cards tilted by hand. Cover the logo and it is still Mana.",
+    "craft": "Layout shift 1.97 on desktop and 1.93 on tablet, 72 images without alt, the white 'Subscribe' label at 3.33:1, three tap targets under 24px, 16 elements still moving under reduced motion, a loading screen before content. One typeface throughout is a strength."
+   },
+   "claims": [],
+   "motion": "gsap + ScrollTrigger + lenis + swiper + lottie; 97 elements move at the top without input, up to 25 per scroll step; no endless loop; reduced motion ignored (16 still move).",
+   "problems": [
+    "No price, rating or product facts on the home page",
+    "Layout shift 1.97 and motion that ignores reduced motion",
+    "A loader as the first screen; the product name arrives late"
+   ],
+   "keep": [
+    "The product as protagonist: one real can that travels down the page and lands in each section",
+    "An illustration world in the flavour's own palette around a real product photograph",
+    "One colour field per flavour, so the range reads at a glance",
+    "Benefit cards that answer 'what is it?' in the brand's voice, tilted, one icon each",
+    "One typeface doing everything, with curved display lines as the single device"
+   ]
+  },
+  "ref-0022": {
+   "business": "The Other Side of Truth: an advocacy and information site about Russia's war on Ukraine, made by Ukrainian creatives (inferred). Action: donate and share; the page's job is to inform and move.",
+   "scores": {
+    "business": 7,
+    "customer": 7,
+    "story": 9,
+    "clarity": 7,
+    "distinctiveness": 9,
+    "craft": 6
+   },
+   "reasons": {
+    "business": "Donate stays in the top bar from the first screen and Support is the last chapter; the cause is never in doubt. The page is about 37,000px tall before Support, and the header says the information was updated on 3 July.",
+    "customer": "A reader who knows little gets what happened, when, where and how much, in order: dated city photographs, the 24 Feb 2022 chapter, the war in numbers, real chat messages from the first morning. Sources were not visible in the screens captured (unverified).",
+    "story": "Seven named chapters (Beginning, Date, War in numbers, Destruction, Not the same, Our leader, Support) form an arc from shock to action; the yellow page turning black marks the turn; the 'World truth / Russian truth' switch makes the argument of the site something the reader operates.",
+    "clarity": "The first screen says what it is ('A moment of truth: Russia-Ukraine war'), where and how long (Kyiv time, days of war 1723) and shows the chapter list. No h1 in the markup, and the small yellow header text on the blue-to-yellow gradient measures 1.77:1.",
+    "distinctiveness": "Two colours only, and they are the flag. Letters and the date are set so large they become the picture; photographs are scattered over them like prints on a table; phone messages fall and pile up over the headline. Nothing here could belong to another subject.",
+    "craft": "Layout shift 0.006 and a strict two-colour, two-face system. Against it: 14 text elements below contrast on desktop, running text at 12px, lines of 157 characters, 2 broken images (Mariupol), 79 tap targets under 24px on a phone, and blank phone and tablet captures (not verified whether real users see that)."
+   },
+   "claims": [],
+   "motion": "Not measured (capture stopped). Seen in stills: giant letters moving behind the content, photographs entering one by one over the date, chat bubbles falling with physics.",
+   "problems": [
+    "Small low-contrast text: 12px mono captions and yellow on the gradient",
+    "About 41 screens before Support; broken images and a stale 'updated' date",
+    "Phone experience unverified: the capture shows blank screens"
+   ],
+   "keep": [
+    "The subject's own two colours as the whole system (restrained colour, maximum identity)",
+    "Type as image: letters and dates large enough to be the picture, with photographs laid over them",
+    "The argument as an interaction: one switch between two versions of the truth",
+    "Real artefacts as texture with meaning: chat messages from the first morning falling over the headline",
+    "A named chapter list on the first screen, and a change of ground colour to mark the turn of the story"
+   ]
+  }
+ }
+}

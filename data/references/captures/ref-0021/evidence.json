@@ -1,0 +1,265 @@
+{
+  "url": "https://en.manayerbamate.com/",
+  "time": "2026-11-12T08:05:18.781Z",
+  "sheets": {
+    "desktop": "data/references/captures/ref-0021/sheet-desktop.png",
+    "mobile": "data/references/captures/ref-0021/sheet-mobile.png",
+    "motion": "data/references/captures/ref-0021/motion-sheet.png"
+  },
+  "load": {
+    "status": 200,
+    "retries": 0,
+    "failed": false
+  },
+  "overlaysDismissed": [],
+  "outline": {
+    "title": "MANA yerba mate | Energizing infusion | Made in Quebec - MANA yerba mate",
+    "description": "Our company's mission is to fuel creativity and provide a showcase for emerging creative talent. MANA yerba maté offers thinkers and creatives a natural, organic, energizing infusion that unleashes the \"flow\" needed to achieve their vision.",
+    "headings": [
+      "H1 0% Mana - Drinking tea",
+      "H2 37% MANA ? YERBA MATÉ ? WHAT ARE WE TALKING ABOUT?",
+      "H2 54% FLAVORS",
+      "H2 60% Recommended products",
+      "H2 82% FOR A DOSE OF ENERGY IN YOUR FEED."
+    ],
+    "actions": [
+      {
+        "label": "Shop",
+        "count": 1,
+        "firstAt": 1,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Learn",
+        "count": 1,
+        "firstAt": 1,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Subscription",
+        "count": 1,
+        "firstAt": 1,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Fr",
+        "count": 1,
+        "firstAt": 1,
+        "firstScreen": true,
+        "sticky": true
+      },
+      {
+        "label": "Melon & Mint",
+        "count": 1,
+        "firstAt": 11,
+        "firstScreen": false,
+        "sticky": true
+      },
+      {
+        "label": "See all our products",
+        "count": 1,
+        "firstAt": 60,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Subscribe",
+        "count": 1,
+        "firstAt": 72,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Press Space to jump",
+        "count": 1,
+        "firstAt": 96,
+        "firstScreen": false,
+        "sticky": false
+      },
+      {
+        "label": "Credits",
+        "count": 1,
+        "firstAt": 99,
+        "firstScreen": false,
+        "sticky": false
+      }
+    ],
+    "prices": [
+      "$35"
+    ],
+    "proofMentions": {},
+    "logoImages": 0,
+    "forms": 1,
+    "imagery": {
+      "photos": 7,
+      "illustrations": 4,
+      "videos": 0,
+      "rasterChecked": []
+    },
+    "pageHeight": 8268
+  },
+  "motion": {
+    "libraries": {
+      "gsap": true,
+      "scrollTrigger": true,
+      "splitText": false,
+      "lenis": true,
+      "locomotive": false,
+      "swiper": true,
+      "lottie": true,
+      "framerMotion": false,
+      "viewTransitions": false
+    },
+    "stickyPanels": [],
+    "maxRunning": 0,
+    "durationsMs": null,
+    "easings": [],
+    "properties": [],
+    "movingWithoutInput": 97,
+    "movingWithoutInputFurtherDown": [
+      {
+        "y": 202,
+        "moving": 17
+      },
+      {
+        "y": 404,
+        "moving": 24
+      },
+      {
+        "y": 598,
+        "moving": 26
+      },
+      {
+        "y": 807,
+        "moving": 24
+      },
+      {
+        "y": 1009,
+        "moving": 10
+      }
+    ],
+    "scriptDrivenOnScroll": 25,
+    "infiniteLoops": 0,
+    "infiniteLoopsWithText": 0,
+    "pauseControl": false,
+    "steps": [
+      {
+        "y": 101,
+        "running": 0,
+        "scriptDriven": 24,
+        "idleMoving": null,
+        "sample": []
+      },
+      {
+        "y": 202,
+        "running": 0,
+        "scriptDriven": 11,
+        "idleMoving": 17,
+        "sample": []
+      },
+      {
+        "y": 303,
+        "running": 0,
+        "scriptDriven": 11,
+        "idleMoving": null,
+        "sample": []
+      },
+      {
+        "y": 404,
+        "running": 0,
+        "scriptDriven": 24,
+        "idleMoving": 24,
+        "sample": []
+      },
+      {
+        "y": 504,
+        "running": 0,
+        "scriptDriven": 24,
+        "idleMoving": null,
+        "sample": []
+      },
+      {
+        "y": 598,
+        "running": 0,
+        "scriptDriven": 10,
+        "idleMoving": 26,
+        "sample": []
+      },
+      {
+        "y": 706,
+        "running": 0,
+        "scriptDriven": 11,
+        "idleMoving": null,
+        "sample": []
+      },
+      {
+        "y": 807,
+        "running": 0,
+        "scriptDriven": 24,
+        "idleMoving": 24,
+        "sample": []
+      },
+      {
+        "y": 908,
+        "running": 0,
+        "scriptDriven": 10,
+        "idleMoving": null,
+        "sample": []
+      },
+      {
+        "y": 1009,
+        "running": 0,
+        "scriptDriven": 25,
+        "idleMoving": 10,
+        "sample": []
+      }
+    ]
+  },
+  "smoothness": {
+    "page": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 73231,
+      "frames": 273,
+      "fps": 3.7,
+      "medianMs": 366.7,
+      "p95Ms": 600.1,
+      "maxMs": 1667,
+      "longFrames": 149,
+      "droppedShare": 55,
+      "longTasks": 159,
+      "longTaskMs": 69819,
+      "scriptBlockedShare": 95,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "baseline": {
+      "loadFailed": false,
+      "cpuSlowdown": 1,
+      "scrolledMs": 1732,
+      "frames": 103,
+      "fps": 59.5,
+      "medianMs": 16.7,
+      "p95Ms": 16.8,
+      "maxMs": 17,
+      "longFrames": 0,
+      "droppedShare": 0,
+      "longTasks": 0,
+      "longTaskMs": 0,
+      "scriptBlockedShare": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    "longFramesOverBaseline": 149,
+    "p95OverBaseline": 583.3
+  },
+  "reducedMotion": {
+    "movingWithoutInput": 16,
+    "movingOnScroll": 15,
+    "idleNavigation": null,
+    "loadFailed": false
+  },
+  "idleRunLoadFailed": false,
+  "idleNavigation": null
+}

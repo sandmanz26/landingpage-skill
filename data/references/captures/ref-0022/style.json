@@ -1,0 +1,102 @@
+{
+  "url": "https://theothersideoftruth.com/",
+  "readAt": "2026-11-12T08:08:55.193Z",
+  "tags": [
+    "restrained-colour",
+    "expressive-type"
+  ],
+  "palette": {
+    "chromatic": 2,
+    "families": 2,
+    "text": [
+      "#f6e54e",
+      "#202020",
+      "#ffffff"
+    ],
+    "backgrounds": [
+      "#f6e54e",
+      "#77afd8",
+      "#1d1d1d",
+      "#202020",
+      "#ffffff"
+    ],
+    "gradients": 2,
+    "shadows": 0,
+    "blur": 0
+  },
+  "type": {
+    "families": [
+      {
+        "family": "helveticaneuecyr roman",
+        "share": 75
+      },
+      {
+        "family": "nitti",
+        "share": 23
+      },
+      {
+        "family": "helveticaneuecyr",
+        "share": 2
+      }
+    ],
+    "cuts": [
+      {
+        "family": "HelveticaNeueCyr-Roman",
+        "share": 75
+      },
+      {
+        "family": "Nitti-Normal",
+        "share": 23
+      },
+      {
+        "family": "HelveticaNeueCyr-Heavy",
+        "share": 2
+      }
+    ],
+    "sizes": {
+      "desktop": [
+        210,
+        80,
+        72,
+        28,
+        20,
+        16,
+        12
+      ],
+      "mobile": [
+        92,
+        60,
+        44,
+        20,
+        16,
+        12
+      ]
+    },
+    "display": 210,
+    "body": 16,
+    "ratio": 13.1
+  },
+  "shape": {
+    "radii": [
+      "20px"
+    ]
+  },
+  "spacing": {
+    "distinct": 51,
+    "offScale": 25
+  },
+  "motion": null,
+  "imagery": null,
+  "layout": {
+    "pageHeight": 37009,
+    "screens": 41
+  },
+  "doNotCopy": [
+    "no-h1: No visible h1: the page has no title",
+    "img-broken: 2 images failed to load",
+    "contrast: 14 text elements below WCAG AA (measured on screen pixels)",
+    "img-broken: 1 images failed to load",
+    "contrast: 9 text elements below WCAG AA (measured on screen pixels)",
+    "tap-target: 79 controls smaller than 24x24px on a phone"
+  ]
+}

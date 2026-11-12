@@ -1,0 +1,104 @@
+{
+ "batch": "batch-013",
+ "received": "2026-11-12",
+ "from": "owner (chat, 2 URLs, no notes; 'jadilah juri dan masukan ke kategori kita')",
+ "status": "ref-0021 captured in full; ref-0022 captured in part (inspect done, evidence stopped at the time limit: heavy WebGL, phone and tablet screenshots blank). Judged by the coordinator as the single juror at the owner's request; no human votes yet.",
+ "jury": {
+  "folder": "data/references/jury/batch-013",
+  "jurors": [
+   "coordinator-fable"
+  ],
+  "human_votes": 0,
+  "note": "one juror in the main session (Fable 5.2), no subagents; a single view, not a panel"
+ },
+ "entries": [
+  {
+   "id": "ref-0021",
+   "url": "https://en.manayerbamate.com/",
+   "site": "mana yerba mate",
+   "sector": "food",
+   "business": {
+    "what": "Canned organic yerba mate drinks sold online from Quebec, single cans, boxes and a subscription",
+    "action_that_pays": "Add to cart / subscribe",
+    "confidence": "high"
+   },
+   "owner": {
+    "visual": null,
+    "ship": null,
+    "note": "no scores or notes sent with the links; asked for"
+   },
+   "jury_scores": {
+    "business": 6,
+    "customer": 6,
+    "story": 7,
+    "clarity": 6,
+    "distinctiveness": 8,
+    "craft": 5,
+    "weighted": 6.3
+   },
+   "combined": {
+    "final": 6.3,
+    "gap": null
+   },
+   "veto": null,
+   "claims": [],
+   "library_candidates": [
+    "The product as protagonist: one real can that travels down the page and lands in each section",
+    "An illustration world in the flavour's own palette around a real product photograph",
+    "One colour field per flavour, so the range reads at a glance",
+    "Benefit cards that answer 'what is it?' in the brand's voice, tilted, one icon each",
+    "One typeface doing everything, with curved display lines as the single device"
+   ],
+   "avoid": [
+    "A loading screen as the first screen",
+    "No price or product facts beside the product on the home page",
+    "Layout shift from scroll choreography (1.97)",
+    "Motion that ignores reduced motion"
+   ]
+  },
+  {
+   "id": "ref-0022",
+   "url": "https://theothersideoftruth.com/",
+   "site": "the other side of truth",
+   "sector": "nonprofit",
+   "business": {
+    "what": "An advocacy and information site about Russia's war on Ukraine by Ukrainian creatives (inferred)",
+    "action_that_pays": "Donate / share",
+    "confidence": "medium"
+   },
+   "owner": {
+    "visual": null,
+    "ship": null,
+    "note": "no scores or notes sent with the links; asked for"
+   },
+   "jury_scores": {
+    "business": 7,
+    "customer": 7,
+    "story": 9,
+    "clarity": 7,
+    "distinctiveness": 9,
+    "craft": 6,
+    "weighted": 7.5
+   },
+   "combined": {
+    "final": 7.5,
+    "gap": null
+   },
+   "veto": null,
+   "claims": [],
+   "library_candidates": [
+    "The subject's own two colours as the whole system (restrained colour, maximum identity)",
+    "Type as image: letters and dates large enough to be the picture, with photographs laid over them",
+    "The argument as an interaction: one switch between two versions of the truth",
+    "Real artefacts as texture with meaning: chat messages from the first morning falling over the headline",
+    "A named chapter list on the first screen, and a change of ground colour to mark the turn of the story"
+   ],
+   "avoid": [
+    "12px running text and low-contrast text on a gradient",
+    "About 41 screens before the action",
+    "Broken images and a stale 'updated' date on an information site"
+   ]
+  }
+ ],
+ "owner_taste_signal": "No owner scores yet. Both sites repeat what the owner has praised before: an identity taken from the subject itself (the can and its flavour colours; the flag's two colours), type used as the picture, and motion that tells the story. ref-0022 is the second strong case (after Quite Nice and Quilt) for judging colour by harmony: two colours, the highest distinctiveness in the library."
+}
