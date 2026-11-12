@@ -1,0 +1,70 @@
+{
+ "juror": "coordinator-fable",
+ "kind": "ai",
+ "method": "Fast read only (read.mjs, about 21 s a site; library/intake.md → Three depths), one juror in the main session (Fable 5.2). ref-0023: read.md, read-sheet.png, one scroll frame; no inspector findings, so craft is judged by eye and is unverified. ref-0024: a WebGL story behind a START button; only the opening line, the title screen (title-screen.jpg) and the first line of text were reached, the story itself was not seen; scores for story and craft are low-confidence.",
+ "refs": {
+  "ref-0023": {
+   "business": "Frans Hals Museum, Haarlem: an art museum. Action that pays: order tickets / plan a visit.",
+   "scores": {
+    "business": 8,
+    "customer": 8,
+    "story": 7,
+    "clarity": 8,
+    "distinctiveness": 7,
+    "craft": 7
+   },
+   "reasons": {
+    "business": "'Order tickets' stays in the bar; a notice at the very top says tickets for the Hals-Rembrandt exhibition must be booked in advance; 'Plan your visit' closes the welcome block.",
+    "customer": "A first-time visitor gets what it is and where (welcome text), what to see (highlights), whether to bring children (families and children), who Frans Hals was, and the museum itself, in that order.",
+    "story": "Welcome → highlights → families → the painter → the museum → practical footer: an ordered visit, conventional and complete.",
+    "clarity": "Plain headings in capitals, one typeface, large pictures of the works. A cookie panel covers the lower half of the first screen on load, and most of the phone screen.",
+    "distinctiveness": "Apricot, deep teal and sage grounds change per chapter and let the paintings supply the colour; rounded picture cards; a logo cut like a ticket stub. Recognisable, not radical.",
+    "craft": "By eye: one radius system, even margins, pictures cropped alike. Not measured: contrast, layout shift, tap targets (no inspector run)."
+   },
+   "claims": [],
+   "motion": "Quiet on purpose: no animation library, a hero video on autoplay with a pause button, blocks fade in on entry (transition-opacity), accordion and collapsible keyframes, transitions of 0.15-0.75 s, card rows that slide sideways.",
+   "problems": [
+    "The cookie panel covers the hero on load, most of the screen on a phone",
+    "Craft not measured in this fast read"
+   ],
+   "keep": [
+    "Grounds that change per chapter while the artworks supply the colour",
+    "A booking notice at the very top when demand makes it necessary",
+    "Quiet motion for a content-first site: entrance fades, state changes, one hero video with a pause control",
+    "Picture cards with the caption inside the picture, in rows that slide"
+   ]
+  },
+  "ref-0024": {
+   "business": "Nomadic Tribe by makemepulse (2019): the studio's interactive greeting, a WebGL story in chapters. Action: experience and share it; it sells the studio's craft.",
+   "scores": {
+    "business": 6,
+    "customer": 6,
+    "story": 8,
+    "clarity": 6,
+    "distinctiveness": 9,
+    "craft": 7
+   },
+   "reasons": {
+    "business": "A showcase: its job is attention and reputation. No contact or studio link was seen on the screens reached.",
+    "customer": "The visitor is told one thing, 'Best experienced with sound', and given one button. Who made it and how long it takes are not said on the title screen.",
+    "story": "Low confidence. It opens as a tale ('Today is a big day for our tribe. The year ends… It is time to leave the island.') and is built in chapters; only the first line was reached.",
+    "clarity": "One title, one START. A blank white then a grey-blue screen for the first 2.5 s; on a phone only the loader line was seen.",
+    "distinctiveness": "The title screen is a triptych of illustrated worlds in Art Nouveau frames on paper grain, in four muted hues, with the title set as part of the frame. Unmistakable.",
+    "craft": "Low confidence. The title screen is drawn and composed with care; everything is canvas (3 WebGL canvases cover the screen), so text, contrast and keyboard use could not be measured."
+   },
+   "claims": [],
+   "motion": "Opening: one thin line and a dot that grow into a circle holding the title (an overture, not a spinner). The story itself was not reached.",
+   "problems": [
+    "Everything lives in a canvas: nothing for a screen reader, nothing measurable",
+    "The story could not be read past the title in this capture",
+    "No way back to the maker on the screens reached"
+   ],
+   "keep": [
+    "A frame system from one art period (Art Nouveau borders) holding every picture: shape language as identity",
+    "Paper grain and four muted hues across illustration, type and buttons",
+    "The loader as an overture: a line and a dot that become the title's circle",
+    "A triptych first screen: three worlds side by side promise the chapters"
+   ]
+  }
+ }
+}

@@ -1,0 +1,109 @@
+{
+ "batch": "batch-014",
+ "received": "2026-11-12",
+ "from": "owner (chat, 2 URLs; 'pastikan animasi dan motion itu disimpan')",
+ "status": "read fast with read.mjs (21 s each), judged by the coordinator as the single juror; ref-0024 seen only up to its title screen (WebGL story behind START). No inspector run, no style card, no owner scores yet.",
+ "jury": {
+  "folder": "data/references/jury/batch-014",
+  "jurors": [
+   "coordinator-fable"
+  ],
+  "human_votes": 0,
+  "note": "fast read, one juror, no subagents"
+ },
+ "entries": [
+  {
+   "id": "ref-0023",
+   "url": "https://franshalsmuseum.nl/en",
+   "site": "frans hals museum",
+   "sector": "culture",
+   "read": "fast",
+   "business": {
+    "what": "Art museum in Haarlem",
+    "action_that_pays": "Order tickets / plan a visit",
+    "confidence": "high"
+   },
+   "owner": {
+    "visual": null,
+    "ship": null,
+    "note": "not given yet (the scores in the same message were read as batch-013's)"
+   },
+   "jury_scores": {
+    "business": 8,
+    "customer": 8,
+    "story": 7,
+    "clarity": 8,
+    "distinctiveness": 7,
+    "craft": 7,
+    "weighted": 7.6
+   },
+   "combined": {
+    "final": 7.6,
+    "gap": null
+   },
+   "veto": null,
+   "claims": [],
+   "library_candidates": [
+    "Grounds that change per chapter while the artworks supply the colour",
+    "A booking notice at the very top when demand makes it necessary",
+    "Quiet motion for a content-first site: entrance fades, state changes, one hero video with a pause control",
+    "Picture cards with the caption inside the picture, in rows that slide"
+   ],
+   "avoid": [
+    "A cookie panel that covers the hero on load"
+   ],
+   "motion_notes": [
+    "no animation library: blocks fade in on entry, accordion and collapsible keyframes, transitions of 0.15-0.75 s",
+    "a hero video on autoplay with a pause button; rows of picture cards slide sideways",
+    "the ground colour changes per chapter (apricot, deep teal, sage)"
+   ]
+  },
+  {
+   "id": "ref-0024",
+   "url": "https://2019.makemepulse.com/",
+   "site": "nomadic tribe (makemepulse)",
+   "sector": "agency",
+   "read": "fast",
+   "business": {
+    "what": "A studio's interactive greeting: a WebGL story in chapters",
+    "action_that_pays": "Experience and share; sells the studio's craft",
+    "confidence": "low"
+   },
+   "owner": {
+    "visual": null,
+    "ship": null,
+    "note": "not given yet (the scores in the same message were read as batch-013's)"
+   },
+   "jury_scores": {
+    "business": 6,
+    "customer": 6,
+    "story": 8,
+    "clarity": 6,
+    "distinctiveness": 9,
+    "craft": 7,
+    "weighted": 6.9
+   },
+   "combined": {
+    "final": 6.9,
+    "gap": null
+   },
+   "veto": null,
+   "claims": [],
+   "library_candidates": [
+    "A frame system from one art period (Art Nouveau borders) holding every picture: shape language as identity",
+    "Paper grain and four muted hues across illustration, type and buttons",
+    "The loader as an overture: a line and a dot that become the title's circle",
+    "A triptych first screen: three worlds side by side promise the chapters"
+   ],
+   "avoid": [
+    "Content that exists only inside a canvas",
+    "A blank screen for the first seconds"
+   ],
+   "motion_notes": [
+    "opening overture: a thin line and a dot grow into the circle that holds the title; transitions of 0.5 s ease on opacity and transform",
+    "the whole experience is WebGL in three full-screen canvases; the story behind START was not reached in the capture"
+   ]
+  }
+ ],
+ "owner_taste_signal": "No owner scores yet. Both are illustration- or art-led with a tight palette and frames as identity; Frans Hals is the library's first calm-motion reference with high clarity (the first where the juror's execution scores are not far below its expression)."
+}

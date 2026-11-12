@@ -1,0 +1,5 @@
+{ "juror": "owner", "kind": "human", "date": "2026-11-12",
+  "refs": { "ref-0021": { "visual": 9.5, "ship": 9.5 }, "ref-0022": { "visual": 9.3, "ship": 9.3 } },
+  "notes_verbatim": {
+    "_message": "score sebelumnya adalah 9.5 dan 9.5, dan site ke2 9.3 , 9.3",
+    "_note": "Read as the scores for the previous two references (batch-013): Mana 9.5 / 9.5, The Other Side of Truth 9.3 / 9.3. The message came with two new links (batch-014); if the scores were meant for those, move them. Asked the owner to confirm." } }

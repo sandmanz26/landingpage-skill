@@ -43,6 +43,12 @@ Pola yang layak diambil (sebagai pola, bukan aset):
 - The Other Side of Truth adalah kasus kuat ketiga (setelah Quite Nice dan Quilt) bahwa warna sebaiknya dinilai dari harmoninya, bukan jumlahnya: dua warna, kekhasan tertinggi di library.
 - Pola lama berulang untuk keempat kalinya: ekspresi kuat, pengerjaan teknis lemah.
 
+## Skor Anda (ditambahkan 2026-11-12)
+
+Mana 9,5 / 9,5 dan The Other Side of Truth 9,3 / 9,3 (saya baca dari "score sebelumnya adalah 9.5 dan 9.5, dan site ke2 9.3, 9.3"; perlu konfirmasi). Gabungan: Mana 8,1; The Other Side of Truth 8,5.
+
+Selisih dengan juri pada Mana adalah 3,2, yang terbesar sejauh ini. Juri mengurangi nilai untuk harga yang tidak tampil, layout yang bergeser, dan aksesibilitas. Anda menilai ide, identitas, dan motion. Ini batch kelima dengan arah selisih yang sama: bobot rubrik (bisnis dan pelanggan 40%, kekhasan 15%) tidak cocok dengan apa yang Anda sebut 9.
+
 ## Yang saya butuhkan dari Anda
 
 Skor Anda untuk keduanya (visual dan layak kirim, 1–10) dan catatan singkat: apa yang Anda ambil dari masing-masing (seluruh rasa, gayanya saja, atau satu elemen).

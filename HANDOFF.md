@@ -1,7 +1,7 @@
 # Handoff
 
 Read this first if you are a new session, a different model or a different AI tool picking up
-this project. It is kept up to date at every milestone. Last updated: **2026-11-12** (pictures and batch-013 §5d; skill audit §5c; slop blind test sent; Fable 5.2 advice; plan to move to the owner's machine for ~15k mobile screens: see §5b and §6).
+this project. It is kept up to date at every milestone. Last updated: **2026-11-12** (motion recipes, fast reader, batch-014, blind verdict §5e; pictures and batch-013 §5d; skill audit §5c; slop blind test sent; Fable 5.2 advice; plan to move to the owner's machine for ~15k mobile screens: see §5b and §6).
 
 ## 1. Goal
 
@@ -822,6 +822,52 @@ and tablet shots, no motion numbers. Library: 21 references. Patterns kept: the 
 protagonist travelling down the page; an illustration world in the product's colours; the
 subject's two colours as the whole system; type as image; the argument as an interaction.
 
+## 5e. 2026-11-12 (later): motion kept as recipes, a fast reader, batch-014, the blind test verdict
+
+**Blind test verdict (owner):** "masih jelek semua, belum ada yang memenuhi expected saya": all five
+pages fail, the two skill pages included; no per-letter scores or reasons given (asked). Recorded in
+`examples/slop-test/blind/HASIL.md` with the key and Claude's reading (the withheld finding of §5c
+point 2 was told to the owner). Consequence: quick-effort output of the skill is not at the owner's
+bar; process is not the gap, craft, pictures and motion are.
+
+**Owner scores for batch-013** (read from "score sebelumnya adalah 9.5 dan 9.5, dan site ke2 9.3,
+9.3"; **to confirm**, the same message carried batch-014's links): Mana 9.5/9.5 (juror 6.3, gap
+3.2, the largest so far), The Other Side of Truth 9.3/9.3 (juror 7.5). Fifth batch where the owner
+is far above the jurors: the rubric's weights do not match what the owner calls a 9. Proposal
+(pending): report expression (distinctiveness, story, motion) and execution (craft, clarity,
+business, customer) as two numbers, and build to the owner's expression bar with the execution
+floor kept.
+
+**Motion is now kept so it can be used again** (owner: "pastikan animasi dan motion itu disimpan").
+Before today the library held motion only as tags and counts. Now:
+- `motion/recipes.json`: 12 recipes (staged-entrance, reveal-on-entry, protagonist-travel,
+  frame-grow, type-as-image, scatter-land, chapter-ground, state-change, count-from-real,
+  draw-line; build-on-scroll and swap-reveal point to kit sections), each with what it shows, the
+  message it carries, when not, trigger, timing, technique, reduced-motion version, cost, and
+  `seen_in` (reference id + measured fact). Own code only, nothing copied.
+- `motion/index.html` + `motion.css` + `motion.js`: the tested demo (inspector 0 FAIL, 0 WARN at
+  three widths and under reduced motion); `scripts/motion.mjs list | find | get`.
+- Enforced: the spec's Motion spec needs a `Recipes:` line (known ids or `custom: …`);
+  `library.mjs build` attaches to each entry `motion: { recipes, notes }` (recipes from `seen_in`,
+  notes from the batch entry's `motion_notes`), and `library.mjs find` prints them.
+- `library/intake.md` step 10: every new reference's motion is mapped to a recipe or becomes one.
+- Not verified: no real run has used the recipes yet; whether they lift the owner's score is
+  untested; recipes are vanilla CSS/JS (no GSAP), heavier choreography is not covered; backfill of
+  `motion_notes` for batches 001-012 not done (their recipes are linked through `seen_in` only).
+
+**Fast reader** `scripts/read.mjs` (audit item A): one browser pass in a time budget, measured 21 s
+a site against 4-12+ minutes for the full capture (ref-0022's full capture did not finish in 25
+minutes). Writes `read.md`, `read.json`, `read-sheet.png`: libraries, canvases, running animations
+(duration, easing, properties), keyframes, transitions, sticky elements, per scroll step what is
+pinned / slower / sideways / faded in / scaled / rotated, hover changes, the phone screen. It
+measures and never scores. Known limits: transition shorthands written with `var()` are not listed;
+keyframe easing is not read; a site behind an interaction is read only as far as it opens.
+`library/intake.md` now has three reading depths (fast, with the page measured, full).
+
+**Batch-014** (fast read, one juror, no owner scores yet): Frans Hals Museum (ref-0023, culture) 7.6;
+Nomadic Tribe by makemepulse (ref-0024, agency) 6.9 with low confidence (WebGL story behind START,
+only the title screen reached). Library: 23 references, 12 sectors.
+
 ## 6. Next steps, in order (2026-11-11)
 
 **Moving to the owner's machine** (owner's plan, 2026-11-11, to read their local portfolio of
@@ -842,7 +888,9 @@ subject's two colours as the whole system; type as image; the argument as an int
    have no mode yet).
 
 **Waiting on the owner:**
-- Slop blind test scores (A-E).
+- Reasons per page for the blind test (all five rejected; which parts feel slop and why).
+- Confirm the batch-013 scores reading; scores for batch-014; a look at the placeholder sheet and the motion demo (`motion/index.html`).
+- The two-number scoring proposal (expression / execution).
 - Review of the 5 taste rules Claude decided on the owner's delegation (batch-005 four Never rules +
   batch-006 radius Prefer; marked in `team/taste.md`), revert any rejected.
 - Colour: measure harmony (hue families) instead of hue count: proposal, not changed.

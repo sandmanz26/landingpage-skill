@@ -2,13 +2,13 @@
  "batch": "batch-013",
  "received": "2026-11-12",
  "from": "owner (chat, 2 URLs, no notes; 'jadilah juri dan masukan ke kategori kita')",
- "status": "ref-0021 captured in full; ref-0022 captured in part (inspect done, evidence stopped at the time limit: heavy WebGL, phone and tablet screenshots blank). Judged by the coordinator as the single juror at the owner's request; no human votes yet.",
+ "status": "ref-0021 captured in full; ref-0022 captured in part (inspect done, evidence stopped at the time limit: heavy WebGL, phone and tablet screenshots blank). Judged by the coordinator as the single juror at the owner's request; no human votes yet. Owner scores added 2026-11-12.",
  "jury": {
   "folder": "data/references/jury/batch-013",
   "jurors": [
    "coordinator-fable"
   ],
-  "human_votes": 0,
+  "human_votes": 1,
   "note": "one juror in the main session (Fable 5.2), no subagents; a single view, not a panel"
  },
  "entries": [
@@ -23,9 +23,9 @@
     "confidence": "high"
    },
    "owner": {
-    "visual": null,
-    "ship": null,
-    "note": "no scores or notes sent with the links; asked for"
+    "visual": 9.5,
+    "ship": 9.5,
+    "note": "read from 'score sebelumnya adalah 9.5 dan 9.5'; to confirm"
    },
    "jury_scores": {
     "business": 6,
@@ -37,8 +37,8 @@
     "weighted": 6.3
    },
    "combined": {
-    "final": 6.3,
-    "gap": null
+    "final": 8.1,
+    "gap": 3.2
    },
    "veto": null,
    "claims": [],
@@ -54,6 +54,10 @@
     "No price or product facts beside the product on the home page",
     "Layout shift from scroll choreography (1.97)",
     "Motion that ignores reduced motion"
+   ],
+   "motion_notes": [
+    "the can stays on screen and travels down the page on scroll, turning and landing in each section (gsap ScrollTrigger; up to 25 script-driven elements per step)",
+    "97 elements move at the top without input; no endless loop; reduced motion ignored; layout shift 1.97: keep the idea, not the cost"
    ]
   },
   {
@@ -67,9 +71,9 @@
     "confidence": "medium"
    },
    "owner": {
-    "visual": null,
-    "ship": null,
-    "note": "no scores or notes sent with the links; asked for"
+    "visual": 9.3,
+    "ship": 9.3,
+    "note": "read from 'site ke2 9.3, 9.3'; to confirm"
    },
    "jury_scores": {
     "business": 7,
@@ -81,8 +85,8 @@
     "weighted": 7.5
    },
    "combined": {
-    "final": 7.5,
-    "gap": null
+    "final": 8.5,
+    "gap": 1.8
    },
    "veto": null,
    "claims": [],
@@ -97,8 +101,13 @@
     "12px running text and low-contrast text on a gradient",
     "About 41 screens before the action",
     "Broken images and a stale 'updated' date on an information site"
+   ],
+   "motion_notes": [
+    "giant letters and the date move behind the content; dated photographs land one by one over the date, each rotated",
+    "chat bubbles fall and pile over the headline (physics); the ground turns from yellow to black where the story turns; a switch swaps 'World truth' and 'Russian truth'",
+    "not measured: the capture stopped before the motion numbers"
    ]
   }
  ],
- "owner_taste_signal": "No owner scores yet. Both sites repeat what the owner has praised before: an identity taken from the subject itself (the can and its flavour colours; the flag's two colours), type used as the picture, and motion that tells the story. ref-0022 is the second strong case (after Quite Nice and Quilt) for judging colour by harmony: two colours, the highest distinctiveness in the library."
+ "owner_taste_signal": "Owner 9.5/9.5 (Mana) and 9.3/9.3 (The Other Side of Truth) against the juror's 6.3 and 7.5: the largest gap so far (3.2 on Mana). The juror subtracts for missing price, layout shift and accessibility; the owner scores the idea, the identity and the motion. Fifth batch with the same direction of gap: the rubric's weights (business and customer 40%, distinctiveness 15%) do not match what the owner calls a 9. Proposal pending: report two numbers instead of one blend (expression: distinctiveness, story, motion; execution: craft, clarity, business, customer), and build to the owner's expression bar while keeping the execution floor."
 }

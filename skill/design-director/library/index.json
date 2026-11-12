@@ -1,7 +1,7 @@
 {
-  "builtAt": "2026-11-12T08:59:31.551Z",
+  "builtAt": "2026-11-12T15:29:25.753Z",
   "source": "data/references (batch-*.json, captures/*/style.json)",
-  "count": 21,
+  "count": 23,
   "sectors": {
     "commerce": [
       "ref-0001"
@@ -43,6 +43,12 @@
     ],
     "nonprofit": [
       "ref-0022"
+    ],
+    "culture": [
+      "ref-0023"
+    ],
+    "agency": [
+      "ref-0024"
     ]
   },
   "groups": [
@@ -2436,9 +2442,9 @@
       "scores": {
         "ai": 6.3,
         "ownerOverall": null,
-        "ownerVisual": null,
-        "ownerShip": null,
-        "final": 6.3
+        "ownerVisual": 9.5,
+        "ownerShip": 9.5,
+        "final": 8.1
       },
       "veto": null,
       "patternOnly": false,
@@ -2460,7 +2466,10 @@
         "recipes": [
           "protagonist-travel"
         ],
-        "notes": []
+        "notes": [
+          "the can stays on screen and travels down the page on scroll, turning and landing in each section (gsap ScrollTrigger; up to 25 script-driven elements per step)",
+          "97 elements move at the top without input; no endless loop; reduced motion ignored; layout shift 1.97: keep the idea, not the cost"
+        ]
       },
       "style": {
         "features": [
@@ -2553,9 +2562,9 @@
       "scores": {
         "ai": 7.5,
         "ownerOverall": null,
-        "ownerVisual": null,
-        "ownerShip": null,
-        "final": 7.5
+        "ownerVisual": 9.3,
+        "ownerShip": 9.3,
+        "final": 8.5
       },
       "veto": null,
       "patternOnly": false,
@@ -2578,7 +2587,11 @@
           "scatter-land",
           "chapter-ground"
         ],
-        "notes": []
+        "notes": [
+          "giant letters and the date move behind the content; dated photographs land one by one over the date, each rotated",
+          "chat bubbles fall and pile over the headline (physics); the ground turns from yellow to black where the story turns; a switch swaps 'World truth' and 'Russian truth'",
+          "not measured: the capture stopped before the motion numbers"
+        ]
       },
       "style": {
         "features": [
@@ -2628,6 +2641,88 @@
         ]
       },
       "styleGroup": "style-9"
+    },
+    {
+      "id": "ref-0023",
+      "site": "frans hals museum",
+      "url": "https://franshalsmuseum.nl/en",
+      "batch": "batch-014",
+      "review": "data/references/batch-014-review.md",
+      "business": "Art museum in Haarlem",
+      "actionThatPays": "Order tickets / plan a visit",
+      "scores": {
+        "ai": 7.6,
+        "ownerOverall": null,
+        "ownerVisual": null,
+        "ownerShip": null,
+        "final": 7.6
+      },
+      "veto": null,
+      "patternOnly": false,
+      "patterns": [
+        "Grounds that change per chapter while the artworks supply the colour",
+        "A booking notice at the very top when demand makes it necessary",
+        "Quiet motion for a content-first site: entrance fades, state changes, one hero video with a pause control",
+        "Picture cards with the caption inside the picture, in rows that slide"
+      ],
+      "avoid": [
+        "A cookie panel that covers the hero on load"
+      ],
+      "sector": "culture",
+      "motion": {
+        "recipes": [
+          "staged-entrance",
+          "reveal-on-entry",
+          "state-change"
+        ],
+        "notes": [
+          "no animation library: blocks fade in on entry, accordion and collapsible keyframes, transitions of 0.15-0.75 s",
+          "a hero video on autoplay with a pause button; rows of picture cards slide sideways",
+          "the ground colour changes per chapter (apricot, deep teal, sage)"
+        ]
+      },
+      "style": null,
+      "styleGroup": null
+    },
+    {
+      "id": "ref-0024",
+      "site": "nomadic tribe (makemepulse)",
+      "url": "https://2019.makemepulse.com/",
+      "batch": "batch-014",
+      "review": "data/references/batch-014-review.md",
+      "business": "A studio's interactive greeting: a WebGL story in chapters",
+      "actionThatPays": "Experience and share; sells the studio's craft",
+      "scores": {
+        "ai": 6.9,
+        "ownerOverall": null,
+        "ownerVisual": null,
+        "ownerShip": null,
+        "final": 6.9
+      },
+      "veto": null,
+      "patternOnly": false,
+      "patterns": [
+        "A frame system from one art period (Art Nouveau borders) holding every picture: shape language as identity",
+        "Paper grain and four muted hues across illustration, type and buttons",
+        "The loader as an overture: a line and a dot that become the title's circle",
+        "A triptych first screen: three worlds side by side promise the chapters"
+      ],
+      "avoid": [
+        "Content that exists only inside a canvas",
+        "A blank screen for the first seconds"
+      ],
+      "sector": "agency",
+      "motion": {
+        "recipes": [
+          "draw-line"
+        ],
+        "notes": [
+          "opening overture: a thin line and a dot grow into the circle that holds the title; transitions of 0.5 s ease on opacity and transform",
+          "the whole experience is WebGL in three full-screen canvases; the story behind START was not reached in the capture"
+        ]
+      },
+      "style": null,
+      "styleGroup": null
     }
   ]
 }
