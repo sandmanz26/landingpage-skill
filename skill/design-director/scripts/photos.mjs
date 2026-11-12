@@ -8,16 +8,33 @@
 //   node photos.mjs get <pasted Unsplash link> [--by "<photographer>"] [--page <photo page link>]
 //        a photo the user picked on unsplash.com: an images.unsplash.com link loads without a key;
 //        an unsplash.com/photos/… link needs the key (full credit); without one it asks for the image link
+//   node photos.mjs generate "<what the picture shows>" [--width 1024 --height 768 --seed 1 --n 1]
+//        a free AI-generated DRAFT picture (Pollinations, no key: about one picture per 45 s, a small
+//        provider watermark, modest quality). Look at it before using it; it is a stand-in, marked
+//        data-generated on the page and listed in the deliver report (rules/illustration.md)
 //   node photos.mjs credits [--html]
 //
-// Unsplash search needs a free access key (unsplash.com/developers) in UNSPLASH_ACCESS_KEY; never
-// commit it or paste it into a chat (rules/brief-interview.md → Materials has the steps). Openverse and Wikimedia Commons need none. Behind a proxy, run node with NODE_USE_ENV_PROXY=1.
+// Search runs without any key on Openverse and Wikimedia Commons. Free keys add better pictures:
+// UNSPLASH_ACCESS_KEY (unsplash.com/developers), PEXELS_API_KEY (pexels.com/api), PIXABAY_API_KEY
+// (pixabay.com/api/docs). Keys live in environment variables; never commit one or paste it into a
+// chat (rules/brief-interview.md → Materials has the steps). Behind a proxy the script restarts
+// itself with NODE_USE_ENV_PROXY=1, without which every request fails.
 // A found photograph shows the subject's world; it is never presented as the client's own people,
 // place or product (rules/copyright.md, rules/illustration.md).
 import fs from 'node:fs';
 import path from 'node:path';
+import crypto from 'node:crypto';
+import { spawnSync } from 'node:child_process';
 import { launch, parseArgs } from './lib/browser.mjs';
 import { parseUnsplashLink, sizedImageUrl, linkCredit } from './lib/unsplash-link.mjs';
+import { mapPexels, mapPixabay, creditLine, defaultProviders, generateUrl, retryAfterSeconds } from './lib/stock.mjs';
+
+// Node's fetch ignores HTTPS_PROXY unless NODE_USE_ENV_PROXY=1 is set at start: behind a proxy
+// every search came back "fetch failed" and runs ended up with no photographs at all.
+if ((process.env.HTTPS_PROXY || process.env.https_proxy) && !process.env.NODE_USE_ENV_PROXY) {
+  const r = spawnSync(process.execPath, [...process.execArgv, ...process.argv.slice(1)], { stdio: 'inherit', env: { ...process.env, NODE_USE_ENV_PROXY: '1', NODE_NO_WARNINGS: '1' } });
+  process.exit(r.status ?? 1);
+}
 
 const args = parseArgs(process.argv.slice(2));
 const [cmd, arg] = args._;
@@ -56,6 +73,18 @@ const providers = {
       downloadLocation: p.links.download_location,
       size: `${p.width}×${p.height}`,
     }));
+  },
+  async pexels(q, n, orientation) {
+    if (!process.env.PEXELS_API_KEY) throw new Error('Pexels needs PEXELS_API_KEY (free: pexels.com/api → Your API Key)');
+    const u = new URL('https://api.pexels.com/v1/search');
+    u.search = new URLSearchParams({ query: q, per_page: String(n), ...(orientation ? { orientation: orientation === 'squarish' ? 'square' : orientation } : {}) });
+    return mapPexels(await getJSON(u, { Authorization: process.env.PEXELS_API_KEY }));
+  },
+  async pixabay(q, n, orientation) {
+    if (!process.env.PIXABAY_API_KEY) throw new Error('Pixabay needs PIXABAY_API_KEY (free: pixabay.com/api/docs, shown after sign-in)');
+    const u = new URL('https://pixabay.com/api/');
+    u.search = new URLSearchParams({ key: process.env.PIXABAY_API_KEY, q, image_type: 'photo', safesearch: 'true', per_page: String(Math.max(3, n)), ...(orientation === 'landscape' ? { orientation: 'horizontal' } : orientation === 'portrait' ? { orientation: 'vertical' } : {}) });
+    return mapPixabay(await getJSON(u)).slice(0, n);
   },
   async openverse(q, n, orientation) {
     const u = new URL('https://api.openverse.org/v1/images/');
@@ -161,12 +190,12 @@ const loadCredits = () => (fs.existsSync(CREDITS) ? JSON.parse(fs.readFileSync(C
 
 if (cmd === 'search') {
   if (!arg) {
-    console.error('Usage: node photos.mjs search "<query>" [--provider unsplash|openverse|commons|all] [--n 8]');
+    console.error('Usage: node photos.mjs search "<query>" [--provider unsplash|pexels|pixabay|openverse|commons|all] [--n 8]');
     process.exit(2);
   }
   const n = Number(args.n || 8);
-  const which = args.provider && args.provider !== 'all' ? [args.provider] : KEY ? ['unsplash', 'openverse', 'commons'] : ['openverse', 'commons'];
-  if (!KEY && (!args.provider || args.provider === 'all')) console.log('(Unsplash skipped: set UNSPLASH_ACCESS_KEY to include it)');
+  const which = args.provider && args.provider !== 'all' ? [args.provider] : defaultProviders(process.env);
+  if (which.length === 2 && (!args.provider || args.provider === 'all')) console.log('(no key set: searching Openverse and Wikimedia Commons only; a free UNSPLASH_ACCESS_KEY, PEXELS_API_KEY or PIXABAY_API_KEY adds better pictures)');
   const all = [];
   for (const p of which) {
     if (!providers[p]) {
@@ -215,9 +244,49 @@ if (cmd === 'search') {
   const file = path.join(to, `${item.ref.replace(':', '-')}.${ext}`);
   fs.writeFileSync(file, Buffer.from(await r.arrayBuffer()));
   const credits = loadCredits().filter((c) => c.ref !== item.ref);
-  credits.push({ ref: item.ref, file: path.relative(process.cwd(), file), title: strip(item.title), creator: strip(item.creator), creatorUrl: item.creatorUrl, license: item.license, source: item.source, credit: item.ref.startsWith('unsplash:') ? `Photo by ${strip(item.creator)} on Unsplash` : `${strip(item.title) || 'Photo'} by ${strip(item.creator)}, ${item.license}` });
+  credits.push({ ref: item.ref, file: path.relative(process.cwd(), file), title: strip(item.title), creator: strip(item.creator), creatorUrl: item.creatorUrl, license: item.license, source: item.source, credit: creditLine(item) });
   fs.writeFileSync(CREDITS, JSON.stringify(credits, null, 2));
   console.log(`saved ${path.relative(process.cwd(), file)} (${Math.round(fs.statSync(file).size / 1024)} KB); credit recorded`);
+} else if (cmd === 'generate') {
+  if (!arg) {
+    console.error('Usage: node photos.mjs generate "<what the picture shows>" [--width 1024 --height 768 --seed 1 --n 1] [--to assets/photos]');
+    process.exit(2);
+  }
+  const to = path.resolve(args.to || 'assets/photos');
+  fs.mkdirSync(to, { recursive: true });
+  fs.mkdirSync(DIR, { recursive: true });
+  const n = Math.min(4, Math.max(1, Number(args.n || 1)));
+  const seed0 = Number(args.seed || 1);
+  let saved = 0;
+  for (let i = 0; i < n; i++) {
+    const seed = seed0 + i;
+    const url = generateUrl(arg, { width: Number(args.width || 1024), height: Number(args.height || 768), seed });
+    let r = null;
+    for (let attempt = 0; attempt < 4; attempt++) {
+      r = await fetch(url, { headers: UA }).catch((e) => ({ ok: false, status: 0, statusText: e.message, headers: new Map(), text: async () => '' }));
+      if (r.ok) break;
+      const wait = retryAfterSeconds(r.status, r.headers.get('retry-after'), await r.text().catch(() => ''));
+      if (!wait) break;
+      console.log(`free limit: waiting ${wait}s (about one picture per 45 s without a key)`);
+      await new Promise((res) => setTimeout(res, wait * 1000));
+    }
+    const type = (r.ok && r.headers.get('content-type')) || '';
+    if (!r.ok || !/^image\//.test(type)) {
+      console.error(`Generation failed: ${r.status} ${r.statusText || ''} ${type}`.trim());
+      continue;
+    }
+    const model = r.headers.get('x-model-used') || 'unknown';
+    const id = crypto.createHash('sha1').update(`${arg}|${seed}`).digest('hex').slice(0, 10);
+    const ref = `generated:${id}`;
+    const file = path.join(to, `generated-${id}.${/png/.test(type) ? 'png' : 'jpg'}`);
+    fs.writeFileSync(file, Buffer.from(await r.arrayBuffer()));
+    const credits = loadCredits().filter((c) => c.ref !== ref);
+    credits.push({ ref, file: path.relative(process.cwd(), file), generated: true, provider: 'Pollinations (no key)', model, prompt: arg, seed, source: 'https://pollinations.ai', credit: `AI-generated draft picture (Pollinations, model ${model})`, note: 'Draft stand-in: it carries the provider watermark and its licence for commercial use was not verified. Mark it data-generated on the page, list it in the deliver report, replace it before launch.' });
+    fs.writeFileSync(CREDITS, JSON.stringify(credits, null, 2));
+    console.log(`saved ${path.relative(process.cwd(), file)} (${Math.round(fs.statSync(file).size / 1024)} KB, model ${model}, seed ${seed}): LOOK at it before using it; wrong subject or artefacts → another seed, a plainer prompt, or a placeholder`);
+    saved++;
+  }
+  if (!saved) process.exit(1);
 } else if (cmd === 'credits') {
   const credits = loadCredits();
   if (!credits.length) {
@@ -227,6 +296,6 @@ if (cmd === 'search') {
   if (args.html) console.log(credits.map((c) => `<a href="${c.source}">${c.credit}</a>`).join(' · '));
   else for (const c of credits) console.log(`${c.credit} · ${c.source} · ${c.file}`);
 } else {
-  console.error('Usage: node photos.mjs search "<query>" | get <provider:id or Unsplash link> | credits [--html]');
+  console.error('Usage: node photos.mjs search "<query>" | get <provider:id or Unsplash link> | generate "<what the picture shows>" | credits [--html]');
   process.exit(2);
 }

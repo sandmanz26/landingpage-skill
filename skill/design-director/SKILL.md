@@ -103,9 +103,9 @@ means three things at once: it serves the business, it answers the customer, and
    `rubric/council.md`), 1–3 sites they like and 1
    they do not (turned into dials by `dials.mjs`), three feeling words, what exists (photos, product
    UI, brand assets: `rules/brief-interview.md` → Materials), what is ruled out. With no photos,
-   ask whether stand-in pictures are needed and offer the three paths (pasted Unsplash links, search
-   with the user's free Access Key, drawn or placeholders). When no image tool is connected and no
-   photographs are found, say at once that the pictures will be drawn or dummies. At the direction gate the user picks from first-screen sketches of each direction; that
+   ask which stand-in pictures the user wants and offer the five paths (stock photographs they pick
+   or you search, a free AI-generated draft, designed placeholders with drawing, or no pictures:
+   `rules/illustration.md`). Say at once which path is used and what it will look like. At the direction gate the user picks from first-screen sketches of each direction; that
    choice sets the composition, so standard effort needs no hero best-of-3. Full-page variants (2–3 whole
    pages, `--variants`) are for thorough effort or when the user asks; the user chooses on
    `compare.mjs` (`--choose user`), the jury only in autopilot.
@@ -166,7 +166,7 @@ them to quick gates and, if they agree, write that to `designers/<name>.md`.
 
 **Final gate** (`approve final`). The package from the mode file, written to `.design/deliver.md`:
 what was built, screenshots at desktop and phone, what is sample content (`[SAMPLE]` copy, sample UI
-marked `data-sample`, drawn or dummy pictures with the shot list), open issues (with the engineering
+marked `data-sample`, every stand-in picture: found photographs with credits, AI-generated drafts, designed placeholders and drawings, with the shot list), open issues (with the engineering
 review's verdict, measured budget and open findings), **"Alasan
 desain"**: at least three key decisions, each with its UX reason, trade-off and source, and the
 head behind it where that helps (`rules/rationale.md`, `rubric/council.md`), and **"Supaya lebih bagus"**: at most five concrete things the user can do or decide to lift the result (pictures to
@@ -226,13 +226,13 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 | `rubric/jury.md` | The look step and best-of-N at standard effort and above; judging references |
 | `rubric/council.md` | The five heads (Product, Business, Design, Creative, Engineering): what each owns, asks and may veto, where each speaks by effort; the Product question at the brief; the spec's `## Council` sign-off and the starting performance budget; the engineering review after the gate (reviewer brief and `.design/review/engineering.json`) |
 | `library/intake.md` | When the team sends references with their notes |
-| `rules/brief-interview.md` | Every question to the user (plain words, what it changes, an example per choice, a recommendation, "percayakan ke AI"); the brief step: the one guiding message, the materials (photos, product UI, brand assets; mock or placeholder for missing UI; telling the user about dummy pictures; with no photos, the three stand-in paths and the Unsplash Access Key steps), liked sites into dials, sketches at the direction gate |
+| `rules/brief-interview.md` | Every question to the user (plain words, what it changes, an example per choice, a recommendation, "percayakan ke AI"); the brief step: the one guiding message, the materials (photos, product UI, brand assets; mock or placeholder for missing UI; telling the user about dummy pictures; with no photos, the five stand-in paths and the free key steps for Unsplash, Pexels and Pixabay), liked sites into dials, sketches at the direction gate |
 | `rules/stack.md` | The brief step: the stack and component library; an admin panel, dashboard or back office defaults to shadcn/ui (React + Tailwind) until the user agrees another |
 | `admin/table.md` | Building any screen that lists records (3+ rows): the data-table rules (the owner's nine basics, right-aligned numbers, the bulk-action bar, and research basics such as sticky header, states, density, row actions), each with why, when not, accessibility and dated sources; what the inspector measures |
 | `rules/rationale.md` | Every gate and the deliver report: each key decision with its UX reason, its trade-off and a source, neutral; the "Alasan desain" section of `.design/deliver.md` |
 | `admin/method.md`, `admin/directions.json` | The direction step of an admin or app screen: the ten style levers (change 3–4, consistently), the style directions from the team's admin references, the variation question, the brand kit overriding a direction, the chosen tokens into the shadcn/ui theme |
 | `rules/visual-dials.md` | The direction gate: the dials, presets from the library, how to guide the user |
-| `rules/illustration.md` | Writing the spec when the client has no pictures: photographs by the chosen stand-in path, drawing flat illustration, the shot list |
+| `rules/illustration.md` | Writing the spec and building when the client has no pictures: the seven picture paths and the quality bar every found or generated picture must pass, finding photographs, AI-generated drafts, designed placeholders (`placeholder.mjs`), a page with no pictures, drawing flat illustration, the shot list |
 | `library/index.json` (via `library.mjs find`) | The direction step: the team's judged references with their style cards; adapt each to the client or ask (`modes/create.md`) |
 | `team/taste.md`, `brands/`, `designers/` | At the start, if present |
 
@@ -240,10 +240,10 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 
 | Command | Does |
 | --- | --- |
-| `progress.mjs init / check / done / approve / back / skip / log / status` | Order of steps, gates, turn back; content checks per step (brief Materials and Product part, spec `## Council` with all five heads, the engineering review with a verdict and no unanswered blocking finding before a standard or thorough look, an admin brief's Component library with the shadcn/ui default logged, an admin direction's style options with a logged choice or decline, spec Interactions and Motion spec, deliver.md with "Alasan desain" (3+ decisions with a trade-off), …) |
+| `progress.mjs init / check / done / approve / back / skip / log / status` | Order of steps, gates, turn back; content checks per step (brief Materials and Product part, spec `## Council` with all five heads, the engineering review with a verdict and no unanswered blocking finding before a standard or thorough look, AI-generated draft pictures named in deliver.md when the brief planned them, an admin brief's Component library with the shadcn/ui default logged, an admin direction's style options with a logged choice or decline, spec Interactions and Motion spec, deliver.md with "Alasan desain" (3+ decisions with a trade-off), …) |
 | `brandboard.mjs <brand-kit.json or directions.json> [--out .design/brand] [--no-pdf]` | The brand board: palette with roles and contrast pairs, type, shape and motion, elements, the placeholder wordmark, the brand in use (web hero, price card, social post); `board.html` and `board.pdf` |
 | `draw.mjs --sector <s> [--tone <t>] [--have a,b] [--options 3]` | Deals directions into `.design/directions/` (`--list sectors`) |
-| `inspect.mjs <url or file> [--out dir] [--allow rule]` | Real-browser check at 1440/768/390, screenshots, design inventory; INFO `placeholder-logo` and `sample-ui` (`data-sample`) for the deliver report; data tables (`admin/table.md`): numbers not right-aligned, checkboxes out of line or under 24px, cut values with no way to read them, selection with no bulk actions (clicks a row at desktop), wide tables without sticky identifier/actions |
+| `inspect.mjs <url or file> [--out dir] [--allow rule]` | Real-browser check at 1440/768/390, screenshots, design inventory; INFO `placeholder-logo`, `sample-ui` (`data-sample`), `placeholder-image` and `generated-image` for the deliver report; data tables (`admin/table.md`): numbers not right-aligned, checkboxes out of line or under 24px, cut values with no way to read them, selection with no bulk actions (clicks a row at desktop), wide tables without sticky identifier/actions |
 | `lint.mjs <files or folders>` | Stock copy, placeholders, default styling patterns in source |
 | `copycheck.mjs <copy.md or page> [--voice .design/voice.md]` | Reading experience and voice, measured: sentence and paragraph length, headline length, long words, self-praise, corporate abstractions, glossary words the reader does not use, generic buttons; prints the skim test |
 | `kit.mjs list` / `get <names> [--out dir]` | Tested sections built from tokens (hero with arch photo, price near the action, evidence rows, reveal cards with a tap path, before/after, sticky story, proof quote, FAQ, closing action): the build's starting floor |
@@ -254,7 +254,8 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 | `dials.mjs suggest <liked dirs> [--dislike dirs]` | Sites the user likes and dislikes → suggested dials, with where they agree and what to avoid |
 | `adminoptions.mjs [--kit f] [--brief "…"] [--components sidebar,modal,table] [--only ids] [--recommend id --why "…"]` | Admin style options: 2–3 directions from `admin/directions.json` rendered side by side as real components (sidebar, modal, table), labelled A/B/C with their character and reference ids, restyled by the brand kit, with the reply to copy ("Pilih B"); `.design/options/admin-options.html` + `.json` (shadcn/ui variables per option) |
 | `compare.mjs <v1.html> <v2.html> … [--labels a,b] [--blind]` | A page for the user to compare variants side by side at desktop or phone width, score them and copy a reply |
-| `photos.mjs search "<query>" [--sheet f.png]` / `get <ref or Unsplash link> [--by name --page link]` / `credits` | Licensed photographs of the subject's world (Unsplash with `UNSPLASH_ACCESS_KEY`, Openverse, Wikimedia Commons), downloaded with their credits; a pasted `images.unsplash.com` link loads without a key, credited "photographer unknown" until the name is given |
+| `photos.mjs search "<query>" [--sheet f.png]` / `get <ref or Unsplash link> [--by name --page link]` / `generate "<what it shows>" [--seed n]` / `credits` | Licensed photographs of the subject's world (Openverse and Wikimedia Commons with no key; Unsplash, Pexels, Pixabay with their free key in `UNSPLASH_ACCESS_KEY`, `PEXELS_API_KEY`, `PIXABAY_API_KEY`), downloaded with their credits; a pasted `images.unsplash.com` link loads without a key, credited "photographer unknown" until the name is given; `generate` makes a free AI draft picture (Pollinations, no key, one per 45 s, watermark), a stand-in marked `data-generated` |
+| `placeholder.mjs --shot <portrait\|team\|product\|food\|place\|hands\|detail\|screen> --label "<the shot>" [--ratio 4:5 --shape arch --kit .design/brand-kit.json --seed n --out f.svg]` / `sheet` | Designed placeholders: a storyboard frame of the shot to come, in the page's colours, labelled with the shot and marked `data-placeholder-image` |
 | `fit.mjs <inspect dir> [--targets .design/targets.json]` | The built page against the chosen dials and the team's taste; misses need a fix or a reason |
 | `style.mjs <dir>` | Style card of a captured reference: palette, type, shape, motion, tags, do-not-copy |
 | `library.mjs build` / `groups` / `find <words> --tags a,b` | Builds `library/index.json` from judged batches, grouping every reference by sector and by style on its own; finds the closest references with their style |

@@ -61,25 +61,31 @@ in the four-part form above (plain question, what it changes, an example, a reco
 
 | Material | Ask, in plain words, with an example | When it is missing |
 | --- | --- | --- |
-| **Photos** of the real place, people, product, work | "Ada foto asli tempat, tim, atau produk Anda? Foto asli membuat halaman terasa milik Anda, bukan template. Contoh: foto dapur saat menyiapkan katering, 5-10 foto dari HP sudah cukup." | Ask whether stand-in pictures are needed and offer the three paths in **No photos: stand-in pictures** below; then a connected image-generation tool, then draw (`rules/illustration.md`). **If no image-generation tool is connected and `photos.mjs` finds nothing usable, tell the user at the start**: "Gambar di halaman ini akan berupa ilustrasi/dummy dulu, karena tidak ada foto dan tidak ada alat pembuat gambar yang terhubung", and repeat it in the deliver report with the shot list. Owner: "jika user tidak link ke mcp yang bisa generate image maka kita sampaikan bahwa kita menggunakan dummy dulu." |
+| **Photos** of the real place, people, product, work | "Ada foto asli tempat, tim, atau produk Anda? Foto asli membuat halaman terasa milik Anda, bukan template. Contoh: foto dapur saat menyiapkan katering, 5-10 foto dari HP sudah cukup." | Ask which stand-in pictures they want and offer the five paths in **No photos: stand-in pictures** below (`rules/illustration.md`). **If no client photographs and no good stock photographs are found, tell the user at the start**: "Gambar di halaman ini akan berupa ilustrasi/dummy dulu, karena tidak ada foto dan tidak ada alat pembuat gambar yang terhubung", and repeat it in the deliver report with the shot list. Owner: "jika user tidak link ke mcp yang bisa generate image maka kita sampaikan bahwa kita menggunakan dummy dulu." |
 | **Product UI**: screenshots, a Figma link, a screen recording (only when the product is software or has an app) | "Ada tangkapan layar atau file Figma dari aplikasi Anda? Calon pelanggan ingin melihat produknya sebelum mendaftar. Contoh: layar dasbor, layar pemesanan, tampilan di HP." | Follow up once. If there is still no interface, ask: "Belum ada tampilan aplikasinya. Mau saya buatkan **tiruan yang realistis dengan data contoh** (terlihat seperti aplikasi sungguhan, ditandai sebagai contoh, Anda ganti nanti) atau **placeholder berlabel** saja (kotak bertulisan 'tampilan aplikasi')? Rekomendasi: tiruan, karena pelanggan menilai dari produknya. Atau percayakan ke AI." **"Percayakan ke AI" chooses the mock.** The mock is built from the product's real features, every sample element carries `data-sample` (`inspect.mjs` reports INFO `sample-ui`), its numbers are never presented as customer results (SKILL.md: proof is never sampled), and it is listed in the deliver report. A placeholder is a labelled box with the shot needed. Owner: "follow up user untuk minta; jika belum ada interface tanya apakah perlu dibuatkan dummy atau placeholder saja." |
 | **Brand assets**: logo, colours, fonts, a brand book | "Ada logo atau warna resmi? Kalau ada, halaman memakai itu; kalau belum, saya buatkan logo sementara dari nama Anda. Contoh: file logo PNG/SVG, kode warna dari desainer, atau foto papan nama toko." | A short brand kit at the direction step and a placeholder wordmark (`brand/method.md` §9), listed in the deliver report. |
 
-### No photos: stand-in pictures (owner, 2026-11-07)
+### No photos: stand-in pictures (owner, 2026-11-07; paths widened 2026-11-12)
 
-When the user has no photos, ask in the four-part form whether they want stand-in (dummy) pictures
-until theirs exist, and if yes offer three paths, each with an example:
+When the user has no photos, ask in the four-part form which stand-in pictures they want until
+theirs exist (`rules/illustration.md` has the paths, the quality bar and the tools):
 
-> "Belum ada foto asli. Mau saya pakaikan **gambar pengganti** dulu sampai foto Anda siap? Ini
-> menentukan apakah halaman terlihat hidup sekarang atau masih kotak kosong. Ada tiga cara:
-> **(a) Anda pilih sendiri di unsplash.com** lalu tempel link fotonya di sini, tanpa daftar apa pun
-> (contoh: cari "dapur katering", klik foto, klik kanan → *Copy image address*, tempel
-> `https://images.unsplash.com/photo-…`);
-> **(b) saya cari otomatis** di Unsplash, butuh *Access Key* gratis dari Anda (langkahnya di bawah;
-> contoh: saya cari "nasi kotak di meja kantor" dan kirim lembar pilihan 8 foto);
-> **(c) ilustrasi gambar atau kotak berlabel** dengan daftar foto yang perlu Anda ambil (contoh:
-> gambar datar papan rundown dan walkie-talkie, atau kotak bertulisan "foto tim di dapur, horizontal").
-> Rekomendasi: (a) kalau Anda sempat memilih 5 menit, karena Anda yang paling tahu rasanya. Atau
+> "Belum ada foto asli. Gambar sangat menentukan apakah halaman terasa hidup, jadi saya perlu tahu
+> gambar pengganti mana yang Anda mau sampai foto Anda siap:
+> **(a) Foto stok pilihan Anda**: pilih sendiri di unsplash.com lalu tempel link fotonya di sini,
+> tanpa daftar apa pun (contoh: cari "dapur katering", klik foto, klik kanan → *Copy image
+> address*, tempel `https://images.unsplash.com/photo-…`);
+> **(b) Foto stok saya carikan**: langsung bisa tanpa daftar (hasilnya tidak selalu bagus), atau
+> jauh lebih bagus dengan satu *key* gratis dari Unsplash, Pexels atau Pixabay (5 menit, langkahnya
+> di bawah; contoh: saya cari "nasi kotak di meja kantor" dan kirim lembar pilihan 8 foto);
+> **(c) Gambar buatan AI gratis**: saya buatkan gambar draf (contoh: "matras tergulung di lantai
+> kayu, cahaya pagi"); kualitasnya terbatas, ada tanda air kecil, dan harus diganti sebelum tayang;
+> **(d) Placeholder yang didesain**: bingkai bergambar sederhana dengan warna halaman Anda, yang
+> menunjukkan foto apa yang nanti masuk (contoh: siluet pelatih dengan label "pelatih menggelar
+> matras, pagi"), plus ilustrasi untuk bagian yang perlu menjelaskan sesuatu;
+> **(e) Tanpa gambar**: halaman mengandalkan huruf, warna dan bentuk saja.
+> Rekomendasi: (a) kalau Anda sempat memilih 5 menit, karena Anda yang paling tahu rasanya; kalau
+> tidak, (d), karena placeholder yang rapi lebih baik daripada foto yang kurang pas. Atau
 > percayakan ke AI."
 
 - **(a) Pasted links, no key.** `photos.mjs get <link>` takes an `images.unsplash.com/…` link (the
@@ -88,7 +94,11 @@ until theirs exist, and if yes offer three paths, each with an example:
   `credits.json` records the name when the link allows and says "photographer unknown" with how to
   fix it when it does not (`--by "<name>" --page <photo page link>`); ask the user for the page link
   or the name. `plus.unsplash.com` (Unsplash+) is a paid licence: refused.
-- **(b) Automatic search, free Unsplash Access Key.** Give the user these steps:
+- **(b) Automatic search.** Works at once on Openverse and Wikimedia Commons (no key; uneven
+  pictures). A free key adds far better ones; any one of the three is enough: Unsplash (steps
+  below), Pexels (pexels.com/api → sign in → *Your API Key* → `PEXELS_API_KEY`) or Pixabay
+  (pixabay.com/api/docs → sign in, the key is shown on that page → `PIXABAY_API_KEY`). Keys are
+  stored the same way as in step 5. For Unsplash give the user these steps:
   1. Sign up at unsplash.com/join.
   2. Open unsplash.com/developers and click **Register as a developer**.
   3. Go to unsplash.com/oauth/applications → **New Application**, accept the API guidelines, give
@@ -101,11 +111,19 @@ until theirs exist, and if yes offer three paths, each with an example:
      the chat and never commit it into the skill or the project.**
   Then `photos.mjs search "<subject>" --sheet .design/photos/sheet.png`, show the sheet, `get` the
   chosen ones (`rules/illustration.md` step 1).
-- **(c) Drawn illustration or labelled placeholders**, with the shot list (`rules/illustration.md`).
+- **(c) AI-generated drafts.** `photos.mjs generate "<what the picture shows>"` (free, no key, about
+  one picture per 45 s; `rules/illustration.md` → AI-generated drafts): objects, places and light
+  only, marked `data-generated`, replaced before launch. A connected image tool the user has
+  replaces it.
+- **(d) Designed placeholders**, with drawn illustration where a picture must explain something:
+  `placeholder.mjs` (`rules/illustration.md` → Designed placeholders), with the shot list.
+- **(e) No pictures.** The `imagery` dial is set to `type` (`rules/visual-dials.md`).
 
-**"Percayakan ke AI"** → (b) when `UNSPLASH_ACCESS_KEY` is set, else (c). Every stand-in is listed
-in the deliver report with the shot list; a found photograph is never presented as the client's own.
-If the user says no stand-ins are needed, the plan is (c) placeholders in drafts only.
+**"Percayakan ke AI"** → search (b) with whatever keys are set and keep only pictures that pass
+the quality bar (`rules/illustration.md`); every shot left over gets (d). Never (e) without the
+user choosing it. Every stand-in is listed in the deliver report with the shot list; a found
+photograph is never presented as the client's own. If the user says no stand-ins are needed, the
+plan is (d): designed placeholders with the shot list.
 
 Research materials (old copy, brochures, chat exports, reviews) are asked for as in
 `modes/create.md` step 1 and recorded in the same section. A `section` run skips this: it works
@@ -118,7 +136,7 @@ when there is no product UI):
 ```markdown
 ## Materials
 | Material | What exists | Plan |
-| Photos | none | stand-ins wanted: (a) user pastes 6 Unsplash links → photos.mjs get, credits; else (c) drawn and dummy pictures, user told at the start; shot list at delivery |
+| Photos | none | stand-ins: (b) photos.mjs search, keep only what passes the quality bar, credits; the rest (d) designed placeholders (placeholder.mjs) and drawn illustration, user told at the start; shot list at delivery |
 | Product UI | none after a follow-up | user: "percayakan ke AI" → realistic mock with sample data (data-sample) |
 | Brand assets | no logo; colours free | short brand kit, placeholder wordmark |
 | Image tool | none connected | - |
@@ -126,7 +144,8 @@ when there is no product UI):
 ```
 
 `progress.mjs done deliver` then wants `.design/deliver.md` to list the shot list when the brief
-plans dummy or drawn pictures, and the sample UI when it plans a mock.
+plans dummy, drawn or placeholder pictures, to name the AI-generated drafts when it plans them, and
+the sample UI when it plans a mock.
 
 ## What the answers become
 

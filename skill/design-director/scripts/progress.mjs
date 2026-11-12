@@ -153,6 +153,7 @@ function materialsPlan(brief) {
   return {
     dummyPictures: /\b(dummy|dummies|drawn|digambar|ilustrasi|illustration|placeholder)/i.test(row(/photo|foto|picture|gambar/i)),
     sampleUi: /\b(mock|sample|contoh|tiruan|dummy)/i.test(row(/\bui\b|interface|antarmuka|screenshot|figma/i)),
+    aiPictures: /\b(ai[- ]generated|generated|buatan ai|gambar ai|pollinations|photos\.mjs generate)/i.test(row(/photo|foto|picture|gambar/i)),
   };
 }
 
@@ -423,6 +424,8 @@ switch (cmd) {
       const plan = materialsPlan(readDesign('brief.md'));
       if (plan.dummyPictures && !/shot list|daftar (foto|gambar)/i.test(dm))
         fail('The brief planned drawn or dummy pictures: say so in .design/deliver.md with the shot list (rules/brief-interview.md → Materials).');
+      if (plan.aiPictures && !/ai[- ]generated|buatan ai|gambar ai|dibuat (oleh )?ai|data-generated/i.test(dm))
+        fail('The brief planned AI-generated draft pictures: say in .design/deliver.md which pictures are AI-generated drafts (data-generated) and that they are replaced before launch (rules/illustration.md).');
       if (plan.sampleUi && !/sample ui|data-sample|ui contoh|tiruan|mock/i.test(dm))
         fail('The brief planned a mock of the product UI: list the sample UI (data-sample) in .design/deliver.md with what to send to replace it (rules/brief-interview.md → Materials).');
     }

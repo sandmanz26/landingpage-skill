@@ -250,11 +250,15 @@ Check `rules/defaults.md`: if a choice in the table is one of the AI defaults, e
 write the reason it is right here. Colours: avoid the cream-and-terracotta "assistant palette" and
 violet or indigo accents unless the brand owns them.
 
-Imagery, in this order: the client's own → licensed photographs of the subject's world found with
-`photos.mjs` (Unsplash with `UNSPLASH_ACCESS_KEY`, Openverse, Wikimedia Commons; look at the
-`--sheet` before choosing, credits recorded) → generated, if an image tool is available → drawn in
-code from the subject itself (`rules/illustration.md`) → type and colour alone, only when the
-`imagery` dial says `type`. On a live site, Unsplash photographs are hotlinked from their Unsplash
+Imagery, by the path chosen at the brief (`rules/illustration.md`): the client's own → licensed
+photographs of the subject's world found with `photos.mjs` (Openverse and Wikimedia Commons with no
+key; Unsplash, Pexels, Pixabay with a free key; look at the `--sheet` before choosing, credits
+recorded) → generated (a connected image tool, or the free draft of `photos.mjs generate`, marked
+`data-generated`) → designed placeholders (`placeholder.mjs`, marked `data-placeholder-image`) and
+drawing in code from the subject itself → type and colour alone, only when the `imagery` dial says
+`type`. Every found or generated picture passes the quality bar of `rules/illustration.md` (right
+subject, no artefacts, one set with the others, honest) or its shot gets a designed placeholder: a
+weak picture is worse than a good placeholder. On a live site, Unsplash photographs are hotlinked from their Unsplash
 URL as the Unsplash API guidelines ask; copies are only for offline previews. Never present a found or generated picture as the client's own
 product, room, dish or team. Write an **imagery plan** in the spec: every picture on the page, what
 it shows, where it comes from, and the shot list for the client.
@@ -408,8 +412,9 @@ Write the package to `.design/deliver.md` and show it:
 - the placeholder wordmark, if one was used: "placeholder, replace with a designer's logo";
 - every `[SAMPLE]` item to replace, every found picture with its credit, every picture that stands
   in for photography;
-- **dummy and drawn pictures**: when no image tool was connected and no photographs were found,
-  say plainly that the pictures are drawn or dummies, with the shot list (`rules/illustration.md`);
+- **stand-in pictures**: say plainly which pictures are found photographs (with credits),
+  AI-generated drafts (`generated-image` INFO), designed placeholders (`placeholder-image` INFO) or
+  drawings, with the shot list (`rules/illustration.md`);
 - **sample UI**: every `data-sample` mock (the `sample-ui` INFO from `inspect.mjs`) or labelled
   product-UI placeholder, with what to send to replace it;
 - WARNs kept, each with its one-sentence defence;
@@ -419,7 +424,7 @@ Write the package to `.design/deliver.md` and show it:
 
 `done deliver` refuses without `.design/deliver.md` and its "Supaya lebih bagus" section, without
 "Alasan desain" holding three decisions that each name a trade-off, without
-the motion option when no message was found, without the shot list when the brief planned dummy or
+the motion option when no message was found, without the AI-generated drafts named when the brief planned them, without the shot list when the brief planned dummy, placeholder or
 drawn pictures, and without the sample UI when it planned a mock.
 
 Copy the final screenshots to `.design/snapshots/<date>-v<n>/`. After the user approves:

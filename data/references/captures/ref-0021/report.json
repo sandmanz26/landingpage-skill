@@ -1,0 +1,688 @@
+{
+  "target": "https://en.manayerbamate.com/",
+  "time": "2026-11-12T07:43:41.228Z",
+  "rules": {
+    "purple-gradient": "warn",
+    "gradient": "info",
+    "glass": "info",
+    "system-font-only": "warn",
+    "too-many-font-sizes": "warn",
+    "too-many-colours": "warn",
+    "shadow-on-everything": "warn",
+    "icon-card-row": "warn",
+    "centred-hero-two-ctas": "warn",
+    "emoji": "warn",
+    "kit-sample": "fail",
+    "table-numbers-align": "warn",
+    "table-checkbox-align": "warn",
+    "table-checkbox-target": "warn",
+    "table-truncation": "warn",
+    "table-bulk-actions": "warn",
+    "table-sticky-columns": "info"
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "pageHeight": 13243,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "too-many-font-sizes",
+          "message": "11 different font sizes on the page (aim for 5 or fewer doing the visible work)"
+        },
+        {
+          "severity": "WARN",
+          "rule": "display-sizes",
+          "message": "6 display sizes (24px and up) with no clear scale: 334, 81, 57, 40, 29, 25 px; use 3-4 steps, each with one role"
+        },
+        {
+          "severity": "WARN",
+          "rule": "headline-lines",
+          "message": "h2 runs to 13 lines",
+          "sample": [
+            "<h2> \"Mana ? Yerba Maté ?What are we talking about?\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "img-alt",
+          "message": "72 images without an alt attribute",
+          "sample": [
+            "//manayerbamate.com/cdn/shop/t/18/assets/etoile.svg?v=158195823969694826041671187959",
+            "//manayerbamate.com/cdn/shop/t/18/assets/etoile.svg?v=158195823969694826041671187959",
+            "//manayerbamate.com/cdn/shop/t/18/assets/etoile.svg?v=158195823969694826041671187959"
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "too-many-colours",
+          "message": "7 distinct chromatic colours",
+          "sample": [
+            "#2b3d73",
+            "#acd084",
+            "#195e1c",
+            "#88c1f8",
+            "#f6b1cf",
+            "#ffd372",
+            "#f15b40"
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "layout-shift",
+          "message": "Layout shift 1.971 (over 0.25)"
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "3 console or page errors",
+          "sample": [
+            "Framing 'https://shop.app/' violates the following Content Security Policy directive: \"frame-ancestors 'self' https://shop.app https://admin.shopify.com\". The request has been blocked.\n",
+            "Failed to load resource: the server responded with a status of 403 ()",
+            "Failed to load resource: the server responded with a status of 502 (Bad Gateway)"
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "screenshots-capped",
+          "message": "Page is 13243px tall; only the first 14 screens were captured"
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Neue Montreal 2020",
+            "share": 100
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "neue montreal 2",
+            "share": 100
+          }
+        ],
+        "fontSizes": [
+          334,
+          81,
+          57,
+          40,
+          29,
+          25,
+          23,
+          20,
+          19,
+          16,
+          15
+        ],
+        "textColours": [
+          "#ffffff",
+          "#0e0e0e"
+        ],
+        "backgroundColours": [
+          "#2b3d73",
+          "#ffffff",
+          "#acd084",
+          "#195e1c",
+          "#0e0e0e",
+          "#88c1f8",
+          "#f6b1cf",
+          "#ffd372",
+          "#f15b40"
+        ],
+        "chromaticColours": 7,
+        "colourFamilies": 6,
+        "spacing": {
+          "distinct": 21,
+          "offScale": 10,
+          "values": [
+            1,
+            6,
+            7.5,
+            8,
+            19,
+            20,
+            24,
+            25.5,
+            30,
+            32,
+            39,
+            40,
+            44,
+            45,
+            60,
+            86.5,
+            100,
+            250,
+            280,
+            300,
+            4320
+          ]
+        },
+        "radii": [
+          "40px",
+          "100%",
+          "49.536px",
+          "21.384px",
+          "25.6608px",
+          "37.728px",
+          "25px",
+          "12.384px"
+        ],
+        "shadows": 0,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 14,
+        "animatedElements": 6,
+        "cls": 1.971
+      },
+      "screenshots": [
+        "data/references/captures/ref-0021/desktop-fold.png",
+        "data/references/captures/ref-0021/desktop-page-01.png",
+        "data/references/captures/ref-0021/desktop-page-02.png",
+        "data/references/captures/ref-0021/desktop-page-03.png",
+        "data/references/captures/ref-0021/desktop-page-04.png",
+        "data/references/captures/ref-0021/desktop-page-05.png",
+        "data/references/captures/ref-0021/desktop-page-06.png",
+        "data/references/captures/ref-0021/desktop-page-07.png",
+        "data/references/captures/ref-0021/desktop-page-08.png",
+        "data/references/captures/ref-0021/desktop-page-09.png",
+        "data/references/captures/ref-0021/desktop-page-10.png",
+        "data/references/captures/ref-0021/desktop-page-11.png",
+        "data/references/captures/ref-0021/desktop-page-12.png",
+        "data/references/captures/ref-0021/desktop-page-13.png",
+        "data/references/captures/ref-0021/desktop-page-14.png"
+      ]
+    },
+    "tablet": {
+      "width": 768,
+      "pageHeight": 10894,
+      "findings": [
+        {
+          "severity": "WARN",
+          "rule": "headline-lines",
+          "message": "h2 runs to 13 lines",
+          "sample": [
+            "<h2> \"Mana ? Yerba Maté ?What are we talking about?\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "img-alt",
+          "message": "72 images without an alt attribute",
+          "sample": [
+            "//manayerbamate.com/cdn/shop/t/18/assets/etoile.svg?v=158195823969694826041671187959",
+            "//manayerbamate.com/cdn/shop/t/18/assets/etoile.svg?v=158195823969694826041671187959",
+            "//manayerbamate.com/cdn/shop/t/18/assets/etoile.svg?v=158195823969694826041671187959"
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "too-many-colours",
+          "message": "7 distinct chromatic colours",
+          "sample": [
+            "#2b3d73",
+            "#acd084",
+            "#195e1c",
+            "#88c1f8",
+            "#f6b1cf",
+            "#ffd372",
+            "#f15b40"
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "1 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#ffffff on screen = 3.33:1 median, 3.33:1 in the worst tenth (needs 4.5) <span> \"Subscribe\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "layout-shift",
+          "message": "Layout shift 1.933 (over 0.25)"
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "2 console or page errors",
+          "sample": [
+            "Framing 'https://shop.app/' violates the following Content Security Policy directive: \"frame-ancestors 'self' https://shop.app https://admin.shopify.com\". The request has been blocked.\n",
+            "Failed to load resource: the server responded with a status of 403 ()"
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Neue Montreal 2020",
+            "share": 100
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "neue montreal 2",
+            "share": 100
+          }
+        ],
+        "fontSizes": [
+          178,
+          43,
+          36,
+          22,
+          21,
+          20,
+          18,
+          16,
+          15,
+          12
+        ],
+        "textColours": [
+          "#ffffff",
+          "#0e0e0e"
+        ],
+        "backgroundColours": [
+          "#2b3d73",
+          "#ffffff",
+          "#acd084",
+          "#195e1c",
+          "#0e0e0e",
+          "#88c1f8",
+          "#f6b1cf",
+          "#ffd372",
+          "#f15b40"
+        ],
+        "chromaticColours": 7,
+        "colourFamilies": 6,
+        "spacing": {
+          "distinct": 20,
+          "offScale": 12,
+          "values": [
+            1,
+            4.5,
+            5,
+            6,
+            13.5,
+            15,
+            20.5,
+            24,
+            28.5,
+            30,
+            40,
+            44,
+            45,
+            46,
+            60,
+            100,
+            250,
+            280,
+            300,
+            2304
+          ]
+        },
+        "radii": [
+          "100%",
+          "44px",
+          "13.5px",
+          "16.2px",
+          "30px",
+          "25px",
+          "11px"
+        ],
+        "shadows": 0,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 13,
+        "animatedElements": 2,
+        "cls": 1.933
+      },
+      "screenshots": [
+        "data/references/captures/ref-0021/tablet-fold.png",
+        "data/references/captures/ref-0021/tablet-page-01.png",
+        "data/references/captures/ref-0021/tablet-page-02.png",
+        "data/references/captures/ref-0021/tablet-page-03.png",
+        "data/references/captures/ref-0021/tablet-page-04.png",
+        "data/references/captures/ref-0021/tablet-page-05.png",
+        "data/references/captures/ref-0021/tablet-page-06.png",
+        "data/references/captures/ref-0021/tablet-page-07.png",
+        "data/references/captures/ref-0021/tablet-page-08.png",
+        "data/references/captures/ref-0021/tablet-page-09.png",
+        "data/references/captures/ref-0021/tablet-page-10.png",
+        "data/references/captures/ref-0021/tablet-page-11.png"
+      ]
+    },
+    "mobile": {
+      "width": 390,
+      "pageHeight": 5965,
+      "findings": [
+        {
+          "severity": "FAIL",
+          "rule": "tap-target",
+          "message": "3 controls smaller than 24x24px on a phone",
+          "sample": [
+            "90x17 <a> \"Terms of use\"",
+            "94x17 <a> \"Refund policy\"",
+            "51x19 <button> \"Credits\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "text-at-edge",
+          "message": "8 text elements within 12px of the screen edge",
+          "sample": [
+            "<h1> \"Mana - Drinking tea\"",
+            "<span> \"Tropical\"",
+            "<span> \"Discovery box\""
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "img-alt",
+          "message": "72 images without an alt attribute",
+          "sample": [
+            "//manayerbamate.com/cdn/shop/t/18/assets/etoile.svg?v=158195823969694826041671187959",
+            "//manayerbamate.com/cdn/shop/t/18/assets/etoile.svg?v=158195823969694826041671187959",
+            "//manayerbamate.com/cdn/shop/t/18/assets/etoile.svg?v=158195823969694826041671187959"
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "too-many-colours",
+          "message": "7 distinct chromatic colours",
+          "sample": [
+            "#2b3d73",
+            "#acd084",
+            "#195e1c",
+            "#f6b1cf",
+            "#ffd372",
+            "#88c1f8",
+            "#f15b40"
+          ]
+        },
+        {
+          "severity": "FAIL",
+          "rule": "contrast",
+          "message": "1 text elements below WCAG AA (measured on screen pixels)",
+          "sample": [
+            "#ffffff on screen = 3.33:1 median, 3.33:1 in the worst tenth (needs 4.5) <span> \"Subscribe\""
+          ]
+        },
+        {
+          "severity": "WARN",
+          "rule": "console-errors",
+          "message": "3 console or page errors",
+          "sample": [
+            "Framing 'https://shop.app/' violates the following Content Security Policy directive: \"frame-ancestors 'self' https://shop.app https://admin.shopify.com\". The request has been blocked.\n",
+            "Failed to load resource: the server responded with a status of 403 ()",
+            "requestStorageAccess: Permission denied."
+          ]
+        }
+      ],
+      "inventory": {
+        "families": [
+          {
+            "family": "Neue Montreal 2020",
+            "share": 100
+          }
+        ],
+        "typefaces": [
+          {
+            "family": "neue montreal 2",
+            "share": 100
+          }
+        ],
+        "fontSizes": [
+          82,
+          40,
+          36,
+          32,
+          22,
+          20,
+          18,
+          16,
+          15,
+          12
+        ],
+        "textColours": [
+          "#ffffff",
+          "#0e0e0e"
+        ],
+        "backgroundColours": [
+          "#2b3d73",
+          "#ffffff",
+          "#acd084",
+          "#195e1c",
+          "#0e0e0e",
+          "#f6b1cf",
+          "#ffd372",
+          "#88c1f8",
+          "#f15b40"
+        ],
+        "chromaticColours": 7,
+        "colourFamilies": 6,
+        "spacing": {
+          "distinct": 22,
+          "offScale": 14,
+          "values": [
+            1,
+            3.5,
+            5,
+            11.5,
+            15,
+            20,
+            23.5,
+            24,
+            28.5,
+            30,
+            40,
+            44,
+            45,
+            60,
+            75,
+            100,
+            115,
+            125,
+            150,
+            250,
+            280,
+            300
+          ]
+        },
+        "radii": [
+          "100%",
+          "44px",
+          "13.5px",
+          "16.2px",
+          "30px",
+          "25px",
+          "11px"
+        ],
+        "shadows": 0,
+        "gradients": 0,
+        "backdropBlur": 0,
+        "transitions": 10,
+        "animatedElements": 3,
+        "cls": 0.009
+      },
+      "screenshots": [
+        "data/references/captures/ref-0021/mobile-fold.png",
+        "data/references/captures/ref-0021/mobile-page-01.png",
+        "data/references/captures/ref-0021/mobile-page-02.png",
+        "data/references/captures/ref-0021/mobile-page-03.png",
+        "data/references/captures/ref-0021/mobile-page-04.png",
+        "data/references/captures/ref-0021/mobile-page-05.png",
+        "data/references/captures/ref-0021/mobile-page-06.png",
+        "data/references/captures/ref-0021/mobile-page-07.png",
+        "data/references/captures/ref-0021/mobile-page-08.png"
+      ]
+    }
+  },
+  "checks": {
+    "reducedMotion": {
+      "findings": [],
+      "screenshot": "data/references/captures/ref-0021/reduced-motion-fold.png"
+    },
+    "noJavaScript": {
+      "findings": [],
+      "withJs": 958,
+      "withoutJs": 885
+    }
+  },
+  "summary": {
+    "fail": 5,
+    "warn": 8
+  },
+  "url": "https://en.manayerbamate.com/",
+  "findings": [
+    {
+      "severity": "FAIL",
+      "rule": "img-alt",
+      "message": "72 images without an alt attribute",
+      "sample": [
+        "//manayerbamate.com/cdn/shop/t/18/assets/etoile.svg?v=158195823969694826041671187959",
+        "//manayerbamate.com/cdn/shop/t/18/assets/etoile.svg?v=158195823969694826041671187959",
+        "//manayerbamate.com/cdn/shop/t/18/assets/etoile.svg?v=158195823969694826041671187959"
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "layout-shift",
+      "message": "Layout shift 1.971 (over 0.25)",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "contrast",
+      "message": "1 text elements below WCAG AA (measured on screen pixels)",
+      "sample": [
+        "#ffffff on screen = 3.33:1 median, 3.33:1 in the worst tenth (needs 4.5) <span> \"Subscribe\""
+      ],
+      "where": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "layout-shift",
+      "message": "Layout shift 1.933 (over 0.25)",
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "FAIL",
+      "rule": "tap-target",
+      "message": "3 controls smaller than 24x24px on a phone",
+      "sample": [
+        "90x17 <a> \"Terms of use\"",
+        "94x17 <a> \"Refund policy\"",
+        "51x19 <button> \"Credits\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "too-many-font-sizes",
+      "message": "11 different font sizes on the page (aim for 5 or fewer doing the visible work)",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "display-sizes",
+      "message": "6 display sizes (24px and up) with no clear scale: 334, 81, 57, 40, 29, 25 px; use 3-4 steps, each with one role",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "headline-lines",
+      "message": "h2 runs to 13 lines",
+      "sample": [
+        "<h2> \"Mana ? Yerba Maté ?What are we talking about?\""
+      ],
+      "where": [
+        "desktop",
+        "tablet"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "too-many-colours",
+      "message": "7 distinct chromatic colours",
+      "sample": [
+        "#2b3d73",
+        "#acd084",
+        "#195e1c",
+        "#88c1f8",
+        "#f6b1cf",
+        "#ffd372",
+        "#f15b40"
+      ],
+      "where": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "console-errors",
+      "message": "3 console or page errors",
+      "sample": [
+        "Framing 'https://shop.app/' violates the following Content Security Policy directive: \"frame-ancestors 'self' https://shop.app https://admin.shopify.com\". The request has been blocked.\n",
+        "Failed to load resource: the server responded with a status of 403 ()",
+        "Failed to load resource: the server responded with a status of 502 (Bad Gateway)"
+      ],
+      "where": [
+        "desktop",
+        "mobile"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "screenshots-capped",
+      "message": "Page is 13243px tall; only the first 14 screens were captured",
+      "where": [
+        "desktop"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "console-errors",
+      "message": "2 console or page errors",
+      "sample": [
+        "Framing 'https://shop.app/' violates the following Content Security Policy directive: \"frame-ancestors 'self' https://shop.app https://admin.shopify.com\". The request has been blocked.\n",
+        "Failed to load resource: the server responded with a status of 403 ()"
+      ],
+      "where": [
+        "tablet"
+      ]
+    },
+    {
+      "severity": "WARN",
+      "rule": "text-at-edge",
+      "message": "8 text elements within 12px of the screen edge",
+      "sample": [
+        "<h1> \"Mana - Drinking tea\"",
+        "<span> \"Tropical\"",
+        "<span> \"Discovery box\""
+      ],
+      "where": [
+        "mobile"
+      ]
+    }
+  ]
+}

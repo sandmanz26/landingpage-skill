@@ -315,6 +315,12 @@ export function measure({ rules, viewport }) {
   const sampleUi = [...document.querySelectorAll('[data-sample]')];
   if (sampleUi.length) add('INFO', 'sample-ui', `${sampleUi.length} element(s) carry sample data (data-sample): list them in the deliver report as sample UI to replace with the real product`, sampleUi.slice(0, 3).map((e) => e.getAttribute('data-sample') || snippet(e)));
 
+  // --- pictures that stand in (rules/illustration.md): designed placeholders and AI-generated drafts, listed in the deliver report
+  const phImages = [...document.querySelectorAll('[data-placeholder-image]')].filter((e) => !e.parentElement || !e.parentElement.closest('[data-placeholder-image]'));
+  if (phImages.length) add('INFO', 'placeholder-image', `${phImages.length} designed placeholder picture(s): list each in the deliver report with its shot, to replace with a real photograph`, phImages.slice(0, 5).map((e) => e.getAttribute('aria-label') || e.getAttribute('alt') || e.getAttribute('data-placeholder-image') || snippet(e)));
+  const genImages = [...document.querySelectorAll('[data-generated]')];
+  if (genImages.length) add('INFO', 'generated-image', `${genImages.length} AI-generated draft picture(s) (data-generated): say so in the deliver report and replace them before launch`, genImages.slice(0, 5).map((e) => e.getAttribute('alt') || e.getAttribute('src') || snippet(e)));
+
   // --- data tables (admin/table.md): a <table>, role=table or role=grid with 3+ data rows.
   // Severities come from rules (style-defaults.json), so a team or brand can tune them.
   {

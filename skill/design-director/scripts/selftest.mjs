@@ -765,6 +765,64 @@ const check = (name, ok, detail = '') => {
     [a, b, c].map((r) => r.stdout + r.stderr).join(' | '));
 }
 
+// pictures that stand in: stock providers, the free generator, designed placeholders (rules/illustration.md)
+{
+  const stock = await import(path.join(here, 'lib/stock.mjs'));
+  const px = stock.mapPexels({ photos: [{ id: 7, width: 4000, height: 3000, url: 'https://www.pexels.com/photo/x-7/', photographer: 'Ana', photographer_url: 'https://www.pexels.com/@ana', alt: 'Yoga mat', src: { original: 'https://images.pexels.com/photos/7/o.jpeg', large2x: 'https://images.pexels.com/photos/7/l.jpeg', medium: 'https://images.pexels.com/photos/7/m.jpeg' } }, { id: 8, src: {} }] });
+  const pb = stock.mapPixabay({ hits: [{ id: 9, pageURL: 'https://pixabay.com/photos/x-9/', tags: 'yoga, mat', webformatURL: 'https://pixabay.com/get/w.jpg', largeImageURL: 'https://pixabay.com/get/l.jpg', imageWidth: 3000, imageHeight: 2000, user: 'Budi', user_id: 42 }] });
+  check('stock: Pexels and Pixabay answers become photo records with their credit',
+    px.length === 1 && px[0].ref === 'pexels:7' && px[0].full.endsWith('l.jpeg') && px[0].license === 'Pexels License' && stock.creditLine(px[0]) === 'Photo by Ana on Pexels'
+    && pb.length === 1 && pb[0].ref === 'pixabay:9' && pb[0].full.endsWith('l.jpg') && stock.creditLine(pb[0]) === 'Image by Budi from Pixabay',
+    JSON.stringify([px, pb]));
+  check('stock: keyed providers run first, the open ones always',
+    stock.defaultProviders({}).join() === 'openverse,commons' && stock.defaultProviders({ PEXELS_API_KEY: 'k', UNSPLASH_ACCESS_KEY: 'k' }).join() === 'unsplash,pexels,openverse,commons');
+  const gu = stock.generateUrl('rolled yoga mat, morning light', { width: 800, height: 600, seed: 4 });
+  check('stock: the generator address carries the prompt, size and seed; the free limit gives a wait',
+    gu.startsWith('https://image.pollinations.ai/prompt/rolled%20yoga%20mat') && /width=800/.test(gu) && /seed=4/.test(gu)
+    && stock.retryAfterSeconds(402, null, '{"message":"Free limit reached. Retry after 6s"}') === 7 && stock.retryAfterSeconds(429, '30', '') === 30 && stock.retryAfterSeconds(500, null, '') === 0,
+    gu);
+
+  const { placeholderSvg, SHOTS, paletteFrom } = await import(path.join(here, 'placeholder.mjs'));
+  const kit = JSON.parse(fs.readFileSync(path.join(fixtures, 'brand/kit.json'), 'utf8'));
+  const all = SHOTS.map((shot, i) => placeholderSvg({ shot, label: 'pelatih menggelar matras & handuk', ratio: '4:5', shape: ['rect', 'round', 'arch'][i % 3], seed: i + 1, colors: { kit } }));
+  const pal = paletteFrom({ kit });
+  check('placeholder: every shot is a labelled SVG in the kit\'s colours, marked data-placeholder-image',
+    all.length === 8 && all.every((svg, i) => svg.startsWith('<svg') && svg.includes(`data-placeholder-image="${SHOTS[i]}"`) && /aria-label="Placeholder foto: pelatih menggelar matras &amp; handuk"/.test(svg) && svg.includes(pal.field) && svg.includes('viewBox="0 0 1200 1500"'))
+    && new Set(all).size === 8 && !all.join('').includes('NaN'),
+    all[0].slice(0, 300));
+  const bad = run('placeholder.mjs', ['--shot', 'unicorn']);
+  const sheet = run('placeholder.mjs', ['sheet', '--out', path.join(tmp, 'ph/sheet.html')]);
+  const one = run('placeholder.mjs', ['--shot', 'food', '--label', 'nasi kotak di meja kantor', '--ratio', '1:1', '--out', path.join(tmp, 'ph/food.svg')]);
+  check('placeholder: the command writes a frame and a sheet, and refuses an unknown shot',
+    bad.status === 2 && /Unknown shot/.test(bad.stderr) && sheet.status === 0 && fs.existsSync(path.join(tmp, 'ph/sheet.html')) && one.status === 0 && /nasi kotak/.test(fs.readFileSync(path.join(tmp, 'ph/food.svg'), 'utf8')),
+    bad.stderr + sheet.stderr + one.stderr);
+
+  const out = path.join(tmp, 'pictures');
+  const r = run('inspect.mjs', [path.join(fixtures, 'pictures.html'), '--out', out, '--quiet']);
+  const rep = fs.existsSync(path.join(out, 'report.json')) ? JSON.parse(fs.readFileSync(path.join(out, 'report.json'), 'utf8')) : { summary: { fail: -1 }, findings: [] };
+  const info = (rule) => rep.findings.find((f) => f.rule === rule && f.severity === 'INFO');
+  check('inspect reports designed placeholders and AI-generated drafts as INFO, with no FAIL',
+    rep.summary.fail === 0 && info('placeholder-image') && /1 designed placeholder/.test(info('placeholder-image').message) && info('generated-image'),
+    r.stdout + r.stderr + rep.findings.map((f) => `${f.severity} ${f.rule}`).join(', '));
+
+  const proj = path.join(tmp, 'ai-pictures');
+  fs.mkdirSync(proj);
+  const d = path.join(proj, '.design');
+  const p = (...a) => run('progress.mjs', a, proj);
+  p('init', '--mode', 'create', '--effort', 'quick', '--gates', 'autopilot');
+  fs.writeFileSync(path.join(d, 'brief.md'), BRIEF.replace(/\| Photos \|[^\n]*\n/, '| Photos | none | AI-generated draft pictures (photos.mjs generate), user told at the start; shot list at delivery |\n'));
+  const st = JSON.parse(fs.readFileSync(path.join(d, 'progress.json'), 'utf8'));
+  for (const k of Object.keys(st.steps)) if (k !== 'deliver' && k !== 'learn') st.steps[k] = { status: 'done' };
+  fs.writeFileSync(path.join(d, 'progress.json'), JSON.stringify(st));
+  p('approve', 'final');
+  fs.writeFileSync(path.join(d, 'deliver.md'), '# Deliver\n## Supaya lebih bagus\n1. Kirim foto studio asli.\n## Pictures\nShot list: studio at 06.30, the mats rolled.\n## Alasan desain\n- **Harga di layar pertama**: pembeli bertanya harga dulu · Trade-off: kurang cocok bila harga per proyek\n- **Satu aksi**: tidak membagi perhatian · Trade-off: pengunjung yang belum siap tidak punya langkah kecil\n- **Jam di judul**: menjawab "kapan" · Trade-off: jadwal berubah berarti judul berubah\n');
+  const noAi = p('done', 'deliver');
+  fs.appendFileSync(path.join(d, 'deliver.md'), '## Gambar AI\nDua gambar adalah draf buatan AI (data-generated); ganti sebelum tayang.\n');
+  const withAi = p('done', 'deliver');
+  check('progress wants the deliver report to name AI-generated draft pictures when the brief planned them',
+    noAi.status !== 0 && /AI-generated draft pictures/.test(noAi.stderr) && withAi.status === 0, noAi.stderr + ' | ' + withAi.stderr);
+}
+
 // draw
 {
   const a = run('draw.mjs', ['--sector', 'health', '--seed', '7']);
