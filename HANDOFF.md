@@ -715,6 +715,11 @@ was not changed.
   `npm install && npx playwright install chromium` is the normal path (README).
 - Known flake: selftest "kit demo passes the inspector" sometimes fails with `layout-shift` when test
   runs overlap; passes alone. Add the failing rule to its output before investigating. Never skip it.
+- The kit-demo flake recurred on 2026-11-12 in the full run after the motion work (`layout-shift` at two
+  widths) while only light commands ran beside it; the kit page inspected alone three times right
+  after was clean each time. Every other check passed, the six picture checks and the five motion
+  and reader checks included. Still unexplained: suspect timing of the web-font swap or the reveal
+  under load; next step is to log the shifting elements from `report.json` when it fails.
 - Usage limits: the 5-hour limit stopped several subagents; resume them with SendMessage, not new agents.
 - Subagents: spawn them only when the owner asks (they asked for jurors and test builds).
 
