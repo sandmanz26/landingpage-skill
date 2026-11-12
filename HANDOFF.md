@@ -1,7 +1,7 @@
 # Handoff
 
 Read this first if you are a new session, a different model or a different AI tool picking up
-this project. It is kept up to date at every milestone. Last updated: **2026-11-11** (slop blind test sent; Fable 5.2 advice; plan to move to the owner's machine for ~15k mobile screens: see §5b and §6).
+this project. It is kept up to date at every milestone. Last updated: **2026-11-12** (skill audit §5c; slop blind test sent; Fable 5.2 advice; plan to move to the owner's machine for ~15k mobile screens: see §5b and §6).
 
 ## 1. Goal
 
@@ -749,6 +749,40 @@ was not changed.
   state changes), each with message, when / when not, reduced-motion version, duration limits, plus
   inspector checks; rebuild one slop-test page with them; owner compares blind. Owner: "oke noted";
   not started. Not verified that Fable is better for this skill.
+
+## 5c. Audit of the skill (2026-11-12, done on Fable 5.2 at the owner's request)
+
+Read: SKILL.md, modes/create.md, motion/functions.md, rules/defaults.md, library/intake.md,
+capture.mjs, rubric/critic.md, jury-brief.md, capture timings, and the slop-test pages (the two
+skill pages against the three no-skill ones). Findings given to the owner:
+1. **Process outweighs craft.** About 750 KB of skill; SKILL.md 24 KB and create.md 25 KB are mostly
+   what to write down and check. The craft knowledge is mostly avoid-lists (`rules/defaults.md`);
+   there is little positive knowledge (composition archetypes, type pairings, finishing, image
+   treatment, richness of the lower half). Expected result: honest, clear, safe pages.
+2. A concrete finding from the slop test is **withheld from the owner until they score A-E** (to keep
+   it blind): the two skill pages (klinik, yoga; ~215-225k tokens each) look like siblings (same
+   grotesk, pill WhatsApp button, hairline lists, flat bands, FAQ) and are visually plainer than the
+   no-skill senior-designer page (kopi, 82k tokens). Tell them after scoring; it supports finding 1
+   and a "house style" risk from the kit and defaults. This is Claude's reading, not a jury result.
+3. Gates measure defects, not quality; quick effort scores itself (7.2-7.4, not independent).
+   Nothing enforces a minimum ambition.
+4. Jurors sit 2-3 points under the owner on the owner's favourite sites (Axis 9 vs 6.5, Quite Nice
+   9 vs 6.6): a build loop that pleases these jurors drifts to safe pages. Recalibrate against the
+   owner's scores, and give jurors motion as video frames.
+5. No real pictures in any test (no image tool, no Unsplash key): the largest visual ceiling.
+6. Motion rules restrict more than they enable; no recipes.
+7. SKILL.md has accreted detail (table rules and cost history in the start steps) against its own
+   principle 10; over-prescription is a known cost on stronger models. Needs a prompt audit.
+8. Not proven: no blind human votes yet; costs of standard/thorough are estimates.
+9. Reference reading is slow: capture 55-417 s inspect + 67-290 s evidence per page (two separate
+   browser passes), then two jurors (~190k tokens a batch) and a review. Proposed three depths:
+   kilat (one browser pass, the main session reads the sheets, no jurors; for "style"/"element"
+   intent), standar (+ motion frames), penuh (today's flow, only for scored library entries). The
+   time split inside inspect/evidence was not profiled.
+Proposed order: A fast reference reader; B craft module with positive recipes drawn from the 19
+style cards, tested by rebuilding one slop-test page; C slim SKILL.md/create.md; D juror
+recalibration + motion video; E motion recipes; F voting page for designers. Waiting for the
+owner's choice.
 
 ## 6. Next steps, in order (2026-11-11)
 
