@@ -1,7 +1,7 @@
 {
-  "builtAt": "2026-11-12T15:29:25.753Z",
+  "builtAt": "2026-11-16T04:46:44.596Z",
   "source": "data/references (batch-*.json, captures/*/style.json)",
-  "count": 23,
+  "count": 27,
   "sectors": {
     "commerce": [
       "ref-0001"
@@ -22,7 +22,8 @@
       "ref-0012"
     ],
     "beauty": [
-      "ref-0011"
+      "ref-0011",
+      "ref-0027"
     ],
     "food": [
       "ref-0013",
@@ -49,6 +50,11 @@
     ],
     "agency": [
       "ref-0024"
+    ],
+    "fashion": [
+      "ref-0025",
+      "ref-0026",
+      "ref-0028"
     ]
   },
   "groups": [
@@ -2719,6 +2725,171 @@
         "notes": [
           "opening overture: a thin line and a dot grow into the circle that holds the title; transitions of 0.5 s ease on opacity and transform",
           "the whole experience is WebGL in three full-screen canvases; the story behind START was not reached in the capture"
+        ]
+      },
+      "style": null,
+      "styleGroup": null
+    },
+    {
+      "id": "ref-0025",
+      "site": "outfit (hellohello)",
+      "url": "https://outfit.hellohello.is/",
+      "batch": "batch-015",
+      "review": "data/references/batch-015-review.md",
+      "business": "A design studio's apparel and accessories shop",
+      "actionThatPays": "Add to bag",
+      "scores": {
+        "ai": 7.1,
+        "ownerOverall": null,
+        "ownerVisual": null,
+        "ownerShip": null,
+        "final": 7.1
+      },
+      "veto": null,
+      "patternOnly": false,
+      "patterns": [
+        "scale-scatter: one range at three sizes on the grid with empty cells and small captions",
+        "One colour for all type, captions included",
+        "statement-band: one sentence as large as the column, a rule above, a mark at the right",
+        "A wordmark with photographs stacked in its gap"
+      ],
+      "avoid": [
+        "A long black loader before content",
+        "A product page with too little on it (owner)"
+      ],
+      "sector": "fashion",
+      "motion": {
+        "recipes": [],
+        "notes": [
+          "lenis smooth scroll; a 4 s counter loader with photographs stacked in the wordmark",
+          "hover on a product changes transform and opacity; no scroll choreography: the layout carries it"
+        ]
+      },
+      "style": null,
+      "styleGroup": null
+    },
+    {
+      "id": "ref-0026",
+      "site": "capitolium",
+      "url": "https://www.collabcapitolium.fr/",
+      "batch": "batch-015",
+      "review": "data/references/batch-015-review.md",
+      "business": "A jersey made by two Toulouse clubs with Nike, told through the city's Capitole",
+      "actionThatPays": "Buy the jersey",
+      "scores": {
+        "ai": 7.4,
+        "ownerOverall": null,
+        "ownerVisual": null,
+        "ownerShip": null,
+        "final": 7.4
+      },
+      "veto": null,
+      "patternOnly": false,
+      "patterns": [
+        "window-open: arched windows onto one scene, one widening to fill the screen",
+        "horizontal-track: a pinned chapter that moves sideways",
+        "type-over-picture: a script word sliding across the picture",
+        "pedestal: the product on a plinth with the title behind it",
+        "An identity taken from one place (its arches, marble and inscription)"
+      ],
+      "avoid": [
+        "Loader, consent panel and entrance button before any content",
+        "Heavy video and WebGL with no light version seen"
+      ],
+      "sector": "fashion",
+      "motion": {
+        "recipes": [
+          "frame-grow",
+          "type-as-image",
+          "build-on-scroll"
+        ],
+        "notes": [
+          "12 sticky panels: chapters pinned at 900px while their content moves through",
+          "text and title letters move slower than the page (×0.1-0.65); a script title slides across the picture",
+          "arched windows, the middle one widening to full screen; one chapter travels sideways (←513px a step)",
+          "transitions 0.3-0.6 s, cubic-bezier(.76,0,.24,1)"
+        ]
+      },
+      "style": null,
+      "styleGroup": null
+    },
+    {
+      "id": "ref-0027",
+      "site": "l'oiseau dé",
+      "url": "https://loiseau.framer.website/",
+      "batch": "batch-015",
+      "review": "data/references/batch-015-review.md",
+      "business": "A Framer template for a beauty and cosmetics shop",
+      "actionThatPays": "Browse and buy (as a shop); get the template (as the page)",
+      "scores": {
+        "ai": 6.8,
+        "ownerOverall": null,
+        "ownerVisual": null,
+        "ownerShip": null,
+        "final": 6.8
+      },
+      "veto": null,
+      "patternOnly": false,
+      "patterns": [
+        "checker-fields: picture tiles alternating with colour tiles that hold a small label",
+        "stepped-drift: small pictures stepping down across a field beside a short statement",
+        "type-over-picture: the name on the lower edge of the hero",
+        "index-in-type: the brand list set as large type"
+      ],
+      "avoid": [
+        "A fixed button over every screen",
+        "Placeholder business content"
+      ],
+      "sector": "beauty",
+      "motion": {
+        "recipes": [
+          "chapter-ground"
+        ],
+        "notes": [
+          "Framer Motion; sections pinned at 830px; a marquee band; transitions 0.4 s"
+        ]
+      },
+      "style": null,
+      "styleGroup": null
+    },
+    {
+      "id": "ref-0028",
+      "site": "indigo",
+      "url": "https://indigo-laboratory.it/",
+      "batch": "batch-015",
+      "review": "data/references/batch-015-review.md",
+      "business": "A contemporary jewellery house; five collections told as chapters",
+      "actionThatPays": "Request info on a piece",
+      "scores": {
+        "ai": 7.2,
+        "ownerOverall": null,
+        "ownerVisual": null,
+        "ownerShip": null,
+        "final": 7.2
+      },
+      "veto": null,
+      "patternOnly": false,
+      "patterns": [
+        "chapter-cover: every chapter opens on a full-screen cover with a title in the brand's lettering",
+        "offset-pair: two pictures of different sizes, staggered, text in the gap",
+        "object-thread: the jewel floating across the chapter",
+        "Lettering as the brand: cut-paper letters for the name and every title",
+        "The same order in every chapter, so the visitor learns the page"
+      ],
+      "avoid": [
+        "A sound gate and splash before content",
+        "No price or way to buy on the page"
+      ],
+      "sector": "fashion",
+      "motion": {
+        "recipes": [
+          "protagonist-travel",
+          "chapter-ground"
+        ],
+        "notes": [
+          "lenis; each tale opens on a pinned full-screen cover, content scrolls over it",
+          "pictures enter sideways (←496 to ←728px a step); text slightly faster than the page (×1.16-1.34); a ring floats across",
+          "a progress bar per chapter; an endless spinner and scroll indicator"
         ]
       },
       "style": null,

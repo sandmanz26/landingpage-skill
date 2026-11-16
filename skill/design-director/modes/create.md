@@ -183,8 +183,10 @@ Inspect it (`inspect.mjs .design/skeleton.html --out .design/skeleton`) and look
 mobile screenshots for:
 
 - one grid, equal outer margins; asymmetry lives inside the grid;
-- a one-word composition per section (split, list, full-bleed, statement, grid, index…): never the
-  same word twice in a row, nor three times on the page;
+- a named composition per section from `rules/composition.md` (scale-scatter, offset-pair,
+  type-over-picture, checker-fields, window-open, chapter-cover, statement-band… or split, list,
+  grid): never the same twice in a row, nor three times on the page; by the layout dial, 40% of
+  sections (60% when `wild`) use a move that leaves rows and columns;
 - a clear rhythm: the gap between sections larger than any gap inside one; at least one dense and
   one airy section;
 - the phone as its own composition: order, crops and headline breaks planned;
@@ -274,8 +276,9 @@ it shows, where it comes from, and the shot list for the client.
 
 Follow `copy/method.md`: write `.design/voice.md` first (the reader, framed from the customer
 voice; the voice as "X, not Y"; the glossary), then `.design/copy.md`, then run
-`copycheck.mjs .design/copy.md --voice .design/voice.md` and the two reader tests. `done copy`
-refuses without the three voice sections, with a copycheck FAIL, or without "## Reader tests".
+`copycheck.mjs .design/copy.md --voice .design/voice.md` and the three reader tests (skim,
+explain-back, visitor walk). `done copy` refuses without the three voice sections, with a
+copycheck FAIL, or without "## Reader tests" holding a "Visitor walk" of five rows.
 The whole page is text before markup:
 
 - every headline fits two lines at every width (about 32 characters is safe at a confident size);

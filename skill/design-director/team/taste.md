@@ -17,6 +17,10 @@ Format: `- <rule> — <why> (source: <project>, <date>, <who>)`
 
 - Every delivered page clears the floor of `rules/floor.md`: enough sections and content to feel like a real website, the facts a visitor needs (hours, facilities, place, prices, contact), at least two interactions, shapes and depth instead of flat rectangles, a layout that changes, the brand in every section, pictures down the page — five pages that lacked these were all rejected (source: blind test of 5 homepages, owner's five reasons, 2026-11-16; measured by `floor.mjs`)
 
+- Layouts leave rows and columns on purpose: sizes that contrast, staggered and overlapping pictures, type across a picture, chapters that move; the default is "composed", brand-led pages go "wild" (`rules/composition.md`) — the skill's pages were "terlalu generic, terpaku pada aturan row column" (source: owner 2026-11-16; batch-015 Outfit, L'Oiseau Dé, Indigo, Capitolium)
+- Fashion, beauty, women's and other identity-led businesses get a much stronger brand essence, after asking the user whether they want strong branding or basic first (`rules/visual-dials.md` → Brand) (source: owner 2026-11-16)
+- Content is thought through from the visitor's side: the visitor walk in the copy step lists what they come to do and where the page answers it (`copy/method.md` §6) — the test pages' content "nampak tidak dipikirkan dengan baik dari segi pengguna" (source: owner 2026-11-16)
+
 ## Never
 <!-- e.g. - Centred hero with two buttons — reads as a template to our clients (source: review session, 2026-11-05, team) -->
 - An element that cannot name its job: UI placed because pages like this usually have it (three icon cards, a stat row, a badge, a blob, an eyebrow label, a marquee), or chosen for looks alone without carrying the page's idea — the customer cannot use what the designer cannot explain; every element passes the reason roast (`rubric/reason.md`) (source: owner 2026-11-04, "banyak AI cuman sekedar menaruh UI tapi tidak paham apa yang dia taruh")

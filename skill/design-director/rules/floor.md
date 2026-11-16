@@ -13,7 +13,8 @@ had passed the checks that existed then. Their reasons, in their words (2026-11-
    operational dll tidak tersampaikan"
 
 So a page can be honest, accessible and tidy and still be a wireframe. The floor is the list of
-things that were missing, each measured by `floor.mjs` on the built page. It is a floor, not the
+things that were missing, each measured by `floor.mjs` on the built page (eight measures; the
+layout and brand dials of `.design/targets.json` set two of the floors). It is a floor, not the
 goal: a page that only just clears it is still average. It applies at every effort, quick included.
 
 ```bash
@@ -28,7 +29,8 @@ node <skill>/scripts/floor.mjs <page> --sections               # also prints eac
 | Interaction (`interaction`) | 2+ kinds, at least one operated by the visitor | open-close (`aria-expanded`, `<details>`), choose (tabs, radios), slide (range), fill-in (a form), browse (carousel), reveal (`data-interaction`, `data-reveal`, `data-compare`), map, play; scroll motion (`data-progress`, `data-enter`, a sticky stage) is one kind and never enough alone | 3 |
 | Shape and depth (`shape`) | 60% of sections with a cue | A round, arched or cut shape (not a button), a turned element, overlapping layers, something that leaves its section, a drawing. A shadow on a rectangle does not count | 1 |
 | Layout (`layout`) | 4+ different section layouts, the same one at most twice in a row | Layout = columns the content starts in · heading alignment · with or without a picture | 4 |
-| Brand (`brand`) | 70% of sections carry a brand element | The element carries `data-brand="<name from the brand kit>"` | 4 |
+| Composition (`composition`) | 40% of sections composed (60% when the layout dial is `wild`, none when `grid`) | Pictures at clearly different scales (3× in area), staggered pictures, overlap, something that leaves its frame, a turned element, large type over a picture, a pinned or sideways chapter (`rules/composition.md`) | "terpaku pada aturan row column… harus lebih wild" (2026-11-16) |
+| Brand (`brand`) | 70% of sections carry a brand element (40% when the brand dial is `basic`) | The element carries `data-brand="<name from the brand kit>"` | 4 |
 | Pictures (`pictures`) | One picture for every two sections | Photographs, drawings (SVG with shapes), designed placeholders, video. Skipped when the `imagery` dial is `type` | 2, and "perbedaan besar ketika ada image or not" |
 
 Calibration (2026-11-16, `floor.mjs` without a brief, so facts and brand could not pass): the five
@@ -80,6 +82,9 @@ holds: a sample is marked, never presented as real (SKILL.md).
 - **Layout:** one composition word per section, never the same twice in a row (`modes/create.md`
   step 6, `rubric/critic.md` → Sameness): split, picture full-bleed, statement, list beside a
   sticky picture, grid, table, timeline.
+- **Composition:** the moves and named compositions of `rules/composition.md`; equal cards in a
+  row do not count. Measured 2026-11-16: sites the owner admires have 57-80% of sections composed
+  (Outfit 4 of 5, Mana 4 of 6, Swehl 4 of 7), the rejected pages 0-17%.
 - **Brand:** the kit's hero and supporting elements reach the price, the questions and the footer
   (`brand/method.md` §4 Rules of use); mark each use `data-brand`.
 - **Pictures:** by the path chosen at the brief (`rules/illustration.md`): photographs that pass

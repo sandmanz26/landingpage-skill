@@ -60,6 +60,11 @@
      "ref": "ref-0021",
      "site": "Mana Yerba Maté",
      "measured": "a can travels from the hero through the benefit cards; gsap + ScrollTrigger, up to 25 script-driven elements per step; their version shifts layout (CLS 1.97), ours must not"
+    },
+    {
+     "ref": "ref-0028",
+     "site": "Indigo",
+     "measured": "a ring floats across the chapters, in front of photographs at different scales (lenis smooth scroll)"
     }
    ]
   },
@@ -81,6 +86,11 @@
      "ref": "ref-0013",
      "site": "Quite Nice",
      "measured": "the hero photograph grows from its arch frame to full width on scroll"
+    },
+    {
+     "ref": "ref-0026",
+     "site": "Capitolium",
+     "measured": "a row of arched windows; the middle one widens until the scene fills the screen (pinned, 12 sticky panels)"
     }
    ]
   },
@@ -106,6 +116,11 @@
      "ref": "ref-0019",
      "site": "Figure Film",
      "measured": "display type as the first-screen picture"
+    },
+    {
+     "ref": "ref-0026",
+     "site": "Capitolium",
+     "measured": "the script title 'Les arcades' slides in across the pinned picture, letter by letter"
     }
    ]
   },
@@ -156,6 +171,16 @@
      "ref": "ref-0007",
      "site": "Swehl",
      "measured": "one colour field per chapter"
+    },
+    {
+     "ref": "ref-0028",
+     "site": "Indigo",
+     "measured": "black intro, white chapters, a violet splash; each tale opens on its own full-screen cover"
+    },
+    {
+     "ref": "ref-0027",
+     "site": "L'Oiseau Dé",
+     "measured": "white, lime, deep green and black grounds mark the parts of the page"
     }
    ]
   },
@@ -242,6 +267,11 @@
      "ref": "ref-0014",
      "site": "Quilt",
      "measured": "isometric rooms explain room-by-room control"
+    },
+    {
+     "ref": "ref-0026",
+     "site": "Capitolium",
+     "measured": "chapters pinned at 900px while their content moves through; one chapter moves sideways (track ←513px per 900px scrolled)"
     }
    ]
   },

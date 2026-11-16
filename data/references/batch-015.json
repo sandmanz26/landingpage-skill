@@ -1,0 +1,244 @@
+{
+ "batch": "batch-015",
+ "received": "2026-11-16",
+ "from": "owner (chat, 4 URLs with notes; topic: fashion, women, beauty)",
+ "status": "read fast with read.mjs (22-46 s each; two sites needed their consent panel and entrance pressed), judged by the coordinator as the single juror; no inspector run, no style cards, no owner scores (notes only).",
+ "jury": {
+  "folder": "data/references/jury/batch-015",
+  "jurors": [
+   "coordinator-fable"
+  ],
+  "human_votes": 0,
+  "note": "fast read, one juror, no subagents; the owner's notes are in owner.json"
+ },
+ "entries": [
+  {
+   "id": "ref-0025",
+   "url": "https://outfit.hellohello.is/",
+   "site": "outfit (hellohello)",
+   "sector": "fashion",
+   "read": "fast",
+   "business": {
+    "what": "A design studio's apparel and accessories shop",
+    "action_that_pays": "Add to bag",
+    "confidence": "high"
+   },
+   "owner": {
+    "visual": null,
+    "ship": null,
+    "note": "notes only, no numeric scores"
+   },
+   "jury_scores": {
+    "business": 7,
+    "customer": 6,
+    "story": 6,
+    "clarity": 7,
+    "distinctiveness": 9,
+    "craft": 8,
+    "weighted": 7.1
+   },
+   "combined": {
+    "final": 7.1,
+    "gap": null
+   },
+   "veto": null,
+   "claims": [
+    {
+     "claim": "very un-template; typography play makes it different",
+     "verdict": "confirmed",
+     "evidence": "one tight grotesk in one red at two extremes (12px captions, a statement about 100px tall), the loader's OUTFIT lettering with photographs stacked in its gap"
+    },
+    {
+     "claim": "product arrangement differs from the usual",
+     "verdict": "confirmed",
+     "evidence": "floor.mjs: 4 of 5 sections composed (scale contrast, staggered, overlap, leaving the frame); 19 pictures"
+    },
+    {
+     "claim": "product detail too simple",
+     "verdict": "unverifiable",
+     "evidence": "the product page was not read"
+    }
+   ],
+   "library_candidates": [
+    "scale-scatter: one range at three sizes on the grid with empty cells and small captions",
+    "One colour for all type, captions included",
+    "statement-band: one sentence as large as the column, a rule above, a mark at the right",
+    "A wordmark with photographs stacked in its gap"
+   ],
+   "avoid": [
+    "A long black loader before content",
+    "A product page with too little on it (owner)"
+   ],
+   "motion_notes": [
+    "lenis smooth scroll; a 4 s counter loader with photographs stacked in the wordmark",
+    "hover on a product changes transform and opacity; no scroll choreography: the layout carries it"
+   ]
+  },
+  {
+   "id": "ref-0026",
+   "url": "https://www.collabcapitolium.fr/",
+   "site": "capitolium",
+   "sector": "fashion",
+   "read": "fast",
+   "business": {
+    "what": "A jersey made by two Toulouse clubs with Nike, told through the city's Capitole",
+    "action_that_pays": "Buy the jersey",
+    "confidence": "medium"
+   },
+   "owner": {
+    "visual": null,
+    "ship": null,
+    "note": "notes only, no numeric scores"
+   },
+   "jury_scores": {
+    "business": 7,
+    "customer": 6,
+    "story": 9,
+    "clarity": 6,
+    "distinctiveness": 9,
+    "craft": 8,
+    "weighted": 7.4
+   },
+   "combined": {
+    "final": 7.4,
+    "gap": null
+   },
+   "veto": null,
+   "claims": [
+    {
+     "claim": "scrolling experience very good and comfortable; it carries you into each story of the brand and product",
+     "verdict": "confirmed",
+     "evidence": "read.mjs: 12 sticky panels of 900px; the hero text at ×0.12-0.65 of scroll speed; chapter title letters at ×0.09-0.25; one chapter moves sideways (track ←513px per step)"
+    }
+   ],
+   "library_candidates": [
+    "window-open: arched windows onto one scene, one widening to fill the screen",
+    "horizontal-track: a pinned chapter that moves sideways",
+    "type-over-picture: a script word sliding across the picture",
+    "pedestal: the product on a plinth with the title behind it",
+    "An identity taken from one place (its arches, marble and inscription)"
+   ],
+   "avoid": [
+    "Loader, consent panel and entrance button before any content",
+    "Heavy video and WebGL with no light version seen"
+   ],
+   "motion_notes": [
+    "12 sticky panels: chapters pinned at 900px while their content moves through",
+    "text and title letters move slower than the page (×0.1-0.65); a script title slides across the picture",
+    "arched windows, the middle one widening to full screen; one chapter travels sideways (←513px a step)",
+    "transitions 0.3-0.6 s, cubic-bezier(.76,0,.24,1)"
+   ]
+  },
+  {
+   "id": "ref-0027",
+   "url": "https://loiseau.framer.website/",
+   "site": "l'oiseau dé",
+   "sector": "beauty",
+   "read": "fast",
+   "business": {
+    "what": "A Framer template for a beauty and cosmetics shop",
+    "action_that_pays": "Browse and buy (as a shop); get the template (as the page)",
+    "confidence": "medium"
+   },
+   "owner": {
+    "visual": null,
+    "ship": null,
+    "note": "notes only, no numeric scores"
+   },
+   "jury_scores": {
+    "business": 6,
+    "customer": 6,
+    "story": 6,
+    "clarity": 8,
+    "distinctiveness": 7,
+    "craft": 8,
+    "weighted": 6.8
+   },
+   "combined": {
+    "final": 6.8,
+    "gap": null
+   },
+   "veto": null,
+   "claims": [
+    {
+     "claim": "aesthetic and minimalist, but it wins through good pictures",
+     "verdict": "confirmed",
+     "evidence": "every screen is led by a portrait or product photograph; without them the page is colour tiles and labels"
+    },
+    {
+     "claim": "the layout feels different because it is not monotonous",
+     "verdict": "confirmed",
+     "evidence": "hero with type over the picture, a marquee, a checkerboard of picture and colour tiles, stepped pictures on a field, a product row, a list in large type: six arrangements"
+    }
+   ],
+   "library_candidates": [
+    "checker-fields: picture tiles alternating with colour tiles that hold a small label",
+    "stepped-drift: small pictures stepping down across a field beside a short statement",
+    "type-over-picture: the name on the lower edge of the hero",
+    "index-in-type: the brand list set as large type"
+   ],
+   "avoid": [
+    "A fixed button over every screen",
+    "Placeholder business content"
+   ],
+   "motion_notes": [
+    "Framer Motion; sections pinned at 830px; a marquee band; transitions 0.4 s"
+   ]
+  },
+  {
+   "id": "ref-0028",
+   "url": "https://indigo-laboratory.it/",
+   "site": "indigo",
+   "sector": "fashion",
+   "read": "fast",
+   "business": {
+    "what": "A contemporary jewellery house; five collections told as chapters",
+    "action_that_pays": "Request info on a piece",
+    "confidence": "medium"
+   },
+   "owner": {
+    "visual": null,
+    "ship": null,
+    "note": "notes only, no numeric scores"
+   },
+   "jury_scores": {
+    "business": 6,
+    "customer": 6,
+    "story": 9,
+    "clarity": 6,
+    "distinctiveness": 9,
+    "craft": 8,
+    "weighted": 7.2
+   },
+   "combined": {
+    "final": 7.2,
+    "gap": null
+   },
+   "veto": null,
+   "claims": [
+    {
+     "claim": "after entering, a scrolling experience per category with smooth transitions and good photographs; you feel the brand while scrolling",
+     "verdict": "confirmed",
+     "evidence": "read.mjs: 10 sticky elements, covers pinned at 900px, pictures moving sideways (←496 to ←728px a step), a progress bar per chapter; lenis"
+    }
+   ],
+   "library_candidates": [
+    "chapter-cover: every chapter opens on a full-screen cover with a title in the brand's lettering",
+    "offset-pair: two pictures of different sizes, staggered, text in the gap",
+    "object-thread: the jewel floating across the chapter",
+    "Lettering as the brand: cut-paper letters for the name and every title",
+    "The same order in every chapter, so the visitor learns the page"
+   ],
+   "avoid": [
+    "A sound gate and splash before content",
+    "No price or way to buy on the page"
+   ],
+   "motion_notes": [
+    "lenis; each tale opens on a pinned full-screen cover, content scrolls over it",
+    "pictures enter sideways (←496 to ←728px a step); text slightly faster than the page (×1.16-1.34); a ring floats across",
+    "a progress bar per chapter; an endless spinner and scroll indicator"
+   ]
+  }
+ ],
+ "owner_taste_signal": "The owner names what the skill's pages lack: layouts that leave rows and columns ('harus lebih wild'), a scrolling experience that carries the visitor into the brand's story, good photographs, and content thought through from the visitor's side. Brand-led sectors (fashion, women, beauty) need a much stronger brand essence, confirmed with the user (strong or basic). Built from this batch: rules/composition.md (12 named compositions), the layout and brand dials, the composition measure in floor.mjs, the visitor walk in the copy step. Recipe candidates not built yet: horizontal-track (Capitolium), cut-letter chapter titles (Indigo)."
+}

@@ -11,7 +11,11 @@
     "imagery": "Prefer (2026-11-02, supersedes the 2026-10-30 default): photographs as the key visual, flat drawings from the subject layered over or beside them, drawings alone only when no honest photograph exists (owner; batch-004 Tennis, batch-002 Future)",
     "motion": "Prefer: smooth choreographed scroll storytelling with a reduced-motion version (Scotch, Maxima; owner 2026-10-30)",
     "priceNearAction": "Always: price near the main action (Future; owner + jury 2026-10-30)",
-    "fonts": "Always: two type families, one text face 80-95% + one display face (9 of 9 library sites; owner 2026-11-02)"
+    "fonts": "Always: two type families, one text face 80-95% + one display face (9 of 9 library sites; owner 2026-11-02)",
+    "layout": "Owner 2026-11-16: generated UI is too generic and stuck in rows and columns, it should be more 'wild' (blind test; batch-015 Outfit, L'Oiseau Dé, Indigo, Capitolium). Default composed; recommend wild for brand-led sectors",
+    "brand": "Owner 2026-11-16: fashion, women's and beauty need a much stronger brand essence; confirm with the user whether they want strong branding or basic first. Default strong; the user may choose basic"
   },
-  "fonts": 2
+  "fonts": 2,
+  "layout": "composed",
+  "brand": "strong"
 }

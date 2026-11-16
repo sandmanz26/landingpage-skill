@@ -163,6 +163,7 @@ const finish = async (reason) => {
     `- CSS keyframes: ${(m.keyframes || []).length}${(m.keyframes || []).length ? ` (${m.keyframes.slice(0, 12).join(', ')})` : ''} · CSS scroll-driven rules: ${m.cssScrollDriven || 0}${m.unreadableSheets ? ` · ${m.unreadableSheets} stylesheet(s) could not be read (other origin)` : ''}`,
     `- Transitions most used: ${(m.transitions || []).slice(0, 6).map((t) => `${t.rule} ×${t.uses}`).join(' | ') || 'none declared in readable CSS'}`,
     `- Sticky elements: ${(m.sticky || []).length}${(m.sticky || []).length ? ` (${m.sticky.slice(0, 4).map((s) => `${s.el} ${s.height}px`).join(', ')})` : ''} · page height ${m.pageHeight || '?'}px`,
+    ...(read.entered && read.entered.length ? ['', `Entrance: the page did not scroll until this was pressed: ${read.entered.map((x) => `"${x}"`).join(', ')}`] : []),
     '', '## While loading (first screen)',
     ...read.load.map((l) => `- ${l.atMs}ms: ${l.visibleText} text element(s) visible, ${l.running} animation(s) running`),
     '', '## While scrolling (desktop, what each step did)',
@@ -221,8 +222,55 @@ try {
     await page.mouse.move(2, 2).catch(() => {});
   }
 
+  // A page that does not scroll yet is usually behind a consent panel or an "enter" screen: answer
+  // the panel, press the entrance, and say so (an intro gate is a fact about the site).
+  const stuck = async () => {
+    const y0 = await page.evaluate(() => scrollY).catch(() => 0);
+    await page.mouse.move(720, 450).catch(() => {});
+    await page.mouse.wheel(0, 400).catch(() => {});
+    await page.waitForTimeout(600);
+    const y1 = await page.evaluate(() => scrollY).catch(() => 0);
+    await page.mouse.wheel(0, -400).catch(() => {});
+    await page.waitForTimeout(300);
+    return Math.abs(y1 - y0) < 20;
+  };
+  const press = async (re) => {
+    const h = await page.evaluateHandle((src) => {
+      const re = new RegExp(src, 'i');
+      for (const b of document.querySelectorAll('button, a, [role="button"], [class*="enter"], [class*="cta"]')) {
+        const r = b.getBoundingClientRect();
+        if (r.width < 8 || r.height < 8 || r.bottom < 0 || r.top > innerHeight || getComputedStyle(b).visibility === 'hidden') continue;
+        const label = ((b.getAttribute('aria-label') || '') + ' ' + (b.innerText || '')).replace(/\s+/g, ' ').trim();
+        if (label.length < 60 && re.test(label)) return b;
+      }
+      return null;
+    }, re.source).catch(() => null);
+    const el = h && h.asElement();
+    if (!el) return '';
+    const label = await el.evaluate((e) => ((e.getAttribute('aria-label') || '') + ' ' + (e.innerText || '')).replace(/\s+/g, ' ').trim()).catch(() => '');
+    await el.click({ timeout: 2000, force: true }).catch(() => {});
+    await page.waitForTimeout(1500);
+    return label;
+  };
+  read.entered = [];
+  if (left() > 45000 && (await stuck())) {
+    for (const re of [/^(tout accepter|j'accepte|accepter|accept all|accept|agree|ok pour moi|accetta tutti|accetta|accetto|setuju|terima semua)\b/, /^(continue without sound|continuer sans (le )?son|continua senza audio|skip intro|skip)\b/, /^(enter the experience|enter|entrer|entra|start|begin|commencer|découvrir|explore|masuk|mulai)\b/]) {
+      if (left() < 35000) break;
+      const label = await press(re);
+      if (label) read.entered.push(label);
+      if (label && !(await stuck())) break;
+    }
+    if (read.entered.length) {
+      await page.waitForTimeout(2500);
+      await shot(page, 'entered', `after "${read.entered[read.entered.length - 1].slice(0, 24)}"`);
+      const again = await page.evaluate(declared).catch(() => null);
+      if (again && !again.error) read.motion = again;
+    }
+    if (await stuck()) read.notDone.push('the page does not scroll: it may move on wheel or key events only, or sit behind an entrance this reader could not pass');
+  }
+
   // Scroll: wheel steps (so smooth-scroll libraries respond), a frame and a diff per step.
-  const height = (read.motion && read.motion.pageHeight) || 900;
+  const height = (await page.evaluate(() => document.documentElement.scrollHeight).catch(() => 0)) || (read.motion && read.motion.pageHeight) || 900;
   const stepPx = Math.max(300, Math.min(900, Math.round((Math.min(height, 900 * 14) - 900) / FRAMES)));
   await page.mouse.move(720, 450).catch(() => {});
   for (let i = 0; i < FRAMES; i++) {

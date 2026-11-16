@@ -1,0 +1,176 @@
+{
+ "juror": "coordinator-fable",
+ "kind": "ai",
+ "method": "Fast read only (read.mjs, 22-46 s a site), one juror in the main session (Fable 5.2): read.md and read-sheet.png of each. No inspector run, so craft is judged by eye and contrast, layout shift and tap targets are not measured. ref-0026 and ref-0028 open only after a consent panel and an entrance button; the reader pressed them. Only the first 6,000-11,000px of ref-0026 (20,000px) and ref-0028 (43,000px) were seen. Phones: ref-0026 and ref-0028 showed only their loader in the phone frame.",
+ "refs": {
+  "ref-0025": {
+   "business": "OUTFIT by hellohello: a design studio's own apparel and accessories shop. Action: add to bag.",
+   "scores": {
+    "business": 7,
+    "customer": 6,
+    "story": 6,
+    "clarity": 7,
+    "distinctiveness": 9,
+    "craft": 8
+   },
+   "reasons": {
+    "business": "Shop and Bag stay in the corner, every product carries its name and price in small red type. The product page is plain (owner's note); no sizes, materials or delivery on the listing.",
+    "customer": "A shopper sees the whole range with prices at once. What the brand is, who makes it and why it costs this is one line at the very bottom.",
+    "story": "Range, then one statement ('Made to be worn. Or judged. Or both.'), then the maker. Short, in one voice.",
+    "clarity": "Black loader with a counter for about 4 seconds before anything shows. After that: paper ground, products, prices.",
+    "distinctiveness": "Products are laid out at three scales with empty cells between them: a row of four, then a thumbnail pair beside one bag half the screen wide. One red for every word, tight grotesk, a statement as wide as the column, '©26' as a mark. It does not look like a shop template.",
+    "craft": "By eye: one grid broken on purpose, captions aligned to pictures, one red, one typeface. Not measured."
+   },
+   "claims": [
+    {
+     "claim": "very un-template; typography play makes it different",
+     "verdict": "confirmed",
+     "evidence": "one tight grotesk in one red at two extremes (12px captions, a statement about 100px tall), the loader's OUTFIT lettering with photographs stacked in its gap"
+    },
+    {
+     "claim": "product arrangement differs from the usual",
+     "verdict": "confirmed",
+     "evidence": "floor.mjs: 4 of 5 sections composed (scale contrast, staggered, overlap, leaving the frame); 19 pictures"
+    },
+    {
+     "claim": "product detail too simple",
+     "verdict": "unverifiable",
+     "evidence": "the product page was not read"
+    }
+   ],
+   "motion": "lenis smooth scroll; a 4 s counter loader with stacked photographs in the wordmark; hover on a product changes transform and opacity; no scroll choreography.",
+   "problems": [
+    "A 4-second black loader",
+    "Almost nothing about the brand or the product beyond name and price",
+    "Product detail too plain (owner)"
+   ],
+   "keep": [
+    "scale-scatter: one range at three sizes on the grid with empty cells and small captions",
+    "One colour for all type, captions included",
+    "statement-band: one sentence as large as the column, a rule above, a mark at the right",
+    "A wordmark with photographs stacked in its gap"
+   ]
+  },
+  "ref-0026": {
+   "business": "Capitolium: a jersey made together by Toulouse FC and Stade Toulousain (with Nike), named after the city's Capitole. Action: buy the jersey (the club shops).",
+   "scores": {
+    "business": 7,
+    "customer": 6,
+    "story": 9,
+    "clarity": 6,
+    "distinctiveness": 9,
+    "craft": 8
+   },
+   "reasons": {
+    "business": "'Plus qu'un maillot, le symbole de notre cité' and both jerseys on pedestals arrive within three screens. Where to buy was not seen in the part read.",
+    "customer": "A supporter gets the meaning of the shirt: the building, the arcades, the story behind each detail. Price, sizes and availability were not seen.",
+    "story": "An entrance, the Capitole from the air, the square, the claim, the jerseys, then numbered chapters ('Les arcades') that walk through the building. The visitor is led, one thing at a time.",
+    "clarity": "A grey loader, a cookie panel and an 'Entrer' button stand before the content. Inside, each screen says one thing.",
+    "distinctiveness": "Marble, slate and gold; engraved capitals with a script word that slides across the picture; arched windows cut from the building's own arcades that open into the scene. The place is the design system.",
+    "craft": "By eye: pinned chapters that hand over cleanly, type and pictures on one axis. 12 sticky panels, 8 videos, 3 WebGL canvases: heavy; not measured."
+   },
+   "claims": [
+    {
+     "claim": "scrolling experience very good and comfortable; it carries you into each story of the brand and product",
+     "verdict": "confirmed",
+     "evidence": "read.mjs: 12 sticky panels of 900px; the hero text at ×0.12-0.65 of scroll speed; chapter title letters at ×0.09-0.25; one chapter moves sideways (track ←513px per step)"
+    }
+   ],
+   "motion": "Pinned full-screen chapters; text and title letters moving slower than the page (×0.1-0.65); arched windows where the middle one widens to full screen; a chapter that travels sideways; transitions 0.3-0.6 s, cubic-bezier(.76,0,.24,1).",
+   "problems": [
+    "Three gates before content: loader, cookie panel, 'Entrer'",
+    "Where to buy and the price were not found in the part read",
+    "Heavy: 8 videos and 3 WebGL canvases; the phone frame showed only the loader"
+   ],
+   "keep": [
+    "window-open: arched windows onto one scene, one widening to fill the screen",
+    "horizontal-track: a pinned chapter that moves sideways",
+    "type-over-picture: a script word sliding across the picture",
+    "pedestal: the product on a plinth with the title behind it",
+    "An identity taken from one place (its arches, marble and inscription)"
+   ]
+  },
+  "ref-0027": {
+   "business": "L'Oiseau Dé: a Framer template for a beauty and cosmetics shop (the page offers the template, 'Get for free'). As a shop: browse categories, buy products.",
+   "scores": {
+    "business": 6,
+    "customer": 6,
+    "story": 6,
+    "clarity": 8,
+    "distinctiveness": 7,
+    "craft": 8
+   },
+   "reasons": {
+    "business": "Categories, featured products with prices and a brand list are all there. It is a template: the business is placeholder content, and the fixed button sells the template.",
+    "customer": "A shopper sees what is sold (skincare, cosmetics, face health) and three products with prices; nothing on ingredients, skin types or delivery.",
+    "story": "Hero, a line on what the shop is, categories, two brand values, products, brands, footer: orderly, without a turn.",
+    "clarity": "One name, one picture, plain labels. Easy at every step.",
+    "distinctiveness": "Carried by the photographs (owner's note). The layout adds to it: picture tiles alternate with colour tiles holding a small label; small pictures step down across a green field; the name runs across the bottom of the hero. Greens, lime and cream. Recognisable, though the parts are familiar.",
+    "craft": "By eye: even cells, one type family, consistent crops. Not measured."
+   },
+   "claims": [
+    {
+     "claim": "aesthetic and minimalist, but it wins through good pictures",
+     "verdict": "confirmed",
+     "evidence": "every screen is led by a portrait or product photograph; without them the page is colour tiles and labels"
+    },
+    {
+     "claim": "the layout feels different because it is not monotonous",
+     "verdict": "confirmed",
+     "evidence": "hero with type over the picture, a marquee, a checkerboard of picture and colour tiles, stepped pictures on a field, a product row, a list in large type: six arrangements"
+    }
+   ],
+   "motion": "Framer Motion; 5 sticky elements (sections pinned at 830px); a marquee band; one CSS scroll-driven rule; transitions 0.4 s.",
+   "problems": [
+    "A template: the business content is placeholder",
+    "Depends wholly on photographs of this quality",
+    "A fixed 'Get for free' button over every screen"
+   ],
+   "keep": [
+    "checker-fields: picture tiles alternating with colour tiles that hold a small label",
+    "stepped-drift: small pictures stepping down across a field beside a short statement",
+    "type-over-picture: the name on the lower edge of the hero",
+    "index-in-type: the brand list set as large type"
+   ]
+  },
+  "ref-0028": {
+   "business": "Indigo: a contemporary jewellery house; '5 tales of being', five collections told as chapters. Action: request info on a piece.",
+   "scores": {
+    "business": 6,
+    "customer": 6,
+    "story": 9,
+    "clarity": 6,
+    "distinctiveness": 9,
+    "craft": 8
+   },
+   "reasons": {
+    "business": "Each tale ends in a product (Selene ring) with 'Request info'. No price, no shop; 43,000px of page.",
+    "customer": "A buyer learns the idea of each collection and sees the piece worn and alone. Material, size, price and how to buy are behind a request.",
+    "story": "An invitation ('Before the gesture, there is a sound'), then five tales, each with a cover, a title in cut letters, a text, pictures, the piece. The same order every time, so the visitor learns it.",
+    "clarity": "A violet splash and a choice about sound before the content; a cookie panel stayed over the lower right of every frame in this read.",
+    "distinctiveness": "Lettering cut like paper for INDIGO and each tale's title; black, white and one violet; photographs at very different sizes with a ring floating across them. You know whose it is while scrolling (owner's note).",
+    "craft": "By eye: photographs of one shoot, generous white, clean hand-overs between chapters. One WebGL canvas, smooth scrolling; not measured."
+   },
+   "claims": [
+    {
+     "claim": "after entering, a scrolling experience per category with smooth transitions and good photographs; you feel the brand while scrolling",
+     "verdict": "confirmed",
+     "evidence": "read.mjs: 10 sticky elements, covers pinned at 900px, pictures moving sideways (←496 to ←728px a step), a progress bar per chapter; lenis"
+    }
+   ],
+   "motion": "lenis; chapter covers pinned while content scrolls over; pictures entering sideways; text slightly faster than the page (×1.16-1.34); a chapter progress bar; an endless ring spinner and scroll indicator.",
+   "problems": [
+    "A sound gate and a splash before content",
+    "No price or way to buy, only 'Request info'",
+    "Very long (43,000px); the phone frame showed only the splash"
+   ],
+   "keep": [
+    "chapter-cover: every chapter opens on a full-screen cover with a title in the brand's lettering",
+    "offset-pair: two pictures of different sizes, staggered, text in the gap",
+    "object-thread: the jewel floating across the chapter",
+    "Lettering as the brand: cut-paper letters for the name and every title",
+    "The same order in every chapter, so the visitor learns the page"
+   ]
+  }
+ }
+}

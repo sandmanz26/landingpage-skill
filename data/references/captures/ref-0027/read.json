@@ -1,0 +1,331 @@
+{
+  "url": "https://loiseau.framer.website/",
+  "readAt": "2026-11-16T04:38:06.176Z",
+  "budgetSeconds": 90,
+  "notDone": [],
+  "load": [
+    {
+      "atMs": 400,
+      "running": 0,
+      "visibleText": 8
+    },
+    {
+      "atMs": 1200,
+      "running": 0,
+      "visibleText": 8
+    },
+    {
+      "atMs": 2500,
+      "running": 0,
+      "visibleText": 8
+    },
+    {
+      "atMs": 4500,
+      "running": 0,
+      "visibleText": 8
+    }
+  ],
+  "scroll": [
+    {
+      "at": 689,
+      "scrolledPx": 689,
+      "pinned": {
+        "count": 7,
+        "examples": [
+          "<div.framer-1yyf4a3-container>",
+          "<nav.framer-8x9oG>",
+          "<a.framer-iJV8B>",
+          "<a.framer-6jWyo>"
+        ]
+      }
+    },
+    {
+      "at": 1378,
+      "scrolledPx": 689,
+      "pinned": {
+        "count": 7,
+        "examples": [
+          "<div.framer-1yyf4a3-container>",
+          "<nav.framer-8x9oG>",
+          "<a.framer-iJV8B>",
+          "<a.framer-6jWyo>"
+        ]
+      }
+    },
+    {
+      "at": 2067,
+      "scrolledPx": 689,
+      "pinned": {
+        "count": 7,
+        "examples": [
+          "<div.framer-1yyf4a3-container>",
+          "<nav.framer-8x9oG>",
+          "<a.framer-iJV8B>",
+          "<a.framer-6jWyo>"
+        ]
+      },
+      "slower": {
+        "count": 16,
+        "examples": [
+          "<div.framer-rg2hxr> ×0.72",
+          "<div.framer-zxddos> ×0.72",
+          "<div.framer-lh4ymq> ×0.60",
+          "<div> ×0.60"
+        ]
+      },
+      "scaled": {
+        "count": 1,
+        "examples": [
+          "<div.framer-lh4ymq> ×0.83"
+        ]
+      }
+    },
+    {
+      "at": 2756,
+      "scrolledPx": 689,
+      "pinned": {
+        "count": 23,
+        "examples": [
+          "<div.framer-1yyf4a3-container>",
+          "<nav.framer-8x9oG>",
+          "<div.framer-rg2hxr>",
+          "<div.framer-zxddos>"
+        ]
+      },
+      "slower": {
+        "count": 3,
+        "examples": [
+          "<div.framer-vm5zxs> ×0.80",
+          "<div> ×0.80",
+          "<img> ×0.80"
+        ]
+      },
+      "scaled": {
+        "count": 1,
+        "examples": [
+          "<div.framer-vm5zxs> ×0.83"
+        ]
+      }
+    },
+    {
+      "at": 3445,
+      "scrolledPx": 689,
+      "pinned": {
+        "count": 39,
+        "examples": [
+          "<div.framer-1yyf4a3-container>",
+          "<nav.framer-8x9oG>",
+          "<div.framer-rg2hxr>",
+          "<div.framer-zxddos>"
+        ]
+      },
+      "scaled": {
+        "count": 1,
+        "examples": [
+          "<div.framer-1yag085> ×0.83"
+        ]
+      }
+    },
+    {
+      "at": 4134,
+      "scrolledPx": 689,
+      "pinned": {
+        "count": 7,
+        "examples": [
+          "<div.framer-1yyf4a3-container>",
+          "<nav.framer-8x9oG>",
+          "<a.framer-iJV8B>",
+          "<a.framer-6jWyo>"
+        ]
+      },
+      "scaled": {
+        "count": 3,
+        "examples": [
+          "<div.framer-lh4ymq> ×1.20",
+          "<div.framer-vm5zxs> ×1.20",
+          "<div.framer-1yag085> ×1.20"
+        ]
+      }
+    },
+    {
+      "at": 4823,
+      "scrolledPx": 689,
+      "pinned": {
+        "count": 7,
+        "examples": [
+          "<div.framer-1yyf4a3-container>",
+          "<nav.framer-8x9oG>",
+          "<a.framer-iJV8B>",
+          "<a.framer-6jWyo>"
+        ]
+      },
+      "slower": {
+        "count": 7,
+        "examples": [
+          "<div.framer-499fy0> ×0.51",
+          "<div.framer-1gvgivj> ×0.51",
+          "<h4.framer-text> \"We bring brands to life through\" ×0.51",
+          "<div.framer-17xagoq-container> ×0.51"
+        ]
+      }
+    },
+    {
+      "at": 5512,
+      "scrolledPx": 689,
+      "pinned": {
+        "count": 14,
+        "examples": [
+          "<div.framer-1yyf4a3-container>",
+          "<nav.framer-8x9oG>",
+          "<div.framer-499fy0>",
+          "<div.framer-1gvgivj>"
+        ]
+      },
+      "fadedIn": {
+        "count": 1,
+        "examples": [
+          "<ul>"
+        ]
+      }
+    },
+    {
+      "at": 6201,
+      "scrolledPx": 689,
+      "pinned": {
+        "count": 7,
+        "examples": [
+          "<div.framer-1yyf4a3-container>",
+          "<nav.framer-8x9oG>",
+          "<a.framer-iJV8B>",
+          "<a.framer-6jWyo>"
+        ]
+      }
+    },
+    {
+      "at": 6890,
+      "scrolledPx": 689,
+      "pinned": {
+        "count": 7,
+        "examples": [
+          "<div.framer-1yyf4a3-container>",
+          "<nav.framer-8x9oG>",
+          "<a.framer-iJV8B>",
+          "<a.framer-6jWyo>"
+        ]
+      },
+      "sideways": {
+        "count": 14,
+        "examples": [
+          "<ul> ←31px",
+          "<li.ticker-item> ←31px",
+          "<div.framer-1bc4ppj-container> ←31px",
+          "<div> ←31px"
+        ]
+      }
+    },
+    {
+      "at": 7579,
+      "scrolledPx": 689,
+      "pinned": {
+        "count": 7,
+        "examples": [
+          "<div.framer-1yyf4a3-container>",
+          "<nav.framer-8x9oG>",
+          "<a.framer-iJV8B>",
+          "<a.framer-6jWyo>"
+        ]
+      },
+      "slower": {
+        "count": 3,
+        "examples": [
+          "<div.framer-t0uyr9> ×0.40",
+          "<div.framer-13r21md> ×0.40",
+          "<h4.framer-text> \"Featured Products\" ×0.40"
+        ]
+      }
+    },
+    {
+      "at": 8265,
+      "scrolledPx": 686,
+      "pinned": {
+        "count": 7,
+        "examples": [
+          "<div.framer-1yyf4a3-container>",
+          "<nav.framer-8x9oG>",
+          "<a.framer-iJV8B>",
+          "<a.framer-6jWyo>"
+        ]
+      }
+    }
+  ],
+  "motion": {
+    "libraries": [
+      "framerMotion"
+    ],
+    "canvases": [
+      {
+        "share": 0,
+        "webgl": false
+      },
+      {
+        "share": 100,
+        "webgl": true
+      },
+      {
+        "share": 0,
+        "webgl": true
+      }
+    ],
+    "running": [],
+    "keyframes": [
+      "__framer-editorbar-spinner-spin"
+    ],
+    "cssScrollDriven": 1,
+    "unreadableSheets": 0,
+    "transitions": [
+      {
+        "rule": "color · 0.4s · cubic-bezier(0.44, 0, 0.56, 1)",
+        "uses": 1
+      },
+      {
+        "rule": "opacity · 0.4s · ease-out",
+        "uses": 1
+      },
+      {
+        "rule": "unset · unset · unset",
+        "uses": 1
+      }
+    ],
+    "sticky": [
+      {
+        "el": "<div.framer-rg2hxr>",
+        "height": 830
+      },
+      {
+        "el": "<div.framer-ybmdb2>",
+        "height": 830
+      },
+      {
+        "el": "<div.framer-2lun7>",
+        "height": 830
+      },
+      {
+        "el": "<div.framer-499fy0>",
+        "height": 234
+      },
+      {
+        "el": "<div.framer-t0uyr9>",
+        "height": 45
+      }
+    ],
+    "videos": 0,
+    "autoplayVideos": 0,
+    "pageHeight": 9165,
+    "title": "L'OISEAU DÉ"
+  },
+  "hover": [],
+  "phone": {
+    "note": "1257 characters of text on the first load"
+  },
+  "seconds": 34
+}

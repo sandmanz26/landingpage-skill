@@ -1,0 +1,480 @@
+{
+  "url": "https://www.collabcapitolium.fr/",
+  "readAt": "2026-11-16T04:39:15.710Z",
+  "budgetSeconds": 110,
+  "notDone": [],
+  "load": [
+    {
+      "atMs": 400,
+      "running": 0,
+      "visibleText": 0
+    },
+    {
+      "atMs": 1200,
+      "running": 0,
+      "visibleText": 10
+    },
+    {
+      "atMs": 2500,
+      "running": 0,
+      "visibleText": 10
+    },
+    {
+      "atMs": 4500,
+      "running": 17,
+      "visibleText": 12
+    }
+  ],
+  "scroll": [
+    {
+      "at": 887,
+      "scrolledPx": 838,
+      "pinned": {
+        "count": 83,
+        "examples": [
+          "<video.modal-video__video>",
+          "<video.modal-video__video>",
+          "<nav.nav__inner>",
+          "<div.bg-marble>"
+        ]
+      }
+    },
+    {
+      "at": 1785,
+      "scrolledPx": 887,
+      "pinned": {
+        "count": 56,
+        "examples": [
+          "<video.modal-video__video>",
+          "<video.modal-video__video>",
+          "<nav.nav__inner>",
+          "<div.bg-marble>"
+        ]
+      },
+      "slower": {
+        "count": 29,
+        "examples": [
+          "<div.hero__anims> ×0.63",
+          "<div.hero__text> ×0.63",
+          "<div.hero__text__sticky> ×0.12",
+          "<p.hero__text__content> ×0.12"
+        ]
+      },
+      "fadedOut": {
+        "count": 1,
+        "examples": [
+          "<p.hero__text__content>"
+        ]
+      },
+      "scaled": {
+        "count": 1,
+        "examples": [
+          "<div.hero__video> ×0.46"
+        ]
+      }
+    },
+    {
+      "at": 2688,
+      "scrolledPx": 888,
+      "pinned": {
+        "count": 56,
+        "examples": [
+          "<video.modal-video__video>",
+          "<video.modal-video__video>",
+          "<nav.nav__inner>",
+          "<div.bg-marble>"
+        ]
+      },
+      "slower": {
+        "count": 5,
+        "examples": [
+          "<div.hero__anims> ×0.65",
+          "<div.hero__text> ×0.65",
+          "<div.hero__text__sticky> ×0.65",
+          "<picture.bg-marble__media> ×0.84"
+        ]
+      }
+    },
+    {
+      "at": 3594,
+      "scrolledPx": 894,
+      "pinned": {
+        "count": 59,
+        "examples": [
+          "<video.modal-video__video>",
+          "<video.modal-video__video>",
+          "<nav.nav__inner>",
+          "<div.bg-marble>"
+        ]
+      },
+      "slower": {
+        "count": 15,
+        "examples": [
+          "<div.block-shirts__wrapper> ×0.47",
+          "<div.bg-marble> ×0.47",
+          "<picture.bg-marble__media> ×0.36",
+          "<img> ×0.36"
+        ]
+      }
+    },
+    {
+      "at": 4488,
+      "scrolledPx": 888,
+      "pinned": {
+        "count": 298,
+        "examples": [
+          "<video.modal-video__video>",
+          "<video.modal-video__video>",
+          "<nav.nav__inner>",
+          "<div.bg-marble>"
+        ]
+      },
+      "slower": {
+        "count": 4,
+        "examples": [
+          "<span.chapter-title__char> \"L\" ×0.12",
+          "<span.chapter-title__char> \"L\" ×0.12",
+          "<span.chapter-title__char> \"L\" ×0.12",
+          "<span.chapter-title__char> \"L\" ×0.12"
+        ]
+      },
+      "sideways": {
+        "count": 10,
+        "examples": [
+          "<div.chapter-title__track> ←155px",
+          "<span.chapter-title__copy> ←155px",
+          "<span.chapter-title__char> \"L\" ←155px",
+          "<span.chapter-title__copy> ←154px"
+        ]
+      }
+    },
+    {
+      "at": 5386,
+      "scrolledPx": 887,
+      "pinned": {
+        "count": 298,
+        "examples": [
+          "<video.modal-video__video>",
+          "<video.modal-video__video>",
+          "<nav.nav__inner>",
+          "<div.bg-marble>"
+        ]
+      },
+      "slower": {
+        "count": 28,
+        "examples": [
+          "<span.chapter-title__char> \"L\" ×0.21",
+          "<span.chapter-title__char> \"e\" ×0.23",
+          "<span.chapter-title__char> \"s\" ×0.25",
+          "<span.chapter-title__char> \"a\" ×0.24"
+        ]
+      },
+      "sideways": {
+        "count": 34,
+        "examples": [
+          "<div.chapter-title__track> ←196px",
+          "<span.chapter-title__copy> ←196px",
+          "<span.chapter-title__char> \"L\" ←196px",
+          "<span.chapter-title__char> \"e\" ←196px"
+        ]
+      }
+    },
+    {
+      "at": 6288,
+      "scrolledPx": 890,
+      "pinned": {
+        "count": 298,
+        "examples": [
+          "<video.modal-video__video>",
+          "<video.modal-video__video>",
+          "<nav.nav__inner>",
+          "<div.bg-marble>"
+        ]
+      },
+      "slower": {
+        "count": 44,
+        "examples": [
+          "<span.chapter-title__char> \"L\" ×0.09",
+          "<span.chapter-title__char> \"e\" ×0.11",
+          "<span.chapter-title__char> \"s\" ×0.12",
+          "<span.chapter-title__char> \"a\" ×0.16"
+        ]
+      },
+      "sideways": {
+        "count": 50,
+        "examples": [
+          "<div.chapter-title__track> ←38px",
+          "<span.chapter-title__copy> ←38px",
+          "<span.chapter-title__char> \"L\" ←38px",
+          "<span.chapter-title__char> \"e\" ←38px"
+        ]
+      }
+    },
+    {
+      "at": 7186,
+      "scrolledPx": 887,
+      "pinned": {
+        "count": 298,
+        "examples": [
+          "<video.modal-video__video>",
+          "<video.modal-video__video>",
+          "<nav.nav__inner>",
+          "<div.bg-marble>"
+        ]
+      }
+    },
+    {
+      "at": 8082,
+      "scrolledPx": 883,
+      "pinned": {
+        "count": 310,
+        "examples": [
+          "<video.modal-video__video>",
+          "<video.modal-video__video>",
+          "<nav.nav__inner>",
+          "<div.bg-marble>"
+        ]
+      },
+      "sideways": {
+        "count": 104,
+        "examples": [
+          "<div.chapter__track> ←141px",
+          "<div.chapter__parallax> ←42px",
+          "<div.bg-marble> →99px",
+          "<picture.bg-marble__media> →99px"
+        ]
+      }
+    },
+    {
+      "at": 8990,
+      "scrolledPx": 890,
+      "pinned": {
+        "count": 342,
+        "examples": [
+          "<video.modal-video__video>",
+          "<video.modal-video__video>",
+          "<nav.nav__inner>",
+          "<div.bg-marble>"
+        ]
+      },
+      "sideways": {
+        "count": 104,
+        "examples": [
+          "<div.chapter__track> ←513px",
+          "<div.chapter__parallax> ←154px",
+          "<div.bg-marble> →360px",
+          "<picture.bg-marble__media> →360px"
+        ]
+      }
+    },
+    {
+      "at": 9887,
+      "scrolledPx": 887,
+      "pinned": {
+        "count": 335,
+        "examples": [
+          "<video.modal-video__video>",
+          "<video.modal-video__video>",
+          "<nav.nav__inner>",
+          "<div.bg-marble>"
+        ]
+      },
+      "slower": {
+        "count": 8,
+        "examples": [
+          "<div.panel-content> ×0.23",
+          "<div.panel-content__media> ×0.23",
+          "<div.mouse-follower> ×0.23",
+          "<picture> ×0.23"
+        ]
+      },
+      "sideways": {
+        "count": 112,
+        "examples": [
+          "<div.chapter__track> ←512px",
+          "<div.chapter__parallax> ←154px",
+          "<div.bg-marble> →358px",
+          "<picture.bg-marble__media> →358px"
+        ]
+      }
+    },
+    {
+      "at": 10786,
+      "scrolledPx": 886,
+      "pinned": {
+        "count": 335,
+        "examples": [
+          "<video.modal-video__video>",
+          "<video.modal-video__video>",
+          "<nav.nav__inner>",
+          "<div.bg-marble>"
+        ]
+      },
+      "slower": {
+        "count": 12,
+        "examples": [
+          "<div.panel-content> ×0.44",
+          "<div.panel-content__media> ×0.44",
+          "<picture> ×0.44",
+          "<img.is-loaded> ×0.44"
+        ]
+      },
+      "sideways": {
+        "count": 109,
+        "examples": [
+          "<div.chapter__track> ←511px",
+          "<div.chapter__parallax> ←154px",
+          "<div.bg-marble> →358px",
+          "<picture.bg-marble__media> →358px"
+        ]
+      }
+    }
+  ],
+  "motion": {
+    "libraries": [
+      "lenis"
+    ],
+    "canvases": [
+      {
+        "share": 0,
+        "webgl": false
+      },
+      {
+        "share": 0,
+        "webgl": false
+      },
+      {
+        "share": 0,
+        "webgl": false
+      }
+    ],
+    "running": [],
+    "keyframes": [
+      "czrsUQ",
+      "esZAhw"
+    ],
+    "cssScrollDriven": 0,
+    "unreadableSheets": 2,
+    "transitions": [
+      {
+        "rule": "opacity · 0.3s · ease",
+        "uses": 20
+      },
+      {
+        "rule": "color · 0.3s · ease",
+        "uses": 15
+      },
+      {
+        "rule": "opacity · 0.6s · ease",
+        "uses": 13
+      },
+      {
+        "rule": "transform · 0.4s · cubic-bezier(0.76, 0, 0.24, 1)",
+        "uses": 12
+      },
+      {
+        "rule": "opacity · 0.4s · ease",
+        "uses": 8
+      },
+      {
+        "rule": "initial · initial · initial",
+        "uses": 8
+      },
+      {
+        "rule": "clip-path · 0.6s · cubic-bezier(0.22, 0.31, 0, 1)",
+        "uses": 6
+      },
+      {
+        "rule": "transform, height, opacity · 0.6s, 0.6s, 0.3s · cubic-bezier(0.22, 0.31, 0, 1), cubic-bezier(0.22, 0.31, 0, 1), ease",
+        "uses": 4
+      },
+      {
+        "rule": "transform · 0.6s · cubic-bezier(0.76, 0, 0.24, 1)",
+        "uses": 4
+      },
+      {
+        "rule": "transform · 0.2s · ease",
+        "uses": 4
+      },
+      {
+        "rule": "transform, opacity · 0.5s, 0.2s · cubic-bezier(0.22, 0.31, 0, 1), ease",
+        "uses": 2
+      },
+      {
+        "rule": "padding-left, letter-spacing · 0.4s, 0.4s · cubic-bezier(0.76, 0, 0.24, 1), cubic-bezier(0.76, 0, 0.24, 1)",
+        "uses": 2
+      }
+    ],
+    "sticky": [
+      {
+        "el": "<div.hero__video>",
+        "height": 900
+      },
+      {
+        "el": "<div.hero__text__sticky>",
+        "height": 900
+      },
+      {
+        "el": "<div.block-story__pin>",
+        "height": 900
+      },
+      {
+        "el": "<div.block-video__sticky>",
+        "height": 900
+      },
+      {
+        "el": "<div.bg-marble.bg-marble--light-gold>",
+        "height": 900
+      },
+      {
+        "el": "<div.block-collection__mobile__sticky>",
+        "height": 0
+      },
+      {
+        "el": "<div.block-collection__sticky>",
+        "height": 900
+      },
+      {
+        "el": "<div.block-collection__logo>",
+        "height": 450
+      },
+      {
+        "el": "<div.block-weekend__sticky>",
+        "height": 900
+      },
+      {
+        "el": "<div.block-weekend__cover>",
+        "height": 0
+      },
+      {
+        "el": "<div.block-medias__sticky>",
+        "height": 884
+      },
+      {
+        "el": "<div.block-medias__cover>",
+        "height": 0
+      }
+    ],
+    "videos": 11,
+    "autoplayVideos": 4,
+    "pageHeight": 31991,
+    "title": "Capitolium | TéFéCé x Stade Toulousain"
+  },
+  "hover": [
+    {
+      "el": "\"\"",
+      "changes": [
+        "transform"
+      ],
+      "transition": "transform 0.2s ease"
+    }
+  ],
+  "phone": {
+    "note": "6575 characters of text on the first load"
+  },
+  "entered": [
+    "OK pour moi - Accepter les cookies OK pour moi",
+    "Entrer"
+  ],
+  "seconds": 40
+}

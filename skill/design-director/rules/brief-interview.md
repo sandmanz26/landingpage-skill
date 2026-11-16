@@ -125,6 +125,15 @@ user choosing it. Every stand-in is listed in the deliver report with the shot l
 photograph is never presented as the client's own. If the user says no stand-ins are needed, the
 plan is (d): designed placeholders with the shot list.
 
+**Brand strength** (owner, 2026-11-16). When the business is sold on identity (fashion, beauty,
+women's products, lifestyle, food and drink brands), ask it as its own question in the four-part
+form: "Mau branding yang **kuat** (elemen khas di setiap bagian: bentuk, ilustrasi, gerak; contoh:
+bingkai lengkung dan warna kemasan Anda muncul dari atas sampai footer) atau **dasar dulu** (warna,
+huruf, logo sementara; lebih cepat, bisa diperkuat nanti)? Ini menentukan apakah halaman terasa
+milik brand Anda atau seperti toko online biasa. Rekomendasi: kuat. Atau percayakan ke AI." The
+answer is the `brand` dial (`rules/visual-dials.md`); "percayakan ke AI" is `strong` in these
+sectors. With `strong`, offer a `brand` run first (`modes/brand.md`) when there is no brand kit.
+
 **Visitor facts** (`rules/floor.md` → Facts) are asked for in the same message: "Apa saja yang
 biasanya ditanyakan orang sebelum datang atau memesan? Contoh: jam buka, alamat dan parkir,
 fasilitas, harga, cara pesan, cara bayar." The answers go to the brief's `## Visitor facts` table

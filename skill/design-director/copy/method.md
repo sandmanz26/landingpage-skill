@@ -93,7 +93,7 @@ node <skill>/scripts/copycheck.mjs path/to/index.html --voice .design/voice.md  
 It writes `.design/copycheck.json`; `progress.mjs done copy` refuses with a FAIL in it, or when it
 is older than `copy.md`, or when `voice.md` lacks its Reader, Voice and Glossary sections.
 
-## 6. Two reader tests (not measurable, never skipped)
+## 6. Three reader tests (not measurable, never skipped)
 
 - **Skim test.** Read only the headings and the buttons, top to bottom. Write the story they tell
   in three lines. If it is not the storyline from the strategy, rewrite the headlines.
@@ -102,4 +102,19 @@ is older than `copy.md`, or when `voice.md` lacks its Reader, Voice and Glossary
   word you had to look up, any sentence you read twice, goes into the glossary and is rewritten.
   At standard effort the customer researcher juror repeats this test on the built page.
 
-Write both results at the end of `copy.md` under "## Reader tests".
+- **Visitor walk** (owner, 2026-11-16: the content "nampak tidak dipikirkan dengan baik dari segi
+  pengguna"). List at least five things a visitor comes to do or find out, in their words, from
+  the research and the brief's Visitor facts ("jam berapa buka?", "ada parkir?", "berapa harganya
+  kalau berdua?", "bisa datang tanpa pesan?", "siapa yang menangani saya?"). For each, write where
+  the page answers it and how many screens down. Anything with no answer, or answered below the
+  fifth screen with no link from the navigation, is a hole: add the content or move it up.
+
+  ```markdown
+  ### Visitor walk
+  | The visitor wants to… | Answered in | Screens down |
+  | know the opening hours | hero line, footer | 0 |
+  | see what the class costs for a month | price calculator | 3 |
+  ```
+
+Write all three results at the end of `copy.md` under "## Reader tests". `done copy` refuses
+without a "Visitor walk" of five rows.

@@ -391,7 +391,12 @@ switch (cmd) {
       const cc = JSON.parse(fs.readFileSync(cp, 'utf8'));
       if (Date.parse(cc.time) < fs.statSync(path.join(DIR, 'copy.md')).mtimeMs) fail('copy.md changed after the last copycheck: run it again.');
       if (cc.summary.fail > 0) fail(`copycheck found ${cc.summary.fail} FAIL (${cc.findings.filter((f) => f.severity === 'FAIL').map((f) => f.rule).join(', ')}): rewrite, then run it again.`);
-      if (!/##\s*(Reader tests|Tes pembaca)/i.test(fs.readFileSync(path.join(DIR, 'copy.md'), 'utf8'))) fail('copy.md needs a "## Reader tests" section: the skim test and the explain-back test (copy/method.md §6).');
+      const cm = fs.readFileSync(path.join(DIR, 'copy.md'), 'utf8');
+      if (!/##\s*(Reader tests|Tes pembaca)/i.test(cm)) fail('copy.md needs a "## Reader tests" section: the skim test, the explain-back test and the visitor walk (copy/method.md §6).');
+      // The visitor walk: what a visitor comes to do, and where the page answers it (copy/method.md §6).
+      const walkAt = cm.search(/^#{2,4}\s*(Visitor walk|Jalan pengunjung)\b/im);
+      const walkRows = walkAt < 0 ? 0 : cm.slice(walkAt).split('\n').slice(1).filter((l, i, arr) => arr.slice(0, i).every((x) => !/^#{1,4}\s/.test(x)) && /^\|/.test(l.trim()) && !/^\|\s*[-:]+/.test(l.trim()) && !/visitor wants|pengunjung ingin/i.test(l)).length;
+      if (walkRows < 5) fail(`copy.md "Reader tests" needs a "### Visitor walk" table with at least five rows (it has ${walkRows}): what the visitor wants to do or know, where the page answers it, how many screens down (copy/method.md §6).`);
     }
     if (step === 'spec') {
       const sp = fs.readFileSync(path.join(DIR, 'spec.md'), 'utf8');

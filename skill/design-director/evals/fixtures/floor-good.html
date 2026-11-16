@@ -16,6 +16,8 @@
   p { max-width: 52ch; margin: 0 0 12px; }
   .split { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
   .arch { width: 100%; aspect-ratio: 4 / 5; border-radius: 999px 999px 24px 24px; background: var(--field); overflow: hidden; display: grid; place-items: end center; }
+  .stack { position: relative; }
+  .inset { position: absolute; left: -48px; bottom: -36px; width: 160px; height: auto; }
   .disc { width: 220px; height: 220px; border-radius: 50%; background: var(--sage); }
   .sun { width: 120px; height: 120px; border-radius: 50%; background: var(--accent); margin: -60px 0 0 60%; position: relative; }
   .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -38,7 +40,7 @@
     main > section, footer { padding: 48px 20px; }
     .split, .cards { grid-template-columns: 1fr; }
     h1 { font-size: 38px; max-width: none; } h2 { font-size: 26px; }
-    .sun { margin-left: 40%; } svg[style], .arch[style*="margin"] { margin-left: 0 !important; }
+    .sun { margin-left: 40%; } .inset { left: 0; bottom: -24px; width: 120px; } .stack .sun { right: 0 !important; } svg[style], .arch[style*="margin"] { margin-left: 0 !important; }
     td, th { padding-right: 12px; font-size: 16px; }
   }
 </style>
@@ -48,7 +50,8 @@
 <main>
   <section class="split" data-brand="arch">
     <div><h1>Napas dulu, baru kerja.</h1><p>Kelas yoga pagi <span data-fact="hours">06.30 sampai 07.30, Senin sampai Sabtu</span> di Denpasar. Selesai sebelum jam kantor, jadi Anda masih sempat mandi dan sarapan. Kelasnya kecil, paling banyak dua belas orang, supaya pelatih sempat melihat setiap gerakan Anda.</p><a class="btn" href="#harga">Pesan tempat lewat WhatsApp</a></div>
-    <div class="arch"><svg viewBox="0 0 200 160" width="200" height="160" role="img" aria-label="Placeholder foto: pelatih menggelar matras" data-placeholder-image="portrait"><circle cx="100" cy="60" r="30" fill="#cc5c2b"/><ellipse cx="100" cy="160" rx="80" ry="70" fill="#7b432a"/><circle cx="40" cy="30" r="10" fill="#f26a2e"/></svg></div>
+    <div class="stack"><div class="arch"><svg viewBox="0 0 200 160" width="200" height="160" role="img" aria-label="Placeholder foto: pelatih menggelar matras" data-placeholder-image="portrait"><circle cx="100" cy="60" r="30" fill="#cc5c2b"/><ellipse cx="100" cy="160" rx="80" ry="70" fill="#7b432a"/><circle cx="40" cy="30" r="10" fill="#f26a2e"/></svg></div>
+      <svg class="inset" viewBox="0 0 160 120" width="160" height="120" role="img" aria-label="Placeholder foto: matras tergulung" data-placeholder-image="detail"><rect width="160" height="120" rx="16" fill="#cfe3d2"/><circle cx="110" cy="70" r="46" fill="#16282b"/><circle cx="110" cy="70" r="20" fill="#f26a2e"/><rect x="16" y="20" width="50" height="8" fill="#16282b"/></svg></div>
   </section>
   <section id="kelas" data-brand="sun">
     <h2>Pagi Anda, jam demi jam</h2>
@@ -68,7 +71,7 @@
     <svg viewBox="0 0 320 120" width="320" height="120" style="margin:24px auto" role="img" aria-label="Gambar matras, handuk dan botol"><rect x="10" y="60" width="140" height="40" rx="20" fill="#cfe3d2"/><circle cx="30" cy="80" r="16" fill="#16282b"/><rect x="170" y="70" width="50" height="30" fill="#f26a2e"/><ellipse cx="270" cy="60" rx="18" ry="46" fill="#b8441a"/></svg>
   </section>
   <section class="split" id="tempat" data-brand="sun">
-    <div class="arch" style="aspect-ratio:1"><svg viewBox="0 0 200 160" width="200" height="160" role="img" aria-label="Placeholder foto: studio dari depan" data-placeholder-image="place"><rect x="50" y="50" width="100" height="110" fill="#cc5c2b"/><circle cx="150" cy="40" r="20" fill="#f3e9e2"/><path d="M85 160 V120 a15 15 0 0 1 30 0 V160Z" fill="#f3e9e2"/></svg></div>
+    <div class="stack"><div class="sun" aria-hidden="true" style="position:absolute;right:-30px;top:-30px;margin:0"></div><div class="arch" style="aspect-ratio:1"><svg viewBox="0 0 200 160" width="200" height="160" role="img" aria-label="Placeholder foto: studio dari depan" data-placeholder-image="place"><rect x="50" y="50" width="100" height="110" fill="#cc5c2b"/><circle cx="150" cy="40" r="20" fill="#f3e9e2"/><path d="M85 160 V120 a15 15 0 0 1 30 0 V160Z" fill="#f3e9e2"/></svg></div></div>
     <div><h2>Tempat dan cara datang</h2><p>Studio berada di jalan yang tenang, lima menit dari pusat kota. Pintu masuknya di samping toko roti; naik tangga ke lantai dua.</p><p data-fact="address">Jl. Contoh No. 12, Denpasar. Lantai 2, di atas toko roti.</p><p data-fact="parking">Parkir motor di halaman; mobil di seberang jalan.</p><p data-fact="contact">WhatsApp 0812-0000-0000 (contoh), dibalas 06.00 sampai 20.00.</p></div>
   </section>
   <section data-brand="arch">

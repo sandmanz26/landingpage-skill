@@ -30,7 +30,9 @@ export function visitorFacts(brief) {
   return rows;
 }
 
-export const FLOORS = { words: 300, sections: 7, navLinks: 3, interactions: 2, shapeShare: 0.6, layouts: 4, repeatRun: 2, brandShare: 0.7, picturesPerSection: 0.5, facts: 6 };
+export const FLOORS = { words: 300, sections: 7, navLinks: 3, interactions: 2, shapeShare: 0.6, layouts: 4, repeatRun: 2, brandShare: 0.7, picturesPerSection: 0.5, facts: 6,
+  // By dial (rules/composition.md, rules/visual-dials.md): how much of the page leaves the plain row-and-column arrangement, and how far the brand reaches.
+  composedShare: { grid: 0, composed: 0.4, wild: 0.6 }, brandShareBasic: 0.4 };
 
 // Runs in the page. Sections are the blocks a visitor would call "parts of the page".
 const measure = () => {
@@ -111,6 +113,32 @@ const measure = () => {
       if (o > 2500 && o < ra.width * ra.height * 0.98 && o < rb.width * rb.height * 0.98) { layered = true; break; }
     }
     if (layered) cues.add('overlapping layers');
+    // Composition (rules/composition.md): what takes a section out of equal rows and columns.
+    const comp = new Set();
+    if (layered) comp.add('overlap');
+    if (cues.has('breaks its section')) comp.add('leaves its frame');
+    if (cues.has('turned element')) comp.add('turned');
+    const picBoxes = pictures.map(rectOf).filter((r) => r.width >= 120 && r.height >= 90);
+    if (picBoxes.length >= 2) {
+      const areas = picBoxes.map((r) => r.width * r.height);
+      if (Math.max(...areas) / Math.min(...areas) >= 3) comp.add('scale contrast');
+      // Staggered: two pictures that share a horizontal band but start at clearly different heights.
+      let stag = false;
+      for (let i = 0; i < picBoxes.length && !stag; i++) for (let j = i + 1; j < picBoxes.length; j++) {
+        const a = picBoxes[i]; const b = picBoxes[j];
+        const sideBySide = Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top) > 40 && (a.right <= b.left + 8 || b.right <= a.left + 8);
+        if (sideBySide && Math.abs(a.top - b.top) >= 48) { stag = true; break; }
+      }
+      if (stag) comp.add('staggered');
+    }
+    // Type over a picture: a large line of text that crosses a picture's box.
+    for (const t of s.querySelectorAll('h1, h2, h3, p, span, strong, em')) {
+      const cs = getComputedStyle(t);
+      if (parseFloat(cs.fontSize) < 40 || !vis(t) || t.closest('figure figcaption')) continue;
+      const tr = rectOf(t);
+      if (pictures.some((pic) => { if (pic.contains(t) || t.contains(pic)) return false; const o = overlap(tr, rectOf(pic)); return o > tr.width * tr.height * 0.15 && o > 3000; })) { comp.add('type over picture'); break; }
+    }
+    if (s.matches('[data-progress="pin"]') || s.querySelector('[data-progress="pin"], [data-track]')) comp.add('pinned or sideways');
     const drawn = [...s.querySelectorAll('svg')].filter((v) => rectOf(v).width >= 120 && v.querySelectorAll('path, circle, ellipse, polygon').length >= 3 && !v.closest('button, a')).length;
     if (drawn) cues.add('drawing');
     // Layout signature: how many columns the content starts in, where it is aligned, whether it holds a picture, whether it has its own ground.
@@ -121,7 +149,7 @@ const measure = () => {
     const bg = getComputedStyle(s).backgroundColor;
     return {
       top: Math.round(docTop(s)), height: Math.round(sr.height), heading: heading ? (heading.innerText || '').trim().slice(0, 50) : '',
-      cues: [...cues], pictures: pictures.length + (bgPictures ? 1 : 0),
+      cues: [...cues], composed: [...comp], pictures: pictures.length + (bgPictures ? 1 : 0),
       layout: `${Math.min(4, starts.length)}col·${align}·${pictures.length ? 'pic' : 'text'}`, ground: bg !== 'rgba(0, 0, 0, 0)',
       brand: [...new Set([...s.querySelectorAll('[data-brand]'), ...(s.matches('[data-brand]') ? [s] : [])].map((e) => e.getAttribute('data-brand')).filter(Boolean))],
     };
@@ -130,7 +158,7 @@ const measure = () => {
   return { words, navLinks, hasNav: !!nav, hasFooter: !!footer, footerWords, interactions, kinds: [...kinds], sections: per, facts, height: document.documentElement.scrollHeight };
 };
 
-export function judge(m, { facts = null, type = 'page' } = {}) {
+export function judge(m, { facts = null, type = 'page', layout = 'composed', brand = 'strong' } = {}) {
   const F = FLOORS;
   const rows = [];
   const add = (id, name, got, floor, ok, fix, source) => rows.push({ id, name, got, floor, ok, fix, source });
@@ -163,9 +191,16 @@ export function judge(m, { facts = null, type = 'page' } = {}) {
   add('layout', 'A layout that changes', `${distinct} different section layouts in ${n} sections; the same layout up to ${worst} times in a row`, `${F.layouts}+ different layouts, the same one at most ${F.repeatRun} times in a row`,
     distinct >= Math.min(F.layouts, Math.max(1, n - 1)) && worst <= F.repeatRun,
     'Give each section its own composition (split, full-bleed picture, list beside a sticky picture, statement, grid, table): change the columns, the alignment, the ground and where the picture sits', 'owner 4: "layout terasa flat dan monoton"');
+  const wantComposed = F.composedShare[layout] ?? F.composedShare.composed;
+  const composed = m.sections.filter((s) => (s.composed || []).length).length;
+  if (wantComposed > 0) add('composition', 'Composed, not only rows and columns', `${composed} of ${n} sections are composed (${[...new Set(m.sections.flatMap((s) => s.composed || []))].join(', ') || 'none'}); layout dial "${layout}"`,
+    `${Math.round(wantComposed * 100)}% of sections with at least one: pictures at clearly different scales, staggered pictures, overlap, something that leaves its frame, a turned element, large type over a picture, a pinned or sideways chapter`,
+    n > 0 && composed / n >= wantComposed,
+    'Rebuild sections with the compositions of rules/composition.md (scale-scatter, offset-pair, type-over-picture, window-open, checker-fields, stepped-drift…): equal cards in a row are the generic layout the owner rejected', 'owner 2026-11-16: "terpaku pada aturan row column… harus lebih wild secara layout"');
   const branded = m.sections.filter((s) => s.brand.length).length;
-  add('brand', 'The brand in every section', `${branded} of ${n} sections carry a brand element (data-brand: ${[...new Set(m.sections.flatMap((s) => s.brand))].join(', ') || 'none'})`, `${Math.round(F.brandShare * 100)}% of sections carry an element of the brand kit, marked data-brand="<element>"`,
-    n > 0 && branded / n >= F.brandShare,
+  const wantBrand = brand === 'basic' ? F.brandShareBasic : F.brandShare;
+  add('brand', 'The brand in every section', `${branded} of ${n} sections carry a brand element (data-brand: ${[...new Set(m.sections.flatMap((s) => s.brand))].join(', ') || 'none'}); brand dial "${brand}"`, `${Math.round(wantBrand * 100)}% of sections carry an element of the brand kit, marked data-brand="<element>"`,
+    n > 0 && branded / n >= wantBrand,
     'Carry the brand kit\'s hero and supporting elements into every section, the price, the questions and the footer included, and mark each use data-brand="<element name>" (brand/method.md → Rules of use)', 'owner 4: "saya tidak mendapatkan esensi brand"');
   const pics = m.sections.reduce((a, s) => a + s.pictures, 0);
   if (type !== 'type') add('pictures', 'Pictures down the page', `${pics} picture(s) in ${n} sections`, `at least one picture for every two sections (photographs, drawings or designed placeholders)`, n > 0 && pics / n >= F.picturesPerSection,
@@ -178,7 +213,7 @@ if (isMain) {
   const args = parseArgs(process.argv.slice(2));
   const target = args._[0];
   if (!target) {
-    console.error('Usage: node floor.mjs <url or file> [--brief .design/brief.md] [--out .design/inspect/floor.json] [--type page|type]');
+    console.error('Usage: node floor.mjs <url or file> [--brief .design/brief.md] [--out .design/inspect/floor.json] [--type page|type] [--layout grid|composed|wild] [--brand basic|strong]');
     process.exit(2);
   }
   const briefPath = args.brief || (fs.existsSync('.design/brief.md') ? '.design/brief.md' : null);
@@ -196,12 +231,15 @@ if (isMain) {
   await browser.close();
   await close();
   const type = args.type || (fs.existsSync('.design/targets.json') && /"imagery"\s*:\s*"type"/.test(fs.readFileSync('.design/targets.json', 'utf8')) ? 'type' : 'page');
-  const { rows, missed } = judge(m, { facts, type });
-  const report = { target, time: new Date().toISOString(), brief: briefPath, floors: FLOORS, measured: m, rows, missed };
+  const dial = (k, d) => { try { const t = JSON.parse(fs.readFileSync(args.targets || '.design/targets.json', 'utf8')); return t[k] || d; } catch { return d; } };
+  const layout = args.layout || dial('layout', 'composed');
+  const brand = args.brand || dial('brand', 'strong');
+  const { rows, missed } = judge(m, { facts, type, layout, brand });
+  const report = { target, time: new Date().toISOString(), brief: briefPath, dials: { layout, brand, type }, floors: FLOORS, measured: m, rows, missed };
   const out = args.out || (fs.existsSync('.design') ? '.design/inspect/floor.json' : null);
   if (out) { fs.mkdirSync(path.dirname(path.resolve(out)), { recursive: true }); fs.writeFileSync(out, JSON.stringify(report, null, 2)); }
   console.log(`floor: ${rows.length - missed} of ${rows.length} met${out ? ` → ${out}` : ''}`);
   for (const r of rows) console.log(`  ${r.ok ? 'ok  ' : 'MISS'} ${r.name}: ${r.got}${r.ok ? '' : `\n       floor: ${r.floor}\n       fix:   ${r.fix}`}`);
-  if (args.sections) for (const s of m.sections) console.log(`    · ${String(s.top).padStart(5)}px ${s.layout.padEnd(28)} cues: ${s.cues.join(', ') || '-'} · pictures ${s.pictures} · "${s.heading}"`);
+  if (args.sections) for (const s of m.sections) console.log(`    · ${String(s.top).padStart(5)}px ${s.layout.padEnd(28)} cues: ${s.cues.join(', ') || '-'} · composed: ${(s.composed || []).join(', ') || '-'} · pictures ${s.pictures} · "${s.heading}"`);
   process.exit(missed ? 1 : 0);
 }

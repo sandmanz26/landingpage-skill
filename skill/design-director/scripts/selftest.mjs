@@ -915,8 +915,8 @@ const check = (name, ok, detail = '') => {
   fs.writeFileSync(briefPath, '# Brief\n## Visitor facts\n| Fact | Value | On the page |\n| --- | --- | --- |\n| Hours | 06.30 | hero |\n| Price | Rp 120.000 | price |\n| Facilities | mats | facilities |\n| Address | Jl. Contoh [SAMPLE] | place |\n| Parking | motorbikes | place |\n| Contact | WhatsApp [SAMPLE] | place |\n| Payment | n/a: not decided | - |\n');
   const good = run('floor.mjs', [path.join(fixtures, 'floor-good.html'), '--brief', briefPath, '--out', path.join(tmp, 'floor-good.json')]);
   const gr = fs.existsSync(path.join(tmp, 'floor-good.json')) ? JSON.parse(fs.readFileSync(path.join(tmp, 'floor-good.json'), 'utf8')) : { rows: [], missed: -1 };
-  check('floor: a page with sections, facts, interactions, shapes, a changing layout, brand marks and pictures meets all seven measures',
-    good.status === 0 && gr.missed === 0 && gr.rows.length === 7, good.stdout + good.stderr);
+  check('floor: a page with sections, facts, interactions, shapes, a changing and composed layout, brand marks and pictures meets all eight measures',
+    good.status === 0 && gr.missed === 0 && gr.rows.length === 8, good.stdout + good.stderr);
   const thin = run('floor.mjs', [path.join(fixtures, 'clean.html'), '--brief', briefPath, '--out', path.join(tmp, 'floor-thin.json')]);
   const tr = fs.existsSync(path.join(tmp, 'floor-thin.json')) ? JSON.parse(fs.readFileSync(path.join(tmp, 'floor-thin.json'), 'utf8')) : { rows: [] };
   const miss = (id) => tr.rows.some((r) => r.id === id && !r.ok);
@@ -927,8 +927,11 @@ const check = (name, ok, detail = '') => {
   const j = judge(base, { facts: [] });
   const ids = j.rows.filter((r) => !r.ok).map((r) => r.id).join();
   const typeOnly = judge(base, { facts: [], type: 'type' });
-  check('floor: scroll motion alone is not interaction, eight identical flat sections miss shape, layout, brand and pictures; a type-only page skips pictures',
-    ids === 'facts,interaction,shape,layout,brand,pictures' && !typeOnly.rows.some((r) => r.id === 'pictures') && FLOORS.sections === 7, ids);
+  check('floor: scroll motion alone is not interaction, eight identical flat sections miss shape, layout, composition, brand and pictures; a type-only page skips pictures; the layout and brand dials move their floors',
+    ids === 'facts,interaction,shape,layout,composition,brand,pictures' && !typeOnly.rows.some((r) => r.id === 'pictures') && FLOORS.sections === 7
+    && !judge(base, { facts: [], layout: 'grid' }).rows.some((r) => r.id === 'composition')
+    && judge({ ...base, sections: base.sections.map((x, i) => ({ ...x, composed: i < 4 ? ['overlap'] : [], brand: i < 4 ? ['arch'] : [] })) }, { facts: [], layout: 'composed', brand: 'basic' }).rows.filter((r) => ['composition', 'brand'].includes(r.id)).every((r) => r.ok)
+    && judge({ ...base, sections: base.sections.map((x, i) => ({ ...x, composed: i < 4 ? ['overlap'] : [], brand: i < 4 ? ['arch'] : [] })) }, { facts: [], layout: 'wild', brand: 'strong' }).rows.filter((r) => ['composition', 'brand'].includes(r.id)).every((r) => !r.ok), ids);
 
   const proj = path.join(tmp, 'floor-brief');
   fs.mkdirSync(proj);

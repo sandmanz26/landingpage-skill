@@ -55,7 +55,7 @@ means three things at once: it serves the business, it answers the customer, and
 12. **Clear the floor.** A page that is honest and tidy can still be a wireframe: the owner
    rejected five such pages in a blind test. Every delivered page has enough content and sections,
    the facts a visitor needs, something to operate, shapes and depth instead of flat rectangles, a
-   layout that changes, the brand in every section, and pictures, measured by `floor.mjs`
+   layout that changes, a composition that leaves rows and columns, the brand in every section, and pictures, measured by `floor.mjs`
    (`rules/floor.md`). It is a floor, not the goal.
 
 ## Start every run
@@ -159,11 +159,11 @@ research. Show, in this order:
 
 **Direction gate** (`approve direction`).
 - *Guided:* three cards from `draw.mjs`, each with the idea sentence, composition in one line, type
-  and colour approach, and why it fits this subject. Say which you recommend and why. The user may
+  and colour approach, and why it fits this subject, with the compositions it will use (`rules/composition.md`). Say which you recommend and why. The user may
   pick one or mix ("type from A, layout from B"); write the mix into the spec.
   Under the cards, the **visual dials** (`rules/visual-dials.md`), each set to your recommendation
   with one reason and what it needs from the client: colour energy, type expression, imagery,
-  motion, price. Name team references as presets ("warna seperti Swehl"). Translate vague words
+  motion, layout (rapi, tersusun, bebas), brand (dasar, kuat), price. Name team references as presets ("warna seperti Swehl"). Translate vague words
   into dial values and show the translation back. The answer goes to `.design/targets.json`.
 - *Quick:* the recommended card only, plus "the other two are in `.design/directions/` if you want
   them". Continue on "ok", "lanjut" or similar.
@@ -239,7 +239,8 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 | `admin/table.md` | Building any screen that lists records (3+ rows): the data-table rules (the owner's nine basics, right-aligned numbers, the bulk-action bar, and research basics such as sticky header, states, density, row actions), each with why, when not, accessibility and dated sources; what the inspector measures |
 | `rules/rationale.md` | Every gate and the deliver report: each key decision with its UX reason, its trade-off and a source, neutral; the "Alasan desain" section of `.design/deliver.md` |
 | `admin/method.md`, `admin/directions.json` | The direction step of an admin or app screen: the ten style levers (change 3–4, consistently), the style directions from the team's admin references, the variation question, the brand kit overriding a direction, the chosen tokens into the shadcn/ui theme |
-| `rules/visual-dials.md` | The direction gate: the dials, presets from the library, how to guide the user |
+| `rules/visual-dials.md` | The direction gate: the dials (colour, type, imagery, motion, layout, brand, price), presets from the library, how to guide the user; brand-led sectors |
+| `rules/composition.md` | The skeleton, the spec and the build: layouts that are not rows and columns: the layout dial, the six moves (scale contrast, stagger, overlap, type over picture, empty cells, leaving the frame), the named compositions seen in the team's references and how to build each |
 | `rules/illustration.md` | Writing the spec and building when the client has no pictures: the seven picture paths and the quality bar every found or generated picture must pass, finding photographs, AI-generated drafts, designed placeholders (`placeholder.mjs`), a page with no pictures, drawing flat illustration, the shot list |
 | `library/index.json` (via `library.mjs find`) | The direction step: the team's judged references with their style cards; adapt each to the client or ask (`modes/create.md`) |
 | `team/taste.md`, `brands/`, `designers/` | At the start, if present |
@@ -252,7 +253,7 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 | `brandboard.mjs <brand-kit.json or directions.json> [--out .design/brand] [--no-pdf]` | The brand board: palette with roles and contrast pairs, type, shape and motion, elements, the placeholder wordmark, the brand in use (web hero, price card, social post); `board.html` and `board.pdf` |
 | `draw.mjs --sector <s> [--tone <t>] [--have a,b] [--options 3]` | Deals directions into `.design/directions/` (`--list sectors`) |
 | `inspect.mjs <url or file> [--out dir] [--allow rule]` | Real-browser check at 1440/768/390, screenshots, design inventory; INFO `placeholder-logo`, `sample-ui` (`data-sample`), `placeholder-image` and `generated-image` for the deliver report; data tables (`admin/table.md`): numbers not right-aligned, checkboxes out of line or under 24px, cut values with no way to read them, selection with no bulk actions (clicks a row at desktop), wide tables without sticky identifier/actions |
-| `floor.mjs <url or file> [--brief .design/brief.md] [--sections]` | The floor of `rules/floor.md`, measured on the built page: words, sections, navigation and footer; the brief's visitor facts on the page (`data-fact`); kinds of interaction; sections with a shape or depth cue; different section layouts; sections carrying a brand element (`data-brand`); pictures per section. Writes `.design/inspect/floor.json`; a miss is fixed or answered in `.design/floor.md` |
+| `floor.mjs <url or file> [--brief .design/brief.md] [--sections]` | The floor of `rules/floor.md`, measured on the built page: words, sections, navigation and footer; the brief's visitor facts on the page (`data-fact`); kinds of interaction; sections with a shape or depth cue; different section layouts; sections that are composed (by the layout dial); sections carrying a brand element (`data-brand`, by the brand dial); pictures per section. Writes `.design/inspect/floor.json`; a miss is fixed or answered in `.design/floor.md` |
 | `lint.mjs <files or folders>` | Stock copy, placeholders, default styling patterns in source |
 | `copycheck.mjs <copy.md or page> [--voice .design/voice.md]` | Reading experience and voice, measured: sentence and paragraph length, headline length, long words, self-praise, corporate abstractions, glossary words the reader does not use, generic buttons; prints the skim test |
 | `kit.mjs list` / `get <names> [--out dir]` | Tested sections built from tokens (hero with arch photo, price near the action, evidence rows, reveal cards with a tap path, before/after, sticky story, proof quote, FAQ, closing action): the build's starting floor |
