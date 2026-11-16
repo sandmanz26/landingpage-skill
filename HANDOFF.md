@@ -108,7 +108,7 @@ dials) → deliver report (Alasan desain, Supaya lebih bagus, stand-in pictures,
 (sidebar, modal, table, login), mobile choice patterns, 12 motion recipes linked to 17 reference
 sightings. Owner scores exist for batches 002-013 (some pending, §6); batch-014 and 015 have none.
 
-**Tests.** `npm test`: 130+ checks. One known flake (kit demo, `layout-shift`); see §5.
+**Tests.** `npm test`: 147 checks, all passing on 2026-11-16. One known flake (kit demo, `layout-shift`); see §5.
 
 **What is not verified, in one list:** that clearing the floor satisfies the owner · that the motion
 recipes and compositions lift a real page · Pexels and Pixabay with a real key · the licence of the
@@ -1080,7 +1080,7 @@ checks still apply to site and redesign runs). `fit.mjs` does not judge the layo
 (the floor does). The style cards of ref-0023 to ref-0028 are missing (fast reads): `library.mjs
 find` shows their patterns and motion but no palette or type numbers.
 
-**Test run after this work:** still running when this was committed; the result is in the next commit.
+**Test run after this work (2026-11-16):** `npm test` → 147 checks, all passed (the kit-demo flake did not appear). A first run had 2 failures, both in new tests, not in the skill: the floor gate test sat in a `section`-mode project (the floor does not apply there) and an older Materials test used a brief with no Visitor facts; both tests were corrected.
 
 ## 6. Next steps, in order (2026-11-16)
 
