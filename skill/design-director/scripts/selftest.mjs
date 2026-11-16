@@ -405,19 +405,7 @@ const check = (name, ok, detail = '') => {
   fs.writeFileSync(path.join(d, 'progress.json'), JSON.stringify(st));
   fs.copyFileSync(path.join(fixtures, 'clean.html'), path.join(proj, 'index.html'));
   run('inspect.mjs', [path.join(proj, 'index.html'), '--out', path.join(d, 'inspect'), '--quiet'], proj);
-  // The floor (rules/floor.md): the gate wants the measure, fresh, and every miss fixed or answered.
-  const noFloor = p('done', 'gate');
-  const floorRun = run('floor.mjs', [path.join(proj, 'index.html')], proj);
-  const flr = fs.existsSync(path.join(d, 'inspect/floor.json')) ? JSON.parse(fs.readFileSync(path.join(d, 'inspect/floor.json'), 'utf8')) : { rows: [] };
-  const missedIds = flr.rows.filter((r) => !r.ok).map((r) => r.id);
-  const floorSilent = p('done', 'gate');
-  fs.writeFileSync(path.join(d, 'floor.md'), missedIds.map((id) => `- ${id}: quick effort`).join('\n'));
-  const floorThin = p('done', 'gate');
-  fs.writeFileSync(path.join(d, 'floor.md'), missedIds.map((id) => `- ${id}: this fixture is a small test page; the owner accepted it for the selftest on 2026-11-16`).join('\n'));
-  const floorAnswered = p('done', 'gate');
-  check('progress wants the floor measure at the gate, and a real reason for every miss',
-    noFloor.status !== 0 && /floor\.mjs/.test(noFloor.stderr) && floorRun.status === 1 && missedIds.length >= 3 && floorSilent.status !== 0 && /under the floor/.test(floorSilent.stderr) && floorThin.status !== 0 && floorAnswered.status === 0,
-    [noFloor.stderr, floorRun.stdout.slice(0, 300), floorSilent.stderr, floorThin.stderr, floorAnswered.stderr].join(' | '));
+  p('done', 'gate');
   fs.writeFileSync(path.join(d, 'critique.md'), '# Critique');
   const noJury = p('done', 'look');
   fs.mkdirSync(path.join(d, 'jury', 'r1'), { recursive: true });
@@ -597,7 +585,7 @@ const check = (name, ok, detail = '') => {
   const p = (...a) => run('progress.mjs', a, proj);
   p('init', '--mode', 'create', '--effort', 'quick', '--gates', 'autopilot');
   p('approve', 'brief');
-  fs.writeFileSync(path.join(d, 'brief.md'), '# Brief\n- What: test');
+  fs.writeFileSync(path.join(d, 'brief.md'), BRIEF.replace(/## Materials[\s\S]*?(?=## Product)/, ''));
   const noMat = p('done', 'brief');
   fs.writeFileSync(path.join(d, 'brief.md'), BRIEF.replace(/\| Product UI.*\n/, ''));
   const noUi = p('done', 'brief');
@@ -947,6 +935,24 @@ const check = (name, ok, detail = '') => {
   const okFacts = p('done', 'brief');
   check('progress wants a "## Visitor facts" table with at least six facts in the brief',
     noFacts.status !== 0 && /Visitor facts/.test(noFacts.stderr) && fewFacts.status !== 0 && /lists 5 fact/.test(fewFacts.stderr) && okFacts.status === 0, [noFacts, fewFacts, okFacts].map((x) => x.stderr).join(' | '));
+  // The gate (create, site, redesign): the floor measure, fresh, and every miss fixed or answered with a real reason.
+  const st = JSON.parse(fs.readFileSync(path.join(d, 'progress.json'), 'utf8'));
+  for (const k of Object.keys(st.steps)) if (!['gate', 'look', 'deliver', 'learn'].includes(k)) st.steps[k] = { status: 'done' };
+  fs.writeFileSync(path.join(d, 'progress.json'), JSON.stringify(st));
+  fs.copyFileSync(path.join(fixtures, 'clean.html'), path.join(proj, 'index.html'));
+  run('inspect.mjs', [path.join(proj, 'index.html'), '--out', path.join(d, 'inspect'), '--quiet'], proj);
+  const noFloor = p('done', 'gate');
+  const floorRun = run('floor.mjs', [path.join(proj, 'index.html')], proj);
+  const flr = fs.existsSync(path.join(d, 'inspect/floor.json')) ? JSON.parse(fs.readFileSync(path.join(d, 'inspect/floor.json'), 'utf8')) : { rows: [] };
+  const missedIds = flr.rows.filter((r) => !r.ok).map((r) => r.id);
+  const floorSilent = p('done', 'gate');
+  fs.writeFileSync(path.join(d, 'floor.md'), missedIds.map((id) => `- ${id}: quick effort`).join('\n'));
+  const floorThin = p('done', 'gate');
+  fs.writeFileSync(path.join(d, 'floor.md'), missedIds.map((id) => `- ${id}: this fixture is a small test page; the owner accepted it for the selftest on 2026-11-16`).join('\n'));
+  const floorAnswered = p('done', 'gate');
+  check('progress wants the floor measure at the gate, and a real reason for every miss',
+    noFloor.status !== 0 && /floor\.mjs/.test(noFloor.stderr) && floorRun.status === 1 && missedIds.length >= 3 && floorSilent.status !== 0 && /under the floor/.test(floorSilent.stderr) && floorThin.status !== 0 && floorAnswered.status === 0,
+    [noFloor.stderr, floorRun.stdout.slice(0, 200), floorSilent.stderr, floorThin.stderr, floorAnswered.stderr].join(' | '));
 }
 
 // draw
