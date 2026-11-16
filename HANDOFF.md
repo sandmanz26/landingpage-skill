@@ -1,7 +1,7 @@
 # Handoff
 
 Read this first if you are a new session, a different model or a different AI tool picking up
-this project. It is kept up to date at every milestone. Last updated: **2026-11-16** (start here §0; the floor from the owner's five reasons §5f; motion recipes, fast reader, batch-014, blind verdict §5e; pictures and batch-013 §5d; skill audit §5c; slop blind test sent; Fable 5.2 advice; plan to move to the owner's machine for ~15k mobile screens: see §5b and §6).
+this project. It is kept up to date at every milestone. Last updated: **2026-11-16** (start here §0; the state on one page §0b; batch-015, composition and dials §5g; the floor from the owner's five reasons §5f; motion recipes, fast reader, batch-014, blind verdict §5e; pictures and batch-013 §5d; skill audit §5c; slop blind test sent; Fable 5.2 advice; plan to move to the owner's machine for ~15k mobile screens: see §5b and §6).
 
 ## 0. Start here (written so a smaller model can continue)
 
@@ -35,6 +35,7 @@ not there yet: on 2026-11-12 the owner rejected all five test pages, two of them
 | --- | --- |
 | How a run goes, all tables | `SKILL.md`, then `modes/create.md` |
 | What every page must have (the owner's five reasons) | `rules/floor.md`, `scripts/floor.mjs` |
+| Layouts that are not rows and columns; the layout and brand dials | `rules/composition.md`, `rules/visual-dials.md` |
 | Pictures: stock, free AI drafts, designed placeholders, no pictures | `rules/illustration.md`, `scripts/photos.mjs`, `scripts/placeholder.mjs` |
 | Motion that can be reused | `motion/functions.md`, `motion/recipes.json`, `scripts/motion.mjs` |
 | Brand elements | `brand/method.md`, `modes/brand.md` |
@@ -47,18 +48,19 @@ not there yet: on 2026-11-12 the owner rejected all five test pages, two of them
 **Common jobs, step by step:**
 
 *The owner sends reference links (with or without scores).*
-1. Next free ids: look at the last `data/references/batch-0NN.json` (now batch-014, ref-0024).
+1. Next free ids: look at the last `data/references/batch-0NN.json` (now batch-015, ref-0028; the next is batch-016, ref-0029).
 2. Write `data/references/batch-0NN.txt` with `<id> <url>` lines.
 3. `node skill/design-director/scripts/read.mjs <url> --out data/references/captures/<id>` for each
-   (about 20 s). Read `read.md` and look at `read-sheet.png`.
-4. Write `data/references/batch-0NN.json` (copy the shape of `batch-014.json`): business, sector,
+   (20-45 s; it presses consent panels and "enter" buttons by itself). Read `read.md` and look at
+   `read-sheet.png`. If the sheet shows only a loader, say so; do not guess what is behind it.
+4. Write `data/references/batch-0NN.json` (copy the shape of `batch-015.json`): business, sector,
    scores 1-10 for business, customer, story, clarity, distinctiveness, craft, `library_candidates`,
    `avoid`, `motion_notes`. Record the owner's scores and their words verbatim in
    `data/references/jury/batch-0NN/owner.json`.
 5. Map each motion worth keeping to a recipe: add the reference to that recipe's `seen_in` in
    `motion/recipes.json`.
 6. `node skill/design-director/scripts/library.mjs build`, write `batch-0NN-review.md` in Bahasa
-   Indonesia (copy the shape of `batch-014-review.md`), commit, push.
+   Indonesia (copy the shape of `batch-015-review.md`), commit, push.
    Run from the repo root: `capture.mjs --out` is relative to the current folder.
 
 *The owner asks for a page.* Follow `SKILL.md` from "Start every run". Do not skip steps; the
@@ -68,13 +70,52 @@ scripts enforce them. Run `floor.mjs` before the gate.
 dated block here), then propose the rule for `team/taste.md` with its source. Their own explicit
 rules go in directly; your inferences wait for their approval.
 
-**What the owner expects next** (see §6 for the full list): a page that clears the floor and uses
-pictures and motion recipes, compared blind against the old one; their scores for batch-014; a
-decision on reporting two numbers (expression and execution).
+**What the owner expects next** (see §6 for the full list): a page that clears the floor, is
+composed (not rows and columns), carries the brand, and uses pictures and motion recipes, compared
+blind against the old one. Nothing built since the blind test has been shown to the owner as a
+page yet: that is the first job.
 
 **Judgment needed** (a smaller model should slow down or ask here): scoring references; writing a
 new motion recipe; deciding a reference picture passes the quality bar; any change to
 `progress.mjs`.
+
+## 0b. The state on 2026-11-16, on one page
+
+**Verdict so far.** The skill enforces a careful process and honest content, but its pages do not
+meet the owner's bar. Evidence: the blind test (all five pages rejected, the two skill pages among
+them); the owner scores their favourite references 9+ while the jurors give 6-7.5. Since the blind
+test five things were built to close the gap, **none of them proven on a real page yet**:
+
+| Built | Where | Enforced by | Proven? |
+| --- | --- | --- | --- |
+| The floor: content, visitor facts, interaction, shape, layout, composition, brand, pictures | `rules/floor.md`, `floor.mjs` | `done brief` (Visitor facts), `done gate` (floor.json, misses answered) | Calibrated on rejected pages and references; no page built to it |
+| Composition: six moves, twelve named compositions, layout dial | `rules/composition.md`, `rules/visual-dials.md` | the floor's `composition` measure | Measure separates admired sites (57-80%) from rejected pages (0-17%); no page built |
+| Brand strength dial and the question for brand-led sectors | `rules/visual-dials.md`, `rules/brief-interview.md` | the floor's `brand` share (40% basic, 70% strong) | No run |
+| Motion recipes (12) with tested demo | `motion/`, `motion.mjs` | `done spec` (Recipes line) | Demo passes the inspector; no page built |
+| Pictures: stock (5 providers), free AI drafts, designed placeholders, no-picture path, quality bar | `rules/illustration.md`, `photos.mjs`, `placeholder.mjs` | inspector INFO, `done deliver` | Tools tested; picture quality without a key is weak |
+| Visitor walk in the copy step | `copy/method.md` §6 | `done copy` (5 rows) | No run |
+| Fast reference reader with motion facts | `read.mjs`, `library/intake.md` | - | Used on batch-014 and 015 (20-46 s a site) |
+
+**What is enforced on every page run** (`progress.mjs`; a smaller model cannot skip these): brief
+with Materials, Visitor facts (6+), Product part → research → strategy → roast with answered points →
+direction with a brand kit → spec with Interactions, a Motion spec (Message, Recipes, Entrance, State
+transitions) and the Council sign-off → copy with voice, copycheck and three reader tests (visitor
+walk of 5 rows) → build → reason roast (every element has a job) → gate (inspector 0 FAIL, the floor
+measured and every miss answered) → look (jury at standard and above, engineering review, fit to the
+dials) → deliver report (Alasan desain, Supaya lebih bagus, stand-in pictures, sample UI).
+
+**Data.** 27 judged references in 14 sectors (`library/index.json`; batches 001-015), admin patterns
+(sidebar, modal, table, login), mobile choice patterns, 12 motion recipes linked to 17 reference
+sightings. Owner scores exist for batches 002-013 (some pending, §6); batch-014 and 015 have none.
+
+**Tests.** `npm test`: 130+ checks. One known flake (kit demo, `layout-shift`); see §5.
+
+**What is not verified, in one list:** that clearing the floor satisfies the owner · that the motion
+recipes and compositions lift a real page · Pexels and Pixabay with a real key · the licence of the
+free AI drafts · standard and thorough run costs with the council (estimates) · the engineering
+review on a real run · jurors' scores against the owner's (they run 2-3 points low) · phone views of
+several references (loaders only) · examples in `examples/` against today's checks (they predate
+them and would not pass `done gate`).
 
 ## 1. Goal
 
@@ -989,54 +1030,118 @@ them through `progress.mjs`, but their text does not mention the floor yet.
 generation spends the owner's credits, so ask first. If the owner agrees, it replaces the free
 draft path of `rules/illustration.md` (same marking, same quality bar).
 
-## 6. Next steps, in order (2026-11-11)
+## 5g. 2026-11-16 (later): batch-015, composition, the layout and brand dials, the visitor walk
 
-**Moving to the owner's machine** (owner's plan, 2026-11-11, to read their local portfolio of
-~15,000 mobile screens):
+**Owner's message (verbatim in `data/references/jury/batch-015/owner.json`).** Topic: fashion,
+women, beauty; these categories need a much stronger brand essence, confirmed with the user (a
+specific branding, or basic first). Four references with notes, no numeric scores. On the skill:
+"UI yang digenerate terlalu generic, terpaku pada aturan row column yang ada. Menurut saya harus
+lebih 'wild' secara layout untuk memberikan experience, kemudian secara content content yang sudah
+kamu berikan nampak tidak di pikirkan dengan baik dari segi pengguna."
+
+**Batch-015** (fast read, one juror, no inspector, no owner scores): Outfit by hellohello (ref-0025,
+fashion shop) 7.1; Capitolium (ref-0026, a jersey launch told through Toulouse's Capitole) 7.4;
+L'Oiseau Dé (ref-0027, a Framer template for a beauty shop) 6.8; Indigo (ref-0028, jewellery, five
+chapters) 7.2. All four of the owner's claims that could be checked were confirmed with measures
+(review in Indonesian: `batch-015-review.md`). Library: 27 references.
+
+**Built from it:**
+- `rules/composition.md` (new): the layout dial (`grid`, `composed` default, `wild`), six moves
+  (scale contrast, stagger, overlap, type over picture, empty cells, leaving the frame or moving),
+  twelve named compositions with where each was seen and how to build it (scale-scatter,
+  offset-pair, type-over-picture, checker-fields, stepped-drift, window-open, chapter-cover,
+  horizontal-track, object-thread, pedestal, statement-band, index-in-type), and rules (name one per
+  section, content first, the phone is composed too, reading still works).
+- `floor.mjs`: an eighth measure, `composition`: share of sections with scale contrast (3× in
+  area), staggered pictures, overlap, something leaving its frame, a turned element, large type
+  over a picture, or a pinned or sideways chapter. Floor by the layout dial: grid none, composed
+  40%, wild 60%. Measured: Outfit 4 of 5, Mana 4 of 6, Swehl 4 of 7; the rejected pages 0-1 of 6-7.
+  The `brand` floor now follows the brand dial (basic 40%, strong 70%). Dials are read from
+  `.design/targets.json` (or `--layout`, `--brand`).
+- `rules/visual-dials.md`: two new dials, Layout and Brand, four new presets (Outfit, L'Oiseau Dé,
+  Indigo, Capitolium), and the brand-led sectors rule; `team/visual-defaults.json`: layout
+  `composed`, brand `strong`. `rules/brief-interview.md`: the brand-strength question for fashion,
+  beauty, women's products and other identity-led businesses ("percayakan ke AI" = strong).
+- `copy/method.md` §6: a third reader test, the **visitor walk** (five things a visitor comes to do,
+  where the page answers each, how many screens down); `done copy` wants the table with 5 rows.
+- `read.mjs`: when a page does not scroll it presses a consent button, then "continue without
+  sound" / "enter"-type buttons (English, French, Italian, Indonesian labels), records what it
+  pressed (`read.entered`, an "Entrance:" line in `read.md`) and reads on. This is answering a
+  site's own entrance, not working around bot protection.
+- `motion/recipes.json`: six new sightings (Indigo, Capitolium, L'Oiseau Dé). Not built: recipes
+  for a sideways chapter (`horizontal-track`) and cut-letter chapter titles.
+- `team/taste.md` (Always): composed layouts; stronger brand for identity-led sectors after asking;
+  content thought through from the visitor's side.
+
+**Limits:** composition has rules and a measure but no tested demo page (unlike motion and the
+kit); the named compositions carry build notes, not code. `modes/site.md`, `modes/improve.md` and
+`modes/brand.md` do not mention the floor, composition or the new dials in their text (the script
+checks still apply to site and redesign runs). `fit.mjs` does not judge the layout and brand dials
+(the floor does). The style cards of ref-0023 to ref-0028 are missing (fast reads): `library.mjs
+find` shows their patterns and motion but no palette or type numbers.
+
+**Test run after this work:** still running when this was committed; the result is in the next commit.
+
+## 6. Next steps, in order (2026-11-16)
+
+**1. Prove the new rules on one page (the most important open job).** Rebuild one blind-test brief
+(suggested: yoga "Napas Pagi", prompt in `examples/slop-test/prompts.md`) with the current skill at
+standard effort: layout `composed` or `wild`, brand `strong`, pictures by the best path available,
+two or three motion recipes, the floor cleared with no excuses. Put it beside the old page
+(`examples/slop-test/yoga/`) with new letters and ask the owner to judge blind. Until this is done
+nobody knows whether the work of 2026-11-12 to 11-16 helps. Ask the owner first: it costs a few
+hundred thousand tokens. Do it before the model is downgraded if possible; the owner has been told.
+
+**2. Waiting on the owner (ask again, briefly, when it fits):**
+- Go-ahead for job 1, and whether to use the connected image tool (Higgsfield, spends their
+  credits) for its pictures.
+- Scores (visual and ship, 1-10) for batch-014 (Frans Hals, Nomadic Tribe) and batch-015 (Outfit,
+  Capitolium, L'Oiseau Dé, Indigo).
+- Confirm that "9.5 dan 9.5, site ke2 9.3, 9.3" were the scores for batch-013 (Mana, The Other
+  Side of Truth); it was recorded that way.
+- A look at the placeholder sheet and the motion demo (both sent on 2026-11-12): right direction?
+- The two-number proposal: report expression (distinctiveness, story, motion) and execution (craft,
+  clarity, business, customer) separately instead of one blend.
+- Their reading of "menurunkan modal": taken as moving to a cheaper model.
+- Older: review of the five taste rules decided on delegation (marked in `team/taste.md`); colour
+  judged by harmony instead of hue count; an Unsplash or Pexels key, or pasted links; repo private
+  or split (it is public and holds third-party screenshots); scores for the admin style options;
+  Solflare screenshots; pending scores for batch-001, batch-003, the wedding-organizer tests; the
+  meaning of SquadEasy's "85"; opt-in data collection (deferred by the owner).
+
+**3. Next builds, in the order suggested:**
+1. A tested demo page for the compositions (like `motion/index.html`): each named composition in
+   our own code, passing the inspector and the floor, with `composition.mjs`-style list and get, so
+   a smaller model copies working code instead of reading build notes.
+2. Recipes for `horizontal-track` and cut-letter chapter titles (seen in Capitolium, Indigo).
+3. Mention the floor, composition and the new dials in `modes/site.md`, `modes/improve.md`,
+   `modes/brand.md`; make `fit.mjs` aware of the layout and brand dials or drop them from it on purpose.
+4. Style cards for ref-0023 to ref-0028 (`inspect.mjs` + `style.mjs` per capture), so the library
+   holds their palette and type numbers.
+5. Slim SKILL.md and `modes/create.md` (audit §5c point 7): they grew again this week.
+6. Juror calibration against the owner's scores; motion frames in the jurors' evidence.
+7. A voting page for designers; the eval of 5 real briefs × (no skill, taste-skill, this skill),
+   release bar ≥ 65% wins over 60 votes (§4).
+8. Admin and mobile: component recipes from `data/admin-patterns` and `data/app-patterns`; a mobile
+   app mode; the pipeline for the owner's ~15,000 local screens (below).
+9. Measure real costs of standard and thorough runs; smoothness on a real machine.
+10. Known measurement gaps: illustrations not counted on Quilt; `fit.mjs` and SVG `<use>`; the
+    bulk-action probe's false WARN; `read.mjs` does not list transitions written with `var()`;
+    the floor's section detection on pages not built by the skill; the kit-demo flake.
+
+**Moving to the owner's machine** (their plan, to read a local portfolio of ~15,000 mobile screens):
 1. `git clone` the repo, `git checkout claude/affectionate-cray-t2nlj1`; Node 22;
    `cd skill/design-director && npm install && npx playwright install chromium && npm test`.
-2. Start Claude Code at the repo root (CLAUDE.md → this file). Optional: `UNSPLASH_ACCESS_KEY` in the
-   shell profile (never in chat, never committed).
-3. **Keep the 15k screens outside the repo** (or in a gitignored folder): the repo is public, and
-   client work may be under NDA. Commit only derived patterns, notes and a few owner-approved samples.
-4. **Do not have a model look at all 15k.** Rough estimate, not measured: ~1.5k image tokens per
-   phone screen → ~22M tokens for one look, many usage-limit windows. Build a script first
-   (proposed `scripts/screens.mjs`, not built): index the folder (app, flow, file date from paths),
-   drop near-duplicates (perceptual hash), cluster, make contact sheets, pick a few hundred
-   representatives; the model and the owner label those by pattern (as `data/app-patterns/choice/`:
-   tiers good / safe / avoid / bad, style levers, notes); derive mobile rules and recipes from them.
-   This also needs a mobile mode decision (today `app-screen` covers admin/SaaS; mobile app screens
-   have no mode yet).
-
-**Waiting on the owner:**
-- (answered 2026-11-16: the five reasons, §5f)
-- Whether to use the connected image tool (Higgsfield) for pictures: it spends their credits.
-- Go-ahead to rebuild one blind-test page (yoga) to the floor with pictures and motion recipes, for a blind comparison with the old one.
-- Confirm the batch-013 scores reading; scores for batch-014; a look at the placeholder sheet and the motion demo (`motion/index.html`).
-- The two-number scoring proposal (expression / execution).
-- Review of the 5 taste rules Claude decided on the owner's delegation (batch-005 four Never rules +
-  batch-006 radius Prefer; marked in `team/taste.md`), revert any rejected.
-- Colour: measure harmony (hue families) instead of hue count: proposal, not changed.
-- Unsplash: a key in the env var, or keep the pasted-links path.
-- Repo privacy / public-private split.
-- Scores for `.design/options/admin-options.html` (admin styles A/B/C).
-- Solflare screenshots (batch-010 not captured).
-- Older pending scores: batch-001, batch-003, wedding organizer verdict, four-way WO scores,
-  batch-004 taste rules; SquadEasy "85" meaning.
-- Fable 5.2 motion pilot: go or not.
-- Opt-in data collection from skill users: deferred by the owner ("nanti saja").
-
-**Proposed, not started:**
-1. Distil AI-slop tells from the blind scores (above).
-2. Re-run Dapur Seimbang with the current skill (owner's notes: entrance transitions, rigid lower half).
-3. Component recipes from the admin/app libraries (sidebar, modal, table, login, choice).
-4. Admin blind test; mobile screens pipeline (§6 above).
-5. Eval harness: 5 real briefs × (no skill, taste-skill, this skill), blind, 2+ designers; release
-   bar ≥ 65% wins over 60 votes with a hold-out set (§4).
-6. Measure real costs of standard/thorough runs with the council (estimates only so far).
-7. Smoothness on a real machine (`smooth.mjs` locally).
-8. Fix measurement gaps: illustrations not counted on Quilt (Lottie/late render); fit.mjs does not count
-   SVG `<use>` drawings and may count hard 0-blur shadows as shadows; bulk-action probe false WARN.
+2. Start Claude Code at the repo root (CLAUDE.md → this file). Optional free keys as environment
+   variables in the shell profile, never in chat, never committed: `UNSPLASH_ACCESS_KEY`,
+   `PEXELS_API_KEY`, `PIXABAY_API_KEY`.
+3. Keep the 15,000 screens outside the repo (it is public; client work may be under NDA). Commit
+   only derived patterns, notes and a few owner-approved samples.
+4. Do not have a model look at all of them (rough estimate, not measured: about 22M tokens for one
+   look). Build a script first (proposed `scripts/screens.mjs`, not built): index the folder, drop
+   near-duplicates, cluster, make contact sheets, pick a few hundred representatives; label those
+   like `data/app-patterns/choice/` (tiers good, safe, avoid, bad; style levers; notes). Decide a
+   mobile app mode first (today `app-screen` covers admin and SaaS only).
 
 ## 7. Map
 
@@ -1045,13 +1150,17 @@ HANDOFF.md            this file
 CLAUDE.md, AGENTS.md  working agreement + pointer here (auto-read by Claude Code / other agents)
 README.md             install and usage (Bahasa Indonesia)
 docs/SPEC.md          full specification and rationale
-skill/design-director/  the skill (see its SKILL.md): modes/ copy/ motion/ rules/ rubric/ team/ kit/
-                      brand/ admin/ roast/ research/ strategy/ scripts/ evals/
+skill/design-director/  the skill (see its SKILL.md): modes/ copy/ motion/ (functions, recipes.json,
+                      demo) rules/ (floor, composition, illustration, visual-dials, …) rubric/ team/
+                      kit/ brand/ admin/ roast/ research/ strategy/ library/ scripts/ (25) evals/
 templates/            Excel template for references and briefs + make_template.py (its generator)
-data/references/      website reference batches 001-012 (json + review), captures, jury votes
+data/references/      website reference batches 001-015 (json + review in Indonesian), captures
+                      (full: report.json, digest.md, style.json; fast: read.md, read-sheet.png),
+                      jury/batch-0NN/ (juror files, owner.json with the owner's words verbatim)
 data/admin-patterns/  admin/SaaS component references (sidebar, modal, table, login)
 data/app-patterns/    mobile app pattern references (choice: m01, m02 with tiers)
 examples/             test runs: wedding-organizer-compare, senyum-dental(-v2),
-                      katering-sehat-compare (three-way), slop-test (blind A-E)
+                      katering-sehat-compare (three-way), slop-test (blind A-E; verdict and
+                      measures in blind/HASIL.md)
 THIRD_PARTY_NOTICES.md  taste-skill MIT notice
 ```
