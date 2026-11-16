@@ -52,6 +52,12 @@ means three things at once: it serves the business, it answers the customer, and
    roast and the jury that already run; Engineering reviews the code after the gate. The spec ends
    with their `## Council` sign-off.
 
+12. **Clear the floor.** A page that is honest and tidy can still be a wireframe: the owner
+   rejected five such pages in a blind test. Every delivered page has enough content and sections,
+   the facts a visitor needs, something to operate, shapes and depth instead of flat rectangles, a
+   layout that changes, the brand in every section, and pictures, measured by `floor.mjs`
+   (`rules/floor.md`). It is a floor, not the goal.
+
 ## Start every run
 
 1. **Mode.** Pick one from the request and the project. If unsure, state your reading in one line
@@ -102,7 +108,8 @@ means three things at once: it serves the business, it answers the customer, and
    outcome, the one metric, what is in and out of scope: the Head of Product's question,
    `rubric/council.md`), 1–3 sites they like and 1
    they do not (turned into dials by `dials.mjs`), three feeling words, what exists (photos, product
-   UI, brand assets: `rules/brief-interview.md` → Materials), what is ruled out. With no photos,
+   UI, brand assets: `rules/brief-interview.md` → Materials), what is ruled out, and the facts a visitor will look for (hours, place, facilities, prices,
+   contact: `rules/floor.md` → Facts). With no photos,
    ask which stand-in pictures the user wants and offer the five paths (stock photographs they pick
    or you search, a free AI-generated draft, designed placeholders with drawing, or no pictures:
    `rules/illustration.md`). Say at once which path is used and what it will look like. At the direction gate the user picks from first-screen sketches of each direction; that
@@ -214,6 +221,7 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 | `strategy/method.md` | The strategy step: business canvas, customer, message house, storyline |
 | `roast/method.md` | The roast step (every run) |
 | `rules/objective.md` | Building and fixing: what the inspector measures and the targets |
+| `rules/floor.md` | The brief (the `## Visitor facts` table), the spec, the build and the gate: the seven measures every delivered page meets (content, facts, interaction, shape and depth, layout, brand, pictures), how each is met, and how a miss is answered |
 | `rules/defaults.md` | Writing the spec: the AI defaults to avoid and what to use instead |
 | `rules/copyright.md` | Before using any reference |
 | `rules/copy-id.md` | Writing copy in Bahasa Indonesia |
@@ -240,10 +248,11 @@ as a diff with the source (`project, date, who`). Apply only what the user appro
 
 | Command | Does |
 | --- | --- |
-| `progress.mjs init / check / done / approve / back / skip / log / status` | Order of steps, gates, turn back; content checks per step (brief Materials and Product part, spec `## Council` with all five heads, the engineering review with a verdict and no unanswered blocking finding before a standard or thorough look, AI-generated draft pictures named in deliver.md when the brief planned them, an admin brief's Component library with the shadcn/ui default logged, an admin direction's style options with a logged choice or decline, spec Interactions and Motion spec with its `Recipes:` line, deliver.md with "Alasan desain" (3+ decisions with a trade-off), …) |
+| `progress.mjs init / check / done / approve / back / skip / log / status` | Order of steps, gates, turn back; content checks per step (brief Materials, Visitor facts and Product part, the floor measure at the gate with every miss fixed or answered, spec `## Council` with all five heads, the engineering review with a verdict and no unanswered blocking finding before a standard or thorough look, AI-generated draft pictures named in deliver.md when the brief planned them, an admin brief's Component library with the shadcn/ui default logged, an admin direction's style options with a logged choice or decline, spec Interactions and Motion spec with its `Recipes:` line, deliver.md with "Alasan desain" (3+ decisions with a trade-off), …) |
 | `brandboard.mjs <brand-kit.json or directions.json> [--out .design/brand] [--no-pdf]` | The brand board: palette with roles and contrast pairs, type, shape and motion, elements, the placeholder wordmark, the brand in use (web hero, price card, social post); `board.html` and `board.pdf` |
 | `draw.mjs --sector <s> [--tone <t>] [--have a,b] [--options 3]` | Deals directions into `.design/directions/` (`--list sectors`) |
 | `inspect.mjs <url or file> [--out dir] [--allow rule]` | Real-browser check at 1440/768/390, screenshots, design inventory; INFO `placeholder-logo`, `sample-ui` (`data-sample`), `placeholder-image` and `generated-image` for the deliver report; data tables (`admin/table.md`): numbers not right-aligned, checkboxes out of line or under 24px, cut values with no way to read them, selection with no bulk actions (clicks a row at desktop), wide tables without sticky identifier/actions |
+| `floor.mjs <url or file> [--brief .design/brief.md] [--sections]` | The floor of `rules/floor.md`, measured on the built page: words, sections, navigation and footer; the brief's visitor facts on the page (`data-fact`); kinds of interaction; sections with a shape or depth cue; different section layouts; sections carrying a brand element (`data-brand`); pictures per section. Writes `.design/inspect/floor.json`; a miss is fixed or answered in `.design/floor.md` |
 | `lint.mjs <files or folders>` | Stock copy, placeholders, default styling patterns in source |
 | `copycheck.mjs <copy.md or page> [--voice .design/voice.md]` | Reading experience and voice, measured: sentence and paragraph length, headline length, long words, self-praise, corporate abstractions, glossary words the reader does not use, generic buttons; prints the skim test |
 | `kit.mjs list` / `get <names> [--out dir]` | Tested sections built from tokens (hero with arch photo, price near the action, evidence rows, reveal cards with a tap path, before/after, sticky story, proof quote, FAQ, closing action): the build's starting floor |

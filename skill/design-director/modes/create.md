@@ -41,6 +41,11 @@ Write `.design/brief.md`:
 - Scope: in <…> · out <…>
 - Patterns: <existing names, flows, components to match, or "n/a: new product">
 
+## Visitor facts
+| Fact | Value | On the page |
+| Hours | ... | ... |
+(6+ rows: what a visitor of this kind of business must find; rules/floor.md → Facts)
+
 ## Materials
 | Material | What exists | Plan |
 | Photos | ... | ... |
@@ -50,7 +55,7 @@ Write `.design/brief.md`:
 | Research materials | ... or "none yet" | ... |
 ```
 
-`done brief` refuses without the `## Materials` section (format and plans:
+`done brief` refuses without `## Visitor facts` (6+ rows, `rules/floor.md`), without the `## Materials` section (format and plans:
 `rules/brief-interview.md` → Materials) and without the Head of Product's part: vision, outcome,
 metric and scope (`rubric/council.md` → The product question; "percayakan ke AI" gives an
 `(AI proposal)`).
@@ -224,7 +229,8 @@ Direction: <id> (+ mix notes)
 
 ## Interactions
 | Element | Visitor does | They see or get | Purpose: the customer question it answers | Phone and keyboard |
-(every hover, click-to-reveal, slider, flip, map or play on the page; "none" if the page has none.
+(every hover, click-to-reveal, slider, flip, map or play on the page; a page needs at least two
+kinds, one operated by the visitor: rules/floor.md.
 A row with no purpose is cut, not built. motion/functions.md → Interactions)
 
 ## Motion spec
@@ -298,6 +304,9 @@ Order: tokens → hero → sections → pictures → states (hover, focus, error
   the structure where the spec or the direction asks. The kit gives the tested floor (contrast, tap
   targets, reduced motion, touch paths); the direction and the idea still have to come from this
   client (`kit/README.md`).
+- Build to the floor from the start (`rules/floor.md`): mark every visitor fact `data-fact="<id>"`
+  and every use of a brand-kit element `data-brand="<element>"`; give each section its own
+  composition and a shape from the kit; at least two interactions from the spec.
 - Each section from its row in the spec. Carry the idea into every section, pricing, FAQ and footer
   included; the usual failure is a distinctive first screen followed by stock blocks.
 - Sticky and fixed elements: give each sticky panel its own wrapper (the part of the page it belongs
@@ -355,6 +364,11 @@ nice" is not a job. Do every fix, merge and cut, write the **Response** in `.des
 node <skill>/scripts/lint.mjs <source files or folder>
 node <skill>/scripts/inspect.mjs <url or path/to/index.html>
 ```
+
+Then measure the floor (`rules/floor.md`): `node <skill>/scripts/floor.mjs <path/to/index.html>`.
+Fix every miss (more sections and facts, an interaction with a purpose, the kit's shapes, a layout
+that changes, the brand element in the section, a picture), or write its reason in
+`.design/floor.md`. `done gate` refuses while a miss has neither.
 
 Fix every FAIL. Treat each WARN as wrong unless you can defend it to a designer in one sentence;
 write that sentence in the report. Re-run until there is no FAIL, then `done gate` (it refuses if

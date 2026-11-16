@@ -51,6 +51,11 @@ Setelah terpasang, cukup minta ke Claude Code, misalnya *"Buatkan halaman untuk 
 | `node scripts/lint.mjs <folder>` | Mencari copy klise (Inggris dan Indonesia), placeholder, dan pola styling default di source |
 | `node scripts/draw.mjs --sector health --options 3` | Membagikan 3 arah desain yang berbeda |
 | `node scripts/progress.mjs status` | Melihat posisi langkah dan gerbang di proyek |
+| `node scripts/floor.mjs <file> --sections` | Mengukur "batas bawah" halaman: isi dan jumlah bagian, fakta pengunjung (jam buka, fasilitas, alamat), interaksi, bentuk dan kedalaman, variasi tata letak, elemen brand, gambar |
+| `node scripts/read.mjs <url> --out <folder>` | Membaca referensi dengan cepat (sekitar 20 detik): cara halaman bergerak, lembar gambar saat dimuat dan digulir |
+| `node scripts/motion.mjs list` | Daftar resep motion yang sudah diuji; `get <id>` memberi kodenya |
+| `node scripts/photos.mjs search "<kata>" --sheet sheet.png` | Mencari foto stok berlisensi (tanpa key: Openverse, Wikimedia; dengan key gratis: Unsplash, Pexels, Pixabay); `generate "<gambar>"` membuat draf gambar AI gratis |
+| `node scripts/placeholder.mjs sheet` | Placeholder foto yang didesain, mengikuti warna halaman |
 
 ## Mengisi selera tim
 

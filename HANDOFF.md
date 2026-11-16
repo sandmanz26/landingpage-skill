@@ -1,7 +1,80 @@
 # Handoff
 
 Read this first if you are a new session, a different model or a different AI tool picking up
-this project. It is kept up to date at every milestone. Last updated: **2026-11-12** (motion recipes, fast reader, batch-014, blind verdict §5e; pictures and batch-013 §5d; skill audit §5c; slop blind test sent; Fable 5.2 advice; plan to move to the owner's machine for ~15k mobile screens: see §5b and §6).
+this project. It is kept up to date at every milestone. Last updated: **2026-11-16** (start here §0; the floor from the owner's five reasons §5f; motion recipes, fast reader, batch-014, blind verdict §5e; pictures and batch-013 §5d; skill audit §5c; slop blind test sent; Fable 5.2 advice; plan to move to the owner's machine for ~15k mobile screens: see §5b and §6).
+
+## 0. Start here (written so a smaller model can continue)
+
+The owner plans to move this project to a cheaper model. If that is you: do not try to hold the
+whole file in mind. Read this section, then only the section the task needs. When a script refuses
+a step, do what its message says. When unsure, ask the owner one plain question in Bahasa Indonesia.
+
+**What this is.** A Claude skill in `skill/design-director/` that designs and builds web pages. The
+owner judges by eye; their bar is high (they score sites like Mana Yerba Maté 9.5). The skill is
+not there yet: on 2026-11-12 the owner rejected all five test pages, two of them made by the skill.
+
+**Rules you must keep (CLAUDE.md):**
+1. Answer the owner in Bahasa Indonesia. Use "they" for the owner. Be neutral; say when they are wrong.
+2. Say plainly what you did not verify.
+3. After changing any script: `cd skill/design-director && npm test` (10-15 minutes; run it in the
+   background). One check is a known flake: "the kit demo passes the inspector" sometimes fails with
+   `layout-shift`; run `node scripts/inspect.mjs kit/index.html --allow kit-sample,system-font-only`
+   alone, and if that is clean, say so and go on. Any other failure is real.
+4. Commit and push to branch `claude/affectionate-cray-t2nlj1`. Never open a pull request unless asked.
+5. Update this file at every milestone (add a dated block under §5, update §6).
+6. Every change to the skill goes in the module that owns the topic, is listed in SKILL.md's tables,
+   is enforced by `progress.mjs` or a check when it is a rule, and has a selftest. No loose files.
+7. Never: ask for or paste API keys in chat · commit keys · scrape unsplash.com · work around bot
+   protection · copy a reference's code or assets · invent testimonials, numbers or logos · spawn
+   subagents unless the owner asks · commit the owner's private screens (the repo is public) ·
+   edit `.design/progress.json` by hand.
+
+**Where things are** (`skill/design-director/`):
+
+| Need | File |
+| --- | --- |
+| How a run goes, all tables | `SKILL.md`, then `modes/create.md` |
+| What every page must have (the owner's five reasons) | `rules/floor.md`, `scripts/floor.mjs` |
+| Pictures: stock, free AI drafts, designed placeholders, no pictures | `rules/illustration.md`, `scripts/photos.mjs`, `scripts/placeholder.mjs` |
+| Motion that can be reused | `motion/functions.md`, `motion/recipes.json`, `scripts/motion.mjs` |
+| Brand elements | `brand/method.md`, `modes/brand.md` |
+| Taking in a reference | `library/intake.md`, `scripts/read.mjs` (fast), `scripts/capture.mjs` (full) |
+| The owner's taste rules | `team/taste.md` |
+| Judging | `rubric/jury.md`, `rubric/critic.md`, `rubric/council.md` |
+| Admin screens and tables | `modes/app-screen.md`, `admin/` |
+| Tests | `scripts/selftest.mjs`, fixtures in `evals/fixtures/` |
+
+**Common jobs, step by step:**
+
+*The owner sends reference links (with or without scores).*
+1. Next free ids: look at the last `data/references/batch-0NN.json` (now batch-014, ref-0024).
+2. Write `data/references/batch-0NN.txt` with `<id> <url>` lines.
+3. `node skill/design-director/scripts/read.mjs <url> --out data/references/captures/<id>` for each
+   (about 20 s). Read `read.md` and look at `read-sheet.png`.
+4. Write `data/references/batch-0NN.json` (copy the shape of `batch-014.json`): business, sector,
+   scores 1-10 for business, customer, story, clarity, distinctiveness, craft, `library_candidates`,
+   `avoid`, `motion_notes`. Record the owner's scores and their words verbatim in
+   `data/references/jury/batch-0NN/owner.json`.
+5. Map each motion worth keeping to a recipe: add the reference to that recipe's `seen_in` in
+   `motion/recipes.json`.
+6. `node skill/design-director/scripts/library.mjs build`, write `batch-0NN-review.md` in Bahasa
+   Indonesia (copy the shape of `batch-014-review.md`), commit, push.
+   Run from the repo root: `capture.mjs --out` is relative to the current folder.
+
+*The owner asks for a page.* Follow `SKILL.md` from "Start every run". Do not skip steps; the
+scripts enforce them. Run `floor.mjs` before the gate.
+
+*The owner gives feedback on taste.* Record their words verbatim (in the batch's `owner.json` or a
+dated block here), then propose the rule for `team/taste.md` with its source. Their own explicit
+rules go in directly; your inferences wait for their approval.
+
+**What the owner expects next** (see §6 for the full list): a page that clears the floor and uses
+pictures and motion recipes, compared blind against the old one; their scores for batch-014; a
+decision on reporting two numbers (expression and execution).
+
+**Judgment needed** (a smaller model should slow down or ask here): scoring references; writing a
+new motion recipe; deciding a reference picture passes the quality bar; any change to
+`progress.mjs`.
 
 ## 1. Goal
 
@@ -873,6 +946,49 @@ keyframe easing is not read; a site behind an interaction is read only as far as
 Nomadic Tribe by makemepulse (ref-0024, agency) 6.9 with low confidence (WebGL story behind START,
 only the title screen reached). Library: 23 references, 12 sectors.
 
+## 5f. 2026-11-16: the owner's five reasons, the floor, documentation for a smaller model
+
+**The owner's reasons for rejecting all five blind-test pages (verbatim):**
+1. "semua element terasa flat, permainan menggunakan konsep rectangle tidak terlihat menarik"
+2. "content tidak terasa seperti sedang membuka website yang proper dan terlalu sedikit sehingga nampak seperti lo fidelity"
+3. "tidak ada interaksi experience"
+4. "layout terasa flat dan monoton, saya tidak mendapatkan esensi brand yang ada"
+5. "kalau saya sebagai user saya tidak bisa melihat data data yang seperti saya butuhkan seperti fasilitas, jam operational dll tidak tersampaikan"
+They also said they plan to "menurunkan modal" (read as: move to a cheaper model) and want
+everything documented in detail; §0 was written for that.
+
+**Built: the floor** (`rules/floor.md`, `scripts/floor.mjs`, SKILL.md principle 12). Seven measures
+on the built page, each from one of the five reasons: content (300+ words, 7+ sections, navigation,
+footer), facts (the brief's new `## Visitor facts` table, 6+ rows, each on the page as
+`data-fact`), interaction (2+ kinds, one operated by the visitor; scroll alone is not enough),
+shape and depth (60% of sections with a non-rectangular shape, a turned element, layers, something
+leaving its frame or a drawing; a shadow on a rectangle does not count), layout (4+ different
+section layouts, at most 2 alike in a row), brand (70% of sections with `data-brand`), pictures
+(one per two sections). Enforced: `progress.mjs done brief` (create, site) wants `## Visitor facts`
+with 6+ rows; `done gate` (create, site, redesign) wants a fresh `.design/inspect/floor.json` and
+every miss fixed or answered in `.design/floor.md` (`- <id>: <reason of 20+ characters>`).
+Wired in SKILL.md, modes/create.md (brief template, build, gate, Interactions), rules/brief-interview.md,
+team/taste.md (Always). Fixture `evals/fixtures/floor-good.html` (meets 7 of 7, inspector clean);
+five selftests.
+
+**Calibration (measured):** without a brief the five rejected pages met 0 (klinik, skill), 1 (yoga,
+skill), 2 (kopi), 2 (laundry), 3 (kursus) of 7. References the owner likes differ from them on
+shape cues (Mana 5/7 sections, Swehl 7/8 against 1-2) and pictures (20-27 against 0-2), not on
+word count (Mana 143, Swehl 332 words).
+
+**Not verified / limits:** no page has been built to the floor yet, so it is not known that
+clearing it satisfies the owner (it is a floor, not the goal). `data-fact` and `data-brand` are
+markers a builder could add without substance: the critic and the jury must still look. Section
+detection is rough on sites not built by the skill. The interaction count sees only marked or
+standard controls. The older examples (`examples/`) were made before the floor and would not pass
+`done gate` now. `modes/site.md` and `modes/improve.md` were not edited: the gate check applies to
+them through `progress.mjs`, but their text does not mention the floor yet.
+
+**Tools now connected in the cloud session (2026-11-16):** an image-generation connector
+(Higgsfield: `generate_image` and others) and Google Drive appeared in the tool list. Not used:
+generation spends the owner's credits, so ask first. If the owner agrees, it replaces the free
+draft path of `rules/illustration.md` (same marking, same quality bar).
+
 ## 6. Next steps, in order (2026-11-11)
 
 **Moving to the owner's machine** (owner's plan, 2026-11-11, to read their local portfolio of
@@ -893,7 +1009,9 @@ only the title screen reached). Library: 23 references, 12 sectors.
    have no mode yet).
 
 **Waiting on the owner:**
-- Reasons per page for the blind test (all five rejected; which parts feel slop and why).
+- (answered 2026-11-16: the five reasons, §5f)
+- Whether to use the connected image tool (Higgsfield) for pictures: it spends their credits.
+- Go-ahead to rebuild one blind-test page (yoga) to the floor with pictures and motion recipes, for a blind comparison with the old one.
 - Confirm the batch-013 scores reading; scores for batch-014; a look at the placeholder sheet and the motion demo (`motion/index.html`).
 - The two-number scoring proposal (expression / execution).
 - Review of the 5 taste rules Claude decided on the owner's delegation (batch-005 four Never rules +

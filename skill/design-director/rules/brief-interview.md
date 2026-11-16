@@ -125,6 +125,11 @@ user choosing it. Every stand-in is listed in the deliver report with the shot l
 photograph is never presented as the client's own. If the user says no stand-ins are needed, the
 plan is (d): designed placeholders with the shot list.
 
+**Visitor facts** (`rules/floor.md` → Facts) are asked for in the same message: "Apa saja yang
+biasanya ditanyakan orang sebelum datang atau memesan? Contoh: jam buka, alamat dan parkir,
+fasilitas, harga, cara pesan, cara bayar." The answers go to the brief's `## Visitor facts` table
+(6+ rows); what the client has not answered is a marked sample or "n/a" with the reason.
+
 Research materials (old copy, brochures, chat exports, reviews) are asked for as in
 `modes/create.md` step 1 and recorded in the same section. A `section` run skips this: it works
 inside a design whose materials exist.

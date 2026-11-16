@@ -20,6 +20,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parseArgs } from './lib/browser.mjs';
 import { validateKit } from './lib/brandkit.mjs';
+import { visitorFacts, FLOORS } from './floor.mjs';
 
 const DIR = path.resolve('.design');
 const STATE = path.join(DIR, 'progress.json');
@@ -401,6 +402,12 @@ switch (cmd) {
       const noPurpose = rows.filter((c) => (c[3] || '').length < 4).map((c) => c[0]);
       if (noPurpose.length) fail(`spec.md Interactions: ${noPurpose.join(', ')} name no customer question (fourth column). An interaction with no purpose is cut, not built.`);
     }
+    if (step === 'brief' && ['create', 'site'].includes(s.mode)) {
+      // The facts a visitor needs (hours, place, facilities, price, contact…) are listed before anything is designed (rules/floor.md).
+      const facts = visitorFacts(readDesign('brief.md'));
+      if (!facts) fail('brief.md needs a "## Visitor facts" table (| Fact | Value | On the page |): what a visitor of this kind of business must find, such as hours, address, facilities, price, contact (rules/floor.md → Facts).');
+      if (facts.length < FLOORS.facts) fail(`brief.md "## Visitor facts" lists ${facts.length} fact(s): list at least ${FLOORS.facts}; a fact the client has not given yet gets "[SAMPLE] …" or "n/a: <why>" (rules/floor.md → Facts).`);
+    }
     if (step === 'brief' && MATERIAL_MODES.includes(s.mode)) {
       // Photos, product UI and brand assets were asked for, and the plan for what is missing is written down.
       const mat = section(readDesign('brief.md'), 'Materials|Bahan');
@@ -553,6 +560,17 @@ switch (cmd) {
         const r = JSON.parse(fs.readFileSync(rp, 'utf8'));
         if (r.summary.fail > 0) fail(`The last inspection (.design/${rel}) has ${r.summary.fail} FAIL. Fix them and inspect again.`);
         if (nv === 1 && newestSourceMtime() > Date.parse(r.time)) fail('Source files changed after the last inspection. Inspect again.');
+      }
+      // The floor (rules/floor.md): content, facts, interaction, shape, layout, brand and pictures, measured on the built page.
+      if (PAGE_MODES.includes(s.mode) && nv === 1) {
+        const fp = path.join(DIR, 'inspect/floor.json');
+        if (!fs.existsSync(fp)) fail('Run floor.mjs <the page> first so that .design/inspect/floor.json exists (rules/floor.md).');
+        const fl = JSON.parse(fs.readFileSync(fp, 'utf8'));
+        if (newestSourceMtime() > Date.parse(fl.time)) fail('Source files changed after the last floor measure. Run floor.mjs again.');
+        const missed = (fl.rows || []).filter((r) => !r.ok);
+        const reasons = readDesign('floor.md');
+        const silent = missed.filter((r) => !new RegExp(`^[-*]\\s*${r.id}\\s*:\\s*\\S.{20,}`, 'im').test(reasons));
+        if (silent.length) fail(`The page is under the floor on ${silent.map((r) => r.id).join(', ')} (.design/inspect/floor.json): fix each, or write its reason in .design/floor.md as "- <id>: <why it stays, and who decided>" (rules/floor.md). ${silent.map((r) => `${r.id}: ${r.got}`).join(' · ')}`);
       }
     }
     s.steps[step] = { status: 'done', at: now(), note: args.note || '' };

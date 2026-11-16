@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Napas Pagi: yoga pagi di Denpasar</title>
+<style>
+  :root { --ground: #f3f1ec; --ink: #16282b; --accent: #b8441a; --field: #f3d6c7; --sage: #cfe3d2; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 18px/1.55 Georgia, serif; background: var(--ground); color: var(--ink); }
+  nav { display: flex; gap: 24px; align-items: center; padding: 16px 40px; }
+  nav a { color: inherit; min-height: 44px; display: inline-flex; align-items: center; }
+  main > section, footer { padding: 72px 40px; }
+  h1 { font-size: 56px; line-height: 1.05; margin: 0 0 16px; max-width: 14ch; }
+  h2 { font-size: 36px; line-height: 1.1; margin: 0 0 16px; }
+  p { max-width: 52ch; margin: 0 0 12px; }
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+  .arch { width: 100%; aspect-ratio: 4 / 5; border-radius: 999px 999px 24px 24px; background: var(--field); overflow: hidden; display: grid; place-items: end center; }
+  .disc { width: 220px; height: 220px; border-radius: 50%; background: var(--sage); }
+  .sun { width: 120px; height: 120px; border-radius: 50%; background: var(--accent); margin: -60px 0 0 60%; position: relative; }
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .card { background: #fff; border-radius: 28px; padding: 24px; }
+  .tilt { transform: rotate(-3deg); }
+  .band { background: var(--ink); color: var(--ground); }
+  .band a { color: inherit; }
+  .center { text-align: center; }
+  .center h2, .center p { margin-left: auto; margin-right: auto; }
+  .btn { display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: 999px; background: var(--ink); color: var(--ground); text-decoration: none; }
+  .band .btn { background: var(--ground); color: var(--ink); }
+  button.q { min-height: 48px; font: inherit; background: none; border: 0; border-bottom: 2px solid var(--ink); width: 100%; text-align: left; cursor: pointer; }
+  label { display: block; margin-bottom: 8px; }
+  input[type="range"] { width: 280px; height: 32px; }
+  table { border-collapse: collapse; }
+  td, th { padding: 8px 24px 8px 0; text-align: left; border-bottom: 1px solid var(--ink); }
+  svg { display: block; max-width: 100%; height: auto; }
+  @media (max-width: 720px) {
+    nav { flex-wrap: wrap; gap: 4px 16px; padding: 12px 20px; }
+    main > section, footer { padding: 48px 20px; }
+    .split, .cards { grid-template-columns: 1fr; }
+    h1 { font-size: 38px; max-width: none; } h2 { font-size: 26px; }
+    .sun { margin-left: 40%; } svg[style], .arch[style*="margin"] { margin-left: 0 !important; }
+    td, th { padding-right: 12px; font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+<nav aria-label="Utama"><strong>Napas Pagi</strong><a href="#kelas">Kelas</a><a href="#harga">Harga</a><a href="#tempat">Tempat</a><a href="#tanya">Tanya</a></nav>
+<main>
+  <section class="split" data-brand="arch">
+    <div><h1>Napas dulu, baru kerja.</h1><p>Kelas yoga pagi <span data-fact="hours">06.30 sampai 07.30, Senin sampai Sabtu</span> di Denpasar. Selesai sebelum jam kantor, jadi Anda masih sempat mandi dan sarapan. Kelasnya kecil, paling banyak dua belas orang, supaya pelatih sempat melihat setiap gerakan Anda.</p><a class="btn" href="#harga">Pesan tempat lewat WhatsApp</a></div>
+    <div class="arch"><svg viewBox="0 0 200 160" width="200" height="160" role="img" aria-label="Placeholder foto: pelatih menggelar matras" data-placeholder-image="portrait"><circle cx="100" cy="60" r="30" fill="#cc5c2b"/><ellipse cx="100" cy="160" rx="80" ry="70" fill="#7b432a"/><circle cx="40" cy="30" r="10" fill="#f26a2e"/></svg></div>
+  </section>
+  <section id="kelas" data-brand="sun">
+    <h2>Pagi Anda, jam demi jam</h2>
+    <p>Banyak orang ingin mulai yoga tetapi takut terlambat masuk kantor. Karena itu jadwalnya kami susun dari jam Anda berangkat, bukan dari jam studio buka.</p>
+    <div class="cards"><div class="card tilt"><strong>06.15</strong><p>Datang, gelar matras.</p></div><div class="card"><strong>06.30</strong><p>Kelas mulai dari napas.</p></div><div class="card tilt"><strong>07.30</strong><p>Selesai, masih sempat sarapan.</p></div></div>
+    <p>Datang lima belas menit lebih awal di kelas pertama, supaya pelatih bisa bertanya tentang cedera atau keluhan Anda. Sesudah itu cukup datang lima menit sebelum mulai.</p>
+    <div class="sun" aria-hidden="true"></div>
+  </section>
+  <section class="band split" id="harga" data-brand="arch">
+    <div><h2>Berapa kali seminggu?</h2><label for="kali">Geser untuk menghitung biaya sebulan</label><input id="kali" type="range" min="1" max="3" value="2" data-interaction="price"><p data-fact="price">Rp 120.000 sekali datang, atau Rp 950.000 untuk 10 kelas.</p></div>
+    <div class="arch" style="background:#2b4347"><div class="disc"></div></div>
+  </section>
+  <section class="center">
+    <h2>Fasilitas di studio</h2>
+    <p>Anda tidak perlu membawa apa pun selain baju yang nyaman dan botol minum sendiri kalau mau.</p>
+    <p data-fact="facilities">Matras dan balok tersedia, ruang ganti, loker, air minum, parkir motor 20 tempat.</p>
+    <svg viewBox="0 0 320 120" width="320" height="120" style="margin:24px auto" role="img" aria-label="Gambar matras, handuk dan botol"><rect x="10" y="60" width="140" height="40" rx="20" fill="#cfe3d2"/><circle cx="30" cy="80" r="16" fill="#16282b"/><rect x="170" y="70" width="50" height="30" fill="#f26a2e"/><ellipse cx="270" cy="60" rx="18" ry="46" fill="#b8441a"/></svg>
+  </section>
+  <section class="split" id="tempat" data-brand="sun">
+    <div class="arch" style="aspect-ratio:1"><svg viewBox="0 0 200 160" width="200" height="160" role="img" aria-label="Placeholder foto: studio dari depan" data-placeholder-image="place"><rect x="50" y="50" width="100" height="110" fill="#cc5c2b"/><circle cx="150" cy="40" r="20" fill="#f3e9e2"/><path d="M85 160 V120 a15 15 0 0 1 30 0 V160Z" fill="#f3e9e2"/></svg></div>
+    <div><h2>Tempat dan cara datang</h2><p>Studio berada di jalan yang tenang, lima menit dari pusat kota. Pintu masuknya di samping toko roti; naik tangga ke lantai dua.</p><p data-fact="address">Jl. Contoh No. 12, Denpasar. Lantai 2, di atas toko roti.</p><p data-fact="parking">Parkir motor di halaman; mobil di seberang jalan.</p><p data-fact="contact">WhatsApp 0812-0000-0000 (contoh), dibalas 06.00 sampai 20.00.</p></div>
+  </section>
+  <section data-brand="arch">
+    <h2>Jadwal seminggu</h2>
+    <p>Setiap kelas berlangsung satu jam. Kelas dasar cocok untuk pemula; kelas peregangan punggung untuk yang banyak duduk; kelas Sabtu menggabungkan keduanya dan sedikit lebih panjang napasnya.</p>
+    <table><thead><tr><th>Hari</th><th>Kelas</th><th>Pelatih</th></tr></thead><tbody><tr><td>Senin, Rabu, Jumat</td><td>Hatha dasar</td><td>Ayu</td></tr><tr><td>Selasa, Kamis</td><td>Peregangan punggung</td><td>Made</td></tr><tr><td>Sabtu</td><td>Kelas campuran</td><td>Ayu</td></tr></tbody></table>
+    <svg viewBox="0 0 320 120" width="320" height="120" style="margin:24px 0 0 50%" role="img" aria-label="Placeholder foto: kelas dari belakang" data-placeholder-image="team"><circle cx="70" cy="50" r="22" fill="#cc5c2b"/><circle cx="160" cy="40" r="26" fill="#7b432a"/><circle cx="250" cy="50" r="22" fill="#b98a6a"/><rect x="0" y="80" width="320" height="40" fill="#f3d6c7"/></svg>
+  </section>
+  <section id="tanya" data-brand="sun">
+    <h2>Masih ada yang mengganjal?</h2>
+    <button class="q" type="button" aria-expanded="true" aria-controls="q1">Bisa langsung datang tanpa pesan?</button>
+    <p id="q1">Bisa, selama masih ada tempat. Pesan dulu supaya matras Anda disiapkan.</p>
+    <button class="q" type="button" aria-expanded="true" aria-controls="q2">Saya kaku. Boleh ikut?</button>
+    <p id="q2">Boleh. Setiap gerakan punya versi yang lebih ringan, dan lentur datang belakangan setelah rutin.</p>
+    <p>Pertanyaan lain bisa dikirim lewat WhatsApp; kami membalas pada jam yang tertulis di bagian tempat.</p>
+    <div class="arch tilt" style="width:160px;margin:24px 0 0 70%"><div class="disc" style="width:100px;height:100px"></div></div>
+  </section>
+</main>
+<footer class="band" data-brand="arch"><p><strong>Napas Pagi</strong> · Yoga pagi di Denpasar · Jl. Contoh No. 12 · Senin sampai Sabtu 06.30 · WhatsApp 0812-0000-0000 (contoh)</p></footer>
+</body>
+</html>

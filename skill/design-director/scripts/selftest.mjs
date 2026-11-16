@@ -20,7 +20,7 @@ const ROAST = '# Roast\n## Points\n| # | Voice | Point | Evidence | Severity |\n
 // A brand kit with the five headings of brand/method.md §8 and the five tests recorded.
 const BRANDKIT = '# Brand kit: Test\n## Sources\n| Source | Ask | Answer |\n| The product | form | bento box |\n## Elements\n| Family | Decision | Source |\n| Shape | radius 28 | box |\n## Hero element\nThe box that fills by day.\n## Rules of use\n| Element | Where | How often | Never | Effect |\n| Box | hero, price | 3 | decoration | shows progress |\n## Tests\n- Cover-the-logo: pass\n- Blur: pass\n- Swap: pass\n- Down-the-page: every section has two\n- Source: all traced\n';
 // A brief with the materials asked for (rules/brief-interview.md → Materials).
-const BRIEF = '# Brief\n- What: test\n## Materials\n| Material | What exists | Plan |\n| --- | --- | --- |\n| Photos | none | photos.mjs: 0 usable; no image tool → drawn and dummy pictures, user told |\n| Product UI | n/a | - |\n| Brand assets | logo.svg | use it |\n## Product\n- Vision: office lunch that arrives ready, every weekday\n- User and outcome: office workers stop queueing at lunch\n- Metric: weekly subscriptions\n- Scope: in the landing page · out the ordering app (next quarter)\n- Patterns: n/a: new product\n';
+const BRIEF = '# Brief\n- What: test\n## Visitor facts\n| Fact | Value | On the page |\n| --- | --- | --- |\n| Hours | Mon-Fri 11.00-14.00 | hero, footer |\n| Delivery area | Jakarta Selatan offices | area section |\n| Price | Rp 45.000 a box | price |\n| Menu | five boxes a week | menu |\n| Contact | WhatsApp [SAMPLE] | action, footer |\n| Payment | transfer, weekly | steps |\n## Materials\n| Material | What exists | Plan |\n| --- | --- | --- |\n| Photos | none | photos.mjs: 0 usable; no image tool → drawn and dummy pictures, user told |\n| Product UI | n/a | - |\n| Brand assets | logo.svg | use it |\n## Product\n- Vision: office lunch that arrives ready, every weekday\n- User and outcome: office workers stop queueing at lunch\n- Metric: weekly subscriptions\n- Scope: in the landing page · out the ordering app (next quarter)\n- Patterns: n/a: new product\n';
 // The council's sign-off in the spec (rubric/council.md): a line per head, a metric, a budget.
 const COUNCIL = '## Council\n- Product: vision office lunch ready; outcome no queue; metric weekly subscriptions; scope in landing / out app\n- Business: competitors hide the price (research #2); action that pays is the WhatsApp order\n- Design: one 12-column grid, type ratio 1.333, the lunch box leads every screen\n- Creative: the lunch box becomes the page grid; signature box filling on scroll\n- Engineering: static HTML + CSS; no component library; budget ≤ 900 KB first load, images ≤ 200 KB, JS ≤ 30 KB; tokens only\n';
 // A motion spec with the message, its signature motion, the entrance and the state transitions (motion/functions.md).
@@ -405,7 +405,19 @@ const check = (name, ok, detail = '') => {
   fs.writeFileSync(path.join(d, 'progress.json'), JSON.stringify(st));
   fs.copyFileSync(path.join(fixtures, 'clean.html'), path.join(proj, 'index.html'));
   run('inspect.mjs', [path.join(proj, 'index.html'), '--out', path.join(d, 'inspect'), '--quiet'], proj);
-  p('done', 'gate');
+  // The floor (rules/floor.md): the gate wants the measure, fresh, and every miss fixed or answered.
+  const noFloor = p('done', 'gate');
+  const floorRun = run('floor.mjs', [path.join(proj, 'index.html')], proj);
+  const flr = fs.existsSync(path.join(d, 'inspect/floor.json')) ? JSON.parse(fs.readFileSync(path.join(d, 'inspect/floor.json'), 'utf8')) : { rows: [] };
+  const missedIds = flr.rows.filter((r) => !r.ok).map((r) => r.id);
+  const floorSilent = p('done', 'gate');
+  fs.writeFileSync(path.join(d, 'floor.md'), missedIds.map((id) => `- ${id}: quick effort`).join('\n'));
+  const floorThin = p('done', 'gate');
+  fs.writeFileSync(path.join(d, 'floor.md'), missedIds.map((id) => `- ${id}: this fixture is a small test page; the owner accepted it for the selftest on 2026-11-16`).join('\n'));
+  const floorAnswered = p('done', 'gate');
+  check('progress wants the floor measure at the gate, and a real reason for every miss',
+    noFloor.status !== 0 && /floor\.mjs/.test(noFloor.stderr) && floorRun.status === 1 && missedIds.length >= 3 && floorSilent.status !== 0 && /under the floor/.test(floorSilent.stderr) && floorThin.status !== 0 && floorAnswered.status === 0,
+    [noFloor.stderr, floorRun.stdout.slice(0, 300), floorSilent.stderr, floorThin.stderr, floorAnswered.stderr].join(' | '));
   fs.writeFileSync(path.join(d, 'critique.md'), '# Critique');
   const noJury = p('done', 'look');
   fs.mkdirSync(path.join(d, 'jury', 'r1'), { recursive: true });
@@ -889,6 +901,49 @@ const check = (name, ok, detail = '') => {
   check('the library keeps each reference\'s motion as recipes that can be built',
     recipesForRef('ref-0021').includes('protagonist-travel') && recipesForRef('ref-0013-product').includes('frame-grow') && !!mana && mana.motion.recipes.includes('protagonist-travel'),
     JSON.stringify(mana && mana.motion));
+}
+
+// the floor: what every delivered page has (rules/floor.md)
+{
+  const { visitorFacts, judge, FLOORS } = await import(path.join(here, 'floor.mjs'));
+  const facts = visitorFacts(BRIEF);
+  const withIds = visitorFacts('## Fakta pengunjung\n| Fakta | Nilai | Di halaman |\n| --- | --- | --- |\n| Jam buka (hours) | 08.00-17.00 | hero |\n| Parkir | tidak ada | - |\n');
+  check('floor: the brief\'s visitor facts are read with their ids, and "n/a" facts are not required',
+    facts.length === 6 && facts[0].id === 'hours' && facts.every((f) => f.needed) && withIds[0].id === 'hours' && withIds[1].id === 'parkir' && withIds[1].needed === false && visitorFacts('# Brief') === null,
+    JSON.stringify([facts, withIds]));
+  const briefPath = path.join(tmp, 'floor-brief.md');
+  fs.writeFileSync(briefPath, '# Brief\n## Visitor facts\n| Fact | Value | On the page |\n| --- | --- | --- |\n| Hours | 06.30 | hero |\n| Price | Rp 120.000 | price |\n| Facilities | mats | facilities |\n| Address | Jl. Contoh [SAMPLE] | place |\n| Parking | motorbikes | place |\n| Contact | WhatsApp [SAMPLE] | place |\n| Payment | n/a: not decided | - |\n');
+  const good = run('floor.mjs', [path.join(fixtures, 'floor-good.html'), '--brief', briefPath, '--out', path.join(tmp, 'floor-good.json')]);
+  const gr = fs.existsSync(path.join(tmp, 'floor-good.json')) ? JSON.parse(fs.readFileSync(path.join(tmp, 'floor-good.json'), 'utf8')) : { rows: [], missed: -1 };
+  check('floor: a page with sections, facts, interactions, shapes, a changing layout, brand marks and pictures meets all seven measures',
+    good.status === 0 && gr.missed === 0 && gr.rows.length === 7, good.stdout + good.stderr);
+  const thin = run('floor.mjs', [path.join(fixtures, 'clean.html'), '--brief', briefPath, '--out', path.join(tmp, 'floor-thin.json')]);
+  const tr = fs.existsSync(path.join(tmp, 'floor-thin.json')) ? JSON.parse(fs.readFileSync(path.join(tmp, 'floor-thin.json'), 'utf8')) : { rows: [] };
+  const miss = (id) => tr.rows.some((r) => r.id === id && !r.ok);
+  check('floor: a thin page misses content, facts, shape and brand, and each miss says how to fix it',
+    thin.status === 1 && ['content', 'facts', 'shape', 'brand'].every(miss) && tr.rows.filter((r) => !r.ok).every((r) => r.fix && r.source), thin.stdout.slice(0, 600));
+  const base = { words: 400, navLinks: 4, hasNav: true, hasFooter: true, footerWords: 20, kinds: ['scroll'], facts: [], height: 5000,
+    sections: Array.from({ length: 8 }, () => ({ cues: [], pictures: 0, layout: '1col·left·text', brand: [] })) };
+  const j = judge(base, { facts: [] });
+  const ids = j.rows.filter((r) => !r.ok).map((r) => r.id).join();
+  const typeOnly = judge(base, { facts: [], type: 'type' });
+  check('floor: scroll motion alone is not interaction, eight identical flat sections miss shape, layout, brand and pictures; a type-only page skips pictures',
+    ids === 'facts,interaction,shape,layout,brand,pictures' && !typeOnly.rows.some((r) => r.id === 'pictures') && FLOORS.sections === 7, ids);
+
+  const proj = path.join(tmp, 'floor-brief');
+  fs.mkdirSync(proj);
+  const d = path.join(proj, '.design');
+  const p = (...a) => run('progress.mjs', a, proj);
+  p('init', '--mode', 'create', '--effort', 'quick', '--gates', 'autopilot');
+  p('approve', 'brief');
+  fs.writeFileSync(path.join(d, 'brief.md'), BRIEF.replace(/## Visitor facts[\s\S]*?(?=## Materials)/, ''));
+  const noFacts = p('done', 'brief');
+  fs.writeFileSync(path.join(d, 'brief.md'), BRIEF.replace(/\| Payment \|[^\n]*\n/, ''));
+  const fewFacts = p('done', 'brief');
+  fs.writeFileSync(path.join(d, 'brief.md'), BRIEF);
+  const okFacts = p('done', 'brief');
+  check('progress wants a "## Visitor facts" table with at least six facts in the brief',
+    noFacts.status !== 0 && /Visitor facts/.test(noFacts.stderr) && fewFacts.status !== 0 && /lists 5 fact/.test(fewFacts.stderr) && okFacts.status === 0, [noFacts, fewFacts, okFacts].map((x) => x.stderr).join(' | '));
 }
 
 // draw
